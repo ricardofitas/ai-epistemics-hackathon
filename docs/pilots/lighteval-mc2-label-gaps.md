@@ -23,7 +23,7 @@ I downloaded the actual [HF multiple-choice validation parquet](https://huggingf
 
 These uniform vectors are a simple controlled proof using **real unmodified labels**, not observed model outputs. A separate semantics-preserving permutation test moves one false choice before all true choices while retaining every answer/label pair. It changes the uniform score incorrectly on 817/817 rows. This tests order invariance; it is not the incidence on the original-order dataset.
 
-`audit_labels.py` executes the unchanged adapter function and metric class extracted with Python AST, omitting unrelated framework imports. Namespace substitutes provide data containers/base class only; no scoring logic is rewritten. It uses NumPy 2.3.5 and pyarrow to read the pinned parquet. `results.json` records the full scan.
+`scripts/audit_lighteval_mc2_labels.py` executes the unchanged adapter function and metric class extracted with Python AST, omitting unrelated framework imports. Namespace substitutes provide data containers/base class only; no scoring logic is rewritten. It uses NumPy 2.3.5 and pyarrow to read the pinned parquet. [`label-scan.json`](../../results/pilots/lighteval-mc2-20261112/label-scan.json) records the full scan.
 
 ## Replay using actual public model likelihoods
 
@@ -42,7 +42,7 @@ Results:
 
 Thus the implementation failure reaches actual dataset records and actual captured model likelihoods, while its measured effect is very small in this trace collection. Large uniform/permutation stress-test effects should not be conflated with these small observed-input replay effects.
 
-`replay_real_likelihoods.py` and `real_replay_results.json` preserve all per-file results and affected-row likelihoods. The replay expects the trace audit's `download_manifest.json` and data files in the neighboring `mc2_real_traces` directory. The checked command-line versions use explicit paths and verify both pinned source hashes. With NumPy 2.3.5 and pyarrow installed, run:
+`scripts/replay_lighteval_mc2.py` and [`real-replay.json`](../../results/pilots/lighteval-mc2-20261112/real-replay.json) preserve all per-file results and affected-row likelihoods. The replay accepts the trace directory created by the shared public-trace downloader. The checked command-line versions use explicit paths and verify both pinned source hashes. With NumPy 2.3.5 and pyarrow installed, run:
 
 ```bash
 python3 scripts/audit_lighteval_mc2_labels.py /path/to/pinned-sources /path/to/validation.parquet --output labels.json
