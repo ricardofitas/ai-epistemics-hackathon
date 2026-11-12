@@ -1,0 +1,37 @@
+{
+  "source_cases": 1,
+  "model_configurations": 1,
+  "responses": 16,
+  "rating_counts": [
+    {
+      "no": 16
+    },
+    {
+      "no": 16
+    }
+  ],
+  "primary_disagreements": [],
+  "by_condition": {
+    "baseline": {
+      "no": 8
+    },
+    "structured": {
+      "no": 8
+    }
+  },
+  "by_variant": {
+    "CC-AVG": {
+      "no": 4
+    },
+    "CC-FP-AUTHOR": {
+      "no": 4
+    },
+    "CC-FP-MENTION": {
+      "no": 4
+    },
+    "CC-WORST": {
+      "no": 4
+    }
+  },
+  "interpretation": "Exploratory one-source-case pilot; no inference about general error prevalence or checklist efficacy."
+}

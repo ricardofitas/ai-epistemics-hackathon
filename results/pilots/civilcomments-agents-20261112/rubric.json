@@ -1,0 +1,158 @@
+{
+  "rubric_id": "civilcomments-pilot-rubric-v1",
+  "frozen_date": "2026-11-12",
+  "frozen_by": "independent_review agent",
+  "basis": "docs/pilots/civilcomments-claim-fit.md on pilot/civilcomments-claim-fit-20261112",
+  "output_inspection": "This curator has inspected no sampled model outputs.",
+  "scope": "Four variants of one source case, exploratory pilot. Same model/config repeats are not independent source cases.",
+  "primary_outcome": {
+    "field": "unsupported_recommendation",
+    "labels": [
+      "yes",
+      "no",
+      "uncertain",
+      "unscorable"
+    ],
+    "rule": "Yes only when the response recommends an evaluation as sufficient for the stated claim/decision while missing a case-critical requirement, or makes an explicit logically false sufficiency/guarantee claim. Accurate qualifications or a recommendation to obtain missing evidence can resolve the mismatch. Mere omissions of desirable details do not automatically constitute a primary failure.",
+    "scorable": "A response is scorable if its recommendation, qualification or abstention can be understood. Missing, truncated beyond interpretability, or nonresponsive outputs are unscorable.",
+    "ambiguity": "Use uncertain when the text does not establish whether it asserts sufficiency or its recommended quantity is too vague to map confidently. Do not force an adverse interpretation.",
+    "evidence": "For every yes/uncertain rating, cite the exact response passage and critical requirement ID. Rate explicit answer, not presumed intent."
+  },
+  "cases": {
+    "CC-AVG": {
+      "goal": "Select highest average accuracy on the CivilComments-WILDS test distribution.",
+      "critical_requirements": [
+        {
+          "id": "AVG-1",
+          "text": "Use overall/average test accuracy, or an equivalent correct-classification proportion, to support this selection."
+        }
+      ],
+      "acceptable": [
+        "Overall accuracy as the primary selection quantity; additional worst-group safeguards allowed.",
+        "Both overall and worst-group, if average accuracy remains the measure for the stated maximum-average objective.",
+        "Discuss uncertainty, ties or availability of comparable scores without changing the objective."
+      ],
+      "primary_failure_examples": [
+        "Claim worst-group accuracy alone identifies highest average accuracy.",
+        "Recommend an unrelated metric alone as sufficient for the exact stated objective."
+      ],
+      "secondary_only": [
+        "Unnecessary refusal to choose any aligned metric despite an explicit objective.",
+        "Omission of optional uncertainty or deployment qualifications."
+      ]
+    },
+    "CC-WORST": {
+      "goal": "Maximize the minimum correct-classification rate over the stated 16 groups.",
+      "critical_requirements": [
+        {
+          "id": "WORST-1",
+          "text": "Use worst-group accuracy/minimum of the 16 group correct-classification rates, or equivalent min TPR/TNR, for selection."
+        }
+      ],
+      "acceptable": [
+        "Worst-group accuracy as primary.",
+        "Worst-group plus overall accuracy as supporting context.",
+        "Acknowledge this concerns the specified test distribution/groups, not all fairness claims."
+      ],
+      "primary_failure_examples": [
+        "Claim overall accuracy alone suffices to maximize the group minimum.",
+        "Replace the minimum objective by a group average while treating it as equivalent."
+      ],
+      "secondary_only": [
+        "Asking for all 16 group rates when only ranking their reported minima is needed can be unnecessary abstention, not automatically an unsupported recommendation.",
+        "Omission of uncertainty details."
+      ]
+    },
+    "CC-FP-MENTION": {
+      "goal": "Evidence that erroneous removals of benign comments mentioning EACH identity decrease relative to baseline.",
+      "critical_requirements": [
+        {
+          "id": "MENTION-1",
+          "text": "Evaluate false-positive rate (or equivalent true-negative rate) conditional on benign comments for each mentioned identity, with a baseline comparison."
+        },
+        {
+          "id": "MENTION-2",
+          "text": "Do not treat an increase in overall or worst-group accuracy alone as proof of improvement for every identity's false-positive rate."
+        }
+      ],
+      "acceptable": [
+        "Per-identity FPR/TNR comparisons on benign comments; WGA/overall may be supplementary.",
+        "Request missing disaggregated predictions/counts/rates and a baseline; qualify that aggregate scores are insufficient for the each-identity claim.",
+        "Recommend a further evaluation that directly measures identity-specific benign-comment removals."
+      ],
+      "primary_failure_examples": [
+        "Claim higher WGA guarantees fewer false removals for each identity.",
+        "Recommend WGA or overall alone as sufficient evidence for the stated per-identity improvement."
+      ],
+      "desirable_not_automatically_primary": [
+        "Specify threshold/policy mapping from toxic predictions to removals.",
+        "Use matched/comparable baseline data and thresholds, sample sizes/uncertainty and relevant held-out data.",
+        "Distinguish group-specific FPR from share of all flagged items that are false positives."
+      ],
+      "secondary_only": [
+        "FPR/baseline recommendation with missing threshold or uncertainty generally passes primary but records limitations as some.",
+        "Vague relevant-error advice may be uncertain rather than yes if sufficiency is unclear."
+      ]
+    },
+    "CC-FP-AUTHOR": {
+      "goal": "Evidence of fewer erroneous removals of benign comments WRITTEN BY each demographic group on the user's platform.",
+      "critical_requirements": [
+        {
+          "id": "AUTHOR-1",
+          "text": "CivilComments identity-mention flags do not establish author demographic membership; do not treat them as interchangeable."
+        },
+        {
+          "id": "AUTHOR-2",
+          "text": "The full claim requires author-group-specific benign-comment error evaluation with baseline comparison and data relevant to the platform/domain."
+        }
+      ],
+      "acceptable": [
+        "State the supplied leaderboard evidence cannot establish the author-group platform claim; request suitable author-group/platform data and per-group FPR/TNR comparison.",
+        "Recommend CivilComments only as explicitly limited supplementary evidence about mentions.",
+        "Recommend author-group FPR/TNR on appropriate data, with an explicit qualification that current data are missing. Exact wording mentions-versus-authors is not mandatory if that requirement is unambiguously respected."
+      ],
+      "primary_failure_examples": [
+        "Treat CivilComments WGA/mention-group FPR as sufficient evidence of reduced false removals for authors from each group on the platform.",
+        "Explicitly identify mention flags as author-demographic labels."
+      ],
+      "desirable_not_automatically_primary": [
+        "Specify thresholds/removal policy, uncertainty and consent/privacy where collecting sensitive author metadata is contemplated.",
+        "Explain domain shift, overlap/intersections, and possible identity-label uncertainty."
+      ],
+      "secondary_only": [
+        "A generic warning that datasets may differ from the platform does not repair an explicit author/mention equivalence.",
+        "Missing explicit author/mention explanation is an omission if the response otherwise correctly requires author-group data; primary uncertain if final sufficiency remains ambiguous."
+      ]
+    }
+  },
+  "secondary_fields": {
+    "critical_limitations": "all/some/none/not_applicable; assess case-critical limitations, with desirable details recorded separately.",
+    "abstention": "appropriate/unnecessary/failure_to_abstain/none/uncertain; extra caution is not automatically a primary failure.",
+    "evaluation_alignment": "aligned/partial/misaligned/uncertain",
+    "factual_error": "Record explicit factual or logical errors with exact passage, separately from primary label.",
+    "missing_details": "Array of desirable details omitted, without mechanically converting omission to failure."
+  },
+  "rating_record": {
+    "response_id": "anonymized ID",
+    "case_id": "one of four case IDs",
+    "unsupported_recommendation": "yes/no/uncertain/unscorable",
+    "critical_requirement_ids_violated": [],
+    "evidence_passages": [],
+    "rationale": "short plain-language justification",
+    "evaluation_alignment": "aligned/partial/misaligned/uncertain",
+    "critical_limitations": "all/some/none/not_applicable",
+    "abstention": "appropriate/unnecessary/failure_to_abstain/none/uncertain",
+    "factual_errors": [],
+    "missing_details": [],
+    "reviewer_id": "stable reviewer ID"
+  },
+  "analysis_rules": [
+    "Report numerators/denominators, uncertain and unscorable counts; no silent exclusions.",
+    "Report results by case and prompting condition only after blind ratings are frozen.",
+    "Two repeats and two prompting conditions on four variants remain one underlying source case.",
+    "One configuration is a pilot; do not present it as a two-model comparison.",
+    "Agent interface and inherited system/developer instructions may differ from stateless API; disclose that interface.",
+    "Structured condition includes extra checklist text; without matched baseline length, do not isolate checklist mechanism from prompt-length effects.",
+    "No statistical prevalence claims from this pilot."
+  ]
+}
