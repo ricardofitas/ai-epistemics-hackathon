@@ -1,7 +1,7 @@
 # Exploratory pre-sprint pilot: CivilComments-WILDS claim–evaluation fit
 
 **Prepared:** 2026-11-12, before the AI × Epistemics Research Sprint.  
-**Status:** Source audit and pilot case design only. No AI assistant responses, ratings, or experimental findings have been collected. This file is pre-existing work and must be identified as such in any sprint submission. These variants are for exploratory pilot use; if used to revise prompts or the rubric, keep them out of the confirmatory case set.
+**Status:** Source audit plus a completed [fresh-context agent pilot](civilcomments-agents-20261112.md): 16 responses, no unsupported recommendations under the recorded rubric, two independent agent ratings. The separate API runner below was checked in dry-run mode only. This file and the completed pilot are pre-existing exploratory work and must be identified as such in any sprint submission.
 
 ## Verified source facts
 
@@ -52,4 +52,4 @@ The second command requires `OPENAI_API_KEY` in the environment and uses the Ope
 
 ## What this audit establishes and does not establish
 
-This audit establishes a concrete, sourced mismatch to test: *mentions versus authors*, and a subtler *worst-group summary versus per-group false-positive changes*. The published score table supplies a conditional decision reversal for the two stated rules. **It does not yet establish a failure by an AI assistant.** The next step is to run blind exploratory prompts against independently accessed assistants, log their raw outputs, check whether they distinguish the four claims, and reserve different source cases for the main sprint analysis.
+This audit establishes a concrete, sourced mismatch to test: *mentions versus authors*, and a subtler *worst-group summary versus per-group false-positive changes*. The published score table supplies a conditional decision reversal for the two stated rules. **It does not yet establish a failure by an AI assistant.** The first [fresh-context recommendation pilot](civilcomments-agents-20261112.md) is now complete: its agents distinguished all four claims, and both blinded agent reviewers found no unsupported recommendations in 16 responses. Reserve independent source cases and further interfaces for the main sprint analysis.

@@ -1,0 +1,28 @@
+{
+  "run_date": "2026-11-12",
+  "collection_completed_utc": "2026-11-12T20:53:58.662361+00:00",
+  "interface": "collaboration.spawn_agent",
+  "model_configuration": "inherited parent configuration; session reports gpt-6.1-sol",
+  "exact_returned_snapshot": null,
+  "generation_settings": "inherited defaults; temperature, random seed and reasoning effort not surfaced per call",
+  "source_cases": 1,
+  "prompt_variants": 4,
+  "conditions": 2,
+  "repeats_per_cell": 2,
+  "requested": 16,
+  "completed": 16,
+  "manifest_commit_before_sampling": "4fc2accd6a798dfa037cd0c373a7cb0a306337a4",
+  "manifest_sha256": "9c484035c07ed51408e3712043036235e51d4cf3803158f002ba49d464a414f5",
+  "rubric_sha256": "582dd1392316d9587ebd011bab97b0da166640f86cea4cfc956cee629af65800",
+  "rubric_timing": "Written independently without output exposure before scoring; preparation overlapped the first three subject calls. Not a fully preregistered confirmatory study.",
+  "context": "fork_turns=none; parent conversation not passed; platform system/developer instructions still apply and were not archived as part of each response",
+  "capture": "Final assistant messages copied verbatim into UTF-8 files, trailing newline normalized; per-call timestamps/usage/provider response IDs not surfaced by collaboration interface",
+  "review": "Two fresh agents independently rate same anonymized packet without condition/model labels; same model family as subjects; human review pending",
+  "limitations": [
+    "Single source case and single model configuration",
+    "Supplied evidence makes critical distinctions relatively explicit",
+    "Prompt length differs across conditions",
+    "No prevalence estimate or proof assistants generally succeed",
+    "No observed unsupported recommendation in this pilot under frozen rubric"
+  ]
+}
