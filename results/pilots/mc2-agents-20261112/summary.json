@@ -1,0 +1,31 @@
+{
+  "source_cases": 1,
+  "model_configurations": 1,
+  "responses": 8,
+  "rating_counts": [
+    {
+      "no": 8
+    },
+    {
+      "no": 8
+    }
+  ],
+  "primary_disagreements": [],
+  "by_condition": {
+    "baseline": {
+      "no": 4
+    },
+    "structured": {
+      "no": 4
+    }
+  },
+  "by_variant": {
+    "MC2-BOUNDED": {
+      "no": 4
+    },
+    "MC2-WIDE": {
+      "no": 4
+    }
+  },
+  "interpretation": "Exploratory one-source-case pilot; no inference about general error prevalence or checklist efficacy."
+}

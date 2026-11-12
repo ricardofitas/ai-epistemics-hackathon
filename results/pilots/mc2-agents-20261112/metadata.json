@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-12",
+  "collection_completed_utc": "2026-11-12T21:08:45.476803+00:00",
+  "interface": "collaboration.spawn_agent with fork_turns none, inherited gpt-6.1-sol session configuration",
+  "exact_returned_snapshot": null,
+  "generation_settings": "inherited defaults, per-call sampling settings and timestamps not exposed",
+  "source_cases": 1,
+  "variants": 2,
+  "conditions": 2,
+  "repeats_per_cell": 2,
+  "requested": 8,
+  "completed": 8,
+  "freeze_commit": "93db1ca18b21cc25326d92f952f036f64f7b56fd",
+  "subject_delivery": "Exact launch message directs one local prompt-file read; after reading, tools/delegation prohibited. Prompt text and launcher retained. System/developer instructions inherited.",
+  "capture": "Final messages copied verbatim, trailing newline normalized",
+  "design_note": "Prompt pack/rubric frozen before all sampling; baseline/structured additions both37 words; token counts/meaning differ; informed code assessment not open-ended advice",
+  "known_defect": "Underlying underflow cause already documented by PR4108; serves as a known-positive compatibility control"
+}
