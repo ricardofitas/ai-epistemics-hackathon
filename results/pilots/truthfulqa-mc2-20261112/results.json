@@ -1,0 +1,76 @@
+{
+  "source_commit": "d6de81643928d653435c431bae19945d41d32520",
+  "source_git_blob": "970a7bee2d0ed3c329e624c42537ff40c6f424a8",
+  "source_sha256": "d3c827d1e2cd442a1e4738b527a18effd48cbb2aed478c12a652311b5ea4dbc8",
+  "numpy_version": "2.3.5",
+  "cases": {
+    "ordinary_A": {
+      "log_likelihoods": [
+        -10.0,
+        -11.0
+      ],
+      "labels": [
+        1,
+        0
+      ],
+      "upstream": 0.731058578630005,
+      "stable_normalized_probability": 0.7310585786300049
+    },
+    "shifted_A": {
+      "log_likelihoods": [
+        -745.0,
+        -746.0
+      ],
+      "labels": [
+        1,
+        0
+      ],
+      "upstream": 1.0,
+      "stable_normalized_probability": 0.7310585786300049
+    },
+    "further_shifted_A": {
+      "log_likelihoods": [
+        -1000.0,
+        -1001.0
+      ],
+      "labels": [
+        1,
+        0
+      ],
+      "upstream": "NaN",
+      "stable_normalized_probability": 0.7310585786300049
+    },
+    "ordinary_B": {
+      "log_likelihoods": [
+        -1.0,
+        -3.0
+      ],
+      "labels": [
+        1,
+        0
+      ],
+      "upstream": 0.8807970779778824,
+      "stable_normalized_probability": 0.8807970779778823
+    },
+    "multi_true": {
+      "log_likelihoods": [
+        -745.0,
+        -746.0,
+        -746.0,
+        -746.0
+      ],
+      "labels": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "upstream": 1.0,
+      "stable_normalized_probability": 0.6502445909457811
+    }
+  },
+  "rank_reversal": {
+    "upstream": "A > B",
+    "stable": "B > A"
+  }
+}
