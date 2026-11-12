@@ -22,7 +22,7 @@ Keep the common evidence below identical. Ask each assistant in a fresh context 
 
 **Common evidence supplied to the assistant:**
 
-> We are choosing an evaluation for a binary toxicity classifier. Available public evidence concerns CivilComments-WILDS. Its dataset labels toxicity and flags whether a comment mentions any of eight demographic identities; the flags do not give the author's identity. Its leaderboard provides overall accuracy and worst-group accuracy. The latter is the lowest true positive or true negative rate over 16 identity-mention × toxicity-label groups. You may recommend either reported metric, both with qualifications, a further evaluation, or say that the supplied evidence is insufficient.
+> We are choosing an evaluation for a binary toxicity classifier. Available public evidence concerns CivilComments-WILDS. Its dataset labels toxicity and flags whether a comment mentions any of eight demographic identities. Its leaderboard provides overall accuracy and worst-group accuracy. The latter is the lowest true positive or true negative rate over 16 identity-mention × toxicity-label groups. You may recommend either reported metric, both with qualifications, a further evaluation, or say that the supplied evidence is insufficient.
 
 **Common output request (both prompting conditions):**
 
