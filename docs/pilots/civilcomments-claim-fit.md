@@ -39,6 +39,17 @@ For CC-FP-MENTION, a higher worst-group score improves the reported minimum over
 
 **Pilot comparison:** Use the baseline prompt above, then an otherwise identical structured version that asks the assistant to check the claim, target population, groups, error type, metric and inference before recommending. Give both conditions the same evidence and output fields. If changing prompt length appears consequential, use a neutral addition in the baseline. Save model/version/settings, time, complete prompt and unedited response. Rate any unqualified sufficiency claim against the audit key, then have another reviewer check the case before using it as a scored item.
 
+## Reproducible run sheet
+
+The [pilot runner](../../scripts/run_civilcomments_pilot.py) generates the exact 16 prompts (four variants × two conditions × two model configurations), randomizes request order with a recorded seed, and saves each complete prompt, model metadata, raw response or error, and timestamp as JSONL. Each model request is a fresh stateless call with no tools. The answer key in this file is not supplied to models.
+
+```bash
+python3 scripts/run_civilcomments_pilot.py --models MODEL_A MODEL_B --dry-run --output pilot_manifest.jsonl
+python3 scripts/run_civilcomments_pilot.py --models MODEL_A MODEL_B --output pilot_responses.jsonl
+```
+
+The second command requires `OPENAI_API_KEY` in the environment and uses the OpenAI Responses API by default. An alternative compatible Responses endpoint may be passed with `--endpoint`; compatibility must be verified separately. Do not commit keys. The runner was checked locally in dry-run mode: 16 distinct prompts, balanced across all variants and conditions, identical shared evidence, and no explicit author-identity answer in the prompts. **No live API request was made in the preparation environment.** A live run must be checked for errors and reviewed blind before drawing conclusions.
+
 ## What this audit establishes and does not establish
 
 This audit establishes a concrete, sourced mismatch to test: *mentions versus authors*, and a subtler *worst-group summary versus per-group false-positive changes*. The published score table supplies a conditional decision reversal for the two stated rules. **It does not yet establish a failure by an AI assistant.** The next step is to run blind exploratory prompts against independently accessed assistants, log their raw outputs, check whether they distinguish the four claims, and reserve different source cases for the main sprint analysis.
