@@ -1,0 +1,127 @@
+{
+  "repo": "benchpress/sft-eval-results",
+  "revision": "2b09f71e86d98b20fc3ef145b57fd56e9adb963f",
+  "selection": "All English files exactly ending /truthfulqa_mc2.jsonl in pinned repo tree",
+  "files": [
+    {
+      "path": "llama3.2-1b-sft/step-165/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/llama3.2-1b-sft/step-165/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724751,
+      "bytes": 5724751,
+      "sha256": "52ae40278673bbfb7dff0e8bfdfd1406b89cc6448c68068295fd922935d2183b",
+      "git_oid": "269e6600ef31e33ceb524fd510f8bbd6294d417d"
+    },
+    {
+      "path": "llama3.2-1b-sft/step-1980/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/llama3.2-1b-sft/step-1980/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724488,
+      "bytes": 5724488,
+      "sha256": "d630bb2a5d3b9c185d6fff703ee226b7ba8b22c5da8a4c6b58725c0d79510da6",
+      "git_oid": "9aae95c80a835b905afc76bcda80ea8e8a7b4774"
+    },
+    {
+      "path": "llama3.2-1b-sft/step-2805/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/llama3.2-1b-sft/step-2805/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724669,
+      "bytes": 5724669,
+      "sha256": "206ba30c2215581a4305c07d174d05d079d0adfd574ac6d099f51074ff365722",
+      "git_oid": "2e053c65a287d412496881a9124e95551f31b3de"
+    },
+    {
+      "path": "llama3.2-1b-sft/step-3667/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/llama3.2-1b-sft/step-3667/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724586,
+      "bytes": 5724586,
+      "sha256": "12bae8949aff3882614ce1893b15efbe47839197caaa9f65c49a7bb91935c6e5",
+      "git_oid": "5f9f4302774efc021a4eebd100aec4079b6556bb"
+    },
+    {
+      "path": "llama3.2-1b-sft/step-990/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/llama3.2-1b-sft/step-990/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724634,
+      "bytes": 5724634,
+      "sha256": "6318b138a5fd95b61c7cc60b52ef34a94f79eb980e5ebca900a48bcf06da12e5",
+      "git_oid": "f6b64a4b79c850326c6e6d1753f4bec65080efcd"
+    },
+    {
+      "path": "qwen2.5-1.5b-sft/step-165/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/qwen2.5-1.5b-sft/step-165/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724531,
+      "bytes": 5724531,
+      "sha256": "df488804df68f46c337c715520a47883a47e8785ec905dae416c4d632b93407f",
+      "git_oid": "e1a05ae0a35650c4176d2a9de7493fedd8f5338b"
+    },
+    {
+      "path": "qwen2.5-1.5b-sft/step-1980/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/qwen2.5-1.5b-sft/step-1980/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724403,
+      "bytes": 5724403,
+      "sha256": "aa0681e51681e343b1d70596f5ef9590587bd162c259f5e206564bc0382a1f48",
+      "git_oid": "0108a700baa1407f514e0e74dcc1d10a76e860e3"
+    },
+    {
+      "path": "qwen2.5-1.5b-sft/step-2805/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/qwen2.5-1.5b-sft/step-2805/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724388,
+      "bytes": 5724388,
+      "sha256": "21376b48014f4fbc020eb2cdb0d5748d4b64bd10ec2c13a0e12075f85c6bd044",
+      "git_oid": "85efe99e2e4f9ad856fb6301d682c0811203bbcf"
+    },
+    {
+      "path": "qwen2.5-1.5b-sft/step-3667/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/qwen2.5-1.5b-sft/step-3667/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724432,
+      "bytes": 5724432,
+      "sha256": "04a75c73c7d24444495a53e7f39081a7dde98274611964227ef31bb93a7615f0",
+      "git_oid": "fb8e8d6ed8a543efeadd54613f13b0bb250ac237"
+    },
+    {
+      "path": "qwen2.5-1.5b-sft/step-990/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/qwen2.5-1.5b-sft/step-990/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724443,
+      "bytes": 5724443,
+      "sha256": "2569ec811b1721043bdc6108096f2a01365fc176f9d34165f0f8cb10de1e8d63",
+      "git_oid": "421fccec7a440c33daed0e5b7e58a41b1de47370"
+    },
+    {
+      "path": "smollm2-1.7b-sft/step-165/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/smollm2-1.7b-sft/step-165/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724609,
+      "bytes": 5724609,
+      "sha256": "e9be2a024416f11467ced457dc8d24e7f77ced6fbbd9ccfc062a1f700c409156",
+      "git_oid": "5073e4ac0b7aa7724d873c40e95d3e4a94655a29"
+    },
+    {
+      "path": "smollm2-1.7b-sft/step-1980/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/smollm2-1.7b-sft/step-1980/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5723921,
+      "bytes": 5723921,
+      "sha256": "fdd086ccdf575b0893332b08a83571eefd7036d3bd479949dc75ca9e568b1a30",
+      "git_oid": "4f038bdc66cc91294e4e04c3eac14c0d986c4de3"
+    },
+    {
+      "path": "smollm2-1.7b-sft/step-2805/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/smollm2-1.7b-sft/step-2805/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724049,
+      "bytes": 5724049,
+      "sha256": "577eecaf01d609986b42d9568f4601fac5ae70fabf9d62ad5efdd591f3c414aa",
+      "git_oid": "df35e2879d9b9e65c7f1718efaa254fa17c2330f"
+    },
+    {
+      "path": "smollm2-1.7b-sft/step-3667/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/smollm2-1.7b-sft/step-3667/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724024,
+      "bytes": 5724024,
+      "sha256": "4725e202c9fd1ef42ffb36005e6c56f7d882f46113f4536946c4263cb4e2a57e",
+      "git_oid": "b85cfbb9475e2b5f6a7ff74917fef38dae28df2e"
+    },
+    {
+      "path": "smollm2-1.7b-sft/step-990/samples/truthfulqa_mc2.jsonl",
+      "url": "https://huggingface.co/datasets/benchpress/sft-eval-results/resolve/2b09f71e86d98b20fc3ef145b57fd56e9adb963f/smollm2-1.7b-sft/step-990/samples/truthfulqa_mc2.jsonl",
+      "expected_bytes": 5724098,
+      "bytes": 5724098,
+      "sha256": "2fd5b2074aac1bd762ebd918fc269b6cfa7380d5d3873b07cf8f5fa95def9349",
+      "git_oid": "1c2e02bf88354e10ecae59871bea45af246dfe04"
+    }
+  ]
+}

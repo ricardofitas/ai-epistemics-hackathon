@@ -1,3 +1,5 @@
+> Follow-up prior-art addendum, coordinator, 2026-11-12: exact existing finite-input cause/remedy confirmed in [harness PR #4108](https://github.com/EleutherAI/lm-evaluation-harness/pull/4108) and [Evalchemy PR #157](https://github.com/marin-community/evalchemy/pull/157). The earlier limited-search assessment below is historical; this is known prior work. See [prior-art.md](prior-art.md) and the completed real-trace audit for current scope.
+
 # Independent review: TruthfulQA MC2 finite-input underflow
 
 Reviewed 2026-11-12. Verdict: **confirmed numerical implementation defect at the pinned revision**, with carefully limited empirical scope. The supplied stress test establishes that finite, contract-compatible log-likelihoods can produce materially wrong finite MC2 values, a reversal of two controlled scores, and NaN. It does not establish an affected real model run, changed published leaderboard rankings, incidence, or novelty.
