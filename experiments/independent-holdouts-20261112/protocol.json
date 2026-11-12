@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-11-12T23:53:42.303581+00:00",
+  "requested_calls": 4,
+  "source_families": 2,
+  "repeats_per_cell": 1,
+  "conditions": [
+    "minimal_memory_only"
+  ],
+  "seed": 2026111260,
+  "generator": "Python random.Random shuffle, case order then sol/luna",
+  "rubric_sha256": "eb1ae36763232627e76b65339045746375b41107d44252fd36e8d5bb331f713c",
+  "cases_sha256": "5197796e02c5eaf2bd2b7379035aa5b83667aa8b6fce908a8d8174d9ac3c07dc",
+  "pre_review_sha256": "7975a0a51af177e4001c10386a229dca1b1ef4aafccfc755e1cf6fce1d8cf5d1",
+  "manifest_sha256": "25c485dd56823087508fbcf6e366c8e95145527247b52f189eaaccb9340d04a6",
+  "scope": "Independent source families, held out from all earlier prompts. One response/configuration/case. No prevalence estimate; original primary criterion with prereview clarification; two blinded agent ratings, human pending. Attempt each once, retain all failures, do not replace.",
+  "exact_snapshot": null
+}
