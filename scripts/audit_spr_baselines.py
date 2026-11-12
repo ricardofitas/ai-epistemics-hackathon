@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit one released AI Scientist SPR report against its supplied task scores.
+"""Compare one released AI Scientist SPR report with a public task table.
 
 Inputs are the four original text files from niharshah/AIScientistPitfalls:
 SPR Task/BenchmarkIssue/SPR.md,
@@ -95,7 +95,7 @@ def audit(task: Path, code: Path, log: Path, report: Path) -> dict:
         })
 
     return {
-        "note": "The reference scores are values supplied in a synthetic task, not externally validated SOTA.",
+        "note": "Conditional cross-file comparison: exact prompt and name-to-score mapping for this run are unverified; task scores are synthetic references, not externally validated SOTA.",
         "rows": rows,
         "changed_reference_values": sum(
             row["reference_supplied_in_task_pct"] != row["baseline_used_by_agent_pct"] for row in rows
