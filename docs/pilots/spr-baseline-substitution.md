@@ -1,6 +1,6 @@
-# Exploratory pre-sprint audit: substituted benchmark references in an AI-generated report
+# Exploratory pre-sprint audit: inconsistent benchmark references in released artifacts
 
-**Prepared:** 2026-11-12. **Status:** Reanalysis of one released run from an existing study. This is a concrete inconsistency in an archived AI-scientist output, not a new assistant experiment or an estimate of error frequency. Declare it as pre-existing work if used in the sprint.
+**Prepared:** 2026-11-12. **Status:** Provisional comparison of one released run with a public task specification from an existing study. This is an inconsistency between archived files, not a verified model error against its exact input prompt, a new assistant experiment, or an estimate of error frequency. Declare it as pre-existing work if used in the sprint.
 
 ## What was checked
 
@@ -11,11 +11,11 @@ Luo, Kasirzadeh and Shah's [study of autonomous AI scientists](https://pmc.ncbi.
 - the [execution output](https://github.com/niharshah/AIScientistPitfalls/blob/main/AgentLaboratory/generated_research/BenchmarkIssue/research_dir/research_dir_0_lab_1/src/experiment_output.log), which prints four model test accuracies and repeats the substituted values;
 - the [generated report](https://github.com/niharshah/AIScientistPitfalls/blob/main/AgentLaboratory/generated_research/BenchmarkIssue/research_dir/research_dir_0_lab_1/report.txt), which presents those values as its SOTA comparison and says its classifier consistently underperforms.
 
-The task's reference figures are **supplied values in a synthetic experimental setup**. This audit does not independently establish that they are genuine external state-of-the-art results. Also, the public archive does not by itself establish the exact prompt or intermediate messages received by this particular run. The directly verified claim is that the released task specification, generated code, log and report disagree.
+The task's reference figures are **supplied values in a synthetic experimental setup**. This audit does not independently establish that they are genuine external state-of-the-art results. The exact prompt and benchmark-name-to-reference mapping received by this particular run have **not** been reconstructed. The related [auditor source](https://github.com/niharshah/AIScientistPitfalls/blob/main/pitfall_detection/pitfall_detection.py) explicitly permutes rows and identifiers for a separate detection procedure; it cannot be used as a trace of this run. The directly verified observation is that the released task specification (range 52.3–72.6%), generated code (four assumed baselines of 80–85%), log and report disagree. Whether this is a failure relative to what the agent actually saw is unresolved.
 
 ## Same run, different reference values
 
-All accuracies are percentages. The last two columns calculate the archived test accuracy minus the indicated reference, in percentage points. Positive means above that reference. They are conditional comparisons of released numbers; the classifier was not rerun here.
+All accuracies are percentages. The last two columns calculate the archived test accuracy minus the indicated reference, in percentage points. Positive means above that reference. **The comparison with the task is conditional on the released task table being the table used for this run, with the same name-to-score mapping.** The classifier was not rerun here.
 
 | Benchmark | Archived test accuracy | Reference in released task | Reference used in code, log and report | Difference vs. task | Difference vs. report |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -24,7 +24,7 @@ All accuracies are percentages. The last two columns calculate the archived test
 | GURSG | 58.5 | 52.3 | 83.0 | +6.2 | −24.5 |
 | TSHUY | 59.4 | 54.7 | 82.0 | +4.7 | −22.6 |
 
-The report's conclusion of underperformance on **four of four** follows from the four substituted baselines. Using the released task's references with the *same logged test accuracies* instead yields **three above, one below**. The code explicitly describes its replacement numbers as *assumed* examples; the report does not qualify its comparison this way. This is a benchmark-reference integrity failure that propagates into the scientific interpretation. It should be kept distinct from a model recommending the wrong benchmark and from the paper's broader population-level findings.
+The report's conclusion of underperformance on **four of four** follows from the four baselines hardcoded in this released code. Using the released task's name-to-score mapping with the *same logged test accuracies* instead yields **three above, one below**. The code explicitly describes its numbers as *assumed* examples; the report does not qualify its comparison this way. This is a **candidate benchmark-reference integrity issue**, with an apparent change in scientific interpretation under the stated matching assumption. It should be kept distinct from a verified wrong benchmark recommendation and from the paper's broader population-level findings.
 
 ## Reproduce the file-to-file comparison
 
@@ -38,4 +38,4 @@ The script returns the four rows plus `changed_reference_values = 4`, `positive_
 
 ## Fit to this project's objective
 
-This example supplies an **observed AI-generated evaluation error** with a checkable consequence: replacing benchmark references changes the reported conclusion. It complements the CivilComments and HANS pilots, which show evaluation-choice consequences but do not contain observed assistant errors. A future controlled experiment could ask independent assistants to choose appropriate evaluations and verify supplied benchmark references, retaining raw outputs and prompt versions. This archived run is an exploratory external case study and must not be counted among newly sampled assistant responses or independent replications of the Luo et al. study.
+This example supplies an **AI-generated evaluation report** with a checkable cross-file discrepancy and a conditional conclusion change. It is not yet a confirmed error relative to the agent's actual instructions. Before using it as a scored failure, locate the original run prompt, benchmark order and name-to-score mapping, or reproduce the scenario in a controlled fresh run with complete traces. A future experiment could ask independent assistants to choose appropriate evaluations and verify supplied benchmark references, retaining raw outputs and prompt versions. This archived case must not be counted among newly sampled assistant responses or independent replications of the Luo et al. study.
