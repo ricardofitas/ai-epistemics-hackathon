@@ -26,7 +26,8 @@ The main question concerns whether a recommendation supports a specified claim. 
 - [Experiment protocol](docs/experiment-protocol.md) — case design, prompts, scoring and analysis.
 - [Starter cases and literature](docs/starter-cases.md) — concrete public examples and sources to verify.
 - [Tasks and sprint plan](docs/tasks.md) — deliverables, dependencies and a minimum viable path.
-- [Completed six-case open recommendation study](docs/experiments/open-recommendations-results.md) — frozen prompts, raw answers, blind ratings and source checks.
+- [Initial six-case open recommendation study](docs/experiments/open-recommendations-results.md) — 24 answers, frozen prompts and blind/source checks.
+- [Model × prompt-form follow-up](docs/experiments/model-prompt-factorial-results.md) — two requested configurations, minimal/scaffolded questions and a verified temporal-fit failure.
 
 ## Prior work and contribution
 
@@ -34,6 +35,8 @@ Luo, Kasirzadeh and Shah's [study of autonomous AI scientists](https://pmc.ncbi.
 
 ## Current status
 
-**Exploratory pre-sprint evidence.** A six-case, 24-response open recommendation study is complete in one inherited agent configuration. Two blinded agent reviewers found 0/24 unsupported recommendations under the frozen criteria, and a separate bounded source audit found no confirmed factual contradictions. Both conditions explicitly request limitations and sufficiency; human review and broader model/interface testing remain necessary. This does not support a claim of systematic recommendation failure or general reliability.
+**Exploratory pre-sprint evidence.** The initial six-case open study produced 0/24 unsupported recommendations in one inherited agent configuration. A prospectively frozen follow-up crossed two requested configurations (`gpt-6.1-sol` and `gpt-6-luna`) with minimal/scaffolded prompts on the same six cases. Both blinded agent reviewers found 2/24 unsupported recommendations in that follow-up: both Luna answers to one translation scenario recommend `newstest2019` for late-2019 source news, although official documentation dates its source news to September–November 2018; `newstest2020` matches the requested period.
 
-Earlier [CivilComments pilot results](https://github.com/ricardofitas/ai-epistemics-hackathon/pull/1) and [TruthfulQA audits/pilot](https://github.com/ricardofitas/ai-epistemics-hackathon/pull/4) remain separate exploratory designs. Known evaluator implementation defects are controls, not new recommendation failures.
+This is one case-specific wrong-fit finding, not a general error-rate or model-ranking claim. Both prompt packages failed for that configuration/case; one response per cell does not establish checklist efficacy or stochastic frequency. Sources, exact answers, hashes, ratings, unresolved interpretations and the conditional decision consequence are preserved. Human review is pending. Earlier negative cohorts remain separate.
+
+Earlier [CivilComments results](https://github.com/ricardofitas/ai-epistemics-hackathon/pull/1) and [TruthfulQA audits/pilot](https://github.com/ricardofitas/ai-epistemics-hackathon/pull/4) remain separate exploratory designs. Known evaluator defects are controls, not new recommendation failures.

@@ -1,5 +1,7 @@
 # Open-ended recommendation study: six sourced research scenarios
 
+> Follow-up note: the later [two-model/prompt-form comparison](model-prompt-factorial-results.md) found two wrong temporal-fit recommendations in one scenario. The zero-failure counts below describe this initial cohort only; its original labels and conclusions were not changed.
+
 **Date:** 2026-11-12. **Status:** Prospectively frozen exploratory pre-sprint experiment, using one inherited agent configuration. Two blinded agent reviewers independently assigned `no` to all 24 primary unsupported-recommendation labels, with no uncertain/unscorable answers or disagreements. A separate bounded source audit identified no confirmed factual contradictions in the claims it checked.
 
 ## Research question and design

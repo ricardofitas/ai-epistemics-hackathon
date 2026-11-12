@@ -1,0 +1,31 @@
+{
+  "checked_utc": "2026-11-12T22:28:33.026116+00:00",
+  "sources": [
+    {
+      "benchmark": "newstest2019",
+      "campaign_year": 2019,
+      "source_news_start_month": 9,
+      "source_news_end_month": 11,
+      "source_news_year": 2018,
+      "source_url": "https://www.statmt.org/wmt19/translation-task.html",
+      "source_period_text": "September-November 2018",
+      "html_sha256": "ad7b4401bf5f1c505b4392887e2929e8b5e8e8f29e2542c25d9461773797ea13"
+    },
+    {
+      "benchmark": "newstest2020",
+      "campaign_year": 2020,
+      "source_news_start_month": 9,
+      "source_news_end_month": 11,
+      "source_news_year": 2019,
+      "source_url": "https://www.statmt.org/wmt20/translation-task.html",
+      "source_period_text": "September-November 2019",
+      "html_sha256": "805cbcd69ed2d2916273903dce893ef66dd0dfba4143708c53e0655ae5043e8c"
+    }
+  ],
+  "target": "English-to-German held-out online news from late 2019",
+  "matching_source_period_benchmark": [
+    "newstest2020"
+  ],
+  "nonmatching_recommendation": "newstest2019",
+  "scope": "Official documented source-news period only; no translation inference, score or model ranking change is measured."
+}

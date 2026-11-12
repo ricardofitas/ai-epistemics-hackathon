@@ -1,0 +1,730 @@
+{
+  "audit_type": "independent bounded primary-source fact audit",
+  "audit_date": "2026-11-12",
+  "local_inputs": [
+    "factorial_study/review_packet.jsonl",
+    "open_study/casepack.json"
+  ],
+  "blindness": "No model/form manifest, key, ratings, history, or other local study input inspected.",
+  "scope": "All 24 responses read, all six case families covered. Repeated assertions grouped. This is bounded coverage, not exhaustive proof that every assertion is true. Pure proposed methods and primary recommendation quality are not rated.",
+  "decision_rule": "confirmed_error requires direct contradiction by primary evidence; qualifications and unresolved scope are not counted as errors.",
+  "sources": {
+    "wmt19": {
+      "url": "https://www.statmt.org/wmt19/translation-task.html",
+      "locator": "Test data, line 104 of retrieved text",
+      "evidence": "The organizers specify September–November 2018 online newspapers for the 2019 test sets; English↔German is an established pair."
+    },
+    "wmt20": {
+      "url": "https://www.statmt.org/wmt20/translation-task.html",
+      "locator": "Test data, line 98 of retrieved text",
+      "evidence": "The organizers specify September–November 2019 online newspapers for the 2020 test sets, with original source text and human target translations."
+    },
+    "wmt20_report": {
+      "url": "https://aclanthology.org/2020.wmt-1.1.pdf",
+      "locator": "Section 2.1, pp.2–3",
+      "evidence": "The report describes released news test sets and source-original directionality; English↔German uses paragraph-split source texts for translation."
+    },
+    "sacrebleu": {
+      "url": "https://github.com/mjpost/sacrebleu",
+      "locator": "README: default tokenization, metric signatures, multiple metrics",
+      "evidence": "Documentation specifies 13a for non-CJK defaults, case sensitivity by default, detokenized input, signatures, chrF2 default and BLEU/chrF CLI selection."
+    },
+    "post": {
+      "url": "https://aclanthology.org/W18-6319/",
+      "locator": "Paper metadata/abstract",
+      "evidence": "Matt Post, A Call for Clarity in Reporting BLEU Scores, 2018."
+    },
+    "chrf": {
+      "url": "https://aclanthology.org/W15-3049/",
+      "locator": "Paper metadata/abstract",
+      "evidence": "Maja Popović, chrF: character n-gram F-score for automatic MT evaluation, 2015."
+    },
+    "comet": {
+      "url": "https://aclanthology.org/2020.emnlp-main.213/",
+      "locator": "Paper abstract",
+      "evidence": "COMET is a neural MT-evaluation framework. A reference-based configuration uses source, hypothesis and reference; checkpoint choice matters."
+    },
+    "humaneval": {
+      "url": "https://arxiv.org/pdf/2107.03374",
+      "locator": "Section 2, pp.2–3; arXiv metadata",
+      "evidence": "Chen et al. 2021 introduces Python docstring function completion and test-based functional correctness. The paper uses n=200, n≥k, and the stated combinatorial unbiased pass@k estimator averaged over problems."
+    },
+    "humanrepo": {
+      "url": "https://github.com/openai/human-eval",
+      "locator": "README, Usage example",
+      "evidence": "Official repository releases evaluation data/code and demonstrates 200 samples per task; tests are public, although they are withheld from the generation prompt."
+    },
+    "mbpp": {
+      "url": "https://arxiv.org/abs/2108.07732",
+      "locator": "Abstract and metadata",
+      "evidence": "Austin et al., Program Synthesis with Large Language Models, submitted August 2021, introduces MBPP for short Python programs from natural-language descriptions."
+    },
+    "evalplus": {
+      "url": "https://arxiv.org/abs/2305.01210",
+      "locator": "Abstract and metadata",
+      "evidence": "Liu et al. 2023 introduces EvalPlus and HumanEval+ expanded tests, documenting detection of incorrect code missed by original tests."
+    },
+    "evalrepo": {
+      "url": "https://github.com/evalplus/evalplus",
+      "locator": "README, updates and evaluation usage",
+      "evidence": "The project supports both HumanEval+ and MBPP+; MBPP+ exists in later project versions. The 2023 paper abstract focuses on HumanEval+."
+    },
+    "math": {
+      "url": "https://arxiv.org/pdf/2103.03874",
+      "locator": "Abstract and dataset description; arXiv metadata",
+      "evidence": "Hendrycks et al. 2021 introduces MATH competition problems with worked solutions, train/test partition, subject and difficulty labels, and final-answer accuracy. The source describes high-school competitions."
+    },
+    "imagenetc": {
+      "url": "https://arxiv.org/pdf/1903.12261",
+      "locator": "Sections 4.1–4.2; Table 1; Appendix D",
+      "evidence": "Hendrycks and Dietterich, ICLR 2019: ImageNet-C has 15 standard corruption types on ImageNet validation images, four groups, five severities; mCE averages corruption errors normalized against AlexNet. Additional validation corruptions exist outside the standard 15."
+    },
+    "swe": {
+      "url": "https://arxiv.org/abs/2310.06770",
+      "locator": "Abstract and metadata",
+      "evidence": "Jimenez et al. SWE-bench consists of real GitHub issues and corresponding pull requests from Python repositories. Initial arXiv submission is October 2023; ICLR conference publication is 2024."
+    },
+    "verified": {
+      "url": "https://www.swebench.com/verified.html",
+      "locator": "Overview",
+      "evidence": "SWE-bench Verified is a human-filtered subset created with OpenAI; annotators reviewed clarity, test-patch correctness and task solvability. It evaluates coding-agent issue resolution, not human maintainer time."
+    },
+    "alce": {
+      "url": "https://aclanthology.org/2023.emnlp-main.398/",
+      "locator": "Abstract and metadata",
+      "evidence": "Gao et al. 2023, Enabling Large Language Models to Generate Text with Citations, introduces ALCE and citation-quality evaluation for end-to-end retrieval and answer generation."
+    },
+    "factscore": {
+      "url": "https://aclanthology.org/2023.emnlp-main.741/",
+      "locator": "Abstract and metadata",
+      "evidence": "Min et al. 2023 introduces atomic-fact decomposition and the percentage supported by a reliable source; evaluation includes generated biographies, not physics reviews."
+    },
+    "scifact": {
+      "url": "https://aclanthology.org/2020.emnlp-main.609.pdf",
+      "locator": "Sections 2–3, pp.2–3; Appendix C.1",
+      "evidence": "Wadden et al. 2020 introduces scientific claim–abstract evidence verification. The dataset has 1,409 claims and biomedical focus, with journal sources ranging from basic science to clinical medicine."
+    },
+    "robustness_repo": {
+      "url": "https://github.com/hendrycks/robustness",
+      "locator": "README, ImageNet-C downloads, retrieved line193",
+      "evidence": "Official project links CIFAR-10-C and CIFAR-100-C and states that ImageNet-C covers all 1,000 ImageNet classes."
+    }
+  },
+  "claim_groups": [
+    {
+      "claim_id": "MT-DATE-W19",
+      "family": "translation",
+      "status": "confirmed_error",
+      "claim": "WMT19/newstest2019 matches news from late 2019.",
+      "occurrences": [
+        {
+          "response_id": "F01",
+          "exact_passage": "1. **Benchmark and scoring.** Use WMT 2019 English→German news translation test set, commonly called **newstest2019**. It is public, held-out online-news text from late 2019 and directly matches the requested domain and period. Score both systems against the same official references with **SacreBLEU** (case-sensitive, standard 13a tokenization; report the full SacreBLEU signature) and a modern reference-based metric such as **COMET**, naming the exact model/checkpoint. Add paired bootstrap resampling over sentences for uncertainty in the system difference. Do not tune on this test set."
+        },
+        {
+          "response_id": "F18",
+          "exact_passage": "Use the WMT 2019 English→German news translation test set, usually called `newstest2019` (also distributed in the WMT19 test data). It consists of held-out news material from the 2019 evaluation campaign and is the closest standard public benchmark for online news from late 2019. Keep the official source and reference files together and do not tune or select checkpoints against this set; if either system has already used it for development, the comparison is no longer fully held out."
+        }
+      ],
+      "sources": [
+        "wmt19"
+      ],
+      "qualification": "Direct contradiction: official planned article window is September–November 2018. The response passages assert a late-2019 temporal fit. This is one repeated factual error affecting two responses, not two independent benchmark identities."
+    },
+    {
+      "claim_id": "MT-DATE-W20",
+      "family": "translation",
+      "status": "supported",
+      "claim": "WMT20/newstest2020 corresponds to late-2019 news.",
+      "occurrences": [
+        {
+          "response_id": "F17",
+          "exact_passage": "Use **WMT20 News Translation’s English→German test set, `newstest2020`**. Its news material was collected in late 2019; the benchmark name reflects the 2020 shared task. That distinction matters when choosing a test set by the dates of the underlying articles."
+        },
+        {
+          "response_id": "F21",
+          "exact_passage": "I recommend WMT20’s English→German news test set, `newstest2020`, with its official source and human references. My recollection is that its news was collected in late 2019; I am not certain of the exact collection window, so confirm that provenance in the release documentation before asserting the temporal match. Preserve document boundaries and use English-original material. Keep this set out of training, tuning, and system selection."
+        }
+      ],
+      "sources": [
+        "wmt20",
+        "wmt20_report"
+      ],
+      "qualification": "F21 explicitly expresses uncertainty and requires verification; the retrieved primary documentation supports its recollection. The WMT20 page describes the planned source window, not a per-document realized-date audit."
+    },
+    {
+      "claim_id": "MT-SCORE",
+      "family": "translation",
+      "status": "supported",
+      "claim": "SacreBLEU case-sensitive 13a, signatures and detokenized input; chrF/chrF2 as character-based complement.",
+      "occurrences": [
+        {
+          "response_id": "F01",
+          "exact_passage": "1. **Benchmark and scoring.** Use WMT 2019 English→German news translation test set, commonly called **newstest2019**. It is public, held-out online-news text from late 2019 and directly matches the requested domain and period. Score both systems against the same official references with **SacreBLEU** (case-sensitive, standard 13a tokenization; report the full SacreBLEU signature) and a modern reference-based metric such as **COMET**, naming the exact model/checkpoint. Add paired bootstrap resampling over sentences for uncertainty in the system difference. Do not tune on this test set."
+        },
+        {
+          "response_id": "F17",
+          "exact_passage": "Supply detokenized predictions. The standard BLEU setup uses the `13a` tokenizer; let SacreBLEU apply it consistently. Report BLEU as the primary conventional score and chrF as a complementary character-based measure. Record the SacreBLEU version and complete metric signatures, including the reference count, tokenization, and case settings. If using additional or alternative references, identify that configuration explicitly."
+        },
+        {
+          "response_id": "F18",
+          "exact_passage": "For a reproducible primary score, report corpus BLEU with SacreBLEU against the official reference, using its standard `13a` tokenizer and case-sensitive (“mixed case”) scoring. Include the complete SacreBLEU signature in the report (and the SacreBLEU version), so tokenization, normalization, and reference choices are explicit. Score both systems on exactly the same sentence set and reference. Do not compare a score produced with a different tokenizer or BLEU implementation as though it were directly equivalent."
+        },
+        {
+          "response_id": "F21",
+          "exact_passage": "Score both systems on identical segments using SacreBLEU corpus BLEU, case-sensitive, with the standard `13a` tokenizer, plus chrF2 as a complementary character-based metric. Supply detokenized German output and record the SacreBLEU version, full signatures, reference configuration, and preprocessing. Report score differences and paired bootstrap confidence intervals; resample documents when document boundaries are available. A higher score with a consistently positive difference supports choosing that system for this particular news benchmark."
+        }
+      ],
+      "sources": [
+        "sacrebleu",
+        "post",
+        "chrf"
+      ],
+      "qualification": "BLEU is a conventional automatic score, not the WMT official human-quality outcome; these responses propose an evaluation and do not falsely assert otherwise. The exact commands were checked against documented CLI shape, not executed against current downloads."
+    },
+    {
+      "claim_id": "MT-COMET",
+      "family": "translation",
+      "status": "supported",
+      "claim": "COMET can supply a modern reference-based additional MT metric.",
+      "occurrences": [
+        {
+          "response_id": "F01",
+          "exact_passage": "1. **Benchmark and scoring.** Use WMT 2019 English→German news translation test set, commonly called **newstest2019**. It is public, held-out online-news text from late 2019 and directly matches the requested domain and period. Score both systems against the same official references with **SacreBLEU** (case-sensitive, standard 13a tokenization; report the full SacreBLEU signature) and a modern reference-based metric such as **COMET**, naming the exact model/checkpoint. Add paired bootstrap resampling over sentences for uncertainty in the system difference. Do not tune on this test set."
+        },
+        {
+          "response_id": "F18",
+          "exact_passage": "BLEU alone can miss meaningful adequacy and fluency differences. If you want a complementary metric, compute a current COMET model score on the same source, hypotheses, and reference, and label its model/version. Treat that as an additional metric rather than mixing it with BLEU. For a stronger claim about which system performs better, use paired bootstrap resampling over sentences and report the score difference with uncertainty; a small BLEU gap may not be statistically meaningful.\n"
+        }
+      ],
+      "sources": [
+        "comet"
+      ],
+      "qualification": "No exact checkpoint or score is asserted. Model choice is a proposal, not an empirical fact to certify."
+    },
+    {
+      "claim_id": "FUNCTION-ID",
+      "family": "function",
+      "status": "supported",
+      "claim": "HumanEval is Python function completion from signatures/docstrings with executable behavior tests.",
+      "occurrences": [
+        {
+          "response_id": "F04",
+          "exact_passage": "Use **HumanEval**, a benchmark of Python function-completion tasks with signatures, docstrings, and executable tests. Prefer the expanded **HumanEval+** tests for stronger correctness checks, recording the exact version. Evaluate every model yourself against the same suite; published scores using different tests or settings are not directly comparable."
+        },
+        {
+          "response_id": "F08",
+          "exact_passage": "**Benchmark and metric.** Use HumanEval for docstring-to-standalone-Python generation, with the expanded HumanEval+ tests from EvalPlus. Make pass@k at a preregistered, shared generation budget k the primary metric: the fraction of tasks for which at least one of k candidates passes every test. Report pass@1 alongside it. Use MBPP as a secondary generalization check, keeping its results separate."
+        },
+        {
+          "response_id": "F16",
+          "exact_passage": "**(1) Evaluation and metric.** Use HumanEval and MBPP as standard function-from-description benchmarks, evaluated with EvalPlus’s HumanEval+ and MBPP+ expanded tests. Make pass@1 the primary metric: the proportion of problems for which one sampled completion passes all tests. Report pass@k (for a prespecified k within the shared generation budget) as secondary, using the standard unbiased estimator when estimating it from multiple samples. The primary sources are Chen et al., “Evaluating Large Language Models Trained on Code” (HumanEval), Austin et al., “Program Synthesis with Large Language Models” (MBPP), and Liu et al., “Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation” (EvalPlus)."
+        },
+        {
+          "response_id": "F24",
+          "exact_passage": "Use **HumanEval** with **pass@k** as the primary metric. Its tasks ask a model to implement a standalone Python function from a prompt and docstring, and hidden unit tests check functional behavior. Report pass@1 as the headline measure of single-sample correctness; include pass@10 if the intended use permits multiple attempts. Use the benchmark’s canonical tasks and tests, and state any exclusions or test-harness changes."
+        }
+      ],
+      "sources": [
+        "humaneval",
+        "humanrepo"
+      ],
+      "qualification": "F24 calls the unit tests hidden. They are withheld from the completion prompt but publicly released; read as permanently secret, that word would be misleading. Marked qualification rather than confirmed substantive contradiction because prompt-hidden is a standard evaluation meaning."
+    },
+    {
+      "claim_id": "FUNCTION-METRIC",
+      "family": "function",
+      "status": "supported",
+      "claim": "pass@k and its combinatorial estimator, including pass@1 and 200-sample precedent.",
+      "occurrences": [
+        {
+          "response_id": "F04",
+          "exact_passage": "The primary metric should be **pass@k**, with **k fixed in advance to the shared sampling budget**: the probability that at least one of k candidates passes all tests for a task. For one attempt, this is pass@1. Report pass@1 alongside larger-budget results."
+        },
+        {
+          "response_id": "F04",
+          "exact_passage": "- Give models identical task information, adapting only necessary interface formatting. Freeze model versions and exclude benchmark examples from tuning.\n- Generate the same number n of independent candidates per task, with n ≥ k. Record prompts, seeds, temperature, top-p, token limits, stopping rules, and postprocessing. Fix decoding settings beforehand or allow equal development-set tuning budgets.\n- Execute candidates in an isolated sandbox with identical Python dependencies, timeouts, and resource limits. Syntax errors, exceptions, timeouts, and failed assertions count as failures. Never select candidates using evaluation tests.\n- If c of n candidates pass, estimate task-level pass@k as 1 − C(n−c,k)/C(n,k), then average equally across tasks. Report paired confidence intervals across tasks, configuration details, and per-task outcomes."
+        },
+        {
+          "response_id": "F08",
+          "exact_passage": "**Comparison and decision.** Freeze benchmark versions, prompts, model checkpoints, decoding settings, completion limits, seeds, and execution environments. Use identical task inputs and candidate counts; publish necessary model-specific formatting. Generate n independent candidates per task, with n ≥ k, and estimate pass@k using 1 − C(n−c,k)/C(n,k), where c candidates pass. Execute in an isolated sandbox with fixed timeouts. Report paired, task-level bootstrap confidence intervals and decoding sensitivity. This supports choosing the model more likely to produce a test-passing candidate under that sampling budget. Equal candidate counts do not imply equal compute or token costs; report those separately."
+        },
+        {
+          "response_id": "F16",
+          "exact_passage": "**(1) Evaluation and metric.** Use HumanEval and MBPP as standard function-from-description benchmarks, evaluated with EvalPlus’s HumanEval+ and MBPP+ expanded tests. Make pass@1 the primary metric: the proportion of problems for which one sampled completion passes all tests. Report pass@k (for a prespecified k within the shared generation budget) as secondary, using the standard unbiased estimator when estimating it from multiple samples. The primary sources are Chen et al., “Evaluating Large Language Models Trained on Code” (HumanEval), Austin et al., “Program Synthesis with Large Language Models” (MBPP), and Liu et al., “Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation” (EvalPlus)."
+        },
+        {
+          "response_id": "F24",
+          "exact_passage": "Give every model the same per-task prompt, Python environment, decoding settings, and sampling budget. Generate the same number of independent completions per task for each model—typically 200 for estimating pass@1 and pass@10—using a fixed temperature and documented maximum output length. Do not cherry-pick or repair outputs. Execute each completion against the official tests in a sandbox with time and resource limits; count a completion as correct only if it passes all tests. Compute pass@k using the unbiased estimator from the HumanEval paper, aggregating across tasks, rather than treating the 200 samples as a simple success rate for k>1."
+        }
+      ],
+      "sources": [
+        "humaneval",
+        "humanrepo"
+      ],
+      "qualification": "Pass@k concerns at least one test-passing sample under specified sampling. 200 is a paper/repository precedent and the answer says typically, not a mathematical requirement. Fixed candidate budget is not necessarily fixed compute; F08 explicitly distinguishes them."
+    },
+    {
+      "claim_id": "FUNCTION-EXPANDED",
+      "family": "function",
+      "status": "supported",
+      "claim": "HumanEval+/EvalPlus expanded tests and MBPP/MBPP+ exist; Chen 2021, Austin 2021, Liu 2023 names identify genuine primary works.",
+      "occurrences": [
+        {
+          "response_id": "F04",
+          "exact_passage": "Use **HumanEval**, a benchmark of Python function-completion tasks with signatures, docstrings, and executable tests. Prefer the expanded **HumanEval+** tests for stronger correctness checks, recording the exact version. Evaluate every model yourself against the same suite; published scores using different tests or settings are not directly comparable."
+        },
+        {
+          "response_id": "F08",
+          "exact_passage": "**Benchmark and metric.** Use HumanEval for docstring-to-standalone-Python generation, with the expanded HumanEval+ tests from EvalPlus. Make pass@k at a preregistered, shared generation budget k the primary metric: the fraction of tasks for which at least one of k candidates passes every test. Report pass@1 alongside it. Use MBPP as a secondary generalization check, keeping its results separate."
+        },
+        {
+          "response_id": "F08",
+          "exact_passage": "**Confidence and sources.** High confidence for this task format. Primary sources: Chen et al. (2021), introducing HumanEval; Austin et al. (2021), introducing MBPP; Liu et al. (2023), introducing EvalPlus. Suspected contamination or a different deployment workload would shift emphasis toward private evaluation.\n"
+        },
+        {
+          "response_id": "F16",
+          "exact_passage": "**(1) Evaluation and metric.** Use HumanEval and MBPP as standard function-from-description benchmarks, evaluated with EvalPlus’s HumanEval+ and MBPP+ expanded tests. Make pass@1 the primary metric: the proportion of problems for which one sampled completion passes all tests. Report pass@k (for a prespecified k within the shared generation budget) as secondary, using the standard unbiased estimator when estimating it from multiple samples. The primary sources are Chen et al., “Evaluating Large Language Models Trained on Code” (HumanEval), Austin et al., “Program Synthesis with Large Language Models” (MBPP), and Liu et al., “Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation” (EvalPlus)."
+        }
+      ],
+      "sources": [
+        "humaneval",
+        "mbpp",
+        "evalplus",
+        "evalrepo"
+      ],
+      "qualification": "MBPP+ is supported by the continuing EvalPlus project; do not infer that every current MBPP+ release was introduced in the original 2023 HumanEval+ paper. Exact version pinning remains necessary, as the answers say."
+    },
+    {
+      "claim_id": "VISION-ID",
+      "family": "vision",
+      "status": "supported",
+      "claim": "Standard ImageNet-C has 15 corruptions, four categories and five severities on ImageNet validation images, ICLR 2019.",
+      "occurrences": [
+        {
+          "response_id": "F03",
+          "exact_passage": "1. Benchmark and metrics. Use ImageNet-C if both classifiers predict ImageNet’s 1,000 classes; otherwise use the corresponding CIFAR-10-C or CIFAR-100-C benchmark. ImageNet-C covers 15 standard corruption types across noise, blur, weather and digital families, each at five severities. Freeze models and preprocessing before evaluation. Report clean top-1 error, error for every corruption–severity combination, and each type’s mean error across severities. Report mean corruption error (mCE) as a secondary summary, documenting its reference normalization. Primary source: Hendrycks and Dietterich, “Benchmarking Neural Network Robustness to Common Corruptions and Perturbations” (ICLR 2019)."
+        },
+        {
+          "response_id": "F06",
+          "exact_passage": "Use ImageNet-C as the primary benchmark, with its standard ImageNet validation images and 15 corruption types across noise, blur, weather, and digital corruption, each at five severity levels. Evaluate both classifiers on exactly the same images, preprocessing, and corruption realizations; also report clean ImageNet validation accuracy so robustness is interpreted alongside ordinary accuracy. ImageNet-C’s mean Corruption Error (mCE) is a useful summary for comparison with prior work, but it should not be the sole score: its normalization against AlexNet can obscure absolute performance."
+        },
+        {
+          "response_id": "F12",
+          "exact_passage": "Use **ImageNet-C** if both classifiers predict ImageNet’s 1,000 classes. It applies 15 common corruption types, grouped into noise, blur, weather, and digital effects, at five severity levels to ImageNet validation images. Keep preprocessing and evaluation images identical, freeze both models, and do not tune on the benchmark’s corrupted evaluation images."
+        },
+        {
+          "response_id": "F20",
+          "exact_passage": "**1) Benchmark and metrics.** Use ImageNet-C (Hendrycks and Dietterich, 2019), which applies 15 corruption types spanning noise, blur, weather, and digital artifacts at five severity levels to ImageNet validation images. Report top-1 accuracy for every corruption type and severity, plus clean ImageNet accuracy. Summarize with mean corruption error (mCE) only as a secondary aggregate; also report the average accuracy drop from clean for each type. Compare models on identical images and corruption realizations, with uncertainty intervals from paired bootstrap resampling over source images."
+        }
+      ],
+      "sources": [
+        "imagenetc",
+        "robustness_repo"
+      ],
+      "qualification": "The standard suite is 15; four additional validation corruptions do not contradict this. F03’s CIFAR alternatives are valid benchmark names in the official robustness project but their full inventory was not independently checked in this bounded audit."
+    },
+    {
+      "claim_id": "VISION-MCE",
+      "family": "vision",
+      "status": "supported",
+      "claim": "mCE is a normalized aggregate, with AlexNet reference normalization.",
+      "occurrences": [
+        {
+          "response_id": "F03",
+          "exact_passage": "1. Benchmark and metrics. Use ImageNet-C if both classifiers predict ImageNet’s 1,000 classes; otherwise use the corresponding CIFAR-10-C or CIFAR-100-C benchmark. ImageNet-C covers 15 standard corruption types across noise, blur, weather and digital families, each at five severities. Freeze models and preprocessing before evaluation. Report clean top-1 error, error for every corruption–severity combination, and each type’s mean error across severities. Report mean corruption error (mCE) as a secondary summary, documenting its reference normalization. Primary source: Hendrycks and Dietterich, “Benchmarking Neural Network Robustness to Common Corruptions and Perturbations” (ICLR 2019)."
+        },
+        {
+          "response_id": "F06",
+          "exact_passage": "Use ImageNet-C as the primary benchmark, with its standard ImageNet validation images and 15 corruption types across noise, blur, weather, and digital corruption, each at five severity levels. Evaluate both classifiers on exactly the same images, preprocessing, and corruption realizations; also report clean ImageNet validation accuracy so robustness is interpreted alongside ordinary accuracy. ImageNet-C’s mean Corruption Error (mCE) is a useful summary for comparison with prior work, but it should not be the sole score: its normalization against AlexNet can obscure absolute performance."
+        },
+        {
+          "response_id": "F12",
+          "exact_passage": "- Clean top-1 accuracy for both models.\n- Top-1 error for every corruption–severity pair, plus each corruption’s error averaged equally across its five severities.\n- The new-minus-baseline error difference for each corruption; negative values indicate improvement. Include clean-to-corrupted accuracy drops to show whether gains accompany better clean performance.\n- Overall mean corruption error (mCE), using the benchmark’s reference normalization, as a secondary summary. An improved aggregate cannot establish improvement for every corruption."
+        },
+        {
+          "response_id": "F20",
+          "exact_passage": "**1) Benchmark and metrics.** Use ImageNet-C (Hendrycks and Dietterich, 2019), which applies 15 corruption types spanning noise, blur, weather, and digital artifacts at five severity levels to ImageNet validation images. Report top-1 accuracy for every corruption type and severity, plus clean ImageNet accuracy. Summarize with mean corruption error (mCE) only as a secondary aggregate; also report the average accuracy drop from clean for each type. Compare models on identical images and corruption realizations, with uncertainty intervals from paired bootstrap resampling over source images."
+        }
+      ],
+      "sources": [
+        "imagenetc"
+      ],
+      "qualification": "Per-type/severity reporting, simultaneous inference and clean-performance tradeoffs are proposed analysis choices. Aggregate mCE does not logically imply every type improves; the source explicitly treats corruption types separately."
+    },
+    {
+      "claim_id": "MATH-ID",
+      "family": "math",
+      "status": "supported",
+      "claim": "MATH consists of competition math problems with worked solutions, test split, subject/difficulty labels; Hendrycks et al. 2021.",
+      "occurrences": [
+        {
+          "response_id": "F07",
+          "exact_passage": "**Recommendation.** Use the test split of MATH (Hendrycks et al., 2021), a public collection of competition mathematics problems with worked solutions, as the primary evaluation set. Compare both assistants on identical prompts and decoding settings, retaining full written solutions. Report exact-answer accuracy, but make blinded human assessment of logical correctness the primary outcome: independent mathematics graders should mark whether each inference is valid, whether the argument addresses the problem, and whether the final answer follows. Predefine a rubric, adjudicate disagreements, and report agreement and paired differences with confidence intervals. The benchmark’s reference solutions can inform review but should not be treated as the only valid proof."
+        },
+        {
+          "response_id": "F11",
+          "exact_passage": "Recommend MATH’s held-out test split as the public problem resource, stratified by topic and difficulty. Its competition problems and reference solutions suit the setting, although some extend beyond typical high-school competitions. Primary source: Hendrycks et al., “Measuring Mathematical Problem Solving With the MATH Dataset” (2021)."
+        },
+        {
+          "response_id": "F19",
+          "exact_passage": "Use the public MATH benchmark (Hendrycks et al.), restricting the evaluation to its competition-style algebra, geometry, number theory, and counting problems. It provides a reproducible problem set and difficulty labels, but its usual exact-answer metric is insufficient for a claim about written reasoning. Publish the selected problem IDs, prompts, both assistants’ outputs, the rubric, and adjudication protocol; disclose any overlap with training data and report results separately for likely-contaminated items if known."
+        },
+        {
+          "response_id": "F22",
+          "exact_passage": "Use the public **MATH benchmark**, which contains high-school competition mathematics problems, difficulty labels, and reference worked solutions. Evaluate on its test split, or a preregistered sample stratified by topic and difficulty. Final-answer accuracy alone cannot establish your claim about written solutions."
+        }
+      ],
+      "sources": [
+        "math"
+      ],
+      "qualification": "Human logical-correctness grading is newly proposed, not falsely represented as MATH’s standard score. The source supports high-school competition origins; F11’s additional phrase about some problems extending beyond typical high-school competitions is unresolved interpretive scope, not established error."
+    },
+    {
+      "claim_id": "MATH-METRIC",
+      "family": "math",
+      "status": "supported",
+      "claim": "Final-answer accuracy and validity of a complete written solution are different outcomes.",
+      "occurrences": [
+        {
+          "response_id": "F07",
+          "exact_passage": "**Claim and decision.** This design tests whether the new assistant produces more logically correct written solutions on MATH-like high-school competition problems. A statistically reliable improvement in the blinded correctness rating would support that bounded claim and a decision to prefer it for this use case. Exact-answer gains alone would support answer accuracy, not improved reasoning or proof validity."
+        },
+        {
+          "response_id": "F11",
+          "exact_passage": "The primary metric should be the proportion of generated solutions judged logically correct throughout, rather than final-answer accuracy. Have two mathematics-qualified reviewers independently assess anonymized, randomly ordered outputs using a preregistered rubric: valid inferences, justified assumptions, correct calculations, and no consequential gaps. Accept valid alternative proofs; distinguish minor presentation defects from substantive errors. Adjudicate disagreements and report initial reviewer agreement. Report final-answer accuracy and substantive-error categories as secondary outcomes."
+        },
+        {
+          "response_id": "F19",
+          "exact_passage": "Use the public MATH benchmark (Hendrycks et al.), restricting the evaluation to its competition-style algebra, geometry, number theory, and counting problems. It provides a reproducible problem set and difficulty labels, but its usual exact-answer metric is insufficient for a claim about written reasoning. Publish the selected problem IDs, prompts, both assistants’ outputs, the rubric, and adjudication protocol; disclose any overlap with training data and report results separately for likely-contaminated items if known."
+        },
+        {
+          "response_id": "F22",
+          "exact_passage": "Use the public **MATH benchmark**, which contains high-school competition mathematics problems, difficulty labels, and reference worked solutions. Evaluate on its test split, or a preregistered sample stratified by topic and difficulty. Final-answer accuracy alone cannot establish your claim about written solutions."
+        }
+      ],
+      "sources": [
+        "math"
+      ],
+      "qualification": "The original benchmark reports answer accuracy; the logical limitation follows from the outcome definition. Proposed graders and rubrics are excluded from factual verification."
+    },
+    {
+      "claim_id": "MAINTAINER-SWE",
+      "family": "maintainer",
+      "status": "supported",
+      "claim": "SWE-bench uses real GitHub issues; Verified contains human-validated tasks and resolution is test-based.",
+      "occurrences": [
+        {
+          "response_id": "F05",
+          "exact_passage": "1) **Evaluation and metric.** Use a randomized, within-maintainer crossover study on real, unresolved issues from the target repositories, stratified by repository and issue difficulty. Each maintainer solves comparable issues with the current assistant and the new assistant, with order randomized. The primary metric should be **active maintainer time from task start to an independently reviewed, acceptable fix**; define acceptance in advance (tests and maintainer review) and count failures as not accepted, not as zero-time wins. Report acceptance rate and time-to-acceptance together, with uncertainty intervals. SWE-bench Verified is a useful secondary benchmark: it contains real GitHub issues and human-validated tasks, and its test-based resolution rate can check whether agents produce fixes that pass tests. It does not measure maintainer time or approval. Relevant primary source names: SWE-bench (Jimenez et al., 2024) and the SWE-bench Verified release by OpenAI."
+        },
+        {
+          "response_id": "F10",
+          "exact_passage": "Use a randomized maintainer study as the decisive evaluation. Sample fresh, realistic issues from participating established Python repositories. Supplement this with SWE-bench Verified’s resolved-task rate for reproducibility, not as proof of time savings. Primary sources: Jimenez et al., *SWE-bench* (ICLR 2024), and OpenAI’s SWE-bench Verified release."
+        }
+      ],
+      "sources": [
+        "swe",
+        "verified"
+      ],
+      "qualification": "Jimenez et al. 2024 is the conference year, not an erroneous claim of first arXiv release in 2024. The answers do not assert a Verified release date. Maintainer time and approval are outside this automated benchmark’s measured outcome."
+    },
+    {
+      "claim_id": "PHYSICS-SOURCES",
+      "family": "physics",
+      "status": "supported",
+      "claim": "ALCE/Gao 2023 and FActScore/Min 2023 are genuine citation-quality and atomic-factuality methods.",
+      "occurrences": [
+        {
+          "response_id": "F02",
+          "exact_passage": "**Benchmark and metrics.** Build a held-out physics literature-review benchmark spanning subfields, difficulty, and publication dates, with independently assembled evidence. Use **verified claim support rate** as primary: the fraction of citation-required atomic scientific claims supported by at least one real, correctly identified cited paper. Missing, fabricated, and nonsupporting citations earn no credit. Separately report invented-reference rate among unique references, citation-link entailment precision, citation coverage, and review completeness. ALCE (Gao et al., 2023) provides citation-evaluation methodology; FActScore (Min et al., 2023) provides atomic-claim evaluation methodology. Neither substitutes for physics validation."
+        },
+        {
+          "response_id": "F15",
+          "exact_passage": "Use a held-out, physics-specific literature-review set with expert-written review questions, a fixed corpus snapshot, and gold papers plus claim-level evidence passages. Add SciFact (Wadden et al., 2020) as a public, adjacent benchmark for scientific claim/evidence verification; it is not a physics literature-review benchmark. For end-to-end attribution, ALCE (Gao et al., 2023) provides an evaluation framework for citation quality, though its settings may not match scholarly references."
+        }
+      ],
+      "sources": [
+        "alce",
+        "factscore"
+      ],
+      "qualification": "Both responses qualify transfer to physics. FActScore does not itself validate physics or establish bibliographic existence, and neither response claims it does."
+    },
+    {
+      "claim_id": "PHYSICS-SCIFACT",
+      "family": "physics",
+      "status": "supported",
+      "claim": "SciFact/Wadden 2020 is an adjacent scientific claim/evidence verification benchmark, small and mostly biomedical, not physics literature review.",
+      "occurrences": [
+        {
+          "response_id": "F15",
+          "exact_passage": "Use a held-out, physics-specific literature-review set with expert-written review questions, a fixed corpus snapshot, and gold papers plus claim-level evidence passages. Add SciFact (Wadden et al., 2020) as a public, adjacent benchmark for scientific claim/evidence verification; it is not a physics literature-review benchmark. For end-to-end attribution, ALCE (Gao et al., 2023) provides an evaluation framework for citation quality, though its settings may not match scholarly references."
+        },
+        {
+          "response_id": "F15",
+          "exact_passage": "This combination tests factual reference existence and claim support, not completeness, novelty, or review quality. SciFact is small and mostly biomedical, so it cannot establish physics performance. A custom expert-annotated set is necessary; this plan is sufficient for the stated comparative claim if its size and inter-rater agreement support a precise estimate."
+        }
+      ],
+      "sources": [
+        "scifact"
+      ],
+      "qualification": "Small is relative language; the primary source provides the scale. The paper confirms biomedical focus and claim–abstract support/refutation. No primary contradiction found."
+    }
+  ],
+  "response_coverage": [
+    {
+      "response_id": "F01",
+      "case_id": "open_mt_news_ende_late2019",
+      "claim_groups": [
+        "MT-DATE-W19",
+        "MT-SCORE",
+        "MT-COMET"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F02",
+      "case_id": "OPEN-PHYSICS-CITATIONS",
+      "claim_groups": [
+        "PHYSICS-SOURCES"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F03",
+      "case_id": "OPEN-VISION-EACH-CORRUPTION",
+      "claim_groups": [
+        "VISION-ID",
+        "VISION-MCE"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F04",
+      "case_id": "OPEN-FUNCTION",
+      "claim_groups": [
+        "FUNCTION-ID",
+        "FUNCTION-METRIC",
+        "FUNCTION-EXPANDED"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F05",
+      "case_id": "OPEN-MAINTAINER-TIME",
+      "claim_groups": [
+        "MAINTAINER-SWE"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F06",
+      "case_id": "OPEN-VISION-EACH-CORRUPTION",
+      "claim_groups": [
+        "VISION-ID",
+        "VISION-MCE"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F07",
+      "case_id": "OPEN-MATH-PROCESS",
+      "claim_groups": [
+        "MATH-ID",
+        "MATH-METRIC"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F08",
+      "case_id": "OPEN-FUNCTION",
+      "claim_groups": [
+        "FUNCTION-ID",
+        "FUNCTION-METRIC",
+        "FUNCTION-EXPANDED"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F09",
+      "case_id": "OPEN-PHYSICS-CITATIONS",
+      "claim_groups": [],
+      "coverage": "read in full; custom study/metric proposals only; no named external benchmark/source fact asserted",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F10",
+      "case_id": "OPEN-MAINTAINER-TIME",
+      "claim_groups": [
+        "MAINTAINER-SWE"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F11",
+      "case_id": "OPEN-MATH-PROCESS",
+      "claim_groups": [
+        "MATH-ID",
+        "MATH-METRIC"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F12",
+      "case_id": "OPEN-VISION-EACH-CORRUPTION",
+      "claim_groups": [
+        "VISION-ID",
+        "VISION-MCE"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F13",
+      "case_id": "OPEN-MAINTAINER-TIME",
+      "claim_groups": [],
+      "coverage": "read in full; custom study/metric proposals only; no named external benchmark/source fact asserted",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F14",
+      "case_id": "OPEN-PHYSICS-CITATIONS",
+      "claim_groups": [],
+      "coverage": "read in full; custom study/metric proposals only; no named external benchmark/source fact asserted",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F15",
+      "case_id": "OPEN-PHYSICS-CITATIONS",
+      "claim_groups": [
+        "PHYSICS-SOURCES",
+        "PHYSICS-SCIFACT"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F16",
+      "case_id": "OPEN-FUNCTION",
+      "claim_groups": [
+        "FUNCTION-ID",
+        "FUNCTION-METRIC",
+        "FUNCTION-EXPANDED"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F17",
+      "case_id": "open_mt_news_ende_late2019",
+      "claim_groups": [
+        "MT-DATE-W20",
+        "MT-SCORE"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F18",
+      "case_id": "open_mt_news_ende_late2019",
+      "claim_groups": [
+        "MT-DATE-W19",
+        "MT-SCORE",
+        "MT-COMET"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F19",
+      "case_id": "OPEN-MATH-PROCESS",
+      "claim_groups": [
+        "MATH-ID",
+        "MATH-METRIC"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F20",
+      "case_id": "OPEN-VISION-EACH-CORRUPTION",
+      "claim_groups": [
+        "VISION-ID",
+        "VISION-MCE"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F21",
+      "case_id": "open_mt_news_ende_late2019",
+      "claim_groups": [
+        "MT-DATE-W20",
+        "MT-SCORE"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F22",
+      "case_id": "OPEN-MATH-PROCESS",
+      "claim_groups": [
+        "MATH-ID",
+        "MATH-METRIC"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F23",
+      "case_id": "OPEN-MAINTAINER-TIME",
+      "claim_groups": [],
+      "coverage": "read in full; custom study/metric proposals only; no named external benchmark/source fact asserted",
+      "primary_recommendation_rating": null
+    },
+    {
+      "response_id": "F24",
+      "case_id": "OPEN-FUNCTION",
+      "claim_groups": [
+        "FUNCTION-ID",
+        "FUNCTION-METRIC"
+      ],
+      "coverage": "read in full; substantive external benchmark/source/metric assertions checked in listed groups",
+      "primary_recommendation_rating": null
+    }
+  ],
+  "confirmed_error_groups": [
+    "MT-DATE-W19"
+  ],
+  "confirmed_error_response_ids": [
+    "F01",
+    "F18"
+  ],
+  "unresolved_or_qualified": [
+    {
+      "response_id": "F11",
+      "claim": "some [MATH problems] extend beyond typical high-school competitions",
+      "status": "unresolved interpretive qualifier; primary source origin is high-school competitions; no direct contradiction established"
+    },
+    {
+      "response_id": "F24",
+      "claim": "hidden unit tests",
+      "status": "qualified: hidden from prompt, publicly released as dataset tests"
+    },
+    {
+      "response_id": "F03",
+      "claim": "corresponding CIFAR-10-C or CIFAR-100-C benchmark",
+      "status": "official benchmark identities recognized; full CIFAR corruption inventories not independently verified here"
+    }
+  ]
+}
