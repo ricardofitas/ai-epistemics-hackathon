@@ -1,0 +1,30 @@
+{
+  "question": "I want to compare two English-to-German systems on held-out online news from late 2019. Which public test set and scoring setup should I use?",
+  "conditions": {
+    "memory_only": {
+      "prompt": "I want to compare two English-to-German systems on held-out online news from late 2019. Which public test set and scoring setup should I use?",
+      "tool_policy": "Existing knowledge only. Read only the assigned prompt file and write only the assigned response file; no browsing, searching, external retrieval, or reading other workspace files."
+    },
+    "source_verification": {
+      "prompt": "I want to compare two English-to-German systems on held-out online news from late 2019. Which public test set and scoring setup should I use?\n\nBefore answering, independently verify the source-news collection period of the test set you recommend in its official WMT task documentation. For this run, retrieve only these official task pages: https://www.statmt.org/wmt19/translation-task.html and https://www.statmt.org/wmt20/translation-task.html. Distinguish the source-news period from the task or release year. Cite the primary page and the evidence you actually checked; if access fails or the period remains unclear, state that uncertainty and qualify the recommendation. Do not invent evidence.",
+      "tool_policy": "Read the assigned prompt file and write the assigned response file. Public-source retrieval is permitted only for the two official URLs listed in the prompt (including redirects to the same official resource). No other workspace files, conversation history, model outputs, search results about the answer, or secondary sources. Tool discovery needed to locate a public-page retrieval tool is permitted. Do not inspect unrelated tools or accounts."
+    }
+  },
+  "shared_launcher_template": "Answer the research question in the UTF-8 file {prompt_path}. Treat that file as the complete user request for this run. This is a fresh, one-shot answer; do not inspect previous work or contact other agents. Aim for 180\u2013240 words and do not exceed 300 words. Use this tool policy: {tool_policy} Write the complete answer verbatim to {response_path}; report the path and SHA256 to the coordinator. If the permitted source access fails, retain the failure in the answer or source-access record; do not silently substitute another source. Do not alter the question, ask follow-up questions, read hidden rubrics, or modify any other file.",
+  "source_access_record_template": {
+    "trial_id": "{trial_id}",
+    "records": [
+      {
+        "url": "exact URL requested",
+        "retrieval_time_utc": "ISO8601 or unavailable",
+        "tool_name": "actual tool",
+        "tool_call_or_result_reference": "identifier or unavailable",
+        "status": "success/access_error/not_attempted",
+        "relevant_excerpt": "exact checked passage or null",
+        "artifact_or_trace_path": "path if observer captured; otherwise unavailable"
+      }
+    ],
+    "verification_evidence": "observer-captured tool trace | self-reported citations only | none"
+  },
+  "warning": "Prompt assignment changes both the workflow instruction and source access/candidate cues. No attribution to browsing alone is warranted. Subject self-report is weaker than observed tool-call evidence."
+}
