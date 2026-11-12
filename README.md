@@ -2,7 +2,7 @@
 
 **Can research assistants match evaluations to scientific claims?**
 
-This is a proposed project for the [AI × Epistemics Research Sprint](https://apartresearch.com/sprints/ai-x-epistemics-research-sprint-2026-11-13-to-2026-11-15), 13–15 November 2026, Track 1: Model Epistemics & Decision-Making Evals. The plan is open to revision by the team. No experiments or findings are claimed in this repository yet.
+This is a proposed project for the [AI × Epistemics Research Sprint](https://apartresearch.com/sprints/ai-x-epistemics-research-sprint-2026-11-13-to-2026-11-15), 13–15 November 2026, Track 1: Model Epistemics & Decision-Making Evals. The plan is open to revision by the team. Exploratory pre-sprint experiments are now documented below; they do not establish a general recommendation-error rate.
 
 ## The idea
 
@@ -26,6 +26,7 @@ The main question concerns whether a recommendation supports a specified claim. 
 - [Experiment protocol](docs/experiment-protocol.md) — case design, prompts, scoring and analysis.
 - [Starter cases and literature](docs/starter-cases.md) — concrete public examples and sources to verify.
 - [Tasks and sprint plan](docs/tasks.md) — deliverables, dependencies and a minimum viable path.
+- [Completed six-case open recommendation study](docs/experiments/open-recommendations-results.md) — frozen prompts, raw answers, blind ratings and source checks.
 
 ## Prior work and contribution
 
@@ -33,4 +34,6 @@ Luo, Kasirzadeh and Shah's [study of autonomous AI scientists](https://pmc.ncbi.
 
 ## Current status
 
-**Planning.** The protocol, case set, models and division of work are proposed, not final. No model responses, case annotations or experimental results are included yet.
+**Exploratory pre-sprint evidence.** A six-case, 24-response open recommendation study is complete in one inherited agent configuration. Two blinded agent reviewers found 0/24 unsupported recommendations under the frozen criteria, and a separate bounded source audit found no confirmed factual contradictions. Both conditions explicitly request limitations and sufficiency; human review and broader model/interface testing remain necessary. This does not support a claim of systematic recommendation failure or general reliability.
+
+Earlier [CivilComments pilot results](https://github.com/ricardofitas/ai-epistemics-hackathon/pull/1) and [TruthfulQA audits/pilot](https://github.com/ricardofitas/ai-epistemics-hackathon/pull/4) remain separate exploratory designs. Known evaluator implementation defects are controls, not new recommendation failures.
