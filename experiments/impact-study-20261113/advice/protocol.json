@@ -1,0 +1,105 @@
+{
+  "id": "impact-three-arm-advice-20261113",
+  "created_utc": "2026-11-13T05:28:49.538247+00:00",
+  "status": "prospective_not_sampled",
+  "allocation": {
+    "cases": 2,
+    "configurations": 4,
+    "arms": 3,
+    "fresh_repetitions_per_cell": 3,
+    "client_attempts": 72,
+    "contexts_per_case_configuration": 9
+  },
+  "models": [
+    "gemma-4-31b-it",
+    "glm-5.2",
+    "qwen3.8-27b",
+    "deepseek-v4-flash"
+  ],
+  "arms": [
+    "baseline",
+    "generic_verification",
+    "primary_source_facts"
+  ],
+  "cases": [
+    "NEW-HANS-ROLES",
+    "PAPER-GSM-VARIANT-ROBUSTNESS"
+  ],
+  "selection": "Cases/mechanisms selected after earlier discovery. All four previous configurations retained without further score-based selection. No current answers sampled before this preparation.",
+  "controls": {
+    "stream": true,
+    "temperature": 0.7,
+    "max_output_tokens": 8192,
+    "tools": [],
+    "tool_choice": "none",
+    "agentic_memory": false,
+    "store": false,
+    "history": "none",
+    "concurrency": 2,
+    "socket_timeout_seconds": 120
+  },
+  "common_instruction": "Answer the research question from existing knowledge. Aim for 180–240 words and do not exceed 300 words. Do not browse or use external tools. Do not ask a follow-up question.",
+  "input_policy": "Only the unchanged original question, common answer instruction and declared treatment text is sent. Grader gold, adverse-response quotes, mechanism IDs and source metadata are not transmitted.",
+  "randomization": {
+    "seed": 2026111337,
+    "generator": "Python Random.shuffle over case order, configuration order, arm order, ascending repetition"
+  },
+  "stopping": "Attempt all 72 frozen rows exactly once; no retries, replacements, error-selected extra samples, early success stopping or silent omission. Preserve all incomplete/empty/error/null/qualified responses.",
+  "maximum_requested_output_tokens": 589824,
+  "cost_scope": "Output-token cap only; input tokens are additional. Preserve provider usage.cost in reported credits where supplied. No account-debit/balance/USD equivalence is established; no model calls made by preparation.",
+  "primary_outcome": "Original material-unsupported-recommendation yes/no/uncertain/unscorable using unchanged generic rubric and case-critical criteria. Every response is graded in full context; missing optional detail is not failure.",
+  "named_mechanisms": [
+    "wrong_coreference_to_contradiction",
+    "svamp_mixed_score_sufficient_for_harmless_perturbation",
+    "finite_behavior_identifies_internal_reasoning"
+  ],
+  "mechanism_outcomes": "Code each exact named mechanism separately from any primary error. Only primary yes plus verified exact mechanism yes counts as a named mechanism instance. Uncertainty, other errors and operational incompletes do not count.",
+  "primary_estimand": "Descriptive label and exact-mechanism counts per case/configuration/arm among all 3 planned attempts, with complete/scorable denominators and uncertainty/missingness shown. Compare arms within each cell; no pooled population prevalence or model ranking.",
+  "contrasts": [
+    "primary_source_facts minus baseline",
+    "generic_verification minus baseline",
+    "primary_source_facts minus generic_verification"
+  ],
+  "intervention_interpretation": "Combined supplied source-fact/evidence/instruction package; no autonomous browsing occurred and no pure browsing effect is identified. Generic and source contexts are roughly word-length matched, not tokenizer/authority/semantic-equivalent.",
+  "treatment_lengths": {
+    "generic_verification": {
+      "words": 236,
+      "characters": 1580
+    },
+    "nli_source": {
+      "words": 217,
+      "characters": 1596
+    },
+    "math_source": {
+      "words": 229,
+      "characters": 1720
+    }
+  },
+  "secondary_utility": {
+    "actionable_aligned_plan": "yes/no/uncertain/unscorable: yes for an identifiable suitable public resource or justified concrete custom/adapted evaluation, corresponding scoring and a bounded usable conclusion; a qualified proxy or genuine essential clarification with an informative conditional evaluation can count yes. Mere refusal or vague caution is no. Genuine utility ambiguity is uncertain, and incomplete capture is unscorable.",
+    "scope": "Prospective secondary usefulness measure; never changes original primary label. Report reductions in unsupported advice together with usable-plan counts, not refusal alone as success."
+  },
+  "review": "Two fresh first agent reviewers receive original-question-only anonymous packet plus original definitions and all relevant source warrants, but no treatment input or explicit arm/model metadata. Freeze first files/hashes before unblinding. Independent factual/scope handling and human review pending; same-family agent agreement is not external expert validation.",
+  "capture_quality": "Retain exact provider terminal text and sanitized native SSE journals. Complete requires HTTP 200, completed provider status, final nonempty text, terminal completed event, no transport error, fallback or format deviation. Conflicting event/status is preserved and unscorable, not repaired.",
+  "capture_timeout": "120 seconds per blocking socket operation, not a hard total duration",
+  "historical_comparison": "This is a new frozen three-arm block. Historical answers are descriptive discovery only; do not pool with new baselines. Requested/returned aliases do not establish immutable model weights.",
+  "consequence_scope": "These are scientific-advice responses, not candidate-model task predictions. They do not measure an actual ranking reversal or activate the earlier failed PAWS gate. WSC scoring-consequence study has separate methods/freeze.",
+  "human_review": "pending",
+  "hashes": {
+    "casepack.json": "58a2be3846e514ad454d6f9a180b5bb62530bacd4cadfdfb5888737ab01be70e",
+    "rubric.json": "eb1ae36763232627e76b65339045746375b41107d44252fd36e8d5bb331f713c",
+    "sourcecards.json": "bf4ea9e90aac6eee16a14d9efd669b56ea3a46e91ac33cea38703de7a5e5c866",
+    "manifest.jsonl": "2bb32ddb5dfdf45f1b370c3a45dcae11aac0ecdfa4be8bd0c5848acc707a67e4",
+    "mechanism_definitions.json": "97181719cce94cd6f0f13b8fa679d8b8cf4c4c9dcc02d98301112416f6ad1ca7",
+    "PREPARATION_CHECKS.json": "d9c0ee6c33403b422432ab0cdd42c7533b04c4e81bd3a7346ff70e886e75085b",
+    "source_inventory.json": "6049cd1a1a835e618b13b634a69376b58927b0222f1970c37b7f141957f91cb5",
+    "review_casepack.json": "6d858bbdce05dcaf46483dab7073c42262b0f9c9e4f81074b5fe2f53c2c3f66a",
+    "sourcecard_nli.txt": "328e7d9b54619c0690bb10fcbd1e4a83840c62870853925cfc823a50f8e07fb1",
+    "sourcecard_math.txt": "656a080db5ecf13c90c65dba39b0abdf566fcd10d70ce99421699168a8c5c297",
+    "generic_verification.txt": "4da16bf57fef15adb9375c8b318af51d11ee7e891e665d32de99db240ab8f2cf"
+  },
+  "original_source_casepack_sha256": "50d6077e9529f1f3e5c0833f79120f043638e03740f353d84ea7c6035c2ef165",
+  "original_rubric_sha256": "eb1ae36763232627e76b65339045746375b41107d44252fd36e8d5bb331f713c",
+  "runner_sha256": "c280811c5f685cdc5b254d5097946835428cd87de6ea58218de1e2cad537fe5e",
+  "prepare_script_sha256": "04632ac9e783febbf698eae175230cc2f5a0b70e1141c3c83f3560eccd08e47b"
+}

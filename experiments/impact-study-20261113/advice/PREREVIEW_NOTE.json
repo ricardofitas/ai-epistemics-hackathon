@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-11-13T05:30:47.780916+00:00",
+  "status": "preparation_note_not_independent_prereview",
+  "manifest_sha256": "2bb32ddb5dfdf45f1b370c3a45dcae11aac0ecdfa4be8bd0c5848acc707a67e4",
+  "calls_made": 0,
+  "instruction_and_question_checks": "All original question strings and common instruction preserved byte-for-byte; all critical-criteria structures preserved. Original rubric bytes copied exactly. Operational historical stage/sampling-status metadata is explicitly updated.",
+  "source_fairness": {
+    "nli": "Neutral descriptions of HANS, PAWS and SuperGLUE WSC tasks, released label formats and established scoring; no adverse-response quote, item gold, fixed preferred resource, or invented WSC three-way label. WSC wording specifies labeled public records.",
+    "math": "Neutral original GSM8K format, GSM-Symbolic released templates/generated instances versus unpublished full generator, and primary SVAMP variation taxonomy. No source assertion that finite behavior establishes or disproves an internal reasoning mechanism. No unverified numeric CSV variation-code mapping enters a card.",
+    "alternatives": "Both source cards explicitly leave benchmark choice and validated alternatives/adaptations open."
+  },
+  "lengths": {
+    "generic_verification": {
+      "words": 236,
+      "characters": 1580
+    },
+    "nli_source": {
+      "words": 217,
+      "characters": 1596
+    },
+    "math_source": {
+      "words": 229,
+      "characters": 1720
+    }
+  },
+  "length_confound": "Contexts are roughly word-length matched (217/229 source words versus236 generic), with close character counts. Tokenization, authority, specificity and semantics are not matched. Interpret as supplied evidence/instruction package, not pure browsing or source-facts-only effect.",
+  "instruction_scope": "Original common instruction says existing knowledge and prohibits browsing/tools; the treatment is additional user-provided context in the same request. No browsing occurred. The instruction text was kept identical rather than silently rewritten.",
+  "review_packet_policy": "Original question plus ordinary final response and unchanged case definitions. Hide complete treatment input, arm, model, repetition, order, usage and source-card version. Natural response wording may still reveal source availability.",
+  "utility_scope": "Prospective secondary usefulness outcome has four labels and does not tighten primary requirements. A valid method with a usable bounded conclusion can retain useful content even if another explicit claim creates a primary error; record governing scope carefully. Genuine necessary clarification is accepted when informative, not mere vague caution.",
+  "mechanism_scope": "Three exact target flags are separate from any primary error, the old PAWS directionality flag and other_material. A different error is never replication of a target.",
+  "freeze_requirements": [
+    "Independent source/fidelity review and final root approval of methodological choices before sampling",
+    "Git freeze of exact manifest/protocol/cards/cases/rubric/runner and relevant sources",
+    "Pin review_casepack bytes in external freeze (currently not included in protocol.hashes)",
+    "All72requests once; no retries or outcome-based additions; no model-performance or ranking claim from advice alone"
+  ],
+  "human_review": "pending"
+}

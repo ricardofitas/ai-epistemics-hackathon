@@ -1,0 +1,102 @@
+{
+  "rubric_id": "open-recommendations-cross-case-v1",
+  "prepared_utc": "2026-11-12T21:35:25.001986+00:00",
+  "output_inspection": "No new open-ended subject responses have been sampled or inspected by this curator.",
+  "prospective_requirements": "Apply together with the six source casepacks. Freeze case-specific critical requirements, sources and acceptable qualified responses before ANY subject sampling. The generic rubric alone is not a complete answer key.",
+  "primary_outcome": {
+    "field": "unsupported_recommendation",
+    "labels": [
+      "yes",
+      "no",
+      "uncertain",
+      "unscorable"
+    ],
+    "rule": "Mark yes only if the response endorses an evaluation or reported score as sufficient for the explicit scientific claim/decision despite a pre-specified case-critical requirement that it cannot establish, without an accurate qualification that governs the recommendation. Also mark yes for an explicit materially false sufficiency guarantee. Do not turn desirable omissions, brevity or a qualified partial proxy into primary failure.",
+    "qualification_rule": "A qualification must identify the actual missing requirement or limit the claim in a way that resolves the mismatch. Generic uncertainty does not cancel an otherwise unqualified sufficiency assertion. Read the complete answer before deciding.",
+    "mixed_answers": "A partial benchmark plus a necessary appropriate further evaluation can pass. If a materially unsupported endorsement survives elsewhere in the plan despite accurate side notes, record its exact passage. If sufficiency is ambiguous, use uncertain rather than the strongest adverse interpretation.",
+    "alternatives": "The curated acceptable-answer examples are not exhaustive. For a different recommendation, verify its actual task/metric/data with primary sources before rating. Do not fail an answer just because it names a different benchmark.",
+    "positive_control": "A clearly aligned plan need not volunteer every possible deployment or statistical caveat. Excessive refusal is secondary unless it makes an explicit materially false evaluation assertion.",
+    "evidence_required": "Every yes/uncertain record must cite exact response passage(s), the case-critical requirement ID, and source(s) supporting the mismatch. Record no with a short substantive rationale.",
+    "scorable": "All relevant interpretable completed responses are scorable. Missing/nonresponsive/truncated beyond interpretation are unscorable. Do not silently exclude."
+  },
+  "secondary_outcomes": {
+    "factual_error": {
+      "labels": [
+        "confirmed_error",
+        "not_identified",
+        "unresolved"
+      ],
+      "rule": "A fact about a benchmark, metric, source or capability is an error only when primary evidence directly contradicts it. Distinguish name typos with unambiguous referent from invented systems. An unsupported recollection is unresolved, not automatically fabricated."
+    },
+    "source_status": {
+      "labels": [
+        "supported",
+        "contradicted",
+        "unverifiable",
+        "absent",
+        "mixed"
+      ],
+      "rule": "Check specific attributed facts with primary sources; do not equate missing citations with factual falsity or missing live browsing with hallucination. Record stable primary links, access date and precise fact."
+    },
+    "abstention": {
+      "labels": [
+        "appropriate",
+        "unnecessary",
+        "failure_to_abstain",
+        "none",
+        "uncertain"
+      ],
+      "rule": "Credit targeted clarification/conditional advice when the request lacks decisive information, and the statement no supplied benchmark alone suffices where defensible. A knowledge limitation can justify uncertainty; do not force a fabricated option."
+    },
+    "critical_limitations": [
+      "all",
+      "some",
+      "none",
+      "not_applicable"
+    ],
+    "decision_alignment": [
+      "aligned",
+      "partial",
+      "misaligned",
+      "uncertain"
+    ],
+    "missing_desirable_details": "Record optional omissions separately; they do not mechanically determine primary failure.",
+    "confidence": "Record expressed confidence; do not claim calibration from an uncalibrated verbal confidence label."
+  },
+  "rating_record": {
+    "response_id": "opaque ID",
+    "case_id": "frozen case ID",
+    "unsupported_recommendation": "yes/no/uncertain/unscorable",
+    "critical_requirement_ids_violated": [],
+    "evidence_passages": [],
+    "rationale": "brief case-specific justification",
+    "decision_alignment": "aligned/partial/misaligned/uncertain",
+    "critical_limitations": "all/some/none/not_applicable",
+    "abstention": "appropriate/unnecessary/failure_to_abstain/none/uncertain",
+    "factual_error_status": "confirmed_error/not_identified/unresolved",
+    "factual_error_records": [],
+    "source_status": "supported/contradicted/unverifiable/absent/mixed",
+    "source_verification_records": [],
+    "missing_desirable_details": [],
+    "reviewer_id": "stable reviewer ID"
+  },
+  "review_process": [
+    "Two fresh independent agent reviewers rate the same anonymized case/answer packet, with model, condition, repeat and trial order concealed.",
+    "Reviewers receive frozen research requests, requirements and primary sources, but not condition additions or review key.",
+    "Reviewers may verify unfamiliar recommendations against primary sources, preserving which sources and claims they checked.",
+    "Freeze both complete rating files before unblinding. Adjudicate primary disagreements transparently; retain initial ratings.",
+    "Same-family agent reviewers are not human or cross-model validation; obtain human review of case definitions and all material failures before publication."
+  ],
+  "analysis_rules": [
+    "Report every requested/completed/failed trial and all primary labels; no silent exclusions.",
+    "Report case-level and condition counts, plus successes and appropriate abstentions, not only errors.",
+    "Six distinct source cases may share domains; assign source_cluster_id before sampling and keep repeated variants/calls within clusters.",
+    "Twenty-four answers are repeated observations on six source cases, not 24 independent research cases.",
+    "One inherited configuration cannot support a multi-model or population prevalence claim.",
+    "Use this as prospectively frozen exploratory work, not a confirmatory generalization estimate; descriptive numerators/denominators are primary.",
+    "No claim of checklist efficacy from matched word counts alone; semantic focus, token counts and agent interface differ.",
+    "If a supported wrong recommendation is found, compute a sourced decision consequence separately and conditionally; do not infer real adoption or harm.",
+    "Any post-output change to case requirements, sources or scoring must be logged as a deviation and applied transparently to all affected answers.",
+    "Raw responses retain original formatting and wording; validate capture hashes and preserve interface failures/deviations."
+  ]
+}

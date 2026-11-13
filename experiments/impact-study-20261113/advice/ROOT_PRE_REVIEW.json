@@ -1,0 +1,33 @@
+{
+  "reviewed_utc": "2026-11-13T05:30:30.076023+00:00",
+  "reviewer": "root source/fidelity prereview, separate from source-card author; not human validation",
+  "status": "pass",
+  "allocation": 72,
+  "protocol_sha256": "45e440437f23a422dd33f0979854382cf2661ca01a5534be8fd28e26a98ad4c2",
+  "manifest_sha256": "2bb32ddb5dfdf45f1b370c3a45dcae11aac0ecdfa4be8bd0c5848acc707a67e4",
+  "checks": {
+    "original_generic_rubric_bytes_unchanged": true,
+    "declared_existing_four_models": true,
+    "all_declared_input_artifact_hashes_match": true,
+    "review_casepack_and_plain_treatments_added_to_hash_pins": true,
+    "source_cards_neutral_task_label_construction_facts": true,
+    "qualified_adaptations_and_alternatives_accepted": true,
+    "primary_case_requirements_unchanged": true,
+    "usefulness_secondary_only": true,
+    "no_answer_gold_or_preferred_benchmark_transmitted": true,
+    "generic_rough_length_control_not_semantically_equivalent": true
+  },
+  "source_warrants": [
+    "Pinned official HANS README binary mapping: contradiction/neutral to non-entailment",
+    "PAWS paraphrase task definition and high-overlap pairs",
+    "Official SuperGLUE labeled WSC records and primary task definition are coreference, not three-way NLI",
+    "Pinned official GSM8K and GSM-Symbolic schemas and unpublished full-generator note",
+    "SVAMP primary Table1 and variation taxonomy distinguish semantic/reasoning changes from structural invariance"
+  ],
+  "limits": [
+    "Selected-case evidence/instruction package; not pure browsing or representative error prevalence",
+    "Same-family agent grading and incomplete arm blinding; human validation pending",
+    "Source-card length and authority are not identical to generic caution",
+    "Incompletes remain operational, no retries or replacements"
+  ]
+}

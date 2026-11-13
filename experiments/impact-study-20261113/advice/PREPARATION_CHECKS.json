@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-11-13T05:28:49.537680+00:00",
+  "status": "prepared_only_no_inference",
+  "source_case_checks": [
+    {
+      "case_id": "NEW-HANS-ROLES",
+      "natural_prompt_sha256": "215b48fe56b9e9faaa0fb50391ab97de3a29e7782d551b1a80ecd6fceeffc5cc",
+      "critical_criteria_sha256": "9b6a9037089bcf259037d9d8c41281c00dc484ced1bb3113cfc8d3b2fe3f988a",
+      "question_and_critical_criteria_unchanged": true,
+      "operational_metadata_only_changes": [
+        "sampling_status",
+        "study_role",
+        "historical_case_definition_sha256"
+      ]
+    },
+    {
+      "case_id": "PAPER-GSM-VARIANT-ROBUSTNESS",
+      "natural_prompt_sha256": "32658cf9959b697c8cffa9e19146d8f2021568375fbf33118810fa25c80c3006",
+      "critical_criteria_sha256": "f5b0efc7a260ce1649c8fabc6c4ac0ababfe6ed9231285c04c4e95ab222bd248",
+      "question_and_critical_criteria_unchanged": true,
+      "operational_metadata_only_changes": [
+        "sampling_status",
+        "study_role",
+        "historical_case_definition_sha256"
+      ]
+    }
+  ],
+  "treatment_lengths": {
+    "generic_verification": {
+      "words": 236,
+      "characters": 1580
+    },
+    "nli_source": {
+      "words": 217,
+      "characters": 1596
+    },
+    "math_source": {
+      "words": 229,
+      "characters": 1720
+    }
+  },
+  "common_instruction_exactly_matches_previous_wave": true,
+  "payload_count": 72,
+  "cells": 24,
+  "repetitions_each": 3,
+  "all_frozen_models": [
+    "gemma-4-31b-it",
+    "glm-5.2",
+    "qwen3.8-27b",
+    "deepseek-v4-flash"
+  ],
+  "preparation_checks_only": "Not an independent source/fidelity prereview; obtain one before freeze/sampling",
+  "sources_verified": "README Git blobs are independently checked in source_inventory.json; primary paper URLs/source annotations are retained",
+  "grader_blinding": "Show original question, unchanged case/rubric and final response only; do not show treatment input, arm/model/repetition/order/usage. Responses may reveal context naturally, so blinding is incomplete."
+}
