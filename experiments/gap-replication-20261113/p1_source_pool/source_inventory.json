@@ -1,0 +1,854 @@
+{
+  "status": "source_only_inventory_no_model_outputs_or_admission_decisions",
+  "files_sha256": {
+    "GSM_symbolic.jsonl": "945055837b232bd9b56827b1e3a5aa019075f29e8ba4669d9a9df8b4439a291f",
+    "GSM_p1.jsonl": "5478fe81b9cdc5d9447514ca68b0dfbb6cb01b7227fefadf143469b103b592ac",
+    "GSM_p2.jsonl": "f7d6701619f824f4fedd0a914b1cfbc0fd31f61617887aa7fe318d018dda3f29",
+    "gsm_plus_v1.jsonl": "885c279bfa9cde767ea23f79fd462d566fa0dbf6af9f2dcf30c75aa94f3d4041",
+    "candidate_families.json": "75f8d43160aa9f7a24539060d6bb6e0272fe98802a6ca66e5f523b4b5ce45540"
+  },
+  "apple": {
+    "GSM_symbolic": {
+      "rows": 5000,
+      "families": 100,
+      "instances_per_family_histogram": {
+        "50": 100
+      }
+    },
+    "GSM_p1": {
+      "rows": 5000,
+      "families": 100,
+      "instances_per_family_histogram": {
+        "50": 100
+      }
+    },
+    "GSM_p2": {
+      "rows": 2500,
+      "families": 50,
+      "instances_per_family_histogram": {
+        "50": 50
+      }
+    }
+  },
+  "gsm_plus": {
+    "families": 1319,
+    "rows": 10552,
+    "tag_counts": {
+      "numerical substitution": 1319,
+      "digit expansion": 1319,
+      "integer-decimal-fraction conversion": 1319,
+      "adding operation": 1319,
+      "reversing operation": 1319,
+      "problem understanding": 1319,
+      "distraction insertion": 1319,
+      "critical thinking": 1319
+    },
+    "families_disjoint_from_all50_previous_reviewed": 1269
+  },
+  "previous_reviewed_families": 50,
+  "new_p1_linked_families": [
+    {
+      "source_family_id": "GSM8K-20",
+      "original_gsm8k_test_row_zero_based": 20,
+      "apple_template_id": 59,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-39",
+      "original_gsm8k_test_row_zero_based": 39,
+      "apple_template_id": 88,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-74",
+      "original_gsm8k_test_row_zero_based": 74,
+      "apple_template_id": 51,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-149",
+      "original_gsm8k_test_row_zero_based": 149,
+      "apple_template_id": 90,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-164",
+      "original_gsm8k_test_row_zero_based": 164,
+      "apple_template_id": 65,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-220",
+      "original_gsm8k_test_row_zero_based": 220,
+      "apple_template_id": 68,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-242",
+      "original_gsm8k_test_row_zero_based": 242,
+      "apple_template_id": 72,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-300",
+      "original_gsm8k_test_row_zero_based": 300,
+      "apple_template_id": 69,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-304",
+      "original_gsm8k_test_row_zero_based": 304,
+      "apple_template_id": 60,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-320",
+      "original_gsm8k_test_row_zero_based": 320,
+      "apple_template_id": 82,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-336",
+      "original_gsm8k_test_row_zero_based": 336,
+      "apple_template_id": 84,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-357",
+      "original_gsm8k_test_row_zero_based": 357,
+      "apple_template_id": 96,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-364",
+      "original_gsm8k_test_row_zero_based": 364,
+      "apple_template_id": 74,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-400",
+      "original_gsm8k_test_row_zero_based": 400,
+      "apple_template_id": 56,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-401",
+      "original_gsm8k_test_row_zero_based": 401,
+      "apple_template_id": 70,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-406",
+      "original_gsm8k_test_row_zero_based": 406,
+      "apple_template_id": 91,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-432",
+      "original_gsm8k_test_row_zero_based": 432,
+      "apple_template_id": 92,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-434",
+      "original_gsm8k_test_row_zero_based": 434,
+      "apple_template_id": 80,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-440",
+      "original_gsm8k_test_row_zero_based": 440,
+      "apple_template_id": 50,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-456",
+      "original_gsm8k_test_row_zero_based": 456,
+      "apple_template_id": 62,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-469",
+      "original_gsm8k_test_row_zero_based": 469,
+      "apple_template_id": 64,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-480",
+      "original_gsm8k_test_row_zero_based": 480,
+      "apple_template_id": 57,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-546",
+      "original_gsm8k_test_row_zero_based": 546,
+      "apple_template_id": 55,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-554",
+      "original_gsm8k_test_row_zero_based": 554,
+      "apple_template_id": 93,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-579",
+      "original_gsm8k_test_row_zero_based": 579,
+      "apple_template_id": 63,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-636",
+      "original_gsm8k_test_row_zero_based": 636,
+      "apple_template_id": 97,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-652",
+      "original_gsm8k_test_row_zero_based": 652,
+      "apple_template_id": 89,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-655",
+      "original_gsm8k_test_row_zero_based": 655,
+      "apple_template_id": 77,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-718",
+      "original_gsm8k_test_row_zero_based": 718,
+      "apple_template_id": 94,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-728",
+      "original_gsm8k_test_row_zero_based": 728,
+      "apple_template_id": 66,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-800",
+      "original_gsm8k_test_row_zero_based": 800,
+      "apple_template_id": 53,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-843",
+      "original_gsm8k_test_row_zero_based": 843,
+      "apple_template_id": 52,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-858",
+      "original_gsm8k_test_row_zero_based": 858,
+      "apple_template_id": 98,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-918",
+      "original_gsm8k_test_row_zero_based": 918,
+      "apple_template_id": 95,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-937",
+      "original_gsm8k_test_row_zero_based": 937,
+      "apple_template_id": 71,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-991",
+      "original_gsm8k_test_row_zero_based": 991,
+      "apple_template_id": 73,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1025",
+      "original_gsm8k_test_row_zero_based": 1025,
+      "apple_template_id": 81,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1026",
+      "original_gsm8k_test_row_zero_based": 1026,
+      "apple_template_id": 58,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1053",
+      "original_gsm8k_test_row_zero_based": 1053,
+      "apple_template_id": 86,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1074",
+      "original_gsm8k_test_row_zero_based": 1074,
+      "apple_template_id": 79,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1084",
+      "original_gsm8k_test_row_zero_based": 1084,
+      "apple_template_id": 85,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1088",
+      "original_gsm8k_test_row_zero_based": 1088,
+      "apple_template_id": 78,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1099",
+      "original_gsm8k_test_row_zero_based": 1099,
+      "apple_template_id": 87,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1111",
+      "original_gsm8k_test_row_zero_based": 1111,
+      "apple_template_id": 75,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1141",
+      "original_gsm8k_test_row_zero_based": 1141,
+      "apple_template_id": 99,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1189",
+      "original_gsm8k_test_row_zero_based": 1189,
+      "apple_template_id": 54,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1207",
+      "original_gsm8k_test_row_zero_based": 1207,
+      "apple_template_id": 76,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1247",
+      "original_gsm8k_test_row_zero_based": 1247,
+      "apple_template_id": 61,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1275",
+      "original_gsm8k_test_row_zero_based": 1275,
+      "apple_template_id": 67,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    },
+    {
+      "source_family_id": "GSM8K-1305",
+      "original_gsm8k_test_row_zero_based": 1305,
+      "apple_template_id": 83,
+      "has_released_p2": false,
+      "gsm_plus_types": [
+        "adding operation",
+        "critical thinking",
+        "digit expansion",
+        "distraction insertion",
+        "integer-decimal-fraction conversion",
+        "numerical substitution",
+        "problem understanding",
+        "reversing operation"
+      ]
+    }
+  ],
+  "new_p1_family_count": 50,
+  "new_p1_p2_linked_families": 0,
+  "recommendation": "Released P1-only prospective gap-distortion replication on source-disjoint families, explicitly partial resource replication of previous P1/P2 contrast. All candidate questions/golds still require independent source-only review."
+}
