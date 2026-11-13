@@ -17,5 +17,15 @@
   "metric_results": null,
   "historical_published_aggregate_exposure": "A separate provenance scout incidentally saw search snippets of published Anserini aggregate scores; none were used for this all126pool selection, and no current per-topic/candidate effectiveness was computed. See workflow_provenance.json.",
   "current_candidate_effectiveness_computed": false,
-  "registry_preparer_used_effectiveness_for_selection": false
+  "registry_preparer_used_effectiveness_for_selection": false,
+  "metadata_rechecked_utc": "2026-11-13T05:50:54.974852+00:00",
+  "qrels_token_counts": {
+    "-1": 2,
+    "0": 12239,
+    "1": 4233,
+    "2": 6677
+  },
+  "qrels_judged_nonnegative_rows": 23149,
+  "qrels_unjudged_in_pool_markers": 2,
+  "source_metadata_preflight_sha256": "78339ab47da49ecad16fcaebe764c860817b4b4a8ca3207f8e88dbdad696b09a"
 }

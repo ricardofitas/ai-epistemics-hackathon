@@ -1,0 +1,84 @@
+{
+  "recorded_utc": "2026-11-13T05:46:10.544979+00:00",
+  "status": "failure_before_any_candidate_scoring",
+  "root_reported_original_freeze_commit": "361902527a1ff276ab61b14d3903463b28d76c8c",
+  "root_reported_original_freeze_utc": "2026-11-13T05:43:00Z",
+  "original_snapshot_directory": "v1_before_qrels_minus_one_fix",
+  "snapshots": [
+    {
+      "file": "evaluate_runs.py",
+      "sha256": "5f49b56dd91250d3139bed3aae4083cc9be1d799addea9602489b45e005cf306",
+      "bytes": 34631
+    },
+    {
+      "file": "protocol.json",
+      "sha256": "0b6d10f7d6673242efd56c0a4edde12f893248f76dbcd31e3ac4efc8bd5eeab4",
+      "bytes": 15911
+    },
+    {
+      "file": "evaluator_verification.json",
+      "sha256": "04218fac31d3e66c5ddf2be6ad9838acace2545976d1fa99630b0f387c7e35fe",
+      "bytes": 1538
+    },
+    {
+      "file": "FREEZE_READY.json",
+      "sha256": "83f4920aa050d56e7ba3815f63f4b1fec032e497271b76d3621a4ae42828de8b",
+      "bytes": 2909
+    },
+    {
+      "file": "DATA_AVAILABILITY.json",
+      "sha256": "4842b4051aaca335fac42b0b19f46fdabea0a4807880cf899efe8d2a5c0f5d27",
+      "bytes": 1140
+    },
+    {
+      "file": "DESIGN.md",
+      "sha256": "0d7c97d488b0a6d9e94e3b5e50014b5e5fa2f11c2beff94f3c19d8b9b33de5ba",
+      "bytes": 6411
+    },
+    {
+      "file": "PUBLISH_FILES.json",
+      "sha256": "edef814be200dc752c2b36b4d49fd4160412ded2f63a461c78556e19c798e10d",
+      "bytes": 1086
+    }
+  ],
+  "qrels_sha256": "6251d45a2b490e959f1defa53bef20a30a205ca10e8b6d69bf668876ad3043b6",
+  "qrels_levels": {
+    "2": 6677,
+    "1": 4233,
+    "0": 12239,
+    "-1": 2
+  },
+  "unexpected_valid_level": {
+    "value": -1,
+    "count": 2,
+    "source_lines": [
+      12603,
+      23007
+    ],
+    "source_pairs": [
+      [
+        "38",
+        "9hbib8b3"
+      ],
+      [
+        "50",
+        "ucipq8uk"
+      ]
+    ]
+  },
+  "metadata_only_failure_reproduction": {
+    "error_type": "ValueError",
+    "message": "Unexpected official relevance level",
+    "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 11, in <module>\n  File \"impact_research_20261113/retrieval/v1_before_qrels_minus_one_fix/evaluate_runs.py\", line 67, in qrel_topics\n    require(row[3] in {\"0\", \"1\", \"2\"}, \"Unexpected official relevance level\")\n  File \"impact_research_20261113/retrieval/v1_before_qrels_minus_one_fix/evaluate_runs.py\", line 33, in require\n    raise ValueError(message)\nValueError: Unexpected official relevance level\n",
+    "scope": "Only source qrels metadata parser invoked; no scorer/candidate metric/comparison executed."
+  },
+  "output_state": {
+    "analysis_directories_under_experiment": [],
+    "analysis_start_files": [],
+    "scoring_summary_files": [],
+    "code_order": "qrel_topics executes before output.mkdir, analysis_start receipt, or canonical_score candidate loop."
+  },
+  "why_missed": "Initial source acquisition verified bytes, row counts, topic IDs and run-column structure but did not enumerate qrels relevance levels. Synthetic fixtures covered only0/1/2. The defensive parser assumed those described judgment grades exhausted canonical input tokens, omitting the supported -1 unjudged-in-pool sentinel. A full allowed source-metadata preflight should have been run before freezing.",
+  "correction_scope": "Accept documented -1 unchanged and delegate its treatment to unchanged canonical scorer. Do not edit qrels, metrics, candidates, topic split, tests, thresholds or stopping. Add negative-level fixture and full source-only preflight; require new external Git freeze before actual scoring.",
+  "comparative_scores_computed": false
+}

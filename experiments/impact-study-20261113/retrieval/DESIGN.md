@@ -14,7 +14,7 @@ The first draft mistakenly proposed excluding short or topic-incomplete files. B
 
 ## The residual/Complete distinction
 
-These archived submissions were evaluated after previously judged documents were removed. The matching file is `qrels-covid_d5_j4.5-5.txt`, with 23,151 judgments. The larger cumulative TREC-COVID Complete qrels are a different evaluation collection; NIST states that no official submissions correspond to that complete collection.
+These archived submissions were evaluated after previously judged documents were removed. The matching file is `qrels-covid_d5_j4.5-5.txt`, with 23,151 qrels records: 23,149 nonnegative judgments and two documented unjudged-in-pool markers (-1). The larger cumulative TREC-COVID Complete qrels are a different evaluation collection; NIST states that no official submissions correspond to that complete collection.
 
 The current Q55/Q57 advice does not explicitly combine those archived residual runs with Complete qrels. A targeted inspection of Anserini code also found the two evaluation paths separated correctly. Therefore such a mismatched-qrels replay would be a diagnostic created by us, not a discovered error in those actual workflows. The negative provenance result is retained in `workflow_provenance.json`.
 
@@ -45,3 +45,9 @@ The split is secondary. It does not pretend to execute the original all-50-topic
 No scoring occurs until root supplies a real published freeze commit/time and the exact protocol hash to the gate-enforcing evaluator. Source checksums and the evaluator/scorer hashes must all match. The official scorer's fixture tests and synthetic analysis fixtures may run before this gate; they are not candidate-performance results.
 
 Publish small protocols, code, receipts and negative provenance records. The public raw source cache is reproducible from its exact URL/hash receipt; a retrieval performance matrix should only be added after the separate freeze. Any result from this route remains a bounded empirical illustration of a known inferential error unless additional evidence demonstrates a stronger contribution.
+
+## Transparent pre-scoring parser correction
+
+The first frozen launch (commit `361902527a1ff276ab61b14d3903463b28d76c8c`, 05:43:00Z) stopped before any candidate scoring because our validator rejected the two legitimate -1 markers. The original evaluator, protocol and verification are preserved in `v1_before_qrels_minus_one_fix/`; `FAILURE_PRE_SCORING.json` records the failure and missing preflight coverage.
+
+The corrected parser accepts -1 unchanged and leaves its metric treatment to the same pinned canonical scorer. Independent primary-source review and synthetic fixtures verify the declared nDCG/P@10 behavior. A complete source-only metadata preflight now passes for all 127 sources without joining runs to qrels or invoking a scorer. No dataset, candidate, metric, split, test or threshold changes. A new external Git freeze is mandatory before comparative execution; use a new output directory.

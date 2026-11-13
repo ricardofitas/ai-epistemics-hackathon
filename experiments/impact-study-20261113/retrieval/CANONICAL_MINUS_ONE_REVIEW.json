@@ -1,0 +1,182 @@
+{
+  "reviewed_utc": "2026-11-13T05:46:25.504194+00:00",
+  "status": "PASS_CANONICAL_MINUS_ONE_UNJUDGED_SEMANTICS",
+  "frozen_v1_commit": "361902527a1ff276ab61b14d3903463b28d76c8c",
+  "v1_freeze_utc": "2026-11-13T05:43:00Z",
+  "v1_launch_status": "Parent reports pre-scoring validator rejection; no actual candidate performance produced. This review ran generated fixtures only.",
+  "canonical_release": "v10.0",
+  "canonical_commit": "f4253652c8efd0d86ddffd0d163cc0a0f813111a",
+  "binary_sha256": "91e1fc81141fc67892fb96df72608b938449c5984a0e85853444ae9e381cf128",
+  "actual_qrels": {
+    "sha256": "6251d45a2b490e959f1defa53bef20a30a205ca10e8b6d69bf668876ad3043b6",
+    "bytes": 402401,
+    "rows": 23151,
+    "negative_rows": [
+      {
+        "line": 12603,
+        "row": "38 5  9hbib8b3 -1"
+      },
+      {
+        "line": 23007,
+        "row": "50 5  ucipq8uk -1"
+      }
+    ],
+    "source_bytes_modified": false
+  },
+  "finding": "The canonical qrels reader recognizes negative relevance as unjudged. For the declared default ndcg_cut.10/P.10 flags, negative-unjudged, absent-unjudged, and explicit zero gain yield the same metric values in this fixture, without removing their rank positions.",
+  "scope": "Only these two metrics and these default flags. Internal pool/nonpool distinction remains real and may affect other measures such as inferred AP or judged-only evaluation. Do not globally rewrite -1 to zero or drop retrieved items.",
+  "source_warrants": [
+    {
+      "path": "README",
+      "git_blob_sha": "2de1d511d0b9080e029ebfbb784667e0ca40d2ba",
+      "sha256": "9955c7fed4b5c84bcf9e0c66e5409a75c164ca054605ea6c896c9beb2b762ea4",
+      "locations": [
+        "line100: qrel -1 is pool document not judged"
+      ]
+    },
+    {
+      "path": "form_res_rels.c",
+      "git_blob_sha": "57fe2b4ece3aef36da1cecb44c346258b30943c5",
+      "sha256": "f1f9984fb5a63ac8a4e2d7099c2b501b3361cb03360f803c443634afb29cd4d7",
+      "locations": [
+        "lines16–19: internal nonpool and unjudged categories",
+        "lines173–186: missing qrel versus negative qrel mapping",
+        "lines219–230: normal path retains ranked documents"
+      ]
+    },
+    {
+      "path": "m_P.c",
+      "git_blob_sha": "afa71487ac52b3e870557a761e34cccb761032ca",
+      "sha256": "46f2a5f6b7cfc1c05d0c9cd2f6f8c59bd1e15a61355be4bfbbb38cadf578c057",
+      "locations": [
+        "lines72–73: relevance threshold comparison",
+        "lines77–81: divide by cutoff for short lists"
+      ]
+    },
+    {
+      "path": "m_ndcg_cut.c",
+      "git_blob_sha": "01e64162d2d3e2c741d50fd343ea6417552c647b",
+      "sha256": "d5a369ec235a35726b4980b10ad161a1174dfe64aaf5159b1234e99fbdb92ed9",
+      "locations": [
+        "lines72–77: gains contribute only if positive",
+        "lines90–112: ideal gain uses positive relevance levels"
+      ]
+    },
+    {
+      "path": "trec_eval.c",
+      "git_blob_sha": "b3e275de047459f0b19ff6c09b49b695728c74e9",
+      "sha256": "15d83071e0d55e443c17c5609d3af960d8354232cd45d505455fe913f52a27bb",
+      "locations": [
+        "line178: judged_docs_only defaults false; line250: only explicit option enables it"
+      ]
+    },
+    {
+      "path": "trec_eval.h",
+      "git_blob_sha": "58b0cf98e3f9202f125a342c1dc8bd21d0a2e0cf",
+      "sha256": "c7c7da49cb5e889adc03917dc2e4852814943b200054803414b96540af4e1824",
+      "locations": [
+        "lines226–227: internal sentinel constants"
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "name": "qrels_minus_one.txt",
+      "utf8_text": "1 0 a 2\n1 0 b 1\n1 0 u -1\n2 0 d 2\n2 0 e 1\n2 0 w -1\n",
+      "sha256": "95efbeafa35101ebdb8e2e47a5595a7c6e988c44693abb71679ba45772f16720",
+      "bytes": 50
+    },
+    {
+      "name": "qrels_absent.txt",
+      "utf8_text": "1 0 a 2\n1 0 b 1\n2 0 d 2\n2 0 e 1\n",
+      "sha256": "1c0b9abd1f8801cdae55d956b6139b25407e12f339c1e99a76941d6769e32e05",
+      "bytes": 32
+    },
+    {
+      "name": "qrels_zero.txt",
+      "utf8_text": "1 0 a 2\n1 0 b 1\n1 0 u 0\n2 0 d 2\n2 0 e 1\n2 0 w 0\n",
+      "sha256": "ca7f23356ad6a0783f935b6690b0ff4769b262d05bf0ccdaee7152e8b2a090bd",
+      "bytes": 48
+    },
+    {
+      "name": "run.txt",
+      "utf8_text": "1 Q0 u 1 10 fixture\n1 Q0 a 2 9 fixture\n1 Q0 b 3 8 fixture\n1 Q0 v 4 7 fixture\n2 Q0 d 1 10 fixture\n2 Q0 e 2 9 fixture\n",
+      "sha256": "379dd09496701f2bd3401b1ada06a4a56a2a2779c3d4573908a9b8e74e7debd1",
+      "bytes": 116
+    }
+  ],
+  "results": [
+    {
+      "qrels_fixture": "qrels_minus_one.txt",
+      "command": [
+        "/workspace/scratch/3a7fad3d11db/impact_research_20261113/retrieval/scorer_source/trec_eval",
+        "-q",
+        "-c",
+        "-m",
+        "ndcg_cut.10",
+        "-m",
+        "P.10",
+        "/workspace/scratch/3a7fad3d11db/impact_research_20261113/retrieval/synthetic_minus_one/qrels_minus_one.txt",
+        "/workspace/scratch/3a7fad3d11db/impact_research_20261113/retrieval/synthetic_minus_one/run.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "P_10                  \t1\t0.2000\nndcg_cut_10           \t1\t0.6697\nP_10                  \t2\t0.2000\nndcg_cut_10           \t2\t1.0000\nP_10                  \tall\t0.2000\nndcg_cut_10           \tall\t0.8348\n",
+      "stderr": "",
+      "stdout_sha256": "6518462c90e0f47b319efb92ea34e98fc4dbb61fa5a1c1e60fd475aa5cde1475",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "qrels_fixture": "qrels_absent.txt",
+      "command": [
+        "/workspace/scratch/3a7fad3d11db/impact_research_20261113/retrieval/scorer_source/trec_eval",
+        "-q",
+        "-c",
+        "-m",
+        "ndcg_cut.10",
+        "-m",
+        "P.10",
+        "/workspace/scratch/3a7fad3d11db/impact_research_20261113/retrieval/synthetic_minus_one/qrels_absent.txt",
+        "/workspace/scratch/3a7fad3d11db/impact_research_20261113/retrieval/synthetic_minus_one/run.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "P_10                  \t1\t0.2000\nndcg_cut_10           \t1\t0.6697\nP_10                  \t2\t0.2000\nndcg_cut_10           \t2\t1.0000\nP_10                  \tall\t0.2000\nndcg_cut_10           \tall\t0.8348\n",
+      "stderr": "",
+      "stdout_sha256": "6518462c90e0f47b319efb92ea34e98fc4dbb61fa5a1c1e60fd475aa5cde1475",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "qrels_fixture": "qrels_zero.txt",
+      "command": [
+        "/workspace/scratch/3a7fad3d11db/impact_research_20261113/retrieval/scorer_source/trec_eval",
+        "-q",
+        "-c",
+        "-m",
+        "ndcg_cut.10",
+        "-m",
+        "P.10",
+        "/workspace/scratch/3a7fad3d11db/impact_research_20261113/retrieval/synthetic_minus_one/qrels_zero.txt",
+        "/workspace/scratch/3a7fad3d11db/impact_research_20261113/retrieval/synthetic_minus_one/run.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "P_10                  \t1\t0.2000\nndcg_cut_10           \t1\t0.6697\nP_10                  \t2\t0.2000\nndcg_cut_10           \t2\t1.0000\nP_10                  \tall\t0.2000\nndcg_cut_10           \tall\t0.8348\n",
+      "stderr": "",
+      "stdout_sha256": "6518462c90e0f47b319efb92ea34e98fc4dbb61fa5a1c1e60fd475aa5cde1475",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "exact_stdout_identical": true,
+  "all_output_sha256": "6518462c90e0f47b319efb92ea34e98fc4dbb61fa5a1c1e60fd475aa5cde1475",
+  "manual_check": {
+    "topic1_expected_ndcg": 0.66967181649423,
+    "topic1_reported_ndcg": 0.6697,
+    "topic2_reported_ndcg": 1.0,
+    "P10_both_topics": 0.2,
+    "rank_position_preserved": true
+  },
+  "recommended_correction": "Allow and preserve source -1 unjudged sentinel in the preflight validator, pass unchanged qrels to pinned canonical scorer, then transparently correct/re-freeze evaluator/protocol before any actual candidate scoring.",
+  "not_a_benchmark_discovery": "This is a correction to our restrictive source validator, not an intrinsic benchmark/scorer flaw.",
+  "candidate_performance_read_or_computed": false,
+  "evaluate_runs_py_edited_by_this_review": false,
+  "protocol_edited_by_this_review": false,
+  "git_writes": false
+}

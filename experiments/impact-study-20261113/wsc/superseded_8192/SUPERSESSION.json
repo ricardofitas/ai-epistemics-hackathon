@@ -1,0 +1,56 @@
+{
+  "archived_utc": "2026-11-13T05:48:09.390064+00:00",
+  "status": "superseded_prospective8192_design_only_no_classifier_outputs",
+  "files": [
+    {
+      "path": "manifest.jsonl",
+      "sha256": "b2c1d11e79a4ca5f32330efb998371c1fcbd59576c4c5a4062120433e5d65bad"
+    },
+    {
+      "path": "protocol.json",
+      "sha256": "d2ba2f9565c6fc3d9560bc6dbfd2b08013f5327f7655f85f0bfdcc354d3210b2"
+    },
+    {
+      "path": "build_experiment.py",
+      "sha256": "5236d71fb4e6ad81c47012687cc8584d7f169ff158b7451eee4c49701fb11ef5"
+    },
+    {
+      "path": "verify_preflight.py",
+      "sha256": "f990ae5a31d540c26d8fc2b45458aaf53b885cd9bc76e00cbdf440a7beff2d9e"
+    },
+    {
+      "path": "design.md",
+      "sha256": "55ddbea97bc50d525bbfb4f5ab5f7b87b42d66f952e8de9033d379e37de96861"
+    },
+    {
+      "path": "LIVE_PREFLIGHT.json",
+      "sha256": "eb47ffd2d4bf39d8638e9f1419f59482fb409045199a965beef090ad9611125f"
+    },
+    {
+      "path": "DESIGN_CODE_PREREVIEW.json",
+      "sha256": "8042d1f1e60d473d59a9fd64fbb7a89f91c39deb731d6da2500958d95bea7bb4"
+    },
+    {
+      "path": "DESIGN_CODE_PREREVIEW.md",
+      "sha256": "cf99b2909b72724a727f53e10ca1ce67b7bee3387cd1db6704a18591285c19af"
+    },
+    {
+      "path": "ANALYZER_VERIFICATION.json",
+      "sha256": "8e40fc0b84c049d527f3e48ee7693f087d4e715e6904a760231cb527753c0ab9"
+    },
+    {
+      "path": "selected_data.json",
+      "sha256": "a9ceb7fd49770080c487623a9760bc64514027c189dbf5b60ed0d359d2d9708b"
+    },
+    {
+      "path": "task_key.json",
+      "sha256": "95c9328df22942984b7af3d906d680a69e5484934db8ab8f69522a7f06d9d050"
+    },
+    {
+      "path": "source_split.json",
+      "sha256": "dd4edc5bfc4dbee0da5ae5acaae5806fb0a485cec4fc3fac1c2d93afe54fd645"
+    }
+  ],
+  "reason": "Root prospectively authorized a common16384 classification budget before any WSC/HANS inference. No data/metric/model/seed changes.",
+  "no_classifier_outputs": true
+}

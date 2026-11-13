@@ -1,0 +1,21 @@
+{
+  "amended_utc": "2026-11-13T05:48:34.450775+00:00",
+  "status": "PROSPECTIVE_BEFORE_ANY_CLASSIFIER_INFERENCE",
+  "root_authorization": "Common WSC/HANS output cap16384, based on known operational8192 advice-limit empties, no score-dependent changes.",
+  "old_manifest_sha256": "b43f80660b2ee64fcb98553fd824f4898deeb0a73b747763510a1ed1a453b1bf",
+  "new_manifest_sha256": "09292dccc1cbf29c75beab74a067cea8a93df228228f6e498066aee5b5e8303b",
+  "old_protocol_sha256": "ea1243da5be3ee4be08d9e6c86f604f2155931f1fd4d79404017d6ef35ac8951",
+  "new_protocol_sha256": "a605c33be7d84618d4fd7aa25510dfedaf50f716974a1ee1f1ef97f630af08eb",
+  "runner_sha256": "5d5fa0720233d1c93280a00326ec25374f37dbd4335b71376b7f208dd61d5648",
+  "source_metric_seed_model_changes": false,
+  "retries": 0,
+  "validation": {
+    "old_cap": 8192,
+    "new_cap": 16384,
+    "source_keys_instruction_unchanged": true,
+    "all40_payloads_change_only_cap_and_wire_hash": true,
+    "analyzer_bytes_unchanged": true,
+    "superseded_snapshot_manifest_sha256": "a7fbf2188b92868f4b3b0864b083317b8d49af309f5c2edd52a637592baef1cf"
+  },
+  "actual_classifier_calls": 0
+}

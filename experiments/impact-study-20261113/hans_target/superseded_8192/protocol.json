@@ -1,0 +1,91 @@
+{
+  "id": "wsc-independent-hans80-target-v1",
+  "created_utc": "2026-11-13T05:37:03.042314+00:00",
+  "status": "prospective_no_classifier_calls_or_performance_seen",
+  "purpose": "A separately fixed authentic role-sensitive NLI target for the NEW WSC label-conversion consequence study.",
+  "old_gate_scope": "This does NOT activate or reuse the old failed PAWS pilot. Its no-run status remains unchanged. WSC was selected after discovery of Q48; this is exploratory even though the current target is frozen before predictions.",
+  "source": {
+    "repository": "tommccoy1/hans",
+    "commit": "7299f6f657089ce06a0f98e7e81f8d0f5b7741ce",
+    "path": "heuristics_evaluation_set.txt",
+    "sha256": "c55b62feef9913070e88f38938dc2492018c945ac81f70139346472494124e79",
+    "git_blob_sha": "e042af242b19708d9c0256c713e873415c0b58a1",
+    "rows": 30000
+  },
+  "models": [
+    "gemma-4-31b-it",
+    "glm-5.2",
+    "qwen3.8-27b",
+    "deepseek-v4-flash"
+  ],
+  "candidate_selection": "Same four fixed hosted aliases as WSC, selected before performance; immutable checkpoint identities unavailable.",
+  "allocation": {
+    "items": 80,
+    "strata": {
+      "ln_subject/object_swap": 40,
+      "le_passive": 40
+    },
+    "models": 4,
+    "batch_size": 8,
+    "batches_per_model": 10,
+    "requests": 40,
+    "classification_labels": 320,
+    "maximum_requested_output_tokens": 327680
+  },
+  "seeds": {
+    "sample": 2026111341,
+    "request_order": 2026111342,
+    "opaque_ids": 2026111343,
+    "input_order": 2026111344,
+    "bootstrap": 2026111345
+  },
+  "sampling": "For each declared subcase/gold stratum in original source order, exclude the previously prepared20 source IDs or exact input pairs, keep first of exact duplicate pairs, then sample40 without replacement with Python Random(sample seed), using one RNG in the stated stratum order. No observed model-error filter. Unique opaque IDs and shared input batches are separately shuffled.",
+  "source_overlap": "Twenty prior items belong to the unexecuted PAWS protocol; excluding them is data hygiene, not performance selection. Public HANS data are not proven unseen in pretraining.",
+  "shared_interface": "Exact common WSC three-way classifier instruction and payload schema. Only opaque ID, premise and hypothesis transmitted. No suite, source ID, subcase, gold, target or selection role transmitted.",
+  "controls": {
+    "max_output_tokens": 8192,
+    "temperature": 0.0,
+    "stream": true,
+    "tools": [],
+    "tool_choice": "none",
+    "agentic_memory": false,
+    "store": false,
+    "history": "none",
+    "concurrency": 2,
+    "socket_timeout_seconds": 120,
+    "retries": 0
+  },
+  "parser": "Final assistant text must be one complete JSON object, optionally one outer codefence. It must contain predictions with all and only supplied IDs once and labels entailment/contradiction/neutral (casefold allowed). No output repair or extra inference.",
+  "capture_quality": "Require verified HTTP200, content type text/event-stream, terminal response.completed with provider statuscompleted and nonempty final text, no transport error, fallback, format deviation or malformed SSE JSON. Conflicting provider flags remain incomplete, not semantic error.",
+  "gold": "Official binary HANS entailment/non-entailment unchanged. Map both neutral and contradiction predictions to non-entailment. Do not assign official three-way NLI gold.",
+  "outcomes": {
+    "per_model": "Binary accuracy on all80 and separately by the two source strata, label counts, invalid/missing coverage.",
+    "pairwise": "All six fixed model pairs, same shared item differences; no outcome-selected pairs.",
+    "missing_bounds": "Each missing/invalid item contributes [0,1] on the fixed80 denominator. No replacing calls or scoring operational absence as a semantic error. Declare robust ordering only for strictly separated conservative score bounds.",
+    "external_consequence": "Fix unique bad-rule and repaired-rule WSC selection winners using ONLY WSC selection data. Then report repaired-selected minus bad-selected binary accuracy on this HANS80 target. Same winner gives zero, ties/invalid WSC choice indeterminate, and signed negative/null outcomes retained. No choosing among WSC tied winners using HANS scores.",
+    "claim_bound": "This controlled80-item two-subcase diagnostic is not all HANS, all NLI, or real-world harm. It supplies no normative practical effect threshold. WSC binary repair does not by itself establish the complete original role-tracking claim."
+  },
+  "uncertainty": {
+    "draws": 10000,
+    "seed": 2026111345,
+    "unit": "Paired item resampling jointly across models within each fixed subcase stratum; fixed WSC winners when measuring external consequence.",
+    "interval": "Two-sided95percentile with NumPy linear quantiles.",
+    "limits": "Conditional descriptive resampling only: negative stratum has one source template and passive stratum has two, so item bootstrap does not estimate template/domain/batch/provider uncertainty. Tiny fixed source slice, no population inference or significance claim."
+  },
+  "stopping": "Attempt all40 rows once. Preserve all missing/incomplete/invalid/null/tied outcomes; no error-selected retries, added items/candidates or stop at reversal.",
+  "human_review": "pending; authentic source labels retained, no new human validation claimed",
+  "hashes": {
+    "selected_data.json": "08306c3d01da9fa2ddec4ff06532efbe2dc592bee5c7e4e3c8191be658868442",
+    "task_key.json": "09d6d813af9125963bbe031855ebc4a14c56440ad3dc4c5ddb1e078cc2b7ed02",
+    "manifest.jsonl": "b43f80660b2ee64fcb98553fd824f4898deeb0a73b747763510a1ed1a453b1bf",
+    "source_receipt.json": "8a52c7568bd5497631d1f82c520fd8287f4d487fdac3481491622ce960256a6c",
+    "classification_instruction.txt": "d176a8a929224c6cfde0f8d0335c90e2c02746b848b8f4e479fe037ce6bdb7d5",
+    "official_hans_source_metadata.json": "a100f453af9e6ee2cf6b835a756ba89327de1ea929198e5bbe243e1cec04b849",
+    "prepare_hans_target.py": "e80adf40a02f5fb195cf7a4cd2abbae6651665c8f609322edf2c33bd6f36d222"
+  },
+  "instruction_source_path": "../wsc/build_experiment.py",
+  "instruction_source_sha256_at_preparation": "5236d71fb4e6ad81c47012687cc8584d7f169ff158b7451eee4c49701fb11ef5",
+  "runner_sha256": "c280811c5f685cdc5b254d5097946835428cd87de6ea58218de1e2cad537fe5e",
+  "analysis_sha256": "e478cc20714fd6b84aaeb3e45689d8fe0159cd8e6be04c867f3066c7bb636282",
+  "capture_audit_source_sha256": "8e071be7bf6dd6876a2fb035aa709331eef800a727f93100770ff12cee99a8d5"
+}

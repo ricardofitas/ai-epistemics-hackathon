@@ -1,7 +1,7 @@
 {
-  "protocol_id": "trec-covid-actual-runs-uncertainty-diagnostic-v1",
+  "protocol_id": "trec-covid-actual-runs-uncertainty-diagnostic-v2-qrels-sentinel",
   "created_utc": "2026-11-13T05:26:45.952512+00:00",
-  "status": "ready_for_external_freeze_not_executed",
+  "status": "ready_for_new_external_freeze_after_pre_scoring_parser_fix",
   "rationale": "Evaluate the literal nonsignificance-implies-equivalence advice rule on a fixed archive of authentic retrieval outputs. This is a bounded replay diagnostic of a known inferential error, not a new statistical result or evidence of actual user adoption/cost-based harm.",
   "research_question": "For everyfixed official Round5 candidate pair evaluated on all50topics, what paireduncertainty is hidden by declaring nonsignificance functionalequivalence? A separate25/25topic split asks how that statement transfers to independentlyheldouttopic observations.",
   "source_task": {
@@ -79,7 +79,16 @@
     "tie_policy": "Pinned canonical trec_eval score/docid ordering, not unverified submittedrank sorting; record source-defined tie convention.",
     "unjudged": "Canonical zero-gain unjudged handling in this matched residual task; expert pooledqrels are incomplete.",
     "exact_2020_reproduction": "A pinned current released canonical scorer is a reproducible replay; immutable historical2020 scorer/build equivalence is not claimed.",
-    "numeric_precision": "Preserve exact canonical CLI four-decimal per-topic reports and separate canonicaloverallmeans. Per-topic rounding≤0.00005, pairedmean-difference bound≤0.0001. No scorer precisionpatch."
+    "numeric_precision": "Preserve exact canonical CLI four-decimal per-topic reports and separate canonicaloverallmeans. Per-topic rounding≤0.00005, pairedmean-difference bound≤0.0001. No scorer precisionpatch.",
+    "qrel_token_semantics": {
+      "judged_levels": [
+        0,
+        1,
+        2
+      ],
+      "unjudged_in_pool_marker": -1,
+      "handling": "Preserve original token and let unchanged pinned trec_eval implement metric semantics; do not relabel to0 or remove ranked documents."
+    }
   },
   "split": {
     "role": "Topic-disjoint analysis split only; not proof of heldout modeltraining or temporal deployment generalization.",
@@ -429,15 +438,51 @@
     "trec_eval_release_tree.json": "6e1137925536bf7c5d8600d5ba0da4ddfb6f65608d95d40ed3801e326c6fe770",
     "trec_eval_source_receipt.json": "6163efaad6b38ab2e525137c2b78b039c09e837d82042ab7e638470638ece2e2",
     "trec_eval_build_receipt.json": "917d15f5557bd532e82194186c17c95c4d7d18b3af4f652d9de2eea27a41bc8b",
-    "evaluate_runs.py": "5f49b56dd91250d3139bed3aae4083cc9be1d799addea9602489b45e005cf306",
-    "evaluator_verification.json": "04218fac31d3e66c5ddf2be6ad9838acace2545976d1fa99630b0f387c7e35fe",
+    "evaluate_runs.py": "707ff9a562030c96e778d971c432fa734056a6b4eeb8bd127a480234807364e4",
+    "evaluator_verification.json": "8c70eecbde586c18a0b0d632c707c4add2e91005a0ccc0227db89fbbf4c5d98e",
     "requirements-eval.txt": "1668a3152e33680d94637b13421c15e68bd97cd8701f7f555c691f5bc5c0b9f3",
-    "DATA_AVAILABILITY.json": "4842b4051aaca335fac42b0b19f46fdabea0a4807880cf899efe8d2a5c0f5d27",
+    "DATA_AVAILABILITY.json": "eaab37e80352be1c9c270acc5cbbd30f0db618c6ed0403922d317f90db56d28d",
     "workflow_provenance.json": "aa74fdc6a0ba0bcee1750171ed51ebaca03972c510d3b31926d3c64a049f8816",
     "workflow_provenance_sources.json": "a8cb90deb7e1591842226654a4524b66a007a650784d97eda5efd3c458900b0a",
-    "DESIGN.md": "0d7c97d488b0a6d9e94e3b5e50014b5e5fa2f11c2beff94f3c19d8b9b33de5ba",
+    "DESIGN.md": "63fd2f04849f49983715dba45b1e70d2d880dc29be9d81f6639e9049a2c54c32",
     "head_availability.json": "845c38222b1c8e3844daee336510af947411b894baf32f4a4249cf9e41a89834",
     "archive-round5.html": "950b5c2d56d38a8d3bbd5ef4c8578c60577bbaa972c769f84de8a6725e774b7f",
-    "source/qrels-covid_d5_j4.5-5.txt": "6251d45a2b490e959f1defa53bef20a30a205ca10e8b6d69bf668876ad3043b6"
+    "source/qrels-covid_d5_j4.5-5.txt": "6251d45a2b490e959f1defa53bef20a30a205ca10e8b6d69bf668876ad3043b6",
+    "preflight_sources.py": "65c96e6275d771672fa0b8017920ed590d679ce5ad7cf0c377230256613dfcff",
+    "SOURCE_PREFLIGHT.json": "78339ab47da49ecad16fcaebe764c860817b4b4a8ca3207f8e88dbdad696b09a",
+    "FAILURE_PRE_SCORING.json": "f653558b3c3e59cf7b293665d5585a192e043f931e70d708804b733c32e8aea6",
+    "CANONICAL_MINUS_ONE_REVIEW.json": "c68946bc0184cfab09f3f78258b0bc38fa6bbf6ae3d0181a124960b293bf70cc",
+    "CANONICAL_MINUS_ONE_REVIEW.md": "6dc248c6a63bd704d64fb92a3b07d8931d82b92a053b9cba962a7b5fa6561883",
+    "CORRECTION_SCOPE_VERIFICATION.json": "ab475093567c239a921caeb073a9f72a478c6ed737ed916917faee133fec4e74",
+    "v1_before_qrels_minus_one_fix/DATA_AVAILABILITY.json": "4842b4051aaca335fac42b0b19f46fdabea0a4807880cf899efe8d2a5c0f5d27",
+    "v1_before_qrels_minus_one_fix/DESIGN.md": "0d7c97d488b0a6d9e94e3b5e50014b5e5fa2f11c2beff94f3c19d8b9b33de5ba",
+    "v1_before_qrels_minus_one_fix/FREEZE_READY.json": "83f4920aa050d56e7ba3815f63f4b1fec032e497271b76d3621a4ae42828de8b",
+    "v1_before_qrels_minus_one_fix/PUBLISH_FILES.json": "edef814be200dc752c2b36b4d49fd4160412ded2f63a461c78556e19c798e10d",
+    "v1_before_qrels_minus_one_fix/evaluate_runs.py": "5f49b56dd91250d3139bed3aae4083cc9be1d799addea9602489b45e005cf306",
+    "v1_before_qrels_minus_one_fix/evaluator_verification.json": "04218fac31d3e66c5ddf2be6ad9838acace2545976d1fa99630b0f387c7e35fe",
+    "v1_before_qrels_minus_one_fix/protocol.json": "0b6d10f7d6673242efd56c0a4edde12f893248f76dbcd31e3ac4efc8bd5eeab4",
+    "synthetic_minus_one/qrels_absent.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "synthetic_minus_one/qrels_absent.stdout.txt": "6518462c90e0f47b319efb92ea34e98fc4dbb61fa5a1c1e60fd475aa5cde1475",
+    "synthetic_minus_one/qrels_absent.txt": "1c0b9abd1f8801cdae55d956b6139b25407e12f339c1e99a76941d6769e32e05",
+    "synthetic_minus_one/qrels_minus_one.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "synthetic_minus_one/qrels_minus_one.stdout.txt": "6518462c90e0f47b319efb92ea34e98fc4dbb61fa5a1c1e60fd475aa5cde1475",
+    "synthetic_minus_one/qrels_minus_one.txt": "95efbeafa35101ebdb8e2e47a5595a7c6e988c44693abb71679ba45772f16720",
+    "synthetic_minus_one/qrels_zero.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "synthetic_minus_one/qrels_zero.stdout.txt": "6518462c90e0f47b319efb92ea34e98fc4dbb61fa5a1c1e60fd475aa5cde1475",
+    "synthetic_minus_one/qrels_zero.txt": "ca7f23356ad6a0783f935b6690b0ff4769b262d05bf0ccdaee7152e8b2a090bd",
+    "synthetic_minus_one/run.txt": "379dd09496701f2bd3401b1ada06a4a56a2a2779c3d4573908a9b8e74e7debd1"
+  },
+  "correction_v2": {
+    "prepared_utc": "2026-11-13T05:50:54.974852+00:00",
+    "original_frozen_commit": "361902527a1ff276ab61b14d3903463b28d76c8c",
+    "original_frozen_utc": "2026-11-13T05:43:00Z",
+    "v1_protocol_sha256": "0b6d10f7d6673242efd56c0a4edde12f893248f76dbcd31e3ac4efc8bd5eeab4",
+    "v1_evaluator_sha256": "5f49b56dd91250d3139bed3aae4083cc9be1d799addea9602489b45e005cf306",
+    "reason": "Documented -1 unjudged-in-pool marker was rejected by validator before any candidate scoring.",
+    "change": "Accept source -1 unchanged; add regression fixtures and full source metadata preflight.",
+    "unchanged": "All source bytes,126candidates,50topics,metrics,canonical scorer,split,tests,thresholds and stopping.",
+    "new_external_git_freeze_required": true,
+    "failure_record": "FAILURE_PRE_SCORING.json",
+    "source_preflight": "SOURCE_PREFLIGHT.json"
   }
 }

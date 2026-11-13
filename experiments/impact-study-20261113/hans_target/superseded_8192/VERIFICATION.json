@@ -1,0 +1,60 @@
+{
+  "verified_utc": "2026-11-13T05:45:25.725862+00:00",
+  "status": "PASS_OFFLINE_ONLY_NO_INFERENCE",
+  "manifest_sha256": "b43f80660b2ee64fcb98553fd824f4898deeb0a73b747763510a1ed1a453b1bf",
+  "protocol_sha256": "ea1243da5be3ee4be08d9e6c86f604f2155931f1fd4d79404017d6ef35ac8951",
+  "analyzer_sha256": "e478cc20714fd6b84aaeb3e45689d8fe0159cd8e6be04c867f3066c7bb636282",
+  "sampler_sha256": "e80adf40a02f5fb195cf7a4cd2abbae6651665c8f609322edf2c33bd6f36d222",
+  "test_script_sha256": "c874dc30ca6768e73c9808ebdf298c4f0dd89a229715d88b3f24c8baf2edfbfd",
+  "numpy_version": "2.3.5",
+  "native_sse_dry_run": {
+    "requests": 40,
+    "maximum_generated_tokens": 327680,
+    "passed": true
+  },
+  "checks": {
+    "synthetic_checks": 25,
+    "status": "PASS",
+    "checks": [
+      "binary neutral mapping",
+      "binary contradiction mapping",
+      "entailment error",
+      "operational missing not semantic error",
+      "missing bounds",
+      "all missing bounds",
+      "negative paired difference",
+      "coupled same candidate",
+      "incomplete paired bounds",
+      "valid JSON casefold",
+      "single fence",
+      "reject refusal",
+      "reject extra prose",
+      "reject duplicate ID",
+      "reject extra ID",
+      "reject unsupported label",
+      "reject unregistered field",
+      "stratified paired draws",
+      "signed negative effect retained",
+      "null effect retained",
+      "tied WSC choice not selected via target",
+      "complete40request320labelsynthetic_workflow",
+      "incomplete_batch_preserves_fixed_denominator_bounds",
+      "malformed_batch_no_output_repair_or_semantic_imputation",
+      "tampered_text_rejected_before_output"
+    ],
+    "scope": "Synthetic offline predictions derived from source gold solely to test software; no actual classifier calls or performance findings."
+  },
+  "actual_candidate_calls": 0,
+  "actual_candidate_outputs_read": false,
+  "source": {
+    "official_bytes": 15462062,
+    "official_sha256": "c55b62feef9913070e88f38938dc2492018c945ac81f70139346472494124e79",
+    "official_git_blob": "e042af242b19708d9c0256c713e873415c0b58a1",
+    "selected_source_items": 80,
+    "unique_inputs": 80,
+    "swap": 40,
+    "passive": 40,
+    "prior_prepared_HANS_overlap": 0
+  },
+  "claim_limit": "Software fixture checks are not model performance or actual selection consequences. Root source review and external Git freeze remain before inference."
+}

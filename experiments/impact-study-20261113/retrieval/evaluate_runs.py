@@ -64,7 +64,9 @@ def qrel_topics(path, expected=TOPICS):
         qid = row[0]
         require(qid in {str(x) for x in expected}, "Unknown qrel topic")
         require((qid, row[2]) not in pairs, "Duplicate topic/document qrel")
-        require(row[3] in {"0", "1", "2"}, "Unexpected official relevance level")
+        # Canonical trec_eval supports -1 as an unjudged-in-pool marker.
+        # Preserve the source token unchanged; the scorer owns metric semantics.
+        require(row[3] in {"-1", "0", "1", "2"}, "Unexpected official relevance token")
         pairs.add((qid, row[2]))
         seen.add(int(qid))
     require(seen == set(expected), "Qrels do not cover the declared topics")
@@ -461,6 +463,25 @@ def self_test(root):
         require(canonical_score(binary, qtie, a, [1])["metrics"] ==
                 canonical_score(binary, qtie, b, [1])["metrics"], "Canonical score-tie invariance")
         tests.append("canonical_score_ties_ignore_input_rank")
+        # Regression: official residual qrels contains two -1 sentinel rows.
+        qminus, qabsent, qzero = d / "qminus", d / "qabsent", d / "qzero"
+        qminus.write_text("1 0 a 2\n1 0 u -1\n")
+        qabsent.write_text("1 0 a 2\n")
+        qzero.write_text("1 0 a 2\n1 0 u 0\n")
+        qrel_topics(qminus, [1])
+        sentinel_run = d / "sentinel_run"
+        sentinel_run.write_text("1 Q0 u 1 2 t\n1 Q0 a 2 1 t\n")
+        minus_result = canonical_score(binary, qminus, sentinel_run, [1])
+        absent_result = canonical_score(binary, qabsent, sentinel_run, [1])
+        zero_result = canonical_score(binary, qzero, sentinel_run, [1])
+        require(minus_result["stdout"] == absent_result["stdout"] == zero_result["stdout"],
+                "Unjudged-in-pool sentinel must follow unchanged canonical semantics")
+        require(minus_result["metrics"]["ndcg_cut_10"] == [.6309]
+                and minus_result["metrics"]["P_10"] == [.1],
+                "Sentinel retains its rank with zero gain under fixed metrics")
+        tests.extend(["minus_one_qrels_sentinel_accepted_unchanged",
+                      "minus_one_absent_zero_gain_canonical_equivalence",
+                      "minus_one_retains_rank_zero_gain"])
     values = np.array([[.1, .1, .2], [.8, .8, .3], [.3, .3, .5], [.6, .6, .4]])
     pairs = np.array([[0, 1], [0, 2], [1, 2]])
     a = paired_sign_flip(values, pairs, np.random.default_rng(42), 199)

@@ -1,0 +1,109 @@
+{
+  "review_id": "wsc-prospective-design-code-prereview-v1",
+  "created_utc": "2026-11-13T05:43:01.064497+00:00",
+  "status": "PASS_CONDITIONAL_ON_FINAL_LIVE_PREFLIGHT_AND_SEPARATE_FREEZE",
+  "reviewer": "independent semantic/design-code reviewer B",
+  "code_sha256": {
+    "build_experiment.py": "5236d71fb4e6ad81c47012687cc8584d7f169ff158b7451eee4c49701fb11ef5",
+    "verify_preflight.py": "f990ae5a31d540c26d8fc2b45458aaf53b885cd9bc76e00cbdf440a7beff2d9e",
+    "analyze_wsc.py": "93e522bbcbbd0a1096b32ab671b55fd1188476c1edbc3f86ff0949e068134811",
+    "test_analyze_wsc.py": "1e10a51a30b7681d4ef3d7ec80bd80ec7192080c6689e8159fe32817ccac35cc",
+    "selection_intent.json": "dbc98c415fa9a95ab4452f5fd0c523af7878e63a74ec5f68464529c5f0e4f913"
+  },
+  "selection_and_semantic_scope": {
+    "selection_intent_sha256": "dbc98c415fa9a95ab4452f5fd0c523af7878e63a74ec5f68464529c5f0e4f913",
+    "semantic_packet_sha256": "d6912e4f236795cac121b10e540003279349559aa226acc59c08f9ef1308cc76",
+    "first_b_preserved_sha256": "c14a3d5043c942f4b4e4ec50fa6fe89ced9e8eb92df53dbd5c630e45f224e661",
+    "first_a_semantic_content_inspected": false,
+    "root_disposition_changed_by_reviewer": false,
+    "source_annotation_limit": "Official coreference labels and analyst NLI judgments remain separate; intended-source-reading convention and public source-train/pretraining limits are explicit."
+  },
+  "reviewed_design_checks": [
+    "Primary passage-pair correctness faithfully applies the documented bad E/C scoring rule and repaired E/nonE rule to identical fixed predictions.",
+    "Individual accuracy and macroF1 are secondary; all six candidate-pair order comparisons, ties and strict reversals are retained.",
+    "Whole source-similarity families remain in one selection/confirmation split; the prior discovery family is excluded before predictions.",
+    "Model-facing inputs contain opaque ID, original premise and replacement hypothesis only, with the exact common instruction. No source labels, variant, gold, role or family metadata are transmitted.",
+    "Missing labels are not semantic errors. Pair score bounds and coupled repair-minus-bad bounds respect the same unknown predictions; four-candidate primary completeness stays explicit.",
+    "Confirmation consequence uses fixed unique raw-score choices and independent confirmation sources; zero/negative/tied outcomes are preserved.",
+    "Source-family bootstrap carries both hypothesis members and all model outputs jointly within each sampled family; fixed selected winners are not reselected."
+  ],
+  "resolved_prereview_findings": [
+    "The unique raw-score winner is now explicitly a prospective abstraction, not the complete Q48 significantly-higher-or-macroF1 policy. No claim that the advice statistical gate was met is permitted.",
+    "Preflight now rejects duplicated extra input rows, duplicate trial/batch IDs, and incorrect passage/variant membership.",
+    "Every request instruction must equal the prereviewed common instruction.",
+    "All selected sources are checked against complete discovery-family exclusions, not merely the two witness IDs.",
+    "Preflight checks analyzer, capture auditor and runner pins before API costs.",
+    "Root approval, final semantic decisions, first-file hashes and packet/freeze embedded bindings must agree."
+  ],
+  "verification": {
+    "temporary_build_and_preflight": "PASS using actual approved semantic inputs, with a receipt placeholder ONLY in the temporary protocol. No live generated payloads or disposition were changed.",
+    "temporary_build_receipt": {
+      "passages": 72,
+      "families": 41,
+      "split": {
+        "selection": 35,
+        "confirmation": 37
+      },
+      "requests": 76,
+      "classifications": 576,
+      "manifest_sha256": "b2c1d11e79a4ca5f32330efb998371c1fcbd59576c4c5a4062120433e5d65bad"
+    },
+    "independent_equation_and_bootstrap_checks": 51,
+    "independently_rerun_author_analyzer_self_tests": {
+      "synthetic_only": true,
+      "checks_passed": 47,
+      "actual_model_predictions_opened": false,
+      "inference_calls": 0,
+      "fixture_classifications": 24,
+      "coverage": [
+        "whole-JSON parser",
+        "coupled missing bounds",
+        "all-six ordering",
+        "strict reversal",
+        "tied winner sets",
+        "positive and negative heldout consequences",
+        "primary completeness",
+        "source and wire capture audit",
+        "tamper rejection",
+        "local operational failure accounting",
+        "deterministic cluster analysis"
+      ]
+    },
+    "adversarial_preflight_checks": [
+      {
+        "check": "duplicate model-facing row with updated canonical hash",
+        "result": "REJECTED_AS_REQUIRED"
+      },
+      {
+        "check": "changed/leaking common instruction",
+        "result": "REJECTED_AS_REQUIRED"
+      },
+      {
+        "check": "modified pinned analyzer",
+        "result": "REJECTED_AS_REQUIRED"
+      },
+      {
+        "check": "approval/eligibility embedded hash mismatch despite updated outer hash",
+        "result": "REJECTED_AS_REQUIRED"
+      }
+    ],
+    "fixture_receipt_sha256": "fccdc12316160953324d5cffe326b8ee93e545cd30cebbfc16966b382a64e664"
+  },
+  "remaining_requirements": [
+    "Build the actual live protocol/manifest with this completed receipt rather than the temporary placeholder, then run verify_preflight.py on that final artifact set.",
+    "Externally freeze exact protocol, manifest, source/semantic decisions, analyzer/auditor/runner and declared stopping rules before any candidate inference.",
+    "No result-dependent resampling, new candidate selection, silent retry or promotion of bounded/incomplete results to complete primary findings."
+  ],
+  "limits": [
+    "No final live manifest existed during review. Parent must run preflight again after building the actual protocol/manifest with this completed receipt.",
+    "Raw unique-score choice is an abstraction, not Q48 full significance-or-macroF1 decision policy.",
+    "Intervals are conditional family bootstrap, not validated population/significance guarantees; source-family clustering and cross-family shared requests leave dependence limits.",
+    "Complete primary analysis still requires all four fixed candidates complete; identified missing-data bounds must not be silently promoted to complete primary results.",
+    "The initial semantic judgments remain agent annotations under intended source reading; human review is pending."
+  ],
+  "candidate_calls": 0,
+  "candidate_predictions_inspected": false,
+  "live_first_files_modified": false,
+  "human_semantic_validation": "pending",
+  "analyzer_audit_depth": "Read-only review of parsing, score equations, coupled bounds, winner/tie logic, source-family bootstrap, input/capture audits and output claims. Exhaustive finite bounds checks plus synthetic tests are not a formal proof or human gold validation."
+}

@@ -1,0 +1,76 @@
+{
+  "superseded_utc": "2026-11-13T05:47:41.003889+00:00",
+  "status": "PROSPECTIVE_8192_ARTIFACTS_SUPERSEDED_BEFORE_CLASSIFIER_INFERENCE",
+  "reason": "Root authorizes common16384cap for WSC/HANS classification based on operational8192-limit empties in prior advice, before classification outputs; no candidate/source/metric/seed change or retry.",
+  "old_cap": 8192,
+  "new_cap": 16384,
+  "classifier_calls_made": 0,
+  "classifier_outputs_seen": false,
+  "files": [
+    {
+      "path": "PREPARATION_CHECKS.json",
+      "bytes": 547,
+      "sha256": "2e05e54e95a9f7a998a643aa92903235f3741ab2fd1f5390edd04038af2c7637"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4256,
+      "sha256": "a78f0a680bcbab0c7dc5d52daadfebe713c79c2927c1d3e3cfa4eaf5bbbe567f"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 2414,
+      "sha256": "fe47c194adeeb0d9ee793bb117c519e76958b0fceb3de039a568e305a93d24ba"
+    },
+    {
+      "path": "analyze_hans_target.py",
+      "bytes": 19400,
+      "sha256": "e478cc20714fd6b84aaeb3e45689d8fe0159cd8e6be04c867f3066c7bb636282"
+    },
+    {
+      "path": "classification_instruction.txt",
+      "bytes": 606,
+      "sha256": "d176a8a929224c6cfde0f8d0335c90e2c02746b848b8f4e479fe037ce6bdb7d5"
+    },
+    {
+      "path": "manifest.jsonl",
+      "bytes": 88535,
+      "sha256": "b43f80660b2ee64fcb98553fd824f4898deeb0a73b747763510a1ed1a453b1bf"
+    },
+    {
+      "path": "official_hans_source_metadata.json",
+      "bytes": 5004,
+      "sha256": "a100f453af9e6ee2cf6b835a756ba89327de1ea929198e5bbe243e1cec04b849"
+    },
+    {
+      "path": "prepare_hans_target.py",
+      "bytes": 15548,
+      "sha256": "e80adf40a02f5fb195cf7a4cd2abbae6651665c8f609322edf2c33bd6f36d222"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 6505,
+      "sha256": "ea1243da5be3ee4be08d9e6c86f604f2155931f1fd4d79404017d6ef35ac8951"
+    },
+    {
+      "path": "selected_data.json",
+      "bytes": 29766,
+      "sha256": "08306c3d01da9fa2ddec4ff06532efbe2dc592bee5c7e4e3c8191be658868442"
+    },
+    {
+      "path": "source_receipt.json",
+      "bytes": 6925,
+      "sha256": "8a52c7568bd5497631d1f82c520fd8287f4d487fdac3481491622ce960256a6c"
+    },
+    {
+      "path": "task_key.json",
+      "bytes": 20209,
+      "sha256": "09d6d813af9125963bbe031855ebc4a14c56440ad3dc4c5ddb1e078cc2b7ed02"
+    },
+    {
+      "path": "test_hans_target.py",
+      "bytes": 6926,
+      "sha256": "c874dc30ca6768e73c9808ebdf298c4f0dd89a229715d88b3f24c8baf2edfbfd"
+    }
+  ]
+}
