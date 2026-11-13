@@ -8,8 +8,8 @@
   ],
   "build_exit_code": 0,
   "compiler_version": "gcc (Debian 14.2.0-19) 14.2.0",
-  "binary_sha256": "91e1fc81141fc67892fb96df72608b938449c5984a0e85853444ae9e381cf128",
-  "binary_bytes": 446864,
+  "binary_sha256": "3b556b296700f84cd2a6ccedf1634061ab9f5164cdd36ff3de8941e962276f8e",
+  "binary_bytes": 446872,
   "canonical_flags": [
     "-q",
     "-c",
@@ -41,6 +41,11 @@
   },
   "wilcoxon_target": "Paired-difference distribution symmetricaboutzero, not equivalence of meanquality; auto ties/zero approximation limitations retained.",
   "source_precision": "Canonical stdout uses four-decimal scores. Default nDCG gain is linear in relevance; missing-query averaging and short-list padding were checked with synthetic fixtures.",
-  "score_tie_rule": "Score descending, then reverse lexicographic docno; canonical form_res_rels.c lines264\u2013274.",
-  "custom_fixture_receipt_sha256": "411bfe14104b26f882c7b6f2c94b6d9e357e95bdb71b3f68647033e42b91798a"
+  "score_tie_rule": "Score descending, then reverse lexicographic docno; canonical form_res_rels.c lines264–274.",
+  "custom_fixture_receipt_sha256": "411bfe14104b26f882c7b6f2c94b6d9e357e95bdb71b3f68647033e42b91798a",
+  "runtime_rebuild_utc": "2026-11-13T10:08:31.267843+00:00",
+  "runtime_rebuild_reason": "Same official source tree and declared make command; unstripped build embeds local path in DW_AT_comp_dir, consistent with nonreproducible executable hash. Exact new executable pinned before candidate scoring; sole cause of binary difference not established.",
+  "prior_binary_sha256": "91e1fc81141fc67892fb96df72608b938449c5984a0e85853444ae9e381cf128",
+  "runtime_rebuild_source_tree_git_blobs_verified": 121,
+  "runtime_rebuild_official_quicktest_passed": true
 }

@@ -1,7 +1,7 @@
 {
-  "protocol_id": "trec-covid-actual-runs-uncertainty-diagnostic-v2-qrels-sentinel",
+  "protocol_id": "trec-covid-actual-runs-uncertainty-diagnostic-v3-runtime-rebuild",
   "created_utc": "2026-11-13T05:26:45.952512+00:00",
-  "status": "ready_for_new_external_freeze_after_pre_scoring_parser_fix",
+  "status": "ready_for_new_external_freeze_after_runtime_build_pin",
   "rationale": "Evaluate the literal nonsignificance-implies-equivalence advice rule on a fixed archive of authentic retrieval outputs. This is a bounded replay diagnostic of a known inferential error, not a new statistical result or evidence of actual user adoption/cost-based harm.",
   "research_question": "For everyfixed official Round5 candidate pair evaluated on all50topics, what paireduncertainty is hidden by declaring nonsignificance functionalequivalence? A separate25/25topic split asks how that statement transfers to independentlyheldouttopic observations.",
   "source_task": {
@@ -437,7 +437,7 @@
     "trec_eval_upstream.json": "4c6996e0817b48b34cdc18c29d3cd2bd417f4829cda641fe219bb83fc19902ad",
     "trec_eval_release_tree.json": "6e1137925536bf7c5d8600d5ba0da4ddfb6f65608d95d40ed3801e326c6fe770",
     "trec_eval_source_receipt.json": "6163efaad6b38ab2e525137c2b78b039c09e837d82042ab7e638470638ece2e2",
-    "trec_eval_build_receipt.json": "917d15f5557bd532e82194186c17c95c4d7d18b3af4f652d9de2eea27a41bc8b",
+    "trec_eval_build_receipt.json": "f8afa97c227155239091cafd887f6e752d1215497d3fc04514c40667037a3b65",
     "evaluate_runs.py": "707ff9a562030c96e778d971c432fa734056a6b4eeb8bd127a480234807364e4",
     "evaluator_verification.json": "8c70eecbde586c18a0b0d632c707c4add2e91005a0ccc0227db89fbbf4c5d98e",
     "requirements-eval.txt": "1668a3152e33680d94637b13421c15e68bd97cd8701f7f555c691f5bc5c0b9f3",
@@ -484,5 +484,13 @@
     "new_external_git_freeze_required": true,
     "failure_record": "FAILURE_PRE_SCORING.json",
     "source_preflight": "SOURCE_PREFLIGHT.json"
+  },
+  "correction_v3": {
+    "scope": "Re-pin exact locally compiled official executable; same release source tree, compiler version, make flags and all scientific design, candidate, qrels, metric, split and test settings. No candidate score computed before this amendment.",
+    "prior_v2_protocol_sha256": "91748f135bb613e5da243bfd4e5d7de9430a1b3562d2607453f5f804715f737f",
+    "prior_v2_build_receipt_sha256": "917d15f5557bd532e82194186c17c95c4d7d18b3af4f652d9de2eea27a41bc8b",
+    "prior_v2_binary_sha256": "91e1fc81141fc67892fb96df72608b938449c5984a0e85853444ae9e381cf128",
+    "new_binary_sha256": "3b556b296700f84cd2a6ccedf1634061ab9f5164cdd36ff3de8941e962276f8e",
+    "v2_files_preserved_in": "v2_before_runtime_rebuild/"
   }
 }

@@ -1,8 +1,8 @@
 {
-  "prepared_utc": "2026-11-13T05:50:54.974852+00:00",
-  "status": "ready_for_root_new_git_freeze_no_comparative_performance_computed",
+  "prepared_utc": "2026-11-13T10:09:10.588575+00:00",
+  "status": "v3_runtime_rebuild_ready_for_external_git_freeze_no_candidate_scoring",
   "protocol_file": "protocol.json",
-  "protocol_sha256": "91748f135bb613e5da243bfd4e5d7de9430a1b3562d2607453f5f804715f737f",
+  "protocol_sha256": "b6a893abf4a43b6d356d4b8bdc150beec31b175ab30b6d5a872a9b47ca4586bf",
   "evaluator_sha256": "707ff9a562030c96e778d971c432fa734056a6b4eeb8bd127a480234807364e4",
   "source_records": 127,
   "planned_candidates": 126,
@@ -18,7 +18,7 @@
     "trec_eval_upstream.json": "4c6996e0817b48b34cdc18c29d3cd2bd417f4829cda641fe219bb83fc19902ad",
     "trec_eval_release_tree.json": "6e1137925536bf7c5d8600d5ba0da4ddfb6f65608d95d40ed3801e326c6fe770",
     "trec_eval_source_receipt.json": "6163efaad6b38ab2e525137c2b78b039c09e837d82042ab7e638470638ece2e2",
-    "trec_eval_build_receipt.json": "917d15f5557bd532e82194186c17c95c4d7d18b3af4f652d9de2eea27a41bc8b",
+    "trec_eval_build_receipt.json": "f8afa97c227155239091cafd887f6e752d1215497d3fc04514c40667037a3b65",
     "evaluate_runs.py": "707ff9a562030c96e778d971c432fa734056a6b4eeb8bd127a480234807364e4",
     "evaluator_verification.json": "8c70eecbde586c18a0b0d632c707c4add2e91005a0ccc0227db89fbbf4c5d98e",
     "requirements-eval.txt": "1668a3152e33680d94637b13421c15e68bd97cd8701f7f555c691f5bc5c0b9f3",
@@ -57,7 +57,18 @@
   "external_freeze_time": null,
   "execute_only_after_root_supplies_real_freeze": "python3 evaluate_runs.py --directory DIR --freeze-commit VERIFIED_SHA --freeze-time VERIFIED_UTC --freeze-protocol-sha256 FROZEN_PROTOCOL_SHA --output NEW_DIRECTORY",
   "cache_notes": "Raw run gzipfiles and scorer source/binary remain local reproducible caches pinned by receipt/tree/build hashes. The draft current-main tree cache is unselected and not an input.",
-  "version": "v2_minus_one_parser_correction",
+  "version": "v3_runtime_rebuild",
   "supersedes_failed_pre_scoring_freeze": "361902527a1ff276ab61b14d3903463b28d76c8c",
-  "recommended_new_output_directory": "analysis_v2_after_minus_one_fix"
+  "recommended_new_output_directory": "analysis_v2_after_minus_one_fix",
+  "runtime_rebuild": {
+    "prior_v2_protocol_sha256": "91748f135bb613e5da243bfd4e5d7de9430a1b3562d2607453f5f804715f737f",
+    "prior_v2_build_receipt_sha256": "917d15f5557bd532e82194186c17c95c4d7d18b3af4f652d9de2eea27a41bc8b",
+    "new_binary_sha256": "3b556b296700f84cd2a6ccedf1634061ab9f5164cdd36ff3de8941e962276f8e",
+    "new_build_receipt_sha256": "f8afa97c227155239091cafd887f6e752d1215497d3fc04514c40667037a3b65",
+    "source_blobs_verified": 121,
+    "official_quicktest": "pass",
+    "synthetic_checks": 28,
+    "candidate_scoring": "not_started",
+    "prior_v2_files": "v2_before_runtime_rebuild/"
+  }
 }
