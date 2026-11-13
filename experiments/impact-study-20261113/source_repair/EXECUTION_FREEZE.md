@@ -17,4 +17,4 @@ python3 scripts/run_adaption_stream_pilot.py experiments/impact-study-20261113/s
 python3 scripts/run_adaption_stream_pilot.py experiments/impact-study-20261113/source_repair
 ```
 
-The current work environment has neither `ADAPTION_API_KEY` nor network access to the Adaption endpoint. This is a prospective freeze, not a completed 36-call result. Do not pool these selected post-discovery attempts with the historical advice block or claim benchmark-family expansion.
+The current work environment has no `ADAPTION_API_KEY` or authenticated Adaption session. The endpoint is reachable but returns HTTP 401 without a credential. This is a prospective freeze, not a completed 36-call result. Do not pool these selected post-discovery attempts with the historical advice block or claim benchmark-family expansion.
