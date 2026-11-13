@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Detector calibration against the false-credit model. $\alpha$ is the honest-agent flag rate, TPR the insider flag rate; predicted FC is the model rate at the measured $(\alpha,\mathrm{TPR})$.}
+\label{tab:false-credit}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Detector & $\alpha$ & TPR & Inflation (pp) & FC & MC & Pred. FC (\%) & Obs. FC (\%) \\
+\midrule
+BlindGuard & 0.187 & 0.564 & +0.500 & 22 & 14 & 3.41 & 1.38 \\
+CASPIAN & 0.078 & 0.818 & +0.000 & 2 & 2 & 0.59 & 0.12 \\
+DOMINANT & 0.178 & 0.585 & +0.250 & 36 & 32 & 3.06 & 2.25 \\
+PREM & 0.165 & 0.615 & +3.625 & 62 & 4 & 2.53 & 3.88 \\
+TAM & 0.276 & 0.356 & +0.938 & 26 & 11 & 9.68 & 1.62 \\
+XG-Guard & 0.021 & 0.951 & +0.000 & 8 & 8 & 0.12 & 0.50 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize The model is a structural illustration, not a calibrated predictor: the observed correlation is reported in the text rather than assumed. Only 26 of the 156 archived false credits have a tied released tally, so 130 are unique-winner flips caused by expelling correct votes.
+\end{table}

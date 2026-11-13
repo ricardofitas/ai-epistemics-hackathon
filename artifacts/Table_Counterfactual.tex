@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Counterfactual substitution audit. Replacing an excluded insider vote never changes the delivered answer or its grade, but it moves the released score.}
+\label{tab:counterfactual}
+\begin{tabular}{lrrrrr}
+\toprule
+Task & Substitutions & $g_{del}$ changes & $g_{rel}$ flips & Debates flipped & Prior-flag flips \\
+\midrule
+MMLU & 23269 & 0 & 372 & 104 & 223 \\
+MMLU-Pro & 66238 & 0 & 1193 & 164 & 791 \\
+CSQA & 30876 & 0 & 679 & 167 & 394 \\
+GSM8K & 22095 & 0 & 117 & 35 & 60 \\
+Total & 142478 & 0 & 2361 & 470 & 1468 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize The audit enumerates every replacement over the task option space (a superset of the 33,025 frozen substitutions; the reference flip counts 121/89 are recorded in results.json but were not reproduced by this space).
+\end{table}

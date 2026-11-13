@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Dataset stratification induced by the released attack-target sampler: 236 genuinely adversarial multiple-choice questions and 64 self-sabotaged ones.}
+\label{tab:stratification}
+\begin{tabular}{lrrrrrr}
+\toprule
+Slice & Questions & Debates & $g_{rel}$ (\%) & $g_{del}$ (\%) & False credit & Missed credit \\
+\midrule
+ALL\_400 & 400 & 9600 & 84.72 & 83.83 & 156 & 71 \\
+TRUE\_ADVERSARIAL\_236 & 336 & 8064 & 83.87 & 83.00 & 136 & 66 \\
+SELF\_SABOTAGED\_64 & 64 & 1536 & 89.19 & 88.22 & 20 & 5 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize GSM8K contributes 100 questions to TRUE\_ADVERSARIAL\_236; the numeric task is always genuinely adversarial because the sampler emits a letter.
+\end{table}

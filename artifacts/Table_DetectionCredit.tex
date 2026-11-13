@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Detection credit for the disabled controls. The released third-round ADR is manufactured by padded rounds imputed after convergence.}
+\label{tab:detection-credit}
+\begin{tabular}{lrrrr}
+\toprule
+Task & Padded rounds & Released ADR (\%) & Executed ADR (\%) & Phantom (pp) \\
+\midrule
+MMLU & 63 & 8.00 & 0.00 & +8.00 \\
+MMLU-Pro & 37 & 4.75 & 0.00 & +4.75 \\
+CSQA & 20 & 2.50 & 0.00 & +2.50 \\
+GSM8K & 1 & 0.25 & 0.00 & +0.25 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize The executed-round ADR is 0.00\% in every task, which is the only value a detector that raises no flag can earn.
+\end{table}

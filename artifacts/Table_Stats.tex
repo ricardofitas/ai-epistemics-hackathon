@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Held-out paired comparisons of EpistemicGuard against each baseline on that baseline's own debate set. Intervals resample question IDs within task and average tasks equally; Wilcoxon signed-rank tests are Holm-corrected per mode.}
+\label{tab:stats}
+\begin{tabular}{lrrrrl}
+\toprule
+Comparison & $\Delta$ (pp) & 95\% CI & $p$ & $p_{Holm}$ &  \\
+\midrule
+EpistemicGuard-Hard vs PREM (PREM debates) & +4.14 & [+2.89, +5.39] & 0.0000 & 0.0000 & * \\
+EpistemicGuard-Hard vs DOMINANT (DOMINANT debates) & +2.19 & [+0.94, +3.44] & 0.0011 & 0.0053 & * \\
+EpistemicGuard-Hard vs BlindGuard (BlindGuard debates) & +1.02 & [+0.23, +1.88] & 0.0196 & 0.0782 &  \\
+EpistemicGuard-Hard vs TAM (TAM debates) & +1.02 & [+0.16, +1.95] & 0.0317 & 0.0951 &  \\
+EpistemicGuard-Hard vs CASPIAN (CASPIAN debates) & +0.16 & [-0.23, +0.55] & 0.4142 & 0.8284 &  \\
+EpistemicGuard-Hard vs XG-Guard (XG-Guard debates) & +0.00 & [-0.31, +0.31] & 1.0000 & 1.0000 &  \\
+EpistemicGuard-Soft vs PREM (PREM debates) & +4.45 & [+3.20, +5.70] & 0.0000 & 0.0000 & * \\
+EpistemicGuard-Soft vs DOMINANT (DOMINANT debates) & +3.36 & [+2.03, +4.77] & 0.0000 & 0.0000 & * \\
+EpistemicGuard-Soft vs BlindGuard (BlindGuard debates) & +1.64 & [+0.86, +2.50] & 0.0002 & 0.0006 & * \\
+EpistemicGuard-Soft vs TAM (TAM debates) & +0.86 & [+0.08, +1.72] & 0.0443 & 0.1330 &  \\
+EpistemicGuard-Soft vs XG-Guard (XG-Guard debates) & -0.31 & [-0.70, +0.00] & 0.1025 & 0.2049 &  \\
+EpistemicGuard-Soft vs CASPIAN (CASPIAN debates) & -0.16 & [-0.55, +0.23] & 0.4142 & 0.4142 &  \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize Positive $\Delta$ means EpistemicGuard is more accurate than the baseline on the same debates and the same terminal votes.
+\end{table}
