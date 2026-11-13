@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-13",
+  "phase": "Exploratory source audit followed by fixed real-data validity checks. Not a preregistered estimate of population prevalence.",
+  "oneeval_commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "gallery_git_blob": "67e88a261cf481933df1464aef2c60502931d8f7",
+  "upstream_dataflow_tool_git_blob": "7f75e97993020a0acda0a09e936ce1e66c02bbd0",
+  "panel": [
+    {
+      "bench": "sciq",
+      "repo": "allenai/sciq",
+      "config": "default",
+      "split": "test",
+      "role": "gallery_default",
+      "gold_rule": "Exact correct_answer text matched to displayed choices"
+    },
+    {
+      "bench": "winogrande",
+      "repo": "allenai/winogrande",
+      "config": "winogrande_xl",
+      "split": "test",
+      "role": "gallery_default",
+      "gold_rule": "Nonempty answer is one-based index; blank answer means unavailable gold"
+    },
+    {
+      "bench": "winogrande",
+      "repo": "allenai/winogrande",
+      "config": "winogrande_xl",
+      "split": "validation",
+      "role": "labelled_diagnostic_split_override",
+      "gold_rule": "Nonempty answer is one-based index"
+    },
+    {
+      "bench": "boolq",
+      "repo": "google/boolq",
+      "config": "default",
+      "split": "validation",
+      "role": "gallery_default",
+      "gold_rule": "Boolean answer matched to intended literal choices true,false"
+    },
+    {
+      "bench": "pubmedqa",
+      "repo": "qiaojin/PubMedQA",
+      "config": "pqa_labeled",
+      "split": "train",
+      "role": "gallery_default",
+      "gold_rule": "final_decision text is yes/no/maybe"
+    },
+    {
+      "bench": "medmcqa",
+      "repo": "openlifescienceai/medmcqa",
+      "config": "default",
+      "split": "validation",
+      "role": "gallery_default_control",
+      "gold_rule": "cop is zero-based option index"
+    },
+    {
+      "bench": "hellaswag",
+      "repo": "Rowan/hellaswag",
+      "config": "default",
+      "split": "validation",
+      "role": "gallery_default_control",
+      "gold_rule": "label is zero-based option index"
+    },
+    {
+      "bench": "piqa",
+      "repo": "baber/piqa",
+      "config": "plain_text",
+      "split": "validation",
+      "role": "gallery_default_control_config_resolution",
+      "gold_rule": "label is zero-based option index"
+    },
+    {
+      "bench": "lab-bench-language-agent-biology-benchmark",
+      "repo": "futurehouse/lab-bench",
+      "config": "CloningScenarios",
+      "split": "train",
+      "role": "gallery_default",
+      "gold_rule": "ideal is correct text; distractors should not be mistaken for complete choice set"
+    },
+    {
+      "bench": "gpqa",
+      "repo": "Idavidrein/gpqa",
+      "config": "gpqa_diamond",
+      "split": "train",
+      "role": "gallery_default_may_be_gated",
+      "gold_rule": "Correct Answer text; preserve gated outcome without using credentials or alternative mirrors"
+    }
+  ],
+  "selection_disclosure": "Panel selected after schema/config inspection identified literal-label, one-based-index, fixed-answer-position and incomplete-options hypotheses; control benchmarks explicitly included. No model outcome inspection used for selection.",
+  "primary_checks": [
+    "Run unmodified One-Eval preprocessing methods on official data and record unresolved input fields; do not describe blocked generation as successful end-to-end scoring.",
+    "Validate gold availability and whether the correct answer appears among displayed options.",
+    "Through unmodified run_bench_with_contract, score known-correct letter-oracle responses and every constant-letter baseline against the gallery default reference field and parser.",
+    "Compare scores to semantic source gold independently of One-Eval label parser. Retain unavailable-gold cases as invalid coverage, not incorrect answers.",
+    "Verify reference-encoding preservation using explicit per-source label base and literal semantics; zero-based control tasks must remain correct.",
+    "For fixed-position SciQ, use deterministic balanced option rotations across source rows, preserve semantic gold, and test constant-letter baselines plus oracle against corrected displayed-choice contract."
+  ],
+  "controls": [
+    "All observed rows in each acquired split; no correctness-based filtering.",
+    "For very large public splits above 20000 rows, use deterministic SHA256 order first20000 without model outcomes; retain full capture.",
+    "No new model inference in this stage. Oracles and constant predictors are constructed diagnostic controls, never real model outputs.",
+    "Gated or acquisition-failed sources remain in the disposition table.",
+    "Diagnostic split overrides identified separately from native gallery defaults.",
+    "Record proxy labels and readiness warnings; do not call an explicitly marked proxy an undisclosed official evaluation."
+  ],
+  "promotion_gate": "A source-level issue is promoted only with real-source reproduction, actual reachable route evidence, causal correction, clear scope, and material effect. No claim that prior authors' published model results are invalid without their run artifacts.",
+  "new_inference_calls": 0
+}

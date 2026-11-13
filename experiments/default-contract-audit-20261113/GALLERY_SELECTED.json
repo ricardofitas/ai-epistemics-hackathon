@@ -1,0 +1,1445 @@
+{
+  "benches": [
+    {
+      "bench_name": "lab-bench-language-agent-biology-benchmark",
+      "bench_table_exist": true,
+      "bench_source_url": "https://huggingface.co/datasets/futurehouse/lab-bench",
+      "bench_dataflow_eval_type": "key3_q_choices_a",
+      "bench_prompt_template": null,
+      "bench_keys": [
+        "id",
+        "question",
+        "ideal",
+        "distractors",
+        "canary",
+        "source",
+        "subtask"
+      ],
+      "meta": {
+        "bench_name": "lab-bench-language-agent-biology-benchmark",
+        "source": "bench_item_list",
+        "aliases": [
+          "lab-bench-language-agent-biology-benchmark",
+          "LAB-Bench (Language Agent Biology Benchmark)",
+          "lab-bench-language-agent..."
+        ],
+        "category": "Domain-Specific",
+        "tags": [
+          "domain-specific"
+        ],
+        "description": "An evaluation dataset for AI systems intended to benchmark capabilities foundational to scientific research in biology.",
+        "hf_meta": {
+          "bench_name": "lab-bench-language-agent-biology-benchmark",
+          "hf_repo": "futurehouse/lab-bench",
+          "card_text": "An evaluation dataset for AI systems intended to benchmark capabilities foundational to scientific research in biology.",
+          "tags": [
+            "domain-specific"
+          ],
+          "exists_on_hf": true
+        },
+        "structure": {
+          "repo_id": "futurehouse/lab-bench",
+          "revision": null,
+          "subsets": [
+            {
+              "subset": "CloningScenarios",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "DbQA",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "FigQA",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "LitQA2",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "ProtocolQA",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "SeqQA",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "SuppQA",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "TableQA",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            }
+          ],
+          "ok": true,
+          "error": null
+        },
+        "download_config": {
+          "config": "CloningScenarios",
+          "split": "train",
+          "reason": "所有子集均只有 'train' 划分，因此根据默认规则选择列表中的第一个子集 'CloningScenarios'。并给出警告，因无评测划分。"
+        },
+        "key_mapping": {
+          "input_question_key": "question",
+          "input_choices_key": "distractors",
+          "input_label_key": "ideal",
+          "input_context_key": "source"
+        },
+        "key_mapping_reason": "该数据集包含一个问题字段(question)和干扰选项字段(distractors)，以及一个理想答案字段(ideal)，表明这是一个选择题类型数据集，具有单一正确答案。此外，字段(source)可以作为上下文信息，这与key3_q_choices_a类型的格式相匹配。",
+        "description_zh": "自动化科学研究基础能力",
+        "radar_dimensions": [
+          "instruction",
+          "knowledge",
+          "reasoning"
+        ],
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "accuracy",
+          "primary_metric": "choice_accuracy",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "distractors"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          }
+        },
+        "prompt": {
+          "source": "gallery",
+          "template_id": "lab-bench-language-agent-biology-benchmark_contract_v1",
+          "system_prompt": "",
+          "user_template": "Context:\n{source}\n\nQuestion:\n{question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+          "output_format": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "answer_tag": "<answer>CHOICE</answer>"
+          },
+          "few_shot": {
+            "enabled": false,
+            "num_shots": 0,
+            "source_split": null
+          },
+          "generation": {
+            "temperature": 0,
+            "top_p": 1,
+            "max_tokens": 1024,
+            "stop": []
+          }
+        },
+        "readiness": {
+          "status": "contract_inferred",
+          "smoke_passed": false,
+          "golden_cases": null,
+          "known_limitations": [
+            "No direct lm-eval YAML match was found; contract fields are inferred from the requested bench list."
+          ]
+        }
+      }
+    },
+    {
+      "bench_name": "medmcqa",
+      "bench_table_exist": true,
+      "bench_source_url": "https://huggingface.co/datasets/openlifescienceai/medmcqa",
+      "bench_dataflow_eval_type": "key3_q_choices_a",
+      "bench_prompt_template": null,
+      "bench_keys": [
+        "id",
+        "question",
+        "opa",
+        "opb",
+        "opc",
+        "opd",
+        "cop",
+        "choice_type",
+        "exp",
+        "subject_name",
+        "topic_name"
+      ],
+      "meta": {
+        "bench_name": "medmcqa",
+        "source": "bench_item_list",
+        "aliases": [
+          "medmcqa",
+          "MedMCQA"
+        ],
+        "category": "Domain-Specific",
+        "tags": [
+          "medical",
+          "multiple-choice",
+          "domain-specific"
+        ],
+        "description": "MedMCQA: Large-scale multi-subject medical multiple-choice QA dataset with 194K questions from AIIMS and NEET PG exams covering 21 medical subjects.",
+        "hf_meta": {
+          "bench_name": "medmcqa",
+          "hf_repo": "openlifescienceai/medmcqa",
+          "card_text": "Large-scale medical multiple-choice QA from AIIMS and NEET PG exams.",
+          "tags": [
+            "medical"
+          ],
+          "exists_on_hf": true
+        },
+        "structure": {
+          "repo_id": "openlifescienceai/medmcqa",
+          "revision": null,
+          "subsets": [
+            {
+              "subset": "default",
+              "splits": [
+                {
+                  "name": "validation",
+                  "num_examples": 4183
+                }
+              ]
+            }
+          ],
+          "ok": true,
+          "error": null
+        },
+        "download_config": {
+          "config": "default",
+          "split": "validation",
+          "reason": "validation split is used for evaluation; test split labels are not publicly available."
+        },
+        "key_mapping": {
+          "input_question_key": "question",
+          "input_choices_key": [
+            "opa",
+            "opb",
+            "opc",
+            "opd"
+          ],
+          "input_label_key": "cop"
+        },
+        "key_mapping_reason": "question is the medical question, opa-opd are the four options, cop is the correct option index (0-3).",
+        "description_zh": "大规模医学多选考试题",
+        "radar_dimensions": [
+          "knowledge"
+        ],
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "acc",
+          "primary_metric": "choice_accuracy",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choice_text_fields": [
+              "opa",
+              "opb",
+              "opc",
+              "opd"
+            ]
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          }
+        },
+        "prompt": {
+          "source": "gallery",
+          "template_id": "medmcqa_contract_v1",
+          "system_prompt": "",
+          "user_template": "{question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+          "output_format": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "answer_tag": "<answer>CHOICE</answer>"
+          },
+          "few_shot": {
+            "enabled": false,
+            "num_shots": 0,
+            "source_split": null
+          },
+          "generation": {
+            "temperature": 0,
+            "top_p": 1,
+            "max_tokens": 1024,
+            "stop": []
+          }
+        },
+        "readiness": {
+          "status": "reference_mapped",
+          "smoke_passed": false,
+          "golden_cases": null,
+          "known_limitations": [
+            "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+          ]
+        }
+      }
+    },
+    {
+      "bench_name": "pubmedqa",
+      "bench_table_exist": true,
+      "bench_source_url": "https://huggingface.co/datasets/qiaojin/PubMedQA",
+      "bench_dataflow_eval_type": "key3_q_choices_a",
+      "bench_prompt_template": null,
+      "bench_keys": [
+        "pubid",
+        "question",
+        "context",
+        "long_answer",
+        "final_decision"
+      ],
+      "meta": {
+        "bench_name": "pubmedqa",
+        "source": "bench_item_list",
+        "aliases": [
+          "pubmedqa",
+          "PubMedQA"
+        ],
+        "category": "Domain-Specific",
+        "tags": [
+          "medical",
+          "biomedical",
+          "domain-specific"
+        ],
+        "description": "PubMedQA: Biomedical research question answering dataset with 1K expert-annotated yes/no/maybe questions based on PubMed abstracts.",
+        "hf_meta": {
+          "bench_name": "pubmedqa",
+          "hf_repo": "qiaojin/PubMedQA",
+          "card_text": "Biomedical yes/no/maybe QA from PubMed abstracts.",
+          "tags": [
+            "medical",
+            "biomedical"
+          ],
+          "exists_on_hf": true
+        },
+        "structure": {
+          "repo_id": "qiaojin/PubMedQA",
+          "revision": null,
+          "subsets": [
+            {
+              "subset": "pqa_labeled",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": 1000
+                }
+              ]
+            }
+          ],
+          "ok": true,
+          "error": null
+        },
+        "download_config": {
+          "config": "pqa_labeled",
+          "split": "train",
+          "reason": "pqa_labeled contains the 1K expert-annotated questions used for evaluation."
+        },
+        "key_mapping": {
+          "input_question_key": "question",
+          "input_choices_key": [
+            "yes",
+            "no",
+            "maybe"
+          ],
+          "input_label_key": "final_decision",
+          "input_context_key": "context"
+        },
+        "key_mapping_reason": "question is the research question, context contains the abstract, final_decision is yes/no/maybe.",
+        "description_zh": "PubMed 摘要生物医学问答",
+        "radar_dimensions": [
+          "knowledge"
+        ],
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "acc",
+          "primary_metric": "choice_accuracy",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-C",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choice_text_fields": [
+              "yes",
+              "no",
+              "maybe"
+            ]
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          }
+        },
+        "prompt": {
+          "source": "gallery",
+          "template_id": "pubmedqa_contract_v1",
+          "system_prompt": "",
+          "user_template": "Context:\n{context}\n\nQuestion:\n{question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+          "output_format": {
+            "type": "choice_letter",
+            "choices": "A-C",
+            "answer_tag": "<answer>CHOICE</answer>"
+          },
+          "few_shot": {
+            "enabled": false,
+            "num_shots": 0,
+            "source_split": null
+          },
+          "generation": {
+            "temperature": 0,
+            "top_p": 1,
+            "max_tokens": 1024,
+            "stop": []
+          }
+        },
+        "readiness": {
+          "status": "reference_mapped",
+          "smoke_passed": false,
+          "golden_cases": null,
+          "known_limitations": [
+            "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+          ]
+        }
+      }
+    },
+    {
+      "bench_name": "sciq",
+      "bench_table_exist": true,
+      "bench_source_url": "https://huggingface.co/datasets/allenai/sciq",
+      "bench_dataflow_eval_type": "key3_q_choices_a",
+      "bench_prompt_template": null,
+      "bench_keys": [
+        "question",
+        "distractor3",
+        "distractor1",
+        "distractor2",
+        "correct_answer",
+        "support"
+      ],
+      "meta": {
+        "bench_name": "sciq",
+        "source": "bench_item_list",
+        "aliases": [
+          "sciq",
+          "SciQ"
+        ],
+        "category": "Knowledge & QA",
+        "tags": [
+          "knowledge",
+          "knowledge & qa"
+        ],
+        "description": "Multiple choice science exam questions.",
+        "hf_meta": {
+          "bench_name": "sciq",
+          "hf_repo": "allenai/sciq",
+          "card_text": "Multiple choice science exam questions.",
+          "tags": [
+            "knowledge"
+          ],
+          "exists_on_hf": true
+        },
+        "structure": {
+          "repo_id": "allenai/sciq",
+          "revision": null,
+          "subsets": [
+            {
+              "subset": "default",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                },
+                {
+                  "name": "validation",
+                  "num_examples": null
+                },
+                {
+                  "name": "test",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            }
+          ],
+          "ok": true,
+          "error": null
+        },
+        "download_config": {
+          "config": "default",
+          "split": "test",
+          "reason": "选择了 default config，因为这是唯一可用的配置，也是通常的主配置。选择了 test split，因为测试集是评测的最佳选择。"
+        },
+        "key_mapping": {
+          "input_question_key": "question",
+          "input_choices_key": [
+            "correct_answer",
+            "distractor1",
+            "distractor2",
+            "distractor3"
+          ],
+          "input_label_key": "correct_answer",
+          "input_context_key": "support"
+        },
+        "key_mapping_reason": "数据集包含问题（question）和多个选择项，其中一个是正确答案（correct_answer），这符合选择题：单正确的结构。此外，还有一个可能提供额外信息的字段（support），作为上下文进行映射。",
+        "description_zh": "科学考试多选题",
+        "radar_dimensions": [
+          "knowledge",
+          "reasoning"
+        ],
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "acc_norm",
+          "primary_metric": "choice_accuracy",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choice_text_fields": [
+              "correct_answer",
+              "distractor1",
+              "distractor2",
+              "distractor3"
+            ]
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          }
+        },
+        "prompt": {
+          "source": "gallery",
+          "template_id": "sciq_contract_v1",
+          "system_prompt": "",
+          "user_template": "Context:\n{support}\n\nQuestion:\n{question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+          "output_format": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "answer_tag": "<answer>CHOICE</answer>"
+          },
+          "few_shot": {
+            "enabled": false,
+            "num_shots": 0,
+            "source_split": null
+          },
+          "generation": {
+            "temperature": 0,
+            "top_p": 1,
+            "max_tokens": 1024,
+            "stop": []
+          }
+        },
+        "readiness": {
+          "status": "reference_mapped",
+          "smoke_passed": false,
+          "golden_cases": null,
+          "known_limitations": [
+            "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+          ]
+        }
+      }
+    },
+    {
+      "bench_name": "gpqa",
+      "bench_table_exist": true,
+      "bench_source_url": "https://huggingface.co/datasets/Idavidrein/gpqa",
+      "bench_dataflow_eval_type": "key3_q_choices_a",
+      "bench_prompt_template": null,
+      "bench_keys": [
+        "Pre-Revision Question",
+        "Pre-Revision Correct Answer",
+        "Pre-Revision Incorrect Answer 1",
+        "Pre-Revision Incorrect Answer 2",
+        "Pre-Revision Incorrect Answer 3",
+        "Pre-Revision Explanation",
+        "Self-reported question-writing time (minutes)",
+        "Question",
+        "Correct Answer",
+        "Incorrect Answer 1",
+        "Incorrect Answer 2",
+        "Incorrect Answer 3",
+        "Explanation",
+        "Revision Comments (from Question Writer)",
+        "Subdomain",
+        "Writer's Difficulty Estimate",
+        "Extra Revised Question",
+        "Extra Revised Explanation",
+        "Extra Revised Correct Answer",
+        "Extra Revised Incorrect Answer 1",
+        "Extra Revised Incorrect Answer 2",
+        "Extra Revised Incorrect Answer 3",
+        "Non-Expert Validator Accuracy",
+        "Majority Non-Expert Vals Incorrect",
+        "Expert Validator Accuracy",
+        "Record ID",
+        "High-level domain",
+        "Question Writer",
+        "Feedback_EV_1",
+        "Validator Revision Suggestion_EV_1",
+        "Is First Validation_EV_1",
+        "Post hoc agreement_EV_1",
+        "Sufficient Expertise?_EV_1",
+        "Understand the question?_EV_1",
+        "Question Difficulty_EV_1",
+        "Validator Answered Correctly_EV_1",
+        "Self-reported time (minutes)_EV_1",
+        "Probability Correct_EV_1",
+        "Manual Correctness Adjustment_EV_1",
+        "Expert Validator_EV_1",
+        "Feedback_EV_2",
+        "Validator Revision Suggestion_EV_2",
+        "Is First Validation_EV_2",
+        "Post hoc agreement_EV_2",
+        "Sufficient Expertise?_EV_2",
+        "Understand the question?_EV_2",
+        "Question Difficulty_EV_2",
+        "Validator Answered Correctly_EV_2",
+        "Self-reported time (minutes)_EV_2",
+        "Probability Correct_EV_2",
+        "Manual Correctness Adjustment_EV_2",
+        "Expert Validator_EV_2",
+        "Feedback_NEV_1",
+        "Validator Answered Correctly_NEV_1",
+        "Explanation_NEV_1",
+        "Self-reported time (minutes)_NEV_1",
+        "Websites visited_NEV_1",
+        "Probability Correct_NEV_1",
+        "Manual Correctness Adjustment_NEV_1",
+        "Non-Expert Validator_NEV_1",
+        "Feedback_NEV_2",
+        "Validator Answered Correctly_NEV_2",
+        "Explanation_NEV_2",
+        "Self-reported time (minutes)_NEV_2",
+        "Websites visited_NEV_2",
+        "Probability Correct_NEV_2",
+        "Manual Correctness Adjustment_NEV_2",
+        "Non-Expert Validator_NEV_2",
+        "Feedback_NEV_3",
+        "Validator Answered Correctly_NEV_3",
+        "Explanation_NEV_3",
+        "Self-reported time (minutes)_NEV_3",
+        "Websites visited_NEV_3",
+        "Probability Correct_NEV_3",
+        "Manual Correctness Adjustment_NEV_3",
+        "Non-Expert Validator_NEV_3",
+        "Expert Validator Disagreement Category",
+        "Canary String"
+      ],
+      "meta": {
+        "bench_name": "gpqa",
+        "source": "bench_item_list",
+        "aliases": [
+          "gpqa",
+          "GPQA",
+          "GPQA-Diamond"
+        ],
+        "category": "Knowledge & QA",
+        "tags": [
+          "knowledge",
+          "domain-specific",
+          "knowledge & qa"
+        ],
+        "description": "A set of multiple-choice questions written by domain experts in biology, physics, and chemistry.",
+        "hf_meta": {
+          "bench_name": "gpqa",
+          "hf_repo": "Idavidrein/gpqa",
+          "card_text": "A set of multiple-choice questions written by domain experts in biology, physics, and chemistry.",
+          "tags": [
+            "knowledge",
+            "domain-specific"
+          ],
+          "exists_on_hf": true
+        },
+        "structure": {
+          "repo_id": "Idavidrein/gpqa",
+          "revision": null,
+          "subsets": [
+            {
+              "subset": "gpqa_extended",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "gpqa_main",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "gpqa_diamond",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "gpqa_experts",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            }
+          ],
+          "ok": true,
+          "error": null
+        },
+        "download_config": {
+          "config": "gpqa_diamond",
+          "split": "train",
+          "reason": "按图片口径对齐到 GPQA-Diamond；HF 数据仅公开 train split，因此保留 train。"
+        },
+        "key_mapping": {
+          "input_question_key": "Question",
+          "input_choices_key": [
+            "Correct Answer",
+            "Incorrect Answer 1",
+            "Incorrect Answer 2",
+            "Incorrect Answer 3"
+          ],
+          "input_label_key": "Correct Answer"
+        },
+        "key_mapping_reason": "数据集提供了一个问题备选项的一组选择，其中有一个正确答案和三个错误答案，这符合选择题（单正确）的模式。在这种模式中，需要设定问题、选择和正确答案。",
+        "description_zh": "生物、物理、化学专家级问题",
+        "radar_dimensions": [
+          "knowledge",
+          "reasoning"
+        ],
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "acc_norm",
+          "primary_metric": "choice_accuracy",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choice_text_fields": [
+              "Correct Answer",
+              "Incorrect Answer 1",
+              "Incorrect Answer 2",
+              "Incorrect Answer 3"
+            ]
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          }
+        },
+        "prompt": {
+          "source": "gallery",
+          "template_id": "gpqa_contract_v1",
+          "system_prompt": "",
+          "user_template": "{Question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+          "output_format": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "answer_tag": "<answer>CHOICE</answer>"
+          },
+          "few_shot": {
+            "enabled": false,
+            "num_shots": 0,
+            "source_split": null
+          },
+          "generation": {
+            "temperature": 0,
+            "top_p": 1,
+            "max_tokens": 4096,
+            "stop": []
+          }
+        },
+        "readiness": {
+          "status": "reference_mapped",
+          "smoke_passed": false,
+          "golden_cases": null,
+          "known_limitations": [
+            "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+          ]
+        }
+      }
+    },
+    {
+      "bench_name": "hellaswag",
+      "bench_table_exist": true,
+      "bench_source_url": "https://huggingface.co/datasets/Rowan/hellaswag",
+      "bench_dataflow_eval_type": "key3_q_choices_a",
+      "bench_prompt_template": null,
+      "bench_keys": [
+        "ind",
+        "activity_label",
+        "ctx_a",
+        "ctx_b",
+        "ctx",
+        "endings",
+        "source_id",
+        "split",
+        "split_type",
+        "label"
+      ],
+      "meta": {
+        "bench_name": "hellaswag",
+        "source": "bench_item_list",
+        "aliases": [
+          "hellaswag",
+          "HellaSwag"
+        ],
+        "category": "Knowledge & QA",
+        "tags": [
+          "reasoning",
+          "commonsense",
+          "knowledge & qa"
+        ],
+        "description": "HellaSwag: commonsense NLI benchmark where models must choose the most plausible continuation of a given context. 70K multiple-choice questions.",
+        "hf_meta": {
+          "bench_name": "hellaswag",
+          "hf_repo": "Rowan/hellaswag",
+          "card_text": "HellaSwag: commonsense NLI with 70K multiple-choice questions.",
+          "tags": [
+            "reasoning",
+            "commonsense"
+          ],
+          "exists_on_hf": true
+        },
+        "structure": {
+          "repo_id": "Rowan/hellaswag",
+          "revision": null,
+          "subsets": [
+            {
+              "subset": "default",
+              "splits": [
+                {
+                  "name": "validation",
+                  "num_examples": 10042
+                }
+              ]
+            }
+          ],
+          "ok": true,
+          "error": null
+        },
+        "download_config": {
+          "config": "default",
+          "split": "validation",
+          "reason": "validation split is used for evaluation as test split labels are not publicly available."
+        },
+        "key_mapping": {
+          "input_question_key": "ctx",
+          "input_choices_key": "endings",
+          "input_label_key": "label"
+        },
+        "key_mapping_reason": "ctx is the context/question, endings is the list of 4 possible continuations, label is the correct index.",
+        "description_zh": "常识推理，选择合理句子延续",
+        "radar_dimensions": [
+          "knowledge",
+          "reasoning"
+        ],
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "acc_norm",
+          "primary_metric": "choice_accuracy",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "endings"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          }
+        },
+        "prompt": {
+          "source": "gallery",
+          "template_id": "hellaswag_contract_v1",
+          "system_prompt": "",
+          "user_template": "{ctx}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+          "output_format": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "answer_tag": "<answer>CHOICE</answer>"
+          },
+          "few_shot": {
+            "enabled": false,
+            "num_shots": 0,
+            "source_split": null
+          },
+          "generation": {
+            "temperature": 0,
+            "top_p": 1,
+            "max_tokens": 128,
+            "stop": []
+          }
+        },
+        "readiness": {
+          "status": "reference_mapped",
+          "smoke_passed": false,
+          "golden_cases": null,
+          "known_limitations": [
+            "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+          ]
+        }
+      }
+    },
+    {
+      "bench_name": "boolq",
+      "bench_table_exist": true,
+      "bench_source_url": "https://huggingface.co/datasets/google/boolq",
+      "bench_dataflow_eval_type": "key3_q_choices_a",
+      "bench_prompt_template": null,
+      "bench_keys": [
+        "question",
+        "answer",
+        "passage"
+      ],
+      "meta": {
+        "bench_name": "boolq",
+        "source": "bench_item_list",
+        "aliases": [
+          "boolq",
+          "BoolQ"
+        ],
+        "category": "Knowledge & QA",
+        "tags": [
+          "reading comprehension",
+          "yes/no",
+          "knowledge & qa"
+        ],
+        "description": "BoolQ: a reading comprehension dataset for yes/no questions with 15942 examples drawn from Wikipedia passages.",
+        "hf_meta": {
+          "bench_name": "boolq",
+          "hf_repo": "google/boolq",
+          "card_text": "BoolQ: reading comprehension dataset for yes/no questions.",
+          "tags": [
+            "reading comprehension"
+          ],
+          "exists_on_hf": true
+        },
+        "structure": {
+          "repo_id": "google/boolq",
+          "revision": null,
+          "subsets": [
+            {
+              "subset": "default",
+              "splits": [
+                {
+                  "name": "validation",
+                  "num_examples": 3270
+                }
+              ]
+            }
+          ],
+          "ok": true,
+          "error": null
+        },
+        "download_config": {
+          "config": "default",
+          "split": "validation",
+          "reason": "validation split is standard for BoolQ evaluation."
+        },
+        "key_mapping": {
+          "input_question_key": "question",
+          "input_choices_key": [
+            "true",
+            "false"
+          ],
+          "input_label_key": "answer",
+          "input_context_key": "passage"
+        },
+        "key_mapping_reason": "question is the yes/no question, passage is the context, answer is the boolean ground truth.",
+        "description_zh": "是/否阅读理解",
+        "radar_dimensions": [
+          "knowledge",
+          "language"
+        ],
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "acc",
+          "primary_metric": "choice_accuracy",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-B",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choice_text_fields": [
+              "true",
+              "false"
+            ]
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          }
+        },
+        "prompt": {
+          "source": "gallery",
+          "template_id": "boolq_contract_v1",
+          "system_prompt": "",
+          "user_template": "Context:\n{passage}\n\nQuestion:\n{question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+          "output_format": {
+            "type": "choice_letter",
+            "choices": "A-B",
+            "answer_tag": "<answer>CHOICE</answer>"
+          },
+          "few_shot": {
+            "enabled": false,
+            "num_shots": 0,
+            "source_split": null
+          },
+          "generation": {
+            "temperature": 0,
+            "top_p": 1,
+            "max_tokens": 1024,
+            "stop": []
+          }
+        },
+        "readiness": {
+          "status": "reference_mapped",
+          "smoke_passed": false,
+          "golden_cases": null,
+          "known_limitations": [
+            "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+          ]
+        }
+      }
+    },
+    {
+      "bench_name": "piqa",
+      "bench_table_exist": true,
+      "bench_prompt_template": null,
+      "bench_keys": [
+        "goal",
+        "sol1",
+        "sol2",
+        "label"
+      ],
+      "meta": {
+        "aliases": [
+          "PIQA",
+          "piqa"
+        ],
+        "bench_name": "piqa",
+        "category": "Knowledge & QA",
+        "tags": [
+          "knowledge & qa"
+        ],
+        "description": "物理常识二选一",
+        "description_zh": "物理常识二选一",
+        "source": "bench_item_list",
+        "key_mapping": {
+          "input_question_key": "goal",
+          "input_choices_key": [
+            "sol1",
+            "sol2"
+          ],
+          "input_label_key": "label"
+        },
+        "hf_meta": {
+          "bench_name": "piqa",
+          "hf_repo": "baber/piqa",
+          "card_text": "物理常识二选一",
+          "tags": [
+            "knowledge & qa"
+          ],
+          "exists_on_hf": true
+        },
+        "download_config": {
+          "config": null,
+          "split": "validation",
+          "reason": "Inferred from the matched lm-eval task YAML."
+        },
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "acc",
+          "primary_metric": "choice_accuracy",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-B",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          }
+        },
+        "prompt": {
+          "source": "gallery",
+          "template_id": "piqa_contract_v1",
+          "system_prompt": "",
+          "user_template": "{goal}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+          "output_format": {
+            "type": "choice_letter",
+            "choices": "A-B",
+            "answer_tag": "<answer>CHOICE</answer>"
+          },
+          "few_shot": {
+            "enabled": false,
+            "num_shots": 0,
+            "source_split": null
+          },
+          "generation": {
+            "temperature": 0,
+            "top_p": 1,
+            "max_tokens": 1024,
+            "stop": []
+          }
+        },
+        "readiness": {
+          "status": "reference_mapped",
+          "smoke_passed": false,
+          "golden_cases": null,
+          "known_limitations": [
+            "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+          ]
+        }
+      },
+      "bench_dataflow_eval_type": "key3_q_choices_a",
+      "bench_source_url": "https://huggingface.co/datasets/baber/piqa"
+    },
+    {
+      "bench_name": "winogrande",
+      "bench_table_exist": true,
+      "bench_source_url": "https://huggingface.co/datasets/allenai/winogrande",
+      "bench_dataflow_eval_type": "key3_q_choices_a",
+      "bench_prompt_template": null,
+      "bench_keys": [
+        "sentence",
+        "option1",
+        "option2",
+        "answer"
+      ],
+      "meta": {
+        "bench_name": "winogrande",
+        "source": "bench_item_list",
+        "aliases": [
+          "winogrande",
+          "Winogrande"
+        ],
+        "category": "Reasoning",
+        "tags": [
+          "language & reasoning",
+          "reasoning"
+        ],
+        "description": "Fill-in-a-blank tasks resolving ambiguities in pronoun references with binary options.",
+        "hf_meta": {
+          "bench_name": "winogrande",
+          "hf_repo": "allenai/winogrande",
+          "card_text": "Fill-in-a-blank tasks resolving ambiguities in pronoun references with binary options.",
+          "tags": [
+            "language & reasoning"
+          ],
+          "exists_on_hf": true
+        },
+        "structure": {
+          "repo_id": "allenai/winogrande",
+          "revision": null,
+          "subsets": [
+            {
+              "subset": "winogrande_debiased",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                },
+                {
+                  "name": "test",
+                  "num_examples": null
+                },
+                {
+                  "name": "validation",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "winogrande_l",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                },
+                {
+                  "name": "test",
+                  "num_examples": null
+                },
+                {
+                  "name": "validation",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "winogrande_m",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                },
+                {
+                  "name": "test",
+                  "num_examples": null
+                },
+                {
+                  "name": "validation",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "winogrande_s",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                },
+                {
+                  "name": "test",
+                  "num_examples": null
+                },
+                {
+                  "name": "validation",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "winogrande_xl",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                },
+                {
+                  "name": "test",
+                  "num_examples": null
+                },
+                {
+                  "name": "validation",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            },
+            {
+              "subset": "winogrande_xs",
+              "splits": [
+                {
+                  "name": "train",
+                  "num_examples": null
+                },
+                {
+                  "name": "test",
+                  "num_examples": null
+                },
+                {
+                  "name": "validation",
+                  "num_examples": null
+                }
+              ],
+              "features": null
+            }
+          ],
+          "ok": true,
+          "error": null
+        },
+        "download_config": {
+          "config": "winogrande_xl",
+          "split": "test",
+          "reason": "选择 'winogrande_xl' 因为它通常是最大和最全面的版本，提供更多的数据用于评测。选择 'test' 因为它是评测任务的首选 split。"
+        },
+        "key_mapping": {
+          "input_question_key": "sentence",
+          "input_choices_key": [
+            "option1",
+            "option2"
+          ],
+          "input_label_key": "answer"
+        },
+        "key_mapping_reason": "数据集中有一个句子和两个选项，其中一个是正确答案，适合选择题：单正确类型。",
+        "description_zh": "代词指代消解",
+        "radar_dimensions": [
+          "reasoning"
+        ],
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "acc",
+          "primary_metric": "choice_accuracy",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-B",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choice_text_fields": [
+              "option1",
+              "option2"
+            ]
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          }
+        },
+        "prompt": {
+          "source": "gallery",
+          "template_id": "winogrande_contract_v1",
+          "system_prompt": "",
+          "user_template": "{sentence}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+          "output_format": {
+            "type": "choice_letter",
+            "choices": "A-B",
+            "answer_tag": "<answer>CHOICE</answer>"
+          },
+          "few_shot": {
+            "enabled": false,
+            "num_shots": 0,
+            "source_split": null
+          },
+          "generation": {
+            "temperature": 0,
+            "top_p": 1,
+            "max_tokens": 2048,
+            "stop": []
+          }
+        },
+        "readiness": {
+          "status": "reference_mapped",
+          "smoke_passed": false,
+          "golden_cases": null,
+          "known_limitations": [
+            "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+          ]
+        }
+      }
+    }
+  ]
+}
