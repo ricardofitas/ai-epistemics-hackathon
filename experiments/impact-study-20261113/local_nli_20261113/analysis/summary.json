@@ -1,0 +1,320 @@
+{
+  "status": "complete_exploratory_local_model_cohort",
+  "created_utc": "2026-11-13T10:41:39.904111+00:00",
+  "protocol_sha256": "53f1827d49c3b4b97ec96e5fd6ad2002a3b51ccd47fa7eab6c68c6cab1e6c6a2",
+  "models": [
+    "nli-deberta-v3-small",
+    "nli-distilroberta-base",
+    "nli-roberta-base",
+    "nli-deberta-v3-base"
+  ],
+  "source": {
+    "wsc_passages": 72,
+    "wsc_source_families": 41,
+    "selection_passages": 35,
+    "confirmation_passages": 37,
+    "hans_examples": 80,
+    "predictions_per_model": 224
+  },
+  "scores": {
+    "selection": {
+      "nli-deberta-v3-small": {
+        "imposed": 6,
+        "repaired": 6,
+        "distortion": 0
+      },
+      "nli-distilroberta-base": {
+        "imposed": 0,
+        "repaired": 0,
+        "distortion": 0
+      },
+      "nli-roberta-base": {
+        "imposed": 0,
+        "repaired": 0,
+        "distortion": 0
+      },
+      "nli-deberta-v3-base": {
+        "imposed": 3,
+        "repaired": 3,
+        "distortion": 0
+      }
+    },
+    "confirmation": {
+      "nli-deberta-v3-small": {
+        "imposed": 4,
+        "repaired": 4,
+        "distortion": 0
+      },
+      "nli-distilroberta-base": {
+        "imposed": 0,
+        "repaired": 0,
+        "distortion": 0
+      },
+      "nli-roberta-base": {
+        "imposed": 2,
+        "repaired": 2,
+        "distortion": 0
+      },
+      "nli-deberta-v3-base": {
+        "imposed": 5,
+        "repaired": 6,
+        "distortion": 1
+      }
+    }
+  },
+  "selection_pairwise_orderings": [
+    {
+      "model_a": "nli-deberta-v3-small",
+      "model_b": "nli-distilroberta-base",
+      "imposed_count_difference": 6,
+      "repaired_count_difference": 6,
+      "strict_reversal": false,
+      "imposed_tie": false,
+      "repaired_tie": false
+    },
+    {
+      "model_a": "nli-deberta-v3-small",
+      "model_b": "nli-roberta-base",
+      "imposed_count_difference": 6,
+      "repaired_count_difference": 6,
+      "strict_reversal": false,
+      "imposed_tie": false,
+      "repaired_tie": false
+    },
+    {
+      "model_a": "nli-deberta-v3-small",
+      "model_b": "nli-deberta-v3-base",
+      "imposed_count_difference": 3,
+      "repaired_count_difference": 3,
+      "strict_reversal": false,
+      "imposed_tie": false,
+      "repaired_tie": false
+    },
+    {
+      "model_a": "nli-distilroberta-base",
+      "model_b": "nli-roberta-base",
+      "imposed_count_difference": 0,
+      "repaired_count_difference": 0,
+      "strict_reversal": false,
+      "imposed_tie": true,
+      "repaired_tie": true
+    },
+    {
+      "model_a": "nli-distilroberta-base",
+      "model_b": "nli-deberta-v3-base",
+      "imposed_count_difference": -3,
+      "repaired_count_difference": -3,
+      "strict_reversal": false,
+      "imposed_tie": false,
+      "repaired_tie": false
+    },
+    {
+      "model_a": "nli-roberta-base",
+      "model_b": "nli-deberta-v3-base",
+      "imposed_count_difference": -3,
+      "repaired_count_difference": -3,
+      "strict_reversal": false,
+      "imposed_tie": false,
+      "repaired_tie": false
+    }
+  ],
+  "selection_imposed_winners": [
+    "nli-deberta-v3-small"
+  ],
+  "selection_repaired_winners": [
+    "nli-deberta-v3-small"
+  ],
+  "unique_winners_both_rules": true,
+  "different_selection_winners": false,
+  "strict_selection_pairwise_reversals": 0,
+  "confirmation_repaired_selected_minus_imposed_selected_accuracy": 0.0,
+  "hans_binary_accuracy": {
+    "nli-deberta-v3-small": 1.0,
+    "nli-distilroberta-base": 0.5,
+    "nli-roberta-base": 1.0,
+    "nli-deberta-v3-base": 1.0
+  },
+  "hans_repaired_selected_minus_imposed_selected_accuracy": 0.0,
+  "hans_template_gold_counts": {
+    "temp1|non-entailment": 40,
+    "temp35|entailment": 20,
+    "temp36|entailment": 20
+  },
+  "hans_design_limitation": "HANS80 includes only lexical_overlap and three template clusters: temp1 has 40 non-entailment items, while temp35 and temp36 have 20 entailment items each. Gold is confounded with template; the three-cluster bootstrap interval is descriptive and fragile, not robust evidence of generalization.",
+  "bootstrap": {
+    "selection": {
+      "imposed": {
+        "cluster_count": 20,
+        "repeats": 10000,
+        "model_intervals95": {
+          "nli-deberta-v3-small": [
+            0.05714285714285714,
+            0.3
+          ],
+          "nli-distilroberta-base": [
+            0.0,
+            0.0
+          ],
+          "nli-roberta-base": [
+            0.0,
+            0.0
+          ],
+          "nli-deberta-v3-base": [
+            0.0,
+            0.1875
+          ]
+        },
+        "fixed_winner_difference_interval95": null
+      },
+      "repaired": {
+        "cluster_count": 20,
+        "repeats": 10000,
+        "model_intervals95": {
+          "nli-deberta-v3-small": [
+            0.058823529411764705,
+            0.29411764705882354
+          ],
+          "nli-distilroberta-base": [
+            0.0,
+            0.0
+          ],
+          "nli-roberta-base": [
+            0.0,
+            0.0
+          ],
+          "nli-deberta-v3-base": [
+            0.0,
+            0.1875
+          ]
+        },
+        "fixed_winner_difference_interval95": null
+      },
+      "distortion": {
+        "cluster_count": 20,
+        "repeats": 10000,
+        "model_intervals95": {
+          "nli-deberta-v3-small": [
+            0.0,
+            0.0
+          ],
+          "nli-distilroberta-base": [
+            0.0,
+            0.0
+          ],
+          "nli-roberta-base": [
+            0.0,
+            0.0
+          ],
+          "nli-deberta-v3-base": [
+            0.0,
+            0.0
+          ]
+        },
+        "fixed_winner_difference_interval95": null
+      }
+    },
+    "confirmation": {
+      "imposed": {
+        "cluster_count": 21,
+        "repeats": 10000,
+        "model_intervals95": {
+          "nli-deberta-v3-small": [
+            0.02702702702702703,
+            0.20588235294117646
+          ],
+          "nli-distilroberta-base": [
+            0.0,
+            0.0
+          ],
+          "nli-roberta-base": [
+            0.0,
+            0.1388888888888889
+          ],
+          "nli-deberta-v3-base": [
+            0.030303030303030304,
+            0.24324324324324326
+          ]
+        },
+        "fixed_winner_difference_interval95": null
+      },
+      "repaired": {
+        "cluster_count": 21,
+        "repeats": 10000,
+        "model_intervals95": {
+          "nli-deberta-v3-small": [
+            0.02702702702702703,
+            0.20512820512820512
+          ],
+          "nli-distilroberta-base": [
+            0.0,
+            0.0
+          ],
+          "nli-roberta-base": [
+            0.0,
+            0.1388888888888889
+          ],
+          "nli-deberta-v3-base": [
+            0.05555555555555555,
+            0.2777777777777778
+          ]
+        },
+        "fixed_winner_difference_interval95": [
+          0.0,
+          0.0
+        ]
+      },
+      "distortion": {
+        "cluster_count": 21,
+        "repeats": 10000,
+        "model_intervals95": {
+          "nli-deberta-v3-small": [
+            0.0,
+            0.0
+          ],
+          "nli-distilroberta-base": [
+            0.0,
+            0.0
+          ],
+          "nli-roberta-base": [
+            0.0,
+            0.0
+          ],
+          "nli-deberta-v3-base": [
+            0.0,
+            0.08333333333333333
+          ]
+        },
+        "fixed_winner_difference_interval95": null
+      }
+    },
+    "hans": {
+      "cluster_count": 3,
+      "repeats": 10000,
+      "model_intervals95": {
+        "nli-deberta-v3-small": [
+          1.0,
+          1.0
+        ],
+        "nli-distilroberta-base": [
+          0.0,
+          1.0
+        ],
+        "nli-roberta-base": [
+          1.0,
+          1.0
+        ],
+        "nli-deberta-v3-base": [
+          1.0,
+          1.0
+        ]
+      },
+      "fixed_winner_difference_interval95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "scope": "Separate local public-classifier cohort; not Adaption replication. Curated WSC binary recast conditional on intended coreference, human NLI gold pending. HANS is independent examples, but pretraining absence is unproved. Winner comparison is a raw-score abstraction, not the complete original statistical/macro-F1 advice.",
+  "passage_scores_sha256": "7e80fe034861c43c76bfa87521b1a217fa41fb90f7950b78efb746a38ab5f731",
+  "hans_scores_sha256": "24240ca23b2d2c2b22408b4d332419cd62f0d7cc0d80ab55a029c0ea69ed842a"
+}

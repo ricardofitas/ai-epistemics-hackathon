@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "model_id": "cross-encoder/nli-distilroberta-base",
+  "revision": "b14d131f9d32668a5e6a982729b57ff6ed5dfcbd",
+  "slug": "nli-distilroberta-base",
+  "rows": 224,
+  "predictions_sha256": "8b2f2a6598446e09340978f6205ae83eeceb39d7972d118273ae0c164a135176",
+  "protocol_sha256": "53f1827d49c3b4b97ec96e5fd6ad2002a3b51ccd47fa7eab6c68c6cab1e6c6a2",
+  "source_receipt_sha256": "2f5d3d12690b5d2553349fcedee2cdab32ebe08db7018972407683544f97950a",
+  "freeze_commit": "9a3043a73482b4a4b7571a2835dceea7b40b71f2",
+  "completed_utc": "2026-11-13T10:38:44.970395+00:00",
+  "elapsed_seconds": 7.809,
+  "label_map": {
+    "0": "contradiction",
+    "1": "entailment",
+    "2": "neutral"
+  },
+  "device": "cpu",
+  "batch_size": 8,
+  "inference_mode": "eval_no_grad_deterministic_algorithms",
+  "input_truncation": false
+}
