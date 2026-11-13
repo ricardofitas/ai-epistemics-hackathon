@@ -1,0 +1,309 @@
+{
+  "audit": "independent exact rational rescore and raw evidence checks; no frozen scorer imports, no inference calls",
+  "captured_directory": "/workspace/scratch/15e359df4825/captured_gap_p1_replication_20261113",
+  "status": "pass",
+  "issues": [],
+  "protocol_sha256": "ef8dede9a90e566fd0f401a60566509d1bf3d74e4b1150a20d99e72222476c46",
+  "manifest_sha256": "8d7caa1503acf5ce1edb96d57688bc881a799233d678311bb9995b3237abfd19",
+  "frozen_source_and_implementation_pins_checked": 19,
+  "source_families": 30,
+  "batch_blocks": 10,
+  "tasks": 120,
+  "source_questions_and_gold_checked_against_raw_rows": 120,
+  "prior50_family_overlap": 0,
+  "journals": 82,
+  "requests": 82,
+  "attempts_each": 1,
+  "gate_before_main": true,
+  "strict_complete_main": 79,
+  "valid_json_main": 74,
+  "scores": {
+    "valid": 164,
+    "wrong": 58,
+    "unknown": 18
+  },
+  "primary": {
+    "lower_fraction": "11/60",
+    "upper_fraction": "29/60",
+    "threshold_fraction": "1/10",
+    "meaningful_replication": true,
+    "positive_identified": true,
+    "population_claim": false,
+    "confidence_interval": false
+  },
+  "package_accuracy": {
+    "gemma-4-31b-it": {
+      "P1": {
+        "bounds": [
+          "13/60",
+          "11/30"
+        ],
+        "correct": 13,
+        "unknown": 9,
+        "items": 60
+      },
+      "target": {
+        "bounds": [
+          "7/12",
+          "11/15"
+        ],
+        "correct": 35,
+        "unknown": 9,
+        "items": 60
+      }
+    },
+    "deepseek-v4-flash": {
+      "P1": {
+        "bounds": [
+          "19/20",
+          "19/20"
+        ],
+        "correct": 57,
+        "unknown": 0,
+        "items": 60
+      },
+      "target": {
+        "bounds": [
+          "59/60",
+          "59/60"
+        ],
+        "correct": 59,
+        "unknown": 0,
+        "items": 60
+      }
+    }
+  },
+  "variant_accuracy": {
+    "gemma-4-31b-it": {
+      "numeric": [
+        "3/5",
+        "4/5"
+      ],
+      "paraphrase": [
+        "17/30",
+        "2/3"
+      ],
+      "p1_i0": [
+        "1/5",
+        "2/5"
+      ],
+      "p1_i1": [
+        "7/30",
+        "1/3"
+      ]
+    },
+    "deepseek-v4-flash": {
+      "numeric": [
+        "29/30",
+        "29/30"
+      ],
+      "paraphrase": [
+        "1",
+        "1"
+      ],
+      "p1_i0": [
+        "29/30",
+        "29/30"
+      ],
+      "p1_i1": [
+        "14/15",
+        "14/15"
+      ]
+    }
+  },
+  "unknown_causes_by_request": [
+    {
+      "trial_id": "GR-013",
+      "model": "gemma-4-31b-it",
+      "variant": "p1_i0",
+      "cause": "Extra data: line 6 column 1 (char 72)",
+      "output_preview": "```json\n{\n  \"T0111\": \"6.666666666666667\",\n  \"T0081\": \"36\",\n  \"T0051\": \"172.8\"\n}\n",
+      "item_count": 3,
+      "cause_category": "multiple_JSON_blocks_and_commentary"
+    },
+    {
+      "trial_id": "GR-014",
+      "model": "gemma-4-31b-it",
+      "variant": "p1_i1",
+      "cause": "Extra data: line 6 column 1 (char 72)",
+      "output_preview": "```json\n{\n  \"T0080\": \"453\",\n  \"T0076\": \"130\",\n  \"T0082\": \"10.285714285714285\"\n}\n",
+      "item_count": 3,
+      "cause_category": "multiple_JSON_blocks_and_commentary"
+    },
+    {
+      "trial_id": "GR-041",
+      "model": "gemma-4-31b-it",
+      "variant": "paraphrase",
+      "cause": "Invalid control character at: line 4 column 15 (char 49)",
+      "output_preview": "```json\n{\n  \"T0065\": \"30\",\n  \"T0041\": \"7\",\n  \"T0024\": \"45\n}\n```",
+      "item_count": 3,
+      "cause_category": "malformed_JSON_unclosed_string"
+    },
+    {
+      "trial_id": "GR-044",
+      "model": "gemma-4-31b-it",
+      "variant": "numeric",
+      "cause": "provider incomplete: {'reason': 'max_output_tokens'}",
+      "output_preview": null,
+      "item_count": 3,
+      "cause_category": "provider_max_output_tokens_incomplete"
+    },
+    {
+      "trial_id": "GR-058",
+      "model": "gemma-4-31b-it",
+      "variant": "numeric",
+      "cause": "Extra data: line 6 column 1 (char 74)",
+      "output_preview": "```json\n{\n  \"T0030\": \"201600\",\n  \"T0066\": \"31.333333333333332\",\n  \"T0059\": \"90\"\n",
+      "item_count": 3,
+      "cause_category": "multiple_JSON_blocks_and_commentary"
+    },
+    {
+      "trial_id": "GR-072",
+      "model": "gemma-4-31b-it",
+      "variant": "p1_i0",
+      "cause": "Extra data: line 6 column 1 (char 72)",
+      "output_preview": "```json\n{\n  \"T0017\": \"654\",\n  \"T0072\": \"152\",\n  \"T0026\": \"10.285714285714286\"\n}\n",
+      "item_count": 3,
+      "cause_category": "multiple_JSON_blocks_and_commentary"
+    }
+  ],
+  "unknown_items": [
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0111",
+      "trial_id": "GR-013",
+      "variant": "p1_i0",
+      "cause": "Extra data: line 6 column 1 (char 72)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0081",
+      "trial_id": "GR-013",
+      "variant": "p1_i0",
+      "cause": "Extra data: line 6 column 1 (char 72)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0051",
+      "trial_id": "GR-013",
+      "variant": "p1_i0",
+      "cause": "Extra data: line 6 column 1 (char 72)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0080",
+      "trial_id": "GR-014",
+      "variant": "p1_i1",
+      "cause": "Extra data: line 6 column 1 (char 72)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0076",
+      "trial_id": "GR-014",
+      "variant": "p1_i1",
+      "cause": "Extra data: line 6 column 1 (char 72)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0082",
+      "trial_id": "GR-014",
+      "variant": "p1_i1",
+      "cause": "Extra data: line 6 column 1 (char 72)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0065",
+      "trial_id": "GR-041",
+      "variant": "paraphrase",
+      "cause": "Invalid control character at: line 4 column 15 (char 49)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0041",
+      "trial_id": "GR-041",
+      "variant": "paraphrase",
+      "cause": "Invalid control character at: line 4 column 15 (char 49)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0024",
+      "trial_id": "GR-041",
+      "variant": "paraphrase",
+      "cause": "Invalid control character at: line 4 column 15 (char 49)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0086",
+      "trial_id": "GR-044",
+      "variant": "numeric",
+      "cause": "provider incomplete: {'reason': 'max_output_tokens'}"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0011",
+      "trial_id": "GR-044",
+      "variant": "numeric",
+      "cause": "provider incomplete: {'reason': 'max_output_tokens'}"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0101",
+      "trial_id": "GR-044",
+      "variant": "numeric",
+      "cause": "provider incomplete: {'reason': 'max_output_tokens'}"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0030",
+      "trial_id": "GR-058",
+      "variant": "numeric",
+      "cause": "Extra data: line 6 column 1 (char 74)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0066",
+      "trial_id": "GR-058",
+      "variant": "numeric",
+      "cause": "Extra data: line 6 column 1 (char 74)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0059",
+      "trial_id": "GR-058",
+      "variant": "numeric",
+      "cause": "Extra data: line 6 column 1 (char 74)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0017",
+      "trial_id": "GR-072",
+      "variant": "p1_i0",
+      "cause": "Extra data: line 6 column 1 (char 72)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0072",
+      "trial_id": "GR-072",
+      "variant": "p1_i0",
+      "cause": "Extra data: line 6 column 1 (char 72)"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "task_id": "T0026",
+      "trial_id": "GR-072",
+      "variant": "p1_i0",
+      "cause": "Extra data: line 6 column 1 (char 72)"
+    }
+  ],
+  "note": "All 18 unknown scores remain independent [0,1]; no format repair or imputation. Provider model aliases do not establish immutable weights. Source math QA was completed separately and not repeated.",
+  "metadata_consistency_checks": "pass",
+  "scientific_commit": "a88095492bed529454db39893a338857ff7afcca",
+  "execution_commit": "d0b1c6a6c5f2b5734f08003e897dffd3951f4a79",
+  "journal_created_events_each": 1,
+  "main_start_order_matches_manifest": true,
+  "unknown_cause_counts": {
+    "multiple_JSON_blocks_and_commentary": 12,
+    "malformed_JSON_unclosed_string": 3,
+    "provider_max_output_tokens_incomplete": 3
+  }
+}

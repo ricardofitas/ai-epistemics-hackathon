@@ -1,0 +1,128 @@
+{
+  "created_utc": "2026-11-13T19:07:59.305351+00:00",
+  "source_preplan_commit": "5706a87932ff33786f3c8dbdb69d6566532967ce",
+  "source_preplan_time": "2026-11-13T18:34:18Z",
+  "source_freeze_repository": "ricardofitas/ai-epistemics-hackathon",
+  "source_freeze_commit": "a88095492bed529454db39893a338857ff7afcca",
+  "source_freeze_time": "2026-11-13T18:44:32Z",
+  "infrastructure_amendment_commit": "aed0c26c11eb5fcc77635e320eabef84fa9d8227",
+  "infrastructure_amendment_time": "2026-11-13T18:57:54Z",
+  "execution_repository": "ricardofitas/swarm-adaption-hackathon",
+  "execution_commit": "d0b1c6a6c5f2b5734f08003e897dffd3951f4a79",
+  "execution_commit_time": "2026-11-13T18:58:23Z",
+  "workflow_run_id": 43487746459,
+  "workflow_run_url": "https://github.com/ricardofitas/swarm-adaption-hackathon/actions/runs/43487746459",
+  "workflow_run_conclusion": "success",
+  "artifact_id": 14067469944,
+  "artifact_bytes": 2109342,
+  "artifact_sha256": "6d6f23e8bb5def0c3e96cacb328f6c5ccb42d1034a81688660543511f88357d0",
+  "first_zero_call_attempt": {
+    "run_id": 43485851927,
+    "execution_commit": "74cb80f9ceb326546e96bd9f2bd05dcd1e88e2b0",
+    "provider_calls": 0,
+    "model_calls": 0,
+    "artifact_id": 14067895376,
+    "artifact_sha256": "820fdcd8d2ba6c36d82594b1fa62f2bb9e6799208a365439dc7b309759fc082c",
+    "preserved": true
+  },
+  "requests": {
+    "format_admission": 2,
+    "main": 80,
+    "attempts_per_request": 1,
+    "model_retries": 0,
+    "provider_catalogue_metadata_requests": 1
+  },
+  "source_gate": {
+    "candidates": 50,
+    "strict_double_pass": 35,
+    "selected": 30,
+    "eligible_unused": 5,
+    "rejected_or_uncertain": 15,
+    "overrides": 0,
+    "prior50_family_overlap": 0
+  },
+  "capture": {
+    "strict_complete_requests": 79,
+    "valid_json_requests": 74,
+    "global_issues": [],
+    "known_scores": 222,
+    "unknown_scores": 18,
+    "labels": {
+      "valid": 164,
+      "wrong": 58,
+      "unknown": 18
+    }
+  },
+  "primary": {
+    "lower_fraction": "11/60",
+    "upper_fraction": "29/60",
+    "lower": 0.18333333333333332,
+    "upper": 0.48333333333333334,
+    "lower_pp": 18.333333333333332,
+    "upper_pp": 48.333333333333336,
+    "point": null,
+    "definition": "(DeepSeek-Gemma gap on mean P1_i0/P1_i1) minus (same gap on mean numeric/paraphrase)",
+    "meaningful_threshold_fraction": "1/10",
+    "meaningful_replication": true,
+    "positive_identified": true,
+    "nonpositive_identified": false,
+    "meaningful_replication_ruled_out": false,
+    "direction_identified": "positive",
+    "criterion_scope": "Prespecified exact finite-cohort unknown-scorebox criterion, not a population inference",
+    "bounds_are_confidence_intervals": false
+  },
+  "secondary_choices": {
+    "scope": "Descriptive secondary only; no selection/confirmation causal consequence",
+    "robust_unique_winners": {
+      "comparison": "deepseek-v4-flash",
+      "target": "deepseek-v4-flash"
+    },
+    "different_identified_winners": false
+  },
+  "bootstrap_sensitivity": {
+    "family": {
+      "unit": "source_family",
+      "unit_count": 30,
+      "repeats": 10000,
+      "seed": 20261113118,
+      "bound_envelope95": [
+        -0.016666666666666666,
+        0.6333333333333333
+      ],
+      "point_interval95": null,
+      "scope": "Conditional descriptive sensitivity of the fixed screened cohort/modelpair; not a population confidenceinterval or significance test"
+    },
+    "batch_block": {
+      "unit": "batch_block",
+      "unit_count": 10,
+      "repeats": 10000,
+      "seed": 20261113119,
+      "bound_envelope95": [
+        -0.15,
+        0.6833333333333333
+      ],
+      "point_interval95": null,
+      "scope": "Conditional descriptive sensitivity of the fixed screened cohort/modelpair; not a population confidenceinterval or significance test"
+    }
+  },
+  "independent_audit": {
+    "status": "pass",
+    "issues": [],
+    "raw_task_rescore": true,
+    "journal_count": 82,
+    "external_human_certification": false
+  },
+  "sha256": {
+    "protocol.json": "ef8dede9a90e566fd0f401a60566509d1bf3d74e4b1150a20d99e72222476c46",
+    "manifest.jsonl": "8d7caa1503acf5ce1edb96d57688bc881a799233d678311bb9995b3237abfd19",
+    "admission/manifest.jsonl": "908ef8db19d2ae952d51dd279505a9b52955fe75f3d5e1cea062e202a7ba7ce4",
+    "selected_data.json": "90ade2d42f0d7db37a098a043bd848331cc5433932d590d8b380a32382590ca9",
+    "prediction_rows.jsonl": "b32fdd64bbb555b77dc6f246269594d4b1b4880cfaf4013affa60334864c281f",
+    "capture_integrity.json": "d1401ea81b917d7fd5913f2076e02be9d5ef254b1d211b9f5f04e3159923ae22",
+    "analysis/summary.json": "47ff28b5d3de25788ab60985ef9ccbaa8923a7812c9649b3469174fb44dfe795",
+    "analysis/per_source_family.jsonl": "48e2922e321ad2522bc8e6c579a31df4a4511dc1970f62d86382718fbca65bec",
+    "INDEPENDENT_AUDIT.json": "248f19bd2ffe75984b1c65b4d51eff2112cc4ca174c1a8e0040096a77da89b69",
+    "SOURCE_AUDIT.md": "8de296c57ca3821fa027638edccf8fdb6bb89670b13936bcbc2cff33cf5215bd",
+    "RESULTS.md": "948ccb345afca4f50cfac7f770d0d2760b7259d3ec75229897d8d522824241d8"
+  }
+}

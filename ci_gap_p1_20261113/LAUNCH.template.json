@@ -1,0 +1,17 @@
+{
+  "execution_id": "gap-p1-20261113",
+  "execute_once": true,
+  "planned_study_attempts": 80,
+  "planned_admission_attempts": 2,
+  "maximum_total_attempts": 82,
+  "pins": {
+    "execution_id": "gap-p1-20261113",
+    "source_freeze_commit": "a88095492bed529454db39893a338857ff7afcca",
+    "protocol.json": "ef8dede9a90e566fd0f401a60566509d1bf3d74e4b1150a20d99e72222476c46",
+    "manifest.jsonl": "8d7caa1503acf5ce1edb96d57688bc881a799233d678311bb9995b3237abfd19",
+    "admission_manifest_sha256": "908ef8db19d2ae952d51dd279505a9b52955fe75f3d5e1cea062e202a7ba7ce4",
+    "gate_admission_sha256": "9dd9582c7f029960bc3e9a0e3eac609fbdf8819036e24484b99ba0b4bc673bb6",
+    "runner_sha256": "c280811c5f685cdc5b254d5097946835428cd87de6ea58218de1e2cad537fe5e"
+  },
+  "note": "Run two fixed format-only admission requests once; only if both pass strict capture/format (not correctness) run the separately frozen 80-row source-reviewed cohort. No retries, replacements, or additional model inference."
+}
