@@ -1,0 +1,293 @@
+{
+  "status": "complete_prospective_gap_analysis_with_unknown_bounds",
+  "created_utc": "2026-11-13T19:02:24.034724+00:00",
+  "protocol_sha256": "ef8dede9a90e566fd0f401a60566509d1bf3d74e4b1150a20d99e72222476c46",
+  "prediction_rows_sha256": "b32fdd64bbb555b77dc6f246269594d4b1b4880cfaf4013affa60334864c281f",
+  "capture_integrity_sha256": "d1401ea81b917d7fd5913f2076e02be9d5ef254b1d211b9f5f04e3159923ae22",
+  "source_sha256": {
+    "selected_data.json": "90ade2d42f0d7db37a098a043bd848331cc5433932d590d8b380a32382590ca9",
+    "source_manifest.json": "0e393bdb9525bf9e36ede43ef54b8566eff84f6f44c7bc9e3594a5f3e014de40",
+    "source_disposition.json": "f6b6eb2e907bbeaf5d525fab09a9aca1a2790f36354ac52af99c1ac1ffbfe385",
+    "selection_plan.json": "48ed92bb748408acfdcf3ca06f634c2b7491d5863a86f7e5cafad671757711d5",
+    "primary_spec.json": "5e450c570f38df4e672bbdf01c4e8a45351a724efebd4c34f7b341b32cfbca04",
+    "prospective_design.md": "a652d3b992b3329dd778753a173939e323b7ccafbb8b07fa2b4438fb5eff5d5d",
+    "task_key.json": "de77a6a087de46360d31cae44fd420b24497b27b19ff501e23cb3097599c5a6a",
+    "manifest.jsonl": "8d7caa1503acf5ce1edb96d57688bc881a799233d678311bb9995b3237abfd19",
+    "admission/manifest.jsonl": "908ef8db19d2ae952d51dd279505a9b52955fe75f3d5e1cea062e202a7ba7ce4"
+  },
+  "models": [
+    "gemma-4-31b-it",
+    "deepseek-v4-flash"
+  ],
+  "allocation": {
+    "families": 30,
+    "replication": 30,
+    "variants_per_family": 4,
+    "models": 2,
+    "batch_size": 3,
+    "requests": 80,
+    "classifications": 240
+  },
+  "capture": {
+    "strict_complete_requests": 79,
+    "valid_json_requests": 74,
+    "global_issues": [],
+    "known_scores": 222,
+    "unknown_scores": 18,
+    "labels": {
+      "valid": 164,
+      "wrong": 58,
+      "unknown": 18
+    }
+  },
+  "primary": {
+    "lower_fraction": "11/60",
+    "upper_fraction": "29/60",
+    "lower": 0.18333333333333332,
+    "upper": 0.48333333333333334,
+    "lower_pp": 18.333333333333332,
+    "upper_pp": 48.333333333333336,
+    "point": null,
+    "definition": "(DeepSeek-Gemma gap on mean P1_i0/P1_i1) minus (same gap on mean numeric/paraphrase)",
+    "meaningful_threshold_fraction": "1/10",
+    "meaningful_replication": true,
+    "positive_identified": true,
+    "nonpositive_identified": false,
+    "meaningful_replication_ruled_out": false,
+    "direction_identified": "positive",
+    "criterion_scope": "Prespecified exact finite-cohort unknown-scorebox criterion, not a population inference",
+    "bounds_are_confidence_intervals": false
+  },
+  "scores": {
+    "comparison": {
+      "gemma-4-31b-it": {
+        "lower_fraction": "13/60",
+        "upper_fraction": "11/30",
+        "lower": 0.21666666666666667,
+        "upper": 0.36666666666666664,
+        "lower_pp": 21.666666666666668,
+        "upper_pp": 36.666666666666664,
+        "point": null,
+        "n": 30,
+        "known": 24
+      },
+      "deepseek-v4-flash": {
+        "lower_fraction": "19/20",
+        "upper_fraction": "19/20",
+        "lower": 0.95,
+        "upper": 0.95,
+        "lower_pp": 95.0,
+        "upper_pp": 95.0,
+        "point": 0.95,
+        "n": 30,
+        "known": 30
+      }
+    },
+    "target": {
+      "gemma-4-31b-it": {
+        "lower_fraction": "7/12",
+        "upper_fraction": "11/15",
+        "lower": 0.5833333333333334,
+        "upper": 0.7333333333333333,
+        "lower_pp": 58.333333333333336,
+        "upper_pp": 73.33333333333333,
+        "point": null,
+        "n": 30,
+        "known": 21
+      },
+      "deepseek-v4-flash": {
+        "lower_fraction": "59/60",
+        "upper_fraction": "59/60",
+        "lower": 0.9833333333333333,
+        "upper": 0.9833333333333333,
+        "lower_pp": 98.33333333333333,
+        "upper_pp": 98.33333333333333,
+        "point": 0.9833333333333333,
+        "n": 30,
+        "known": 30
+      }
+    },
+    "joint_target": {
+      "gemma-4-31b-it": {
+        "lower_fraction": "13/30",
+        "upper_fraction": "17/30",
+        "lower": 0.43333333333333335,
+        "upper": 0.5666666666666667,
+        "lower_pp": 43.333333333333336,
+        "upper_pp": 56.666666666666664,
+        "point": null,
+        "n": 30,
+        "known": 26
+      },
+      "deepseek-v4-flash": {
+        "lower_fraction": "29/30",
+        "upper_fraction": "29/30",
+        "lower": 0.9666666666666667,
+        "upper": 0.9666666666666667,
+        "lower_pp": 96.66666666666667,
+        "upper_pp": 96.66666666666667,
+        "point": 0.9666666666666667,
+        "n": 30,
+        "known": 30
+      }
+    },
+    "per_variant": {
+      "numeric": {
+        "gemma-4-31b-it": {
+          "lower_fraction": "3/5",
+          "upper_fraction": "4/5",
+          "lower": 0.6,
+          "upper": 0.8,
+          "lower_pp": 60.0,
+          "upper_pp": 80.0,
+          "point": null,
+          "n": 30,
+          "known": 24
+        },
+        "deepseek-v4-flash": {
+          "lower_fraction": "29/30",
+          "upper_fraction": "29/30",
+          "lower": 0.9666666666666667,
+          "upper": 0.9666666666666667,
+          "lower_pp": 96.66666666666667,
+          "upper_pp": 96.66666666666667,
+          "point": 0.9666666666666667,
+          "n": 30,
+          "known": 30
+        }
+      },
+      "paraphrase": {
+        "gemma-4-31b-it": {
+          "lower_fraction": "17/30",
+          "upper_fraction": "2/3",
+          "lower": 0.5666666666666667,
+          "upper": 0.6666666666666666,
+          "lower_pp": 56.666666666666664,
+          "upper_pp": 66.66666666666667,
+          "point": null,
+          "n": 30,
+          "known": 27
+        },
+        "deepseek-v4-flash": {
+          "lower_fraction": "1",
+          "upper_fraction": "1",
+          "lower": 1.0,
+          "upper": 1.0,
+          "lower_pp": 100.0,
+          "upper_pp": 100.0,
+          "point": 1.0,
+          "n": 30,
+          "known": 30
+        }
+      },
+      "p1_i0": {
+        "gemma-4-31b-it": {
+          "lower_fraction": "1/5",
+          "upper_fraction": "2/5",
+          "lower": 0.2,
+          "upper": 0.4,
+          "lower_pp": 20.0,
+          "upper_pp": 40.0,
+          "point": null,
+          "n": 30,
+          "known": 24
+        },
+        "deepseek-v4-flash": {
+          "lower_fraction": "29/30",
+          "upper_fraction": "29/30",
+          "lower": 0.9666666666666667,
+          "upper": 0.9666666666666667,
+          "lower_pp": 96.66666666666667,
+          "upper_pp": 96.66666666666667,
+          "point": 0.9666666666666667,
+          "n": 30,
+          "known": 30
+        }
+      },
+      "p1_i1": {
+        "gemma-4-31b-it": {
+          "lower_fraction": "7/30",
+          "upper_fraction": "1/3",
+          "lower": 0.23333333333333334,
+          "upper": 0.3333333333333333,
+          "lower_pp": 23.333333333333332,
+          "upper_pp": 33.333333333333336,
+          "point": null,
+          "n": 30,
+          "known": 27
+        },
+        "deepseek-v4-flash": {
+          "lower_fraction": "14/15",
+          "upper_fraction": "14/15",
+          "lower": 0.9333333333333333,
+          "upper": 0.9333333333333333,
+          "lower_pp": 93.33333333333333,
+          "upper_pp": 93.33333333333333,
+          "point": 0.9333333333333333,
+          "n": 30,
+          "known": 30
+        }
+      }
+    },
+    "comparison_model_gap": {
+      "lower_fraction": "7/12",
+      "upper_fraction": "11/15",
+      "lower": 0.5833333333333334,
+      "upper": 0.7333333333333333,
+      "lower_pp": 58.333333333333336,
+      "upper_pp": 73.33333333333333,
+      "point": null
+    },
+    "target_model_gap": {
+      "lower_fraction": "1/4",
+      "upper_fraction": "2/5",
+      "lower": 0.25,
+      "upper": 0.4,
+      "lower_pp": 25.0,
+      "upper_pp": 40.0,
+      "point": null
+    }
+  },
+  "secondary_choices": {
+    "scope": "Descriptive secondary only; no selection/confirmation causal consequence",
+    "robust_unique_winners": {
+      "comparison": "deepseek-v4-flash",
+      "target": "deepseek-v4-flash"
+    },
+    "different_identified_winners": false
+  },
+  "bootstrap": {
+    "family": {
+      "unit": "source_family",
+      "unit_count": 30,
+      "repeats": 10000,
+      "seed": 20261113118,
+      "bound_envelope95": [
+        -0.016666666666666666,
+        0.6333333333333333
+      ],
+      "point_interval95": null,
+      "scope": "Conditional descriptive sensitivity of the fixed screened cohort/modelpair; not a population confidenceinterval or significance test"
+    },
+    "batch_block": {
+      "unit": "batch_block",
+      "unit_count": 10,
+      "repeats": 10000,
+      "seed": 20261113119,
+      "bound_envelope95": [
+        -0.15,
+        0.6833333333333333
+      ],
+      "point_interval95": null,
+      "scope": "Conditional descriptive sensitivity of the fixed screened cohort/modelpair; not a population confidenceinterval or significance test"
+    }
+  },
+  "limitations": [
+    "Selected30 sourcefamilies, not a random sample of publicmath tasks",
+    "P1instances0and1, not the previous P1/P2 mixture",
+    "Two fixedaliases, publicpretrainingexposure and immutableweight snapshots unproved",
+    "No isolatedaddedclause causality or populationgeneralization",
+    "Agent source reviews, externalhumanvalidation pending",
+    "All unknownformat/capture scoresretain[0,1]; no repair/imputation"
+  ]
+}

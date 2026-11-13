@@ -1,0 +1,16 @@
+{
+  "completed_capture_utc": "2026-11-13T19:01:48.375604+00:00",
+  "manifest_sha256": "8d7caa1503acf5ce1edb96d57688bc881a799233d678311bb9995b3237abfd19",
+  "requested": 80,
+  "recorded": 80,
+  "attempts_per_trial": 1,
+  "concurrency": 2,
+  "socket_timeout_seconds": 120.0,
+  "retries": 0,
+  "base_url": "https://api.prod.adaptionlabs.ai",
+  "history": "none; standalone requests",
+  "transport": "native_sse",
+  "socket_timeout_scope": "Per blocking socket operation, not hard wall-clock",
+  "exact_provider_snapshot": "Not established merely by returned model alias",
+  "completed_nonempty": 79
+}
