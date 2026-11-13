@@ -1,0 +1,95 @@
+{
+  "id": "local-public-nli-wsc-hans-exploratory-20261113",
+  "created_utc": "2026-11-13T10:28:17.437176+00:00",
+  "status": "prepared_no_model_inference",
+  "relation_to_prior_study": "Separate new CPU inference cohort using frozen WSC/HANS cases; not an execution or replication of four Adaption aliases. Model IDs were chosen for accessible public three-way NLI classification before seeing these models on the cases.",
+  "models": [
+    {
+      "slug": "nli-deberta-v3-small",
+      "id": "cross-encoder/nli-deberta-v3-small",
+      "revision": "fa2804872c3b4bd748f38c0185cc85775361e735"
+    },
+    {
+      "slug": "nli-distilroberta-base",
+      "id": "cross-encoder/nli-distilroberta-base",
+      "revision": "b14d131f9d32668a5e6a982729b57ff6ed5dfcbd"
+    },
+    {
+      "slug": "nli-roberta-base",
+      "id": "cross-encoder/nli-roberta-base",
+      "revision": "1be0567456f0543475805e758725f151f283705a"
+    },
+    {
+      "slug": "nli-deberta-v3-base",
+      "id": "cross-encoder/nli-deberta-v3-base",
+      "revision": "6c749ce3425cd33b46d187e45b92bbf96ee12ec7"
+    }
+  ],
+  "source_sha256": {
+    "../wsc/selected_data.json": "a9ceb7fd49770080c487623a9760bc64514027c189dbf5b60ed0d359d2d9708b",
+    "../wsc/task_key.json": "95c9328df22942984b7af3d906d680a69e5484934db8ab8f69522a7f06d9d050",
+    "../hans_target/selected_data.json": "08306c3d01da9fa2ddec4ff06532efbe2dc592bee5c7e4e3c8191be658868442",
+    "../hans_target/task_key.json": "09d6d813af9125963bbe031855ebc4a14c56440ad3dc4c5ddb1e078cc2b7ed02"
+  },
+  "source_counts": {
+    "wsc_passages": 72,
+    "wsc_selection": 35,
+    "wsc_confirmation": 37,
+    "wsc_source_families": 41,
+    "wsc_classifications_per_model": 144,
+    "hans_examples": 80,
+    "total_classifications_per_model": 224
+  },
+  "inference": {
+    "implementation": "transformers AutoTokenizer and AutoModelForSequenceClassification, pretrained public model weights, local CPU only",
+    "torch_version": "2.11.0+cpu",
+    "transformers_version": "4.57.1",
+    "sentencepiece_version": "0.2.1",
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 8,
+    "max_sequence_length": "full input with truncation disabled, fail if exceeds model position limit",
+    "model_mode": "eval",
+    "dropout": "disabled",
+    "prediction": "argmax float32 logits, tie to lowest config index",
+    "labels": [
+      "contradiction",
+      "entailment",
+      "neutral"
+    ],
+    "prompts_or_tools": "none; model input is ordered premise and hypothesis only",
+    "weights": "exact model revisions and downloaded source file SHA256 receipt before inference",
+    "failure_policy": "no output imputation or candidate replacement; preserve partial output, fail full-candidate analysis if any of 224 tasks missing"
+  },
+  "scoring": {
+    "wsc_imposed_paired": "gold replacement predicted entailment AND non-gold predicted contradiction",
+    "wsc_repaired_paired": "gold replacement predicted entailment AND non-gold predicted neutral or contradiction",
+    "selection": "unique highest raw paired count among 35 selection passages separately for imposed/repaired; ties unresolved",
+    "confirmation": "if both winners unique, compare their repaired paired accuracy on independent 37 WSC confirmation passages; report signed repaired-selected minus imposed-selected difference, including zero/negative",
+    "hans_external": "if both winners unique, compare binary HANS80 accuracy; entailment vs contradiction/neutral",
+    "pairwise_orderings": "all six candidate pairs, report strict sign reversals, ties separately",
+    "uncertainty": "10,000 source-family bootstrap draws for WSC; 10,000 template-cluster bootstrap draws for HANS; fixed winners in confirmation resamples",
+    "bootstrap_seed": 2026111350,
+    "scope": "Conditional, exploratory fixed-source estimates. No human-certified WSC NLI gold; prior source semantic review agent-generated. HANS pretraining exposure unknown. Selection raw-score abstraction does not implement full original advice significance/macro-F1 policy."
+  },
+  "bootstrap": {
+    "repeats": 10000,
+    "seed": 2026111350,
+    "wsc_cluster": "family_id",
+    "hans_cluster": "template",
+    "interval": "percentile 95%"
+  },
+  "stopping": "Run all four pinned models, all 224 tasks each; no early success stopping, reranking candidate set, changing inputs after output inspection, or retrying failed model under same receipt. Report incompletes and nulls.",
+  "evidence_levels": {
+    "S0": "Scoring-rule distortion on fixed predictions",
+    "S1": "Different unique selection winners under imposed and repaired rules",
+    "S2": "Positive repaired-selected minus imposed-selected accuracy on independent WSC confirmation",
+    "S3": "Positive corresponding difference on HANS80, with template-cluster descriptive interval separately reported. No GAMMAF-level claim without human validation and robust independent replication."
+  },
+  "model_weight_sha256": {
+    "nli-deberta-v3-small": "ebc79588dd73ccfb6a3f6078519cfbf512c5305384c5ea1845bc71cd32216e86",
+    "nli-distilroberta-base": "9df3eb5d37118f952f4ba4fb46fde6889e3a9ccedeee0bad09b0110fc64c5c29",
+    "nli-roberta-base": "efc90996d2ed80123c26c9091c91385ffddc6d2fd0b2bacf3187fbd6c5b87953",
+    "nli-deberta-v3-base": "d8148c6d49e0a7925134294c56326c71fe0ab1dc390e37355e00c7efbb488afa"
+  }
+}
