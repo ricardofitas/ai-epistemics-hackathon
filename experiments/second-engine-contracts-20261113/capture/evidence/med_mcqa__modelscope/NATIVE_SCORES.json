@@ -1,0 +1,162 @@
+[
+  {
+    "predictor": "oracle",
+    "shuffle_choices": false,
+    "score": 1.0,
+    "expected_from_source_targets": 1.0,
+    "rows": 4183,
+    "target_counts": {
+      "A": 1348,
+      "C": 925,
+      "B": 1085,
+      "D": 825
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 4183
+    }
+  },
+  {
+    "predictor": "A",
+    "shuffle_choices": false,
+    "score": 0.3222567535261774,
+    "expected_from_source_targets": 0.3222567535261774,
+    "rows": 4183,
+    "target_counts": {
+      "A": 1348,
+      "C": 925,
+      "B": 1085,
+      "D": 825
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 4183
+    }
+  },
+  {
+    "predictor": "B",
+    "shuffle_choices": false,
+    "score": 0.25938321778627776,
+    "expected_from_source_targets": 0.25938321778627776,
+    "rows": 4183,
+    "target_counts": {
+      "A": 1348,
+      "C": 925,
+      "B": 1085,
+      "D": 825
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 4183
+    }
+  },
+  {
+    "predictor": "C",
+    "shuffle_choices": false,
+    "score": 0.2211331580205594,
+    "expected_from_source_targets": 0.2211331580205594,
+    "rows": 4183,
+    "target_counts": {
+      "A": 1348,
+      "C": 925,
+      "B": 1085,
+      "D": 825
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 4183
+    }
+  },
+  {
+    "predictor": "D",
+    "shuffle_choices": false,
+    "score": 0.1972268706669854,
+    "expected_from_source_targets": 0.1972268706669854,
+    "rows": 4183,
+    "target_counts": {
+      "A": 1348,
+      "C": 925,
+      "B": 1085,
+      "D": 825
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 4183
+    }
+  },
+  {
+    "predictor": "oracle",
+    "shuffle_choices": true,
+    "score": 1.0,
+    "expected_from_source_targets": 1.0,
+    "rows": 4183,
+    "target_counts": {
+      "D": 1072,
+      "A": 1042,
+      "C": 1072,
+      "B": 997
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 4183
+    }
+  },
+  {
+    "predictor": "A",
+    "shuffle_choices": true,
+    "score": 0.24910351422424098,
+    "expected_from_source_targets": 0.24910351422424098,
+    "rows": 4183,
+    "target_counts": {
+      "D": 1072,
+      "A": 1042,
+      "C": 1072,
+      "B": 997
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 4183
+    }
+  },
+  {
+    "predictor": "B",
+    "shuffle_choices": true,
+    "score": 0.23834568491513267,
+    "expected_from_source_targets": 0.23834568491513267,
+    "rows": 4183,
+    "target_counts": {
+      "D": 1072,
+      "A": 1042,
+      "C": 1072,
+      "B": 997
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 4183
+    }
+  },
+  {
+    "predictor": "C",
+    "shuffle_choices": true,
+    "score": 0.25627540043031316,
+    "expected_from_source_targets": 0.25627540043031316,
+    "rows": 4183,
+    "target_counts": {
+      "D": 1072,
+      "A": 1042,
+      "C": 1072,
+      "B": 997
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 4183
+    }
+  },
+  {
+    "predictor": "D",
+    "shuffle_choices": true,
+    "score": 0.25627540043031316,
+    "expected_from_source_targets": 0.25627540043031316,
+    "rows": 4183,
+    "target_counts": {
+      "D": 1072,
+      "A": 1042,
+      "C": 1072,
+      "B": 997
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 4183
+    }
+  }
+]

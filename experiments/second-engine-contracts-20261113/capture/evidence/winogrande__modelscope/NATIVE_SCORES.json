@@ -1,0 +1,86 @@
+[
+  {
+    "predictor": "oracle",
+    "shuffle_choices": false,
+    "score": 1.0,
+    "expected_from_source_targets": 1.0,
+    "rows": 1267,
+    "target_counts": {
+      "B": 639,
+      "A": 628
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1267
+    }
+  },
+  {
+    "predictor": "A",
+    "shuffle_choices": false,
+    "score": 0.4956590370955012,
+    "expected_from_source_targets": 0.4956590370955012,
+    "rows": 1267,
+    "target_counts": {
+      "B": 639,
+      "A": 628
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1267
+    }
+  },
+  {
+    "predictor": "B",
+    "shuffle_choices": false,
+    "score": 0.5043409629044988,
+    "expected_from_source_targets": 0.5043409629044988,
+    "rows": 1267,
+    "target_counts": {
+      "B": 639,
+      "A": 628
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1267
+    }
+  },
+  {
+    "predictor": "oracle",
+    "shuffle_choices": true,
+    "score": 1.0,
+    "expected_from_source_targets": 1.0,
+    "rows": 1267,
+    "target_counts": {
+      "B": 631,
+      "A": 636
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1267
+    }
+  },
+  {
+    "predictor": "A",
+    "shuffle_choices": true,
+    "score": 0.5019731649565904,
+    "expected_from_source_targets": 0.5019731649565904,
+    "rows": 1267,
+    "target_counts": {
+      "B": 631,
+      "A": 636
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1267
+    }
+  },
+  {
+    "predictor": "B",
+    "shuffle_choices": true,
+    "score": 0.4980268350434096,
+    "expected_from_source_targets": 0.4980268350434096,
+    "rows": 1267,
+    "target_counts": {
+      "B": 631,
+      "A": 636
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1267
+    }
+  }
+]

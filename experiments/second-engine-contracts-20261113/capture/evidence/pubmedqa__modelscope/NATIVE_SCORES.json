@@ -1,0 +1,122 @@
+[
+  {
+    "predictor": "oracle",
+    "shuffle_choices": false,
+    "score": 1.0,
+    "expected_from_source_targets": 1.0,
+    "rows": 1000,
+    "target_counts": {
+      "YES": 552,
+      "NO": 338,
+      "MAYBE": 110
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1000
+    }
+  },
+  {
+    "predictor": "YES",
+    "shuffle_choices": false,
+    "score": 0.552,
+    "expected_from_source_targets": 0.552,
+    "rows": 1000,
+    "target_counts": {
+      "YES": 552,
+      "NO": 338,
+      "MAYBE": 110
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1000
+    }
+  },
+  {
+    "predictor": "NO",
+    "shuffle_choices": false,
+    "score": 0.338,
+    "expected_from_source_targets": 0.338,
+    "rows": 1000,
+    "target_counts": {
+      "YES": 552,
+      "NO": 338,
+      "MAYBE": 110
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1000
+    }
+  },
+  {
+    "predictor": "MAYBE",
+    "shuffle_choices": false,
+    "score": 0.11,
+    "expected_from_source_targets": 0.11,
+    "rows": 1000,
+    "target_counts": {
+      "YES": 552,
+      "NO": 338,
+      "MAYBE": 110
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1000
+    }
+  },
+  {
+    "predictor": "oracle",
+    "shuffle_choices": true,
+    "score": 1.0,
+    "expected_from_source_targets": 1.0,
+    "rows": 1000,
+    "target_counts": {
+      "YES": 552,
+      "NO": 338,
+      "MAYBE": 110
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1000
+    }
+  },
+  {
+    "predictor": "YES",
+    "shuffle_choices": true,
+    "score": 0.552,
+    "expected_from_source_targets": 0.552,
+    "rows": 1000,
+    "target_counts": {
+      "YES": 552,
+      "NO": 338,
+      "MAYBE": 110
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1000
+    }
+  },
+  {
+    "predictor": "NO",
+    "shuffle_choices": true,
+    "score": 0.338,
+    "expected_from_source_targets": 0.338,
+    "rows": 1000,
+    "target_counts": {
+      "YES": 552,
+      "NO": 338,
+      "MAYBE": 110
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1000
+    }
+  },
+  {
+    "predictor": "MAYBE",
+    "shuffle_choices": true,
+    "score": 0.11,
+    "expected_from_source_targets": 0.11,
+    "rows": 1000,
+    "target_counts": {
+      "YES": 552,
+      "NO": 338,
+      "MAYBE": 110
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 1000
+    }
+  }
+]

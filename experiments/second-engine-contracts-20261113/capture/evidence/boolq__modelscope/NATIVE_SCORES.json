@@ -1,0 +1,86 @@
+[
+  {
+    "predictor": "oracle",
+    "shuffle_choices": false,
+    "score": 1.0,
+    "expected_from_source_targets": 1.0,
+    "rows": 3270,
+    "target_counts": {
+      "B": 1237,
+      "A": 2033
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 3270
+    }
+  },
+  {
+    "predictor": "A",
+    "shuffle_choices": false,
+    "score": 0.6217125382262997,
+    "expected_from_source_targets": 0.6217125382262997,
+    "rows": 3270,
+    "target_counts": {
+      "B": 1237,
+      "A": 2033
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 3270
+    }
+  },
+  {
+    "predictor": "B",
+    "shuffle_choices": false,
+    "score": 0.3782874617737003,
+    "expected_from_source_targets": 0.3782874617737003,
+    "rows": 3270,
+    "target_counts": {
+      "B": 1237,
+      "A": 2033
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 3270
+    }
+  },
+  {
+    "predictor": "oracle",
+    "shuffle_choices": true,
+    "score": 1.0,
+    "expected_from_source_targets": 1.0,
+    "rows": 3270,
+    "target_counts": {
+      "A": 1622,
+      "B": 1648
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 3270
+    }
+  },
+  {
+    "predictor": "A",
+    "shuffle_choices": true,
+    "score": 0.4960244648318043,
+    "expected_from_source_targets": 0.4960244648318043,
+    "rows": 3270,
+    "target_counts": {
+      "A": 1622,
+      "B": 1648
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 3270
+    }
+  },
+  {
+    "predictor": "B",
+    "shuffle_choices": true,
+    "score": 0.5039755351681957,
+    "expected_from_source_targets": 0.5039755351681957,
+    "rows": 3270,
+    "target_counts": {
+      "A": 1622,
+      "B": 1648
+    },
+    "statuses": {
+      "ScoreStatus.SUCCESS": 3270
+    }
+  }
+]

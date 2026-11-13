@@ -1,0 +1,48 @@
+{
+  "python": "3.11.18 (main, Oct 26 2026, 02:48:29) [GCC 15.2.0]",
+  "model_inference_calls": 0,
+  "dispositions": [
+    {
+      "name": "sciq",
+      "hub": "modelscope",
+      "return_code": 0,
+      "status": "complete",
+      "elapsed_seconds": 19.413208604999994
+    },
+    {
+      "name": "winogrande",
+      "hub": "modelscope",
+      "return_code": 0,
+      "status": "complete",
+      "elapsed_seconds": 19.583604401000002
+    },
+    {
+      "name": "hellaswag",
+      "hub": "modelscope",
+      "return_code": 0,
+      "status": "complete",
+      "elapsed_seconds": 25.900025244000005
+    },
+    {
+      "name": "boolq",
+      "hub": "modelscope",
+      "return_code": 0,
+      "status": "complete",
+      "elapsed_seconds": 21.159592369999984
+    },
+    {
+      "name": "med_mcqa",
+      "hub": "modelscope",
+      "return_code": 0,
+      "status": "complete",
+      "elapsed_seconds": 21.30552726100001
+    },
+    {
+      "name": "pubmedqa",
+      "hub": "modelscope",
+      "return_code": 0,
+      "status": "complete",
+      "elapsed_seconds": 24.84927998699999
+    }
+  ]
+}

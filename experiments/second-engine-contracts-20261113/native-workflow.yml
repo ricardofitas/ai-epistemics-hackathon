@@ -1,0 +1,56 @@
+name: Native second-engine audit and read-only Adaption check
+on:
+  push:
+    branches: [ricardo/second-engine-contracts-20261113]
+    paths:
+      - experiments/second-engine-contracts-20261113/LAUNCH.json
+permissions:
+  contents: read
+concurrency:
+  group: second-engine-contracts-20261113
+  cancel-in-progress: false
+jobs:
+  audit:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 38
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: experiments/second-engine-contracts-20261113
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.11'
+      - name: Verify current Adaption catalogue without model inference
+        working-directory: experiments/second-engine-contracts-20261113
+        env:
+          ADAPTION_API_KEY: ${{ secrets.ADAPTION_API_KEY }}
+        run: python check_adaption.py
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: modelscope/evalscope
+          ref: 59bb367bd8565f347266a48ac1230af0b5131b97
+          path: evalscope_source
+          persist-credentials: false
+      - name: Preserve pinned native backend source
+        working-directory: experiments/second-engine-contracts-20261113
+        run: python snapshot_engine.py ../../evalscope_source
+      - name: Install the actual native package without optional serving engines
+        run: python -m pip install ./evalscope_source
+      - name: Audit native conversion, formatting and deterministic scoring without model calls
+        working-directory: experiments/second-engine-contracts-20261113
+        run: python native_audit.py
+      - name: Preserve results and all backend dispositions
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: second-engine-contracts-${{ github.run_id }}
+          path: |
+            experiments/second-engine-contracts-20261113/*.json
+            experiments/second-engine-contracts-20261113/*.py
+            experiments/second-engine-contracts-20261113/*.txt
+            experiments/second-engine-contracts-20261113/*.tar.gz
+            experiments/second-engine-contracts-20261113/evidence
+          retention-days: 90
+          if-no-files-found: error
