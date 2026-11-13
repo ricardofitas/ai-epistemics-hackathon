@@ -1,0 +1,15 @@
+{
+  "trial_id": "WR-08",
+  "evidence_label": "subject-generated",
+  "access_status": "retrieval not permitted and not attempted",
+  "actual_requested_urls": [],
+  "tool_names_and_result_references": [
+    {
+      "tool_name": "functions.exec via tools.exec_command",
+      "operation": "Read assigned local prompt file only",
+      "result_reference": "functions.exec result: Script completed; command exit code 0"
+    }
+  ],
+  "checked_excerpt": null,
+  "note": "Memory-only response. No browsing, searching, external retrieval, or independent capture was performed."
+}

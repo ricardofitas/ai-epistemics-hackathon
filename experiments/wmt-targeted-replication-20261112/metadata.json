@@ -1,0 +1,22 @@
+{
+  "collected_utc": "2026-11-12T23:55:42.705474+00:00",
+  "freeze_commit": "41b6b6d8720ae85bb6777ce9fbbe7811f99c66d5",
+  "freeze_commit_utc": "2026-11-12T23:49:04Z",
+  "attempted": 20,
+  "completed": 20,
+  "source_cases": 1,
+  "model_configs": [
+    "gpt-6.1-sol inherited",
+    "gpt-6-luna requested override"
+  ],
+  "exact_backend_snapshot": null,
+  "sampling_settings": "Inherited defaults, not surfaced",
+  "interface": "Fresh collaboration agents, fork_turns=none; exact launchers retained",
+  "capture": "Verbatim subject-written UTF-8 files; final subject hash acknowledgment checked",
+  "isolation": "Instruction-based file restrictions in a shared filesystem, not a security sandbox",
+  "word_limit_deviations": 0,
+  "source_access_evidence": "Subject-generated logs with tool/result references where available; no independently captured provider traces",
+  "rubric": "Unchanged generic rule; frozen case-specific requirements and prereview clarifications",
+  "review": "Two fresh agent ratings, incomplete blinding where citations reveal package; human pending",
+  "scope": "Selected-case replication"
+}

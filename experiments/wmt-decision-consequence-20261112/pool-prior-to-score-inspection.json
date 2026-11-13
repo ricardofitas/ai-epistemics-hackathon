@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-11-12T23:58:13.179901+00:00",
+  "reason": "Fixed small pool of common public pretrained translation model families; set before inspecting their en-de scores",
+  "models": [
+    "facebook/wmt19-en-de",
+    "facebook/m2m100_418M",
+    "facebook/nllb-200-distilled-600M",
+    "facebook/mbart-large-50-many-to-many-mmt"
+  ],
+  "datasets": [
+    "newstest2019",
+    "newstest2020"
+  ],
+  "direction": "eng-deu",
+  "metric": "BLEU",
+  "purpose": "Feasibility only, not registered confirmatory analysis. Need exact checkpoint identity, same scoring/reference selection, and raw hypotheses before definitive decision consequence."
+}

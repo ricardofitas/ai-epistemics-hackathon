@@ -1,0 +1,83 @@
+{
+  "status": "pass_after_mapping_correction",
+  "scope": "Read-only independent prepublication check; no new subjects, ratings changes or external writes",
+  "checks": {
+    "wmt_attempted_completed": [
+      20,
+      20
+    ],
+    "wmt_first_ratings": {
+      "a": {
+        "no": 15,
+        "yes": 5
+      },
+      "b": {
+        "no": 15,
+        "yes": 5
+      }
+    },
+    "wmt_primary_disagreements": [],
+    "failed_trial_to_blind_id": {
+      "WR-01": "R12",
+      "WR-02": "R18",
+      "WR-03": "R10",
+      "WR-04": "R02",
+      "WR-07": "R16"
+    },
+    "key_matches_summary": true,
+    "human_status": {
+      "status": "pending_human_review",
+      "wmt_answers": 28,
+      "all_human_judgments": "blank",
+      "packet_creation": "agent-prepared; no human review performed",
+      "map": "wmt_key_private.jsonl, withheld from reviewer until first judgments retained",
+      "answer_selection": "All WMT answers from initial open, factorial, targeted replication cohorts; source case post-discovery selected",
+      "sources": "official planned collection windows; article-level audit not performed"
+    },
+    "archive_strict_reversals": 0
+  },
+  "other_findings": [
+    "20 WMT completions, 5 yes/15 no per reviewer, no primary disagreements and four balanced n=5 cells agree with summaries.",
+    "Four holdout completions, all no for both reviewers; H02 maps to Luna NQ trial HO-03 and incidental provenance error is correctly separated from primary fit.",
+    "Integrity timestamps and hashes agree with report; holdout source-log hash is null and report does not claim otherwise.",
+    "Source package is properly attributed to combined instruction, candidate URLs and access; no browsing-only causal claim is made.",
+    "Human status confirms all 28 WMT answers and all judgments blank/pending.",
+    "Archive table, zero of three eligible pair reversals, missing fourth model, same winner and unresolved historical weight/reference bytes match retained records.",
+    "The only relative Markdown link, wmt-decision-consequence-feasibility.md, resolves correctly beside target docs/experiments/wmt-targeted-replication-results.md if the sibling report is published as planned. Reproduction materials are code-formatted repository-root paths, not relative Markdown links.",
+    "Final factual audit agrees on primary period and NQ provenance claims. Its literal paragraph/sentence wording findings do not require changing immutable primary ratings; report discloses that protocol clarification."
+  ],
+  "source_sha256": {
+    "followup_report.md": "bb82a6060a49dfff1511f60fea2f33512b9b891386cd0ff9c1c3c592e96423a7",
+    "wmt_replication/summary.json": "5e1f00582156ad14ad50d49bfc262a22e195b605997816ae3ca100830c68adff",
+    "wmt_replication/integrity.json": "d1f3779e6ac13070eb8c9af4f8a42b3a3903895e1baf2c841d37b7930b75e7d7",
+    "wmt_replication/protocol.json": "9f38b9e57ea362c0722b3b72c8aee7a44e67a319f7b474ba902bb87d446434e4",
+    "wmt_replication/ACCESS_AUDIT.md": "c994622deeabca3ea5189c98849a7ffacc3623bdf54a4c1fc39278d0629a572e",
+    "wmt_replication/review_key.jsonl": "af78e61862226fc775e7281eb576caa07d5603e1bb981b654e8f1db82f552039",
+    "holdout_study/summary.json": "6e036c10261f924ce473968e47845298d7e3cc134f8282aa16a0fabe365e6968",
+    "holdout_study/integrity.json": "36eb7a8f128f2195cacbe5db4403a67c4ff10b8c70008804da355b8fad572812",
+    "holdout_study/review_key.jsonl": "4ae395dbd4fbb4a33445cf49b7c990435b9013f9227616a8ba2dc2cbec0621e9",
+    "followup_review_a.md": "1c6b5a1371e17166c0687d19d49aecd46f7b42ebdb665f5242ac68592966efde",
+    "followup_review_b.md": "7079508e91c61f6d0c5bc7026dd96f6326d019c0a775fb6082644ab552cab75d",
+    "wmt_consequence/FEASIBILITY.md": "0132943b7f5f71bc8d944a30d66140482cb4c6f3da304bca5b4aaf77d2f00900",
+    "wmt_consequence/paired_results.json": "a1d4abc9b0b37234b9c6098d74c0168fb30b6df9f125b1302ea1c2ff2a57cd1e",
+    "human_review/review_status.json": "e6578ae67729c3c8293bbdc92219f4f7f3c420a2c35ce0d9a321e1ac65ceb462",
+    "followup_fact_audit.md": "8b05791bd532e26a4b5c0a9b30e71c570d416109a716d96380e4c40cad9f22da",
+    "followup_review_freeze.json": "ac65ef601a92c6d861edfe4537b6f316d9ebda137526a0fcc732ccc3fd692c6e"
+  },
+  "corrections_applied": [
+    {
+      "severity": "required factual correction",
+      "location": "Question and decisive source facts, failed-response mapping sentence",
+      "issue": "The five failed trials are correct, but four of five trial-to-blind-ID associations in the respectively list are incorrect.",
+      "current": "The five failed responses are WR-01, WR-02, WR-03, WR-04 and WR-07, anonymously rated as R16, R02, R10, R12 and R18, respectively.",
+      "replacement": "The five failed responses are WR-01, WR-02, WR-03, WR-04 and WR-07, anonymously rated as R12, R18, R10, R02 and R16, respectively.",
+      "evidence": [
+        "wmt_replication/review_key.jsonl",
+        "wmt_replication/summary.json"
+      ],
+      "effect": "No count, label, condition assignment, or substantive conclusion changes."
+    }
+  ],
+  "corrections_required": [],
+  "final_recheck": "Corrected trial-to-blind-ID mapping and WR-01 example verified in final report. No further corrections required."
+}

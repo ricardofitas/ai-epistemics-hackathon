@@ -1,0 +1,18 @@
+{
+  "trial_id": "WR-19",
+  "requested_urls": [
+    "https://www.statmt.org/wmt19/translation-task.html",
+    "https://www.statmt.org/wmt20/translation-task.html"
+  ],
+  "tool": "mcp__codex_apps__search_service_web_run",
+  "result_references": [
+    "turn110view0",
+    "turn110view1"
+  ],
+  "access_status": "success",
+  "evidence_label": "subject-generated; not an independently captured trace",
+  "checked_excerpt": {
+    "turn110view0": "Lines 104–105: 2019 test sets sampled from online newspapers from September–November 2018.",
+    "turn110view1": "Lines 82 and 98: sacreBLEU recommended for evaluation; 2020 sets sampled from online newspapers from September–November 2019, source original online-news text and target human translations."
+  }
+}

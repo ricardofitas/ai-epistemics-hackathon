@@ -60,3 +60,8 @@ python3 scripts/check_wmt_source_periods.py
 ```
 
 The first command needs only archived JSONL data; the second refetches official documentation and validates the documented source-period statements. Neither performs model inference.
+
+
+## Subsequent targeted replication
+
+A separately frozen follow-up repeated the selected WMT case with five fresh contexts per requested configuration and memory/source-verification package. Both independent raters found Luna 5/5 unsupported without retrieval and 0/5 with the candidate-constrained source package; Sol 0/5 in each. Two new source-family cases produced 0/4 material fit errors. These counts remain separate from this original cohort. See [the follow-up report](wmt-targeted-replication-results.md) for null decision-consequence evidence and limitations.

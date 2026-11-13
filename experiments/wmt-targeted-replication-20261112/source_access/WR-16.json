@@ -1,0 +1,20 @@
+{
+  "trial_id": "WR-16",
+  "evidence_label": "subject-generated",
+  "source_policy": "Existing knowledge only; retrieval not permitted and not attempted.",
+  "requested_urls": [],
+  "external_tool_names": [],
+  "external_result_references": [],
+  "access_status": "retrieval not permitted and not attempted",
+  "prompt_access": {
+    "path": "/workspace/scratch/3a7fad3d11db/wmt_replication/prompts/WR-16.txt",
+    "tool_names": [
+      "functions.exec",
+      "exec_command"
+    ],
+    "result_reference": "Assigned prompt read successfully in the preceding tool result.",
+    "status": "success",
+    "checked_excerpt": "I want to compare two English-to-German systems on held-out online news from late 2019."
+  },
+  "note": "No independently captured retrieval trace is claimed; the answer relies on existing knowledge."
+}

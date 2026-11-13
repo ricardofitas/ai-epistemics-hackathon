@@ -1,0 +1,24 @@
+{
+  "trial_id": "WR-11",
+  "requested_urls": [
+    "https://www.statmt.org/wmt19/translation-task.html",
+    "https://www.statmt.org/wmt20/translation-task.html"
+  ],
+  "access": {
+    "status": "success",
+    "method": "official pages opened using mcp__codex_apps__search_service_web_run",
+    "tool_names": [
+      "mcp__codex_apps__search_service_web_run"
+    ],
+    "actual_urls": [
+      "https://www.statmt.org/wmt19/translation-task.html",
+      "https://www.statmt.org/wmt20/translation-task.html"
+    ],
+    "result_references": [
+      "turn104view0",
+      "turn104view1"
+    ],
+    "checked_excerpt_subject_generated": true,
+    "excerpt": "WMT19 lines 104-105: 2019 test sets sampled online newspapers from September-November 2018. WMT20 line 82 recommends NIST or (recommended) sacreBLEU for evaluating prior test sets; line 98 says 2020 test sets sample online newspapers from September-November 2019 and source text is original online news with human-produced target translations. Line 49 says English-German test sets are produced at paragraph level."
+  }
+}

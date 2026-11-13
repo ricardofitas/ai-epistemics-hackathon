@@ -28,6 +28,9 @@ The main question concerns whether a recommendation supports a specified claim. 
 - [Tasks and sprint plan](docs/tasks.md) — deliverables, dependencies and a minimum viable path.
 - [Initial six-case open recommendation study](docs/experiments/open-recommendations-results.md) — 24 answers, frozen prompts and blind/source checks.
 - [Model × prompt-form follow-up](docs/experiments/model-prompt-factorial-results.md) — two requested configurations, minimal/scaffolded questions and a verified temporal-fit failure.
+- [Targeted replication and independent holdouts](docs/experiments/wmt-targeted-replication-results.md) — 20 fresh WMT answers, four independent-case answers and a source-verification package.
+- [Decision-consequence feasibility](docs/experiments/wmt-decision-consequence-feasibility.md) — pinned published scores show no ranking reversal in the inspected three-model pool.
+- [Human review worksheet](docs/experiments/WMT_HUMAN_REVIEW.md) — all 28 WMT answers, shuffled, with human judgments pending.
 
 ## Prior work and contribution
 
@@ -35,8 +38,10 @@ Luo, Kasirzadeh and Shah's [study of autonomous AI scientists](https://pmc.ncbi.
 
 ## Current status
 
-**Exploratory pre-sprint evidence.** The initial six-case open study produced 0/24 unsupported recommendations in one inherited agent configuration. A prospectively frozen follow-up crossed two requested configurations (`gpt-6.1-sol` and `gpt-6-luna`) with minimal/scaffolded prompts on the same six cases. Both blinded agent reviewers found 2/24 unsupported recommendations in that follow-up: both Luna answers to one translation scenario recommend `newstest2019` for late-2019 source news, although official documentation dates its source news to September–November 2018; `newstest2020` matches the requested period.
+**Exploratory pre-sprint evidence, 12–13 November 2026.** The initial six-case open study produced 0/24 unsupported recommendations in one inherited configuration. A frozen two-configuration × prompt-form follow-up produced 2/24, both Luna answers on one temporal-fit case: recommending `newstest2019` for late-2019 news, whereas official documentation specifies September–November 2018; `newstest2020` is the matching option.
 
-This is one case-specific wrong-fit finding, not a general error-rate or model-ranking claim. Both prompt packages failed for that configuration/case; one response per cell does not establish checklist efficacy or stochastic frequency. Sources, exact answers, hashes, ratings, unresolved interpretations and the conditional decision consequence are preserved. Human review is pending. Earlier negative cohorts remain separate.
+A separately frozen **20-answer replication** repeated that selected case five times per configuration/package. Both blind agent reviewers agree: Luna memory-only **5/5 unsupported**, Luna source-verification **0/5**, Sol **0/5 in each package**. The source package combines date-check instructions, both official candidate URLs and permitted retrieval, so this is not a browsing-only causal estimate. Two new source-family holdouts (Natural Questions extraction and adult triage evaluation) yielded **0/4 material fit errors**. A separate three-model published-score archive check found **no ranking reversal** between the WMT years; exact historic weight/reference provenance remains incomplete.
+
+These results strengthen a case-specific recommendation finding, not general error prevalence, model ranking, a defect intrinsic to WMT or measured real-world harm. All responses, frozen prompts, source evidence, independent ratings, nulls and limits are retained. Human review is pending; the complete shuffled packet includes all 28 WMT answers across the three cohorts. Earlier cohorts remain separate.
 
 Earlier [CivilComments results](https://github.com/ricardofitas/ai-epistemics-hackathon/pull/1) and [TruthfulQA audits/pilot](https://github.com/ricardofitas/ai-epistemics-hackathon/pull/4) remain separate exploratory designs. Known evaluator defects are controls, not new recommendation failures.

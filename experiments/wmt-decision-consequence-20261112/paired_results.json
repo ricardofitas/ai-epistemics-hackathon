@@ -1,0 +1,69 @@
+{
+  "source_commit": "e770bb935e0afbcf006664c5339b358731a8aff1",
+  "metric_signature": "BLEU|nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.3.1",
+  "score_unit": "BLEU points on 0\u2013100 scale",
+  "eligible": [
+    {
+      "model_identifier": "facebook/wmt19-en-de",
+      "BLEU": {
+        "2019": 42.8,
+        "2020": 36.6
+      }
+    },
+    {
+      "model_identifier": "facebook/m2m100_418M",
+      "BLEU": {
+        "2019": 31.4,
+        "2020": 23.0
+      }
+    },
+    {
+      "model_identifier": "facebook/nllb-200-distilled-600M",
+      "BLEU": {
+        "2019": 36.7,
+        "2020": 27.5
+      }
+    }
+  ],
+  "missing": [
+    {
+      "model_identifier": "facebook/mbart-large-50-many-to-many-mmt",
+      "reason": "No complete paired archived records; not replaced"
+    }
+  ],
+  "all_eligible_pairs": [
+    {
+      "first": "facebook/wmt19-en-de",
+      "second": "facebook/m2m100_418M",
+      "first_minus_second_BLEU": {
+        "2019": 11.4,
+        "2020": 13.6
+      },
+      "strict_ranking_reversal": false
+    },
+    {
+      "first": "facebook/wmt19-en-de",
+      "second": "facebook/nllb-200-distilled-600M",
+      "first_minus_second_BLEU": {
+        "2019": 6.1,
+        "2020": 9.1
+      },
+      "strict_ranking_reversal": false
+    },
+    {
+      "first": "facebook/m2m100_418M",
+      "second": "facebook/nllb-200-distilled-600M",
+      "first_minus_second_BLEU": {
+        "2019": -5.3,
+        "2020": -4.5
+      },
+      "strict_ranking_reversal": false
+    }
+  ],
+  "strict_ranking_reversals": 0,
+  "winner_by_archived_score": {
+    "2019": "facebook/wmt19-en-de",
+    "2020": "facebook/wmt19-en-de"
+  },
+  "limitation": "Historical exact weight revisions and reference-byte identity are not established; these are paired model-ID archive records, not independently rerun fixed-checkpoint evaluations."
+}

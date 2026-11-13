@@ -1,0 +1,331 @@
+{
+  "cohort": "wmt_replication",
+  "attempted": 20,
+  "completed": 20,
+  "cells": [
+    {
+      "model_config": "luna",
+      "condition_or_case": "memory_only",
+      "completed": 5,
+      "ratings_a": {
+        "yes": 5
+      },
+      "ratings_b": {
+        "yes": 5
+      }
+    },
+    {
+      "model_config": "luna",
+      "condition_or_case": "source_verification",
+      "completed": 5,
+      "ratings_a": {
+        "no": 5
+      },
+      "ratings_b": {
+        "no": 5
+      }
+    },
+    {
+      "model_config": "sol",
+      "condition_or_case": "memory_only",
+      "completed": 5,
+      "ratings_a": {
+        "no": 5
+      },
+      "ratings_b": {
+        "no": 5
+      }
+    },
+    {
+      "model_config": "sol",
+      "condition_or_case": "source_verification",
+      "completed": 5,
+      "ratings_a": {
+        "no": 5
+      },
+      "ratings_b": {
+        "no": 5
+      }
+    }
+  ],
+  "overall_first_ratings": {
+    "a": {
+      "no": 15,
+      "yes": 5
+    },
+    "b": {
+      "no": 15,
+      "yes": 5
+    }
+  },
+  "primary_disagreements": [],
+  "trials": [
+    {
+      "response_id": "R01",
+      "trial_id": "WR-17",
+      "model_config": "sol",
+      "condition": "memory_only",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "9df35c6a01ab8a93df38dc0bef9b6b074d84de0b76a807ba2009cf9b262e8e0c"
+    },
+    {
+      "response_id": "R02",
+      "trial_id": "WR-04",
+      "model_config": "luna",
+      "condition": "memory_only",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "yes",
+        "b": "yes"
+      },
+      "primary_agreement": true,
+      "source_hash": "966d980b3107b07a928d2253e9ce467f15f7831c944116b71a1353783c801d7e"
+    },
+    {
+      "response_id": "R03",
+      "trial_id": "WR-16",
+      "model_config": "sol",
+      "condition": "memory_only",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "2eabe270aafbdd0ea0d350a9be3c283d233766c26e00b3d1e9e15949c91af3bd"
+    },
+    {
+      "response_id": "R04",
+      "trial_id": "WR-10",
+      "model_config": "sol",
+      "condition": "source_verification",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "cc6099487f19c084f7c3f96f7829e5ad1c444f1086e272c257ebb978843725d5"
+    },
+    {
+      "response_id": "R05",
+      "trial_id": "WR-05",
+      "model_config": "luna",
+      "condition": "source_verification",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "5f6f6b72cd15d195c57350bb24a297364b2b106b7f31d767172c780b005f4834"
+    },
+    {
+      "response_id": "R06",
+      "trial_id": "WR-06",
+      "model_config": "sol",
+      "condition": "source_verification",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "570ee289830f11d095409a8f1438a18578052fd885cff3b072d5938869925fd6"
+    },
+    {
+      "response_id": "R07",
+      "trial_id": "WR-19",
+      "model_config": "luna",
+      "condition": "source_verification",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "9b4694f74a5a7615e57c63ca5241f5bc3916663b83ed9b8507bd66802f6a2e05"
+    },
+    {
+      "response_id": "R08",
+      "trial_id": "WR-18",
+      "model_config": "sol",
+      "condition": "memory_only",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "b6678cd3e4e4f57f3c6c191fb5ec38fff605f3ed0cc9bb21af2f53500e3bc418"
+    },
+    {
+      "response_id": "R09",
+      "trial_id": "WR-14",
+      "model_config": "sol",
+      "condition": "memory_only",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "454c36328d6cfa4477814912d88787c807a72b0b80c0e21bc7b5b8fea8f3460a"
+    },
+    {
+      "response_id": "R10",
+      "trial_id": "WR-03",
+      "model_config": "luna",
+      "condition": "memory_only",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "yes",
+        "b": "yes"
+      },
+      "primary_agreement": true,
+      "source_hash": "a30c5de73c8e2146a5beb1bea6eb3a82edd83e26e561ac7f7265a15df08295e9"
+    },
+    {
+      "response_id": "R11",
+      "trial_id": "WR-13",
+      "model_config": "luna",
+      "condition": "source_verification",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "5bd23f2ccf977a2d71fc35336122993ff8e8febc9c597b01a992df067e7cb44a"
+    },
+    {
+      "response_id": "R12",
+      "trial_id": "WR-01",
+      "model_config": "luna",
+      "condition": "memory_only",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "yes",
+        "b": "yes"
+      },
+      "primary_agreement": true,
+      "source_hash": "ffca10c0a97a48ef77450e00e13a584549c07e814671dacf6bc95ce4cf098b00"
+    },
+    {
+      "response_id": "R13",
+      "trial_id": "WR-12",
+      "model_config": "sol",
+      "condition": "source_verification",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "6dd7efc3280db44ca5e578991df5cb57e34f09a78985e260c7d614659562ffc6"
+    },
+    {
+      "response_id": "R14",
+      "trial_id": "WR-08",
+      "model_config": "sol",
+      "condition": "memory_only",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "626acfeb1b1b4388f30a09dfac7bdbdd967b50c2750aff164999fc28c99d1e5b"
+    },
+    {
+      "response_id": "R15",
+      "trial_id": "WR-20",
+      "model_config": "luna",
+      "condition": "source_verification",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "619de894c70416b57c75b401525838a3d9765bd45915abd8317b8377d490ea2d"
+    },
+    {
+      "response_id": "R16",
+      "trial_id": "WR-07",
+      "model_config": "luna",
+      "condition": "memory_only",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "yes",
+        "b": "yes"
+      },
+      "primary_agreement": true,
+      "source_hash": "5c9244601e2c64858f307888b4026c255f899c081b0c5e08daea2f60ada71f22"
+    },
+    {
+      "response_id": "R17",
+      "trial_id": "WR-11",
+      "model_config": "luna",
+      "condition": "source_verification",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "d74cae5a7a85ff2ae8969fb413964a530fa1d35d86e872bdfdbb461ebed49d72"
+    },
+    {
+      "response_id": "R18",
+      "trial_id": "WR-02",
+      "model_config": "luna",
+      "condition": "memory_only",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "yes",
+        "b": "yes"
+      },
+      "primary_agreement": true,
+      "source_hash": "fc50020313b6179b04700e99b36e1b7ec30761f997d6e5af71533a0c0af56f6e"
+    },
+    {
+      "response_id": "R19",
+      "trial_id": "WR-15",
+      "model_config": "sol",
+      "condition": "source_verification",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "70194c783bf465c1b1300d10694cc1b358e8e56917c852ed87ce7d1b561ab17e"
+    },
+    {
+      "response_id": "R20",
+      "trial_id": "WR-09",
+      "model_config": "sol",
+      "condition": "source_verification",
+      "case_id": "open_mt_news_ende_late2019",
+      "ratings": {
+        "a": "no",
+        "b": "no"
+      },
+      "primary_agreement": true,
+      "source_hash": "c87a09bc3d7a81e9f7835e20858afda58e17a2d22b1ea785740ea1ad4b84f075"
+    }
+  ],
+  "rating_sha256": {
+    "a": "536e5fda7378a75d65fde57554d95188e1fdee0c7f9cd9f83f6448b225e5fc5c",
+    "b": "4047487fdb5c5cb543a6e10d984e30ab9fd6e9e09629ee8297770cc6e62f79e8"
+  },
+  "human_review": "pending",
+  "adjudication": "none; both original ratings retained",
+  "scope": "Descriptive counts within frozen selected cases; not population prevalence"
+}

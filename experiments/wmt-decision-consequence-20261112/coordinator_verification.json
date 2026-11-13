@@ -1,0 +1,53 @@
+{
+  "verification": "Coordinator independently refetched all six primary eval blobs at the pinned commit; exact blobs/content matched",
+  "checks": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "models/huggingface/facebook/wmt19-en-de/newstest2019.eng-deu.eval",
+        "blob_sha": "50c4ab022a1b57649ea5a1a86339d5f0c9175dd1",
+        "exact_content_match": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "models/huggingface/facebook/wmt19-en-de/newstest2020.eng-deu.eval",
+        "blob_sha": "0fc3a8a368926a0f5ee90a4e8f407db2247757a3",
+        "exact_content_match": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "models/huggingface/facebook/m2m100_418M/newstest2019.eng-deu.eval",
+        "blob_sha": "cd6c143ff61cd9e7fb18caf1148bcbca126aacb4",
+        "exact_content_match": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "models/huggingface/facebook/m2m100_418M/newstest2020.eng-deu.eval",
+        "blob_sha": "ccc926dc855096d0ffdae7e191a5ea299f3391e8",
+        "exact_content_match": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "models/huggingface/facebook/nllb-200-distilled-600M/newstest2019.eng-deu.eval",
+        "blob_sha": "07d83d3b56922981692070b6651f1af48d8c14b0",
+        "exact_content_match": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "models/huggingface/facebook/nllb-200-distilled-600M/newstest2020.eng-deu.eval",
+        "blob_sha": "15277bbfd68c959a46eacaa10585ba7889a1553b",
+        "exact_content_match": true
+      }
+    }
+  ]
+}
