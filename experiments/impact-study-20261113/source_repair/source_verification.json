@@ -1,0 +1,47 @@
+{
+  "verified_utc": "2026-11-13T06:35:44.968762+00:00",
+  "checks": {
+    "p1_p2_added_one_two_clauses": true,
+    "clause_steps_qualification": true,
+    "within_template_fixed_reasoning": true,
+    "section_4_2_names_numbers_factors": true,
+    "section_4_2_does_not_describe_paraphrase_condition": true,
+    "pdf_corroborates_added_clauses": true
+  },
+  "primary_paper": "https://arxiv.org/html/2410.05229v1",
+  "paper_pdf_url": "https://arxiv.org/pdf/2410.05229v1",
+  "paper_html_sha256": "0a3316b27e69ec8b113811b02d6c3cb6fa24874c24613256ca859e78d3cd39dc",
+  "paper_pdf_sha256": "58dad3c57bf73b309a78728bb3901be9e8f7d46b1c5734d8b7b9ba6206bd0517",
+  "section_text_sha256": {
+    "S3.SS1": "5c44f028d1d430db629a34a68ee1caf1d00b9eaab5acb3f4d534c4c66bcdc163",
+    "S4.SS1": "3f481958fcba5de3d082f61548dbd2f2bb5032b5d7982fa52c5bd9ed7837614a",
+    "S4.SS2": "daf38abc89ed386243090887479e362405d7e96bee1ceb25296e85ceb74ab7f5",
+    "S4.SS3": "6bd1314b5645af7f04a2b80bfaa1e4f00269192c042230fde607fc74f10f91bc"
+  },
+  "fact_scope": [
+    {
+      "fact": "P1/P2 add one/two clauses as difficulty manipulations.",
+      "locator": "Section4.3, Figure5"
+    },
+    {
+      "fact": "Changing clause count does not always change the number of reasoning steps by exactly one.",
+      "locator": "Section4.3 footnote1"
+    },
+    {
+      "fact": "Within-template instances vary names/values with overall reasoning steps held fixed.",
+      "locator": "Section4.1; Section3.1 template domains/conditions"
+    },
+    {
+      "fact": "Section4.2 explicitly compares name-only, value-only and combined changes; it does not specify a separate free-form sentence-paraphrasing condition.",
+      "locator": "Section4.2 and Figure4; absence claim confined to this experiment, not all released data or every possible wording variation."
+    }
+  ],
+  "nonclaims": [
+    "No internal reasoning/memorization conclusion from author interpretation is treated as fact.",
+    "No claim that GSM-Symbolic has zero wording variation of any kind.",
+    "No claim every P1/P2 use is invalid. Within-template P1/P2 numerical evaluation or a qualified extension may remain suitable.",
+    "No performance or ranking consequence measured by this preparation."
+  ],
+  "independence": "Preparer source verification; independent root/fidelity review remains before freeze.",
+  "calls_made": 0
+}

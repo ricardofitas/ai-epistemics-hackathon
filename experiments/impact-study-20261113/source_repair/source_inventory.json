@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-11-13T06:35:44.969092+00:00",
+  "sources_downloaded_before_manifest": [
+    {
+      "source_file": "gsm_symbolic_paper_v1.html",
+      "requested_url": "https://arxiv.org/html/2410.05229v1",
+      "resolved_url": "https://arxiv.org/html/2410.05229v1",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 262894,
+      "sha256": "0a3316b27e69ec8b113811b02d6c3cb6fa24874c24613256ca859e78d3cd39dc",
+      "retrieved_utc": "2026-11-13T06:30:03.651279+00:00",
+      "etag": "\"CKHcpYaeupYDEAE=\"",
+      "last_modified": "Mon, 24 Aug 2026 21:43:34 GMT"
+    },
+    {
+      "source_file": "gsm_symbolic_paper_v1.pdf",
+      "requested_url": "https://arxiv.org/pdf/2410.05229v1",
+      "resolved_url": "https://arxiv.org/pdf/2410.05229v1",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 1618933,
+      "sha256": "58dad3c57bf73b309a78728bb3901be9e8f7d46b1c5734d8b7b9ba6206bd0517",
+      "retrieved_utc": "2026-11-13T06:30:03.963587+00:00",
+      "etag": "\"sha256:61a23b6052eba20acd9d2c652a29ce4de95c22a561008f3b420eaf0d7fc6622a\"",
+      "last_modified": "Tue, 08 Oct 2024 02:04:33 GMT"
+    },
+    {
+      "source_file": "gsm_symbolic_author_page.html",
+      "requested_url": "https://machinelearning.apple.com/research/gsm-symbolic",
+      "resolved_url": "https://machinelearning.apple.com/research/gsm-symbolic",
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 32605,
+      "sha256": "50ee3e1cc795704aebed6c0a953812e509078f307961114f8c047e3515edb444",
+      "retrieved_utc": "2026-11-13T06:30:02.570876+00:00",
+      "etag": "W/\"6af5f8ac-7f5d\"",
+      "last_modified": "Thu, 12 Nov 2026 17:34:36 GMT"
+    }
+  ],
+  "decisive_source": "Versioned primary paper2410.05229v1, Sections3.1 and4.1\u20134.3; PDF independently corroborates the added-clause definition.",
+  "author_page_scope": "Corroborates study purpose and clause-number manipulation; exact P1/P2 definition is attributed to the versioned primary paper. Moving author page is byte-pinned at retrieval, not assumed immutable.",
+  "original_card_inventory_file": "sources/original_source_inventory.json",
+  "original_card_inventory_sha256": "6049cd1a1a835e618b13b634a69376b58927b0222f1970c37b7f141957f91cb5",
+  "original_source_card_frozen_commit": "6566b5cc3c3879e032f2acc92875f9ace25e00e5",
+  "patch_is_model_facing": "Only source_patch.txt contents appended to unchanged source card; raw paper/authorpage source, old labels/outcomes and evaluator records are not sent.",
+  "fact_validation_file": "source_verification.json",
+  "source_semantics": "Dataset-construction facts only. Alternatives/validated adaptations remain allowed; no prescribed benchmark or injected answer label."
+}

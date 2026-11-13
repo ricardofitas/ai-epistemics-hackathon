@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-11-13T06:37:53.341305+00:00",
+  "status": "prepared_only_no_calls_no_freeze",
+  "manifest_sha256": "a02a82eb6cb83a1063531c3b0d6ecc8441e8a23acb641f81feddf1830b929e85",
+  "protocol_sha256": "852b6ac9207b15c013a72dc55a2dc7bfdc8bed2d90683150e9a7d5664e4a80ae",
+  "structural_checks": [
+    "36distinct requests;12 percondition;3 permodel/condition",
+    "Original sourcecard model-text and plaintext-file bytes preserved",
+    "Originalquestion/commoninstruction/rubric/criticalcriteria preserved",
+    "Canonical arm labels have explicit source-containing-baseline semantics",
+    "Samefive mechanism IDs; original primary outcome and secondaryutility unchanged",
+    "Allprotocol file hashes match; sourcebytes pinned before finalmanifest",
+    "NativeSSE runner dry-run36requests/294912maxgeneratedtokens",
+    "No capture/artifact directories or inference outputs exist"
+  ],
+  "fact_precision": [
+    "P1/P2 are added-clause difficulty variants, not asserted to add exactly1/2reasoningsteps",
+    "Within-template name/number experiment is distinct from a separately constructed free-form paraphrase condition; no claim of zero wording variation in all data",
+    "P1/P2 use by itself remains acceptable; assess governing protocol/claim under original criteria",
+    "Do not accept author speculation about internal reasoning as factual gold"
+  ],
+  "selection": "Exploratory follow-up selected after observing earlier math source-arm errors; new randomized controls and no pooling with historical72calls. No general source-harm/RAG claim.",
+  "review_requirement": "Independent root/source/fidelity review and external freeze before calls; no original frozen files modified.",
+  "analysis_boundary": "Advice correctness/usefulness only. No measured candidate-task ranking consequence or validation of the proposed causal omission mechanism yet.",
+  "human_review": "pending"
+}

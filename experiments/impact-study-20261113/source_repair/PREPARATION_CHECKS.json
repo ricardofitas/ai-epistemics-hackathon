@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-11-13T06:35:45.006610+00:00",
+  "calls_made": 0,
+  "original_sourcecard_file_sha256": "656a080db5ecf13c90c65dba39b0abdf566fcd10d70ce99421699168a8c5c297",
+  "original_sourcecard_model_text_sha256": "b1a9ab7e00deef5792fe1552dedce525c108aa4a3258420c90409e59f711f9b4",
+  "question_and_critical_criteria_unchanged": true,
+  "question_sha256": "32658cf9959b697c8cffa9e19146d8f2021568375fbf33118810fa25c80c3006",
+  "critical_criteria_sha256": "f5b0efc7a260ce1649c8fabc6c4ac0ababfe6ed9231285c04c4e95ab222bd248",
+  "original_source_payload_input_equal": true,
+  "original_rubric_bytes_equal": true,
+  "same_five_mechanism_ids": true,
+  "lengths": {
+    "original_sourcecard": {
+      "words": 229,
+      "characters": 1720
+    },
+    "patch_paragraph": {
+      "words": 117,
+      "characters": 866
+    },
+    "generic_paragraph": {
+      "words": 122,
+      "characters": 868
+    },
+    "full_baseline": {
+      "words": 229,
+      "characters": 1720
+    },
+    "full_generic_verification": {
+      "words": 354,
+      "characters": 2615
+    },
+    "full_primary_source_facts": {
+      "words": 349,
+      "characters": 2613
+    }
+  },
+  "preparation_scope": "Structural preparation checks only; not independent source/fidelity review. No original advice files modified."
+}
