@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-13T03:44:07.032662+00:00",
+  "coordinator_dispositions": {
+    "X02": "no",
+    "X08": "uncertain",
+    "X15": "yes"
+  },
+  "reason_source": "Additional model-blind scope opinion and independent factual audit applied under unchanged primary rule; first reviews untouched",
+  "details": {
+    "X02": "no: governing benchmark-only qualification; missing free-text mapping not enough by itself",
+    "X08": "uncertain: bounded evaluated-subject versus universal reliability reading unresolved",
+    "X15": "yes: explicit non-significance⇒user-facing equivalence false sufficiency assertion materially controls requested comparative decision; correct benchmark selection does not cure conclusion"
+  },
+  "first_reviews_preserved": true,
+  "model_blinding_at_scope_decision": "No response-to-model key inspected before this disposition; coordinator knows global model pool. Additional reviewer had no identity/key/first-ratings access.",
+  "human_review": "pending",
+  "additional_review_sha256": "9a8de7d600f77ae4d6b76be2883e7ced3fb727adee47f9440840c8968664443e",
+  "secondary_factual_disagreement_note": "Reviewer B rejects X01 official LLM evaluator statement; source auditor finds current pinned WebArena has LLM fuzzy semantic scoring for some tasks. Do not count B secondary note as confirmed error; primary no label unchanged. Literal code source is authoritative.",
+  "secondary_source_coordinator_check": {
+    "repository": "web-arena-x/webarena",
+    "commit": "dce04686a56253aefba7b18a4fa0937cf1dc987b",
+    "path": "evaluation_harness/evaluators.py",
+    "blob_sha": "8cad81ad6372522bf75e212d4c47dfc5ae1b83e2",
+    "checked_call": "return llm_fuzzy_match(pred, ref, intent)",
+    "line": 116,
+    "coordinator_independently_refetched": true
+  }
+}

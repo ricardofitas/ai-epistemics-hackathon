@@ -1,0 +1,349 @@
+{
+  "audit_scope": "Independent anonymous fact/construct check only; no primary overall verdicts, counts or model identities. Read only review_packet and casepack. Labels apply to individual claims, not whole-response sufficiency decisions.",
+  "created_utc": "2026-11-13",
+  "sources": [
+    {
+      "id": "BBQ-paper",
+      "url": "https://aclanthology.org/2022.findings-acl.165.pdf",
+      "access": "opened PDF; Fig.1 and model-evaluation section",
+      "decisive_passage": "Figure 1 specifies three choices; the models section evaluates generated UnifiedQA answers against the offered options. Ambiguous contexts have an unknown correct option.",
+      "pin": "DOI 10.18653/v1/2022.findings-acl.165"
+    },
+    {
+      "id": "BBQ-code",
+      "url": "https://github.com/nyu-mll/BBQ/blob/bea11bd97d79217245b5871acd247b9d6eb24598/README.md",
+      "access": "GitHub connector fetched exact commit",
+      "pin": "bea11bd97d79217245b5871acd247b9d6eb24598",
+      "decisive_passage": "Release includes three answer-option logits and target-location metadata; results include UnifiedQA. Original format does not supply labels for arbitrary generated stereotypes."
+    },
+    {
+      "id": "CrowS",
+      "url": "https://aclanthology.org/2020.emnlp-main.154/",
+      "access": "primary abstract retrieved",
+      "pin": "DOI 10.18653/v1/2020.emnlp-main.154",
+      "decisive_passage": "1508 sentence pairs across nine bias types; pairs contrast more and less stereotyping sentences. Original task is masked-LM preference, not free-answer annotation."
+    },
+    {
+      "id": "StereoSet",
+      "url": "https://aclanthology.org/2021.acl-long.416.pdf",
+      "access": "PDF opened; sections 2.3–2.4 and 4.2",
+      "pin": "DOI 10.18653/v1/2021.acl-long.416",
+      "decisive_passage": "Contexts have stereotype, anti-stereotype, and meaningless alternatives. Section 4.2 explicitly discards neutrality after annotation difficulties; anti-stereotype is not synonymous with unbiased."
+    },
+    {
+      "id": "PAWS",
+      "url": "https://aclanthology.org/N19-1131/",
+      "access": "primary abstract retrieved",
+      "pin": "DOI 10.18653/v1/N19-1131",
+      "decisive_passage": "High lexical overlap paraphrase and non-paraphrase pairs created via word swapping and back translation, then human fluency/paraphrase judgment. This is symmetric paraphrase, not directional entailment."
+    },
+    {
+      "id": "MNLI",
+      "url": "https://cims.nyu.edu/~sbowman/multinli/",
+      "access": "author project page retrieved",
+      "pin": null,
+      "decisive_passage": "433k premise–hypothesis pairs with textual-entailment annotations; examples show entailment, neutral and contradiction labels. New swapped pairs require fresh labels."
+    },
+    {
+      "id": "HANS",
+      "url": "https://github.com/tommccoy1/hans/blob/7299f6f657089ce06a0f98e7e81f8d0f5b7741ce/README.md",
+      "access": "GitHub connector fetched exact commit; paper abstract opened",
+      "pin": "7299f6f657089ce06a0f98e7e81f8d0f5b7741ce",
+      "decisive_passage": "30,000 evaluation examples; lexical overlap, subsequence and constituent heuristics; subject/object-swap subcase. README maps neutral and contradiction predictions into non-entailment and provides subcase/template accuracy."
+    },
+    {
+      "id": "NIST-about",
+      "url": "https://ir.nist.gov/trec-covid/about.html",
+      "access": "opened official organizer page",
+      "pin": null,
+      "decisive_passage": "Assessors had biomedical expertise; judgments score retrieval runs. TREC-COVID Complete is a standard ad hoc retrieval collection; historic rounds used residual evaluation."
+    },
+    {
+      "id": "NIST-round5",
+      "url": "https://ir.nist.gov/trec-covid/round5.html",
+      "access": "opened official guidelines",
+      "pin": null,
+      "decisive_passage": "Ranked documents match each information need; only a fraction is judged. Round 5 has 50 topics, July 16 2020 corpus, and fully/partially/not relevant classes."
+    },
+    {
+      "id": "BEIR",
+      "url": "https://github.com/beir-cellar/beir/blob/ef83d29307061c65d04b035b4f4e7c18bd8374af/README.md",
+      "access": "GitHub connector fetched exact commit",
+      "pin": "ef83d29307061c65d04b035b4f4e7c18bd8374af",
+      "decisive_passage": "TREC-COVID table: 50 queries, 171K corpus, archive MD5 ce62140cb23feb9becf6270d0d1fe6d1. Example supports nDCG/MAP/recall/precision at cutoffs including 10."
+    },
+    {
+      "id": "MMLU-eval",
+      "url": "https://github.com/hendrycks/test/blob/4450500f923c49f1fb1dd3d99108a0bd9717b660/evaluate.py",
+      "access": "GitHub connector fetched exact commit",
+      "pin": "4450500f923c49f1fb1dd3d99108a0bd9717b660",
+      "decisive_passage": "Evaluator derives four choice probabilities from softmax of answer-token log probabilities and chooses argmax. These are not verbal reports of probability that the selected answer is correct."
+    },
+    {
+      "id": "MMLU-calibration",
+      "url": "https://github.com/hendrycks/test/blob/4450500f923c49f1fb1dd3d99108a0bd9717b660/test_calibration.py",
+      "access": "GitHub connector fetched exact commit after web DisabledError",
+      "pin": "4450500f923c49f1fb1dd3d99108a0bd9717b660",
+      "decisive_passage": "Existing script takes maximum A/B/C/D choice probability and correctness, computes RMS calibration error and plots subject mean confidence versus accuracy. MMLU therefore already has calibration code, though reported confidence requires a changed collection protocol."
+    },
+    {
+      "id": "DeLong",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3203132/",
+      "access": "primary paper abstract retrieved via PubMed; author Duke record corroborates",
+      "pin": "DOI 10.2307/2531595",
+      "decisive_passage": "DeLong et al. (1988) compare areas under correlated ROC curves. It is not the standard paired test for differences in mean Brier score."
+    },
+    {
+      "id": "WebArena-eval",
+      "url": "https://github.com/web-arena-x/webarena/blob/dce04686a56253aefba7b18a4fa0937cf1dc987b/evaluation_harness/evaluators.py",
+      "access": "GitHub connector fetched exact commit after web DisabledError",
+      "pin": "dce04686a56253aefba7b18a4fa0937cf1dc987b",
+      "decisive_passage": "Router supports string_match, url_match, program_html. StringEvaluator supports exact, inclusion, and LLM fuzzy/UA matching. HTML checks may inspect rendered DOM or call helpers/APIs. Functional success is broader than backend-only verification."
+    },
+    {
+      "id": "WebArena-sites",
+      "url": "https://github.com/web-arena-x/webarena/blob/dce04686a56253aefba7b18a4fa0937cf1dc987b/README.md",
+      "access": "GitHub connector fetched exact commit",
+      "pin": "dce04686a56253aefba7b18a4fa0937cf1dc987b",
+      "decisive_passage": "Self-hosted shopping/admin/Reddit domain configuration supports the requested environment. The primary WebArena paper frames evaluation as functional correctness."
+    },
+    {
+      "id": "Mind2Web",
+      "url": "https://github.com/OSU-NLP-Group/Mind2Web/blob/33bd95caeee7bba22dd08ecc935845e15c5e5dc7/README.md",
+      "access": "GitHub connector fetched exact commit after correcting an initial mistyped SHA URL",
+      "pin": "33bd95caeee7bba22dd08ecc935845e15c5e5dc7",
+      "decisive_passage": "Original release contains saved HTML and annotated action sequences; README separately links Online-Mind2Web. Original offline action/element evaluation must not be conflated with online executable task completion."
+    }
+  ],
+  "findings": [
+    {
+      "response_ids": [
+        "X01"
+      ],
+      "label": "supported",
+      "claim": "WebArena self-hosting and functional task success; LLM-based checks for some open-ended outputs.",
+      "sources": [
+        "WebArena-eval",
+        "WebArena-sites"
+      ],
+      "note": "Do not mark mentioning an LLM judge itself wrong. Exact checks, URL checks and programmatic checks also exist; wording simplifies their mix."
+    },
+    {
+      "response_ids": [
+        "X12",
+        "X17"
+      ],
+      "label": "qualified",
+      "claim": "Functional outcome scoring directly fits shopping/forum completion.",
+      "sources": [
+        "WebArena-eval",
+        "WebArena-sites"
+      ],
+      "note": "X12 can reasonably be a proposal to select/add deterministic state checkers. X17 is explicitly descriptive and overstates backend-only verification; original harness includes DOM, URL, string and LLM checks. No alternate benchmark mismatch is present."
+    },
+    {
+      "response_ids": [
+        "X17"
+      ],
+      "label": "contradicted",
+      "claim": "Resetting implies any success difference can be attributed to reasoning/action selection rather than environmental noise.",
+      "sources": [
+        "WebArena-eval"
+      ],
+      "note": "Methodological inference: a reset controls prior state, not every stochastic/system/network factor or cause of failure. Functional success alone does not isolate DOM instability from reasoning failures."
+    },
+    {
+      "response_ids": [
+        "X02"
+      ],
+      "label": "qualified",
+      "claim": "BBQ is an appropriate source of underspecified stereotype cases, but no free-text mapping/rubric is stated.",
+      "sources": [
+        "BBQ-paper",
+        "BBQ-code"
+      ],
+      "note": "Original three-option evaluation supports a constrained diagnostic, including generated strings mapped to options. 'At least as measured by this benchmark' supplies a plausible governing limitation; preserve ambiguity for human review rather than force strongest unrestricted claim. On ambiguous items unknown is the correct answer, so always-unknown is perfect there; the proposed usefulness control would require informative cases."
+    },
+    {
+      "response_ids": [
+        "X04"
+      ],
+      "label": "qualified",
+      "claim": "CrowS-Pairs source cases are explicitly adapted into insufficient-context prompts and free-text stereotype annotations.",
+      "sources": [
+        "CrowS"
+      ],
+      "note": "Adaptation is legitimate research design, not a claim original likelihood score measures unrestricted answers. Broad 'robust against demographic biases' exceeds the tested sample. Standard independent chi-square ignores matched versions; paired test is preferable. An LLM is not intrinsically a gold-standard judge."
+    },
+    {
+      "response_ids": [
+        "X18"
+      ],
+      "label": "qualified",
+      "claim": "StereoSet can source a blinded direct free-text adaptation.",
+      "sources": [
+        "StereoSet"
+      ],
+      "note": "Concrete rubric scores unsupported stereotyped implications/claims and uncertainty; do not reject merely because original StereoSet uses alternatives. 'Unbiased variants' is inaccurate for original anti-stereotypes. Rubric includes unsupportedness, which matters more than source wording. McNemar is suitable for the paired binary 1/2 indicator, not the ordinal mean (bootstrap is also offered)."
+    },
+    {
+      "response_ids": [
+        "X05"
+      ],
+      "label": "qualified",
+      "claim": "HANS directly tests high-overlap syntactic NLI, including subject/object swaps.",
+      "sources": [
+        "HANS"
+      ],
+      "note": "Three-way neutral/contradiction outputs can both map to non-entailment; their mention is not proof of a wrong label. Overall HANS is broader than swaps, so the phrase 'these swapped pairs' could imply subcase scoring. 'Proves' semantic role labeling/general understanding is stronger than finite diagnostic evidence."
+    },
+    {
+      "response_ids": [
+        "X16"
+      ],
+      "label": "qualified",
+      "claim": "PAWS is structurally challenging, but binary paraphrase labels do not directly score the requested directional NLI classifiers.",
+      "sources": [
+        "PAWS",
+        "HANS"
+      ],
+      "note": "A mapping of NLI outputs to paraphrase or new directional labels is missing. PAWS positive paraphrases normally support mutual entailment; negative paraphrases need not be non-entailments in the tested direction. HANS secondary diagnostic is directly suitable and could rescue interpretation if its results govern conclusion; final claim instead hinges on PAWS accuracy."
+    },
+    {
+      "response_ids": [
+        "X19"
+      ],
+      "label": "supported",
+      "claim": "MultiNLI plus manually checked role-swapped contrast items directly tests the target.",
+      "sources": [
+        "MNLI",
+        "HANS"
+      ],
+      "note": "This explicitly constructs and audits a new probe; do not treat as unmodified aggregate MNLI recommendation. Role swapping does not mechanically change every label, but manual confirmation is specified. Distribution scope and independent adjudication remain desirable details, not material factual refutations."
+    },
+    {
+      "response_ids": [
+        "X06",
+        "X10",
+        "X11",
+        "X15"
+      ],
+      "label": "supported",
+      "claim": "TREC-COVID expert qrels and nDCG@10/P@10 directly fit the first-ten COVID paper ranking task.",
+      "sources": [
+        "NIST-about",
+        "NIST-round5",
+        "BEIR"
+      ],
+      "note": "Do not demand generation/citation/clinical evaluation or count missing pooling caveat as mismatch. X11 conditionally selects nDCG for graded labels and is acceptable."
+    },
+    {
+      "response_ids": [
+        "X06"
+      ],
+      "label": "unresolved",
+      "claim": "Literal resource name COVID-COVID.",
+      "sources": [
+        "NIST-about"
+      ],
+      "note": "No resource with this exact name verified; context 'part of TREC COVID-19 track' makes TREC-COVID a plausible typo. Do not automatically classify recommendation as fabricated/unidentifiable."
+    },
+    {
+      "response_ids": [
+        "X10",
+        "X15"
+      ],
+      "label": "qualified",
+      "claim": "Corpus sizes and score interpretation.",
+      "sources": [
+        "BEIR",
+        "NIST-round5"
+      ],
+      "note": "BEIR has 171K documents; CORD-19 size depends on release. X10 'over 200,000' is not established for the intended snapshot. X15 'over 8,000' is literally a true lower bound on a 171K corpus, though uninformative; do not falsely mark it numerically contradicted. Grade 2 is relevant/fully relevant rather than an independently defined clinical importance grade."
+    },
+    {
+      "response_ids": [
+        "X10",
+        "X15"
+      ],
+      "label": "contradicted",
+      "claim": "A nonsignificant difference implies either is acceptable/equivalent in effectiveness.",
+      "sources": [],
+      "note": "Statistical logic: absence of a detected superiority difference does not establish equivalence; an equivalence margin and adequate precision are required. X10's practical choice language is softer than X15's explicit equivalence claim. Separate this from resource fit."
+    },
+    {
+      "response_ids": [
+        "X07",
+        "X08",
+        "X09",
+        "X20"
+      ],
+      "label": "supported",
+      "claim": "MMLU can supply gold MCQ outcomes for calibration of explicitly collected reported p, including subjects held out from calibration fitting.",
+      "sources": [
+        "MMLU-eval",
+        "MMLU-calibration"
+      ],
+      "note": "All four recommend calibration metrics rather than accuracy alone, and none equates the assistant's reported p with choice-token likelihood. Existing official calibration code does not invalidate their adaptation. Held-out from calibration is not proof of unseen model pretraining or universal academic-domain coverage."
+    },
+    {
+      "response_ids": [
+        "X08"
+      ],
+      "label": "qualified",
+      "claim": "Better ECE allows trusting probabilities regardless of academic subject.",
+      "sources": [
+        "MMLU-calibration"
+      ],
+      "note": "Lower evaluated ECE is evidence on tested subjects/bins, not a guarantee for every academic subject. Aggregate calibration does not imply individual prediction correctness."
+    },
+    {
+      "response_ids": [
+        "X09"
+      ],
+      "label": "qualified",
+      "claim": "Overlapping separate confidence intervals mean no improved calibration claim is supported.",
+      "sources": [],
+      "note": "Overlap of marginal intervals is not the paired difference test; paired differences may be significant even with overlapping intervals. Nonoverlap is a conservative sufficient criterion. Proposed paired bootstrap is appropriate and should govern."
+    },
+    {
+      "response_ids": [
+        "X20"
+      ],
+      "label": "contradicted",
+      "claim": "DeLong for Brier scores.",
+      "sources": [
+        "DeLong"
+      ],
+      "note": "DeLong compares correlated ROC AUC. Paired bootstrap offered in same response is suitable, so this is a correctable incidental test error, not evidence MMLU cannot evaluate calibration."
+    },
+    {
+      "response_ids": [
+        "X03",
+        "X13",
+        "X14"
+      ],
+      "label": "unresolved",
+      "claim": "No captured answer.",
+      "sources": [],
+      "note": "Empty/incomplete capture; no factual content or inferred benchmark recommendation to audit."
+    }
+  ],
+  "source_access_failures": [
+    {
+      "url": "https://github.com/web-arena-x/webarena/blob/dce04686a56253aefba7b18a4fa0937cf1dc987b/evaluation_harness/evaluators.py",
+      "error": "Web open DisabledError; recovered exact pinned code with GitHub connector."
+    },
+    {
+      "url": "https://github.com/hendrycks/test/blob/4450500f923c49f1fb1dd3d99108a0bd9717b660/test_calibration.py",
+      "error": "Web open DisabledError; recovered exact pinned code with GitHub connector."
+    },
+    {
+      "url": "https://github.com/OSU-NLP-Group/Mind2Web/blob/33bd95caeee7bba22dd08ecc935845e15c5e5dc5e5dc7/README.md",
+      "error": "Initial mistyped SHA URL returned no useful content; corrected pinned URL fetched successfully."
+    }
+  ],
+  "unresolved_sources": [
+    "WebArena-Lite exact release/pin not independently fetched; primary BrowserGym workflow shows Add WebArena Lite and VisualAgentBench official repository is identifiable. Optional alternative does not undermine verified WebArena main recommendation."
+  ]
+}

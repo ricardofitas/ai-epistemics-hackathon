@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-11-13T03:50:49.425031+00:00",
+  "counting_unit": "Distinct source-backed research-claim case families with actual assistant recommendation answers. This is NOT a literal count of independently executed full benchmark model evaluations, and it is NOT a count of every benchmark name mentioned.",
+  "tested_source_case_families_before": 10,
+  "new_families_with_complete_answers": 5,
+  "tested_source_case_families_after": 15,
+  "complete_answers_before": 102,
+  "new_complete_answers": 17,
+  "complete_answers_after": 119,
+  "all_captures_before": 106,
+  "new_attempts": 20,
+  "all_captures_after": 126,
+  "empty_captures_after": 7,
+  "preferred_target_families": 15,
+  "minimum_target_families": 12,
+  "target_status": "preferred target reached at source-case-family level",
+  "caution": "Inventory totals span heterogeneous interfaces and designs; never use119/126 as a common model-quality/error-rate denominator. Individual names/variants within one case do not add independent families.",
+  "new_family_complete_counts": {
+    "NEW-BEIR-COVID-RETRIEVAL-POSITIVE": {
+      "attempted": 4,
+      "complete": 4
+    },
+    "NEW-HANS-ROLES": {
+      "attempted": 4,
+      "complete": 3
+    },
+    "NEW-MMLU-CONFIDENCE": {
+      "attempted": 4,
+      "complete": 4
+    },
+    "NEW-WEB-OUTCOMES": {
+      "attempted": 4,
+      "complete": 3
+    },
+    "new_bbq_freetext_stereotype_assumptions": {
+      "attempted": 4,
+      "complete": 3
+    }
+  },
+  "human_review": "pending"
+}
