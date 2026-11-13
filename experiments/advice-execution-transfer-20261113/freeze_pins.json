@@ -1,0 +1,24 @@
+{
+  "files": {
+    "INPUT_PROVENANCE.json": "9b549b28f5f835fd595c1df4fbed040009eefa14de0d6724bbbde452530efcd6",
+    "SVAMP_SCHEMA_AUDIT.json": "48df5c051df9a2c587df06c1c1fe2316839e8e2328f5273fec4419f0ffec5baa",
+    "execute_study.py": "6d98608bd0c277a4f47c5bfd3f7d231b04ec483232b3033b72e36d087be2d499",
+    "prepare_transfer.py": "03df7776fd399fb39d61ad2899bc36e19b6b17c27383c629876fae983e535943",
+    "prepare_translation.py": "b2a42c491171c8b930bff74dd4958d77ed742a781cace24e354b28f78c964eb5",
+    "replay_math.jsonl": "0a969d2e92028c968e903f7c550fcbf09e875df03e8959d53f49fc308c612e50",
+    "reviews_manifest.jsonl.gz.b64": "8daf17e283608bb8dfebd9284f2d45e3463f6fa3dffc21e6a4f192fbe58e67b5",
+    "scripts/run_adaption_stream_pilot.py": "c280811c5f685cdc5b254d5097946835428cd87de6ea58218de1e2cad537fe5e",
+    "study_analysis.py": "cfa71266c95c574ae1406cca4f30716832a4c4a1855e1491c2a44fa7ddc9b802",
+    "test_study_analysis.py": "8b7870723a1d167dabba4344b0dc404b2b6ebb1b5d399f7484c40f89bd9f748b",
+    "transfer/candidate_families.json": "ebbbc31f6420089606cc71c0314400f507921ca732326ca32296df150668e9f8",
+    "transfer/protocol.json": "824fad8079da332530ebda5def70b695e8a629031430998750af3423a64c0e1e",
+    "translation/key.jsonl": "abb4ed02e5baa56ea669855ce9392874f44c06c5c6b8dd2771291e82e7b6914e",
+    "translation/original_missing.json": "17e5bf5546f424ffffcb55cce49897f1e5293c7af0cc1b55b10210c7ea6330cc",
+    "translation/packet.jsonl": "2d158ace7f9ddeb69b2e70ee2b73f7cce0bde6af41d4abfc083a9ae74a853d92",
+    "translation/protocol.json": "b2d1cd6a7a5659172b1d85efeb96731a3419bde90ec84602d4f3dc48b56237cd"
+  },
+  "reviews_manifest_sha256": "231344d31fd4026b353a0c9a42cbd4f448e86a2369c8e07372a21622851390ba",
+  "translation_requests": 52,
+  "source_review_requests": 80,
+  "maximum_solver_requests": 480
+}

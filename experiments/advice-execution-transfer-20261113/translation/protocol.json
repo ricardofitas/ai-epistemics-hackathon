@@ -1,0 +1,50 @@
+{
+  "study": "Archived scientific advice execution translation",
+  "version": 1,
+  "prepared_utc": "2026-11-13T20:28:35.528994+00:00",
+  "design": "Prospective translation extraction of a retrospective selected advice cohort",
+  "original_planned": 36,
+  "original_complete": 26,
+  "original_incomplete": 10,
+  "reviewers": [
+    "deepseek-v4-flash",
+    "gemma-4-31b-it"
+  ],
+  "new_model_requests": 52,
+  "max_requested_output_tokens": 425984,
+  "attempts_per_request": 1,
+  "reviewer_visibility": [
+    "original natural-language question",
+    "ordinary answer"
+  ],
+  "hidden_from_reviewers": [
+    "model",
+    "condition",
+    "repetition",
+    "solver predictions",
+    "outcomes"
+  ],
+  "adjudication": "No discretionary adjudication. Report two originals, exact-quote validity, agreements and unions.",
+  "incomplete_review": "Retain as unresolved. Never infer source failure from a missing annotation.",
+  "replay": {
+    "source": "Previously captured 30-family mathematical pilot, all families",
+    "direct_projection": "Both valid reviewers agree on P1/P2 resource and accuracy without filters, new items or seed dependence",
+    "ambiguous_p1_p2_weights": "Convex hull of the P1 and P2 resource gap endpoints",
+    "precision": "Exact rational finite-cohort bounds with missing correctness in [0,1]",
+    "unit": "Resource-induced cohort score projection. Full recommended statistical decisions require more outputs.",
+    "seed_metrics": "Require seed predictions; score projection alone must not be called full plan execution",
+    "unsupported_resource": "Separate missing replay bank from intrinsically unresolved source recipe"
+  },
+  "source_files": {
+    "original_responses_sha256": "da02c9d9651add6a765b1e908649fe1d0b2ba3e11072fe79ad0dbfd81d4c930a",
+    "casepack_sha256": "05051259ca654cfef4f732ddc7d5bcd47c85cfb80f9e3ea6ed1304054de00be6"
+  },
+  "limitations": [
+    "One post-discovery selected case",
+    "Prior primary advice ratings stay separate",
+    "Two model readers can share errors",
+    "Human review pending",
+    "Coordinator already knows archived outcomes",
+    "Public-resource model aliases are mutable"
+  ]
+}
