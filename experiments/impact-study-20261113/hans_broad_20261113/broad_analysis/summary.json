@@ -1,0 +1,140 @@
+{
+  "status": "complete_broad_external_holdout",
+  "created_utc": "2026-11-13T10:48:06.116290+00:00",
+  "inference_freeze_commit": "0d7647fd95b6b61b6d0eebed44657c03ea2c0d40",
+  "inference_plan_sha256": "614931baebe441d013c42c6c3618769b25ce0e06fa07dfce162899f2d5042cee",
+  "broad_source_protocol_sha256": "f8da17431a8b3d57f5e64465f79077c2276d737ddd44479daec0d3ce94966842",
+  "selected_data_sha256": "dfe59fb5f18860406082fb5eec95d4ca37b204cbf80c40163eed801729e55ada",
+  "source_receipt_sha256": "2f5d3d12690b5d2553349fcedee2cdab32ebe08db7018972407683544f97950a",
+  "wsc_analysis_sha256": "a06cf000cce497fae4a91ce696d04c2800ca5fdf073c0162617c8110bb858067",
+  "models": [
+    "nli-deberta-v3-small",
+    "nli-distilroberta-base",
+    "nli-roberta-base",
+    "nli-deberta-v3-base"
+  ],
+  "source": {
+    "examples": 600,
+    "subcases": 30,
+    "templates": 58,
+    "heuristics": [
+      "constituent",
+      "lexical_overlap",
+      "subsequence"
+    ],
+    "label_heuristic_cells": 6,
+    "items_per_subcase": 20
+  },
+  "wsc_selection_imposed_winners": [
+    "nli-deberta-v3-small"
+  ],
+  "wsc_selection_repaired_winners": [
+    "nli-deberta-v3-small"
+  ],
+  "unique_winners_both_rules": true,
+  "different_selection_winners": false,
+  "macro30_accuracy": {
+    "nli-deberta-v3-small": 0.7,
+    "nli-distilroberta-base": 0.5333333333333333,
+    "nli-roberta-base": 0.6883333333333334,
+    "nli-deberta-v3-base": 0.7766666666666666
+  },
+  "micro600_accuracy": {
+    "nli-deberta-v3-small": 0.7,
+    "nli-distilroberta-base": 0.5333333333333333,
+    "nli-roberta-base": 0.6883333333333334,
+    "nli-deberta-v3-base": 0.7766666666666666
+  },
+  "heuristic_accuracy": {
+    "constituent": {
+      "nli-deberta-v3-small": 0.59,
+      "nli-distilroberta-base": 0.535,
+      "nli-roberta-base": 0.57,
+      "nli-deberta-v3-base": 0.695
+    },
+    "lexical_overlap": {
+      "nli-deberta-v3-small": 0.985,
+      "nli-distilroberta-base": 0.545,
+      "nli-roberta-base": 0.905,
+      "nli-deberta-v3-base": 0.97
+    },
+    "subsequence": {
+      "nli-deberta-v3-small": 0.525,
+      "nli-distilroberta-base": 0.52,
+      "nli-roberta-base": 0.59,
+      "nli-deberta-v3-base": 0.665
+    }
+  },
+  "heuristic_by_gold_accuracy": {
+    "constituent|entailment": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 0.99,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    },
+    "constituent|non-entailment": {
+      "nli-deberta-v3-small": 0.18,
+      "nli-distilroberta-base": 0.08,
+      "nli-roberta-base": 0.14,
+      "nli-deberta-v3-base": 0.39
+    },
+    "lexical_overlap|entailment": {
+      "nli-deberta-v3-small": 0.99,
+      "nli-distilroberta-base": 0.97,
+      "nli-roberta-base": 0.98,
+      "nli-deberta-v3-base": 0.98
+    },
+    "lexical_overlap|non-entailment": {
+      "nli-deberta-v3-small": 0.98,
+      "nli-distilroberta-base": 0.12,
+      "nli-roberta-base": 0.83,
+      "nli-deberta-v3-base": 0.96
+    },
+    "subsequence|entailment": {
+      "nli-deberta-v3-small": 0.98,
+      "nli-distilroberta-base": 0.99,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    },
+    "subsequence|non-entailment": {
+      "nli-deberta-v3-small": 0.07,
+      "nli-distilroberta-base": 0.05,
+      "nli-roberta-base": 0.18,
+      "nli-deberta-v3-base": 0.33
+    }
+  },
+  "repaired_selected_minus_imposed_selected_accuracy": 0.0,
+  "bootstrap": {
+    "method": "paired stratified subcase-cluster percentile bootstrap",
+    "subcases_per_cell": 5,
+    "cell_count": 6,
+    "repeats": 10000,
+    "seed": 2026111360,
+    "model_accuracy_interval95": {
+      "nli-deberta-v3-small": [
+        0.6666666666666666,
+        0.735
+      ],
+      "nli-distilroberta-base": [
+        0.5066666666666666,
+        0.565
+      ],
+      "nli-roberta-base": [
+        0.6383333333333333,
+        0.7333333333333333
+      ],
+      "nli-deberta-v3-base": [
+        0.7016666666666667,
+        0.8533333333333334
+      ]
+    },
+    "repaired_minus_imposed_winner_interval95": [
+      0.0,
+      0.0
+    ],
+    "scope": "Descriptive conditional sensitivity to subcase resampling on fixed HANS source; not a population or pretraining-absence guarantee."
+  },
+  "case_scores_sha256": "d9a2effbed035693841a47fc367725bf3862a3ba135ff27ef871df3f0a552986",
+  "subcase_scores_sha256": "54a0a00fdce678fb7c1402ef30b8939bfeea8237c375a5d573d58539a99e920d",
+  "scope": "External to the WSC selection cases but drawn from the same public HANS source as HANS80; broader 30-subcase/58-template coverage. Pretraining exposure unknown and template dependence remains. The raw-count WSC choice is an abstraction of the original recommendation. No actual user decision, human-certified WSC NLI gold or general benchmark-wide claim."
+}

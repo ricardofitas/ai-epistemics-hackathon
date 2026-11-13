@@ -1,0 +1,362 @@
+[
+  {
+    "heuristic": "constituent",
+    "gold_binary": "entailment",
+    "subcase": "ce_adverb",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 1.0,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "constituent",
+    "gold_binary": "entailment",
+    "subcase": "ce_after_since_clause",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 1.0,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "constituent",
+    "gold_binary": "entailment",
+    "subcase": "ce_conjunction",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 1.0,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "constituent",
+    "gold_binary": "entailment",
+    "subcase": "ce_embedded_under_since",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 1.0,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "constituent",
+    "gold_binary": "entailment",
+    "subcase": "ce_embedded_under_verb",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 0.95,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "constituent",
+    "gold_binary": "non-entailment",
+    "subcase": "cn_adverb",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.0,
+      "nli-distilroberta-base": 0.0,
+      "nli-roberta-base": 0.2,
+      "nli-deberta-v3-base": 0.35
+    }
+  },
+  {
+    "heuristic": "constituent",
+    "gold_binary": "non-entailment",
+    "subcase": "cn_after_if_clause",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.0,
+      "nli-distilroberta-base": 0.0,
+      "nli-roberta-base": 0.0,
+      "nli-deberta-v3-base": 0.0
+    }
+  },
+  {
+    "heuristic": "constituent",
+    "gold_binary": "non-entailment",
+    "subcase": "cn_disjunction",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.0,
+      "nli-distilroberta-base": 0.0,
+      "nli-roberta-base": 0.0,
+      "nli-deberta-v3-base": 0.0
+    }
+  },
+  {
+    "heuristic": "constituent",
+    "gold_binary": "non-entailment",
+    "subcase": "cn_embedded_under_if",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.45,
+      "nli-distilroberta-base": 0.4,
+      "nli-roberta-base": 0.1,
+      "nli-deberta-v3-base": 0.95
+    }
+  },
+  {
+    "heuristic": "constituent",
+    "gold_binary": "non-entailment",
+    "subcase": "cn_embedded_under_verb",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.45,
+      "nli-distilroberta-base": 0.0,
+      "nli-roberta-base": 0.4,
+      "nli-deberta-v3-base": 0.65
+    }
+  },
+  {
+    "heuristic": "lexical_overlap",
+    "gold_binary": "entailment",
+    "subcase": "le_around_prepositional_phrase",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 1.0,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "lexical_overlap",
+    "gold_binary": "entailment",
+    "subcase": "le_around_relative_clause",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 0.95,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 0.95
+    }
+  },
+  {
+    "heuristic": "lexical_overlap",
+    "gold_binary": "entailment",
+    "subcase": "le_conjunction",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 0.95,
+      "nli-roberta-base": 0.95,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "lexical_overlap",
+    "gold_binary": "entailment",
+    "subcase": "le_passive",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 1.0,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "lexical_overlap",
+    "gold_binary": "entailment",
+    "subcase": "le_relative_clause",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.95,
+      "nli-distilroberta-base": 0.95,
+      "nli-roberta-base": 0.95,
+      "nli-deberta-v3-base": 0.95
+    }
+  },
+  {
+    "heuristic": "lexical_overlap",
+    "gold_binary": "non-entailment",
+    "subcase": "ln_conjunction",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 0.25,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "lexical_overlap",
+    "gold_binary": "non-entailment",
+    "subcase": "ln_passive",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 0.0,
+      "nli-roberta-base": 0.35,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "lexical_overlap",
+    "gold_binary": "non-entailment",
+    "subcase": "ln_preposition",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.95,
+      "nli-distilroberta-base": 0.1,
+      "nli-roberta-base": 0.9,
+      "nli-deberta-v3-base": 0.95
+    }
+  },
+  {
+    "heuristic": "lexical_overlap",
+    "gold_binary": "non-entailment",
+    "subcase": "ln_relative_clause",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.95,
+      "nli-distilroberta-base": 0.2,
+      "nli-roberta-base": 0.9,
+      "nli-deberta-v3-base": 0.85
+    }
+  },
+  {
+    "heuristic": "lexical_overlap",
+    "gold_binary": "non-entailment",
+    "subcase": "ln_subject/object_swap",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 0.05,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "subsequence",
+    "gold_binary": "entailment",
+    "subcase": "se_PP_on_obj",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 1.0,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "subsequence",
+    "gold_binary": "entailment",
+    "subcase": "se_adjective",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 1.0,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "subsequence",
+    "gold_binary": "entailment",
+    "subcase": "se_conjunction",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.9,
+      "nli-distilroberta-base": 1.0,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "subsequence",
+    "gold_binary": "entailment",
+    "subcase": "se_relative_clause_on_obj",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 0.95,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "subsequence",
+    "gold_binary": "entailment",
+    "subcase": "se_understood_object",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 1.0,
+      "nli-distilroberta-base": 1.0,
+      "nli-roberta-base": 1.0,
+      "nli-deberta-v3-base": 1.0
+    }
+  },
+  {
+    "heuristic": "subsequence",
+    "gold_binary": "non-entailment",
+    "subcase": "sn_NP/S",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.0,
+      "nli-distilroberta-base": 0.0,
+      "nli-roberta-base": 0.0,
+      "nli-deberta-v3-base": 0.0
+    }
+  },
+  {
+    "heuristic": "subsequence",
+    "gold_binary": "non-entailment",
+    "subcase": "sn_NP/Z",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.1,
+      "nli-distilroberta-base": 0.0,
+      "nli-roberta-base": 0.05,
+      "nli-deberta-v3-base": 0.05
+    }
+  },
+  {
+    "heuristic": "subsequence",
+    "gold_binary": "non-entailment",
+    "subcase": "sn_PP_on_subject",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.2,
+      "nli-distilroberta-base": 0.2,
+      "nli-roberta-base": 0.45,
+      "nli-deberta-v3-base": 0.7
+    }
+  },
+  {
+    "heuristic": "subsequence",
+    "gold_binary": "non-entailment",
+    "subcase": "sn_past_participle",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.0,
+      "nli-distilroberta-base": 0.05,
+      "nli-roberta-base": 0.15,
+      "nli-deberta-v3-base": 0.05
+    }
+  },
+  {
+    "heuristic": "subsequence",
+    "gold_binary": "non-entailment",
+    "subcase": "sn_relative_clause_on_subject",
+    "n": 20,
+    "accuracy": {
+      "nli-deberta-v3-small": 0.05,
+      "nli-distilroberta-base": 0.0,
+      "nli-roberta-base": 0.25,
+      "nli-deberta-v3-base": 0.85
+    }
+  }
+]

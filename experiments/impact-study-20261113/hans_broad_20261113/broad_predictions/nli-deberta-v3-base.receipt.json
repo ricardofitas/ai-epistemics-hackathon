@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "model_id": "cross-encoder/nli-deberta-v3-base",
+  "revision": "6c749ce3425cd33b46d187e45b92bbf96ee12ec7",
+  "slug": "nli-deberta-v3-base",
+  "model_weight_sha256": "d8148c6d49e0a7925134294c56326c71fe0ab1dc390e37355e00c7efbb488afa",
+  "rows": 600,
+  "predictions_sha256": "02323a2e7ea31453b2c4f08b282b692ad50247cb08677cb17bfbe804368c87a9",
+  "plan_sha256": "614931baebe441d013c42c6c3618769b25ce0e06fa07dfce162899f2d5042cee",
+  "broad_protocol_sha256": "f8da17431a8b3d57f5e64465f79077c2276d737ddd44479daec0d3ce94966842",
+  "source_receipt_sha256": "2f5d3d12690b5d2553349fcedee2cdab32ebe08db7018972407683544f97950a",
+  "freeze_commit": "0d7647fd95b6b61b6d0eebed44657c03ea2c0d40",
+  "completed_utc": "2026-11-13T10:48:00.755849+00:00",
+  "elapsed_seconds": 44.115,
+  "label_map": {
+    "0": "contradiction",
+    "1": "entailment",
+    "2": "neutral"
+  },
+  "device": "cpu",
+  "batch_size": 8,
+  "inference_mode": "eval_no_grad",
+  "input_truncation": false
+}
