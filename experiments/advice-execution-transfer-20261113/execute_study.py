@@ -92,10 +92,13 @@ def run():
     with urllib.request.build_opener(NoRedirect()).open(request, timeout=30) as response:
         catalogue = json.load(response)
     expected = set(load(ROOT / 'transfer/protocol.json')['reviewers'] + load(ROOT / 'transfer/protocol.json')['solvers'])
-    if not expected <= {r.get('id') for r in catalogue.get('data', [])}:
-        raise RuntimeError('A fixed model is absent from the catalogue')
+    available = sorted(r['id'] for r in catalogue.get('data', []) if isinstance(r, dict) and isinstance(r.get('id'), str))
     dump(ROOT / 'catalogue_check.json', {'checked_utc': dt.datetime.now(dt.timezone.utc).isoformat(),
-         'required_model_ids': sorted(expected), 'all_present': True, 'inference_requests': 0})
+         'required_model_ids': sorted(expected), 'available_model_ids': available,
+         'all_present': expected <= set(available), 'inference_requests': 0})
+    if not expected <= set(available):
+        print(json.dumps({'catalogue_available_ids': available, 'missing_fixed_ids': sorted(expected - set(available))}), flush=True)
+        raise RuntimeError('A fixed model is absent from the catalogue; no model requests were made')
     dump(ROOT / 'EXECUTION_RECEIPT.json', {'started_utc': dt.datetime.now(dt.timezone.utc).isoformat(),
          'execution_commit': os.environ['GITHUB_SHA'], 'run_id': os.environ['GITHUB_RUN_ID'],
          'run_attempt': 1, 'pins': pins, 'review_requests': 132, 'maximum_solver_requests': 480,

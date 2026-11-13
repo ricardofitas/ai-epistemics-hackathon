@@ -9,7 +9,7 @@ from prepare_translation import canonical, digest, dump
 ROOT = Path(__file__).resolve().parent
 VARIANTS = {'numeric': 'numerical substitution', 'paraphrase': 'problem understanding',
             'added_operation': 'adding operation'}
-REVIEWERS = ['qwen3.5-397b', 'glm-53-flash']
+REVIEWERS = ['qwen3.5-397b', 'glm-5.3-flash']
 SOLVERS = ['deepseek-v4-flash', 'gemma-4-31b-it', 'qwen3.8-27b', 'gemma-4-26b-a4b-it']
 
 SOURCE_INSTRUCTION = '''Independently review a linked elementary arithmetic problem family.
