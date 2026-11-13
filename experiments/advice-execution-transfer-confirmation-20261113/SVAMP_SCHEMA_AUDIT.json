@@ -1,0 +1,19 @@
+{
+  "resource": "arkilpatel/SVAMP",
+  "commit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+  "file_blob_sha": "aad093525105c6331581d7082250b9c22578271e",
+  "file": "SVAMP.json",
+  "records": 1000,
+  "all_record_field_sets": [
+    "['Answer', 'Body', 'Equation', 'ID', 'Question', 'Type']"
+  ],
+  "type_counts": {
+    "Subtraction": 531,
+    "Addition": 195,
+    "Multiplication": 108,
+    "Common-Division": 165,
+    "Common-Divison": 1
+  },
+  "direct_structural_invariance_filter_field": false,
+  "meaning": "The released Type field classifies arithmetic operations, not the three perturbation categories. A structural-invariance subset requires external annotations or construction; this does not prove such a subset cannot be curated."
+}

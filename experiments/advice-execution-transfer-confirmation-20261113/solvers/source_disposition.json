@@ -1,0 +1,2706 @@
+{
+  "candidate_count": 36,
+  "admitted_count": 16,
+  "exclusions_are_not_counts_of_proven_gold_errors": true,
+  "families": [
+    {
+      "family_id": "GSM8K-883",
+      "review_id": "NS-001",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-001-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "25",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values changed (3x, 20, 80). Algebraic structure identical to seed. Unique solution exists. Transform fits numeric variation criteria."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "25",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered (show vs concert, double vs twice). Numerical values and algebraic structure match seed exactly. Answer remains 25. Transform fits paraphrase criteria."
+              },
+              {
+                "id": "added_operation",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds 10-minute break component. Equation becomes 2x + 15 + 10 = 65. Requires additional addition step. Ambiguity on whether break counts toward runtime is low in this context."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-001-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "25",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Changes multiplier (twice to three times), encore (15 to 20), and total (65 to 80) while keeping the same structure: 3x + 20 = 80 gives x = 20. Fits numeric transform."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "25",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording rephrased (last show, extra performance) but identical numbers and structure: 2x + 15 = 65 gives 25, matching the seed answer. Fits paraphrase transform."
+              },
+              {
+                "id": "added_operation",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a 10-minute break before the encore, requiring an extra additive step: 2x + 15 + 10 = 65 gives x = 20. Break placement is unambiguous. Fits added_operation transform."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-46",
+      "review_id": "NS-002",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-002-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "163",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "195",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values updated consistently. Structure preserved. Calculation yields unique integer solution."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "163",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered without changing values or mathematical logic. Answer matches seed exactly."
+              },
+              {
+                "id": "added_operation",
+                "answer": "188",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Additional usage terms added requiring summation. Increases complexity while maintaining solvability."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-002-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "163",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "195",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Only numbers changed (80→90, 220→240, 23→45); structure identical: package = remaining + used − initial = 45+240−90 = 195."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "163",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording rephrased (barista job, sticky notes, pit stop) but numbers 80/220/23 and equation unchanged; answer 163 preserved."
+              },
+              {
+                "id": "added_operation",
+                "answer": "188",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds two extra usage amounts (15 special orders, 10 messages), requiring additional arithmetic: package = 23+220+15+10−80 = 188. Necessary added operations, structure otherwise intact."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-934",
+      "review_id": "NS-003",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-003-R1",
+          "passed": false,
+          "reasons": [
+            "seed_not_strict_pass",
+            "numeric_not_strict_pass",
+            "paraphrase_not_strict_pass",
+            "added_operation_not_strict_pass"
+          ],
+          "first_review": {
+            "seed_answer": "410",
+            "seed_clarity": "uncertain",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "780",
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Numeric values changed correctly. Structure preserved. Inherits seed's ambiguous phrasing 'average total distance', though integer result suggests mean of totals."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "410",
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Wording altered while preserving values and logic. 'Mean total distance' retains the seed's semantic ambiguity regarding averaging totals versus per-seed distance."
+              },
+              {
+                "id": "added_operation",
+                "answer": "440",
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Adds reasoning steps. Ambiguity exists in 'distance spat' (unit vs total) and averaging basis for the new combined total. Derived 440 using unit distance and dividing by two participants."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-003-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "410",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "780",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Only values changed (50x15=750, 45x18=810); same average-of-totals structure gives (750+810)/2=780. Typo 'having in' is cosmetic, not ambiguous."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "410",
+                "answer_note": "",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Identical numbers and structure, reworded; totals 400 and 420, mean (400+420)/2=410, matching the seed answer exactly."
+              },
+              {
+                "id": "added_operation",
+                "answer": "440",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds required steps: (40-35)x12=60; 820+60=880; new average 880/2=440. 'Distance spat' reads as per-seed 12 ft since sums are consistently labeled 'total distance'; result robust to attribution of the 60."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-475",
+      "review_id": "NS-004",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-004-R1",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "20",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "36",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values updated consistently. Structure remains total time divided by total available days. Calculation 360/(2*5)=36 is straightforward."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered without changing mathematical structure or values. Answer remains 20 minutes. Semantic equivalence maintained clearly."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "Ambiguity in 'extra day' scope (per week vs total duration) prevents unique determination of divisor. Unclear if rate changes to 5 days/week or total days becomes 13."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-004-R2",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "20",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "36",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "360 ÷ (2 weeks × 5 days) = 360 ÷ 10 = 36 minutes/day. Only numerical values changed; division structure and question form identical to seed."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same values (240 minutes, 3 weeks, 4 days/week) and same division structure, only reworded; 240 ÷ 12 = 20, matching the seed answer."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "'An extra day' is ambiguous: one extra day total gives 13 days (240/13 ≈ 18.46, non-integer), while an extra day each week gives 15 days (16). The clean answer suggests the latter, but wording supports the former; answer not uniquely determined."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-1216",
+      "review_id": "NS-006",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-006-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "20",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "30",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values updated consistently. Structure preserved. Calculation: 300 - (30+60+45)*2 = 30. No ambiguity introduced."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered without changing values or logic. Answer matches seed. Phrasing 'how many more' equals 'remaining spaces'."
+              },
+              {
+                "id": "added_operation",
+                "answer": "10",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds fourth stop entry step. Increases reasoning depth. Calculation extends seed logic: 200 - (180 + 10) = 10."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-006-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "20",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "30",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "30+60+45=135, doubled=270, 300-270=30. Only numerical values changed (200→300, 20→30, 40→60); operations and structure identical to seed."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same numbers and structure: 20+40+30=90, doubled=180, 200-180=20. Wording rephrased cleanly; '3/4 of the number that got on at the first stop' preserves the intended computation."
+              },
+              {
+                "id": "added_operation",
+                "answer": "10",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "20+40+30=90, doubled=180, plus 10 at fourth stop=190, 200-190=10. Adds a fourth-stop boarding step requiring an extra operation; 10 entrants fit within remaining capacity, so consistent."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-329",
+      "review_id": "NS-007",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-007-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "14",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "17",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Structure matches seed exactly with different integers. Calculation is straightforward addition then subtraction."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "14",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered but numerical values and logical flow match seed perfectly. Resulting answer is identical to seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": "12",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a second subtraction step compared to the seed's single subtraction. Increases complexity while maintaining context. Calculation requires an extra operation."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-007-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "14",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "17",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Changes all three numbers (7→9, 10→12, 3→4) while preserving the add-add-subtract structure; 9+12-4=17."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "14",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Rephrases wording (possesses, receives, sharing) while keeping identical values and structure; 7+10-3=14, matching the seed answer."
+              },
+              {
+                "id": "added_operation",
+                "answer": "12",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a second giveaway (2 to sister), requiring an extra subtraction: 7+10-3-2=12. Structure otherwise matches the seed."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-190",
+      "review_id": "NS-008",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-008-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "360",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "720",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numbers changed (4h, 3/min). Structure identical. Calculation: 4 * 60 * 3 = 720."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "360",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording changed, numbers and structure preserved. Calculation matches seed: 3 * 60 * 2 = 360."
+              },
+              {
+                "id": "added_operation",
+                "answer": "345",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds subtraction step. 360 collected. Eats 5 after each of 3 hours (15 total). 360 - 15 = 345."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-008-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "360",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "720",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same rate-times-time structure with changed values: 4 hours = 240 minutes, 240 x 3 = 720 peaches. Clean numeric variant of the seed."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "360",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Rephrased wording (spends/gathers/every minute) preserves 3 hours at 2 peaches/minute: 180 x 2 = 360, matching the seed answer."
+              },
+              {
+                "id": "added_operation",
+                "answer": "345",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a subtraction step: 360 collected minus 5 eaten after each of 3 hours (15 total) = 345. 'After every hour' naturally covers all three hour boundaries, so the count is determinate."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-390",
+      "review_id": "NS-009",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-009-R1",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass"
+          ],
+          "first_review": {
+            "seed_answer": "12",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "16",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numbers updated consistently. Structure preserved. Calculation 256/(8+5+3)=16 yields integer."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "12",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording changed significantly. Numerical values and logic match seed exactly. Answer remains 12."
+              },
+              {
+                "id": "added_operation",
+                "answer": "8",
+                "clarity": "pass",
+                "transform_fit": "uncertain",
+                "reason": "Adds a category but operational types (sum then divide) remain identical to seed. Label fit debatable."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-009-R2",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass"
+          ],
+          "first_review": {
+            "seed_answer": "12",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "16",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values changed (8+5+3=16 gifts; 256 inches) while the sum-then-divide structure is preserved: 256/16=16 inches per bow."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "12",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording rephrased (presents, buddies, educators, allocate) with identical numbers and structure: 6+4+2=12, 144/12=12."
+              },
+              {
+                "id": "added_operation",
+                "answer": "8",
+                "clarity": "pass",
+                "transform_fit": "reject",
+                "reason": "Only a fourth gift category is added (6+4+6+2=18; 144/18=8). Operations remain sum-then-divide with no new operation or reasoning requirement; this is a numeric-style change, not added_operation."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-1083",
+      "review_id": "NS-010",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-010-R1",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "2",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "16.8",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values updated consistently ($0.90, $4.00, 12 bunches, 6 bananas). Structure matches seed. Calculation yields unique positive savings ($16.80). No ambiguity introduced."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "2",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording changed (supermarket->grocery store) without altering mathematical values or structure. Answer matches seed exactly. Clear and solvable."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "Average banana count specified only for initial 10 bunches. Unclear if applicable to additional 5 bunches. Missing information prevents unique determination of total bananas and savings."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-010-R2",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "2",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "16.8",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "72 bananas at $0.90 = $64.80 vs 12 bunches at $4.00 = $48.00; savings $16.80. Same structure as seed, only values changed."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "2",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Identical numbers and structure (40×$0.80 − 10×$3.00 = $2.00); only wording rephrased."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "The 5 extra bunches' average banana count is unstated, so total savings is not uniquely determined ($3 if 4 each, $2 if excluded); missing necessary information."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-1288",
+      "review_id": "NS-011",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-011-R1",
+          "passed": false,
+          "reasons": [
+            "seed_answer_mismatch_or_unresolved",
+            "numeric_answer_mismatch_or_unresolved",
+            "paraphrase_answer_mismatch_or_unresolved",
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "2040",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "5700",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values changed consistently (meditation duration, yoga frequency/duration, weeks). Mathematical structure preserved. Calculation yields a unique integer result in minutes. No ambiguity introduced."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "2040",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered while preserving all numerical values and logical structure. Daily meditation and weekly yoga frequencies match seed. Total time calculation remains identical. No ambiguity introduced."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "Pronoun 'He' conflicts with 'Charisma' (she), creating ambiguity on whose time is counted. Additional meditation timing overlaps with daily routine description. Unclear if sessions are distinct or cumulative. Math solvable assuming typo, but clarity compromised."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-011-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "34",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "95",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "All numeric values changed (30 min sessions, 6 yoga days, 2 h yoga, 5 weeks) with structure preserved: 30*2*7*5/60=35 h meditation plus 2*6*5=60 h yoga = 95 hours."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "34",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Pure rewording; identical quantities (15+15 min daily, 1 h yoga 5 days/week, 4 weeks) and structure. Meditation 14 h + yoga 20 h = 34 hours, matching seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": "39",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds 15-min meditation before each of 5 weekly yoga sessions: seed 34 h plus 15*5*4/60=5 h = 39 hours. 'He' is a pronoun typo, but the referent (Charisma) is unambiguous."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-490",
+      "review_id": "NS-012",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-012-R1",
+          "passed": false,
+          "reasons": [
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "4",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "4",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numbers updated consistently. Structure remains subtraction then division. Answer calculated as (15-3)/3 = 4. Transform fits numeric definition."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "4",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered without changing values or logic. Answer remains 4 via (12-4)/2. Transform fits paraphrase definition perfectly."
+              },
+              {
+                "id": "added_operation",
+                "answer": "5",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Introduces conditional expense every 3rd day. Requires iterative summing. Total needed 8. Days 1-5 yield 2,4,5,7,9. Answer 5. Transform fits."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-012-R2",
+          "passed": false,
+          "reasons": [
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "4",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "4",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Remaining $12 at $3/day gives 4 days; only numerical values changed, structure intact. Minor grammar slip ('An 9-year') but question stays unambiguous and solvable."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "4",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same numbers ($12, $4, $2/day) and structure, only wording changed; answer remains 4 days, matching the seed exactly."
+              },
+              {
+                "id": "added_operation",
+                "answer": "5",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds periodic $1 candy expense: net $5 per 3-day cycle; $7 after day 4, $9 after day 5, so 5 days. Candy timing interpretation does not change the result; genuine added reasoning step."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-575",
+      "review_id": "NS-013",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-013-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "36",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "144",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numbers updated consistently. Structure preserved. Calculation yields integer result."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "36",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording changed significantly while preserving all numerical values and logical structure."
+              },
+              {
+                "id": "added_operation",
+                "answer": "33",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds splitting resources and second product calculation. Logic is clear and solvable."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-013-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "36",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "144",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "5×80=400 crayons; 400/5=80 muffins; 80×$1.80=$144. Only numerical values changed; operations and target structure match the seed."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "36",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same numbers and operations: 3×64=192; 192/8=24 muffins; 24×$1.50=$36. Wording rephrased only, structure and answer preserved."
+              },
+              {
+                "id": "added_operation",
+                "answer": "33",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "192 crayons split in half: 96/8=12 muffins ×$1.50=$18; 96/16=6 cakes ×$2.50=$15; total $33. Adds splitting and summing steps beyond seed; both divisions are exact, no ambiguity."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-747",
+      "review_id": "NS-014",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-014-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "350",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "490",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values updated consistently. Structure matches seed. Calculation: (0.6-0.5)*700*7=490. No ambiguity introduced."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "350",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered without changing mathematical structure or values. Answer matches seed calculation: (0.5-0.4)*500*7=350."
+              },
+              {
+                "id": "added_operation",
+                "answer": "330",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds delivery fee subtraction step. Gross savings 350 minus 20 fee equals 330. Structure extends seed logically."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-014-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "350",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "490",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values changed (700/day, $0.6 to $0.5) while structure is preserved: (0.6-0.5)*700*7 = 490. Same operations and target as seed."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "350",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording rephrased but numbers and structure identical to seed: (0.5-0.4)*500*7 = 350, matching the seed answer."
+              },
+              {
+                "id": "added_operation",
+                "answer": "330",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a necessary step: weekly savings (0.5-0.4)*500*7 = 350, minus $20 delivery fee = 330. The fee is clearly weekly, so subtraction is unambiguous."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-399",
+      "review_id": "NS-015",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-015-R1",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass"
+          ],
+          "first_review": {
+            "seed_answer": "12",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "15",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numbers updated consistently. Structure preserved. Calculation yields 9+6=15 difference."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "12",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording changed without altering mathematical relationships or final answer. Logic remains identical."
+              },
+              {
+                "id": "added_operation",
+                "answer": "28.5",
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Semantically implausible premise ('giving age') makes 'remaining age' ambiguous, though numerically solvable as 42 - 13.5."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-015-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "12",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "15",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same chain structure with new values: Beth=35+6=41, Alice=41+9=50; difference 50-35=15. Clean numeric-only change."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "12",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Reordered wording ('her senior', 'how much older') preserves the same chain and values; Beth=35, Alice=42, answer unchanged at 12."
+              },
+              {
+                "id": "added_operation",
+                "answer": "28.5",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Keeps seed chain (Alice=42) and adds necessary steps: Frank=27, halving leaves 13.5; 42-13.5=28.5. Donating age in years is fanciful but mathematically unambiguous."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-346",
+      "review_id": "NS-016",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-016-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "9",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "4",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numbers updated consistently. Structure identical. Calculation yields positive integer."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "9",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered without changing mathematical meaning or values. Answer matches seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": "6",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a new consumer requiring an additional subtraction step. Structure logically extended from seed."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-016-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "9",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "4",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "48 - (6*5) - (2*7) = 48 - 30 - 14 = 4. Only numerical values changed; operations and structure identical to seed."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "9",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same numbers and structure: 36 - 20 - 7 = 9. Wording rephrased without altering mathematical content or answer."
+              },
+              {
+                "id": "added_operation",
+                "answer": "6",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Friend's 3 cookies add one required subtraction: 36 - 20 - 7 - 3 = 6. Clear and consistent with added_operation intent."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-1080",
+      "review_id": "NS-017",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-017-R1",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "72000",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "360",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numerical values changed (rate unit, springs, time). Structure preserved. Calculation straightforward."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "72000",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording changed slightly. Math structure and values identical to seed. Answer matches seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "Phrasing '1 more' ambiguous between constant additive rate or progressive increase. Operation not uniquely defined."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-017-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "72000",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "360",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Changes values only: rate to per minute, 3 springs, 2 hours; rate-times-time structure kept. 3 x 120 = 360."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "72000",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Rephrased wording with identical numbers and structure: 5 springs x 14,400 seconds = 72,000."
+              },
+              {
+                "id": "added_operation",
+                "answer": "73200",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a second rate: 1 extra jellyfish per minute per spring. 5 x (14400 + 240) = 73200. '1 more' is slightly awkward, but parallel phrasing supports the additive reading."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-1181",
+      "review_id": "NS-018",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-018-R1",
+          "passed": false,
+          "reasons": [
+            "numeric_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "20",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "14",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values altered consistently. System remains solvable with integer ages. Structure matches seed."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording slightly altered, but mathematical structure and values match seed exactly. Answer remains 20."
+              },
+              {
+                "id": "added_operation",
+                "answer": "25",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds dependent variable Mike requiring an extra addition step after solving the original system. Fits added_operation definition."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-018-R2",
+          "passed": false,
+          "reasons": [
+            "numeric_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "20",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "14",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same two-equation structure with changed constants (4, 8, 30, half). w=4(c+8), w=2(c+30) gives c=14, w=88; checks: 44=88/2. Pure numeric substitution preserving operations and target."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Identical numbers and structure; only wording changes ('Calculate the Colin's age now' is slightly ungrammatical but unambiguous). Same unique solution c=20, w=135."
+              },
+              {
+                "id": "added_operation",
+                "answer": "25",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Colin still solves to 20; Mike in 25 years is 45+5=50, so Mike now is 25. Reading 'Mike will be 5 years older than Colin' in the present also gives 25, since age gaps are constant; only a contrarian reading yields 0."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-60",
+      "review_id": "NS-019",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-019-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "17",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "29",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values scaled appropriately. 30% of 50 is integer. Structure identical to seed. Disjoint category assumption maintained."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "17",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Vocabulary changed (spoiled, tart, container). Numerical values and logical structure match seed exactly. Answer remains 17."
+              },
+              {
+                "id": "added_operation",
+                "answer": "15",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "New category 'wormy' added. Requires subtracting additional value. Logical structure and disjoint assumption consistent with seed."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-019-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "17",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "29",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same disjoint-category structure ('the rest are good'); only values change: 50-2-15-4=29. Clean numeric variant."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "17",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording rephrased (container, spoiled, tart, 'not yet ripe') but numbers and structure identical: 25-1-5-2=17, matching seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": "15",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a wormy category requiring one extra subtraction: 25-1-5-2-2=15. Necessary additional operation, structure otherwise preserved."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-144",
+      "review_id": "NS-020",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-020-R1",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "20",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "25",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numbers updated correctly. Structure preserved. Name inconsistency (Kim/Lucas) persists from seed but does not block solution."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording changed, math identical. Name inconsistency fixed (Lucas throughout). Structure preserved."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "Adds discount logic. Ambiguous whether $92 income includes discount. Name inconsistency persists. Logical conflict makes unique solution impossible."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-020-R2",
+          "passed": false,
+          "reasons": [
+            "review_incomplete_or_invalid_json"
+          ],
+          "first_review": null
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-54",
+      "review_id": "NS-022",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-022-R1",
+          "passed": false,
+          "reasons": [
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "40",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "25",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values changed (5 adopted, 2x multiplier, 12->10). Structure identical. Calculation: 5 + 2*5 + 10 = 25. Fits numeric transform requirements."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "40",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered (siblings, rescue center, owns). Numerical values and logical structure match seed exactly. Answer matches seed. Fits paraphrase transform."
+              },
+              {
+                "id": "added_operation",
+                "answer": "45",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds 5 pre-existing kittens at home. Requires additional addition step relative to seed. Information clear. Fits added_operation transform definition."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-022-R2",
+          "passed": false,
+          "reasons": [
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "40",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "25",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numerical values changed (adopted 7→5, multiplier thrice→twice, Trixie 12→10) while the structure adopted + multiplier×adopted + fixed is preserved. 5 + 2×5 + 10 = 25."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "40",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording rephrased (rescue center, journey, owns) but identical values and structure: 7 + 3×7 + 12 = 40, matching the seed answer exactly."
+              },
+              {
+                "id": "added_operation",
+                "answer": "45",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds 5 kittens already at home as an extra addend beyond the seed computation: 7 + 21 + 12 + 5 = 45. The added quantity is clearly separate from the 7 adopted kittens, so the total is unambiguous."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-1024",
+      "review_id": "NS-023",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-023-R1",
+          "passed": false,
+          "reasons": [
+            "paraphrase_not_strict_pass"
+          ],
+          "first_review": {
+            "seed_answer": "300",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "216",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values updated consistently. Structure preserved. Calculation: (90*1 + 50*3) - (2*12) = 216. No ambiguity introduced."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "300",
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "Word 'cost' implies expense, not selling price. Ambiguous whether $4 is revenue or expense. Assuming intended meaning matches seed, answer is 300, but terminology introduces semantic risk regarding profit vs revenue calculation."
+              },
+              {
+                "id": "added_operation",
+                "answer": "285",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds charity donation step. Requires additional subtraction. Calculation: 320 earnings - 20 sisters - 15 charity = 285. Fits added_operation definition clearly."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-023-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "300",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "216",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "90*1 + 50*3 = 240; sisters 2*12 = 24; 240-24 = 216. Only numerical values changed; operations and structure match the seed."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "300",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same numbers and structure (80*1 + 60*4 - 2*10 = 300); wording rephrased without altering the math or answer."
+              },
+              {
+                "id": "added_operation",
+                "answer": "285",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "320 - 20 - 15 = 285. Adds a charity donation requiring one extra subtraction beyond the seed's structure."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-985",
+      "review_id": "NS-024",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-024-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "63",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "56",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numbers changed (24, 1/3). Structure preserved. Missing question mark is minor. Calculation: 24 * 1/3 * 7 = 56. Transform fits numeric category."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "63",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Vocabulary changed (consumes, daily). Values match seed. Seven-day period clarifies week. Calculation: 18 * 1/2 * 7 = 63. Transform fits paraphrase category perfectly."
+              },
+              {
+                "id": "added_operation",
+                "answer": "67",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Introduces rate change after day 3. Requires summing 3 days at 9 pretzels and 4 days at 10 pretzels. Calculation: 27 + 40 = 67. Transform fits added_operation category."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-024-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "63",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "56",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Changes values (18→24, 1/2→1/3) while keeping structure: 24×1/3=8/day, 8×7=56. Missing question mark is cosmetic, not ambiguous."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "63",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Rephrases wording only; identical values and structure: 18×1/2=9/day, 9×7=63 over the stated seven-day period."
+              },
+              {
+                "id": "added_operation",
+                "answer": "67",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a rate change mid-week: 3 days at 9/day (27) plus 4 days at 10/day (40) = 67. 'After 3 days' naturally means the increase starts day 4; otherwise structure matches seed."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-277",
+      "review_id": "NS-025",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-025-R1",
+          "passed": false,
+          "reasons": [
+            "numeric_answer_mismatch_or_unresolved",
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "4",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "25/3",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values updated consistently. Structure preserved. Total time 500 minutes converts to 25/3 hours. Non-integer result is valid but less clean than seed."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "4",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording modified slightly without changing mathematical structure or values. Answer remains 4 hours. Transformation aligns perfectly with paraphrase definition."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Adds break calculations. Ambiguity exists on whether breaks occur after the final hole (fencepost problem). Prevents unique solution. Transform type correct, clarity compromised."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-025-R2",
+          "passed": false,
+          "reasons": [
+            "numeric_answer_mismatch_or_unresolved",
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "4",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "25/3",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "40×5 + 20×15 = 500 minutes = 25/3 hours. Only numerical values changed; operation and hours target preserved. Answer is uniquely determined, though no longer a whole number of hours."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "4",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same rates and counts: 30×3 + 15×10 = 240 minutes = 4 hours. Wording rephrased only; mathematical structure and answer match the seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Break rule is ambiguous: does a break follow the final group? Counting all breaks (6×2 + 5×5 = 37 min) gives 277/60 hours; breaks only between groups give 270 min = 4.5 hours. Not uniquely determined, though the added break computation fits the transform."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-1068",
+      "review_id": "NS-026",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-026-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "24",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "55",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values updated consistently. Structure preserved. Calculation yields 11 subs * 5 meatballs = 55."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "24",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered without changing mathematical structure or values. Result matches seed logic exactly."
+              },
+              {
+                "id": "added_operation",
+                "answer": "16",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a second subtraction step logically. Structure maintained. Final count 4 subs * 4 meatballs = 16."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-026-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "24",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "55",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numbers changed (5 meatballs, 12-2=10 ordered, ate 3, added 4) while the operation sequence is identical to the seed: 10-3=7, 7+4=11 sandwiches, 11*5=55 meatballs."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "24",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording rephrased ('ten minus three', 'consumed', 'purchased an additional') but identical numbers and structure: 7-4+3=6 sandwiches, 6*4=24 meatballs, matching the seed answer."
+              },
+              {
+                "id": "added_operation",
+                "answer": "16",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Seed text preserved with one added step: Mark eats 2 more sandwiches. Sequence becomes 7-4+3-2=4 sandwiches, 4*4=16 meatballs; the added subtraction is necessary and consistent."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-586",
+      "review_id": "NS-028",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-028-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "800",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "1300",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numerical values changed while maintaining the calculation structure. Total calories calculated then applied to ratio. Result 1300. Fits numeric transform criteria perfectly."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "800",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording modified to use synonyms without altering numbers or mathematical logic. Answer remains 800. Fits paraphrase transform criteria perfectly."
+              },
+              {
+                "id": "added_operation",
+                "answer": "950",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Introduces an additional activity requiring extra calculation steps for total calories. Answer 950. Increases complexity relative to seed. Fits added_operation criteria."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-028-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "800",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "1300",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "All numbers changed (rate 150/300, 3h at 400, 2h at 700) while structure is identical: total calories 2600, water 2600/300*150 = 1300 ml. Clean numeric fit."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "800",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording rephrased (expends/consume, engages/burning) but same numbers and structure: 2*500 + 1*600 = 1600 calories; 1600/200*100 = 800 ml, matching seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": "950",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a yoga session requiring an extra calorie computation and summation: 1600 + 300 = 1900 calories; 1900/200*100 = 950 ml. Added operation is genuine and answer is exact."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-676",
+      "review_id": "NS-029",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-029-R1",
+          "passed": false,
+          "reasons": [
+            "numeric_not_strict_pass",
+            "numeric_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "240",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": null,
+                "clarity": "reject",
+                "transform_fit": "reject",
+                "reason": "Variant introduces 'Taylor' as the third investor but asks for 'Skyler's' investment. Skyler is undefined in this context, making the question unsolvable. Additionally, it states 'Four people' but only names three investors."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "240",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording changed but mathematical structure, values, and entities remain identical to the seed. The answer is uniquely determined and matches the seed logic. No ambiguity introduced."
+              },
+              {
+                "id": "added_operation",
+                "answer": "180",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a valid subsequent operation (withdrawal) dependent on the seed's result. The logic flows clearly from the seed's structure to a new final value. Unambiguous calculation."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-029-R2",
+          "passed": false,
+          "reasons": [
+            "numeric_not_strict_pass",
+            "numeric_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "240",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": null,
+                "clarity": "reject",
+                "transform_fit": "reject",
+                "reason": "Four investors are stated, but only Dylan ($1200), Frances ($600), and Taylor ($200) invest, exhausting the $2000. Skyler is never described as investing, so his amount is undefined (or $0, contradicting 'four people invested'). The question likely meant Taylor; the numeric transform broke the target structure."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "240",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same numbers and structure, purely reworded: 1200 x 3/5 = 720 remaining after Dylan; 720 x 1/3 = 240 for Skyler. Wording changed, mathematical structure and answer preserved."
+              },
+              {
+                "id": "added_operation",
+                "answer": "180",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Reproduces the seed chain exactly (Skyler's initial share = 240), then adds a required step: withdraw 1/4, leaving 240 x 3/4 = 180. Clear wording; a genuine added operation relative to the seed."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-13",
+      "review_id": "NS-030",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-030-R1",
+          "passed": false,
+          "reasons": [
+            "numeric_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "18",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "16",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values changed appropriately. Integer constraints satisfied at each step (16->12->8->4). Structure preserved."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "18",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered without changing mathematical structure or values. Answer matches seed exactly. No ambiguity introduced."
+              },
+              {
+                "id": "added_operation",
+                "answer": "24",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Added intermediate step (blue house) increases complexity logically. Integer constraints satisfied (24->16->14->10->5). Structure consistent."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-030-R2",
+          "passed": false,
+          "reasons": [
+            "numeric_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "18",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "16",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Changes values only: third→quarter, 2→4 red-house sales, 5→4 left. Structure identical. Check: 16→12→8→4. Whole-number answer, unambiguous."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "18",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording rephrased (stock, house colors, phrasing) but operations and all numbers preserved; answer remains 18, matching seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": "24",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds a blue-house sale of 4, requiring an extra subtraction before halving. Check: 24→16→14→10→5. Whole-number answer, structure otherwise unchanged."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-638",
+      "review_id": "NS-031",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-031-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "12.00",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "10.40",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values changed, structure preserved. Unit costs derived then multiplied by quantity. Calculation yields 10.40. No ambiguity in linear pricing assumption."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "12.00",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording changed, values and structure identical to seed. Answer remains 12.00. No semantic shifts affecting mathematical interpretation or solution path."
+              },
+              {
+                "id": "added_operation",
+                "answer": "11.00",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds discount rule requiring eligibility check. 5 apples and 5 oranges each qualify for $0.50 off. Total cost reduced by $1.00. Logic is clear."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-031-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "12.00",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "10.40",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Apples $4.50/3 = $1.50 each; oranges $2.20/2 = $1.10 each. 4 apples + 4 oranges = 6.00 + 4.40 = 10.40. Values changed, unit-price structure preserved."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "12.00",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same numbers and structure, reworded only. Apples $1.30 each, oranges $1.10 each; 5 of each = 6.50 + 5.50 = 12.00, matching seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": "11.00",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Base cost 12.00. Exactly 5 apples and 5 oranges each trigger one $0.50 same-kind discount, totaling $1.00 off, so 11.00. Adds discount computation to seed structure."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-492",
+      "review_id": "NS-033",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-033-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "32",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "30",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values changed ($6, 4x). Operational structure identical to seed. Total sum calculated correctly."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "32",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording modified ('thrice', 'purchases'). Numerical values and logical structure match seed. Answer identical."
+              },
+              {
+                "id": "added_operation",
+                "answer": "40",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds soda purchase requiring price derivation and multiplication. Extends seed logic with valid additional operation."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-033-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "32",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "30",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Changes small pizza price 8→6 and multiplier 3→4 while keeping the multiply-then-add structure. Family pizza = 4×6 = 24; total 6+24 = 30."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "32",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Rephrases wording ('purchases', 'thrice', 'total amount she has to pay') with identical numbers and structure; family pizza 3×8 = 24, total 32, matching seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": "40",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Keeps seed pizzas (8 + 24) and adds a necessary step: each soda is half of 8 = 4, two bottles = 8. Total 8 + 24 + 8 = 40."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-1230",
+      "review_id": "NS-034",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-034-R1",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "440",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "426",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values updated consistently. Math: 5*60 + 3*(60*0.70) = 426. Structure matches seed exactly. No ambiguity."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "440",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered without changing numbers or logic. Answer matches seed. Structure preserved perfectly. Clear intent."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "Ambiguous scope of 10% discount. Unclear if applied to veteran lessons or only standard ones. Prevents unique calculation."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-034-R2",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "440",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "426",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values changed (fee $60, discount 30%, counts 5 and 3) with structure preserved: 5×60 + 3×(60×0.70) = 300 + 126 = 426. Clean numeric transformation."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "440",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Reworded only; same fee, 25% veteran discount, and session counts (4 standard, 2 veteran), so the answer matches the seed: 4×80 + 2×60 = 440. Wording is clear and mathematically equivalent."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Adds a 10% discount, but its scope is ambiguous: discounting the $80 base (veteran rate becomes $54) gives 396, while discounting only standard-rate lessons gives 408. Answer not uniquely determined."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-489",
+      "review_id": "NS-035",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-035-R1",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "-10",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "-5",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values changed, structure identical. Calculation straightforward. Fits numeric transform definition perfectly."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "-10",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Synonyms used for temperatures and average. Values and structure match seed. Answer identical. Fits paraphrase definition."
+              },
+              {
+                "id": "added_operation",
+                "answer": "-6.75",
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Adds derivation step and changes divisor. Factual error (Central India not a country) and naming inconsistency (Southland) create implausible convention, though math is solvable."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-035-R2",
+          "passed": false,
+          "reasons": [
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "-10",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "-5",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values changed (-38, 31, -8) while structure identical: sum = -15, average = -5. Clean numeric variant."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "-10",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording rephrased (maximum/peak/topmost, mean) with identical numbers -48, 21, -3; average remains -10. Structure and answer preserved."
+              },
+              {
+                "id": "added_operation",
+                "answer": "-6.75",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Requires deriving Central India's temperature (-3 + 6 = 3) before averaging four values: (-48+21-3+3)/4 = -6.75. Added step is necessary. Minor oddity: real 'Central India' among fictional countries, and 'Midland'/'Southland' name shortenings, but intent is clear."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-736",
+      "review_id": "NS-036",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-036-R1",
+          "passed": false,
+          "reasons": [
+            "paraphrase_not_strict_pass",
+            "paraphrase_answer_mismatch_or_unresolved",
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "3",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "5",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numbers updated consistently. Structure preserved. Calculation yields unique integer result."
+              },
+              {
+                "id": "paraphrase",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "Entity name changes from Beck to Baker in final clause. Identity unresolved prevents unique determination of answer. Structural intent matches seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": "46.5",
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Adds step where Beck gives half apples. 87 is odd, yielding 43.5 apples. Fractional countable items create convention ambiguity."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-036-R2",
+          "passed": false,
+          "reasons": [
+            "paraphrase_not_strict_pass",
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "3",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "5",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same structure, new numbers: Beck has 115; after transfer Boris 135, Beck 130; difference 5. Clean numeric variant."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "3",
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Math preserved (Boris 90, Beck 87, difference 3), but the question references 'Baker', an undefined name apparently typo'd from Beck, introducing minor ambiguity."
+              },
+              {
+                "id": "added_operation",
+                "answer": "46.5",
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "Beck holds 87 (odd) before halving, so he gives 43.5 apples, leaving him 46.5 fewer than Boris's 90. Fractional apples are implausible for elementary arithmetic; the added step is structurally valid but poorly parameterized."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-105",
+      "review_id": "NS-037",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-037-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "20",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "30",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numbers changed (3→4, 5→6). Structure preserved. Total = 6 + 24 = 30. Fits numeric transform expectations without ambiguity."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered (consumes/thrice/total). Values and logic match seed exactly. Answer 20 matches seed. Fits paraphrase transform expectations."
+              },
+              {
+                "id": "added_operation",
+                "answer": "25",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds Mike and calculation step. They implies all three eaters. Total = 5 + 15 + 5 = 25. Fits added_operation transform expectations."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-037-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "20",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "30",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Multiplier changed 3→4 and Amir's count 5→6; structure (total = Amir + multiplier×Amir) unchanged. 6 + 24 = 30."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same numbers and structure, only wording changed ('consumes', 'thrice', 'total'). 5 + 15 = 20, matching seed."
+              },
+              {
+                "id": "added_operation",
+                "answer": "25",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds Mike = (1/3)×Cody = 5, requiring an extra multiplication step beyond the seed. Total 5 + 15 + 5 = 25; 'they' clearly covers all three."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-319",
+      "review_id": "NS-038",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-038-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "15",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Changes wire count to 60. Structure identical. Calculation 60/3=20. Fits numeric transform."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "15",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording changed, numbers identical. Structure preserved. Calculation 45/3=15. Fits paraphrase transform."
+              },
+              {
+                "id": "added_operation",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds replacement step. Base 15 plus 5 damaged. Calculation 15+5=20. Fits added_operation transform."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-038-R2",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass"
+          ],
+          "first_review": {
+            "seed_answer": "15",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "20",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Only the wire count changes (45 to 60); ratio 1:3 and target (find poles) unchanged. Poles = 60/3 = 20."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "15",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording rephrased ('proportion... 1 to 3', 'needs 45 wires') but ratio, given value, and target identical; answer stays 15."
+              },
+              {
+                "id": "added_operation",
+                "answer": "20",
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Intended: 45/3 = 15 poles, plus 5 damaged replacements = 20. But 'total poles required' is ambiguous: replacing damaged poles need not raise the requirement (15 defensible). Unresolved wording ambiguity."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-836",
+      "review_id": "NS-039",
+      "admitted": false,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-039-R1",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass",
+            "added_operation_answer_mismatch_or_unresolved"
+          ],
+          "first_review": {
+            "seed_answer": "140",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "145",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Numeric values changed (Kora 25, Rory +15) while preserving mathematical structure and relationships. Calculation yields a unique valid total."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "140",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording altered without changing mathematical structure or values. Question asks for the same total using synonymous phrasing."
+              },
+              {
+                "id": "added_operation",
+                "answer": null,
+                "clarity": "uncertain",
+                "transform_fit": "uncertain",
+                "reason": "Word 'left' implies subtraction, but context describes addition ('make 5 more'). This semantic conflict creates ambiguity regarding the final operation."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-039-R2",
+          "passed": false,
+          "reasons": [
+            "added_operation_not_strict_pass"
+          ],
+          "first_review": {
+            "seed_answer": "140",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "145",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Kora=25, Rory=25+15=40, Jada=2x40=80; total 145. Only numeric values changed; relations and target (combined total) unchanged. Clean numeric variant."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "140",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same relations and values (Kora 20, Rory 40, Jada 80, total 140) with fully reworded text; answer unchanged. Fits paraphrase definition."
+              },
+              {
+                "id": "added_operation",
+                "answer": "155",
+                "clarity": "uncertain",
+                "transform_fit": "pass",
+                "reason": "Adds a step: 140 + 3x5 = 155, fitting added_operation. But 'will they have left' conflicts with making more dishes; 'in total' supports 155, yet the phrasing is ambiguous."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "GSM8K-166",
+      "review_id": "NS-040",
+      "admitted": true,
+      "first_reviews": [
+        {
+          "reviewer": 1,
+          "trial_id": "NS-040-R1",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "5",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "5",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values updated (8, 2, 20) preserving operation structure. Calculation results in integer. Transform aligns with numeric definition."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "5",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Wording modified without altering numbers or logic. Answer matches seed. Transform aligns with paraphrase definition."
+              },
+              {
+                "id": "added_operation",
+                "answer": "6",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds requirement for 3 extra flans, requiring addition before multiplication/division. Increases steps logically. Transform aligns with added_operation definition."
+              }
+            ]
+          }
+        },
+        {
+          "reviewer": 2,
+          "trial_id": "NS-040-R2",
+          "passed": true,
+          "reasons": [],
+          "first_review": {
+            "seed_answer": "5",
+            "seed_clarity": "pass",
+            "variants": [
+              {
+                "id": "numeric",
+                "answer": "5",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Values changed (8 eggs/basket, 2 eggs/flan, 20 flans); structure identical: 20*2/8 = 5 babysits. Fits numeric transform."
+              },
+              {
+                "id": "paraphrase",
+                "answer": "5",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Same numbers (9, 3, 15) and structure; only wording rephrased. 15*3/9 = 5, matching seed answer."
+              },
+              {
+                "id": "added_operation",
+                "answer": "6",
+                "clarity": "pass",
+                "transform_fit": "pass",
+                "reason": "Adds extra 3 flans, requiring total 18 flans: 18*3/9 = 6 babysits. Necessary added reasoning step; wording slightly awkward but unambiguous."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "trial_id": "SR-03",
+    "model": "glm-5.2",
+    "condition": "generic_verification",
+    "repetition": 2
+  },
+  {
+    "trial_id": "SR-08",
+    "model": "qwen3.8-27b",
+    "condition": "generic_verification",
+    "repetition": 3
+  },
+  {
+    "trial_id": "SR-11",
+    "model": "qwen3.8-27b",
+    "condition": "generic_verification",
+    "repetition": 1
+  },
+  {
+    "trial_id": "SR-13",
+    "model": "glm-5.2",
+    "condition": "generic_verification",
+    "repetition": 1
+  },
+  {
+    "trial_id": "SR-15",
+    "model": "qwen3.8-27b",
+    "condition": "primary_source_facts",
+    "repetition": 2
+  },
+  {
+    "trial_id": "SR-16",
+    "model": "glm-5.2",
+    "condition": "generic_verification",
+    "repetition": 3
+  },
+  {
+    "trial_id": "SR-21",
+    "model": "glm-5.2",
+    "condition": "baseline",
+    "repetition": 1
+  },
+  {
+    "trial_id": "SR-30",
+    "model": "glm-5.2",
+    "condition": "primary_source_facts",
+    "repetition": 1
+  },
+  {
+    "trial_id": "SR-34",
+    "model": "glm-5.2",
+    "condition": "primary_source_facts",
+    "repetition": 2
+  },
+  {
+    "trial_id": "SR-35",
+    "model": "glm-5.2",
+    "condition": "baseline",
+    "repetition": 2
+  }
+]
