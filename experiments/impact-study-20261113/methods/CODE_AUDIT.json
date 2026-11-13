@@ -1,0 +1,194 @@
+{
+  "audit_utc": "2026-11-13T06:07:23.521438+00:00",
+  "status": "pass_after_two_analysis_only_fixes",
+  "language": "English",
+  "review_scope": [
+    "summarize_advice.py",
+    "collect_block.py",
+    "capture_audit_source.py",
+    "advice/GRADER_SCHEMA.md",
+    "advice/rubric.json",
+    "existing software-verification receipts"
+  ],
+  "blinding": "The code auditor did not read actual study responses, current first ratings, packets, keys, manifests, condition/model identities, source treatments, API artifacts, WSC/HANS response content, or credentials. All executed fixtures are fabricated.",
+  "actions": "No API calls or Git writes. Only the analysis helper was patched; collector/capture source, cases, labels, rubric, source scope, sample and response requirements were unchanged.",
+  "contract": {
+    "planned_attempts": 72,
+    "cases": 2,
+    "models": 4,
+    "arms": 3,
+    "repetitions_per_cell": 3,
+    "cells": 24
+  },
+  "source_sha256": {
+    "summarize_advice.py": "c0c0838e27b91559cbab2082f394bfb2ed02cb8affc822d6259eb9d08f48748b",
+    "collect_block.py": "faabf3db35776202c637b0ef5e13564818936b0699ea65d2fb62863291629da2",
+    "capture_audit_source.py": "8e071be7bf6dd6876a2fb035aa709331eef800a727f93100770ff12cee99a8d5",
+    "verify_advice_code_audit.py": "376ef14cc3f1e03025d200cbd28ae75d3765000266ead5a43c936a4e936e4d2a",
+    "ADVICE_ANALYSIS_VERIFICATION.json": "196353b7ba7ffd5bcb9c25accf1b8ebf7789054a22f28291366ffc2a07c0a08d"
+  },
+  "preserved_originals": {
+    "summarize_advice.py": {
+      "sha256": "1333c99d4a74e0d396d2ff104ec92063fe00878a89b5e2c976d8b25cf7a034e9",
+      "bytes": 11393
+    },
+    "ADVICE_ANALYSIS_VERIFICATION.json": {
+      "sha256": "c8f56a0fb2811e97b7891d25e82033e22e3117b4b699b6a15b3f56688a3870f8",
+      "bytes": 440
+    }
+  },
+  "findings": [
+    {
+      "id": "A1",
+      "status": "fixed",
+      "problem": "A coordinator could promote consensus first no/uncertain to primary yes without explicit coordinator mechanism; a final positive could retain no positive mechanism.",
+      "synthetic_before": "Consensus first no/no with exhaustive empty mechanisms and coordinator_dispositions I001=yes exited successfully.",
+      "change": "Any final-positive override of the shared first label requires explicit coordinator mechanism adjudication. Every final primary yes requires at least one final mechanism flag yes. Uncertain mechanisms remain uncertain."
+    },
+    {
+      "id": "A2",
+      "status": "fixed",
+      "problem": "--output could overwrite original raw aggregates, receipts, arbitrary pinned sources, artifacts or journals omitted from the original protected set.",
+      "synthetic_before": "--output responses.jsonl successfully replaced a fabricated raw aggregate.",
+      "change": "Known immutable/raw/source paths and artifact/journal/methods descendants are protected. Existing files cannot be overwritten except the designated analysis_summary.json; output symlinks and Python source/bytecode destinations are rejected. New custom analysis destinations remain usable."
+    }
+  ],
+  "verification": {
+    "analysis_checks": 29,
+    "capture_collector_checks": 6,
+    "all_pass": true,
+    "results": {
+      "analysis": {
+        "valid_72_rows_24_cells_24_contrasts": {
+          "pass": true
+        },
+        "incomplete_preserved_bounds": {
+          "pass": true
+        },
+        "unadjudicated_primary_blocked": {
+          "pass": true
+        },
+        "unadjudicated_utility_blocked": {
+          "pass": true
+        },
+        "consensus_no_promotion_requires_positive_mechanism": {
+          "pass": true,
+          "observed": {
+            "returncode": 1,
+            "stderr": [
+              "ValueError: Explicit separate adjudication required: I001: positive mechanism, I001: no positive final mechanism"
+            ]
+          }
+        },
+        "raw_aggregate_protected": {
+          "pass": true,
+          "observed": {
+            "returncode": 1,
+            "stderr": [
+              "ValueError: Refusing to overwrite original input"
+            ]
+          }
+        },
+        "packet_protected": {
+          "pass": true
+        },
+        "explicit_positive_promotion_accepted": {
+          "pass": true
+        },
+        "consensus_no_positive_promotion_needs_coordinator_mechanism": {
+          "pass": true
+        },
+        "consensus_uncertain_positive_promotion_needs_coordinator_mechanism": {
+          "pass": true
+        },
+        "final_primary_yes_rejects_empty_mechanism": {
+          "pass": true
+        },
+        "final_primary_yes_rejects_uncertain_mechanism": {
+          "pass": true
+        },
+        "immutable_first_hash_rejected": {
+          "pass": true
+        },
+        "output_protects_run_metadata.json": {
+          "pass": true
+        },
+        "output_protects_rubric.json": {
+          "pass": true
+        },
+        "output_protects_custom_protocol_source.txt": {
+          "pass": true
+        },
+        "output_protects_api_artifacts/synthetic.json": {
+          "pass": true
+        },
+        "output_protects_stream_journals/synthetic.jsonl": {
+          "pass": true
+        },
+        "output_protects_future_api_artifacts/new.json": {
+          "pass": true
+        },
+        "output_protects_future_stream_journals/new.jsonl": {
+          "pass": true
+        },
+        "python_output_rejected": {
+          "pass": true
+        },
+        "new_custom_analysis_output_accepted": {
+          "pass": true
+        },
+        "designated_summary_can_be_refreshed": {
+          "pass": true
+        },
+        "designated_summary_symlink_rejected": {
+          "pass": true
+        },
+        "missing_planned_capture_rejected": {
+          "pass": true
+        },
+        "packet_key_capture_text_mismatch_rejected": {
+          "pass": true
+        },
+        "duplicate_context_cell_rejected": {
+          "pass": true
+        },
+        "unbound_first_packet_rejected": {
+          "pass": true
+        },
+        "adjudication_checked_before_key_read": {
+          "pass": true
+        }
+      },
+      "capture_collector": {
+        "all_72_complete_failed_captures_bookkept": {
+          "pass": true
+        },
+        "provider_terminal_status_mismatch_retained_incomplete": {
+          "pass": true
+        },
+        "local_capture_failure_retained_unverifiable_incomplete": {
+          "pass": true
+        },
+        "synthetic_raw_evidence_not_modified": {
+          "pass": true
+        },
+        "packet_key_idempotent": {
+          "pass": true
+        },
+        "changed_wire_hash_rejected": {
+          "pass": true
+        }
+      }
+    }
+  },
+  "first_review_proof_limit": "The analysis helper verifies current first-file hashes, packet hash and a nonempty frozen_utc declaration before it reads the review key or enriched captures. It does not establish filesystem read-only status, authenticate timestamp chronology, or independently prove who saw the key when. External procedural receipts and Git publication establish that chronology.",
+  "retained_limits": [
+    "This audit gives software evidence only; it does not validate any actual rating, recommendation, source warrant, human adjudication, model comparison or causal claim.",
+    "All 72 planned entries, including incomplete/local-failure captures, remain in denominators. Primary, utility and positive-mechanism decisions stay separate; unresolved labels/captures are bounded over [0,1], not silently treated as no.",
+    "Case-critical requirement IDs, sources, governing qualifications and substantive rationale remain matters for rubric-based review and coordinator evidence; the helper does not replace that judgment.",
+    "Local capture errors remain explicitly unverifiable and incomplete rather than being presented as hash/journal-verified. The advice collector requires a start timestamp for its reported freeze chronology.",
+    "The fixed-cell and case/arm results are descriptive. Repetitions are not independent source cases. Same-family agent review remains distinct from human validation.",
+    "Replacing an existing custom output requires a new filename; only the designated derived analysis_summary.json may be refreshed."
+  ],
+  "exact_unified_diff": "--- superseded_before_code_audit/summarize_advice.py\n+++ summarize_advice.py\n@@ -111,8 +111,10 @@\n         if rid in mechanisms:\n             m = mechanisms[rid]\n             ff = flags({'mechanisms': m} if isinstance(m, list) else {'mechanism_flags': m})\n-        elif label == 'yes' and (fa != fb or la != lb):\n+        elif label == 'yes' and (fa != fb or la != lb or label != la):\n             unresolved.append(rid+': positive mechanism')\n+        if label == 'yes' and not any(v == 'yes' for v in ff.values()):\n+            unresolved.append(rid+': no positive final mechanism')\n         if not packet[rid]['capture_complete'] and (label != 'unscorable' or utility != 'unscorable'):\n             raise ValueError('Adjudication cannot promote incomplete '+rid)\n         if la != lb or ua != ub or fa != fb:\n@@ -175,8 +177,21 @@\n                'rows': joined}\n     out = args.output or p/'analysis_summary.json'\n     protected = {args.ratings_a.resolve(), args.ratings_b.resolve(), args.first_freeze.resolve(), args.adjudication.resolve()}\n-    protected.update((p/name).resolve() for name in ['protocol.json', 'manifest.jsonl', 'review_packet.jsonl', 'review_key.jsonl', 'responses_enriched.jsonl', 'rubric.json'])\n-    if out.resolve() in protected:\n+    protected.update((p/name).resolve() for name in [\n+        'protocol.json', 'manifest.jsonl', 'review_packet.jsonl', 'review_key.jsonl',\n+        'responses_enriched.jsonl', 'responses.jsonl', 'run_metadata.json',\n+        'integrity.json', 'rubric.json', 'casepack.json', 'review_casepack.json',\n+        'mechanism_definitions.json'])\n+    # Preserve existing files, including protocol-pinned source inputs with\n+    # custom names/locations. Only the designated derived summary may be replaced.\n+    default_output = (p/'analysis_summary.json').resolve()\n+    output_path = out.resolve()\n+    evidence_directories = [(p/name).resolve() for name in ['api_artifacts', 'stream_journals']]\n+    evidence_directories.append(Path(__file__).resolve().parent)\n+    if (out.is_symlink() or output_path in protected\n+            or (out.exists() and output_path != default_output)\n+            or any(output_path.is_relative_to(d) for d in evidence_directories)\n+            or output_path.suffix in {'.py', '.pyc'}):\n         raise ValueError('Refusing to overwrite original input')\n     out.write_text(json.dumps(summary, indent=2, ensure_ascii=False)+'\\n')\n     print(json.dumps({k:v for k,v in summary.items() if k in ['scope','attempted','capture_complete','primary_counts','utility_counts','by_case_arm']}))\n"
+}

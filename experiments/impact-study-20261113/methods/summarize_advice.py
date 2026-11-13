@@ -111,8 +111,10 @@ def main():
         if rid in mechanisms:
             m = mechanisms[rid]
             ff = flags({'mechanisms': m} if isinstance(m, list) else {'mechanism_flags': m})
-        elif label == 'yes' and (fa != fb or la != lb):
+        elif label == 'yes' and (fa != fb or la != lb or label != la):
             unresolved.append(rid+': positive mechanism')
+        if label == 'yes' and not any(v == 'yes' for v in ff.values()):
+            unresolved.append(rid+': no positive final mechanism')
         if not packet[rid]['capture_complete'] and (label != 'unscorable' or utility != 'unscorable'):
             raise ValueError('Adjudication cannot promote incomplete '+rid)
         if la != lb or ua != ub or fa != fb:
@@ -175,8 +177,21 @@ def main():
                'rows': joined}
     out = args.output or p/'analysis_summary.json'
     protected = {args.ratings_a.resolve(), args.ratings_b.resolve(), args.first_freeze.resolve(), args.adjudication.resolve()}
-    protected.update((p/name).resolve() for name in ['protocol.json', 'manifest.jsonl', 'review_packet.jsonl', 'review_key.jsonl', 'responses_enriched.jsonl', 'rubric.json'])
-    if out.resolve() in protected:
+    protected.update((p/name).resolve() for name in [
+        'protocol.json', 'manifest.jsonl', 'review_packet.jsonl', 'review_key.jsonl',
+        'responses_enriched.jsonl', 'responses.jsonl', 'run_metadata.json',
+        'integrity.json', 'rubric.json', 'casepack.json', 'review_casepack.json',
+        'mechanism_definitions.json'])
+    # Preserve existing files, including protocol-pinned source inputs with
+    # custom names/locations. Only the designated derived summary may be replaced.
+    default_output = (p/'analysis_summary.json').resolve()
+    output_path = out.resolve()
+    evidence_directories = [(p/name).resolve() for name in ['api_artifacts', 'stream_journals']]
+    evidence_directories.append(Path(__file__).resolve().parent)
+    if (out.is_symlink() or output_path in protected
+            or (out.exists() and output_path != default_output)
+            or any(output_path.is_relative_to(d) for d in evidence_directories)
+            or output_path.suffix in {'.py', '.pyc'}):
         raise ValueError('Refusing to overwrite original input')
     out.write_text(json.dumps(summary, indent=2, ensure_ascii=False)+'\n')
     print(json.dumps({k:v for k,v in summary.items() if k in ['scope','attempted','capture_complete','primary_counts','utility_counts','by_case_arm']}))

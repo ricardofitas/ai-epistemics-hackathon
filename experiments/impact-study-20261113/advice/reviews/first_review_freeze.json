@@ -1,0 +1,18 @@
+{
+  "frozen_utc": "2026-11-13T06:10:46.068006+00:00",
+  "first_rating_sha256": {
+    "a": "3d72463dbf5b230986d47d8ab5bdd047268a000a38248d84dfc98becc88ef612",
+    "b": "fbb86ae42ba6fc864aa323c4cd5591bc2aab4a05213caf0bb6d76bfe02bfbaff"
+  },
+  "packet_sha256": "d6bc977d8aa5f9bbc60c40a0d53c7dbe30612fdc5959be856b44f6986f541395",
+  "criteria_sha256": {
+    "rubric.json": "eb1ae36763232627e76b65339045746375b41107d44252fd36e8d5bb331f713c",
+    "review_casepack.json": "6d858bbdce05dcaf46483dab7073c42262b0f9c9e4f81074b5fe2f53c2c3f66a",
+    "mechanism_definitions.json": "97181719cce94cd6f0f13b8fa679d8b8cf4c4c9dcc02d98301112416f6ad1ca7",
+    "GRADER_SCHEMA.md": "fda898f5ada6ac3cd97440d12357395f20e8c08bff7ab406a62c49c6b180b9df"
+  },
+  "sampling_freeze_commit": "6566b5cc3c3879e032f2acc92875f9ace25e00e5",
+  "coordinator_attestation": "Per-response first labels and the arm/model key have not been inspected by coordinator before this freeze. Files are transferred mechanically for preservation; agent-reported aggregate counts are known. External task scores are a separately frozen experiment.",
+  "analysis_code_audit": "Guard and output-protection fixes made using fabricated fixtures before coordinator unblinding; original code bytes retained. No primary rubric, source criterion or response label changed.",
+  "human_review": "pending"
+}

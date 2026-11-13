@@ -1,13 +1,132 @@
 {
-  "verified_utc": "2026-11-13T05:38:05.464999+00:00",
-  "script_sha256": "1333c99d4a74e0d396d2ff104ec92063fe00878a89b5e2c976d8b25cf7a034e9",
-  "fixtures": "fabricated72row3arm2case4model3context experiment, zero actual API outputs",
-  "checks": [
-    "all72join/24cells/24contrasts",
-    "primaryandutilitycounts",
-    "incompleteworstcasebounds",
-    "protectedpacketrefusal",
-    "immutablefirsthashrejection"
-  ],
-  "status": "pass"
+  "verified_utc": "2026-11-13T06:07:23.521438+00:00",
+  "script_sha256": "c0c0838e27b91559cbab2082f394bfb2ed02cb8affc822d6259eb9d08f48748b",
+  "fixture_script_sha256": "376ef14cc3f1e03025d200cbd28ae75d3765000266ead5a43c936a4e936e4d2a",
+  "fixtures": "Fabricated 72-row analysis and 72-capture collector fixtures only; no actual study responses, ratings, key or manifest read.",
+  "checks": {
+    "analysis": {
+      "valid_72_rows_24_cells_24_contrasts": {
+        "pass": true
+      },
+      "incomplete_preserved_bounds": {
+        "pass": true
+      },
+      "unadjudicated_primary_blocked": {
+        "pass": true
+      },
+      "unadjudicated_utility_blocked": {
+        "pass": true
+      },
+      "consensus_no_promotion_requires_positive_mechanism": {
+        "pass": true,
+        "observed": {
+          "returncode": 1,
+          "stderr": [
+            "ValueError: Explicit separate adjudication required: I001: positive mechanism, I001: no positive final mechanism"
+          ]
+        }
+      },
+      "raw_aggregate_protected": {
+        "pass": true,
+        "observed": {
+          "returncode": 1,
+          "stderr": [
+            "ValueError: Refusing to overwrite original input"
+          ]
+        }
+      },
+      "packet_protected": {
+        "pass": true
+      },
+      "explicit_positive_promotion_accepted": {
+        "pass": true
+      },
+      "consensus_no_positive_promotion_needs_coordinator_mechanism": {
+        "pass": true
+      },
+      "consensus_uncertain_positive_promotion_needs_coordinator_mechanism": {
+        "pass": true
+      },
+      "final_primary_yes_rejects_empty_mechanism": {
+        "pass": true
+      },
+      "final_primary_yes_rejects_uncertain_mechanism": {
+        "pass": true
+      },
+      "immutable_first_hash_rejected": {
+        "pass": true
+      },
+      "output_protects_run_metadata.json": {
+        "pass": true
+      },
+      "output_protects_rubric.json": {
+        "pass": true
+      },
+      "output_protects_custom_protocol_source.txt": {
+        "pass": true
+      },
+      "output_protects_api_artifacts/synthetic.json": {
+        "pass": true
+      },
+      "output_protects_stream_journals/synthetic.jsonl": {
+        "pass": true
+      },
+      "output_protects_future_api_artifacts/new.json": {
+        "pass": true
+      },
+      "output_protects_future_stream_journals/new.jsonl": {
+        "pass": true
+      },
+      "python_output_rejected": {
+        "pass": true
+      },
+      "new_custom_analysis_output_accepted": {
+        "pass": true
+      },
+      "designated_summary_can_be_refreshed": {
+        "pass": true
+      },
+      "designated_summary_symlink_rejected": {
+        "pass": true
+      },
+      "missing_planned_capture_rejected": {
+        "pass": true
+      },
+      "packet_key_capture_text_mismatch_rejected": {
+        "pass": true
+      },
+      "duplicate_context_cell_rejected": {
+        "pass": true
+      },
+      "unbound_first_packet_rejected": {
+        "pass": true
+      },
+      "adjudication_checked_before_key_read": {
+        "pass": true
+      }
+    },
+    "capture_collector": {
+      "all_72_complete_failed_captures_bookkept": {
+        "pass": true
+      },
+      "provider_terminal_status_mismatch_retained_incomplete": {
+        "pass": true
+      },
+      "local_capture_failure_retained_unverifiable_incomplete": {
+        "pass": true
+      },
+      "synthetic_raw_evidence_not_modified": {
+        "pass": true
+      },
+      "packet_key_idempotent": {
+        "pass": true
+      },
+      "changed_wire_hash_rejected": {
+        "pass": true
+      }
+    }
+  },
+  "status": "pass",
+  "scope": "Software invariants only. Descriptive bounds are fixed-call label/capture bounds, not population intervals or model rankings.",
+  "prior_verification_preserved": "superseded_before_code_audit/ADVICE_ANALYSIS_VERIFICATION.json"
 }
