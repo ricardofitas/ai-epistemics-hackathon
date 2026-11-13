@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-13",
+  "source_repository": "pmateo-uc3m/GAMMAF",
+  "source_commit": "53be3249ebfa631d8e960c9fb1c931d526654697",
+  "selection": "All seven released systems in all three letter-choice benchmark directories: CSQA, MMLU, MMLUPRO. Directory cohort selected before any raw response values or alias score outcomes were available in this stage.",
+  "files": [
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/CSQA/BlindGuard.json",
+      "size": 4105215,
+      "git_blob_sha": "d58e8d938c4167426cdbe35fbe660b151653ffc2"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/CSQA/CASPIAN.json",
+      "size": 3776418,
+      "git_blob_sha": "b8f8686ad0e04cf3da9439f1a98391b631d3463a"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/CSQA/DOMINANT.json",
+      "size": 4154133,
+      "git_blob_sha": "98e7dbd95fe5dc67f9741c9bc5f10a53a5e30843"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/CSQA/PREM.json",
+      "size": 3934149,
+      "git_blob_sha": "7b6389538f4518c71a3d27df6333cc6be41869cf"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/CSQA/TAM.json",
+      "size": 4042416,
+      "git_blob_sha": "936392a8c91e0c18c8cded4591f45c83702b4b21"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/CSQA/XG-Guard.json",
+      "size": 3783952,
+      "git_blob_sha": "c83bc04e7d71908bbc6043ae1bb99bcffca77070"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/CSQA/no_defense_baseline.json",
+      "size": 3851886,
+      "git_blob_sha": "d3eb60d796db541c64e7d13a9e7a8e465d70ccf2"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLU/BlindGuard.json",
+      "size": 4053361,
+      "git_blob_sha": "12138bd80e0f7142bdc7e88e5ca520cae82728b0"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLU/CASPIAN.json",
+      "size": 3740086,
+      "git_blob_sha": "685c3d6a6031ae4320be7feaa081a760e455924c"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLU/DOMINANT.json",
+      "size": 4097848,
+      "git_blob_sha": "9918dcfd92bf715c0f09b375e223f92bfac1e67b"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLU/PREM.json",
+      "size": 3906428,
+      "git_blob_sha": "c54b98870bbc690c3a4d03f35e3dd0283ce7d25f"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLU/TAM.json",
+      "size": 3997551,
+      "git_blob_sha": "0376b80f7fc8ccdb8cba1b10ea9bcb87937e43b2"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLU/XG-Guard.json",
+      "size": 3770857,
+      "git_blob_sha": "2c7ad2adb9c955501b604828ca0ade93f7f766d5"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLU/no_defense_baseline.json",
+      "size": 3830705,
+      "git_blob_sha": "b32d2b87b25b6ab7c6cb2d63c831478bd4c3a840"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLUPRO/BlindGuard.json",
+      "size": 4102051,
+      "git_blob_sha": "18d029246e497ae2d005b0a6a2e075ce603240e3"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLUPRO/CASPIAN.json",
+      "size": 3824465,
+      "git_blob_sha": "8c7d367b7309dc0c766acf56d14533c3e40168ad"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLUPRO/DOMINANT.json",
+      "size": 4154445,
+      "git_blob_sha": "b942c2e400b60a224c28ea43662702b7a6b66546"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLUPRO/PREM.json",
+      "size": 3960379,
+      "git_blob_sha": "8107641af00ccb05db00577adb8c649ffcd889c2"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLUPRO/TAM.json",
+      "size": 4050320,
+      "git_blob_sha": "0d172460710212eb1d9945411397b1396845d1d1"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLUPRO/XG-Guard.json",
+      "size": 3838847,
+      "git_blob_sha": "3182113c7b0bffbe921b3c1d9b0da32b82b50ced"
+    },
+    {
+      "path": "experiments-Information-Sciences/experiment1/results/summary-exp1-scores/MMLUPRO/no_defense_baseline.json",
+      "size": 3841328,
+      "git_blob_sha": "489a7d31a82f47b9b9a09f27033591af8a0be5fa"
+    }
+  ]
+}

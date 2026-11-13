@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-13",
+  "source_selection_commit": "9718457ec868caabea40c5ce29d954a2236ba486",
+  "source_commit": "53be3249ebfa631d8e960c9fb1c931d526654697",
+  "oneeval_commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "freeze_stage": "After field/type schema inspection only, before score or response-value analysis.",
+  "primary": {
+    "row_unit": "One terminal real round per (topology,question_index) per source file, selecting maximum round among padded=false rows. No included-flag or correctness filtering. Retain original group appearance order. Fail on duplicate rounds, changing gold or missing real group.",
+    "prediction": "final_answer verbatim",
+    "reference": "ground_truth verbatim",
+    "parser": {
+      "type": "choice_letter",
+      "choices_by_dataset": {
+        "CSQA": "A-E",
+        "MMLU": "A-D",
+        "MMLUPRO": "A-J"
+      }
+    },
+    "reference_policy": "exclude invalid reference as original One-Eval default; report counts explicitly",
+    "comparability": "Check exact group key and gold alignment across all seven systems; do not silently intersect cohorts."
+  },
+  "secondary": {
+    "row_unit": "Every agent_final_answers entry in the selected terminal real rounds, including malicious agents, ordered by source group then agent index; descriptive stress replay, no independent-trial claim.",
+    "prediction": "agent_final_answers[agent_index] verbatim",
+    "reference": "ground_truth verbatim"
+  },
+  "controls": {
+    "denominators": [
+      "valid_only",
+      "total"
+    ],
+    "metric_names": [
+      "choice_accuracy",
+      "accuracy",
+      "acc"
+    ],
+    "workers": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "orders": [
+      "source",
+      "sha256 seed=0",
+      "sha256 seed=1",
+      "sha256 seed=2",
+      "sha256 seed=3",
+      "sha256 seed=4",
+      "sha256 seed=5",
+      "sha256 seed=6",
+      "sha256 seed=7",
+      "sha256 seed=8",
+      "sha256 seed=9"
+    ],
+    "permutation_key": "sha256('oneeval-real-corpus-20261113|'+str(seed)+'|'+dataset+'|'+compact_json(row_id))",
+    "dedicated_contract_route": true,
+    "identity_dispatch_patch": true
+  },
+  "analysis": {
+    "exact_reducer_replay": "Derive chunk counts/correct values from canonical per-row details. Verify all reported score formulas against actual unmodified run_bench calls in source order, every metric name and worker count. Verify permutations by actual unmodified calls for seeds 0 and 9 at workers 2 and 8. Other permutation scores use exact reducer replay with this distinction recorded.",
+    "pairs": "All 21 pairs per dataset. Reversal requires nonzero signs of opposite sign; ties reported separately. No pooled winner comparison across unrelated datasets.",
+    "impact": "Absolute score change in percentage points, strict order reversals, top-set changes, metadata loss, order sensitivity.",
+    "statistics": "Descriptive finite-corpus result. No p-value or independence claim: topologies share questions; models reuse the same source corpus."
+  },
+  "scope": "Retrospective controlled replay of real GAMMAF outputs in One-Eval supported configurations. Does not establish these reports were originally evaluated with One-Eval or how often affected configurations occur naturally.",
+  "new_inference_calls": 0
+}
