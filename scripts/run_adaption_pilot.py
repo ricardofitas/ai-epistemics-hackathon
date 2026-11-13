@@ -82,8 +82,8 @@ def load_manifest(directory):
         if not isinstance(payload.get("input"), str) or not payload["input"].strip():
             raise ValueError(f"Pilot requires a standalone string input: {tid}")
         tokens = payload.get("max_output_tokens")
-        if type(tokens) is not int or not 1 <= tokens <= 4096:
-            raise ValueError(f"Require explicit 1..4096 output-token bound: {tid}")
+        if type(tokens) is not int or not 1 <= tokens <= 8192:
+            raise ValueError(f"Require explicit 1..8192 output-token bound: {tid}")
         if (payload.get("tools") != [] or payload.get("agentic_memory") is not False
                 or payload.get("store") is not False or payload.get("tool_choice") != "none"):
             raise ValueError(f"Explicit tools=[], memory=false, store=false, tool_choice=none required: {tid}")
