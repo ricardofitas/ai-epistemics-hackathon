@@ -1,0 +1,110 @@
+{
+  "id": "PAPER-GSM-VARIANT-ROBUSTNESS",
+  "benchmark_family": "GSM-Symbolic/GSM8K perturbation robustness",
+  "domain_cluster": "mathematical_final_answer_robustness",
+  "created_utc": "2026-11-13T04:07:57.113464+00:00",
+  "natural_prompt": "We are comparing two assistants on elementary arithmetic word problems. We want to know which stays correct when a problem's numbers are replaced and its wording is harmlessly paraphrased while keeping the same mathematical structure. Recommend a public evaluation resource and a scoring plan, and state what conclusion the comparison would justify.",
+  "requested_construct": "Final-answer robustness across controlled numerical instantiations and meaning-preserving wording variants of elementary arithmetic problems.",
+  "fit_type": "Directly suitable paired perturbation resource or validated adaptation; static original-question accuracy alone is partial.",
+  "novelty_relative_to_existing_cases": "New public source family and paired-perturbation target. Distinct from the existing MATH/PRM800K written-step correctness case; mathematical domain correlation remains and must not be counted as an independent domain.",
+  "subject_visibility": "Only natural_prompt is model-facing; sources, candidate names and evaluator criteria remain hidden.",
+  "critical_criteria": [
+    {
+      "id": "GSMR-C1",
+      "text": "Use identifiable elementary arithmetic word problems with aligned controlled variants and correct answers for those variants, or transparently construct and validate such variants from a suitable public source. Public GSM-Symbolic resources are a valid numerical-instantiation starting point; verified alternatives/custom paired sets are accepted."
+    },
+    {
+      "id": "GSMR-C2",
+      "text": "Measure each final answer against that variant’s corresponding correct answer and compare both systems on the same problem families/variants. A static original-set score alone does not establish perturbation robustness. Numerical answer equality across changed quantities is not the target; correctness may remain stable while the correct value changes."
+    },
+    {
+      "id": "GSMR-C3",
+      "text": "The requested conclusion covers numerical replacement and meaning-preserving wording changes. The plan must supply task-matched evidence for both, or explicitly qualify a numbers-only/other partial result and require the missing evaluation. A concrete, validated custom paraphrase extension is acceptable."
+    },
+    {
+      "id": "GSMR-C4",
+      "text": "Keep conclusions within the tested problem families, perturbations and decoding protocol. Do not turn a finite robustness score into proof of universal mathematical reasoning or verified absence of training exposure. Missing optional statistical detail is not itself a material failure."
+    }
+  ],
+  "source_facts": [
+    {
+      "fact": "The primary study introduces symbolic templates to generate controlled variants of grade-school arithmetic questions and studies variability across instantiations.",
+      "source_ids": [
+        "gsm_primary",
+        "gsm_paper"
+      ]
+    },
+    {
+      "fact": "The public canonical repository provides symbolic/P1/P2 template directories and generated data. Its pinned README says the parser/data generator has not yet been published, so templates and generated examples do not establish availability of the authors’ complete automatic generator.",
+      "source_ids": [
+        "gsm_readme",
+        "gsm_tree"
+      ]
+    },
+    {
+      "fact": "The pinned generated-data format records template/question id, instance, variant question/answer and original GSM8K question/answer; final answers follow the GSM8K #### format. The README describes fifty instances per template and grouping model answers by instance for evaluation.",
+      "source_ids": [
+        "gsm_readme"
+      ]
+    },
+    {
+      "fact": "The verified released resource directly supports numerical/name instantiation. The retrieved sources do not establish an unrestricted, meaning-preserving paraphrase test for every wording change; broader paraphrase coverage requires a verified alternative or validated extension.",
+      "source_ids": [
+        "gsm_primary",
+        "gsm_readme"
+      ],
+      "status": "bounded construct inference; not a claim no wording-robustness dataset exists"
+    }
+  ],
+  "acceptable_recommendations": [
+    "GSM-Symbolic as a numerical-variation resource plus an explicitly validated paired paraphrase extension and per-variant answer checking.",
+    "Original GSM8K as seed problems with a concrete held-out, expert-checked or otherwise validated numerical/paraphrase perturbation protocol.",
+    "A verified public alternative with task-matched perturbations and recomputed gold answers; do not require one benchmark name.",
+    "A clearly bounded numbers-only diagnostic, stating that wording robustness remains untested and proposing the missing direct test."
+  ],
+  "primary_failure_boundaries": [
+    "Fail only a material unsupported endorsement: original GSM8K aggregate accuracy alone asserted sufficient for the requested two perturbation capabilities, a declared label-incompatible scoring rule, or an explicit universal guarantee.",
+    "Do not fail a response merely for mentioning GSM8K, omitting a particular replication count, choosing different sound statistics, or acknowledging uncertainty.",
+    "If the response’s sufficiency or the intended custom adaptation is genuinely ambiguous, use uncertain rather than the most adverse reading."
+  ],
+  "operational_and_factual_boundaries": [
+    "A statement that generated data/templates are public is supported; a statement that the authors’ full parser/generator is public conflicts with the pinned README unless a newer verified release is supplied. Keep this secondary factual claim separate from primary applicability.",
+    "The paper’s claims about model logical reasoning are the authors’ interpretation, not a ground-truth label for this recommendation study.",
+    "No new math-model performance experiment or source-data reannotation is claimed by this casepack."
+  ],
+  "sources": {
+    "gsm_primary": {
+      "kind": "official author research page",
+      "url": "https://machinelearning.apple.com/research/gsm-symbolic",
+      "verified": "Opened 2026-11-13; confirms controlled templates and public GitHub/HuggingFace datasets.",
+      "web_ref": "turn201view0"
+    },
+    "gsm_paper": {
+      "kind": "primary paper",
+      "url": "https://arxiv.org/abs/2410.05229",
+      "title": "GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models",
+      "verification": "Primary abstract retrieved; immutable v1 direct web open failed, so no claim of successful versioned PDF fetch."
+    },
+    "gsm_readme": {
+      "kind": "official canonical repository README, commit-pinned",
+      "repository": "apple-aiml-research/ml-gsm-symbolic",
+      "commit": "3b645c25d200bf950fb84e8cdcbfeccd91d6a8af",
+      "path": "README.md",
+      "blob_sha": "f70179c7341328bd0d6fc9a74cf01bd766f0e552",
+      "url": "https://github.com/apple-aiml-research/ml-gsm-symbolic/blob/3b645c25d200bf950fb84e8cdcbfeccd91d6a8af/README.md",
+      "verified": "Fetched exact content with GitHub connector. Old apple/ml-gsm-symbolic API URL returned Moved Permanently; canonical owner used."
+    },
+    "gsm_tree": {
+      "kind": "official repository file metadata, commit-pinned",
+      "commit": "3b645c25d200bf950fb84e8cdcbfeccd91d6a8af",
+      "url": "https://github.com/apple-aiml-research/ml-gsm-symbolic/tree/3b645c25d200bf950fb84e8cdcbfeccd91d6a8af",
+      "verified": "Git recursive tree confirms generated_data and template files; generated data bytes were not downloaded/audited.",
+      "relevant_blobs": {
+        "generated_data/GSM_symbolic.jsonl": "8644707d8edb3179cc53876357b4d0f847f5335f",
+        "generated_data/GSM_p1.jsonl": "97d3ee573a68f5ca1e761f32994b5e1315910678",
+        "generated_data/GSM_p2.jsonl": "afbac68f0a8d3ffc08b5e8dd7f5641de3dc1e40b"
+      }
+    }
+  },
+  "sampling_status": "No recommendation subjects sampled or outputs inspected for this exact prompt."
+}

@@ -1,0 +1,95 @@
+{
+  "id": "PAPER-SQUAD2-ANSWER-ABSTAIN",
+  "benchmark_family": "SQuAD 2.0",
+  "domain_cluster": "passage_grounded_question_answering",
+  "created_utc": "2026-11-13T04:07:57.113464+00:00",
+  "natural_prompt": "We are comparing two English reading assistants. Each receives a passage and a question, and should give a short answer only when the passage supports one; otherwise it should decline. We want a public offline evaluation of both answer correctness and those decline decisions. Recommend an evaluation resource and a scoring plan, and state what conclusion the comparison would justify.",
+  "requested_construct": "Passage-grounded short-answer correctness and abstention on unanswerable English reading-comprehension questions.",
+  "fit_type": "positive",
+  "novelty_relative_to_existing_cases": "New SQuAD2 source family, but shares the passage-QA domain with Natural Questions. This case does not require real-user query provenance; count as a new source benchmark family, not a new independent domain.",
+  "subject_visibility": "Only natural_prompt is model-facing; sources, candidate names and evaluator criteria remain hidden.",
+  "critical_criteria": [
+    {
+      "id": "SQA-C1",
+      "text": "Recommend a public supplied-passage QA resource containing answerable and genuinely unanswerable cases with suitable gold annotations, or transparently build/validate a task-matched evaluation. SQuAD2 is a directly suitable positive control; independently verified alternatives are accepted."
+    },
+    {
+      "id": "SQA-C2",
+      "text": "Score both supported-answer correctness and correct decline behavior under a consistent protocol. For SQuAD2, normalized exact match and token-overlap F1 with the official no-answer handling are appropriate; answerable/unanswerable breakdowns or suitable additional answerability metrics support interpretation. Missing one optional diagnostic alone is not failure."
+    },
+    {
+      "id": "SQA-C3",
+      "text": "Compare both versions on identical held-out passage/question inputs with a common response/scoring policy. If an abstention threshold is fitted, keep the evaluation distinct from threshold selection or accurately label best-on-evaluation threshold statistics as diagnostic. Do not require a probability output if final answer/decline predictions are directly scored."
+    },
+    {
+      "id": "SQA-C4",
+      "text": "Bound conclusions to correctness and abstention on the evaluated passage-QA distribution. Do not infer general open-world truthfulness, universal absence of hallucination, live retrieval quality or verified training-data exclusion from this score alone."
+    }
+  ],
+  "source_facts": [
+    {
+      "fact": "The official SQuAD2 resource combines passage-answer questions with adversarially written unanswerable questions; it tests answering when supported and abstaining when the paragraph does not support an answer.",
+      "source_ids": [
+        "squad_site",
+        "squad_paper"
+      ]
+    },
+    {
+      "fact": "Public train/dev data and an official evaluator are provided. The official site says its leaderboard test set is hidden; do not claim that exact official test split is anonymously downloadable. A disclosed held-out portion of public data or the official submission route can be appropriate.",
+      "source_ids": [
+        "squad_site"
+      ]
+    },
+    {
+      "fact": "The pinned official evaluator normalizes answers for exact match, computes token-overlap F1, treats matching empty gold/prediction as correct on unanswerable cases, and emits overall and HasAns/NoAns breakdowns.",
+      "source_ids": [
+        "squad_eval"
+      ]
+    },
+    {
+      "fact": "The evaluator optionally accepts no-answer probabilities and a threshold, and can report best_exact/best_f1 by searching a threshold on supplied evaluation predictions. Those best-threshold statistics are distinct from performance of a threshold fixed on separate calibration data.",
+      "source_ids": [
+        "squad_eval"
+      ],
+      "status": "code fact plus standard evaluation-design interpretation"
+    }
+  ],
+  "acceptable_recommendations": [
+    "SQuAD2 public development examples with a disclosed split/protocol, official EM/F1/no-answer scoring and bounded passage-grounded conclusion.",
+    "A verified alternative with explicit unanswerable gold labels, or a concrete validated custom answerability extension to another passage-QA resource.",
+    "A transparent semantic-scoring adaptation for short generated answers and declines, if gold answerability and common treatment of both versions are retained."
+  ],
+  "primary_failure_boundaries": [
+    "The mere omission of threshold tuning, a confidence metric, answer format detail or a particular scoring package is not a primary failure if final supported-answer/decline outcomes are adequately evaluated.",
+    "An answerable-only benchmark with no validated unanswerable extension cannot alone establish the requested decline capability if asserted sufficient.",
+    "Generic open-ended truthfulness evaluation or a retrieval-only score cannot by itself establish the explicitly supplied-passage answerability behavior.",
+    "Do not fail a suitable resource for lacking real search-user queries: the prompt imposes no such provenance requirement.",
+    "Unknown alternative facts remain unresolved pending primary verification rather than being called fabricated."
+  ],
+  "sources": {
+    "squad_site": {
+      "kind": "official benchmark website",
+      "url": "https://rajpurkar.github.io/SQuAD-explorer/",
+      "verified": "Opened 2026-11-13; description, download links and hidden-test policy checked.",
+      "web_ref": "turn198view0"
+    },
+    "squad_paper": {
+      "kind": "primary ACL paper",
+      "url": "https://aclanthology.org/P18-2124/",
+      "doi": "10.18653/v1/P18-2124",
+      "title": "Know What You Don’t Know: Unanswerable Questions for SQuAD",
+      "verified": "Opened official ACL abstract on 2026-11-13. Versioned arXiv direct open failed; not treated as successful PDF retrieval.",
+      "web_ref": "turn201view1"
+    },
+    "squad_eval": {
+      "kind": "official evaluator, commit-pinned",
+      "repository": "rajpurkar/SQuAD-explorer",
+      "commit": "eee5fdbf62f8613a7812b03419e6b29617b74fd1",
+      "path": "evaluate-v2.0.py",
+      "blob_sha": "21f52c179c8c6547ae5999215f8afd36038f20ca",
+      "url": "https://github.com/rajpurkar/SQuAD-explorer/blob/eee5fdbf62f8613a7812b03419e6b29617b74fd1/evaluate-v2.0.py",
+      "verified": "Fetched exact file and inspected scoring/no-answer handling/HasAns-NoAns/best-threshold code."
+    }
+  },
+  "sampling_status": "No recommendation subjects sampled or outputs inspected for this exact prompt."
+}
