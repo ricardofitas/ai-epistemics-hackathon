@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-11-13T21:28:43.645534+00:00",
+  "original_advice_attempts": 36,
+  "original_advice_complete": 26,
+  "double_extraction_requests": 52,
+  "source_review_requests": 80,
+  "strict_translation_agreement_after_lossless_annotation_decoding": 15,
+  "source_candidates": 40,
+  "source_double_pass_families": 20,
+  "previously_tested_first_cohort": 4,
+  "new_confirmation_cohort": 16,
+  "planned_new_solver_answers": 240,
+  "complete_correct_new_solver_answers": 236,
+  "incomplete_solver_answers": 4,
+  "confirmation_correct": 191,
+  "confirmation_unknown": 1,
+  "http_attempts_reviews_and_solvers_including_rate_rejections": 514,
+  "rate_limit_rejections": 142,
+  "original_posthoc_source_gate_analysis_preserved": true,
+  "primary_new_confirmation_distortion_pp": [
+    0,
+    6.25
+  ],
+  "secondary_new_confirmation_distortion_pp": [
+    0,
+    0
+  ],
+  "new_confirmation_10pp_criterion": false,
+  "oneeval": {
+    "pinned_commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+    "constructed_records": 101,
+    "system_A_canonical_score": 0.9807692307692307,
+    "system_A_alias_score": 0.504950495049505,
+    "system_B_both_scores": 0.7524752475247525,
+    "patch_checks": 60,
+    "permutation_checks": 20,
+    "score_agent_backend_witness": true,
+    "dedicated_contract_route_control": "unaffected",
+    "default_total_denominator_control": "unaffected",
+    "naturally_occurring_prevalence": "unmeasured",
+    "external_human_validation": "pending"
+  },
+  "physical_recovery_requests": 142,
+  "recovered_complete_confirmation_answers": 141
+}

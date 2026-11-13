@@ -1,0 +1,399 @@
+{
+  "verified_utc": "2026-11-13T21:07:04.394124+00:00",
+  "new_solver_output_texts_read_before_this_audit": false,
+  "source_data_sha256": "66f2bbe10dffa97ec093019e29c12b7916e21cc8ea85b909fe3b1359d5c39bc4",
+  "questions_checked": 48,
+  "all_arithmetic_matches": true,
+  "review": "Coordinator-derived arithmetic and executable checks; external human review still pending",
+  "ordinary_interpretations": [
+    "The 3-day pretzel change adds one pretzel on each of the remaining four days.",
+    "The enumerated orange categories are counted as disjoint as in the source solution.",
+    "Concert runtime includes the explicitly stated break."
+  ],
+  "rows": [
+    {
+      "family_id": "GSM8K-883",
+      "variant": "numeric",
+      "expression": "(80-20)/3",
+      "derived": "20",
+      "released_gold": "20",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-883",
+      "variant": "paraphrase",
+      "expression": "(65-15)/2",
+      "derived": "25",
+      "released_gold": "25",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-883",
+      "variant": "added_operation",
+      "expression": "(65-15-10)/2",
+      "derived": "20",
+      "released_gold": "20",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-46",
+      "variant": "numeric",
+      "expression": "240+45-90",
+      "derived": "195",
+      "released_gold": "195",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-46",
+      "variant": "paraphrase",
+      "expression": "220+23-80",
+      "derived": "163",
+      "released_gold": "163",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-46",
+      "variant": "added_operation",
+      "expression": "220+15+10+23-80",
+      "derived": "188",
+      "released_gold": "188",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-1216",
+      "variant": "numeric",
+      "expression": "300-2*(30+60+60*F(3,4))",
+      "derived": "30",
+      "released_gold": "30",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-1216",
+      "variant": "paraphrase",
+      "expression": "200-2*(20+40+40*F(3,4))",
+      "derived": "20",
+      "released_gold": "20",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-1216",
+      "variant": "added_operation",
+      "expression": "200-(2*(20+40+40*F(3,4))+10)",
+      "derived": "10",
+      "released_gold": "10",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-329",
+      "variant": "numeric",
+      "expression": "9+12-4",
+      "derived": "17",
+      "released_gold": "17",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-329",
+      "variant": "paraphrase",
+      "expression": "7+10-3",
+      "derived": "14",
+      "released_gold": "14",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-329",
+      "variant": "added_operation",
+      "expression": "7+10-3-2",
+      "derived": "12",
+      "released_gold": "12",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-190",
+      "variant": "numeric",
+      "expression": "4*60*3",
+      "derived": "720",
+      "released_gold": "720",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-190",
+      "variant": "paraphrase",
+      "expression": "3*60*2",
+      "derived": "360",
+      "released_gold": "360",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-190",
+      "variant": "added_operation",
+      "expression": "3*60*2-3*5",
+      "derived": "345",
+      "released_gold": "345",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-575",
+      "variant": "numeric",
+      "expression": "5*80/F(5)*F('1.80')",
+      "derived": "144",
+      "released_gold": "144",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-575",
+      "variant": "paraphrase",
+      "expression": "3*64/F(8)*F('1.50')",
+      "derived": "36",
+      "released_gold": "36",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-575",
+      "variant": "added_operation",
+      "expression": "3*64/F(2)/8*F('1.50')+3*64/F(2)/16*F('2.50')",
+      "derived": "33",
+      "released_gold": "33",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-747",
+      "variant": "numeric",
+      "expression": "700*(F('0.6')-F('0.5'))*7",
+      "derived": "490",
+      "released_gold": "490",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-747",
+      "variant": "paraphrase",
+      "expression": "500*(F('0.5')-F('0.4'))*7",
+      "derived": "350",
+      "released_gold": "350",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-747",
+      "variant": "added_operation",
+      "expression": "500*(F('0.5')-F('0.4'))*7-20",
+      "derived": "330",
+      "released_gold": "330",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-346",
+      "variant": "numeric",
+      "expression": "48-6*5-2*7",
+      "derived": "4",
+      "released_gold": "4",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-346",
+      "variant": "paraphrase",
+      "expression": "36-4*5-7",
+      "derived": "9",
+      "released_gold": "9",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-346",
+      "variant": "added_operation",
+      "expression": "36-4*5-7-3",
+      "derived": "6",
+      "released_gold": "6",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-60",
+      "variant": "numeric",
+      "expression": "50-2-50*F(3,10)-4",
+      "derived": "29",
+      "released_gold": "29",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-60",
+      "variant": "paraphrase",
+      "expression": "25-1-25*F(1,5)-2",
+      "derived": "17",
+      "released_gold": "17",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-60",
+      "variant": "added_operation",
+      "expression": "25-1-25*F(1,5)-2-2",
+      "derived": "15",
+      "released_gold": "15",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-985",
+      "variant": "numeric",
+      "expression": "24/F(3)*7",
+      "derived": "56",
+      "released_gold": "56",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-985",
+      "variant": "paraphrase",
+      "expression": "18/F(2)*7",
+      "derived": "63",
+      "released_gold": "63",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-985",
+      "variant": "added_operation",
+      "expression": "3*9+4*(9+1)",
+      "derived": "67",
+      "released_gold": "67",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-1068",
+      "variant": "numeric",
+      "expression": "(12-2-3+4)*5",
+      "derived": "55",
+      "released_gold": "55",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-1068",
+      "variant": "paraphrase",
+      "expression": "(10-3-4+3)*4",
+      "derived": "24",
+      "released_gold": "24",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-1068",
+      "variant": "added_operation",
+      "expression": "(10-3-4+3-2)*4",
+      "derived": "16",
+      "released_gold": "16",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-586",
+      "variant": "numeric",
+      "expression": "(3*400+2*700)*F(150,300)",
+      "derived": "1300",
+      "released_gold": "1300",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-586",
+      "variant": "paraphrase",
+      "expression": "(2*500+600)*F(100,200)",
+      "derived": "800",
+      "released_gold": "800",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-586",
+      "variant": "added_operation",
+      "expression": "(2*500+600+300)*F(100,200)",
+      "derived": "950",
+      "released_gold": "950",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-638",
+      "variant": "numeric",
+      "expression": "4*F('4.50')/3+4*F('2.20')/2",
+      "derived": "52/5",
+      "released_gold": "10.4",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-638",
+      "variant": "paraphrase",
+      "expression": "5*F('5.20')/4+5*F('3.30')/3",
+      "derived": "12",
+      "released_gold": "12",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-638",
+      "variant": "added_operation",
+      "expression": "5*F('5.20')/4+5*F('3.30')/3-2*F('0.50')",
+      "derived": "11",
+      "released_gold": "11",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-492",
+      "variant": "numeric",
+      "expression": "6*(1+4)",
+      "derived": "30",
+      "released_gold": "30",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-492",
+      "variant": "paraphrase",
+      "expression": "8*(1+3)",
+      "derived": "32",
+      "released_gold": "32",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-492",
+      "variant": "added_operation",
+      "expression": "8+3*8+2*F(8,2)",
+      "derived": "40",
+      "released_gold": "40",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-105",
+      "variant": "numeric",
+      "expression": "6*(1+4)",
+      "derived": "30",
+      "released_gold": "30",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-105",
+      "variant": "paraphrase",
+      "expression": "5*(1+3)",
+      "derived": "20",
+      "released_gold": "20",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-105",
+      "variant": "added_operation",
+      "expression": "5+3*5+F(3*5,3)",
+      "derived": "25",
+      "released_gold": "25",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-166",
+      "variant": "numeric",
+      "expression": "20*F(2,8)",
+      "derived": "5",
+      "released_gold": "5",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-166",
+      "variant": "paraphrase",
+      "expression": "15*F(3,9)",
+      "derived": "5",
+      "released_gold": "5",
+      "matches": true
+    },
+    {
+      "family_id": "GSM8K-166",
+      "variant": "added_operation",
+      "expression": "(15+3)*F(3,9)",
+      "derived": "6",
+      "released_gold": "6",
+      "matches": true
+    }
+  ]
+}

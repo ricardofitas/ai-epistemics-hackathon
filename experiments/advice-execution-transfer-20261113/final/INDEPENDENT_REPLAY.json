@@ -1,0 +1,33 @@
+{
+  "status": "independent_code_path_agrees",
+  "journal_hash_checks": 324,
+  "planned_payloads_match_capture": true,
+  "attempts_per_captured_request": 1,
+  "transfer_contrasts": [
+    {
+      "pair": [
+        "deepseek-v4-flash",
+        "gemma-4-31b-it"
+      ],
+      "lower": "0",
+      "upper": "1/16"
+    },
+    {
+      "pair": [
+        "qwen3.8-27b",
+        "gemma-4-26b-a4b-it"
+      ],
+      "lower": "0",
+      "upper": "0"
+    }
+  ],
+  "retained_capture_notes": [],
+  "operational_recovery": {
+    "original_confirmation_http_attempts": 192,
+    "physical_recovery_http_attempts": 142,
+    "only_explicit_429_trials_repeated": true,
+    "all_non_429_original_records_unchanged": true,
+    "payload_identity_verified_for_every_recovery": true
+  },
+  "review": "Independent arithmetic implementation by the coordinator; external human validation pending"
+}

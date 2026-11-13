@@ -1,0 +1,313 @@
+{
+  "source_commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "scope": "Unmodified metric registry/parser/general scorer/MetricRunner. Original BenchInfo AST and stdlib logger replace unneeded graph dependency imports.",
+  "same_registered_function_for_all_three_names": true,
+  "data": {
+    "A": {
+      "correct": 51,
+      "wrong": 1,
+      "abstain": 49
+    },
+    "B": {
+      "correct": 76,
+      "wrong": 25,
+      "abstain": 0
+    }
+  },
+  "results": [
+    {
+      "system": "A",
+      "workers": 1,
+      "metric_name": "choice_accuracy",
+      "score": 0.9807692307692307,
+      "details_length": 101,
+      "returned_metadata": [
+        "artifacts",
+        "denominator",
+        "desc",
+        "details",
+        "empty_output",
+        "failure_policy",
+        "invalid_references",
+        "parse_failed",
+        "parser",
+        "priority",
+        "score",
+        "scored_samples",
+        "total_samples",
+        "valid_predictions"
+      ]
+    },
+    {
+      "system": "A",
+      "workers": 1,
+      "metric_name": "accuracy",
+      "score": 0.9807692307692307,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    },
+    {
+      "system": "A",
+      "workers": 1,
+      "metric_name": "acc",
+      "score": 0.9807692307692307,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    },
+    {
+      "system": "A",
+      "workers": 2,
+      "metric_name": "choice_accuracy",
+      "score": 0.9807692307692307,
+      "details_length": 101,
+      "returned_metadata": [
+        "artifacts",
+        "denominator",
+        "desc",
+        "details",
+        "empty_output",
+        "failure_policy",
+        "invalid_references",
+        "parse_failed",
+        "parser",
+        "priority",
+        "score",
+        "scored_samples",
+        "total_samples",
+        "valid_predictions"
+      ]
+    },
+    {
+      "system": "A",
+      "workers": 2,
+      "metric_name": "accuracy",
+      "score": 0.504950495049505,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    },
+    {
+      "system": "A",
+      "workers": 2,
+      "metric_name": "acc",
+      "score": 0.504950495049505,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    },
+    {
+      "system": "A",
+      "workers": 4,
+      "metric_name": "choice_accuracy",
+      "score": 0.9807692307692307,
+      "details_length": 101,
+      "returned_metadata": [
+        "artifacts",
+        "denominator",
+        "desc",
+        "details",
+        "empty_output",
+        "failure_policy",
+        "invalid_references",
+        "parse_failed",
+        "parser",
+        "priority",
+        "score",
+        "scored_samples",
+        "total_samples",
+        "valid_predictions"
+      ]
+    },
+    {
+      "system": "A",
+      "workers": 4,
+      "metric_name": "accuracy",
+      "score": 0.504950495049505,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    },
+    {
+      "system": "A",
+      "workers": 4,
+      "metric_name": "acc",
+      "score": 0.504950495049505,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    },
+    {
+      "system": "B",
+      "workers": 1,
+      "metric_name": "choice_accuracy",
+      "score": 0.7524752475247525,
+      "details_length": 101,
+      "returned_metadata": [
+        "artifacts",
+        "denominator",
+        "desc",
+        "details",
+        "empty_output",
+        "failure_policy",
+        "invalid_references",
+        "parse_failed",
+        "parser",
+        "priority",
+        "score",
+        "scored_samples",
+        "total_samples",
+        "valid_predictions"
+      ]
+    },
+    {
+      "system": "B",
+      "workers": 1,
+      "metric_name": "accuracy",
+      "score": 0.7524752475247525,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    },
+    {
+      "system": "B",
+      "workers": 1,
+      "metric_name": "acc",
+      "score": 0.7524752475247525,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    },
+    {
+      "system": "B",
+      "workers": 2,
+      "metric_name": "choice_accuracy",
+      "score": 0.7524752475247525,
+      "details_length": 101,
+      "returned_metadata": [
+        "artifacts",
+        "denominator",
+        "desc",
+        "details",
+        "empty_output",
+        "failure_policy",
+        "invalid_references",
+        "parse_failed",
+        "parser",
+        "priority",
+        "score",
+        "scored_samples",
+        "total_samples",
+        "valid_predictions"
+      ]
+    },
+    {
+      "system": "B",
+      "workers": 2,
+      "metric_name": "accuracy",
+      "score": 0.7524752475247525,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    },
+    {
+      "system": "B",
+      "workers": 2,
+      "metric_name": "acc",
+      "score": 0.7524752475247525,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    },
+    {
+      "system": "B",
+      "workers": 4,
+      "metric_name": "choice_accuracy",
+      "score": 0.7524752475247525,
+      "details_length": 101,
+      "returned_metadata": [
+        "artifacts",
+        "denominator",
+        "desc",
+        "details",
+        "empty_output",
+        "failure_policy",
+        "invalid_references",
+        "parse_failed",
+        "parser",
+        "priority",
+        "score",
+        "scored_samples",
+        "total_samples",
+        "valid_predictions"
+      ]
+    },
+    {
+      "system": "B",
+      "workers": 4,
+      "metric_name": "accuracy",
+      "score": 0.7524752475247525,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    },
+    {
+      "system": "B",
+      "workers": 4,
+      "metric_name": "acc",
+      "score": 0.7524752475247525,
+      "details_length": 101,
+      "returned_metadata": [
+        "desc",
+        "details",
+        "priority",
+        "score"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+--- a/one_eval/metrics/runner.py
++++ b/one_eval/metrics/runner.py
+@@ -105,7 +105,8 @@
+                 continue
+ 
+             try:
+-                if name not in NON_PARALLEL_METRICS and len(preds) > 100:
++                non_parallel = any(fn is get_metric_fn(canonical) for canonical in NON_PARALLEL_METRICS)
++                if not non_parallel and len(preds) > 100:
+                     # Run in parallel for large datasets
+                     # Note: Parallel execution currently does not support passing accumulated results easily
+                     # unless we pass the whole dict, but parallel tasks are isolated.

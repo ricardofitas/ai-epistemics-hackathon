@@ -1,0 +1,23 @@
+{
+  "original_run": 43503630918,
+  "original_execution_commit": "f6eaa378635ea0a341d7c1ee29b0e4be9ecbdef0",
+  "original_artifact_sha256": "6f738286067d313906f7527e8cd6f663ff102fb04b514d0e7f20fe0070e5c00b",
+  "original_translation_agreement": 0,
+  "original_source_admitted": 4,
+  "previously_tested_families": [
+    "GSM8K-1301",
+    "GSM8K-4",
+    "GSM8K-914",
+    "GSM8K-967"
+  ],
+  "reason": "Lossless presentation decoding of reviewer JSON. The initial codec rejected fenced JSON and JSON numeric values despite their recoverable exact meaning.",
+  "original_reviews_modified": false,
+  "semantic_labels_or_gold_values_overridden": false,
+  "solver_scoring_changed": false,
+  "revised_total_admitted": 20,
+  "new_unexecuted_confirmation_families": 16,
+  "interpretation": "New confirmation cohort fixed after inspecting annotation representation and the original four-family result. Those four families are excluded from the new endpoint.",
+  "capture_projection": "The continuation input retains original request, final answer, status, completion and journal-hash fields. Full original records and raw stream journals remain byte-identical in the first capture archive.",
+  "original_reviews_aggregate_sha256": "11b2119dcc819a078b9f00ba23eb7fd540c0900eb97539e990ad82ba8d796351",
+  "projected_reviews_sha256": "a147ffe7bd1ab36873c69f2f7a2c9b0273712359de43a857906e3ceaf5054518"
+}

@@ -1,0 +1,437 @@
+{
+  "translation": {
+    "planned_original_advice": 36,
+    "complete_original_advice": 26,
+    "valid_double_extractions": 18,
+    "strict_agreement": 15,
+    "status_counts": {
+      "restricted_archived_resource_score_replay": 3,
+      "translation_disagreement_or_unresolved_review": 11,
+      "original_advice_incomplete": 10,
+      "base_resource_predictions_not_in_replay_bank": 1,
+      "requires_filter_definition_or_annotation": 4,
+      "requires_seed_predictions_and_paired_rule": 3,
+      "requires_authored_and_validated_questions": 3,
+      "requires_metric_or_resource_resolution": 1
+    },
+    "resource_bank": {
+      "target": {
+        "lower": "7/30",
+        "upper": "3/10",
+        "lower_pp": 23.333333333333332,
+        "upper_pp": 30.0
+      },
+      "p1": {
+        "gap": {
+          "lower": "2/3",
+          "upper": "23/30",
+          "lower_pp": 66.66666666666667,
+          "upper_pp": 76.66666666666667
+        },
+        "distortion": {
+          "lower": "11/30",
+          "upper": "8/15",
+          "lower_pp": 36.666666666666664,
+          "upper_pp": 53.333333333333336
+        }
+      },
+      "p2": {
+        "gap": {
+          "lower": "19/30",
+          "upper": "13/15",
+          "lower_pp": 63.333333333333336,
+          "upper_pp": 86.66666666666667
+        },
+        "distortion": {
+          "lower": "1/3",
+          "upper": "19/30",
+          "lower_pp": 33.333333333333336,
+          "upper_pp": 63.333333333333336
+        }
+      }
+    },
+    "condition_counts": {
+      "baseline": {
+        "translation_disagreement_or_unresolved_review": 3,
+        "base_resource_predictions_not_in_replay_bank": 1,
+        "requires_filter_definition_or_annotation": 3,
+        "requires_seed_predictions_and_paired_rule": 1,
+        "requires_metric_or_resource_resolution": 1,
+        "restricted_archived_resource_score_replay": 1,
+        "original_advice_incomplete": 2
+      },
+      "generic_verification": {
+        "restricted_archived_resource_score_replay": 2,
+        "original_advice_incomplete": 5,
+        "translation_disagreement_or_unresolved_review": 4,
+        "requires_seed_predictions_and_paired_rule": 1
+      },
+      "primary_source_facts": {
+        "translation_disagreement_or_unresolved_review": 4,
+        "requires_authored_and_validated_questions": 3,
+        "original_advice_incomplete": 3,
+        "requires_seed_predictions_and_paired_rule": 1,
+        "requires_filter_definition_or_annotation": 1
+      }
+    }
+  },
+  "transfer": {
+    "status": "complete_fixed_cohort_analysis",
+    "families": 16,
+    "planned_solver_calls": 192,
+    "recorded_solver_calls": 192,
+    "labels": {
+      "correct": 191,
+      "capture_incomplete": 1
+    },
+    "accuracy": {
+      "deepseek-v4-flash": {
+        "numeric": {
+          "lower": "1",
+          "upper": "1",
+          "lower_pp": 100.0,
+          "upper_pp": 100.0
+        },
+        "paraphrase": {
+          "lower": "1",
+          "upper": "1",
+          "lower_pp": 100.0,
+          "upper_pp": 100.0
+        },
+        "added_operation": {
+          "lower": "1",
+          "upper": "1",
+          "lower_pp": 100.0,
+          "upper_pp": 100.0
+        }
+      },
+      "gemma-4-31b-it": {
+        "numeric": {
+          "lower": "1",
+          "upper": "1",
+          "lower_pp": 100.0,
+          "upper_pp": 100.0
+        },
+        "paraphrase": {
+          "lower": "1",
+          "upper": "1",
+          "lower_pp": 100.0,
+          "upper_pp": 100.0
+        },
+        "added_operation": {
+          "lower": "15/16",
+          "upper": "1",
+          "lower_pp": 93.75,
+          "upper_pp": 100.0
+        }
+      },
+      "qwen3.8-27b": {
+        "numeric": {
+          "lower": "1",
+          "upper": "1",
+          "lower_pp": 100.0,
+          "upper_pp": 100.0
+        },
+        "paraphrase": {
+          "lower": "1",
+          "upper": "1",
+          "lower_pp": 100.0,
+          "upper_pp": 100.0
+        },
+        "added_operation": {
+          "lower": "1",
+          "upper": "1",
+          "lower_pp": 100.0,
+          "upper_pp": 100.0
+        }
+      },
+      "gemma-4-26b-a4b-it": {
+        "numeric": {
+          "lower": "1",
+          "upper": "1",
+          "lower_pp": 100.0,
+          "upper_pp": 100.0
+        },
+        "paraphrase": {
+          "lower": "1",
+          "upper": "1",
+          "lower_pp": 100.0,
+          "upper_pp": 100.0
+        },
+        "added_operation": {
+          "lower": "1",
+          "upper": "1",
+          "lower_pp": 100.0,
+          "upper_pp": 100.0
+        }
+      }
+    },
+    "pairs": [
+      {
+        "role": "primary",
+        "pair": [
+          "deepseek-v4-flash",
+          "gemma-4-31b-it"
+        ],
+        "distortion": {
+          "lower": "0",
+          "upper": "1/16",
+          "lower_pp": 0.0,
+          "upper_pp": 6.25
+        },
+        "finite_cohort_lower_at_least_10pp": false,
+        "descriptive_family_bootstrap_envelope_pp": [
+          0.0,
+          18.75
+        ],
+        "per_family": [
+          {
+            "family_id": "GSM8K-883",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-46",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-1216",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-329",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-190",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-575",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-747",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-346",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-60",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-985",
+            "lower": "0",
+            "upper": "1",
+            "lower_pp": 0.0,
+            "upper_pp": 100.0
+          },
+          {
+            "family_id": "GSM8K-1068",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-586",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-638",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-492",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-105",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-166",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          }
+        ]
+      },
+      {
+        "role": "secondary",
+        "pair": [
+          "qwen3.8-27b",
+          "gemma-4-26b-a4b-it"
+        ],
+        "distortion": {
+          "lower": "0",
+          "upper": "0",
+          "lower_pp": 0.0,
+          "upper_pp": 0.0
+        },
+        "finite_cohort_lower_at_least_10pp": false,
+        "descriptive_family_bootstrap_envelope_pp": [
+          0.0,
+          0.0
+        ],
+        "per_family": [
+          {
+            "family_id": "GSM8K-883",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-46",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-1216",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-329",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-190",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-575",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-747",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-346",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-60",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-985",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-1068",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-586",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-638",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-492",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-105",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          },
+          {
+            "family_id": "GSM8K-166",
+            "lower": "0",
+            "upper": "0",
+            "lower_pp": 0.0,
+            "upper_pp": 0.0
+          }
+        ]
+      }
+    ],
+    "scope": "Released GSM-Plus adding-operation transfer on new GSM8K source families. This is a new transformation resource experiment, not literal execution of prior advice prescribing Apple P1/P2. It shares the GSM8K parent corpus with earlier studies."
+  }
+}

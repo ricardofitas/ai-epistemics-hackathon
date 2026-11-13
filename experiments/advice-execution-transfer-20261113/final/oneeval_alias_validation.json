@@ -1,0 +1,325 @@
+{
+  "source_commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "controlled_data_only": true,
+  "source_functions_and_agent_run_unmodified": true,
+  "orchestration_scaffold": "Original BenchInfo dataclass; inert graph base and stdlib logger; three-CPU host for public score-agent check.",
+  "boundary_and_workers": [
+    {
+      "n": 99,
+      "workers": 1,
+      "canonical": 0.9803921568627451,
+      "alias": 0.9803921568627451
+    },
+    {
+      "n": 99,
+      "workers": 2,
+      "canonical": 0.9803921568627451,
+      "alias": 0.9803921568627451
+    },
+    {
+      "n": 99,
+      "workers": 4,
+      "canonical": 0.9803921568627451,
+      "alias": 0.9803921568627451
+    },
+    {
+      "n": 99,
+      "workers": 8,
+      "canonical": 0.9803921568627451,
+      "alias": 0.9803921568627451
+    },
+    {
+      "n": 100,
+      "workers": 1,
+      "canonical": 0.9803921568627451,
+      "alias": 0.9803921568627451
+    },
+    {
+      "n": 100,
+      "workers": 2,
+      "canonical": 0.9803921568627451,
+      "alias": 0.9803921568627451
+    },
+    {
+      "n": 100,
+      "workers": 4,
+      "canonical": 0.9803921568627451,
+      "alias": 0.9803921568627451
+    },
+    {
+      "n": 100,
+      "workers": 8,
+      "canonical": 0.9803921568627451,
+      "alias": 0.9803921568627451
+    },
+    {
+      "n": 101,
+      "workers": 1,
+      "canonical": 0.9807692307692307,
+      "alias": 0.9807692307692307
+    },
+    {
+      "n": 101,
+      "workers": 2,
+      "canonical": 0.9807692307692307,
+      "alias": 0.504950495049505
+    },
+    {
+      "n": 101,
+      "workers": 4,
+      "canonical": 0.9807692307692307,
+      "alias": 0.504950495049505
+    },
+    {
+      "n": 101,
+      "workers": 8,
+      "canonical": 0.9807692307692307,
+      "alias": 0.504950495049505
+    },
+    {
+      "n": 128,
+      "workers": 1,
+      "canonical": 0.9846153846153847,
+      "alias": 0.9846153846153847
+    },
+    {
+      "n": 128,
+      "workers": 2,
+      "canonical": 0.9846153846153847,
+      "alias": 0.5
+    },
+    {
+      "n": 128,
+      "workers": 4,
+      "canonical": 0.9846153846153847,
+      "alias": 0.5
+    },
+    {
+      "n": 128,
+      "workers": 8,
+      "canonical": 0.9846153846153847,
+      "alias": 0.5
+    },
+    {
+      "n": 257,
+      "workers": 1,
+      "canonical": 0.9923076923076923,
+      "alias": 0.9923076923076923
+    },
+    {
+      "n": 257,
+      "workers": 2,
+      "canonical": 0.9923076923076923,
+      "alias": 0.5019455252918288
+    },
+    {
+      "n": 257,
+      "workers": 4,
+      "canonical": 0.9923076923076923,
+      "alias": 0.5019455252918288
+    },
+    {
+      "n": 257,
+      "workers": 8,
+      "canonical": 0.9923076923076923,
+      "alias": 0.5094765909376177
+    }
+  ],
+  "permutation_checks": [
+    {
+      "permutation_seed": 0,
+      "original_alias_score": 0.9784761084804133,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 1,
+      "original_alias_score": 0.981966053748232,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 2,
+      "original_alias_score": 0.981966053748232,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 3,
+      "original_alias_score": 0.9801980198019802,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 4,
+      "original_alias_score": 0.9840306611306292,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 5,
+      "original_alias_score": 0.9805788271134807,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 6,
+      "original_alias_score": 0.9831683168316832,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 7,
+      "original_alias_score": 0.9812981298129814,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 8,
+      "original_alias_score": 0.9823196605374824,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 9,
+      "original_alias_score": 0.9840306611306292,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 10,
+      "original_alias_score": 0.9789603960396039,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 11,
+      "original_alias_score": 0.9812981298129814,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 12,
+      "original_alias_score": 0.9793729372937294,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 13,
+      "original_alias_score": 0.980959634424981,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 14,
+      "original_alias_score": 0.9780456306500215,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 15,
+      "original_alias_score": 0.9823196605374824,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 16,
+      "original_alias_score": 0.981966053748232,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 17,
+      "original_alias_score": 0.9823196605374824,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 18,
+      "original_alias_score": 0.9793729372937294,
+      "fixed": 0.9807692307692307
+    },
+    {
+      "permutation_seed": 19,
+      "original_alias_score": 0.9812981298129814,
+      "fixed": 0.9807692307692307
+    }
+  ],
+  "patch_invariance_checks": 60,
+  "default_total_denominator_control": "unaffected",
+  "dedicated_contract_scoring_control": "unaffected",
+  "public_score_agent_results": [
+    {
+      "system": "A",
+      "version": "original",
+      "metric_name": "choice_accuracy",
+      "score": 0.9807692307692307,
+      "step3_file_written": true,
+      "computed": [
+        "A"
+      ],
+      "failed": []
+    },
+    {
+      "system": "A",
+      "version": "fixed",
+      "metric_name": "choice_accuracy",
+      "score": 0.9807692307692307,
+      "step3_file_written": true,
+      "computed": [
+        "A"
+      ],
+      "failed": []
+    },
+    {
+      "system": "A",
+      "version": "original",
+      "metric_name": "accuracy",
+      "score": 0.504950495049505,
+      "step3_file_written": true,
+      "computed": [
+        "A"
+      ],
+      "failed": []
+    },
+    {
+      "system": "A",
+      "version": "fixed",
+      "metric_name": "accuracy",
+      "score": 0.9807692307692307,
+      "step3_file_written": true,
+      "computed": [
+        "A"
+      ],
+      "failed": []
+    },
+    {
+      "system": "B",
+      "version": "original",
+      "metric_name": "choice_accuracy",
+      "score": 0.7524752475247525,
+      "step3_file_written": true,
+      "computed": [
+        "B"
+      ],
+      "failed": []
+    },
+    {
+      "system": "B",
+      "version": "fixed",
+      "metric_name": "choice_accuracy",
+      "score": 0.7524752475247525,
+      "step3_file_written": true,
+      "computed": [
+        "B"
+      ],
+      "failed": []
+    },
+    {
+      "system": "B",
+      "version": "original",
+      "metric_name": "accuracy",
+      "score": 0.7524752475247525,
+      "step3_file_written": true,
+      "computed": [
+        "B"
+      ],
+      "failed": []
+    },
+    {
+      "system": "B",
+      "version": "fixed",
+      "metric_name": "accuracy",
+      "score": 0.7524752475247525,
+      "step3_file_written": true,
+      "computed": [
+        "B"
+      ],
+      "failed": []
+    }
+  ],
+  "scope": "Affected run_bench and ScoreCalcAgent pathway with supported selective denominator. Dedicated run_bench_with_contract path remains invariant in these controls.",
+  "deployment_or_real_model_rank_reversal_claim": false
+}
