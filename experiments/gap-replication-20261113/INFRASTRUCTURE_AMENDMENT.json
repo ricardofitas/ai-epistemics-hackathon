@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-13T18:56:39.930219+00:00",
+  "type": "explicit_infrastructure_only_launch_amendment_before_all_provider_and_solver_calls",
+  "old_execution_commit": "74cb80f9ceb326546e96bd9f2bd05dcd1e88e2b0",
+  "old_run_id": 43485851927,
+  "old_provider_requests": 0,
+  "old_model_requests": 0,
+  "old_artifact_sha256": "820fdcd8d2ba6c36d82594b1fa62f2bb9e6799208a365439dc7b309759fc082c",
+  "new_execution_id": "gap-p1-launch2-20261113",
+  "new_branch": "ricardo/epistemics-gap-p1-launch2-20261113",
+  "new_workflow": ".github/workflows/epistemics-gap-p1-launch2.yml",
+  "scientific_freeze_commit": "a88095492bed529454db39893a338857ff7afcca",
+  "same_scientific_protocol_sha256": "ef8dede9a90e566fd0f401a60566509d1bf3d74e4b1150a20d99e72222476c46",
+  "same_main_manifest_sha256": "8d7caa1503acf5ce1edb96d57688bc881a799233d678311bb9995b3237abfd19",
+  "same_admission_manifest_sha256": "908ef8db19d2ae952d51dd279505a9b52955fe75f3d5e1cea062e202a7ba7ce4",
+  "all_19_scientific_source_and_code_pins_unchanged": true,
+  "scientific_changes": [],
+  "operational_changes": [
+    "Verify current run through direct run endpoint before checking branch history.",
+    "Retain rejection of any prior matching workflow run and rerun attempts.",
+    "New explicit one-shot branch/workflow/execution identity."
+  ],
+  "model_request_retries": 0,
+  "automatic_resume": false,
+  "original_attempt_preserved": true,
+  "cause_scope": "Current run was absent from the historical listing; exact platform cause is not proven.",
+  "before_new_solver_output": true
+}
