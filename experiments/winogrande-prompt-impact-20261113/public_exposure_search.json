@@ -1,0 +1,719 @@
+{
+  "as_of": "2026-11-13",
+  "scope": "Read-only targeted discovery. Public default branches, indexed code, upstream paper and upstream tracker. Changes from the audited source tree screened by artifact-like paths. No measurement of private/local use, other branches, unindexed hosting or deployment prevalence.",
+  "upstream_repository": "OpenDCAI/One-Eval",
+  "audited_commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "forks_checked": 26,
+  "all_forks_verified_upstream": true,
+  "complete_trees": 26,
+  "upstream_issues_and_prs_screened": 67,
+  "issue_numbers": [
+    [
+      68,
+      "add local bench registry for dataflow kind"
+    ],
+    [
+      67,
+      "feat(external_repo): integrate OmniaBench + unify params schema for all external benches"
+    ],
+    [
+      66,
+      "external-repo benchmark framework + 9 bench integrations"
+    ],
+    [
+      65,
+      "docs: add GitHub Pages site with polished landing page and README badge"
+    ],
+    [
+      64,
+      "chore(skill): remove conda, keep uv only; add post-eval GitHub star prompt"
+    ],
+    [
+      63,
+      "0629-fix"
+    ],
+    [
+      62,
+      "feat(metrics): add common evaluation metrics"
+    ],
+    [
+      61,
+      "fix(skill): 安装流程降噪——优先复用已有环境，去掉伪选择与逐个确认"
+    ],
+    [
+      60,
+      "0621-fix"
+    ],
+    [
+      59,
+      "add some evaluation metrics"
+    ],
+    [
+      58,
+      "fix(skill): 安装流程降噪——优先复用已有环境，去掉伪选择与逐个确认"
+    ],
+    [
+      57,
+      "docs(skill): 强调全程用与用户相同的语言交流"
+    ],
+    [
+      56,
+      "Skill/post merge updates"
+    ],
+    [
+      55,
+      "Skill merge updates"
+    ],
+    [
+      54,
+      "Feat/one eval skill"
+    ],
+    [
+      53,
+      "0610-fix"
+    ],
+    [
+      52,
+      "0517-fix"
+    ],
+    [
+      51,
+      "Feature/docker deployment"
+    ],
+    [
+      50,
+      "0511-fix"
+    ],
+    [
+      49,
+      "0509-fix"
+    ],
+    [
+      48,
+      "0509-fix"
+    ],
+    [
+      47,
+      "点击删除按钮，会返回404错误"
+    ],
+    [
+      46,
+      "0429 fix bugs"
+    ],
+    [
+      45,
+      "0428-fix"
+    ],
+    [
+      44,
+      "0428 fix"
+    ],
+    [
+      43,
+      "fix gallery adding issue."
+    ],
+    [
+      42,
+      "本地运行报错了: cannot import name 'BenchAnswerGenerator' from 'dataflow.operators.core_text'"
+    ],
+    [
+      41,
+      "fix agent service issue."
+    ],
+    [
+      40,
+      "使用 新增bench 按钮后，页面全白了"
+    ],
+    [
+      39,
+      "发现阶段报错，麻烦看下"
+    ],
+    [
+      38,
+      "uv run uvicorn one_eval.server.app:app --host 0.0.0.0 --port 8000  报错"
+    ],
+    [
+      37,
+      "DeepSeek V4 模板需求"
+    ],
+    [
+      36,
+      "add bench information in report generation, fix port issue"
+    ],
+    [
+      35,
+      "add bench information in report generation."
+    ],
+    [
+      34,
+      "API测试请求异常"
+    ],
+    [
+      33,
+      "fix the front end, add type referrence and user guide"
+    ],
+    [
+      32,
+      "add vllm cleaner."
+    ],
+    [
+      31,
+      "Add api model evaluation options."
+    ],
+    [
+      30,
+      "可以支持 API 测试吗？我看现在仅支持 llm 的测试"
+    ],
+    [
+      29,
+      "Demo & Img"
+    ],
+    [
+      28,
+      "fix the front for report radar, bench scores and visualization"
+    ],
+    [
+      27,
+      "0314, fix the front for report radar,  bench scores and bench visualization"
+    ],
+    [
+      26,
+      "Feat/reclassify bench categories"
+    ],
+    [
+      24,
+      "Feat/reclassify bench categories"
+    ],
+    [
+      23,
+      "0310： update front for metric and report"
+    ],
+    [
+      22,
+      "配置环境"
+    ],
+    [
+      21,
+      "refactor: BenchGallery修复 还有当时论文做实验时候设置的阈值同步修改"
+    ],
+    [
+      20,
+      "metric recommend·代码去冗余以及添加了部分report功能"
+    ],
+    [
+      19,
+      "Revert \"fix the recommend system \""
+    ],
+    [
+      18,
+      "fix the recommend system "
+    ],
+    [
+      17,
+      "refine metric recommend and add score calc"
+    ],
+    [
+      16,
+      "重构了metric推荐系统"
+    ],
+    [
+      15,
+      "改前端，做RAG后端接口实现，添加更多本地benchmark"
+    ],
+    [
+      14,
+      "front bug fixed"
+    ],
+    [
+      13,
+      "重构了metric注册方式,添加workflow全程测试文件"
+    ],
+    [
+      12,
+      "feat: 添加BenchmarkSelect的新匹配算法以及RAG检索"
+    ],
+    [
+      11,
+      "add score calc agent, metrics lib, and test script"
+    ],
+    [
+      10,
+      "fix the metric recommend strategy"
+    ],
+    [
+      9,
+      "fix metric_recommender_agent and add test scripts"
+    ],
+    [
+      8,
+      "add metric_recommend_agent and test scripts"
+    ],
+    [
+      7,
+      "add metric_recommend and test script"
+    ],
+    [
+      6,
+      "Add test_ckpt and update test_interrupt"
+    ],
+    [
+      5,
+      "fix interrupt，add checkpoiner"
+    ],
+    [
+      4,
+      "ckpt与Interrupt"
+    ],
+    [
+      3,
+      "Add checkpointer"
+    ],
+    [
+      2,
+      "人机交互中的 Interrupt "
+    ],
+    [
+      1,
+      "xlsx to json"
+    ]
+  ],
+  "fork_inventory": [
+    {
+      "repository": "Kakezh/One-Eval",
+      "branch": "main",
+      "revision_returned": "a688a113c4e5ab88460497594598b33f80f6f3b7",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": []
+    },
+    {
+      "repository": "OriginHubAI/One-Eval",
+      "branch": "main",
+      "revision_returned": "ce0516f34ea5f3e625aba078a5087baac7e11dce",
+      "tree_items": 163,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "lu-ph/One-Eval",
+      "branch": "main",
+      "revision_returned": "a688a113c4e5ab88460497594598b33f80f6f3b7",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": []
+    },
+    {
+      "repository": "paperwave/One-Eval",
+      "branch": "main",
+      "revision_returned": "8e1bb50ed2882ec59ad469e8521b7486f0488150",
+      "tree_items": 205,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one-eval-skill/assets/evalspec.template.yaml"
+      ]
+    },
+    {
+      "repository": "yxma613/One-Eval",
+      "branch": "main",
+      "revision_returned": "4e6a9d126a0b74aa92cd621d2d28da5664c1c5e8",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": []
+    },
+    {
+      "repository": "startsuper2016-star/One-Eval",
+      "branch": "main",
+      "revision_returned": "5f01e357289095722881041c7320328ce7866465",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "Million-mo/One-Eval",
+      "branch": "main",
+      "revision_returned": "5f01e357289095722881041c7320328ce7866465",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "stan000000/One-Eval",
+      "branch": "main",
+      "revision_returned": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "tree_items": 234,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": []
+    },
+    {
+      "repository": "scuuy/One-Eval",
+      "branch": "main",
+      "revision_returned": "5dbae5868a0fe27ae7fb3afabbda3adea207116a",
+      "tree_items": 191,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one-eval-skill/assets/evalspec.template.yaml"
+      ]
+    },
+    {
+      "repository": "mmarzl17/One-Eval",
+      "branch": "main",
+      "revision_returned": "4e6a9d126a0b74aa92cd621d2d28da5664c1c5e8",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": []
+    },
+    {
+      "repository": "Vincent54088/One-Eval",
+      "branch": "main",
+      "revision_returned": "cfcda82c2ad9d1a914bb07550b3eda6726cb4b49",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "summer-hub/One-Eval",
+      "branch": "main",
+      "revision_returned": "5f01e357289095722881041c7320328ce7866465",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "IECspace/One-Eval",
+      "branch": "main",
+      "revision_returned": "5f01e357289095722881041c7320328ce7866465",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "skyedolyn/One-Eval",
+      "branch": "main",
+      "revision_returned": "ecf0c57eb454d44f83dfaface64630af2a27b446",
+      "tree_items": 229,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one-eval-skill/assets/evalspec.template.yaml"
+      ]
+    },
+    {
+      "repository": "initiald0824/One-Eval",
+      "branch": "main",
+      "revision_returned": "5f01e357289095722881041c7320328ce7866465",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "helloml0326/One-Eval",
+      "branch": "main",
+      "revision_returned": "a0cd8f273344c64e3dab3efac3d52b69a3e82fa2",
+      "tree_items": 163,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "Gjjjjjjjjjjj/One-Eval",
+      "branch": "main",
+      "revision_returned": "a0cd8f273344c64e3dab3efac3d52b69a3e82fa2",
+      "tree_items": 163,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "liu123-hua/One-Eval",
+      "branch": "main",
+      "revision_returned": "8e1bb50ed2882ec59ad469e8521b7486f0488150",
+      "tree_items": 205,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one-eval-skill/assets/evalspec.template.yaml"
+      ]
+    },
+    {
+      "repository": "joyang1/One-Eval",
+      "branch": "main",
+      "revision_returned": "5f01e357289095722881041c7320328ce7866465",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "XZ0730/One-Eval",
+      "branch": "main",
+      "revision_returned": "ac0a3f20e3f063450bca2037fe6ea7c5cd8cfd35",
+      "tree_items": 163,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "suzleozh/One-Eval",
+      "branch": "main",
+      "revision_returned": "5f01e357289095722881041c7320328ce7866465",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "ping5510/One-Eval",
+      "branch": "main",
+      "revision_returned": "bf09eaf42f3be9082bb078fd91b29ff1fc48e382",
+      "tree_items": 163,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "DankerMu/One-Eval",
+      "branch": "main",
+      "revision_returned": "5f01e357289095722881041c7320328ce7866465",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "PeopleFuture/One-Eval",
+      "branch": "main",
+      "revision_returned": "5f01e357289095722881041c7320328ce7866465",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    },
+    {
+      "repository": "EriccirEgyz/One-Eval",
+      "branch": "main",
+      "revision_returned": "faf8cb6dcafcd892d42b1b8aab2da739c49269da",
+      "tree_items": 233,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": []
+    },
+    {
+      "repository": "Ericsongyl/One-Eval",
+      "branch": "main",
+      "revision_returned": "5f01e357289095722881041c7320328ce7866465",
+      "tree_items": 164,
+      "truncated": false,
+      "candidate_paths_after_upstream_comparison": [
+        "one_eval/agents/report_gen_agent.py"
+      ]
+    }
+  ],
+  "github_query_outcomes": [
+    {
+      "src": "code/filename:eval_results.json \"winogrande\"",
+      "total": 17,
+      "paths": [
+        [
+          "obekt/HOPE-nested-learning",
+          "surgery/out/eval_results.jsonl"
+        ],
+        [
+          "Qualis-Servicos-Medicos/SLM-GPT",
+          "eval_results.json"
+        ],
+        [
+          "joshuabello2550/reward-gradient-pruning",
+          "Evaluation/eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/70m_eval_results.json"
+        ],
+        [
+          "Masony817/picogpt",
+          "11-19-25_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/410m_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/r256_70m_410m_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/r256_410m_1.4b_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/70m_step140000_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/410m_step140000_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/70m_step140000_410m_eval_results.json"
+        ],
+        [
+          "caseyhnguyen/Structured-Pruning-of-LLaMa-for-Edge-Devices",
+          "LLM-Pruner/eval_results/llama3_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/r256_70m_step140000_410m_step141000_eval_results.json"
+        ],
+        [
+          "vijai-mohan/Refrag2",
+          "eval/ibm-granite-granite-4.0-350M/lm_eval/lm_eval_results.json"
+        ],
+        [
+          "vijai-mohan/Refrag2",
+          "eval/refrag_paper/llama2-7B_full_context/lm_eval/lm_eval_results.json"
+        ],
+        [
+          "vijai-mohan/Refrag2",
+          "eval/refrag_paper/ibm-granite-granite-4.0-350M/lm_eval/lm_eval_results.json"
+        ],
+        [
+          "xiyii-star/EvoNarrator",
+          "eval/Future_Idea_Prediction/results/research_ideas_Natural_Language_Processing_20251209_212636_results/retrieval_results.json"
+        ]
+      ]
+    },
+    {
+      "src": "code/filename:eval_results.json \"sciq\"",
+      "total": 11,
+      "paths": [
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/70m_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/410m_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/r256_70m_410m_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/r256_410m_1.4b_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/70m_step140000_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/410m_step140000_eval_results.json"
+        ],
+        [
+          "wangbing1416/EoupCT",
+          "analysis/results/final_eval_results.jsonl"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/70m_step140000_410m_eval_results.json"
+        ],
+        [
+          "EfficientLLMs/lazy-pretrain",
+          "eval/r256_70m_step140000_410m_step141000_eval_results.json"
+        ],
+        [
+          "wangbing1416/EoupCT",
+          "analysis/results/eval_results.jsonl"
+        ],
+        [
+          "wangbing1416/EoupCT",
+          "analysis/results/mmlu_eval_results.json"
+        ]
+      ]
+    },
+    {
+      "src": "code/\"dataflow_eval_score\" \"winogrande\"",
+      "total": 0,
+      "paths": []
+    },
+    {
+      "src": "code/\"dataflow_eval_score\" \"sciq\"",
+      "total": 0,
+      "paths": []
+    },
+    {
+      "src": "code/\"one-eval-skill\" \"eval_results.json\"",
+      "total": 2,
+      "paths": [
+        [
+          "OpenDCAI/One-Eval",
+          "one-eval-skill/SKILL.md"
+        ],
+        [
+          "OpenDCAI/One-Eval",
+          "one-eval-skill/scripts/run_eval.py"
+        ]
+      ]
+    },
+    {
+      "q": "\"dataflow_score\" \"winogrande\" filename:eval_results.json",
+      "total": 0,
+      "items": []
+    },
+    {
+      "q": "\"dataflow_score\" \"sciq\" filename:eval_results.json",
+      "total": 0,
+      "items": []
+    },
+    {
+      "q": "\"reused_ready\" filename:eval_results.json",
+      "total": 0,
+      "items": []
+    },
+    {
+      "q": "\"marked_ready\" filename:eval_results.json",
+      "total": 0,
+      "items": []
+    },
+    {
+      "q": "\"reused_ready\" \"winogrande\"",
+      "total": 0,
+      "items": []
+    },
+    {
+      "q": "\"reused_ready\" \"sciq\"",
+      "total": 0,
+      "items": []
+    }
+  ],
+  "matched_archived_third_party_execution_with_identifiable_rows_and_report": 0,
+  "public_paper": {
+    "link": "https://arxiv.org/html/2603.09821v1",
+    "section": "4.1–4.2",
+    "qualification": "The paper reports a real example. Its named example covers other tasks; the 100-request success-rate experiment stopped before model evaluation. Neither establishes exposure to the audited score failures."
+  },
+  "upstream_reference_scores": "The leaderboard_scores.json README describes manually maintained scores from external references. These are not captured predictions from affected One-Eval runs.",
+  "version_caveat": "SciQ correct_answer first and WinoGrande test selection appear in the v0.1.0 gallery, but the readout/parser and gallery schema changed afterward. Presence of a mapping is not evidence that the affected path ran or that a paper score changed.",
+  "decision": "No externally affected score has been verified in these sources. Seek original records and effective options for any independently identified run. A finite public search cannot estimate the population frequency."
+}
