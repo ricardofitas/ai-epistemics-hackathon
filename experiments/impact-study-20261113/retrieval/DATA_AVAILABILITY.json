@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-11-13T05:39:37.875143+00:00",
+  "status": "all_source_bytes_available_no_candidate_metrics_computed",
+  "planned_runs": 126,
+  "available_runs": 126,
+  "matching_qrels_available": true,
+  "successful_sources": 127,
+  "failed_sources": 0,
+  "source_gzip_plus_qrels_bytes": 93208587,
+  "source_budget_bytes": 100000000,
+  "all_runs_have_50_topics": true,
+  "all_runs_six_column_rows": true,
+  "qrels_rows": 23151,
+  "qrels_sha256": "6251d45a2b490e959f1defa53bef20a30a205ca10e8b6d69bf668876ad3043b6",
+  "registry_sha256": "355c9d97ef16a78b29aa657edb4668e297833c7a8da1b4c73f851697f838b0cf",
+  "download_receipt_sha256": "847e9e3f4c4780c2a26e8ccacbe426fc9ab19de31e426d3805c14f805dbd1481",
+  "metric_results": null,
+  "historical_published_aggregate_exposure": "A separate provenance scout incidentally saw search snippets of published Anserini aggregate scores; none were used for this all126pool selection, and no current per-topic/candidate effectiveness was computed. See workflow_provenance.json.",
+  "current_candidate_effectiveness_computed": false,
+  "registry_preparer_used_effectiveness_for_selection": false
+}

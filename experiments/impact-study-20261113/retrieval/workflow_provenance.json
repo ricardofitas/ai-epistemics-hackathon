@@ -1,0 +1,85 @@
+{
+  "created_utc": "2026-11-13T05:21:13.111343+00:00",
+  "status": "NO_EXPLICIT_BAD_WORKFLOW_FOUND_IN_TARGETED_SAMPLE",
+  "question": "Is there concrete evidence that an existing AI recommendation or inspected primary implementation combines archived residual Round5 submissions with TREC-COVID Complete/BEIR cumulative qrels?",
+  "answer": "Not in the inspected two recommendations and two primary repository files. This is a bounded negative check, not a global absence claim.",
+  "nist_task_boundary": {
+    "complete_qrels": "qrels-covid_d5_j0.5-5.txt",
+    "official_round5_qrels": "qrels-covid_d5_j4.5-5.txt",
+    "archive_state": "NIST postprocessed residual run files",
+    "source_locators": [
+      "data.html: TREC-COVID Complete introductory note",
+      "qrels5.html: Judgment file used to score Round5 runs",
+      "archive.html: Round5 submitted run-file note"
+    ],
+    "interpretation": "A cross-protocol combination would require separate justification; no such existing mistake has been established here."
+  },
+  "existing_recommendations": [
+    {
+      "response_id": "Q55",
+      "response_sha256": "ac464421eba60789c433de18073fbcda79e2ad0a594d01e85a0bf288e02d469d",
+      "mentions_archived_submission_files": false,
+      "specifies_cumulative_qrels_filename": false,
+      "observed_error_scope": "nonsignificance_to_equivalence_only; no archive/qrels mismatch attribution"
+    },
+    {
+      "response_id": "Q57",
+      "response_sha256": "e5bc29426689036c6f3be76b5d2b2d419faa8c19a585ccbb3de36ae6df3880d8",
+      "mentions_archived_submission_files": false,
+      "specifies_cumulative_qrels_filename": false,
+      "observed_error_scope": "nonsignificance_to_equivalence_only; no archive/qrels mismatch attribution"
+    }
+  ],
+  "inspected_primary_implementation": {
+    "repository": "castorini/anserini",
+    "commit": "d69c77b43a5eb59a7e735b1b3a5438de8e14e567",
+    "documentation": {
+      "path": "docs/experiments-covid.md",
+      "git_blob_sha": "7c5fb56fe3fec87a70df96d85d0d1ecaf367668c",
+      "locators": [
+        "lines103–130 distinguish NISTpostprocessing and qrels versions",
+        "lines132–142 Complete table identifies full baseline configurations",
+        "lines147–148 link generating script"
+      ]
+    },
+    "implementation": {
+      "path": "src/main/python/trec-covid/generate_round5_baselines.py",
+      "git_blob_sha": "cf6f8f0055e354dd9fff42fb184fa413d27e4641",
+      "locators": {
+        "complete_evaluation": "line164: evaluate_runs(complete_qrels,cumulative_runs,...)",
+        "residual_evaluation": "line186: evaluate_runs(round5_qrels,final_runs,...)",
+        "explicit_postprocessed_files": "lines46–51 and79–84"
+      }
+    },
+    "finding": "Separate intended full-collection baseline and official-round5 evaluation paths; not an identified archive/Complete mistake."
+  },
+  "search_scope": {
+    "engines": [
+      "system2",
+      "system1_authoritative_verification"
+    ],
+    "queries": [
+      "\"TREC-COVID\" \"qrels-covid_d5_j0.5-5\" \"runs\"",
+      "\"qrels-covid_d5_j0.5-5\" \"archive\"",
+      "\"TREC-COVID\" \"residual\" \"BEIR\"",
+      "site:github.com \"qrels-covid_d5_j0.5-5\" \"archive\"",
+      "site:github.com \"qrels-covid_d5_j0.5-5\" \"r5.\"",
+      "\"trec-covid/archive\" \"BEIR\" qrels"
+    ],
+    "limit": "Targeted search, not exhaustive code search or literature review."
+  },
+  "outcome_exposure": {
+    "computed_scores": false,
+    "opened_official_score_reports": false,
+    "read_per_query_performance": false,
+    "incidental_search_snippets": "Indexed Anserini documentation snippets exposed some public aggregate scores. No pair/pool was selected from them; future analysis must not claim this scout was blind to all published aggregates."
+  },
+  "recommendations": [
+    "Keep the parent’s matching residual-qrels actual-run analysis.",
+    "Do not describe an intentionally mismatched Complete-versus-residual replay as a discovered real workflow error.",
+    "A new prospectively frozen advice question about reproducing official Round5 scores could test whether assistants actually recommend the wrong qrels; it has not been sampled and is not a finding."
+  ],
+  "source_manifest": "workflow_provenance_sources.json",
+  "subject_model_calls": 0,
+  "git_writes": 0
+}
