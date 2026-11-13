@@ -1,0 +1,218 @@
+[
+  {
+    "human_id": "H01",
+    "response_id": "Q44",
+    "trial_id": "PR-10",
+    "model_alias": "deepseek-v4-flash",
+    "automated_label": "no",
+    "aligned_random_control": true
+  },
+  {
+    "human_id": "H02",
+    "response_id": "Q41",
+    "trial_id": "PR-09",
+    "model_alias": "qwen3.8-27b",
+    "automated_label": "no",
+    "aligned_random_control": true
+  },
+  {
+    "human_id": "H03",
+    "response_id": "Q17",
+    "trial_id": "PR-25",
+    "model_alias": "glm-5.2",
+    "automated_label": "no",
+    "aligned_random_control": true
+  },
+  {
+    "human_id": "H04",
+    "response_id": "Q45",
+    "trial_id": "PR-12",
+    "model_alias": "deepseek-v4-flash",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H05",
+    "response_id": "Q46",
+    "trial_id": "PR-21",
+    "model_alias": "gemma-4-31b-it",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H06",
+    "response_id": "Q33",
+    "trial_id": "PR-39",
+    "model_alias": "gemma-4-31b-it",
+    "automated_label": "uncertain",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H07",
+    "response_id": "Q02",
+    "trial_id": "PR-38",
+    "model_alias": "glm-5.2",
+    "automated_label": "no",
+    "aligned_random_control": true
+  },
+  {
+    "human_id": "H08",
+    "response_id": "Q37",
+    "trial_id": "PR-08",
+    "model_alias": "deepseek-v4-flash",
+    "automated_label": "uncertain",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H09",
+    "response_id": "Q48",
+    "trial_id": "PR-11",
+    "model_alias": "qwen3.8-27b",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H10",
+    "response_id": "Q13",
+    "trial_id": "PR-35",
+    "model_alias": "deepseek-v4-flash",
+    "automated_label": "no",
+    "aligned_random_control": true
+  },
+  {
+    "human_id": "H11",
+    "response_id": "Q55",
+    "trial_id": "PR-07",
+    "model_alias": "deepseek-v4-flash",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H12",
+    "response_id": "Q21",
+    "trial_id": "PR-06",
+    "model_alias": "qwen3.8-27b",
+    "automated_label": "no",
+    "aligned_random_control": true
+  },
+  {
+    "human_id": "H13",
+    "response_id": "Q53",
+    "trial_id": "PR-40",
+    "model_alias": "gemma-4-31b-it",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H14",
+    "response_id": "Q20",
+    "trial_id": "PR-33",
+    "model_alias": "gemma-4-31b-it",
+    "automated_label": "uncertain",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H15",
+    "response_id": "Q39",
+    "trial_id": "PR-57",
+    "model_alias": "glm-5.2",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H16",
+    "response_id": "Q60",
+    "trial_id": "PR-30",
+    "model_alias": "qwen3.8-27b",
+    "automated_label": "no",
+    "aligned_random_control": true
+  },
+  {
+    "human_id": "H17",
+    "response_id": "Q50",
+    "trial_id": "PR-42",
+    "model_alias": "gemma-4-31b-it",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H18",
+    "response_id": "Q31",
+    "trial_id": "PR-59",
+    "model_alias": "qwen3.8-27b",
+    "automated_label": "no",
+    "aligned_random_control": true
+  },
+  {
+    "human_id": "H19",
+    "response_id": "Q35",
+    "trial_id": "PR-02",
+    "model_alias": "qwen3.8-27b",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H20",
+    "response_id": "Q26",
+    "trial_id": "PR-49",
+    "model_alias": "deepseek-v4-flash",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H21",
+    "response_id": "Q12",
+    "trial_id": "PR-14",
+    "model_alias": "gemma-4-31b-it",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H22",
+    "response_id": "Q40",
+    "trial_id": "PR-01",
+    "model_alias": "deepseek-v4-flash",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H23",
+    "response_id": "Q57",
+    "trial_id": "PR-20",
+    "model_alias": "deepseek-v4-flash",
+    "automated_label": "yes",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H24",
+    "response_id": "Q34",
+    "trial_id": "PR-46",
+    "model_alias": "gemma-4-31b-it",
+    "automated_label": "no",
+    "aligned_random_control": true
+  },
+  {
+    "human_id": "H25",
+    "response_id": "Q47",
+    "trial_id": "PR-37",
+    "model_alias": "glm-5.2",
+    "automated_label": "uncertain",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H26",
+    "response_id": "Q59",
+    "trial_id": "PR-44",
+    "model_alias": "glm-5.2",
+    "automated_label": "uncertain",
+    "aligned_random_control": false
+  },
+  {
+    "human_id": "H27",
+    "response_id": "Q18",
+    "trial_id": "PR-05",
+    "model_alias": "gemma-4-31b-it",
+    "automated_label": "no",
+    "aligned_random_control": true
+  }
+]

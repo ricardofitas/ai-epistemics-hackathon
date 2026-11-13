@@ -1,0 +1,113 @@
+{
+  "witness_id": "WSC-official-v2-train-idx387",
+  "created_utc": "2026-11-13T04:56:22.573804+00:00",
+  "response_id": "Q48",
+  "purpose": "Authentic released-item witness against the universal rule non-gold pronoun replacement implies three-way NLI contradiction. This is source verification plus a logical countermodel; it is not candidate-model performance, a model ranking, or an official relabelled NLI gold item.",
+  "source": {
+    "url": "https://dl.fbaipublicfiles.com/glue/superglue/data/v2/WSC.zip",
+    "publisher": "SuperGLUE official v2 public data release hosted at dl.fbaipublicfiles.com",
+    "release_revision": "v2 (path /glue/superglue/data/v2/WSC.zip)",
+    "http_last_modified": "Tue, 09 Jul 2019 08:03:33 GMT",
+    "http_etag": "\"8a7e12a7139a056c7a49ac3a96c7b872\"",
+    "http_x_amz_version_id": "exaynVEK8XkamvIqEM.luZE4JYpVpuZ6",
+    "archive_bytes": 32751,
+    "archive_sha256": "2ed6dfa94556b4a128ff0441efe365b2e883124e7e6aa00fb8d3a6cb1fd520a9",
+    "archive_member_bytes": 140984,
+    "archive_member_sha256": "0ffaa3fd8d21e58a0805962565d1619aa4819bc3d034255777f606f801ae5a42",
+    "retrieved_directly": true,
+    "source_version_note": "No Git commit exists for this downloaded release URL. Release path, S3 response version identifier, Last-Modified, and exact archive/member/item SHA256 values identify the fetched bytes. Hashes are computed locally from the downloaded bytes, not copied from a mirror."
+  },
+  "authentic_official_coreference_record": {
+    "archive_member": "WSC/train.jsonl",
+    "line_1indexed": 388,
+    "record": {
+      "text": "Mark told Pete many lies about himself, which Pete included in his book. He should have been more truthful.",
+      "target": {
+        "span2_index": 13,
+        "span1_index": 2,
+        "span1_text": "Pete",
+        "span2_text": "He"
+      },
+      "idx": 387,
+      "label": false
+    },
+    "raw_json_line_utf8_no_newline": "{\"text\": \"Mark told Pete many lies about himself, which Pete included in his book. He should have been more truthful.\", \"target\": {\"span2_index\": 13, \"span1_index\": 2, \"span1_text\": \"Pete\", \"span2_text\": \"He\"}, \"idx\": 387, \"label\": false}",
+    "raw_json_line_sha256_no_newline": "a7d64497053727f7a9d862fcabc038f1880fb9a691b5337d862c48ac29011e46",
+    "raw_json_line_sha256_with_original_newline": "10d1f64d0e25c7cde1f7528ba6508a85410ff4d07650a79182b180725554b459",
+    "original_line_ending_hex": "0a"
+  },
+  "authentic_companion_coreference_record": {
+    "archive_member": "WSC/train.jsonl",
+    "line_1indexed": 459,
+    "record": {
+      "text": "Mark told Pete many lies about himself, which Pete included in his book. He should have been more truthful.",
+      "target": {
+        "span2_index": 13,
+        "span1_index": 0,
+        "span1_text": "Mark",
+        "span2_text": "He"
+      },
+      "idx": 458,
+      "label": true
+    },
+    "raw_json_line_utf8_no_newline": "{\"text\": \"Mark told Pete many lies about himself, which Pete included in his book. He should have been more truthful.\", \"target\": {\"span2_index\": 13, \"span1_index\": 0, \"span1_text\": \"Mark\", \"span2_text\": \"He\"}, \"idx\": 458, \"label\": true}",
+    "raw_json_line_sha256_no_newline": "4afc3dfcbc881ddd8365c8b6aee29c988175b7c4cc1403b54f3dd3a1dded4e0f",
+    "raw_json_line_sha256_with_original_newline": "cc368fd2bedb75ef10f9148bb203ed01425316cec566e2adecd34d7cdaaec5c0",
+    "original_line_ending_hex": "0a"
+  },
+  "official_annotation_scope": {
+    "task": "Binary coreference resolution",
+    "negative_record_meaning": "For source idx387, the marked He does not refer to the candidate Pete.",
+    "positive_companion_meaning": "For source idx458, the same marked He refers to candidate Mark.",
+    "not_annotated_by_source": "Neither record labels the full Pete-replaced sentence contradiction, neutral, or entailment. No official three-way NLI gold label is asserted here."
+  },
+  "q48_proposed_rule_exact": "hypothesis 2 = replacement by the non-gold entity, labeled contradiction",
+  "analyst_constructed_recast": {
+    "premise_original": "Mark told Pete many lies about himself, which Pete included in his book. He should have been more truthful.",
+    "target_token": "He",
+    "gold_entity_from_official_companion": "Mark",
+    "non_gold_entity_from_official_negative": "Pete",
+    "gold_replacement_hypothesis": "Mark told Pete many lies about himself, which Pete included in his book. Mark should have been more truthful.",
+    "non_gold_replacement_hypothesis": "Mark told Pete many lies about himself, which Pete included in his book. Pete should have been more truthful.",
+    "edits": "Replace only marked target He; retain all other tokens/punctuation.",
+    "official_nli_label_inherited": false,
+    "annotation_scope_note": "The original binary coreference labels are preserved above. The recast sentences and entailment reasoning are analyst-created, so no NLI label is claimed to be inherited."
+  },
+  "logical_countermodel": {
+    "premise_reading": "Resolve the marked He as Mark, following the authentic positive companion label.",
+    "counterworld_facts": [
+      "Mark tells Pete many lies about Mark; Pete includes those lies in Pete's book.",
+      "Mark should have been more truthful, so the official gold-resolved reading of the premise is true.",
+      "Pete also knowingly includes a separate fabricated story in the book and should have been more truthful. The original premise is silent about whether Pete has any independent reason to be more truthful."
+    ],
+    "truth_assignments": {
+      "official_gold_resolved_premise": true,
+      "non_gold_replacement_hypothesis": true
+    },
+    "why_consistent": "The original passage does not state that only Mark should have been truthful or that Pete should not have been more truthful. Additional wrongdoing by Pete is compatible with every asserted source proposition and leaves the target He resolved to Mark.",
+    "logical_result": "There exists a consistent world satisfying both the gold-resolved premise and the non-gold replacement hypothesis. Therefore the premise does not logically imply the negation of that hypothesis, and automatic contradiction is not licensed.",
+    "counterworld_only_not_entailment": "This compatibility counterworld refutes necessity of contradiction. It does not establish entailment of the Pete-replaced hypothesis, nor an official neutral annotation. A separate world with Pete blameless is also compatible with the premise.",
+    "qualification": "WSC relies on commonsense and pragmatic coreference judgments. The exercise respects its official gold referent and tests only the stronger universal contradiction conversion used in Q48."
+  },
+  "decision_scope": "One authentic item is sufficient to defeat a universal automatic conversion rule. It does not estimate how often the conversion fails across WSC and does not show performance or ranking consequences for any classifier.",
+  "restrictions": {
+    "candidate_models_called": false,
+    "candidate_predictions_read": false,
+    "model_identity_read": false,
+    "first_ratings_read": false,
+    "review_key_read": false,
+    "human_review_status": "pending"
+  },
+  "supporting_primary_documentation": [
+    {
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2019/file/4496bf24afe7fab6f046bf4923da8de6-Paper.pdf",
+      "location": "§3.2 WSC",
+      "claim": "SuperGLUE WSC asks whether a marked pronoun refers to a marked noun; binary coreference form."
+    },
+    {
+      "url": "https://cs.nyu.edu/~davise/papers/WS-11-27",
+      "location": "Author collection item61",
+      "claim": "Author collection independently presents Mark/Pete schema with truthful/skeptical options and answers Mark/Pete. This corroboration is not the source of the byte-hashed SuperGLUE labels."
+    }
+  ]
+}

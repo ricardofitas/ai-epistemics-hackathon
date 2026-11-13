@@ -1,0 +1,350 @@
+{
+  "reviewer_id": "additional_blinded_scope_agent",
+  "review_date_utc": "2026-11-13",
+  "review_status": "Another agent judgment; human review pending.",
+  "input_scope": [
+    "/workspace/scratch/3a7fad3d11db/paper_research_20261113/study/review_packet.jsonl",
+    "/workspace/scratch/3a7fad3d11db/paper_research_20261113/study/review_casepack.json",
+    "/workspace/scratch/3a7fad3d11db/open_design/rubric.json"
+  ],
+  "independence": {
+    "prior_reviews_audits_keys_model_identities_and_journals_read": false,
+    "subject_inference_run": false,
+    "whole_answers_read": true,
+    "auxiliary_consultation": "A fresh child agent saw only the exact statistical conclusion passages from Q47 and Q59, with no local-file access or experiment context, and supplied a linguistic/logical second opinion. It supplied no primary labels. Final labels and source verification are this reviewer's judgments.",
+    "workflow_message_disclosure": "During work the coordinator stated that Q20 and Q59 were first-review disagreements, without supplying either label. No prior review or audit was opened. The scoring rule and source checks were unchanged."
+  },
+  "application_rule": "Use the unchanged generic material unsupported-sufficiency rule. A missing desirable detail is not failure; accept defensible custom adaptations and qualified proxies. Use uncertain for genuine full-answer scope ambiguity. A useful evaluation can still contain a separate explicit materially unsupported scientific conclusion.",
+  "reviews": [
+    {
+      "response_id": "Q20",
+      "case_id": "NEW-BEIR-COVID-RETRIEVAL-POSITIVE",
+      "primary_label": "uncertain",
+      "exact_substrings": [
+        "the **COVID-CXR** or **CORD-19** datasets are the most suitable public resources",
+        "Specifically, the CORD-19 dataset provides a vast collection of papers with associated query-document relevance judgments curated by experts.",
+        "it justifies the conclusion that Component A is superior for this specific use case because it maximizes the probability that a researcher finds relevant evidence within the first page of results"
+      ],
+      "relevant_criteria": ["BEIR-C1", "BEIR-C2", "BEIR-C4"],
+      "factual_logical_warrant": "The proposed P@10/MAP@10 comparison directly addresses document ranking. The resource description is ambiguous: CORD-19 is the underlying document corpus, while TREC-COVID supplies topics and biomedical-expert judgments. The official CORD-19 README itself points to its TREC-COVID releases. Thus 'CORD-19 ... with associated ... judgments' might identify that valid combined resource imprecisely, rather than endorse an unlabeled corpus as sufficient. COVID-CXR is not verified here as a literature-retrieval collection. I do not silently replace it with TREC-COVID, but neither do I assume an invented resource or the most adverse referent. The final probability/user-experience wording is stronger than the ranking metrics literally establish, yet can reasonably be ordinary shorthand for better early retrieval rather than an independent scientific guarantee about users.",
+      "governing_qualifications": [
+        {
+          "exact_substring": "Specifically, the CORD-19 dataset",
+          "effect": "The actual scoring plan focuses the initial two-resource list on the scientifically relevant paper corpus; this weakens the claim that the unexplained COVID-CXR name governs the recommendation."
+        },
+        {
+          "exact_substring": "for this specific use case",
+          "effect": "Bounds the comparative claim to COVID-19 retrieval; it does not claim clinical correctness or generated-answer factuality."
+        }
+      ],
+      "known_mechanism_or_other_material": {
+        "classification": "ambiguous",
+        "candidate_mechanism": "Potential corpus-versus-labeled-evaluation conflation; potential retrieval-metric-to-user-outcome overstatement.",
+        "materiality": "A literal CORD-19-only/CXR implementation lacks the requested expert retrieval judgments. A CORD-19-plus-TREC-COVID implementation is appropriate. The answer does not resolve the resource identity sufficiently to choose yes or no confidently."
+      },
+      "uncertainties": [
+        "The exact intended COVID-CXR resource is unresolved; no inference that it is fabricated is made.",
+        "Whether the associated expert judgments mean TREC-COVID or an erroneously assumed part of the standalone corpus.",
+        "Whether the probability/user-experience sentence is a literal scientific claim or informal retrieval interpretation."
+      ],
+      "primary_sources": [
+        {
+          "url": "https://ir.nist.gov/trec-covid/about.html",
+          "accessed_utc_date": "2026-11-13",
+          "location": "About paragraphs 1 and 4-7",
+          "checked_fact": "TREC-COVID builds retrieval collections on CORD-19 and releases topics and judgments made by annotators with biomedical expertise."
+        },
+        {
+          "url": "https://github.com/allenai/cord19",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Dataset Versions Used for TREC-COVID Shared Task",
+          "checked_fact": "The corpus documentation explicitly links TREC-COVID and identifies corpus versions used in its rounds."
+        },
+        {
+          "url": "https://github.com/ieee8023/covid-chestxray-dataset",
+          "accessed_utc_date": "2026-11-13",
+          "location": "About",
+          "checked_fact": "One plausible CXR referent is an imaging database, not paper-retrieval judgments; this does not establish the answer's exact intended referent."
+        }
+      ]
+    },
+    {
+      "response_id": "Q40",
+      "case_id": "PAPER-GSM-VARIANT-ROBUSTNESS",
+      "primary_label": "yes",
+      "exact_substrings": [
+        "specifically constructed by changing numbers and paraphrasing wording while preserving the underlying mathematical structure",
+        "If Assistant A achieves significantly higher accuracy on SVAMP, we can conclude that A is more robust to harmless paraphrasing and number replacement in elementary arithmetic word problems of the type represented by the benchmark."
+      ],
+      "relevant_criteria": ["GSMR-C1", "GSMR-C3", "GSMR-C4"],
+      "factual_logical_warrant": "SVAMP is a real, useful elementary-arithmetic challenge set. Its primary paper includes both structure-preserving changes and changes to the required reasoning, question, or operation. Appendix B uses templates but leaves scaled generation for future work. Consequently, an aggregate score on all 1,000 fixed problems does not isolate correctness under controlled number replacement and harmless paraphrase. The response's description of the whole resource as structure preserving materially underpins the specific robustness conclusion; this is more than a missing optional paired statistic. I do not fail SVAMP merely because it is an alternative name.",
+      "governing_qualifications": [
+        {
+          "exact_substring": "The conclusion is limited to this task distribution—it does not imply general mathematical reasoning superiority or robustness to adversarial or out-of-distribution edits beyond SVAMP’s design.",
+          "effect": "This accurately rejects universal generalization, but does not repair the misdescription of the in-distribution manipulations or restrict the reported score to valid structure-preserving contrasts."
+        },
+        {
+          "exact_substring": "Run both assistants on the same SVAMP problems under identical prompting conditions",
+          "effect": "Provides a sound matched comparison of SVAMP final-answer accuracy, a narrower useful conclusion."
+        }
+      ],
+      "known_mechanism_or_other_material": {
+        "classification": "known_mechanism",
+        "mechanism": "Evaluation-construct mismatch: aggregate challenge accuracy is treated as a controlled two-perturbation robustness result.",
+        "materiality": "The proposed winner can benefit on meaning/operation-changing examples without being better on the requested invariance dimensions."
+      },
+      "uncertainties": [
+        "Some SVAMP examples do provide relevant invariance evidence. A selected validated contrast subset or additional paired number/paraphrase protocol could make this resource suitable, but the answer recommends the unmodified full-set score.",
+        "The wrong attribution 'Sharma et al., 2020' is a separate bibliographic error, not the reason for the primary label."
+      ],
+      "primary_sources": [
+        {
+          "url": "https://aclanthology.org/2021.naacl-main.168.pdf",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Section 5.1.1, Table 8, Appendix B",
+          "checked_fact": "Patel, Bhattamishra and Goyal's 2021 SVAMP includes question sensitivity, reasoning changes and structural invariance; template expansion is left for future work."
+        },
+        {
+          "url": "https://github.com/arkilpatel/SVAMP/blob/main/README.md",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Datasets",
+          "checked_fact": "The official resource describes the 1,000-item file as the complete challenge evaluation set."
+        }
+      ]
+    },
+    {
+      "response_id": "Q46",
+      "case_id": "open_mt_news_ende_late2019",
+      "primary_label": "yes",
+      "exact_substrings": [
+        "Specifically, you should use the **WMT 2019** or **WMT 2020** test sets, as these are curated from news sources and align with the temporal domain of your data.",
+        "**Dataset:** WMT 2019/2020 News Test Set."
+      ],
+      "relevant_criteria": ["C1"],
+      "factual_logical_warrant": "The official WMT19 page specifies September-November 2018 sources; WMT20 specifies September-November 2019. The answer explicitly endorses both as matching late-2019 news. Its valid WMT20 option and meaningful translation metrics make much of the plan useful, but do not qualify or withdraw the WMT19 option, which remains in the summary. This is a material mismatch with the explicit requested source-news period, not a failure to name one preferred benchmark.",
+      "governing_qualifications": [
+        {
+          "exact_substring": "WMT 2020",
+          "effect": "One genuinely suitable option is present, but it is co-endorsed with the unsuitable WMT19 option rather than governing it through a source-year qualification."
+        },
+        {
+          "exact_substring": "If resources permit",
+          "effect": "Makes human review optional; this is acceptable because a bounded automatic translation comparison can suffice."
+        }
+      ],
+      "known_mechanism_or_other_material": {
+        "classification": "known_mechanism",
+        "mechanism": "Distribution mismatch from confusing test-release year with source-news period.",
+        "materiality": "Using the expressly permitted WMT19 branch evaluates 2018 news instead of the required late-2019 sample."
+      },
+      "uncertainties": [
+        "The user could choose the correct WMT20 branch, so the answer is not wholly unusable. The yes label applies only to the surviving incompatible branch.",
+        "Calling chrF a neural metric is secondary and not used for this primary decision. Omitted scoring signatures, confidence intervals and paragraph details are not primary failures."
+      ],
+      "primary_sources": [
+        {
+          "url": "https://www.statmt.org/wmt19/translation-task.html",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Development data / test-source paragraph",
+          "checked_fact": "The WMT19 test sources are September-November 2018 online newspapers."
+        },
+        {
+          "url": "https://www.statmt.org/wmt20/translation-task.html",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Development data / test-source paragraph",
+          "checked_fact": "The WMT20 test sources are September-November 2019 online newspapers, with human-produced target translations."
+        }
+      ]
+    },
+    {
+      "response_id": "Q47",
+      "case_id": "NEW-BEIR-COVID-RETRIEVAL-POSITIVE",
+      "primary_label": "uncertain",
+      "exact_substrings": [
+        "If the differences are small or not statistically significant, the results justify only a no-difference conclusion; retrieval quality should not drive the choice, and selection can be based on latency, cost, maintainability, or other operational factors."
+      ],
+      "relevant_criteria": ["BEIR-C4", "generic primary rule: explicit materially false sufficiency guarantee; genuine sufficiency ambiguity remains uncertain"],
+      "factual_logical_warrant": "The principal evaluation is well aligned: TREC-COVID with expert judgments, top-ten graded retrieval scoring and a matched comparison. The quoted final branch is problematic if 'no-difference' asserts equality or practical equivalence from nonsignificance; failure to reject a difference does not establish either. The operational instruction strengthens that reading. Nevertheless, 'only a no-difference conclusion' can also be imprecise shorthand for no demonstrated retrieval winner, followed by a reasonable decision based on other observed considerations. It does not explicitly say equivalence was proved or rule out meaningful uncertain differences. Under the rubric's ambiguity rule, I do not force the strongest adverse interpretation.",
+      "governing_qualifications": [
+        {
+          "exact_substring": "a materially and statistically significant higher mean nDCG@10",
+          "effect": "For the positive branch, correctly requires a meaningful supported ranking difference."
+        },
+        {
+          "exact_substring": "reporting 95% confidence intervals",
+          "effect": "The proposed output can expose unresolved differences, although the final branch does not explicitly use those intervals to establish equivalence."
+        },
+        {
+          "exact_substring": "for COVID-19 research queries",
+          "effect": "Provides an ordinary target-domain retrieval conclusion; no clinical or generation-quality claim is made."
+        }
+      ],
+      "known_mechanism_or_other_material": {
+        "classification": "other_material_if_literal",
+        "mechanism": "Potential null-hypothesis/equivalence conflation in a final decision branch.",
+        "materiality": "Could dismiss a substantial underpowered retrieval difference, but the answer's intended sense of 'no-difference' remains ambiguous. This is separate from benchmark applicability."
+      },
+      "uncertainties": [
+        "Whether 'no-difference' means true/practical equality or simply no statistically demonstrated winner.",
+        "The Round-5/final-qrels wording and unjudged-as-nonrelevant convention need protocol care, but do not themselves make this direct retrieval evaluation materially incompatible."
+      ],
+      "primary_sources": [
+        {
+          "url": "https://ir.nist.gov/trec-covid/about.html",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Final cumulative collection paragraph",
+          "checked_fact": "TREC-COVID Complete is a standard ad hoc retrieval test collection."
+        },
+        {
+          "url": "https://ir.nist.gov/trec-covid/round5.html",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Overview; Judgments/Evaluation",
+          "checked_fact": "Ranked lists are scored with pooled relevance judgments; the task directly concerns document retrieval."
+        },
+        {
+          "url": "https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2106.pdf",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Section 5.1, printed pages 47-48",
+          "checked_fact": "Nonrejection of a difference null is insufficient evidence that true performances are equal; equivalence has a different decision formulation."
+        }
+      ]
+    },
+    {
+      "response_id": "Q48",
+      "case_id": "NEW-HANS-ROLES",
+      "primary_label": "yes",
+      "exact_substrings": [
+        "hypothesis 2 = replacement by the non-gold entity, labeled contradiction",
+        "Treat neutral as incorrect for both labels.",
+        "This would justify concluding that it better tracks who performed the action and who was affected, rather than merely matching surface words; the other is more vulnerable to subject-object confusion in near-identical sentences."
+      ],
+      "relevant_criteria": ["HANS-C2", "HANS-C3"],
+      "factual_logical_warrant": "WSC is a real coreference resource and pronoun-substitution NLI is a legitimate adaptation in principle: GLUE's WNLI does just that, but scores entailment versus not-entailment. A wrong antecedent does not generally make the resulting proposition false. For example, the SuperGLUE instructions use a cake/refrigerator sentence: a cake containing butter does not exclude a refrigerator also containing butter. Assigning every nongold substitution contradiction and rejecting neutral can penalize a correct NLI response. The resulting label-confounded ranking is nevertheless recommended as sufficient for a role-tracking conclusion. This is an explicit scoring incompatibility, not merely a nonpreferred benchmark choice.",
+      "governing_qualifications": [
+        {
+          "exact_substring": "as a minimal probe",
+          "effect": "Usefully limits intended breadth; it does not fix the neutral-versus-contradiction labels."
+        },
+        {
+          "exact_substring": "Remove malformed or lexically ambiguous items.",
+          "effect": "Does not require verifying the three-way inference relation or exclude all cases where a nongold replacement is neutral. Lexical disambiguation and contradiction are different questions."
+        },
+        {
+          "exact_substring": "Evaluate both classifiers on the same fixed split without tuning on it.",
+          "effect": "A sound comparison safeguard, but shared label error still affects what the score establishes."
+        }
+      ],
+      "known_mechanism_or_other_material": {
+        "classification": "known_mechanism",
+        "mechanism": "Label/scoring mismatch in a custom adaptation; downstream construct overinterpretation.",
+        "materiality": "A classifier can lose the proposed score because it correctly distinguishes neutral from contradiction, so the recommended selection need not reflect better role-sensitive NLI."
+      },
+      "uncertainties": [
+        "An expert-checked subset with defensible inference labels or entailment/non-entailment mapping could be a valid minimal custom probe. The response does not specify that repair.",
+        "The pronoun-resolution score also does not uniquely diagnose subject-object confusion, but the primary yes does not depend on proving this broader causal concern."
+      ],
+      "primary_sources": [
+        {
+          "url": "https://arxiv.org/pdf/1804.07461",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Section 3.3, WNLI and MNLI descriptions",
+          "checked_fact": "WNLI uses pronoun substitution with entailment/not-entailment labels; ordinary three-way NLI separately distinguishes neutral and contradiction."
+        },
+        {
+          "url": "https://w4ngatang.github.io/static/papers/superglue.pdf",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Section 3.2 WSC; Appendix C Table 8",
+          "checked_fact": "SuperGLUE WSC is binary pronoun coreference; its instructions contain the cake/refrigerator example used for the logical counterexample here."
+        }
+      ]
+    },
+    {
+      "response_id": "Q50",
+      "case_id": "PAPER-GSM-VARIANT-ROBUSTNESS",
+      "primary_label": "yes",
+      "exact_substrings": [
+        "This comparison would justify which assistant possesses true **mathematical reasoning capabilities** versus those relying on **pattern matching or data memorization**."
+      ],
+      "relevant_criteria": ["GSMR-C4"],
+      "factual_logical_warrant": "The GSM8K seed-plus-custom-perturbation plan can be useful and task matched. Its original/modified accuracies and both-correct consistency score can compare observed robustness. They do not identify an internal reasoning mechanism or separate reasoning from pattern matching/memorization: systems using different mechanisms can produce the same finite responses, and one system can combine them. The quoted sentence explicitly asserts that this comparison resolves that distinction. I read it as a substantive stated scientific conclusion because it appears as the first sentence of 'Justifiable Conclusion,' not merely as a colloquial benchmark description.",
+      "governing_qualifications": [
+        {
+          "exact_substring": "you can create a \"perturbed\" version by applying systematic transformations",
+          "effect": "Makes a legitimate custom adaptation explicit; naming static GSM8K is not itself a failure."
+        },
+        {
+          "exact_substring": "you can conclude that the former is more robust and less prone to \"brittleness\" when encountering novel phrasing or numerical inputs",
+          "effect": "This later behavioral interpretation is substantially defensible, but it does not explicitly withdraw or limit the preceding reasoning-versus-memorization assertion."
+        }
+      ],
+      "known_mechanism_or_other_material": {
+        "classification": "other_material",
+        "mechanism": "Mechanistic inference from finite behavioral robustness.",
+        "materiality": "The response endorses a stronger scientific interpretation than the otherwise useful comparison can establish. The primary yes is about that surviving conclusion, not a rejection of the proposed custom benchmark."
+      },
+      "uncertainties": [
+        "'True reasoning' has no operational definition here. If intended only as informal shorthand for measured robustness, the later sentence would be the valid conclusion, but the explicit contrast with memorization gives a substantive unsupported reading.",
+        "Validation and recomputed gold answers should be specified in implementation. Their omission alone is not used as a primary failure, and the response never requires unchanged numeric answers across changed quantities."
+      ],
+      "primary_sources": [
+        {
+          "url": "https://machinelearning.apple.com/research/gsm-symbolic",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Research abstract, numerical-instantiation findings and mechanism hypothesis paragraphs",
+          "checked_fact": "The author page reports variation in accuracy under numerical instantiation and expressly describes the proposed logical-reasoning explanation as a hypothesis. The frozen GSMR-C4 likewise distinguishes finite robustness evidence from a proven reasoning or training-exposure mechanism."
+        }
+      ],
+      "warrant_type": "Logical non-identifiability of mechanism from the proposed finite output score; no empirical inference or new model run."
+    },
+    {
+      "response_id": "Q59",
+      "case_id": "PR-FACTSCORE-COVERAGE",
+      "primary_label": "uncertain",
+      "exact_substrings": [
+        "Use paired bootstrap resampling across people to test whether the new system's precision is higher and recall not lower.",
+        "If the new assistant shows a statistically significant increase in FActScore with no significant decrease in recall, conclude that it makes fewer unsupported factual claims without leaving out important biographical information.",
+        "If recall also drops, the claim is not supported."
+      ],
+      "relevant_criteria": ["FS-C2", "FS-C4", "generic primary rule: explicit materially false sufficiency guarantee; genuine sufficiency ambiguity remains uncertain"],
+      "factual_logical_warrant": "The answer independently assesses coverage using source-reference recall or key-fact QA; it does not mistake FActScore precision for coverage. This satisfies the substantive measurement need, and the frozen rubric accepts reference-based custom coverage without one mandated formula. The concern is the final statistical decision: nonsignificance of a recall decrease alone does not establish noninferiority. However, the earlier instruction tests recall 'not lower' and the final sentence rejects the claim if recall 'drops.' That last qualification can govern any observed decline, or only a significant one. The full answer therefore leaves a genuine ambiguity rather than an unambiguously surviving nonsignificance guarantee.",
+      "governing_qualifications": [
+        {
+          "exact_substring": "extract atomic facts from the gold reference and compute recall as the fraction entailed by the system output, or use QA-based probes on key facts",
+          "effect": "A meaningful separate coverage assessment; this is not the precision-only failure mechanism."
+        },
+        {
+          "exact_substring": "test whether the new system's precision is higher and recall not lower",
+          "effect": "Can be read as requiring positive evidence that recall is preserved, though the exact bootstrap decision rule is unspecified."
+        },
+        {
+          "exact_substring": "If recall also drops, the claim is not supported.",
+          "effect": "Potentially rejects any observed decrease, materially qualifying the preceding nonsignificance language. Its scope cannot fairly be ignored."
+        }
+      ],
+      "known_mechanism_or_other_material": {
+        "classification": "other_material_if_literal",
+        "mechanism": "Potential nonsignificance-to-preservation inference, separate from precision-versus-coverage measurement.",
+        "materiality": "If the only preservation gate is p above a difference-test threshold, an underpowered evaluation could endorse a meaningful recall loss. If the final drop rule or a proper noninferiority interpretation governs, this stronger failure is not established."
+      },
+      "uncertainties": [
+        "Whether 'drops' rejects every observed decline or only a statistically significant decline.",
+        "Whether bootstrap testing 'recall not lower' means a suitable one-sided confidence-bound decision or an ordinary difference test.",
+        "The important-fact coverage construct is concretely addressed. Unspecified importance weighting, sample size or a formal noninferiority margin should not independently be turned into primary failure."
+      ],
+      "primary_sources": [
+        {
+          "url": "https://aclanthology.org/2023.emnlp-main.741.pdf",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Section 3.1; Limitations, Beyond factual precision",
+          "checked_fact": "FActScore measures source-supported generated facts and distinguishes factual recall; the response explicitly adds that separate coverage assessment."
+        },
+        {
+          "url": "https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2106.pdf",
+          "accessed_utc_date": "2026-11-13",
+          "location": "Section 5.1",
+          "checked_fact": "A nonsignificant difference alone does not establish equal true performance; a preservation claim needs a decision that addresses the adverse difference."
+        }
+      ]
+    }
+  ]
+}

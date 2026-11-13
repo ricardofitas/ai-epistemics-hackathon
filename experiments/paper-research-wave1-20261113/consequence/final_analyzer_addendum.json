@@ -1,0 +1,138 @@
+{
+  "addendum_id": "prospective-consequence-final-analyzer-addendum-v1",
+  "reviewed_utc": "2026-11-13T04:58:11.741280+00:00",
+  "status": "NOT_EXECUTED_GATE_FAILED_PREPARED_METHODS_ONLY",
+  "purpose": "Bind the final prospective protocol/analyzer changes to the unchanged selected data and prior review. This addendum preserves the original prereview files and does not authorize inference.",
+  "original_prereview_sha256": {
+    "prereview.json": "37c46b425b20344555012cf7c9d8990a746d1f8aa4d9575a6eec5a794e3db59a",
+    "prereview.md": "4668ac90f46e3c32a6c495af144cb1778955acb40f9c0f322549616656b00158"
+  },
+  "current_sha256": {
+    "protocol.json": "205286cb768334adc329987eaa83181b5a21b9c748dd911736281b04e3b9fffc",
+    "design.md": "c540246a216121638e70fc915f0738323467bbb5d41b4c4a2a192f4adfc146f7",
+    "analyze_consequence.py": "5693da1c197cb988b0db67fcbfd0c446374112b6dc25aa1692c2d247eb28515d",
+    "analyzer_verification.json": "69db1499e74ab3323192355cdbd13d77f8d1388f258aae0c8d5f1192407f1457",
+    "NOT_RUN_STATUS.json": "535982b6933378d06e9b01c6842b846d0bfe6dedb5ee4514a0e9ebdb59c650c9",
+    "selection_intent.json": "773f41fbadb7903c4bbc08dd0332d1d4fa6fa34b8c23900790f1843fe2876aaf",
+    "selected_data.json": "cedb6b48d3954ff21ae05d92ef67728f3de0f2476b0e050d8e75d9fc00a76478",
+    "selection_manifest.json": "8a3945299bf7c601b6a43f54dacde0a9b877b44eb092788f10fe0bd6086fa419",
+    "task_key.json": "4674cf7b95f8d3e20d43e086930118c04c074c6a2adec023ca8b7ae27a9b84e6",
+    "manifest.jsonl": "345af0d34df0d741d0b76eabe2af33af33118bb0c042b281fd7e65c3aa371ed4",
+    "download_and_select.py": "25f741f4b9818ed6f801c43aefa26b241c82945df8cf5ff84b314a989a8a2d0f",
+    "source/paws_source.json": "24f34ce35202ed3745495e61b80a133597831c99a7dd7ee66daff45bf072c7e3",
+    "source/hans_source.json": "a100f453af9e6ee2cf6b835a756ba89327de1ea929198e5bbe243e1cec04b849",
+    "source/paws_hf_api.json": "b3fec50cc19dad421fad7298d729d150dbfbdd365da89ddac8e5307bedac749a",
+    "source/paws_test.parquet": "ae342ff12bb84b84b95f468abf5db6cb7c7bd578271299fe9c99be75b8132f4d",
+    "source/hans.tsv": "c55b62feef9913070e88f38938dc2492018c945ac81f70139346472494124e79",
+    "../run_adaption_stream_pilot.py": "c280811c5f685cdc5b254d5097946835428cd87de6ea58218de1e2cad537fe5e"
+  },
+  "unchanged_from_original_prereview": [
+    "selection_intent.json",
+    "selected_data.json",
+    "selection_manifest.json",
+    "task_key.json",
+    "manifest.jsonl",
+    "download_and_select.py",
+    "source/paws_source.json",
+    "source/hans_source.json",
+    "source/paws_hf_api.json",
+    "source/paws_test.parquet",
+    "source/hans.tsv",
+    "../run_adaption_stream_pilot.py",
+    "analyze_consequence.py"
+  ],
+  "updated_since_original_prereview": [
+    "protocol.json",
+    "design.md"
+  ],
+  "new_prepared_records": [
+    "analyzer_verification.json",
+    "NOT_RUN_STATUS.json"
+  ],
+  "final_analyzer_review": {
+    "code_sha256": "5693da1c197cb988b0db67fcbfd0c446374112b6dc25aa1692c2d247eb28515d",
+    "independent_self_test": "41 synthetic checks independently rerun and passed during followup review; current analyzer bytes are unchanged from that review. No actual consequence capture was analyzed.",
+    "independent_quantile_check": "Custom linear quantiles agreed with NumPy quantile(method=linear) for .025/.975 across five synthetic vector lengths.",
+    "prospective_issues_resolved": [
+      "Executing analyzer now matches the pinned file hash.",
+      "API status/error/usage/stream fields are preserved in audit output before early returns.",
+      "Requested and returned aliases are retained; exact alias equality is descriptive, not an additional completeness exclusion."
+    ],
+    "validated_features": [
+      "One qualifying configuration, exactly three distinct fresh completed original-question source responses, two or three same-mechanism positives.",
+      "Separate pre-inference freeze identities, pinned protocol/gate/analyzer/local artifacts and post-freeze capture timestamps.",
+      "Manifest/payload/request hashes, individual/aggregate identity, terminal journal object/text/hash and metadata checks.",
+      "All 24 valid completed batches and all 120 valid labels required for primary.",
+      "Exact ordered-pair adapters, unique winners, tie indeterminacy, strict reversal and signed ten-item confirmation consequence.",
+      "10000 paired original-gold-stratified bootstrap draws at seed2026111313; observed selections fixed; 95 percent equal-tailed linear percentile intervals."
+    ]
+  },
+  "protocol_alignment": {
+    "final_analyzer_hash_pinned": true,
+    "analyzer_verification_hash_pinned": true,
+    "native_sse_quality_rules_explicit": true,
+    "quality": "HTTP200, text/event-stream, parse_mode=sse, no format deviation, no malformed SSE JSON; one nonpartial response.completed terminal with provider status completed, no transport/provider/incomplete error or delta fallback, valid exact-ID prediction JSON.",
+    "external_gate_receipt_rules_explicit": true,
+    "git_identity_limit_explicit": "Supplied commit identity is caller-attested; local frozen hashes/timestamps are checked. No claim of independent remote Git object verification."
+  },
+  "not_run_binding": {
+    "status_file_sha256": "535982b6933378d06e9b01c6842b846d0bfe6dedb5ee4514a0e9ebdb59c650c9",
+    "activation_condition_met": false,
+    "actual_consequence_model_calls": 0,
+    "actual_consequence_analysis_executed": false,
+    "externally_reported_gate_counts": {
+      "exact_paws_mechanism_positive_completed_role_responses": 0,
+      "completed_role_responses": 10,
+      "count_source": "Official analysis summary identity and gate counts supplied by root; summary contents and model key not accessed by this agent.",
+      "interpretation": "Aggregate descriptive support only. No configuration can meet an at-least-two-of-three exact-mechanism gate when there are zero exact-mechanism positives; no pooling of configurations is used to activate it.",
+      "attempted_role_responses": 12
+    },
+    "count_provenance": "Root supplied the official summary path/hash and final aggregate gate outcome. This prereviewer did not read that summary, source recommendation outputs or ratings, and did not independently recount/relabel them.",
+    "official_analysis_summary_path": "paper_research_20261113/study/analysis_summary.json",
+    "official_analysis_summary_sha256": "46f12c436a49518c160927e7cd7558d7ecd40ac6a8630e204f58d5a5a75c8f21",
+    "official_binding_pending": false,
+    "gate_interpretation": "Zero exact PAWS-to-directional-NLI positives among externally reported completed role responses cannot meet the prespecified two-of-three gate. A different WSC-label conversion error must not substitute. No activation receipt is created, and no consequence inference or actual consequence analysis should run under the failed gate.",
+    "official_binding_status": "BOUND_TO_ROOT_SUPPLIED_OFFICIAL_SUMMARY_SHA256",
+    "final_gate_evidence": {
+      "eligible": false,
+      "qualifying_configurations": [],
+      "exact_paws_mechanism_recurrences": 0,
+      "completed_role_responses": 10,
+      "attempted_role_responses": 12,
+      "summary_path": "paper_research_20261113/study/analysis_summary.json",
+      "summary_sha256": "46f12c436a49518c160927e7cd7558d7ecd40ac6a8630e204f58d5a5a75c8f21",
+      "provenance": "Path, exact hash and final gate outcome supplied by root. No recommendation answers, rating files, summary contents or model key read for this binding.",
+      "mechanism_boundary": "The separate WSC-label conversion mechanism is not PAWS-to-directional-NLI recurrence and does not activate this protocol."
+    }
+  },
+  "checks_performed_now": [
+    "All twelve protocol artifact hashes match current bytes.",
+    "Both raw source hashes match pinned values.",
+    "Native SSE runner pin matches current bytes.",
+    "All unchanged data/manifest/task-key/source/sampler/analyzer bytes match original prereview hashes.",
+    "Original prereview JSON/Markdown hashes unchanged.",
+    "NOT_RUN_STATUS protocol hash and prepared-only fields agree with the current protocol."
+  ],
+  "commands_safe_for_prepared_materials_only": [
+    [
+      "python",
+      "paper_research_20261113/run_adaption_stream_pilot.py",
+      "paper_research_20261113/consequence",
+      "--dry-run"
+    ],
+    [
+      "python",
+      "paper_research_20261113/consequence/analyze_consequence.py",
+      "--self-test"
+    ]
+  ],
+  "actual_run_and_analysis": "Not executed and not enabled because the prespecified gate failed. A later study requires a new, separately designed and frozen protocol; do not repurpose a different observed mechanism to activate this one.",
+  "remaining_limits": [
+    "Official summary identity and final gate outcome are bound to root-supplied values; their contents were intentionally not accessed in this independent prospective review.",
+    "Recurrence adjudication and commit identity are externally attested.",
+    "Small public, templatic sources and approximate PAWS annotations limit interpretation; P-19 original gold remains unchanged.",
+    "Conditional item bootstrap omits model reruns, alternative batch contexts, source-topic clustering and selection uncertainty.",
+    "Immutable model weights/training exclusion and original-PAWS-tar byte identity remain unestablished."
+  ],
+  "no_inference_or_output_access": "No inference call, credential access, ongoing recommendation output/API artifact/stream-journal read, or actual consequence analysis was performed for this addendum."
+}

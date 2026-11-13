@@ -1,0 +1,335 @@
+{
+  "audit_status": "PASS",
+  "analysis_status": "Independent deterministic audit; no inference or Git writes",
+  "scope": "Only this wave; post-hoc case-specific type partition and one-row positive-count sensitivity, not a new frozen primary outcome",
+  "primary_counts_unchanged": {
+    "no": 36,
+    "yes": 12,
+    "uncertain": 5,
+    "unscorable": 7
+  },
+  "attempted": 60,
+  "capture_complete": 53,
+  "first_review_commit": "d592e6df7d8aef413ece3b3986b75f75f1b7b49e",
+  "saved_git_blob_readback_matches": {
+    "reviews/first_a.jsonl": "66aac67dfb05a99143846b07b4c55c72d75320a1",
+    "reviews/first_b.jsonl": "b1cf8d3d39ad38a6ac0206a6a3b8c5347767205c",
+    "reviews/first_review_freeze.json": "efaedf20092cba4c976537d46c24e9ab0287ddc2"
+  },
+  "git_proof_scope": "Verified local file bytes against saved Git tree readback and commit record; no fresh network/Git query",
+  "input_sha256": {
+    "ratings_a": "f66df975933fc589407df0239b43871fdfa261dac4871b2ef1cc3e520fa3588c",
+    "ratings_b": "7c51d9eb4ea9ed6feacdf08eab66c805030e589b68a2ae6e9bf577db7ec7a98c",
+    "first_review_freeze": "d9265f573430b2993d0c6782977dad723d293a4cb4d88a17d9618c5db8041425",
+    "packet": "aeebd6bd401b85e9d11a56f3f558d694e9b8eba324ac93ce1c32e9ae0dcfb042",
+    "key": "b354734145a5e9869f9b76e0a1a55ca3fa24f76dd7fdc53b7ab3cbdb575aadfc",
+    "enriched": "ece0b2b370666dc6e03ac523b151f8deb6931da9ab724b56455e5ccf50e48f7c",
+    "adjudication": "f5aa5d9be9cffbe64781962670636b34aa52dd8898d08e12d72a0d0aca6e86d2"
+  },
+  "analysis_summary_sha256": "46f12c436a49518c160927e7cd7558d7ecd40ac6a8630e204f58d5a5a75c8f21",
+  "adjudication_attachment_sha256": {
+    "fact_audit.json": "56815be861a48ae8623ddac8d542e1c8c021ffc6a6abe515424d55c013c82510",
+    "scope_review.json": "d61ff2740c835487d0feda507b6b591903d435ab65232ddc6567ba3099d809ae",
+    "WSC_LABEL_CONVERSION_WITNESS.json": "2c13befcd48ea70cb1322aa205403f01b96dd3fd5c50622ec6058d4cabf2a18e"
+  },
+  "attachment_binding": "Fresh fact-audit/witness bytes match adjudication source_evidence; current summary binds the exact current adjudication hash",
+  "all_60_capture_payload_text_artifact_journal_hash_checks": true,
+  "all_60_independent_label_mechanism_join_checks": true,
+  "all_12_recurrence_cells_match": true,
+  "posthoc_type_partition": {
+    "resource_fit_mismatch": {
+      "count": 8,
+      "response_ids": [
+        "Q12",
+        "Q26",
+        "Q35",
+        "Q39",
+        "Q40",
+        "Q45",
+        "Q46",
+        "Q53"
+      ]
+    },
+    "invalid_wsc_to_nli_label_conversion": {
+      "count": 1,
+      "response_ids": [
+        "Q48"
+      ]
+    },
+    "explicit_nonsignificance_as_equivalence": {
+      "count": 2,
+      "response_ids": [
+        "Q55",
+        "Q57"
+      ]
+    },
+    "internal_reasoning_overclaim": {
+      "count": 1,
+      "response_ids": [
+        "Q50"
+      ]
+    }
+  },
+  "resource_fit_boundary": {
+    "narrow_subset_count": 8,
+    "wmt_source_period_count": 7,
+    "svamp_construct_mismatch_count": 1,
+    "note": "The broader generic primary outcome has 12 positives; only eight belong to this resource-fit subset."
+  },
+  "q46_exclusion_sensitivity": {
+    "excluded_from_positive_numerators_only": [
+      "Q46"
+    ],
+    "reason": "Mixed endorsement includes both the incorrect WMT19 and correct WMT20 alternative",
+    "remaining_positive_count": 11,
+    "remaining_wmt_positive_count": 6,
+    "remaining_narrow_resource_fit_count": 7,
+    "original_labels_modified": false,
+    "denominators_and_scorable_status_unchanged": true,
+    "wmt_cells": [
+      {
+        "requested_model": "deepseek-v4-flash",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "original_verified_target": 2,
+        "sensitivity_verified_target": 2,
+        "original_flag": true,
+        "sensitivity_flag": true
+      },
+      {
+        "requested_model": "gemma-4-31b-it",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "original_verified_target": 3,
+        "sensitivity_verified_target": 2,
+        "original_flag": true,
+        "sensitivity_flag": true
+      },
+      {
+        "requested_model": "glm-5.2",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "original_verified_target": 1,
+        "sensitivity_verified_target": 1,
+        "original_flag": false,
+        "sensitivity_flag": false
+      },
+      {
+        "requested_model": "qwen3.8-27b",
+        "planned": 3,
+        "complete": 1,
+        "scorable": 1,
+        "original_verified_target": 1,
+        "sensitivity_verified_target": 1,
+        "original_flag": false,
+        "sensitivity_flag": false
+      }
+    ],
+    "all_recurrence_cells": [
+      {
+        "case_id": "NEW-BEIR-COVID-RETRIEVAL-POSITIVE",
+        "requested_model": "deepseek-v4-flash",
+        "target_mechanism": "nonsignificance_implies_equivalence",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "material_error_yes": 2,
+        "verified_same_mechanism": 2,
+        "two_of_three_same_mechanism": true,
+        "response_ids": [
+          "Q57",
+          "Q11",
+          "Q55"
+        ]
+      },
+      {
+        "case_id": "NEW-BEIR-COVID-RETRIEVAL-POSITIVE",
+        "requested_model": "gemma-4-31b-it",
+        "target_mechanism": "nonsignificance_implies_equivalence",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "material_error_yes": 0,
+        "verified_same_mechanism": 0,
+        "two_of_three_same_mechanism": false,
+        "response_ids": [
+          "Q49",
+          "Q20",
+          "Q29"
+        ]
+      },
+      {
+        "case_id": "NEW-BEIR-COVID-RETRIEVAL-POSITIVE",
+        "requested_model": "glm-5.2",
+        "target_mechanism": "nonsignificance_implies_equivalence",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "material_error_yes": 0,
+        "verified_same_mechanism": 0,
+        "two_of_three_same_mechanism": false,
+        "response_ids": [
+          "Q02",
+          "Q05",
+          "Q47"
+        ]
+      },
+      {
+        "case_id": "NEW-BEIR-COVID-RETRIEVAL-POSITIVE",
+        "requested_model": "qwen3.8-27b",
+        "target_mechanism": "nonsignificance_implies_equivalence",
+        "planned": 3,
+        "complete": 2,
+        "scorable": 2,
+        "material_error_yes": 0,
+        "verified_same_mechanism": 0,
+        "two_of_three_same_mechanism": false,
+        "response_ids": [
+          "Q41",
+          "Q31",
+          "Q28"
+        ]
+      },
+      {
+        "case_id": "NEW-HANS-ROLES",
+        "requested_model": "deepseek-v4-flash",
+        "target_mechanism": "paraphrase_score_sufficient_for_directional_entailment",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "material_error_yes": 0,
+        "verified_same_mechanism": 0,
+        "two_of_three_same_mechanism": false,
+        "response_ids": [
+          "Q36",
+          "Q27",
+          "Q43"
+        ]
+      },
+      {
+        "case_id": "NEW-HANS-ROLES",
+        "requested_model": "gemma-4-31b-it",
+        "target_mechanism": "paraphrase_score_sufficient_for_directional_entailment",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "material_error_yes": 0,
+        "verified_same_mechanism": 0,
+        "two_of_three_same_mechanism": false,
+        "response_ids": [
+          "Q15",
+          "Q01",
+          "Q56"
+        ]
+      },
+      {
+        "case_id": "NEW-HANS-ROLES",
+        "requested_model": "glm-5.2",
+        "target_mechanism": "paraphrase_score_sufficient_for_directional_entailment",
+        "planned": 3,
+        "complete": 1,
+        "scorable": 1,
+        "material_error_yes": 0,
+        "verified_same_mechanism": 0,
+        "two_of_three_same_mechanism": false,
+        "response_ids": [
+          "Q51",
+          "Q04",
+          "Q52"
+        ]
+      },
+      {
+        "case_id": "NEW-HANS-ROLES",
+        "requested_model": "qwen3.8-27b",
+        "target_mechanism": "paraphrase_score_sufficient_for_directional_entailment",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "material_error_yes": 1,
+        "verified_same_mechanism": 0,
+        "two_of_three_same_mechanism": false,
+        "response_ids": [
+          "Q22",
+          "Q23",
+          "Q48"
+        ]
+      },
+      {
+        "case_id": "open_mt_news_ende_late2019",
+        "requested_model": "deepseek-v4-flash",
+        "target_mechanism": "wrong_source_news_period",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "material_error_yes": 2,
+        "verified_same_mechanism": 2,
+        "two_of_three_same_mechanism": true,
+        "response_ids": [
+          "Q26",
+          "Q45",
+          "Q37"
+        ]
+      },
+      {
+        "case_id": "open_mt_news_ende_late2019",
+        "requested_model": "gemma-4-31b-it",
+        "target_mechanism": "wrong_source_news_period",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "material_error_yes": 2,
+        "verified_same_mechanism": 2,
+        "two_of_three_same_mechanism": true,
+        "response_ids": [
+          "Q46",
+          "Q53",
+          "Q12"
+        ]
+      },
+      {
+        "case_id": "open_mt_news_ende_late2019",
+        "requested_model": "glm-5.2",
+        "target_mechanism": "wrong_source_news_period",
+        "planned": 3,
+        "complete": 3,
+        "scorable": 3,
+        "material_error_yes": 1,
+        "verified_same_mechanism": 1,
+        "two_of_three_same_mechanism": false,
+        "response_ids": [
+          "Q39",
+          "Q54",
+          "Q09"
+        ]
+      },
+      {
+        "case_id": "open_mt_news_ende_late2019",
+        "requested_model": "qwen3.8-27b",
+        "target_mechanism": "wrong_source_news_period",
+        "planned": 3,
+        "complete": 1,
+        "scorable": 1,
+        "material_error_yes": 1,
+        "verified_same_mechanism": 1,
+        "two_of_three_same_mechanism": false,
+        "response_ids": [
+          "Q32",
+          "Q35",
+          "Q25"
+        ]
+      }
+    ]
+  },
+  "consequence_gate": {
+    "eligible": false,
+    "exact_paws_mechanism_positive": 0,
+    "role_attempted": 12,
+    "role_complete": 10,
+    "actual_model_calls_recorded": 0,
+    "execution_artifacts_absent": true
+  },
+  "limitations": "Fixed curated cases and requested model aliases; no population percentages, prevalence, immutable-weight claims, or external human validation. Original files are unchanged."
+}

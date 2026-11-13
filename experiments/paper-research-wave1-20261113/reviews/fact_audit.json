@@ -1,0 +1,1304 @@
+{
+  "audit_id": "paper-wave-factual-mechanism-audit-v1",
+  "reviewer_id": "independent_fact_auditor",
+  "prepared_utc": "2026-11-13T04:49:50.609587+00:00",
+  "permitted_local_inputs": [
+    "open_design/rubric.json",
+    "paper_research_20261113/study/review_casepack.json",
+    "paper_research_20261113/study/review_packet.jsonl"
+  ],
+  "restricted_artifacts_read": false,
+  "model_identities_read": false,
+  "first_ratings_read": false,
+  "inference_executed": false,
+  "human_review_status": "pending",
+  "scope": "Independent claim-level factual/mechanism audit. No primary yes/no adjudications assigned. Confirmed ancillary errors are not automatically material recommendation failures. Primary source documents plus logical countermodels support the specified claim scopes only.",
+  "primary_scope_read_definition": "yes means the relevant primary source material was independently retrieved and inspected for the stated claim; uncertain means a stronger availability/composition claim remains unverified. It is not an assertion that every source paragraph or every dataset item was audited.",
+  "responses_total": 60,
+  "completed_responses": 53,
+  "entries": [
+    {
+      "response_id": "Q04",
+      "issue_status": "unresolved",
+      "factual_or_logical_issue": "Availability through GLUE diagnostic suite may conflate HANS with the separate GLUE diagnostic. No direct primary evidence of this distribution path was found.",
+      "exact_substrings": [
+        "available through the GLUE diagnostic suite"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "superglue_paper",
+          "locator": "§3.4",
+          "warrant": "GLUE diagnostic is an expert-constructed broad-coverage entailment set; HANS primary resource is separate."
+        }
+      ],
+      "confidence": "medium",
+      "primary_scope_read": "uncertain",
+      "issue_class": "other_material",
+      "recommendation_scope": "HANS recommendation and role-sensitive subset remain aligned. Do not convert this ancillary availability claim into an unsupported primary label."
+    },
+    {
+      "response_id": "Q08",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "The asserted default action limit is wrong for the pinned public Python API.",
+      "exact_substrings": [
+        "the default 40-step limit"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "sw_api",
+          "locator": "__init__, lines23/29",
+          "warrant": "The public constructor default envStepLimit is100."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "A deliberately chosen40-step budget is valid. The error is naming40 as the default. Native progress0–1 is supported by the paper; Python exposes0–100. No done=success assertion occurs."
+    },
+    {
+      "response_id": "Q10",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "Wrong authors/year for the unambiguously identifiable ScienceWorld resource.",
+      "exact_substrings": [
+        "ScienceWorld (Altera et al., 2023)"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "sw_paper",
+          "locator": "Title/author block",
+          "warrant": "ScienceWorld is Wang/Jansen/Côté/Ammanabrolu2022."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Ancillary citation error. Binary goal-achievement plan remains valid; do not treat resource as fabricated."
+    },
+    {
+      "response_id": "Q11",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "Incorrect relevance-grade range.",
+      "exact_substrings": [
+        "Relevance is graded 0–3"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "nist_round5",
+          "locator": "Judgments/Evaluation",
+          "warrant": "NIST specifies three relevance levels, not four."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Metric recommendation remains suitable; grade-range metadata is independently wrong."
+    },
+    {
+      "response_id": "Q16",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "WikiBio attribution/year is wrong.",
+      "exact_substrings": [
+        "WikiBio dataset** (Gardent et al., 2017)"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wikibio_paper",
+          "locator": "Author/year metadata",
+          "warrant": "WikiBio source is Lebret, Grangier and Auli2016."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Source-grounded manual precision/coverage assessment and non-inferiority design remain acceptable adaptations."
+    },
+    {
+      "response_id": "Q36",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "Incorrect authors/year for HANS.",
+      "exact_substrings": [
+        "HANS dataset** (Heuristic Analysis for NLI Systems, Williams et al., 2018)"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "hans_paper",
+          "locator": "Author/year metadata",
+          "warrant": "HANS is McCoy, Pavlick and Linzen2019."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Unambiguous HANS referent; ancillary citation error only."
+    },
+    {
+      "response_id": "Q44",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "ScienceWorld is misattributed and its task count is wrong.",
+      "exact_substrings": [
+        "SciWorld** (Walsh et al., 2022)",
+        "with 10 school-science tasks"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "sw_paper",
+          "locator": "Title/author block; §1 contributions",
+          "warrant": "Wang et al.2022 introduces30 tasks across10 topics."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "SciWorld is an intelligible abbreviation/typo, not an invented resource.10 topics confused with30 tasks; goal-success scoring and explicit nonequivalence caveat are sound."
+    },
+    {
+      "response_id": "Q12",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "WMT19 is represented as matching late2019 sources, contrary to its documented source window.",
+      "exact_substrings": [
+        "Since the WMT19 data was curated from news sources during that period"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_task",
+          "locator": "DATA paragraph104",
+          "warrant": "Official planned source window is September–November2018."
+        },
+        {
+          "source_id": "wmt20_task",
+          "locator": "DATA paragraph98",
+          "warrant": "WMT20 is the documented September–November2019 source set."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Correct news domain and useful scoring do not repair the explicit wrong temporal match. No claim about every individual article timestamp is made."
+    },
+    {
+      "response_id": "Q26",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "WMT19 is represented as matching late2019 sources, contrary to its documented source window.",
+      "exact_substrings": [
+        "online news documents collected in late 2019"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_task",
+          "locator": "DATA paragraph104",
+          "warrant": "Official planned source window is September–November2018."
+        },
+        {
+          "source_id": "wmt20_task",
+          "locator": "DATA paragraph98",
+          "warrant": "WMT20 is the documented September–November2019 source set."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Correct news domain and useful scoring do not repair the explicit wrong temporal match. No claim about every individual article timestamp is made."
+    },
+    {
+      "response_id": "Q35",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "WMT19 is represented as matching late2019 sources, contrary to its documented source window.",
+      "exact_substrings": [
+        "it is the natural match for your data domain and date"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_task",
+          "locator": "DATA paragraph104",
+          "warrant": "Official planned source window is September–November2018."
+        },
+        {
+          "source_id": "wmt20_task",
+          "locator": "DATA paragraph98",
+          "warrant": "WMT20 is the documented September–November2019 source set."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Correct news domain and useful scoring do not repair the explicit wrong temporal match. No claim about every individual article timestamp is made."
+    },
+    {
+      "response_id": "Q39",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "WMT19 is represented as matching late2019 sources, contrary to its documented source window.",
+      "exact_substrings": [
+        "Content originates from late 2019 online news sources"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_task",
+          "locator": "DATA paragraph104",
+          "warrant": "Official planned source window is September–November2018."
+        },
+        {
+          "source_id": "wmt20_task",
+          "locator": "DATA paragraph98",
+          "warrant": "WMT20 is the documented September–November2019 source set."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Correct news domain and useful scoring do not repair the explicit wrong temporal match. No claim about every individual article timestamp is made."
+    },
+    {
+      "response_id": "Q45",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "WMT19 is represented as matching late2019 sources, contrary to its documented source window.",
+      "exact_substrings": [
+        "making it exactly your target domain and time frame"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_task",
+          "locator": "DATA paragraph104",
+          "warrant": "Official planned source window is September–November2018."
+        },
+        {
+          "source_id": "wmt20_task",
+          "locator": "DATA paragraph98",
+          "warrant": "WMT20 is the documented September–November2019 source set."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Correct news domain and useful scoring do not repair the explicit wrong temporal match. No claim about every individual article timestamp is made."
+    },
+    {
+      "response_id": "Q46",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "WMT19 is represented as matching late2019 sources, contrary to its documented source window.",
+      "exact_substrings": [
+        "the **WMT 2019** or **WMT 2020** test sets, as these are curated from news sources and align with the temporal domain of your data"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_task",
+          "locator": "DATA paragraph104",
+          "warrant": "Official planned source window is September–November2018."
+        },
+        {
+          "source_id": "wmt20_task",
+          "locator": "DATA paragraph98",
+          "warrant": "WMT20 is the documented September–November2019 source set."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Temporal suitability claim is material to recommendation. Q46 is mixed: WMT20 option is appropriate, WMT19 endorsement survives without a date qualification."
+    },
+    {
+      "response_id": "Q53",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "WMT19 is represented as matching late2019 sources, contrary to its documented source window.",
+      "exact_substrings": [
+        "the most appropriate public test set is the **WMT 2019 News Test Set**"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_task",
+          "locator": "DATA paragraph104",
+          "warrant": "Official planned source window is September–November2018."
+        },
+        {
+          "source_id": "wmt20_task",
+          "locator": "DATA paragraph98",
+          "warrant": "WMT20 is the documented September–November2019 source set."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Correct news domain and useful scoring do not repair the explicit wrong temporal match. No claim about every individual article timestamp is made."
+    },
+    {
+      "response_id": "Q09",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "The extra early2020 source-date assertion is inconsistent with the documented planned window.",
+      "exact_substrings": [
+        "published in late 2019 and early 2020"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt20_task",
+          "locator": "DATA paragraph98",
+          "warrant": "Official source plan specifies September–November2019."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Correctly selects WMT20; this metadata error alone does not invalidate the late2019 recommendation. Planned-window evidence does not establish individual article timestamps."
+    },
+    {
+      "response_id": "Q37",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "The extra early2020 source-date assertion is inconsistent with the documented planned window.",
+      "exact_substrings": [
+        "sourced from late 2019 (and early 2020)"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt20_task",
+          "locator": "DATA paragraph98",
+          "warrant": "Official source plan specifies September–November2019."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Correctly selects WMT20; this metadata error alone does not invalidate the late2019 recommendation. Planned-window evidence does not establish individual article timestamps."
+    },
+    {
+      "response_id": "Q54",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "The extra early2020 source-date assertion is inconsistent with the documented planned window.",
+      "exact_substrings": [
+        "published in late 2019 and early 2020"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt20_task",
+          "locator": "DATA paragraph98",
+          "warrant": "Official source plan specifies September–November2019."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Correctly selects WMT20; this metadata error alone does not invalidate the late2019 recommendation. Planned-window evidence does not establish individual article timestamps."
+    },
+    {
+      "response_id": "Q09",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "Confuses conference month with official test-data release date.",
+      "exact_substrings": [
+        "The WMT19 test set (released August 2019)"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_task",
+          "locator": "IMPORTANT DATES",
+          "warrant": "Official test-data release April8,2019; translation submissions April16."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Ancillary date error."
+    },
+    {
+      "response_id": "Q39",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "Confuses conference month with official test-data release date.",
+      "exact_substrings": [
+        "Released in August 2019"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_task",
+          "locator": "IMPORTANT DATES",
+          "warrant": "Official test-data release April8,2019; translation submissions April16."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Ancillary date error."
+    },
+    {
+      "response_id": "Q35",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "Incorrect WMT19 English→German test size.",
+      "exact_substrings": [
+        "roughly 3,000 sentences"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_findings",
+          "locator": "Figure2, EN→German row",
+          "warrant": "Official test set has1997 sentences."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Ancillary count error; separate temporal recommendation assessed in another audit entry."
+    },
+    {
+      "response_id": "Q39",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "Incorrect WMT19 English→German test size.",
+      "exact_substrings": [
+        "approximately 1,500 sentences"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_findings",
+          "locator": "Figure2, EN→German row",
+          "warrant": "Official test set has1997 sentences."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Ancillary count error; separate temporal recommendation assessed in another audit entry."
+    },
+    {
+      "response_id": "Q45",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "Incorrect WMT19 English→German test size.",
+      "exact_substrings": [
+        "2997 sentences for en-de"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt19_findings",
+          "locator": "Figure2, EN→German row",
+          "warrant": "Official test set has1997 sentences."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Ancillary count error; separate temporal recommendation assessed in another audit entry."
+    },
+    {
+      "response_id": "Q54",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "Incorrect WMT20 size/unit claim; the English→German test is paragraph segmented.",
+      "exact_substrings": [
+        "1,500 sentences"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "wmt20_findings",
+          "locator": "Figure4 and Table2",
+          "warrant": "There are1418 English→German test lines, representing paragraphs rather than sentence-split items."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Correct resource remains a good time match. Count/unit error alone is ancillary."
+    },
+    {
+      "response_id": "Q37",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "The explicit command does not automatically score against three references or emit the alleged nrefs3 signature.",
+      "exact_substrings": [
+        "References:** Use all available references (typically 3 for en–de in WMT20)",
+        "sacrebleu -t wmt20 -l en-de -m bleu",
+        "BLEU|nrefs:3|case:mixed|eff:no|tok:13a|smooth:exp"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "sacre_datasets",
+          "locator": "wmt20 en-de entry",
+          "warrant": "Default wmt20 has one reference; wmt20/tworefs is separately named."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Wider WMT20 resources include extra human references; using explicitly supplied multiple refs is valid. Error is the command/signature guarantee, not denying those resources."
+    },
+    {
+      "response_id": "Q54",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "The given bootstrap option is not a documented CLI option; single-system confidence intervals alone are not a paired test.",
+      "exact_substrings": [
+        "`sacrebleu --confidence` or `--bootstrap n`"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "sacre_cli",
+          "locator": "Argument parser168–190",
+          "warrant": "Valid options distinguish --confidence/--confidence-n from --paired-bs/--paired-bs-n; --bootstrap is absent."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "General bootstrap comparison is reasonable. Exact advertised invocation is incorrect in checked implementation."
+    },
+    {
+      "response_id": "Q27",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "HANS does not have contradiction as a native gold label; a role reversal need not logically contradict a premise.",
+      "exact_substrings": [
+        "where the correct label is often *contradiction* despite high lexical overlap"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "hans_readme",
+          "locator": "Data and Evaluation sections",
+          "warrant": "Gold labels are entailment/non-entailment; neutral and contradiction predictions both map to non-entailment."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Do not extend this error to Q01/Q15/Q56, whose neutral-or-contradiction wording can be read as valid pooling to non-entailment. Correct HANS subset scoring remains available."
+    },
+    {
+      "response_id": "Q22",
+      "issue_status": "unresolved",
+      "factual_or_logical_issue": "The claimed abundance of near-identical role-swapped examples in ANLI R1 was not independently established.",
+      "exact_substrings": [
+        "it contains many premise–hypothesis pairs with nearly identical lexical items but different entailment labels"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "anli_paper",
+          "locator": "§2.1",
+          "warrant": "ANLI is adversarially authored against a model, without a prescribed role-swap construction."
+        },
+        {
+          "source_id": "anli_readme",
+          "locator": "Annotations for Error Analysis",
+          "warrant": "Fine-grained annotations exist, but no audited count supports the claimed slice size."
+        }
+      ],
+      "confidence": "medium",
+      "primary_scope_read": "uncertain",
+      "issue_class": "other_material",
+      "recommendation_scope": "Selecting and validating a genuine role-controlled slice can be acceptable. Lack of a native HANS name is not failure; actual availability of the proposed ANLI slice remains unresolved."
+    },
+    {
+      "response_id": "Q23",
+      "issue_status": "unresolved",
+      "factual_or_logical_issue": "ANLI is described as if its standard construction were minimal premise edits and frequent argument swaps; the frequency claim is unverified.",
+      "exact_substrings": [
+        "its crowd-generated examples are minimal edits of premises and frequently differ by swapping subject/object or agent/patient roles"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "anli_paper",
+          "locator": "§2.1 and Figure1",
+          "warrant": "Workers author hypotheses for a context/target label to fool a model. The paper does not establish the claimed swap frequency."
+        }
+      ],
+      "confidence": "medium",
+      "primary_scope_read": "uncertain",
+      "issue_class": "other_material",
+      "recommendation_scope": "Verified custom annotation/selection could yield a valid role-sensitive slice. Do not infer none exists from this audit or reject the adaptation solely because ANLI is named."
+    },
+    {
+      "response_id": "Q48",
+      "issue_status": "confirmed_logical_issue",
+      "factual_or_logical_issue": "A false coreference candidate does not generally make the whole substituted proposition a contradiction. The universal conversion gives unjustified three-way gold labels.",
+      "exact_substrings": [
+        "hypothesis 2 = replacement by the non-gold entity, labeled contradiction",
+        "Treat neutral as incorrect for both labels"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "superglue_paper",
+          "locator": "§3.2 WSC; Table2",
+          "warrant": "WSC labels coreference truth, not semantic negation of every alternative proposition. Table2 Mark/Pete example does not assert that Pete need not be truthful."
+        },
+        {
+          "source_id": "wsc_official_v2_witness",
+          "locator": "WSC/train.jsonl lines388/459, idx387/458",
+          "warrant": "Authentic non-gold Pete/He coreference record and gold Mark/He companion supply a concrete released-item witness. Analyst counterworld makes gold-resolved premise and Pete-substituted proposition jointly true; no official contradiction/neutral labels are claimed."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "A manually validated recast to entailment/non-entailment can be sound. The exact automatic contradiction rule and penalizing neutral are the issue. A world where both Mark and Pete should be truthful is consistent with the original sentence, defeating the universal contradiction claim. Authentic released-item witness, exact source hashes, and explicit counterworld are now preserved in WSC_LABEL_CONVERSION_WITNESS.json/.md."
+    },
+    {
+      "response_id": "Q31",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "BEIR TREC-COVID statistics are wrong.",
+      "exact_substrings": [
+        "provides 30 COVID-19 scientific-paper queries, 500 documents"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "beir_readme",
+          "locator": "TREC-COVID row",
+          "warrant": "Official BEIR test collection is50 queries and171K documents."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "TREC C19 naming is intelligible; do not infer a fabricated system. Ranking metrics and paired comparison remain suitable."
+    },
+    {
+      "response_id": "Q20",
+      "issue_status": "unresolved",
+      "factual_or_logical_issue": "COVID-CXR is not a verified literature-retrieval collection here, and raw CORD-19 is conflated with its TREC relevance-judgment overlay.",
+      "exact_substrings": [
+        "the **COVID-CXR** or **CORD-19** datasets are the most suitable public resources",
+        "the CORD-19 dataset provides a vast collection of papers with associated query-document relevance judgments curated by experts"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "nist_round5",
+          "locator": "Overview/Document Set/Topics",
+          "warrant": "TREC-COVID adds research topics and judgments over CORD-19."
+        }
+      ],
+      "confidence": "medium",
+      "primary_scope_read": "uncertain",
+      "issue_class": "other_material",
+      "recommendation_scope": "Read charitably as CORD-19 plus TREC-COVID if intended; Q29 explicitly makes that link and is not flagged. COVID-CXR exact referent was not resolved, so no fabrication finding."
+    },
+    {
+      "response_id": "Q49",
+      "issue_status": "not_error",
+      "factual_or_logical_issue": "Garbled dataset name has a clear TREC-COVID referent; no basis to treat it as fabricated.",
+      "exact_substrings": [
+        "COVID- covariance (COVID-19) dataset** from the TREC-COVID track"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "nist_round5",
+          "locator": "Overview",
+          "warrant": "TREC-COVID is the described scientific-paper ranking collection with expert qrels."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Use precision/top-rank evaluation as written; typo alone is not primary failure."
+    },
+    {
+      "response_id": "Q24",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "Standard FActScore annotations are support labels, not information-completeness labels.",
+      "exact_substrings": [
+        "or use FActScore’s information-completeness labels"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "factscore_paper",
+          "locator": "§3.2 annotation Step3; Beyond factual precision",
+          "warrant": "Labels are Supported/Not-supported/Irrelevant; score targets precision, not reference-information recall."
+        },
+        {
+          "source_id": "factscore_readme",
+          "locator": "Own-LM evaluation/data sections",
+          "warrant": "Reports score, response ratio and fact count, not important-reference-fact completeness labels."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "The primary alternative explicitly creates an important-fact gold set and is valid. Ancillary nonexistent-label shortcut should not erase this valid governing coverage plan."
+    },
+    {
+      "response_id": "Q59",
+      "issue_status": "borderline_possible_positive",
+      "factual_or_logical_issue": "Formula and complement are correct for unpenalized support precision, but not default penalized package score; configuration is unspecified.",
+      "exact_substrings": [
+        "report FActScore (supported atomic facts / total). The complement is the unsupported-claim rate."
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "factscore_code",
+          "locator": "get_score185–205",
+          "warrant": "Default gamma10 can multiply support precision by a short-output penalty; gamma0 or init_score yields unpenalized support precision."
+        }
+      ],
+      "confidence": "medium",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Treat explicit formula as a defensible unpenalized adaptation unless default package score is clearly intended. Do not automatically confirm an error or invent an omitted-coverage failure."
+    },
+    {
+      "response_id": "Q59",
+      "issue_status": "confirmed_logical_issue",
+      "factual_or_logical_issue": "Nonsignificant decline is not evidence of no important coverage loss.",
+      "exact_substrings": [
+        "with no significant decrease in recall, conclude that it makes fewer unsupported factual claims without leaving out important biographical information"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "asa_statement",
+          "locator": "Principles2/6",
+          "warrant": "Failure to reject a loss does not demonstrate equality/non-inferiority."
+        },
+        {
+          "source_id": "stats_primary_review",
+          "locator": "Misinterpretations4–5",
+          "warrant": "Nonsignificance permits multiple effect sizes; a non-inferiority bound is needed for the intended guarantee."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Independent meaningful recall assessment is provided and valid. The issue is the explicit decision criterion, not omission of a particular metric name. Hypothetical illustration: a recall-difference interval of[-0.20,+0.05] is nonsignificant for zero yet permits a20-point loss; no observed model results are asserted."
+    },
+    {
+      "response_id": "Q40",
+      "issue_status": "confirmed_error",
+      "factual_or_logical_issue": "SVAMP attribution is wrong and full SVAMP is misdescribed as only harmless structure-preserving number/wording variants.",
+      "exact_substrings": [
+        "SVAMP** benchmark (Sharma et al., 2020)",
+        "constructed by changing numbers and paraphrasing wording while preserving the underlying mathematical structure",
+        "we can conclude that A is more robust to harmless paraphrasing and number replacement"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "svamp_paper",
+          "locator": "Table1; §5.1.1; author block",
+          "warrant": "Patel/Bhattamishra/Goyal2021; variations explicitly include changed questions/information/operations."
+        },
+        {
+          "source_id": "svamp_readme",
+          "locator": "Challenge-set description",
+          "warrant": "Question-sensitivity and reasoning-ability categories coexist with structural invariance."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "SVAMP is real and useful. A disclosed structural-invariance slice or validated added number variants could be acceptable; the response recommends the full set and equates its accuracy with only harmless perturbation robustness."
+    },
+    {
+      "response_id": "Q50",
+      "issue_status": "confirmed_logical_issue",
+      "factual_or_logical_issue": "Final-answer perturbation success alone cannot identify internal reasoning versus memorization/pattern matching.",
+      "exact_substrings": [
+        "This comparison would justify which assistant possesses true **mathematical reasoning capabilities** versus those relying on **pattern matching or data memorization**."
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "gsm_readme",
+          "locator": "Templates/generated-data design",
+          "warrant": "Variants permit outcome robustness measurement; they do not reveal a unique internal solution process."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Custom validated GSM8K variants are acceptable. Robustness conclusion in the following sentence is narrower and defensible; the stronger process-identification guarantee remains unsupported. Logical countermodel: a lookup table memorizing the finite original/variant test items could obtain perfect accuracy and consistency while using no general arithmetic solution procedure. This is a possibility proof, not an empirical claim about either assistant."
+    },
+    {
+      "response_id": "Q18",
+      "issue_status": "borderline_possible_positive",
+      "factual_or_logical_issue": "Success and successful-episode action count support outcome/efficiency claims, but do not uniquely establish superior planning or causal understanding.",
+      "exact_substrings": [
+        "the conclusion is that Agent A possesses superior planning capabilities and a more precise understanding of the causal relationships within the lab environment"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "sw_paper",
+          "locator": "§2 and experimental task definition",
+          "warrant": "Environment verifies goal achievement and permits multiple successful action sequences, not a unique internal explanation."
+        }
+      ],
+      "confidence": "medium",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Primary success rate is well aligned; edit-distance/BLEU is secondary, not substituted for success. Do not reject because trajectory similarity is included. Stronger latent-capability conclusion needs adjudication."
+    },
+    {
+      "response_id": "Q34",
+      "issue_status": "borderline_possible_positive",
+      "factual_or_logical_issue": "Fact-focused evaluation can support lower error rates, but does not by itself prove knowledge grounding independently of language style.",
+      "exact_substrings": [
+        "proving that the model has improved its knowledge grounding independently of its linguistic style"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "scienceqa_site",
+          "locator": "Dataset description",
+          "warrant": "Answers/lectures/explanations support factual checking; the resource does not provide a proof of style-independent latent grounding."
+        }
+      ],
+      "confidence": "medium",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "Source-based factual human evaluation is an acceptable adaptation. Pairwise presentation is not generic preference-as-truth substitution; do not force failure from the benchmark choice."
+    },
+    {
+      "response_id": "Q38",
+      "issue_status": "borderline_possible_positive",
+      "factual_or_logical_issue": "Selecting numeric/date gold answers is not itself a guarantee that every selected question requires arithmetic and combining multiple details, nor an internal-reasoning proof.",
+      "exact_substrings": [
+        "This forces the model to combine details and do arithmetic; span-copying alone won't pass.",
+        "This setup isolates reasoning ability"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "drop_paper",
+          "locator": "§3 answer collection and Table1",
+          "warrant": "Answer types and operation types are different annotations; benchmark supports final-answer evaluation."
+        }
+      ],
+      "confidence": "medium",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "DROP is directly aligned. A validated numeric/date subset can be useful; this audit did not enumerate its actual items, so the universal necessity claim is borderline rather than a confirmed item-level contradiction."
+    },
+    {
+      "response_id": "Q33",
+      "issue_status": "borderline_possible_positive",
+      "factual_or_logical_issue": "StrategyQA is Boolean QA, so its native final-answer format does not supply the proposed integer counting score without adaptation.",
+      "exact_substrings": [
+        "For the arithmetic and counting requirements, you might consider a subset of **StrategyQA** or a custom-curated set of \"counting\" tasks where the answer is a specific integer derived from the text."
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "strategyqa_paper",
+          "locator": "Introduction p1",
+          "warrant": "StrategyQA is Boolean QA with reasoning strategies/evidence paragraphs."
+        }
+      ],
+      "confidence": "medium",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "The explicit custom counting option can supply the needed operations; a mixed/qualified custom setup should not be rejected merely for mentioning SQuAD/HotpotQA/StrategyQA. No forced primary failure."
+    },
+    {
+      "response_id": "Q47",
+      "issue_status": "borderline_possible_positive",
+      "factual_or_logical_issue": "No-difference wording is potentially stronger than the nonsignificant result warrants; it may also mean no statistically detected difference.",
+      "exact_substrings": [
+        "the results justify only a no-difference conclusion"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "stats_primary_review",
+          "locator": "Misinterpretations4–5",
+          "warrant": "A nonsignificant difference test does not establish equivalence."
+        }
+      ],
+      "confidence": "medium",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "The literal equality reading is invalid, but no-difference conclusion can be colloquial for no statistically detected difference. Preserve this ambiguity rather than forcing the strongest adverse interpretation. Core TREC-COVID/top10 evaluation remains aligned."
+    },
+    {
+      "response_id": "Q55",
+      "issue_status": "confirmed_logical_issue",
+      "factual_or_logical_issue": "Nonsignificance is incorrectly promoted to no difference/equivalence.",
+      "exact_substrings": [
+        "the conclusion is that both components perform equivalently in this setting"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "stats_primary_review",
+          "locator": "Misinterpretations4–5",
+          "warrant": "A nonsignificant difference test does not establish equivalence."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "TREC-COVID and top10 ranking metrics remain aligned. Q41/Q44 use statistically-indistinguishable wording without equivalence and are not flagged."
+    },
+    {
+      "response_id": "Q57",
+      "issue_status": "confirmed_logical_issue",
+      "factual_or_logical_issue": "Nonsignificance is incorrectly promoted to no difference/equivalence.",
+      "exact_substrings": [
+        "the components are functionally equivalent for this use case"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "stats_primary_review",
+          "locator": "Misinterpretations4–5",
+          "warrant": "A nonsignificant difference test does not establish equivalence."
+        }
+      ],
+      "confidence": "high",
+      "primary_scope_read": "yes",
+      "issue_class": "other_material",
+      "recommendation_scope": "TREC-COVID and top10 ranking metrics remain aligned. Q41/Q44 use statistically-indistinguishable wording without equivalence and are not flagged."
+    },
+    {
+      "response_id": "Q03",
+      "issue_status": "borderline_possible_positive",
+      "factual_or_logical_issue": "Answer/decline accuracy measures behavioral reliability; calibration in the probability-agreement sense is not measured by this plan.",
+      "exact_substrings": [
+        "more faithful and better calibrated"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "squad_code",
+          "locator": "make_eval_dict; no-answer threshold functions",
+          "warrant": "EM/F1 and abstention accuracy are distinct from probability calibration."
+        }
+      ],
+      "confidence": "low",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Calibration may be colloquial for answer/abstain behavior. Do not automatically convert this wording into a factual error or primary failure; all three plans directly score both dimensions."
+    },
+    {
+      "response_id": "Q06",
+      "issue_status": "borderline_possible_positive",
+      "factual_or_logical_issue": "Answer/decline accuracy measures behavioral reliability; calibration in the probability-agreement sense is not measured by this plan.",
+      "exact_substrings": [
+        "more accurate and better calibrated"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "squad_code",
+          "locator": "make_eval_dict; no-answer threshold functions",
+          "warrant": "EM/F1 and abstention accuracy are distinct from probability calibration."
+        }
+      ],
+      "confidence": "low",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Calibration may be colloquial for answer/abstain behavior. Do not automatically convert this wording into a factual error or primary failure; all three plans directly score both dimensions."
+    },
+    {
+      "response_id": "Q14",
+      "issue_status": "borderline_possible_positive",
+      "factual_or_logical_issue": "Answer/decline accuracy measures behavioral reliability; calibration in the probability-agreement sense is not measured by this plan.",
+      "exact_substrings": [
+        "higher **calibration/reliability**"
+      ],
+      "decisive_primary_warrant": [
+        {
+          "source_id": "squad_code",
+          "locator": "make_eval_dict; no-answer threshold functions",
+          "warrant": "EM/F1 and abstention accuracy are distinct from probability calibration."
+        }
+      ],
+      "confidence": "low",
+      "primary_scope_read": "yes",
+      "issue_class": "known_mechanism",
+      "recommendation_scope": "Calibration may be colloquial for answer/abstain behavior. Do not automatically convert this wording into a factual error or primary failure; all three plans directly score both dimensions."
+    }
+  ],
+  "remaining_completed_responses_no_issue_identified": [
+    "Q01",
+    "Q02",
+    "Q05",
+    "Q07",
+    "Q13",
+    "Q15",
+    "Q17",
+    "Q19",
+    "Q21",
+    "Q29",
+    "Q30",
+    "Q41",
+    "Q43",
+    "Q56",
+    "Q60"
+  ],
+  "incomplete_responses_not_fact_audited": [
+    "Q25",
+    "Q28",
+    "Q32",
+    "Q42",
+    "Q51",
+    "Q52",
+    "Q58"
+  ],
+  "mechanism_preservation_notes": [
+    {
+      "response_ids": [
+        "Q16",
+        "Q19",
+        "Q24",
+        "Q59"
+      ],
+      "finding": "All supply an independent source-relative coverage/recall assessment. No response treats precision alone as complete important-information coverage. No universal complete gold biography is required."
+    },
+    {
+      "response_ids": [
+        "Q24",
+        "Q59"
+      ],
+      "finding": "FActScore has gamma length penalty and response/fact-count diagnostics. Authors call volume diagnostics factual recall indicators; do not label that terminology fabricated. No response makes an empty-output-value claim."
+    },
+    {
+      "response_ids": [
+        "Q08",
+        "Q10",
+        "Q18",
+        "Q44"
+      ],
+      "finding": "All use goal completion for primary success. None explicitly substitutes terminal/done flag or partial progress for goal success. ScienceWorld done can reflect failure/step limit, but no such mistake should be imputed."
+    },
+    {
+      "response_ids": [
+        "Q30",
+        "Q50"
+      ],
+      "finding": "Custom validated GSM8K variants are legitimate alternatives. Absence of GSM-Symbolic name or complete-generator reference is not failure; no answer promises the unreleased complete parser/generator."
+    },
+    {
+      "response_ids": [
+        "Q17",
+        "Q38",
+        "Q60"
+      ],
+      "finding": "DROP is a directly aligned final-answer resource. No answer asserts greedy multispan alignment or all-numbers-must-match semantics. Pinned evaluator uses optimal alignment with numeric intersection rule."
+    },
+    {
+      "response_ids": [
+        "Q03",
+        "Q06",
+        "Q13",
+        "Q14"
+      ],
+      "finding": "All assess supported answers and declines. No answer advocates tuning the best no-answer threshold on the final test set. Probability-calibration language is separated as borderline wording."
+    },
+    {
+      "response_ids": [
+        "Q07",
+        "Q21",
+        "Q34"
+      ],
+      "finding": "Plans directly score factual correctness, using reference answers/evidence or fact-focused raters. No completed answer uses generic preference or length-controlled preference as factual truth; pairwise factual review is allowed."
+    },
+    {
+      "response_ids": [
+        "Q01",
+        "Q15",
+        "Q56"
+      ],
+      "finding": "HANS neutral-or-contradiction language can correctly mean collapsing either non-entailing prediction. Do not require three-way labels or misclassify this pooling as fabricated gold labels."
+    },
+    {
+      "response_ids": [
+        "Q19"
+      ],
+      "finding": "Calling Wikipedia/WikiBio standardized verified ground truth is stronger than warranted universally, but plan is source-relative and no exact false source fact was established. No confirmed error assigned."
+    },
+    {
+      "response_ids": [
+        "Q26",
+        "Q45"
+      ],
+      "finding": "Old-style SacreBLEU signature strings without a version are incomplete for exact reproduction, but version-free historical formatting is not itself a confirmed factual error here. Q37 explicit nrefs3 command guarantee is separately contradicted."
+    },
+    {
+      "response_ids": [
+        "Q55",
+        "Q57"
+      ],
+      "finding": "Approximate corpus sizes vary by CORD-19 snapshot and BEIR filtering. around180000/over190000 alone is not confirmed false without a fixed collection version."
+    },
+    {
+      "response_ids": [
+        "Q60"
+      ],
+      "finding": "Discrete Reasoning Over Passages is an unambiguous expansion typo. Held-out subset cannot itself guarantee no pretraining contamination, but this is not escalated to confirmed material failure without stronger intended scope."
+    }
+  ],
+  "sources": {
+    "wmt19_task": {
+      "url": "https://www.statmt.org/wmt19/translation-task.html",
+      "accessed": "2026-11-13",
+      "locator": "DATA paragraph at web lines104; IMPORTANT DATES lines31–32",
+      "checked_scope": "Official documentation states planned September–November2018 article sample and April8,2019 test-data release. This is documentation verification, not an audit of individual article timestamps."
+    },
+    "wmt20_task": {
+      "url": "https://www.statmt.org/wmt20/translation-task.html",
+      "accessed": "2026-11-13",
+      "locator": "DATA paragraph at web line98; document-level MT line49",
+      "checked_scope": "Official documentation states planned September–November2019 online-newspaper sources and paragraph segmentation for English/German. No individual article timestamps audited."
+    },
+    "wmt19_findings": {
+      "url": "https://aclanthology.org/W19-5301.pdf",
+      "accessed": "2026-11-13",
+      "locator": "Figure2, page4, EN→German test row",
+      "checked_scope": "English→German official test count1997 sentences."
+    },
+    "wmt20_findings": {
+      "url": "https://aclanthology.org/2020.wmt-1.1.pdf",
+      "accessed": "2026-11-13",
+      "locator": "Figure4 page6; Table2 page7",
+      "checked_scope": "EN→German has1418 lines; English paragraph source has1418 paragraphs/2043 sentence-split sentences. Not1500 sentences."
+    },
+    "sacre_datasets": {
+      "url": "https://github.com/mjpost/sacrebleu/blob/c596d9d2072a8f84200574a7a5c56c618e8d37e8/sacrebleu/dataset/__init__.py",
+      "accessed": "2026-11-13",
+      "blob_sha": "4eb7788e473b4681cdfa3c61dc633ed5003cecbe",
+      "locator": "wmt20 and wmt20/tworefs definitions, approximately lines309–367",
+      "checked_scope": "The exact -t wmt20 en-de registry entry contains one reference; separately named wmt20/tworefs contains two. This does not deny additional human translations/paraphrases in the wider WMT20 resources."
+    },
+    "sacre_cli": {
+      "url": "https://github.com/mjpost/sacrebleu/blob/c596d9d2072a8f84200574a7a5c56c618e8d37e8/sacrebleu/sacrebleu.py",
+      "accessed": "2026-11-13",
+      "blob_sha": "1122be9ff17d65b73645a406e1a741bbee7eaa25",
+      "locator": "Argument parser lines168–190",
+      "checked_scope": "--confidence/--confidence-n estimate single-system intervals; --paired-bs/--paired-bs-n invoke paired significance resampling. No --bootstrap option is defined."
+    },
+    "hans_readme": {
+      "url": "https://github.com/tommccoy1/hans/blob/7299f6f657089ce06a0f98e7e81f8d0f5b7741ce/README.md",
+      "accessed": "2026-11-13",
+      "blob_sha": "c2d130b5c9a8b225beaac77180b2eef524f7b7eb",
+      "checked_scope": "Official labels entailment/non-entailment; map contradiction and neutral predictions into non-entailment.30,000 examples,30 subcases, subject/object swap scoring."
+    },
+    "hans_paper": {
+      "url": "https://aclanthology.org/P19-1334/",
+      "accessed": "2026-11-13",
+      "checked_scope": "Official authors R.Thomas McCoy, Ellie Pavlick, Tal Linzen; publication2019; diagnostic goal."
+    },
+    "superglue_paper": {
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2019/file/4496bf24afe7fab6f046bf4923da8de6-Paper.pdf",
+      "accessed": "2026-11-13",
+      "locator": "Table2; §3.2 WSC; §3.4 diagnostics",
+      "checked_scope": "WSC is binary coreference, not automatically a three-way contradiction dataset. GLUE diagnostic is a separate expert-constructed dataset."
+    },
+    "sw_api": {
+      "url": "https://github.com/allenai/ScienceWorld/blob/e8216d6044e8e39be9fcb185e3b2dfb602584b52/scienceworld/scienceworld.py",
+      "accessed": "2026-11-13",
+      "blob_sha": "5217e5affbeccdfa09c58d40787d030bf8440cb3",
+      "locator": "__init__ lines23/29; step lines421–452",
+      "checked_scope": "Default envStepLimit100. Python step converts native0–1 score to0–100; reward is score change; terminal can be caused by step limit or negative score."
+    },
+    "sw_paper": {
+      "url": "https://aclanthology.org/2022.emnlp-main.775.pdf",
+      "accessed": "2026-11-13",
+      "locator": "Title/author block; §1 contributions; Table1; §2 discussion",
+      "checked_scope": "Wang, Jansen, Côté, Ammanabrolu2022;30 tasks across10 topics; native progress0–1 illustrated; multiple successful trajectories possible."
+    },
+    "sw_readme": {
+      "url": "https://github.com/allenai/ScienceWorld/blob/e8216d6044e8e39be9fcb185e3b2dfb602584b52/README.md",
+      "accessed": "2026-11-13",
+      "blob_sha": "703769290b34a1dcca1310ce3d882f54f0601576",
+      "checked_scope": "Version1.3 deterministic UUID ordering fixes stochastic outcomes relative to1.2; task variations and gold paths documented."
+    },
+    "nist_round5": {
+      "url": "https://ir.nist.gov/trec-covid/round5.html",
+      "accessed": "2026-11-13",
+      "locator": "Document Set; Topics; Judgments/Evaluation lines86–89",
+      "checked_scope": "CORD-19 scientific-paper document set;50 final topics; relevance three-way: relevant/partially relevant/not relevant."
+    },
+    "beir_readme": {
+      "url": "https://github.com/beir-cellar/beir/blob/ef83d29307061c65d04b035b4f4e7c18bd8374af/README.md",
+      "accessed": "2026-11-13",
+      "blob_sha": "e0e7e1019c116dc091deb7ce44657d7c887ed08e",
+      "locator": "Available Datasets table, TREC-COVID row",
+      "checked_scope": "BEIR TREC-COVID test50 queries,171K documents; final collection versus historical rounds should not be conflated."
+    },
+    "wikibio_paper": {
+      "url": "https://aclanthology.org/D16-1128/",
+      "accessed": "2026-11-13",
+      "checked_scope": "WikiBio source paper by Rémi Lebret, David Grangier, Michael Auli2016. Does not establish every Wikipedia fact is verified true."
+    },
+    "anli_paper": {
+      "url": "https://aclanthology.org/2020.acl-main.441.pdf",
+      "accessed": "2026-11-13",
+      "locator": "§2.1 HAMLET; Figure1",
+      "checked_scope": "Humans given context and target label write hypotheses to fool a model; this is not a prescribed minimal-edit or argument-swap construction. No role-swap-frequency estimate was independently derived."
+    },
+    "anli_readme": {
+      "url": "https://github.com/facebookresearch/anli/blob/main/README.md",
+      "accessed": "2026-11-13",
+      "blob_sha": "c094f8d247d0b7aa731a413bf04404d8441f06fe",
+      "checked_scope": "Official dataset format and fine-grained annotations described. Did not enumerate dev-set role-reversal slices."
+    },
+    "factscore_paper": {
+      "url": "https://aclanthology.org/2023.emnlp-main.741.pdf",
+      "accessed": "2026-11-13",
+      "locator": "§3.1, §3.2 annotation Step3; Limitations: Beyond factual precision",
+      "checked_scope": "Atomic fact supported fraction. Annotations Supported/Not-supported/Irrelevant; factual recall explicitly not measured by paper score."
+    },
+    "factscore_readme": {
+      "url": "https://github.com/shmsw25/FActScore/blob/f28272deffcf33efc1f1117d5479c10bb75221a9/README.md",
+      "accessed": "2026-11-13",
+      "blob_sha": "24d58232dffd684777e2d25ca12dcb3fb6728e72",
+      "checked_scope": "score/init_score/respond_ratio/num_facts_per_response; gamma10 default; describes response/fact-count indicators using factual recall terminology. No information-completeness gold labels described."
+    },
+    "factscore_code": {
+      "url": "https://github.com/shmsw25/FActScore/blob/f28272deffcf33efc1f1117d5479c10bb75221a9/factscore/factscorer.py",
+      "accessed": "2026-11-13",
+      "blob_sha": "6793fe5dad835508a044e4673ee235fe108ac440",
+      "locator": "get_score lines107,185–205",
+      "checked_scope": "score is support fraction times optional short-output penalty; gamma0 disables; init_score is unpenalized. Complement of default penalized score is not unsupported-claim fraction."
+    },
+    "drop_paper": {
+      "url": "https://aclanthology.org/N19-1246.pdf",
+      "accessed": "2026-11-13",
+      "locator": "Table1; §3; §5; §6.2",
+      "checked_scope": "Passage-grounded answers, discrete operations, normalized final-answer EM/F1. Answer type alone is not an explicit operation label; no reasoning-path validation."
+    },
+    "drop_code": {
+      "url": "https://github.com/allenai/allennlp-models/blob/b1f372248c17ad12684d344955fbcd98e957e77e/allennlp_models/rc/tools/drop.py",
+      "accessed": "2026-11-13",
+      "blob_sha": "11869aeff0e22fb639ccebb2a80491b64c097384",
+      "locator": "_align_bags; _match_numbers_if_present; get_metrics",
+      "checked_scope": "Optimal linear_sum_assignment alignment. Numeric eligibility requires intersection with at least one gold numeric token, not all-number equality. No response asserted the contrary."
+    },
+    "squad_code": {
+      "url": "https://github.com/rajpurkar/SQuAD-explorer/blob/eee5fdbf62f8613a7812b03419e6b29617b74fd1/evaluate-v2.0.py",
+      "accessed": "2026-11-13",
+      "blob_sha": "21f52c179c8c6547ae5999215f8afd36038f20ca",
+      "locator": "get_raw_scores; make_eval_dict; apply_no_ans_threshold; find_best_thresh",
+      "checked_scope": "Correct empty answers credited; separate EM/F1 and HasAns/NoAns scores; best threshold is searched on supplied labels. No completed response advocates evaluating only the optimized best-threshold score."
+    },
+    "svamp_paper": {
+      "url": "https://aclanthology.org/2021.naacl-main.168.pdf",
+      "accessed": "2026-11-13",
+      "locator": "Table1; §5.1.1; Table9",
+      "checked_scope": "Patel/Bhattamishra/Goyal2021;1000 examples. Full benchmark includes question-sensitive and reasoning-changing edits alongside structural-invariance edits; not exclusively harmless structure-preserving variants."
+    },
+    "svamp_readme": {
+      "url": "https://github.com/arkilpatel/SVAMP/blob/main/README.md",
+      "accessed": "2026-11-13",
+      "blob_sha": "d8b7b48bde47ab03ba8cfe7bd7f2816627ff5611",
+      "checked_scope": "Distinct question-sensitivity/reasoning-ability/structural-invariance categories, full1000-example challenge set."
+    },
+    "gsm_readme": {
+      "url": "https://github.com/apple-aiml-research/ml-gsm-symbolic/blob/3b645c25d200bf950fb84e8cdcbfeccd91d6a8af/README.md",
+      "accessed": "2026-11-13",
+      "blob_sha": "f70179c7341328bd0d6fc9a74cf01bd766f0e552",
+      "checked_scope": "Templates and generated data released; parser/data generator not published at pinned version. No completed response falsely promises the complete released generator."
+    },
+    "alpaca_readme": {
+      "url": "https://github.com/tatsu-lab/alpaca_eval/blob/cd543a149df89434d8a54582c0151c0b945c3d20/README.md",
+      "accessed": "2026-11-13",
+      "blob_sha": "3d38fcf85a1a9d0ef422d88fc268b5e46ecde8c6",
+      "checked_scope": "Preference win rates; style-over-factuality limitation; length control does not turn preferences into factual truth. No completed response substitutes generic AlpacaEval preferences for factual-error scoring."
+    },
+    "scienceqa_site": {
+      "url": "https://scienceqa.github.io/index.html",
+      "accessed": "2026-11-13",
+      "checked_scope": "ScienceQA multimodal multiple-choice science questions with answer lectures/explanations; supports adapted factual review."
+    },
+    "strategyqa_paper": {
+      "url": "https://aclanthology.org/2021.tacl-1.21.pdf",
+      "accessed": "2026-11-13",
+      "locator": "Introduction page1",
+      "checked_scope": "Boolean QA benchmark with implicit strategies and evidence paragraphs; not natively integer-final-answer counting benchmark."
+    },
+    "asa_statement": {
+      "url": "https://doi.org/10.1080/00031305.2016.1154108",
+      "accessed": "2026-11-13",
+      "retrieval": "Primary ASA statement search excerpt and official ASA release https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf opened; direct DOI full-page fetch blocked.",
+      "checked_scope": "Large p-values do not establish null/equivalence; conclusions should not depend only on threshold crossing."
+    },
+    "stats_primary_review": {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4877414/",
+      "accessed": "2026-11-13",
+      "locator": "Misinterpretations4–5, Conclusions3",
+      "checked_scope": "Greenland et al.2016 directly explains why nonsignificance cannot establish no effect; used as methodological primary author exposition, not an empirical benchmark claim."
+    },
+    "wsc_official_v2_witness": {
+      "url": "https://dl.fbaipublicfiles.com/glue/superglue/data/v2/WSC.zip",
+      "release_revision": "v2 (path /glue/superglue/data/v2/WSC.zip)",
+      "archive_sha256": "2ed6dfa94556b4a128ff0441efe365b2e883124e7e6aa00fb8d3a6cb1fd520a9",
+      "member": "WSC/train.jsonl",
+      "negative_record_idx": 387,
+      "gold_companion_record_idx": 458,
+      "checked_scope": "Authentic binary coreference labels false(Pete) and true(Mark) for same passage, verified directly from official v2 release; no official NLI gold is asserted.",
+      "witness_artifact": "paper_research_20261113/reviews/WSC_LABEL_CONVERSION_WITNESS.json"
+    }
+  },
+  "adjudication_boundary": "This audit identifies exact source-contradicted claims, unresolved factual attributions, and explicitly marked borderline guarantees. It does not establish an intrinsic benchmark defect, prevalence across models, user adoption, or real harm. Human review remains pending."
+}

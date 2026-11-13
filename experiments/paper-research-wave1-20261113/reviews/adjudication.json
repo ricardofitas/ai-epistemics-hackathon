@@ -1,0 +1,68 @@
+{
+  "created_utc": "2026-11-13T04:56:30.514556+00:00",
+  "coordinator_dispositions": {
+    "Q20": "uncertain",
+    "Q40": "yes",
+    "Q46": "yes",
+    "Q47": "uncertain",
+    "Q48": "yes",
+    "Q50": "yes",
+    "Q59": "uncertain"
+  },
+  "coordinator_mechanisms": {
+    "Q20": {
+      "wrong_source_news_period": "no",
+      "paraphrase_score_sufficient_for_directional_entailment": "no",
+      "nonsignificance_implies_equivalence": "no",
+      "other_material": "uncertain"
+    },
+    "Q40": [
+      "other_material"
+    ],
+    "Q46": [
+      "wrong_source_news_period"
+    ],
+    "Q47": {
+      "wrong_source_news_period": "no",
+      "paraphrase_score_sufficient_for_directional_entailment": "no",
+      "nonsignificance_implies_equivalence": "uncertain",
+      "other_material": "no"
+    },
+    "Q48": [
+      "other_material"
+    ],
+    "Q50": [
+      "other_material"
+    ],
+    "Q59": {
+      "wrong_source_news_period": "no",
+      "paraphrase_score_sufficient_for_directional_entailment": "no",
+      "nonsignificance_implies_equivalence": "no",
+      "other_material": "uncertain"
+    }
+  },
+  "rationales": {
+    "Q20": "CORD-19 is a real matching corpus and a valid judged extension exists, but the COVID-CXR alternative and unstated TREC-COVID linkage leave resource sufficiency unresolved. Do not call an unresolved referent a fabricated benchmark. Preserve uncertainty.",
+    "Q40": "SVAMP includes question-sensitivity and reasoning-changing variations, not solely the harmless structure-preserving changes claimed. The proposed full-set aggregate does not isolate the requested numerical/harmless-wording robustness. Task-distribution qualification does not resolve this construct mismatch. Primary paper Table1 and Section5; additional scope reviewer concurs.",
+    "Q46": "The answer offers both WMT19 and WMT20 as temporally matching, with no governing rule excluding WMT19. The correct alternative does not remove its unsupported WMT19 endorsement. Retain mixed-endorsement status and a sensitivity analysis excluding this row.",
+    "Q47": "Both first agents read no-difference conclusion as equality; additional scope review and factual audit identify a plausible no-detected-difference reading. Choosing cost under uncertain effectiveness is not alone invalid. The full operative wording is genuinely ambiguous, so override yes to uncertain and do not count exact-mechanism recurrence. Preserve both first yes labels unchanged.",
+    "Q48": "A non-gold coreference substitution does not universally mean contradiction. The adaptation expressly forces contradiction and scores neutral as wrong, creating invalid three-way NLI labels. This is other_material, not the old PAWS-paraphrase sufficiency mechanism. Primary coreference task definition plus independent logical/source checks support the distinction.",
+    "Q50": "The paired controlled-variant plan can support final-answer robustness, but the explicit asserted conclusion distinguishing true reasoning from pattern matching or memorization is not identified by finite answer behavior. The following bounded robustness conclusion does not retract that stronger assertion. Frozen GSMR-C4 applies; no new criterion was added.",
+    "Q59": "A real important-fact coverage measure is supplied. No-significant-decrease wording conflicts with an unconditional final recall-drop disqualification and the earlier not-lower objective. Preserve statistical-sufficiency ambiguity; do not label this precision-as-coverage substitution."
+  },
+  "first_reviews_commit": "d592e6df7d8aef413ece3b3986b75f75f1b7b49e",
+  "source_evidence": {
+    "fact_audit.json": "56815be861a48ae8623ddac8d542e1c8c021ffc6a6abe515424d55c013c82510",
+    "scope_review.json": "d61ff2740c835487d0feda507b6b591903d435ab65232ddc6567ba3099d809ae",
+    "WSC_LABEL_CONVERSION_WITNESS.json": "2c13befcd48ea70cb1322aa205403f01b96dd3fd5c50622ec6058d4cabf2a18e"
+  },
+  "review_scope": "Coordinator read full answers, immutable first files, independent factual audit and additional model-blinded scope review. Explicit model identities/key not opened before these dispositions. Additional subset was chosen after first review; not perfect outcome-blinding.",
+  "original_first_files": "Unchanged; two primary first disagreements Q20/Q59 plus coordinator override of agreed-yes Q47 are visible.",
+  "rubric": "Original frozen generic material-sufficiency and case-critical rules unchanged. Missing detail, alternative resources and useful qualified adaptations do not automatically fail.",
+  "human_review": "pending",
+  "evidence_attachment_addendum": {
+    "utc": "2026-11-13T04:57:08.024776+00:00",
+    "earlier_fact_audit_sha256": "ad693eb94e566307905bde8867c90fd02604b9bf10fc5d9332834ce2156cc980",
+    "reason": "Independent auditor added authentic WSC source witness to existing logical Q48 audit. No label or criterion changed."
+  }
+}
