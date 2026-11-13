@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-13",
+  "models": [
+    "gemma-4-31b-it",
+    "qwen3.8-27b"
+  ],
+  "requests": 96,
+  "cases": 48,
+  "base_source_rows": 36,
+  "purpose": "Small prospective model-response consequence check after source-level defects were found; not a population performance estimate.",
+  "source_selection": "Fixed SHA256 ordering within source gold classes, 12 rows per benchmark; WinoGrande balanced6/6 and HellaSwag3/3/3/3. SciQ12 source rows each tested in two option orders.",
+  "prompt_scope": "Intended gallery user_template rendered directly from source fields and displayed choices. No One-Eval graph, download or native generator orchestration in this inference stage.",
+  "conditions": [
+    "Winogrande labelled validation diagnostic override; native one-based reference versus explicit canonical gold",
+    "SciQ native correct-first option order versus balanced cyclic rotations, identical question/support",
+    "HellaSwag zero-based negative control"
+  ],
+  "missing": "All96 planned requests retained; non-completed or unparseable outputs get bounded contribution0..1 for model comparison, never silently dropped.",
+  "metrics": "Re-evaluate responses through original run_bench_with_contract with native gallery parser/field mapping, compare with strict answer-tag parsing and canonical gold. Report within-benchmark model versus fixed-letter baseline comparisons and each model independently.",
+  "provider_policy": {
+    "concurrency": 1,
+    "minimum_start_interval_seconds": 5,
+    "attempts_per_request": 1,
+    "retry": false
+  },
+  "hypothesis": "A real learned model can lose to a constant predictor under the broken reference mapping and win under corrected semantics; SciQ native constant-A benefit should collapse after balanced option order.",
+  "inference_limit": "No new questions, model substitutions, or source-row replacement after outputs. Catalogue mismatch stops before model calls.",
+  "frozen_files": {
+    "cases.json": "1c46423b72e1de9d6c0958bba5cb3973f9991e8fd4d701b4ea076beba338544f",
+    "manifest.jsonl": "dc0d4995c2f4d9e79f14e4b4069aa94caa3126385d3808bbac3d083a40d6f075"
+  }
+}
