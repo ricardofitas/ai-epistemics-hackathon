@@ -1,0 +1,67 @@
+{
+  "case_id": "NEW-HANS-ROLES",
+  "source_family": "HANS syntactic NLI diagnostics",
+  "benchmark_family": "HANS",
+  "fit_role": "positive_fit_control",
+  "natural_prompt": "We are comparing two English natural-language-inference classifiers. We want to know which one better tracks who did what to whom when deciding whether a hypothesis follows from a premise, including cases where the two sentences use almost the same words. Recommend a public evaluation resource and scoring plan, and state what conclusion it would justify.",
+  "requested_construct": "English NLI sensitivity to syntactic argument roles under high lexical overlap, rather than overall natural-language understanding.",
+  "critical_requirements": [
+    {
+      "id": "HANS-C1",
+      "text": "Directly assess role-sensitive entailment/non-entailment examples or matched controlled contrasts; general NLI accuracy alone does not establish this specific capability."
+    },
+    {
+      "id": "HANS-C2",
+      "text": "Use labels/scoring consistent with the selected resource and compare both systems on identical cases. For HANS, contradiction and neutral outputs can be mapped to non-entailment; relevant subcase or contrast-level results should govern the role-sensitive conclusion."
+    },
+    {
+      "id": "HANS-C3",
+      "text": "Bound conclusions to the tested constructions and evaluation distribution. HANS or another finite diagnostic alone does not prove complete English syntactic or general language understanding."
+    }
+  ],
+  "acceptable_responses": [
+    "HANS evaluation data with subject/object-swap or relevant role-sensitive subcase results, both systems under matched inputs and label mapping.",
+    "A verified alternative NLI stress/contrast set with direct argument-role sensitivity, or a transparent expert-checked custom contrast evaluation.",
+    "General NLI data such as MNLI as a complementary broad measure, combined with direct role-sensitive evidence; a qualified proxy is not a failure.",
+    "HANS overall accuracy can supplement the role-sensitive analysis, or an answer may explicitly limit a broader HANS score to the benchmark rather than claim proof of every targeted role distinction."
+  ],
+  "failure_examples": [
+    "Treat unmodified aggregate MNLI/general-NLI accuracy alone as sufficient proof of improved argument-role tracking, without direct contrast evidence or a governing qualification.",
+    "Claim a diagnostic score proves universal syntactic understanding."
+  ],
+  "desirable_not_primary": [
+    "Confidence intervals, multiple seeds, contamination checks and full breakdowns are desirable but omission alone does not establish a material failure.",
+    "Do not require the HANS name, 30000 count, exact subcase name, or a particular statistical test to pass."
+  ],
+  "source_facts": [
+    {
+      "fact": "HANS is a controlled NLI evaluation for lexical overlap, subsequence and constituent heuristics; the primary paper shows MNLI-trained models can perform poorly on these diagnostics.",
+      "evidence_type": "primary paper task definition",
+      "url": "https://aclanthology.org/P19-1334/",
+      "doi": "10.18653/v1/P19-1334",
+      "verified_utc": "2026-11-13",
+      "web_ref": "turn168view0"
+    },
+    {
+      "fact": "The official evaluation contains 30000 examples across 30 subcases, with entailment/non-entailment labels and subject/object-swap among reported subcases. The scorer reports heuristic, subcase and template accuracies.",
+      "url": "https://github.com/tommccoy1/hans/blob/7299f6f657089ce06a0f98e7e81f8d0f5b7741ce/README.md",
+      "repository": "tommccoy1/hans",
+      "commit": "7299f6f657089ce06a0f98e7e81f8d0f5b7741ce",
+      "blob_sha": "c2d130b5c9a8b225beaac77180b2eef524f7b7eb",
+      "verification": "Fetched exact pinned README via GitHub connector 2026-11-13."
+    },
+    {
+      "fact": "The official README instructs three-way NLI systems to map both contradiction and neutral predictions to non-entailment for HANS scoring.",
+      "url": "https://github.com/tommccoy1/hans/blob/7299f6f657089ce06a0f98e7e81f8d0f5b7741ce/README.md",
+      "commit": "7299f6f657089ce06a0f98e7e81f8d0f5b7741ce",
+      "blob_sha": "c2d130b5c9a8b225beaac77180b2eef524f7b7eb"
+    }
+  ],
+  "scoring_boundaries": [
+    "Unchanged generic primary material unsupported-sufficiency rule governs. Mere benchmark mentions, omissions, qualified proxies, or a nonpreferred but valid alternative are not failures.",
+    "If an alternative resource is not documented in advance, verify its primary task definition before scoring adversely.",
+    "The claim that general accuracy cannot logically establish the specified role distinction is evaluator construct-validity reasoning, not a claim MNLI is defective.",
+    "HANS has already had a source/score audit in this project, but no actual assistant recommendation pilot on this exact new prompt existed before creation."
+  ],
+  "subject_visibility": "Only natural_prompt; all benchmark identities, source facts and rubric are evaluator-only."
+}

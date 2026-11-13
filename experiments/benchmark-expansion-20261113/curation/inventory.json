@@ -1,0 +1,167 @@
+{
+  "created_utc": "2026-11-13T03:25:19.738082+00:00",
+  "status": "snapshot_before_new_20_call_block",
+  "counting_unit": "Distinct source-backed research-claim case families with actual assistant recommendation answers. This is NOT a literal count of independently executed full benchmark model evaluations, and it is NOT a count of every benchmark name mentioned.",
+  "tested_source_case_families": 10,
+  "complete_recommendation_answers": 102,
+  "all_captures": 106,
+  "empty_unscorable_api_captures": 4,
+  "families": [
+    {
+      "family_id": "civilcomments",
+      "anchor_resources": [
+        "CivilComments/WILDS"
+      ],
+      "cohorts": [
+        "civilcomments_agents"
+      ],
+      "answers": 16,
+      "design_note": "Guided claim-fit variants, not open benchmark discovery."
+    },
+    {
+      "family_id": "truthfulqa_mc2",
+      "anchor_resources": [
+        "TruthfulQA MC2"
+      ],
+      "cohorts": [
+        "mc2_agents"
+      ],
+      "answers": 8,
+      "design_note": "Known evaluator-underflow compatibility control; no novel defect claim."
+    },
+    {
+      "family_id": "function_correctness",
+      "anchor_resources": [
+        "HumanEval/EvalPlus or MBPP alternatives"
+      ],
+      "cohorts": [
+        "open_study",
+        "factorial_study"
+      ],
+      "answers": 8
+    },
+    {
+      "family_id": "maintainer_time",
+      "anchor_resources": [
+        "SWE-bench as partial proxy"
+      ],
+      "cohorts": [
+        "open_study",
+        "factorial_study"
+      ],
+      "answers": 8
+    },
+    {
+      "family_id": "citation_support",
+      "anchor_resources": [
+        "ALCE as partial proxy"
+      ],
+      "cohorts": [
+        "open_study",
+        "factorial_study"
+      ],
+      "answers": 8
+    },
+    {
+      "family_id": "translation_source_period",
+      "anchor_resources": [
+        "WMT19/WMT20"
+      ],
+      "cohorts": [
+        "open_study",
+        "factorial_study",
+        "wmt_replication",
+        "adaption_pilot",
+        "adaption_token_followup"
+      ],
+      "answers": 34,
+      "captures": 38,
+      "design_note": "All year variants, repeated contexts, models and API token-budget blocks remain ONE source family."
+    },
+    {
+      "family_id": "mathematical_process_correctness",
+      "anchor_resources": [
+        "MATH/PRM800K as one source family"
+      ],
+      "cohorts": [
+        "open_study",
+        "factorial_study"
+      ],
+      "answers": 8
+    },
+    {
+      "family_id": "each_corruption_robustness",
+      "anchor_resources": [
+        "ImageNet-C"
+      ],
+      "cohorts": [
+        "open_study",
+        "factorial_study"
+      ],
+      "answers": 8
+    },
+    {
+      "family_id": "real_query_extraction",
+      "anchor_resources": [
+        "Natural Questions"
+      ],
+      "cohorts": [
+        "holdout_study"
+      ],
+      "answers": 2
+    },
+    {
+      "family_id": "adult_symptom_triage",
+      "anchor_resources": [
+        "Semigran 45-vignette resource",
+        "MIMIC-IV-ED adapted clinical cases"
+      ],
+      "cohorts": [
+        "holdout_study"
+      ],
+      "answers": 2,
+      "design_note": "Evaluator casepack family label is MedQA, but actual assistant recommendations were Semigran and MIMIC-IV-ED. Do not claim two MedQA recommendation trials or count these alternatives as separate independent scenarios."
+    }
+  ],
+  "audited_not_yet_recommendation_piloted": [
+    {
+      "family": "HANS",
+      "evidence": [
+        "analyze_hans_runs.py",
+        "hans_source.csv",
+        "GitHub PR2"
+      ],
+      "status": "retrospective original-author run-score analysis; no preexisting assistant recommendation answers on a HANS role-sensitive prompt"
+    }
+  ],
+  "source_only_or_incidental_not_extra_families": [
+    "Known TruthfulQA/Lighteval evaluator implementation variants are source controls within the same TruthfulQA family.",
+    "SPR/PNAS archival discrepancy is provisional source audit, not a confirmed fresh model recommendation pilot.",
+    "Additional metric names or alternative recommended resources do not create independent case families.",
+    "MedQA is source-backed as an exam-versus-triage distinction but not the actual selected resource in the two triage answers.",
+    "PRM800K derives from MATH solutions and remains grouped for this scenario; WMT years and repeat cohorts likewise are not separate families."
+  ],
+  "planned_new_recommendation_case_families": [
+    "BBQ/free-text stereotype inference",
+    "BEIR/biomedical retrieval evaluation",
+    "WebArena/browser workflow success",
+    "MMLU/confidence calibration",
+    "HANS/role-sensitive NLI"
+  ],
+  "projected_source_case_families_if_all_five_are_sampled": 15,
+  "new_block_calls_planned": 20,
+  "new_block_design": "5 case families ×4 selected API model-family representatives ×1 initial answer; do not count planned calls as completed.",
+  "recommended_goal": {
+    "minimum_well_reviewed_source_case_families": 12,
+    "preferred_before_hackathon_source_case_families": 15,
+    "expand_beyond_15_only_if": "Source verification, blinded rating and faithful capture remain complete; further breadth should not displace replication and consequence testing.",
+    "interpretation": "Use fifteen benchmark-centered pilot cases as the plain-language target, while reporting the audited unit as source-case families. Named benchmark coverage should be listed explicitly rather than inflated to a single nominal count."
+  },
+  "next_steps": [
+    "Freeze five new prompts/keys before calls; include suitable and partial-fit cases and accept verified alternatives.",
+    "Run the balanced 20-call model block and retain all incomplete/error captures.",
+    "Blindly rate all rows and independently verify material factual contradictions, separating errors from ambiguous claims.",
+    "Replicate promising failures across paraphrases/new contexts and then test source-verification correction.",
+    "Use human adjudication before paper claims; retain nulls and any unchanged downstream model choice."
+  ]
+}
