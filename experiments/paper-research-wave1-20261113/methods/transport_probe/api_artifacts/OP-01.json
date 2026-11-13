@@ -1,0 +1,120 @@
+{
+  "trial_id": "OP-01",
+  "started_utc": "2026-11-13T04:12:10.625051+00:00",
+  "ended_utc": "2026-11-13T04:12:17.565056+00:00",
+  "elapsed_seconds": 6.939947,
+  "attempt_count": 1,
+  "requested_model": "gemma-4-31b-it",
+  "returned_model": "gemma-4-31b-it",
+  "response_id": "resp_u8iIpQ35VtKlDr5A2lW9nHTKHYFFCj4LrsFlUfTfjkYrhgYmIZP6TozCJLVcQvsed3Qdvc4rmTezW1tZ-6auigpq2dPbE7jyipov5960TF67fQDmo2NGlmwi9pj0bObUZMfY1PVwTEOpDh3TS6D9ckPcU2BuxGww2yfpmJT86ZZWsA7mH3Sc5Cm8FSifWb6ZqQn0Xvssd5rWqK_xmjMMVg_sU1fJ1U7cGNtfPal1ljxswXzR9D5-CNxVId-0KCkAz8SnlqYxGcOPXCp8voVu1Yip_8wL94O0Xi_7zk_pPg1hQABCWMLOXymtqZMK5nwb6Kk-D8SnXFp3wYZVxfrC9V89gEdCKMxViOOp7EwxcRNFx82jd8-x8tEzobLliFCuvDBn2NiZIr_tns7JGBs6yXFuGaQczXYHGXi4I2XLK6YS4EaEYVfTGnRJA43WVrn3IgQvOQXw1ASVopJVkOGfW5zcjy-XxvcCTDd2zuksFFkQ9Vcc7rZADuSQopObdiDjBhWuE9y587dSS1ZtnzE6Bhj7_20=",
+  "request_payload": {
+    "model": "gemma-4-31b-it",
+    "input": "Reply with exactly OK.",
+    "instructions": "Return only the requested word.",
+    "max_output_tokens": 512,
+    "temperature": 0.0,
+    "tools": [],
+    "tool_choice": "none",
+    "agentic_memory": false,
+    "store": false,
+    "stream": true
+  },
+  "request_sha256": "ce12583b211f85d921c45a0e37e8c322686a2fd01f218c34f29e2e7b4a907788",
+  "response_status": "completed",
+  "incomplete_details": null,
+  "api_error": null,
+  "usage": {
+    "input_tokens": 30,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "input_tokens_per_turn": [],
+      "cached_tokens_per_turn": []
+    },
+    "output_tokens": 2,
+    "output_tokens_details": {
+      "reasoning_tokens": 0,
+      "tool_output_tokens": 0,
+      "output_tokens_per_turn": [],
+      "tool_output_tokens_per_turn": []
+    },
+    "total_tokens": 32,
+    "cost": 3.38e-06
+  },
+  "output_text": "OK",
+  "output_text_sha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+  "output_words_whitespace": 1,
+  "empty_output": false,
+  "capture_note": "Final message/output_text preferred; delta fallback explicitly flagged and never silently completed; durable sanitized SSE journal retained",
+  "http_status": 200,
+  "response_headers": {},
+  "response_content_type": "text/event-stream",
+  "parse_mode": "sse",
+  "stream_format_deviation": false,
+  "raw_response": {
+    "id": "resp_u8iIpQ35VtKlDr5A2lW9nHTKHYFFCj4LrsFlUfTfjkYrhgYmIZP6TozCJLVcQvsed3Qdvc4rmTezW1tZ-6auigpq2dPbE7jyipov5960TF67fQDmo2NGlmwi9pj0bObUZMfY1PVwTEOpDh3TS6D9ckPcU2BuxGww2yfpmJT86ZZWsA7mH3Sc5Cm8FSifWb6ZqQn0Xvssd5rWqK_xmjMMVg_sU1fJ1U7cGNtfPal1ljxswXzR9D5-CNxVId-0KCkAz8SnlqYxGcOPXCp8voVu1Yip_8wL94O0Xi_7zk_pPg1hQABCWMLOXymtqZMK5nwb6Kk-D8SnXFp3wYZVxfrC9V89gEdCKMxViOOp7EwxcRNFx82jd8-x8tEzobLliFCuvDBn2NiZIr_tns7JGBs6yXFuGaQczXYHGXi4I2XLK6YS4EaEYVfTGnRJA43WVrn3IgQvOQXw1ASVopJVkOGfW5zcjy-XxvcCTDd2zuksFFkQ9Vcc7rZADuSQopObdiDjBhWuE9y587dSS1ZtnzE6Bhj7_20=",
+    "created_at": 1794543137,
+    "instructions": "Return only the requested word.",
+    "model": "gemma-4-31b-it",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_b59301937f701cfe",
+        "content": [
+          {
+            "annotations": [],
+            "text": "OK",
+            "type": "output_text"
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 0,
+    "tool_choice": "none",
+    "tools": [],
+    "top_p": 1,
+    "max_output_tokens": 512,
+    "status": "completed",
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 30,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "input_tokens_per_turn": [],
+        "cached_tokens_per_turn": []
+      },
+      "output_tokens": 2,
+      "output_tokens_details": {
+        "reasoning_tokens": 0,
+        "tool_output_tokens": 0,
+        "output_tokens_per_turn": [],
+        "tool_output_tokens_per_turn": []
+      },
+      "total_tokens": 32,
+      "cost": 3.38e-06
+    },
+    "background": false,
+    "service_tier": "auto",
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "store": false,
+    "output_text": "OK"
+  },
+  "non_json_response_text": null,
+  "transport_error": null,
+  "terminal_event": "response.completed",
+  "terminal_event_seen": true,
+  "stream_frame_count": 9,
+  "stream_json_error_count": 0,
+  "stream_journal_path": "paper_research_20261113/transport_probe/stream_journals/OP-01.jsonl",
+  "stream_journal_sha256": "dbf8ee05f8ee665d743764d1472b0ebaf5be6b93a02509a003190a09c8034caf",
+  "text_source": "terminal_message_output_text",
+  "used_delta_fallback": false,
+  "stream_incomplete": false,
+  "completed_nonempty": true
+}

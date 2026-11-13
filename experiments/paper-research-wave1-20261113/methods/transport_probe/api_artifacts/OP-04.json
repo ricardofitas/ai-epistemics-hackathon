@@ -1,0 +1,131 @@
+{
+  "trial_id": "OP-04",
+  "started_utc": "2026-11-13T04:12:19.715347+00:00",
+  "ended_utc": "2026-11-13T04:12:24.305788+00:00",
+  "elapsed_seconds": 4.590441,
+  "attempt_count": 1,
+  "requested_model": "deepseek-v4-flash",
+  "returned_model": "deepseek-v4-flash",
+  "response_id": "resp_IJfJS3Z8Q7H5JIkQQrZCmkg7K9ttLLUHfNUB-UKYKc5IuFiwnWalb2GP89CPToLDmKH6gnZgTTiwgamQwTYfwyUJEvfNkSmvjx87_EFLV_XFuDIOmffjUxlhHRCmN8POKwmWXPGQFPpuq3CO4Tyl1RNQiBVcMdPFFqMem_1gclrs77lBj7-w2fi_-aV-68hc0Qd4P1nunKWVu6ZzxJwhJo6TYyqhKei2Q-T-vnkz9-OFWFwMogJoK1Df9EqBgu7j7q6OjzVraQG0u4Kum2JFWIot-gOzR-a1aA4mxdyZj8pcP-PGKEBxMbe_Y0N5moODsKgfeO7LFrMjznGnPtnEJnns-Qga0G4jbCGEVs-vTUn2IyE1GIn4DnOeqrMwxiiX99KDZlyKtWtFgFuvdj3C8-ycqL4eWl_HaDEUdBSC45LV-cQOQ6PsMtq4x06MrY4tyAOHVnB69bS81K5WfUEXZx58twY63TA6b4ArYQUJ6bzUF59ksmp7VfxiJKS-vavNuu005bQVz6_OaaI3zVYrGbu3deY=",
+  "request_payload": {
+    "model": "deepseek-v4-flash",
+    "input": "Reply with exactly OK.",
+    "instructions": "Return only the requested word.",
+    "max_output_tokens": 512,
+    "temperature": 0.0,
+    "tools": [],
+    "tool_choice": "none",
+    "agentic_memory": false,
+    "store": false,
+    "stream": true
+  },
+  "request_sha256": "db4fdcb437edc5dc3a86619cc24bc44f3fb86405d2447b040e2328996b246631",
+  "response_status": "completed",
+  "incomplete_details": null,
+  "api_error": null,
+  "usage": {
+    "input_tokens": 94,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "input_tokens_per_turn": [],
+      "cached_tokens_per_turn": []
+    },
+    "output_tokens": 27,
+    "output_tokens_details": {
+      "reasoning_tokens": 24,
+      "tool_output_tokens": 0,
+      "output_tokens_per_turn": [],
+      "tool_output_tokens_per_turn": []
+    },
+    "total_tokens": 121,
+    "cost": 7.777e-06
+  },
+  "output_text": "OK",
+  "output_text_sha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+  "output_words_whitespace": 1,
+  "empty_output": false,
+  "capture_note": "Final message/output_text preferred; delta fallback explicitly flagged and never silently completed; durable sanitized SSE journal retained",
+  "http_status": 200,
+  "response_headers": {},
+  "response_content_type": "text/event-stream",
+  "parse_mode": "sse",
+  "stream_format_deviation": false,
+  "raw_response": {
+    "id": "resp_IJfJS3Z8Q7H5JIkQQrZCmkg7K9ttLLUHfNUB-UKYKc5IuFiwnWalb2GP89CPToLDmKH6gnZgTTiwgamQwTYfwyUJEvfNkSmvjx87_EFLV_XFuDIOmffjUxlhHRCmN8POKwmWXPGQFPpuq3CO4Tyl1RNQiBVcMdPFFqMem_1gclrs77lBj7-w2fi_-aV-68hc0Qd4P1nunKWVu6ZzxJwhJo6TYyqhKei2Q-T-vnkz9-OFWFwMogJoK1Df9EqBgu7j7q6OjzVraQG0u4Kum2JFWIot-gOzR-a1aA4mxdyZj8pcP-PGKEBxMbe_Y0N5moODsKgfeO7LFrMjznGnPtnEJnns-Qga0G4jbCGEVs-vTUn2IyE1GIn4DnOeqrMwxiiX99KDZlyKtWtFgFuvdj3C8-ycqL4eWl_HaDEUdBSC45LV-cQOQ6PsMtq4x06MrY4tyAOHVnB69bS81K5WfUEXZx58twY63TA6b4ArYQUJ6bzUF59ksmp7VfxiJKS-vavNuu005bQVz6_OaaI3zVYrGbu3deY=",
+    "created_at": 1794543144,
+    "instructions": "Return only the requested word.",
+    "model": "deepseek-v4-flash",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_8385ad6bfc17b56c",
+        "summary": [],
+        "type": "reasoning",
+        "content": [
+          {
+            "text": "We need to respond with exactly \"OK\". The instruction says \"Reply with exactly OK.\" So final should be OK.",
+            "type": "reasoning_text"
+          }
+        ]
+      },
+      {
+        "id": "msg_a033531ab21319ef",
+        "content": [
+          {
+            "annotations": [],
+            "text": "OK",
+            "type": "output_text"
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 0,
+    "tool_choice": "none",
+    "tools": [],
+    "top_p": 1,
+    "max_output_tokens": 512,
+    "status": "completed",
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 94,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "input_tokens_per_turn": [],
+        "cached_tokens_per_turn": []
+      },
+      "output_tokens": 27,
+      "output_tokens_details": {
+        "reasoning_tokens": 24,
+        "tool_output_tokens": 0,
+        "output_tokens_per_turn": [],
+        "tool_output_tokens_per_turn": []
+      },
+      "total_tokens": 121,
+      "cost": 7.777e-06
+    },
+    "background": false,
+    "service_tier": "auto",
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "store": false,
+    "output_text": "OK"
+  },
+  "non_json_response_text": null,
+  "transport_error": null,
+  "terminal_event": "response.completed",
+  "terminal_event_seen": true,
+  "stream_frame_count": 36,
+  "stream_json_error_count": 0,
+  "stream_journal_path": "paper_research_20261113/transport_probe/stream_journals/OP-04.jsonl",
+  "stream_journal_sha256": "28bc53a8f7ba28559838c786fe8f7c60eca59b1dc34f8e144d387dd110d81487",
+  "text_source": "terminal_message_output_text",
+  "used_delta_fallback": false,
+  "stream_incomplete": false,
+  "completed_nonempty": true
+}

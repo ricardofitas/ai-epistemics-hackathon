@@ -1,0 +1,120 @@
+{
+  "trial_id": "PR-41",
+  "started_utc": "2026-11-13T04:31:55.509273+00:00",
+  "ended_utc": "2026-11-13T04:32:03.191433+00:00",
+  "elapsed_seconds": 7.68216,
+  "attempt_count": 1,
+  "requested_model": "gemma-4-31b-it",
+  "returned_model": "gemma-4-31b-it",
+  "response_id": "resp_AD-91dtzlBfdV-9-ws3Q2dtt4nxEY74yABZ01jhi-h-iCyeRrgRvAB3_M8b_rAjJAPwJS5ShnGeLiexzDspqygwHcA_UIEAliN1WOQZ6IqYBiiT2iKiYDHmnWDO64eYP892crmpWrsXE3EJVIRYMT-Vcmjy4y_jxON--hQo2xEo98C-RRGHQWXfe_RXboEWeNSEIQOhCskXgA_-9Ea2Ql4frG160rQNVH-i_5bNKYFx4VSsSG17f_wvp29EkU1TJuBwGSN0wr9dhPkxHT9BAuU5d8UxrWxAj1kWsbby8WRRc86ehvPMDtWaNU7YpYmBbR6G5oQgz5B0NzeFEpfE9mjh4x4yTXIkgG-P76rXauhpbwzaSbocCtCRs4t6UCt_aUT5d_tl1LD4ExEZQOZHSf8Tdwz3xTVkpRMoC7kEAFr30WZjnCbhrx0PKfI16oYKcgfQa-GcIqS3rC-S2w0kY2dRSLdiCejEYPNyv04QUwaKPBIJ2eJtYEPAqZoDpBWH0MC9q8ExUOpPkub09eNMGGplOO5k=",
+  "request_payload": {
+    "model": "gemma-4-31b-it",
+    "input": "We are comparing two English assistants that write biographies. The new version should make fewer unsupported factual claims without leaving out important information about the person. Recommend a public evaluation resource and scoring plan, and state what conclusion the comparison would justify.",
+    "instructions": "Answer the research question from existing knowledge. Aim for 180–240 words and do not exceed 300 words. Do not browse or use external tools. Do not ask a follow-up question.",
+    "max_output_tokens": 8192,
+    "temperature": 0.7,
+    "tools": [],
+    "tool_choice": "none",
+    "agentic_memory": false,
+    "store": false,
+    "stream": true
+  },
+  "request_sha256": "203e84ad13b8c5520d7037caf04dec3337e2affaf4eb5939eabd86f10d5a63f6",
+  "response_status": "completed",
+  "incomplete_details": null,
+  "api_error": null,
+  "usage": {
+    "input_tokens": 111,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "input_tokens_per_turn": [],
+      "cached_tokens_per_turn": []
+    },
+    "output_tokens": 259,
+    "output_tokens_details": {
+      "reasoning_tokens": 0,
+      "tool_output_tokens": 0,
+      "output_tokens_per_turn": [],
+      "tool_output_tokens_per_turn": []
+    },
+    "total_tokens": 370,
+    "cost": 9.805e-05
+  },
+  "output_text": "To evaluate the assistants, I recommend using the **WikiBio** dataset or a curated subset of **Wikipedia** biographies. These provide a standardized ground truth of verified factual claims, allowing for a consistent baseline across both models.\n\n**Scoring Plan:**\nThe evaluation should utilize a dual-metric approach:\n1.  **Factuality Score (Hallucination Rate):** Use a \"Fact-Checking\" framework (such as NLI-based entailment or human expert review) to identify unsupported claims. The score is calculated as the percentage of claims in the generated biography that are explicitly supported by the source text.\n2.  **Recall Score (Information Density):** Measure the percentage of \"critical entities\" (e.g., birth date, key achievements, major works) present in the source text that are successfully included in the generated biography.\n\n**Conclusion:**\nThe comparison justifies a conclusion that the new version is superior if it demonstrates a **statistically significant increase in the Factuality Score** while maintaining a **Recall Score equal to or higher than** the previous version. If the new version reduces hallucinations but significantly lowers the Recall Score, it indicates a \"conservative\" failure where the model avoids errors by omitting essential information, failing the requirement to retain important details.",
+  "output_text_sha256": "c6e1bdb1094bcc20532cfb93e6c38a14b435ac32be54d2e4823410853cd7bab0",
+  "output_words_whitespace": 186,
+  "empty_output": false,
+  "capture_note": "Final message/output_text preferred; delta fallback explicitly flagged and never silently completed; durable sanitized SSE journal retained",
+  "http_status": 200,
+  "response_headers": {},
+  "response_content_type": "text/event-stream",
+  "parse_mode": "sse",
+  "stream_format_deviation": false,
+  "raw_response": {
+    "id": "resp_AD-91dtzlBfdV-9-ws3Q2dtt4nxEY74yABZ01jhi-h-iCyeRrgRvAB3_M8b_rAjJAPwJS5ShnGeLiexzDspqygwHcA_UIEAliN1WOQZ6IqYBiiT2iKiYDHmnWDO64eYP892crmpWrsXE3EJVIRYMT-Vcmjy4y_jxON--hQo2xEo98C-RRGHQWXfe_RXboEWeNSEIQOhCskXgA_-9Ea2Ql4frG160rQNVH-i_5bNKYFx4VSsSG17f_wvp29EkU1TJuBwGSN0wr9dhPkxHT9BAuU5d8UxrWxAj1kWsbby8WRRc86ehvPMDtWaNU7YpYmBbR6G5oQgz5B0NzeFEpfE9mjh4x4yTXIkgG-P76rXauhpbwzaSbocCtCRs4t6UCt_aUT5d_tl1LD4ExEZQOZHSf8Tdwz3xTVkpRMoC7kEAFr30WZjnCbhrx0PKfI16oYKcgfQa-GcIqS3rC-S2w0kY2dRSLdiCejEYPNyv04QUwaKPBIJ2eJtYEPAqZoDpBWH0MC9q8ExUOpPkub09eNMGGplOO5k=",
+    "created_at": 1794544320,
+    "instructions": "Answer the research question from existing knowledge. Aim for 180–240 words and do not exceed 300 words. Do not browse or use external tools. Do not ask a follow-up question.",
+    "model": "gemma-4-31b-it",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_aa9b0f815a182e54",
+        "content": [
+          {
+            "annotations": [],
+            "text": "To evaluate the assistants, I recommend using the **WikiBio** dataset or a curated subset of **Wikipedia** biographies. These provide a standardized ground truth of verified factual claims, allowing for a consistent baseline across both models.\n\n**Scoring Plan:**\nThe evaluation should utilize a dual-metric approach:\n1.  **Factuality Score (Hallucination Rate):** Use a \"Fact-Checking\" framework (such as NLI-based entailment or human expert review) to identify unsupported claims. The score is calculated as the percentage of claims in the generated biography that are explicitly supported by the source text.\n2.  **Recall Score (Information Density):** Measure the percentage of \"critical entities\" (e.g., birth date, key achievements, major works) present in the source text that are successfully included in the generated biography.\n\n**Conclusion:**\nThe comparison justifies a conclusion that the new version is superior if it demonstrates a **statistically significant increase in the Factuality Score** while maintaining a **Recall Score equal to or higher than** the previous version. If the new version reduces hallucinations but significantly lowers the Recall Score, it indicates a \"conservative\" failure where the model avoids errors by omitting essential information, failing the requirement to retain important details.",
+            "type": "output_text"
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 0.7,
+    "tool_choice": "none",
+    "tools": [],
+    "top_p": 0.95,
+    "max_output_tokens": 8192,
+    "status": "completed",
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 111,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "input_tokens_per_turn": [],
+        "cached_tokens_per_turn": []
+      },
+      "output_tokens": 259,
+      "output_tokens_details": {
+        "reasoning_tokens": 0,
+        "tool_output_tokens": 0,
+        "output_tokens_per_turn": [],
+        "tool_output_tokens_per_turn": []
+      },
+      "total_tokens": 370,
+      "cost": 9.805e-05
+    },
+    "background": false,
+    "service_tier": "auto",
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "store": false,
+    "output_text": "To evaluate the assistants, I recommend using the **WikiBio** dataset or a curated subset of **Wikipedia** biographies. These provide a standardized ground truth of verified factual claims, allowing for a consistent baseline across both models.\n\n**Scoring Plan:**\nThe evaluation should utilize a dual-metric approach:\n1.  **Factuality Score (Hallucination Rate):** Use a \"Fact-Checking\" framework (such as NLI-based entailment or human expert review) to identify unsupported claims. The score is calculated as the percentage of claims in the generated biography that are explicitly supported by the source text.\n2.  **Recall Score (Information Density):** Measure the percentage of \"critical entities\" (e.g., birth date, key achievements, major works) present in the source text that are successfully included in the generated biography.\n\n**Conclusion:**\nThe comparison justifies a conclusion that the new version is superior if it demonstrates a **statistically significant increase in the Factuality Score** while maintaining a **Recall Score equal to or higher than** the previous version. If the new version reduces hallucinations but significantly lowers the Recall Score, it indicates a \"conservative\" failure where the model avoids errors by omitting essential information, failing the requirement to retain important details."
+  },
+  "non_json_response_text": null,
+  "transport_error": null,
+  "terminal_event": "response.completed",
+  "terminal_event_seen": true,
+  "stream_frame_count": 266,
+  "stream_json_error_count": 0,
+  "stream_journal_path": "paper_research_20261113/study/stream_journals/PR-41.jsonl",
+  "stream_journal_sha256": "58b9d70c0dd8c3892231739223fbce1faa703e871fdbbd306079f08819b384fb",
+  "text_source": "terminal_message_output_text",
+  "used_delta_fallback": false,
+  "stream_incomplete": false,
+  "completed_nonempty": true
+}

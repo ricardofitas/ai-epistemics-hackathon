@@ -1,0 +1,120 @@
+{
+  "trial_id": "PR-46",
+  "started_utc": "2026-11-13T04:33:02.722462+00:00",
+  "ended_utc": "2026-11-13T04:33:10.137327+00:00",
+  "elapsed_seconds": 7.414866,
+  "attempt_count": 1,
+  "requested_model": "gemma-4-31b-it",
+  "returned_model": "gemma-4-31b-it",
+  "response_id": "resp_rDk_3pH2sdxNxHyoTmJKwa-wbwRT0hKJ33eIqNxiHdoN5FsddyJAgRxsZ0cWJdosgLItmQGkH8DKOmb64HmSRRGX0pi3UZeN12UKz3tQCJQHcGkyUrEYaz2VC_ukDAf-z9VLRN_Hua3Js2tDkO7fbTQy83CbMhY9NL8McjjF_aYsV5ebh_U-ZJQYktkUcuoEYSlTH2V7d6CZpUi6CV6qzWS_EffUO_jsHQSbejP1oOyyZxfHqrAalospyDgXoiBZGFC3pND9N1Q22KGgRSpnsi2yLxXGq6pnVQJbxQVhIcfLYrm3lCgct1tX169o3kKYRr5wGtGOnYGEdT8mI6cEJcBHC5oVmp-9SbET1LcDAmvftJb1z9PU7fieGEXRxbiSOi5QC06YVyNUkyT39jarp8ZCf7Z3ANLKKq_eiOXZe7a47vNj2se6I5xv2Hf3WM92NqemhcP_tqQQEEQQveonBNCvPIc9-6ovQi6oBsUPMOqX7i8tSnkgGJBDI9L2IibLKdwaniam5MYoVuonWhGqFr23R3A=",
+  "request_payload": {
+    "model": "gemma-4-31b-it",
+    "input": "We are comparing two assistants that answer English science questions in short explanatory paragraphs. We want evidence that the new version makes fewer factual errors than our baseline, including when the baseline sounds more polished or gives longer answers. Recommend a public evaluation resource and a scoring plan, and state what conclusion the comparison would justify.",
+    "instructions": "Answer the research question from existing knowledge. Aim for 180–240 words and do not exceed 300 words. Do not browse or use external tools. Do not ask a follow-up question.",
+    "max_output_tokens": 8192,
+    "temperature": 0.7,
+    "tools": [],
+    "tool_choice": "none",
+    "agentic_memory": false,
+    "store": false,
+    "stream": true
+  },
+  "request_sha256": "a9dc96fdf1e652289874107f3a602f447e8d194d453de7c852ca07dae7160013",
+  "response_status": "completed",
+  "incomplete_details": null,
+  "api_error": null,
+  "usage": {
+    "input_tokens": 126,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "input_tokens_per_turn": [],
+      "cached_tokens_per_turn": []
+    },
+    "output_tokens": 298,
+    "output_tokens_details": {
+      "reasoning_tokens": 0,
+      "tool_output_tokens": 0,
+      "output_tokens_per_turn": [],
+      "tool_output_tokens_per_turn": []
+    },
+    "total_tokens": 424,
+    "cost": 0.00011266
+  },
+  "output_text": "To evaluate factual accuracy while neutralizing the influence of prose quality and length, I recommend using the **ScienceQA** dataset. This benchmark provides a large-scale collection of science questions across multiple disciplines, paired with ground-truth answers and detailed explanations, making it ideal for verifying factual correctness.\n\n**Scoring Plan**\nTo prevent \"verbosity bias\" or \"fluency bias,\" employ a **blind, side-by-side human evaluation** using a \"Fact-Check Only\" rubric. Evaluators should be presented with the baseline and new version in randomized order. Instead of rating overall quality, evaluators must use a binary scoring system:\n1. **Factuality Check:** Does the response contain any factual errors? (Yes/No).\n2. **Comparison:** Which response is more factually accurate? (Assistant A, Assistant B, or Tie).\n\nBy isolating \"factuality\" from \"polish,\" you ensure that a well-written but incorrect answer is penalized. If the baseline is longer, evaluators should be instructed to penalize \"hallucinations\" regardless of the surrounding context.\n\n**Conclusion**\nIf the new version shows a statistically significant increase in the \"Factually Accurate\" rate and a decrease in the \"Error\" rate compared to the baseline, you can conclude that the new version is more reliable. This justifies a deployment based on **trustworthiness and precision**, proving that the model has improved its knowledge grounding independently of its linguistic style.",
+  "output_text_sha256": "90fbb2adbeda96bdb3b526b276ef1aabf8e00a70cfcff03dadad0587d4cca72b",
+  "output_words_whitespace": 206,
+  "empty_output": false,
+  "capture_note": "Final message/output_text preferred; delta fallback explicitly flagged and never silently completed; durable sanitized SSE journal retained",
+  "http_status": 200,
+  "response_headers": {},
+  "response_content_type": "text/event-stream",
+  "parse_mode": "sse",
+  "stream_format_deviation": false,
+  "raw_response": {
+    "id": "resp_rDk_3pH2sdxNxHyoTmJKwa-wbwRT0hKJ33eIqNxiHdoN5FsddyJAgRxsZ0cWJdosgLItmQGkH8DKOmb64HmSRRGX0pi3UZeN12UKz3tQCJQHcGkyUrEYaz2VC_ukDAf-z9VLRN_Hua3Js2tDkO7fbTQy83CbMhY9NL8McjjF_aYsV5ebh_U-ZJQYktkUcuoEYSlTH2V7d6CZpUi6CV6qzWS_EffUO_jsHQSbejP1oOyyZxfHqrAalospyDgXoiBZGFC3pND9N1Q22KGgRSpnsi2yLxXGq6pnVQJbxQVhIcfLYrm3lCgct1tX169o3kKYRr5wGtGOnYGEdT8mI6cEJcBHC5oVmp-9SbET1LcDAmvftJb1z9PU7fieGEXRxbiSOi5QC06YVyNUkyT39jarp8ZCf7Z3ANLKKq_eiOXZe7a47vNj2se6I5xv2Hf3WM92NqemhcP_tqQQEEQQveonBNCvPIc9-6ovQi6oBsUPMOqX7i8tSnkgGJBDI9L2IibLKdwaniam5MYoVuonWhGqFr23R3A=",
+    "created_at": 1794544387,
+    "instructions": "Answer the research question from existing knowledge. Aim for 180–240 words and do not exceed 300 words. Do not browse or use external tools. Do not ask a follow-up question.",
+    "model": "gemma-4-31b-it",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_a0501a09a63e2e66",
+        "content": [
+          {
+            "annotations": [],
+            "text": "To evaluate factual accuracy while neutralizing the influence of prose quality and length, I recommend using the **ScienceQA** dataset. This benchmark provides a large-scale collection of science questions across multiple disciplines, paired with ground-truth answers and detailed explanations, making it ideal for verifying factual correctness.\n\n**Scoring Plan**\nTo prevent \"verbosity bias\" or \"fluency bias,\" employ a **blind, side-by-side human evaluation** using a \"Fact-Check Only\" rubric. Evaluators should be presented with the baseline and new version in randomized order. Instead of rating overall quality, evaluators must use a binary scoring system:\n1. **Factuality Check:** Does the response contain any factual errors? (Yes/No).\n2. **Comparison:** Which response is more factually accurate? (Assistant A, Assistant B, or Tie).\n\nBy isolating \"factuality\" from \"polish,\" you ensure that a well-written but incorrect answer is penalized. If the baseline is longer, evaluators should be instructed to penalize \"hallucinations\" regardless of the surrounding context.\n\n**Conclusion**\nIf the new version shows a statistically significant increase in the \"Factually Accurate\" rate and a decrease in the \"Error\" rate compared to the baseline, you can conclude that the new version is more reliable. This justifies a deployment based on **trustworthiness and precision**, proving that the model has improved its knowledge grounding independently of its linguistic style.",
+            "type": "output_text"
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 0.7,
+    "tool_choice": "none",
+    "tools": [],
+    "top_p": 0.95,
+    "max_output_tokens": 8192,
+    "status": "completed",
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 126,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "input_tokens_per_turn": [],
+        "cached_tokens_per_turn": []
+      },
+      "output_tokens": 298,
+      "output_tokens_details": {
+        "reasoning_tokens": 0,
+        "tool_output_tokens": 0,
+        "output_tokens_per_turn": [],
+        "tool_output_tokens_per_turn": []
+      },
+      "total_tokens": 424,
+      "cost": 0.00011266
+    },
+    "background": false,
+    "service_tier": "auto",
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "store": false,
+    "output_text": "To evaluate factual accuracy while neutralizing the influence of prose quality and length, I recommend using the **ScienceQA** dataset. This benchmark provides a large-scale collection of science questions across multiple disciplines, paired with ground-truth answers and detailed explanations, making it ideal for verifying factual correctness.\n\n**Scoring Plan**\nTo prevent \"verbosity bias\" or \"fluency bias,\" employ a **blind, side-by-side human evaluation** using a \"Fact-Check Only\" rubric. Evaluators should be presented with the baseline and new version in randomized order. Instead of rating overall quality, evaluators must use a binary scoring system:\n1. **Factuality Check:** Does the response contain any factual errors? (Yes/No).\n2. **Comparison:** Which response is more factually accurate? (Assistant A, Assistant B, or Tie).\n\nBy isolating \"factuality\" from \"polish,\" you ensure that a well-written but incorrect answer is penalized. If the baseline is longer, evaluators should be instructed to penalize \"hallucinations\" regardless of the surrounding context.\n\n**Conclusion**\nIf the new version shows a statistically significant increase in the \"Factually Accurate\" rate and a decrease in the \"Error\" rate compared to the baseline, you can conclude that the new version is more reliable. This justifies a deployment based on **trustworthiness and precision**, proving that the model has improved its knowledge grounding independently of its linguistic style."
+  },
+  "non_json_response_text": null,
+  "transport_error": null,
+  "terminal_event": "response.completed",
+  "terminal_event_seen": true,
+  "stream_frame_count": 305,
+  "stream_json_error_count": 0,
+  "stream_journal_path": "paper_research_20261113/study/stream_journals/PR-46.jsonl",
+  "stream_journal_sha256": "af1b6162cf5fc1cd07387322cd50711131b9cb433924a3a7cb59ec9f7bba8d76",
+  "text_source": "terminal_message_output_text",
+  "used_delta_fallback": false,
+  "stream_incomplete": false,
+  "completed_nonempty": true
+}

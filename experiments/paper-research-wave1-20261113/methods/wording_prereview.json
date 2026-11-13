@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "reviewed_utc": "2026-11-13T04:36:40.329768+00:00",
+  "review_id": "wording-transfer-prereview-20261113",
+  "reviewer_id": "output-blind-wording-agent",
+  "review_type": "Prospective English and construct-fidelity prereview; same-family agent review, not human or cross-model validation",
+  "scope": {
+    "parent_cases": 3,
+    "wording_probes": 6,
+    "additional_benchmark_families": 0,
+    "sampling_status": "Unused wording as represented by the prospective input artifact; no probe sampled or generated in this review",
+    "freeze_status": "Not frozen by this review; freeze all six exact prompts and unchanged controls separately before any later sampling",
+    "claim_limit": "Unused future wording for known selected cases, not new scientific cases, unseen benchmark families or independent generalization evidence"
+  },
+  "review_access": {
+    "read_files": [
+      "paper_research_20261113/heldout_paraphrases.json",
+      "paper_research_20261113/study/review_casepack.json",
+      "open_design/rubric.json"
+    ],
+    "prohibited_material_not_read": [
+      "Generated subject responses",
+      "API journals or response payloads",
+      "Current or prior answer ratings"
+    ],
+    "subject_model_calls": 0,
+    "retrieval_or_inference_calls": 0,
+    "git_writes": 0,
+    "additional_independent_check": {
+      "reviewer_id": "hans_english_check",
+      "scope": "HANS-P1 and HANS-P2 only, against original HANS case and original rubric",
+      "finding": "Both preserve directional inference, argument roles and high lexical overlap without new hints or requirements; no edits recommended",
+      "limits": "Same-family agent semantic check, not human or cross-model validation"
+    }
+  },
+  "input_integrity": {
+    "heldout_file_sha256_before": "da56ec9f40a37202601f9273652e456871088eafac90dee0af05f9789b155b7a",
+    "heldout_file_sha256_after": "ebe285da8abe5fb453659d8f2459694b280b5835302ebfbab8ff1d77f44d8fc4",
+    "source_casepack_file": "paper_research_20261113/study/review_casepack.json",
+    "source_casepack_file_sha256": "17f1a4aa2161412954ec529cb3d640e00b71045e5dd40128d341c4a6480d822c",
+    "original_rubric_file": "open_design/rubric.json",
+    "original_rubric_file_sha256": "eb1ae36763232627e76b65339045746375b41107d44252fd36e8d5bb331f713c",
+    "all_embedded_original_and_preedit_prompt_hashes_valid": true,
+    "all_embedded_original_prompts_match_review_casepack": true
+  },
+  "overall_verdict": "All six are suitable prospective wording probes after one minimal WMT-P2 referent clarification. No source case, rubric or criterion was modified. No outcome claim is made.",
+  "prompt_edit_count": 1,
+  "probes": [
+    {
+      "probe_id": "WMT-P1",
+      "case_id": "open_mt_news_ende_late2019",
+      "verdict": "pass_unchanged",
+      "original_case_prompt": "I want to compare two English-to-German systems on held-out online news from late 2019. Which public test set and scoring setup should I use?",
+      "original_case_prompt_sha256": "734ef14ced810e51d690375218be7483bacd904f2e314c7cd7c75ff7694dffaf",
+      "old_prompt": "What public test data and scoring procedure would you recommend for comparing two systems that translate English news into German? The test material should be held-out online news from late 2019.",
+      "old_prompt_sha256": "f828b5703f98e9664f682974f03d4e4a57815bd9d5af373a228e220e639f4f27",
+      "reviewed_prompt": "What public test data and scoring procedure would you recommend for comparing two systems that translate English news into German? The test material should be held-out online news from late 2019.",
+      "reviewed_prompt_sha256": "f828b5703f98e9664f682974f03d4e4a57815bd9d5af373a228e220e639f4f27",
+      "edited": false,
+      "fidelity_reason": "The two English-to-German systems, held-out online-news target, late-2019 news period, public data request and scoring request remain explicit. The date phrase qualifies the news material, preserving source-period meaning without adding a release year or the September-November answer fact.",
+      "adds_benchmark_answer_or_equivalence_hint": false,
+      "adds_critical_requirement": false
+    },
+    {
+      "probe_id": "WMT-P2",
+      "case_id": "open_mt_news_ende_late2019",
+      "verdict": "pass_after_prospective_referent_clarification",
+      "original_case_prompt": "I want to compare two English-to-German systems on held-out online news from late 2019. Which public test set and scoring setup should I use?",
+      "original_case_prompt_sha256": "734ef14ced810e51d690375218be7483bacd904f2e314c7cd7c75ff7694dffaf",
+      "old_prompt": "My comparison concerns two English-to-German translators on held-out online news from late 2019. What public evaluation data and scoring method would be appropriate?",
+      "old_prompt_sha256": "90002cb9f33a3e0f75da6663b5fbcdabae7b772e93802eba6207e3ffbb870f3f",
+      "reviewed_prompt": "My comparison concerns two English-to-German translation systems on held-out online news from late 2019. What public evaluation data and scoring method would be appropriate?",
+      "reviewed_prompt_sha256": "4488a793cc967c29e9f811a922b302fbda22f80e1ba0264f3566a6e25ea6fcfb",
+      "edited": true,
+      "fidelity_reason": "The original phrasing “translators” could refer to human translators. Replacing it with “translation systems” explicitly retains the original evaluated objects. The same direction, held-out online news from late 2019, public data and scoring request remain; no benchmark or source-period answer fact is supplied.",
+      "adds_benchmark_answer_or_equivalence_hint": false,
+      "adds_critical_requirement": false
+    },
+    {
+      "probe_id": "HANS-P1",
+      "case_id": "NEW-HANS-ROLES",
+      "verdict": "pass_unchanged",
+      "original_case_prompt": "We are comparing two English natural-language-inference classifiers. We want to know which one better tracks who did what to whom when deciding whether a hypothesis follows from a premise, including cases where the two sentences use almost the same words. Recommend a public evaluation resource and scoring plan, and state what conclusion it would justify.",
+      "original_case_prompt_sha256": "215b48fe56b9e9faaa0fb50391ab97de3a29e7782d551b1a80ecd6fceeffc5cc",
+      "old_prompt": "We have two English classifiers that judge whether a premise entails a hypothesis. We want to compare how well they track who performs an action and who receives it, even when a sentence pair shares nearly all its words. Which public evaluation resource and scoring procedure would you recommend, and what could we conclude?",
+      "old_prompt_sha256": "afe8c93d1d9e5f175c3622d32a7c6ed8b56c97a8f48632fd33393b22757a67d4",
+      "reviewed_prompt": "We have two English classifiers that judge whether a premise entails a hypothesis. We want to compare how well they track who performs an action and who receives it, even when a sentence pair shares nearly all its words. Which public evaluation resource and scoring procedure would you recommend, and what could we conclude?",
+      "reviewed_prompt_sha256": "afe8c93d1d9e5f175c3622d32a7c6ed8b56c97a8f48632fd33393b22757a67d4",
+      "edited": false,
+      "fidelity_reason": "A premise entails a hypothesis preserves premise-to-hypothesis direction. Who performs an action and who receives it preserves the intended argument-role contrast. Nearly all shared words preserves high lexical overlap. Two-classifier comparison, public resource, scoring and conclusion remain explicit.",
+      "adds_benchmark_answer_or_equivalence_hint": false,
+      "adds_critical_requirement": false
+    },
+    {
+      "probe_id": "HANS-P2",
+      "case_id": "NEW-HANS-ROLES",
+      "verdict": "pass_unchanged",
+      "original_case_prompt": "We are comparing two English natural-language-inference classifiers. We want to know which one better tracks who did what to whom when deciding whether a hypothesis follows from a premise, including cases where the two sentences use almost the same words. Recommend a public evaluation resource and scoring plan, and state what conclusion it would justify.",
+      "original_case_prompt_sha256": "215b48fe56b9e9faaa0fb50391ab97de3a29e7782d551b1a80ecd6fceeffc5cc",
+      "old_prompt": "We need to evaluate two English systems that decide whether a hypothesis follows from a premise. The ability of interest is tracking who did what to whom, especially for sentence pairs with nearly the same vocabulary. Which public resource and scoring plan should we use, and what would the result show?",
+      "old_prompt_sha256": "fdb790a2455518f912cc86d4ddbd2f632534263b95c3547a7f9b4bf9d57fd3fe",
+      "reviewed_prompt": "We need to evaluate two English systems that decide whether a hypothesis follows from a premise. The ability of interest is tracking who did what to whom, especially for sentence pairs with nearly the same vocabulary. Which public resource and scoring plan should we use, and what would the result show?",
+      "reviewed_prompt_sha256": "fdb790a2455518f912cc86d4ddbd2f632534263b95c3547a7f9b4bf9d57fd3fe",
+      "edited": false,
+      "fidelity_reason": "Whether a hypothesis follows from a premise preserves direction. Who did what to whom and nearly the same vocabulary preserve role sensitivity under high lexical overlap. Two systems plus the result of the comparison preserve comparative assessment. No label mapping, contrast construction or benchmark is supplied.",
+      "adds_benchmark_answer_or_equivalence_hint": false,
+      "adds_critical_requirement": false
+    },
+    {
+      "probe_id": "BEIR-P1",
+      "case_id": "NEW-BEIR-COVID-RETRIEVAL-POSITIVE",
+      "verdict": "pass_unchanged",
+      "original_case_prompt": "We are comparing two retrieval components for a research assistant that searches scientific papers about COVID-19. For each research query, the component returns a ranked list of papers, and users usually inspect only the first ten. Recommend a public evaluation resource with expert relevance judgments, a scoring plan for the comparison, and the conclusion the results would justify.",
+      "original_case_prompt_sha256": "ed82432395478a254e9bfdcff852b1d4656680c532938c4c07bb5d9bea092cfd",
+      "old_prompt": "Which public dataset and evaluation protocol would let us compare two systems that retrieve COVID-19 research papers? Each research query produces an ordered list of papers, users normally inspect just the top ten, and we need expert relevance judgments. Explain how to score the comparison and what conclusions the results would justify.",
+      "old_prompt_sha256": "100ea9b9b044404d2ffab5de0f8805f2333b4d5d78ae15a87be811be7a791cd2",
+      "reviewed_prompt": "Which public dataset and evaluation protocol would let us compare two systems that retrieve COVID-19 research papers? Each research query produces an ordered list of papers, users normally inspect just the top ten, and we need expert relevance judgments. Explain how to score the comparison and what conclusions the results would justify.",
+      "reviewed_prompt_sha256": "100ea9b9b044404d2ffab5de0f8805f2333b4d5d78ae15a87be811be7a791cd2",
+      "edited": false,
+      "fidelity_reason": "The comparison still concerns two COVID-19 research-paper retrieval systems, ordered per-query papers, users inspecting the top ten, expert relevance judgments, a public dataset, scoring and justified conclusions. Omitting the research-assistant wrapper does not change the requested document-ranking effectiveness target or add a generated-answer target.",
+      "adds_benchmark_answer_or_equivalence_hint": false,
+      "adds_critical_requirement": false
+    },
+    {
+      "probe_id": "BEIR-P2",
+      "case_id": "NEW-BEIR-COVID-RETRIEVAL-POSITIVE",
+      "verdict": "pass_unchanged",
+      "original_case_prompt": "We are comparing two retrieval components for a research assistant that searches scientific papers about COVID-19. For each research query, the component returns a ranked list of papers, and users usually inspect only the first ten. Recommend a public evaluation resource with expert relevance judgments, a scoring plan for the comparison, and the conclusion the results would justify.",
+      "original_case_prompt_sha256": "ed82432395478a254e9bfdcff852b1d4656680c532938c4c07bb5d9bea092cfd",
+      "old_prompt": "Our research assistant has two candidate retrieval modules for COVID-19 scientific literature. We want to assess the relevance of the first ten papers returned for each research query using public expert judgments. Recommend an evaluation resource and scoring plan, and describe the conclusion we could draw from the comparison.",
+      "old_prompt_sha256": "e13cf7e62cf4052528204882f92d1a195f8a6f7a25e4e25ac34b7ad8574a6052",
+      "reviewed_prompt": "Our research assistant has two candidate retrieval modules for COVID-19 scientific literature. We want to assess the relevance of the first ten papers returned for each research query using public expert judgments. Recommend an evaluation resource and scoring plan, and describe the conclusion we could draw from the comparison.",
+      "reviewed_prompt_sha256": "e13cf7e62cf4052528204882f92d1a195f8a6f7a25e4e25ac34b7ad8574a6052",
+      "edited": false,
+      "fidelity_reason": "Two candidate research-assistant retrieval modules for COVID-19 scientific literature and their comparison remain explicit. First-ten papers returned for each query preserves the top-ranked-results target. Public expert judgments, resource, scoring and justified conclusion remain. No efficiency, equivalence-testing or generated-answer requirement is added.",
+      "adds_benchmark_answer_or_equivalence_hint": false,
+      "adds_critical_requirement": false
+    }
+  ],
+  "unchanged_scoring_boundary": [
+    "Use the original generic primary-outcome rule and original case-critical criteria, acceptable alternatives, qualifications, omission rules and uncertainty policy. This prereview adds no failure gate.",
+    "WMT: late 2019 remains the article/source-news period. Naming a benchmark whose label contains 2019 does not by itself establish source-period fit; appropriate uncertainty, source verification requests and clearly limited proxies retain their original acceptability. No benchmark name, exact month range or preferred metric is required.",
+    "HANS: evaluate directional NLI role sensitivity under near-identical wording. No exact benchmark, subcase label, template, count, label-mapping sentence or statistical test becomes mandatory. Verified alternatives and qualified proxies remain acceptable.",
+    "BEIRCOVID: compare ranked-document relevance for first-ten use on the specified scientific-literature task. This review does not require an equivalence test, a prespecified margin, significance, a confidence interval or a particular metric. An ordinary bounded retrieval conclusion and cautious null conclusion retain original acceptability.",
+    "An explicit materially unsupported equivalence or sufficiency guarantee, if later present, must be assessed under the unchanged generic rule using its exact passage; optional statistical omissions alone must not be promoted to primary failure.",
+    "Metadata naming a failure mechanism is evaluator-only context, not a new requirement or a model-facing hint. Preserve uncertain when sufficiency or alternative-resource fit is genuinely ambiguous."
+  ],
+  "not_assessed": [
+    "No response quality, error incidence, transfer success or model behavior was observed or scored",
+    "No new primary-source fact audit was performed; fidelity was checked against the supplied original case definitions and original rubric",
+    "Unused status was not independently established by scanning responses or journals, because doing so was outside the authorized output-blind review"
+  ],
+  "files_modified": [
+    "paper_research_20261113/heldout_paraphrases.json"
+  ],
+  "files_created": [
+    "paper_research_20261113/wording_prereview.json",
+    "paper_research_20261113/wording_prereview.md"
+  ]
+}

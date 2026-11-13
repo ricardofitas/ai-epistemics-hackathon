@@ -1,0 +1,131 @@
+{
+  "trial_id": "PR-12",
+  "started_utc": "2026-11-13T04:24:05.577035+00:00",
+  "ended_utc": "2026-11-13T04:24:14.235315+00:00",
+  "elapsed_seconds": 8.658282,
+  "attempt_count": 1,
+  "requested_model": "deepseek-v4-flash",
+  "returned_model": "deepseek-v4-flash",
+  "response_id": "resp_r8U35-1TyCKgUl9ygDbS41l5nN00IOXyWzsiMZZi9JbhazaBKSvj7Jyr8HchH598HB9LQMeS5_OiP2zDxAhfCbL-8fAoiuPorEZT7261ziJ_bAZVQFpEtnfUvsc5htd-cU0xmMlC_1PuvqYuZ5FBQLTdVOb-R_G51ZRKwNKL94pDEZw0_Tst8gJPTX085SW0vUm4bWmA0zCwTi3uIxWiMCjmRtLIXsn1-fGQ4eK2xMGxgDa_dlAVYKE-dF5Kxz_Q28lebxEveb1Y5U9lCN6qBQkFwfY-x5B50r0skGkvt4Tt8VnmgGF4ZkhyVvr4dvIF0zOfqdmkQKjYS58empBR7HBWeYa0RiDsByLF9DOwWQBvxvsP6IRkcAedTtiKtYpCrMo7wISn5jFK6YSmMJmr_ubHXxhyXwZZvrbqi9jhApYontg83GCahXMFu7FoPujAzaDkdBkxSTbcNOdPGeW8yWmCet4lxuKBLsqwAaw_dMdQFOwdLHEKzHlYWpv1cA7j2ORDnozN_TPUpkdop49Ekv1yn3U=",
+  "request_payload": {
+    "model": "deepseek-v4-flash",
+    "input": "I want to compare two English-to-German systems on held-out online news from late 2019. Which public test set and scoring setup should I use?",
+    "instructions": "Answer the research question from existing knowledge. Aim for 180–240 words and do not exceed 300 words. Do not browse or use external tools. Do not ask a follow-up question.",
+    "max_output_tokens": 8192,
+    "temperature": 0.7,
+    "tools": [],
+    "tool_choice": "none",
+    "agentic_memory": false,
+    "store": false,
+    "stream": true
+  },
+  "request_sha256": "8fcbb2a35285259fee081907b0352ec297f6e7f81283c7bf69b8b10baa637f0f",
+  "response_status": "completed",
+  "incomplete_details": null,
+  "api_error": null,
+  "usage": {
+    "input_tokens": 153,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "input_tokens_per_turn": [],
+      "cached_tokens_per_turn": []
+    },
+    "output_tokens": 697,
+    "output_tokens_details": {
+      "reasoning_tokens": 373,
+      "tool_output_tokens": 0,
+      "output_tokens_per_turn": [],
+      "tool_output_tokens_per_turn": []
+    },
+    "total_tokens": 850,
+    "cost": 9.972336e-05
+  },
+  "output_text": "For comparing English-to-German systems on held-out online news from late 2019, use the **WMT19 news translation test set**, commonly called **newstest2019**. This set was released as the official held-out test data for the WMT19 news translation task and consists of news articles from that period, making it exactly your target domain and time frame.\n\n**Scoring setup:** Use **SacreBLEU** to compute detokenized, case-sensitive BLEU. This is the standard for WMT since it avoids tokenization mismatches. A typical invocation is:\n\n```bash\nsacrebleu -t wmt19 -l en-de < your_system_output.de\n```\n\nThis downloads the correct references and applies the official signature:\n\n```\nBLEU+case.mixed+num.refs.1+smooth.exp+test.wmt19+lang.en-de\n```\n\nIf you need a custom evaluation script, use the same signature with `sacrebleu`’s Python API. Avoid using raw `multi-bleu.perl` because it tokenizes differently and is not comparable to WMT results.\n\n**Additional considerations:** Report BLEU on the full test set (2997 sentences for en-de). If you also want a human-evaluation baseline, WMT19 rank-based scores are available, but for automatic comparison, SacreBLEU is the accepted standard. Do not use newstest2018 or newstest2020, as they cover different periods. This setup ensures your results are reproducible and directly comparable to published WMT19 systems.",
+  "output_text_sha256": "1754275e26d2f24dc1d51c43d1767a944409e3413a606af11c3c2052a2f82b41",
+  "output_words_whitespace": 189,
+  "empty_output": false,
+  "capture_note": "Final message/output_text preferred; delta fallback explicitly flagged and never silently completed; durable sanitized SSE journal retained",
+  "http_status": 200,
+  "response_headers": {},
+  "response_content_type": "text/event-stream",
+  "parse_mode": "sse",
+  "stream_format_deviation": false,
+  "raw_response": {
+    "id": "resp_r8U35-1TyCKgUl9ygDbS41l5nN00IOXyWzsiMZZi9JbhazaBKSvj7Jyr8HchH598HB9LQMeS5_OiP2zDxAhfCbL-8fAoiuPorEZT7261ziJ_bAZVQFpEtnfUvsc5htd-cU0xmMlC_1PuvqYuZ5FBQLTdVOb-R_G51ZRKwNKL94pDEZw0_Tst8gJPTX085SW0vUm4bWmA0zCwTi3uIxWiMCjmRtLIXsn1-fGQ4eK2xMGxgDa_dlAVYKE-dF5Kxz_Q28lebxEveb1Y5U9lCN6qBQkFwfY-x5B50r0skGkvt4Tt8VnmgGF4ZkhyVvr4dvIF0zOfqdmkQKjYS58empBR7HBWeYa0RiDsByLF9DOwWQBvxvsP6IRkcAedTtiKtYpCrMo7wISn5jFK6YSmMJmr_ubHXxhyXwZZvrbqi9jhApYontg83GCahXMFu7FoPujAzaDkdBkxSTbcNOdPGeW8yWmCet4lxuKBLsqwAaw_dMdQFOwdLHEKzHlYWpv1cA7j2ORDnozN_TPUpkdop49Ekv1yn3U=",
+    "created_at": 1794543849,
+    "instructions": "Answer the research question from existing knowledge. Aim for 180–240 words and do not exceed 300 words. Do not browse or use external tools. Do not ask a follow-up question.",
+    "model": "deepseek-v4-flash",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_aac2d8eeb18b624b",
+        "summary": [],
+        "type": "reasoning",
+        "content": [
+          {
+            "text": "We need answer research question. Need know public test set for English-German news late 2019. This is WMT19 news translation task test set? WMT19 held-out test set from news domain, released late 2019? Actually WMT19 test set used for news translation task. For English-German. Also WMT20? But \"late 2019\" suggests WMT19 test set (newstest2019). Public test set: newstest2019. Scoring: BLEU with tokenized? SacreBLEU. Need specify setup: use SacreBLEU with signature. For WMT19 news translation task, official metric was BLEU? They used SacreBLEU? WMT19 used BLEU as secondary? Actually WMT19 used human evaluation primary, BLEU as automatic. For reproducible, use SacreBLEU with `--test-set newstest2019 --language-pair en-de` or specific tokenization. Need mention use `sacrebleu` command. Also note that newstest2019 is from 2019 news articles, appropriate. Need mention not use WMT19 test set? Yes.\n\nNeed answer concise. Include: public test set = newstest2019 from WMT19 news translation task. Scoring setup = SacreBLEU, signature `BLEU+case.mixed+num.refs.1+smooth.exp+test.wmt19+lang.en-de`. Or use `sacrebleu -t wmt19 -l en-de` to download and evaluate. Need mention detokenized BLEU, not tokenized. Also maybe mention that WMT19 used \"newstest2019\" as test set. Need ensure no external tools. Answer.\n\nNeed 180-240 words. Provide details.",
+            "type": "reasoning_text"
+          }
+        ]
+      },
+      {
+        "id": "msg_93bdc5b51b2fb4b3",
+        "content": [
+          {
+            "annotations": [],
+            "text": "For comparing English-to-German systems on held-out online news from late 2019, use the **WMT19 news translation test set**, commonly called **newstest2019**. This set was released as the official held-out test data for the WMT19 news translation task and consists of news articles from that period, making it exactly your target domain and time frame.\n\n**Scoring setup:** Use **SacreBLEU** to compute detokenized, case-sensitive BLEU. This is the standard for WMT since it avoids tokenization mismatches. A typical invocation is:\n\n```bash\nsacrebleu -t wmt19 -l en-de < your_system_output.de\n```\n\nThis downloads the correct references and applies the official signature:\n\n```\nBLEU+case.mixed+num.refs.1+smooth.exp+test.wmt19+lang.en-de\n```\n\nIf you need a custom evaluation script, use the same signature with `sacrebleu`’s Python API. Avoid using raw `multi-bleu.perl` because it tokenizes differently and is not comparable to WMT results.\n\n**Additional considerations:** Report BLEU on the full test set (2997 sentences for en-de). If you also want a human-evaluation baseline, WMT19 rank-based scores are available, but for automatic comparison, SacreBLEU is the accepted standard. Do not use newstest2018 or newstest2020, as they cover different periods. This setup ensures your results are reproducible and directly comparable to published WMT19 systems.",
+            "type": "output_text"
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 0.7,
+    "tool_choice": "none",
+    "tools": [],
+    "top_p": 1,
+    "max_output_tokens": 8192,
+    "status": "completed",
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 153,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "input_tokens_per_turn": [],
+        "cached_tokens_per_turn": []
+      },
+      "output_tokens": 697,
+      "output_tokens_details": {
+        "reasoning_tokens": 373,
+        "tool_output_tokens": 0,
+        "output_tokens_per_turn": [],
+        "tool_output_tokens_per_turn": []
+      },
+      "total_tokens": 850,
+      "cost": 9.972336e-05
+    },
+    "background": false,
+    "service_tier": "auto",
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "store": false,
+    "output_text": "For comparing English-to-German systems on held-out online news from late 2019, use the **WMT19 news translation test set**, commonly called **newstest2019**. This set was released as the official held-out test data for the WMT19 news translation task and consists of news articles from that period, making it exactly your target domain and time frame.\n\n**Scoring setup:** Use **SacreBLEU** to compute detokenized, case-sensitive BLEU. This is the standard for WMT since it avoids tokenization mismatches. A typical invocation is:\n\n```bash\nsacrebleu -t wmt19 -l en-de < your_system_output.de\n```\n\nThis downloads the correct references and applies the official signature:\n\n```\nBLEU+case.mixed+num.refs.1+smooth.exp+test.wmt19+lang.en-de\n```\n\nIf you need a custom evaluation script, use the same signature with `sacrebleu`’s Python API. Avoid using raw `multi-bleu.perl` because it tokenizes differently and is not comparable to WMT results.\n\n**Additional considerations:** Report BLEU on the full test set (2997 sentences for en-de). If you also want a human-evaluation baseline, WMT19 rank-based scores are available, but for automatic comparison, SacreBLEU is the accepted standard. Do not use newstest2018 or newstest2020, as they cover different periods. This setup ensures your results are reproducible and directly comparable to published WMT19 systems."
+  },
+  "non_json_response_text": null,
+  "transport_error": null,
+  "terminal_event": "response.completed",
+  "terminal_event_seen": true,
+  "stream_frame_count": 698,
+  "stream_json_error_count": 0,
+  "stream_journal_path": "paper_research_20261113/study/stream_journals/PR-12.jsonl",
+  "stream_journal_sha256": "0833a4b7672fdee300cd4ab72f663f6b62c705854d5b55865184b4e691b0deb0",
+  "text_source": "terminal_message_output_text",
+  "used_delta_fallback": false,
+  "stream_incomplete": false,
+  "completed_nonempty": true
+}

@@ -1,0 +1,131 @@
+{
+  "trial_id": "OP-02",
+  "started_utc": "2026-11-13T04:12:10.626370+00:00",
+  "ended_utc": "2026-11-13T04:12:19.713905+00:00",
+  "elapsed_seconds": 9.087528,
+  "attempt_count": 1,
+  "requested_model": "glm-5.2",
+  "returned_model": "glm-5.2",
+  "response_id": "resp_xWICp_B1sf0h3ZJJrFjGRLKNZX3VrcKtxx0lI5PzH1Lm_qy6v3haK1XOE7T0RTU6dQMx-WjzRQQiS_1iQklWi8WB4osm05uY3REofV8GogYc7PJBugD-YsvpyzqQ-BB7D6xS63p1YzLEs4dMN2O5NegbqBZbtoObHi801NfxSGDx4H331gzO9dmo0p0qj67KAw78kpEAUXcnCB6dxXwlmnFhE_0d4niLJjC_H0NhGHIQPaEoHlq-OTvcCywoUvizXU1dG1fp4hNz5szNlLq-bfCN_1qCfD5uCLMRT13VlVguB5SOkg9DnDmy3I5roJ4MiJSkYBpAq2c3geLQgBp_twV_jcsYg4qImZo_urFWSWziY6QVb3dFy5hzHqSblFmJKKkWr-LK-4CcSp3nS1vzijaXvwgxo1c1Yh3DigmFMS4G-r5hxRSmoZcKb_MPE0pOjC3d_sAP3fVdMkSeH2i5mO_itX6_ZBnXqcvqWKYcfytw0koTQH6wKYhUgtNVMbxI6XblZb-eyzUz4jWrU_5RRuoniF0=",
+  "request_payload": {
+    "model": "glm-5.2",
+    "input": "Reply with exactly OK.",
+    "instructions": "Return only the requested word.",
+    "max_output_tokens": 512,
+    "temperature": 0.0,
+    "tools": [],
+    "tool_choice": "none",
+    "agentic_memory": false,
+    "store": false,
+    "stream": true
+  },
+  "request_sha256": "dda0ab3c223a5dc9005bbcbc655405048102ab6a867255c5b0dc64cded8d3370",
+  "response_status": "completed",
+  "incomplete_details": null,
+  "api_error": null,
+  "usage": {
+    "input_tokens": 24,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "input_tokens_per_turn": [],
+      "cached_tokens_per_turn": []
+    },
+    "output_tokens": 125,
+    "output_tokens_details": {
+      "reasoning_tokens": 122,
+      "tool_output_tokens": 0,
+      "output_tokens_per_turn": [],
+      "tool_output_tokens_per_turn": []
+    },
+    "total_tokens": 149,
+    "cost": 0.0005836
+  },
+  "output_text": "OK",
+  "output_text_sha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+  "output_words_whitespace": 1,
+  "empty_output": false,
+  "capture_note": "Final message/output_text preferred; delta fallback explicitly flagged and never silently completed; durable sanitized SSE journal retained",
+  "http_status": 200,
+  "response_headers": {},
+  "response_content_type": "text/event-stream",
+  "parse_mode": "sse",
+  "stream_format_deviation": false,
+  "raw_response": {
+    "id": "resp_xWICp_B1sf0h3ZJJrFjGRLKNZX3VrcKtxx0lI5PzH1Lm_qy6v3haK1XOE7T0RTU6dQMx-WjzRQQiS_1iQklWi8WB4osm05uY3REofV8GogYc7PJBugD-YsvpyzqQ-BB7D6xS63p1YzLEs4dMN2O5NegbqBZbtoObHi801NfxSGDx4H331gzO9dmo0p0qj67KAw78kpEAUXcnCB6dxXwlmnFhE_0d4niLJjC_H0NhGHIQPaEoHlq-OTvcCywoUvizXU1dG1fp4hNz5szNlLq-bfCN_1qCfD5uCLMRT13VlVguB5SOkg9DnDmy3I5roJ4MiJSkYBpAq2c3geLQgBp_twV_jcsYg4qImZo_urFWSWziY6QVb3dFy5hzHqSblFmJKKkWr-LK-4CcSp3nS1vzijaXvwgxo1c1Yh3DigmFMS4G-r5hxRSmoZcKb_MPE0pOjC3d_sAP3fVdMkSeH2i5mO_itX6_ZBnXqcvqWKYcfytw0koTQH6wKYhUgtNVMbxI6XblZb-eyzUz4jWrU_5RRuoniF0=",
+    "created_at": 1794543137,
+    "instructions": "Return only the requested word.",
+    "model": "glm-5.2",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_bb5b8a39e277eac4",
+        "summary": [],
+        "type": "reasoning",
+        "content": [
+          {
+            "text": "1.  **Analyze the Request:**\n    *   Input: \"Reply with exactly OK.\"\n    *   Constraint: \"Return only the requested word.\" (from system prompt)\n    *   Target word: \"OK\"\n\n2.  **Determine the Output:**\n    *   The user wants exactly \"OK\".\n    *   The system prompt says \"Return only the requested word.\"\n    *   Therefore, the output must be exactly \"OK\" with no punctuation, no extra spaces, no conversational filler.\n\n3.  **Format the Output:**\n    *   Output: OK",
+            "type": "reasoning_text"
+          }
+        ]
+      },
+      {
+        "id": "msg_bb0a97205d947c3c",
+        "content": [
+          {
+            "annotations": [],
+            "text": "OK",
+            "type": "output_text"
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 0,
+    "tool_choice": "none",
+    "tools": [],
+    "top_p": 1,
+    "max_output_tokens": 512,
+    "status": "completed",
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 24,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "input_tokens_per_turn": [],
+        "cached_tokens_per_turn": []
+      },
+      "output_tokens": 125,
+      "output_tokens_details": {
+        "reasoning_tokens": 122,
+        "tool_output_tokens": 0,
+        "output_tokens_per_turn": [],
+        "tool_output_tokens_per_turn": []
+      },
+      "total_tokens": 149,
+      "cost": 0.0005836
+    },
+    "background": false,
+    "service_tier": "auto",
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "store": false,
+    "output_text": "OK"
+  },
+  "non_json_response_text": null,
+  "transport_error": null,
+  "terminal_event": "response.completed",
+  "terminal_event_seen": true,
+  "stream_frame_count": 119,
+  "stream_json_error_count": 0,
+  "stream_journal_path": "paper_research_20261113/transport_probe/stream_journals/OP-02.jsonl",
+  "stream_journal_sha256": "6443d41b23ca4d04a036abf4d5248ecf0f4d728b28bbca285e74f65e59100c68",
+  "text_source": "terminal_message_output_text",
+  "used_delta_fallback": false,
+  "stream_incomplete": false,
+  "completed_nonempty": true
+}

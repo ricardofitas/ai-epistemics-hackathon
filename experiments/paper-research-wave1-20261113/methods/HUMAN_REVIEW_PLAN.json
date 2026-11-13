@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-11-13T04:37:45.368046+00:00",
+  "status": "planned_not_human_validated",
+  "unit": "anonymized recommendation response and frozen source-case definition",
+  "case_definition_review": "all nine current-wave source-case definitions",
+  "response_selection": {
+    "all_final_material_yes": true,
+    "all_uncertain": true,
+    "all_primary_or_mechanism_disagreements": true,
+    "aligned_control_sample": "Choose min(10, available) final-no responses using Python Random(2026111320).sample on sorted response IDs after agent labels freeze. Preserve all selected IDs regardless of apparent content.",
+    "incomplete_captures": "Remain unscorable; human packet may list their count without treating absence as semantic error."
+  },
+  "packet_order_seed": 2026111321,
+  "blinding": "No model aliases, repetition, stage, prior labels or reviewer rationales in first human packet; case identity/source definitions remain visible. Companion key retained separately.",
+  "fields": [
+    "primary_label_yes_no_uncertain_unscorable",
+    "exact_response_passages",
+    "criterion_id",
+    "source_warrant",
+    "mechanism",
+    "scope_comment"
+  ],
+  "first_review_preservation": "Do not overwrite first human judgments. Separate adjudication/amendments and preserve original automated labels.",
+  "human_reliability_limit": "One human validates the stated scope; inter-human reliability requires two independent humans on a declared subset.",
+  "same_family_agent_review_limit": "Independent first agent judgments can share model error; agreement is not external expert validation."
+}
