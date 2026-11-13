@@ -1,0 +1,23 @@
+{
+  "status": "independently_checked_against_raw_source_rows",
+  "created_utc": "2026-11-13T18:43:46.231941+00:00",
+  "selected_families": 30,
+  "checked_variants": 120,
+  "overlap_with_previous50": 0,
+  "raw_source_files": [
+    "GSM_p1.jsonl",
+    "gsm_plus_v1.jsonl"
+  ],
+  "source_preplan_commit": "5706a87932ff33786f3c8dbdb69d6566532967ce",
+  "protocol_sha256": "ef8dede9a90e566fd0f401a60566509d1bf3d74e4b1150a20d99e72222476c46",
+  "source_gate": {
+    "eligible": 35,
+    "selected": 30,
+    "overrides": 0
+  },
+  "first_review_sha256": {
+    "source_review_a.jsonl": "9857013cb30289321c503e1dd2ec4353428c67c5a95cc528291dcca155b4f467",
+    "source_review_b.jsonl": "8d3c82d786d7b8f77dec3c8d1dce8a35945444ea6c63ac19aed20700716f9599"
+  },
+  "scope": "Source row question/extracted final answer/row SHA identity, selection cardinality and zero prior-family overlap. No solver outputs."
+}

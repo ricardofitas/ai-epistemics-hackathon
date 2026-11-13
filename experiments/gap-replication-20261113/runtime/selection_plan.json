@@ -1,0 +1,61 @@
+{
+  "study_id": "p1-gap-replication-20261113",
+  "stage": "source_only_preplan_before_first_reviews_and_solver_inference",
+  "objective": "Prepare source-disjoint released-P1 prospective gap-distortion replication; final scientific protocol must be frozen before solver inference.",
+  "candidate_families": 50,
+  "required_selected_families": 30,
+  "source_family_priority_seed": 20261113117,
+  "priority_formula": "SHA256(UTF-8('20261113117|' + source_family_id)); ascending hex digest, then family ID",
+  "source_gate": {
+    "review_streams": 2,
+    "first_reviews_only": true,
+    "all50_candidates_reviewed_by_each_stream": true,
+    "family_disposition_required": "pass",
+    "all_four_source_gold_status_required": "pass",
+    "independently_computed_numeric_answers_must_equal_unchanged_source_gold": true,
+    "independent_arithmetic_evidence_each_variant": true,
+    "numeric_and_paraphrase_target_structure_status_required": "same",
+    "p1_instances_must_be_solvable_and_source_family_linkage_valid": true,
+    "uncertain_or_reject_excluded": true,
+    "coordinator_overrides": false,
+    "question_edits": false,
+    "gold_edits": false
+  },
+  "selection_rule": "Select the first30 candidates in frozen SHA256 priority order that pass both complete independent first source reviews. Never use solver outputs or revised review decisions for admission.",
+  "insufficient_source_rule": "If fewer than30 candidates pass both first reviews, STOP before all solver inference; no smaller cohort, threshold relaxation or amendment within this study.",
+  "later_invalidity_rule": "Any discovered invalidity after source admission stops this cohort for a separate amendment; no post-output replacements.",
+  "cohort": {
+    "families": 30,
+    "variants_per_family": 4,
+    "analysis_role": "single_prospective_replication_cohort_all30",
+    "selection_confirmation_split": false
+  },
+  "batching": {
+    "families_per_batch": 3,
+    "blocks": 10,
+    "rule": "Selected rank positions1-3,4-6,...,28-30 form fixed blocks; same family blocks across both models and all four variants; each batch has one variant only."
+  },
+  "target_resource": [
+    "numeric",
+    "paraphrase"
+  ],
+  "comparison_resource": [
+    "p1_i0",
+    "p1_i1"
+  ],
+  "scope": "Two independent P1 realizations are averaged; this is a P1-only partial resource replication, not a releasedP1/P2 replication. All50 prior reviewed families are excluded, including prior rejected/uncertain families.",
+  "no_model_outputs_used": true,
+  "human_source_certification": "pending; first source review is by independent agents",
+  "input_sha256": {
+    "candidate_families.json": "f96cb3d6c22d546c5378548bd2cf3816c1c6ba508888eb2b0e32f3607640b18e",
+    "source_review_packet.jsonl": "7b5a96c90f8f2a83b18f3e95b4d639312f995f92c70217f66d63702407c337b8",
+    "source_manifest.json": "0e393bdb9525bf9e36ede43ef54b8566eff84f6f44c7bc9e3594a5f3e014de40",
+    "excluded_previous_families.json": "94efab7a8440534c096f202a9f5cbe934a6a8885c66ccc9d99d13852830dd1fd",
+    "source_inventory.json": "7e0fa512efde603db98826a7e8014d6385c807d31a71743fe3498cce68354edc",
+    "previous_candidate_families.json": "75f8d43160aa9f7a24539060d6bb6e0272fe98802a6ca66e5f523b4b5ce45540"
+  },
+  "raw_source_pins": {
+    "GSM_p1.jsonl": "5478fe81b9cdc5d9447514ca68b0dfbb6cb01b7227fefadf143469b103b592ac",
+    "gsm_plus_v1.jsonl": "885c279bfa9cde767ea23f79fd462d566fa0dbf6af9f2dcf30c75aa94f3d4041"
+  }
+}

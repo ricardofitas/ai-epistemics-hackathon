@@ -1,0 +1,106 @@
+{
+  "id": "source-disjoint-prospective-gap-replication30-20261113",
+  "created_utc": "2026-11-13T18:43:08.865582+00:00",
+  "status": "prepared_before_new_replication_model_outputs",
+  "models": [
+    "gemma-4-31b-it",
+    "deepseek-v4-flash"
+  ],
+  "candidate_selection": "Same fixed pair as the completed math30 pilot; the replication hypothesis and pair are informed by that pilot. This is not performance-blind model discovery. Aliases do not pin provider weights.",
+  "source_sha256": {
+    "selected_data.json": "90ade2d42f0d7db37a098a043bd848331cc5433932d590d8b380a32382590ca9",
+    "source_manifest.json": "0e393bdb9525bf9e36ede43ef54b8566eff84f6f44c7bc9e3594a5f3e014de40",
+    "source_disposition.json": "f6b6eb2e907bbeaf5d525fab09a9aca1a2790f36354ac52af99c1ac1ffbfe385",
+    "selection_plan.json": "48ed92bb748408acfdcf3ca06f634c2b7491d5863a86f7e5cafad671757711d5",
+    "primary_spec.json": "5e450c570f38df4e672bbdf01c4e8a45351a724efebd4c34f7b341b32cfbca04",
+    "prospective_design.md": "a652d3b992b3329dd778753a173939e323b7ccafbb8b07fa2b4438fb5eff5d5d",
+    "task_key.json": "de77a6a087de46360d31cae44fd420b24497b27b19ff501e23cb3097599c5a6a",
+    "manifest.jsonl": "8d7caa1503acf5ce1edb96d57688bc881a799233d678311bb9995b3237abfd19",
+    "admission/manifest.jsonl": "908ef8db19d2ae952d51dd279505a9b52955fe75f3d5e1cea062e202a7ba7ce4"
+  },
+  "implementation_sha256": {
+    "prepare_manifest.py": "7b16c0b4e936c22755ffad54d11f82dc91fd4b24f341209447070aa07ee18519",
+    "scoring.py": "3edf1be025888b258cec0d7bd54d764fbaac8a4004401a1bce76227b79e0966f",
+    "capture_math.py": "bbce866ef3879ea6c88907d7ff98958ec980cd21067cddfa4396c249f3a9da4b",
+    "gate_admission.py": "9dd9582c7f029960bc3e9a0e3eac609fbdf8819036e24484b99ba0b4bc673bb6",
+    "analyze_gap.py": "64e42d3e9156a2329a4a312d169b6d8bdca27acfefd7de0115a9f0ea14408079",
+    "gap_bounds.py": "a63f45fbfe5d2aa332ce198904d912b555584fcad931d1e2c0066aaa3d8fcda4",
+    "test_runtime.py": "4980818976263c0a9f360c77f17ce2dd27080cac84300e0ad63073b6dc82d820",
+    "test_gap_analysis.py": "cdc86ef84030e878c17498d88cf31cd1bad62f1918186bbb6e33918a4329ad40",
+    "test_gap_bounds.py": "b31e0566a2f33bb244b5394a37472d9ddd93a9d55a506e68d843af9e819e8fdd",
+    "README.md": "8b11aaf8cc537a20587b3cd520ca79c68290024e7af1110d582bd445498b8f36"
+  },
+  "runner_sha256": "c280811c5f685cdc5b254d5097946835428cd87de6ea58218de1e2cad537fe5e",
+  "allocation": {
+    "families": 30,
+    "replication": 30,
+    "variants_per_family": 4,
+    "models": 2,
+    "batch_size": 3,
+    "requests": 80,
+    "classifications": 240
+  },
+  "admission": {
+    "requests": 2,
+    "items_per_request": 3,
+    "directory": "admission",
+    "gate": "Strict capture plus exact JSON IDs and numeric/ABSTAIN representation only; never arithmetic correctness",
+    "failure": "Stop before all80 main calls if either fixed model fails; no retry or replacement",
+    "maximum_total_requests": 82,
+    "maximum_total_requested_output_tokens": 671744
+  },
+  "randomization": {
+    "source_priority_seed": 20261113117,
+    "task_id_seed": 20261113120,
+    "request_order_seed": 20261113121,
+    "common_batch_blocks": "Priorityslots groupedby3; allvariants/models share10 fixed blocks"
+  },
+  "inference": {
+    "temperature": 0,
+    "max_output_tokens": 8192,
+    "concurrency": 2,
+    "socket_timeout_seconds": 120,
+    "attempts_per_request": 1,
+    "maximum_requested_output_tokens": 655360,
+    "tools": [],
+    "agentic_memory": false,
+    "store": false,
+    "history": "none"
+  },
+  "parse": {
+    "final": "EntireJSON object; optional single outer fence; exact requested IDs once,noextras/duplicates",
+    "answers": "Frozen numeric codec unchanged from math30: JSONstrings exactinteger/decimal/exponent/fraction; ABSTAINvalidwrong",
+    "unknown": "Incompletecapture,invalidbatchJSONorinvalidnumericitem retains[0,1]; norepair,noimputedwrong"
+  },
+  "scoring": {
+    "primary": "D=(DeepSeek-Gemma meanaccuracygap on P1instances0and1) minus(samegap on numericalsubstitution/paraphrase)",
+    "model_a": "gemma-4-31b-it",
+    "model_b": "deepseek-v4-flash",
+    "comparison_variants": [
+      "p1_i0",
+      "p1_i1"
+    ],
+    "target_variants": [
+      "numeric",
+      "paraphrase"
+    ],
+    "variant_weights": "Eachpackage uses1/2 pervariant; all30sourcefamiliesequallyweighted",
+    "meaningful_replication_threshold": "1/10",
+    "meaningful_replication_rule": "exactsharpDlower>=1/10",
+    "positive_identified_rule": "exactsharpDlower>0",
+    "bounds": "Combineidenticalcandidate/variantoutcomecoefficientsbefore sharp independent[0,1]box bounds",
+    "secondary": "Modelrankingchange,pervariantaccuracyandtargetjointaccuracy; nosuccessrescue"
+  },
+  "bootstrap": {
+    "repeats": 10000,
+    "family_seed": 20261113118,
+    "batch_block_seed": 20261113119,
+    "units": [
+      "source_family",
+      "common_three_family_batch_block"
+    ],
+    "scope": "Conditionaldescriptivepercentileboundenvelopes on thisfixedcohort;notpopulationCIs or significance"
+  },
+  "stopping": "All80frozenmainrequests once after2formatcontrols; noadditionalfamilies/models,earlysuccessstop,retry,repairorautomaticresume",
+  "evidence_scope": "Newsource-disjointselectedcohort and prospective endpoint. P1instances0/1 differ from previous P1/P2 package. No population claim or isolated causal claim about addedclauses; publicpretrainingexposure and immutableweights unproved."
+}
