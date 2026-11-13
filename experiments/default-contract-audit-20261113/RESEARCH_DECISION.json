@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-13",
+  "candidate": "Default generative evaluation contract failures",
+  "status": "PROMOTED_TO_NEXT_VALIDATION_STAGE",
+  "priority_reason": "Large real-source scoring failures, a prospective model-versus-constant reversal, native input erasure, causal corrections and zero-based negative controls.",
+  "source_rows": 22562,
+  "prospective_model_requests": 96,
+  "prospective_complete_responses": 94,
+  "unique_model_source_questions": 36,
+  "winogrande_model_vs_constant_reversals": 2,
+  "winogrande_shared_source_questions": 12,
+  "observed_original_published_model_claim_invalidated": false,
+  "external_impact_above_gammaf_established": false,
+  "next_gate": "Replicate in a second evaluation system or existing real-use run artifacts, then expand paired model trials. Measure exposure and investigate novelty before publication claims.",
+  "no_additional_model_calls_for_offline_reproduction": true,
+  "public_issues_or_prs_created": 0,
+  "third_party_messages_sent": 0
+}

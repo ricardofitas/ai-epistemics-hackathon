@@ -1,0 +1,1473 @@
+[
+  {
+    "bench": "sciq",
+    "split": "test",
+    "role": "gallery_default",
+    "predictor": "constant_A",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 1.0,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 0.9969909729187563,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1000,
+    "scored_samples": 997,
+    "valid_predictions": 1000,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 3,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "correct_answer",
+        "distractor1",
+        "distractor2",
+        "distractor3"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "sciq",
+    "split": "test",
+    "role": "gallery_default",
+    "predictor": "constant_B",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.001,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1000,
+    "scored_samples": 997,
+    "valid_predictions": 1000,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 3,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "correct_answer",
+        "distractor1",
+        "distractor2",
+        "distractor3"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "sciq",
+    "split": "test",
+    "role": "gallery_default",
+    "predictor": "constant_C",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.0,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1000,
+    "scored_samples": 997,
+    "valid_predictions": 1000,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 3,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "correct_answer",
+        "distractor1",
+        "distractor2",
+        "distractor3"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "sciq",
+    "split": "test",
+    "role": "gallery_default",
+    "predictor": "constant_D",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.001,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 0.003009027081243731,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1000,
+    "scored_samples": 997,
+    "valid_predictions": 1000,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 3,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "correct_answer",
+        "distractor1",
+        "distractor2",
+        "distractor3"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "sciq",
+    "split": "test",
+    "role": "gallery_default",
+    "predictor": "semantic_oracle_letter",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 1.0,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 0.9969909729187563,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1000,
+    "scored_samples": 997,
+    "valid_predictions": 1000,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 3,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "correct_answer",
+        "distractor1",
+        "distractor2",
+        "distractor3"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "sciq",
+    "split": "test",
+    "role": "gallery_default",
+    "predictor": "semantic_oracle_text",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 1.0,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 1.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1000,
+    "scored_samples": 997,
+    "valid_predictions": 997,
+    "parse_failed": 3,
+    "empty_output": 0,
+    "invalid_references": 3,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "correct_answer",
+        "distractor1",
+        "distractor2",
+        "distractor3"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "winogrande",
+    "split": "test",
+    "role": "gallery_default",
+    "predictor": "constant_A",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": null,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1767,
+    "scored_samples": 0,
+    "valid_predictions": 1767,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 1767,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-B",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "option1",
+        "option2"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "winogrande",
+    "split": "test",
+    "role": "gallery_default",
+    "predictor": "constant_B",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": null,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1767,
+    "scored_samples": 0,
+    "valid_predictions": 1767,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 1767,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-B",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "option1",
+        "option2"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "winogrande",
+    "split": "validation",
+    "role": "labelled_diagnostic_split_override",
+    "predictor": "constant_A",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.4956590370955012,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1267,
+    "scored_samples": 1267,
+    "valid_predictions": 1267,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-B",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "option1",
+        "option2"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "winogrande",
+    "split": "validation",
+    "role": "labelled_diagnostic_split_override",
+    "predictor": "constant_B",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.5043409629044988,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 1.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1267,
+    "scored_samples": 1267,
+    "valid_predictions": 1267,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-B",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "option1",
+        "option2"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "winogrande",
+    "split": "validation",
+    "role": "labelled_diagnostic_split_override",
+    "predictor": "semantic_oracle_letter",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 1.0,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.5043409629044988,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1267,
+    "scored_samples": 1267,
+    "valid_predictions": 1267,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-B",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "option1",
+        "option2"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "winogrande",
+    "split": "validation",
+    "role": "labelled_diagnostic_split_override",
+    "predictor": "semantic_oracle_text",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 1.0,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.5043409629044988,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1267,
+    "scored_samples": 1267,
+    "valid_predictions": 1267,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-B",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "option1",
+        "option2"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "boolq",
+    "split": "validation",
+    "role": "gallery_default",
+    "predictor": "constant_A",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": false,
+    "semantic_source_accuracy": null,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 3270,
+    "scored_samples": 0,
+    "valid_predictions": 3270,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 3270,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-B",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "true",
+        "false"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "boolq",
+    "split": "validation",
+    "role": "gallery_default",
+    "predictor": "constant_B",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": false,
+    "semantic_source_accuracy": null,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 3270,
+    "scored_samples": 0,
+    "valid_predictions": 3270,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 3270,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-B",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "true",
+        "false"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "boolq",
+    "split": "validation",
+    "role": "gallery_default",
+    "predictor": "semantic_oracle_text",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": false,
+    "semantic_source_accuracy": null,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 3270,
+    "scored_samples": 0,
+    "valid_predictions": 0,
+    "parse_failed": 3270,
+    "empty_output": 0,
+    "invalid_references": 3270,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-B",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "true",
+        "false"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "pubmedqa",
+    "split": "train",
+    "role": "gallery_default",
+    "predictor": "constant_A",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": false,
+    "semantic_source_accuracy": null,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1000,
+    "scored_samples": 0,
+    "valid_predictions": 1000,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 1000,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-C",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "yes",
+        "no",
+        "maybe"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "pubmedqa",
+    "split": "train",
+    "role": "gallery_default",
+    "predictor": "constant_B",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": false,
+    "semantic_source_accuracy": null,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1000,
+    "scored_samples": 0,
+    "valid_predictions": 1000,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 1000,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-C",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "yes",
+        "no",
+        "maybe"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "pubmedqa",
+    "split": "train",
+    "role": "gallery_default",
+    "predictor": "constant_C",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": false,
+    "semantic_source_accuracy": null,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1000,
+    "scored_samples": 0,
+    "valid_predictions": 1000,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 1000,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-C",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "yes",
+        "no",
+        "maybe"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "pubmedqa",
+    "split": "train",
+    "role": "gallery_default",
+    "predictor": "semantic_oracle_text",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": false,
+    "semantic_source_accuracy": null,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 1000,
+    "scored_samples": 0,
+    "valid_predictions": 0,
+    "parse_failed": 1000,
+    "empty_output": 0,
+    "invalid_references": 1000,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-C",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "yes",
+        "no",
+        "maybe"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "constant_A",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.3222567535261774,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.3222567535261774,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 4183,
+    "scored_samples": 4183,
+    "valid_predictions": 4183,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "opa",
+        "opb",
+        "opc",
+        "opd"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "constant_B",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.2596222806598135,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.25938321778627776,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 4183,
+    "scored_samples": 4183,
+    "valid_predictions": 4183,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "opa",
+        "opb",
+        "opc",
+        "opd"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "constant_C",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.22185034664116662,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.2211331580205594,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 4183,
+    "scored_samples": 4183,
+    "valid_predictions": 4183,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "opa",
+        "opb",
+        "opc",
+        "opd"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "constant_D",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.1977049964140569,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.1972268706669854,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 4183,
+    "scored_samples": 4183,
+    "valid_predictions": 4183,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "opa",
+        "opb",
+        "opc",
+        "opd"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "semantic_oracle_letter",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 1.0,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 1.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 4183,
+    "scored_samples": 4183,
+    "valid_predictions": 4183,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "opa",
+        "opb",
+        "opc",
+        "opd"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "semantic_oracle_text",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 1.0,
+    "metric": "choice_accuracy",
+    "official_metric": "acc",
+    "score": 0.988046856323213,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 4183,
+    "scored_samples": 4183,
+    "valid_predictions": 4145,
+    "parse_failed": 38,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choice_text_fields": [
+        "opa",
+        "opb",
+        "opc",
+        "opd"
+      ]
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "constant_A",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.2504481179047998,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 0.2504481179047998,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 10042,
+    "scored_samples": 10042,
+    "valid_predictions": 10042,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choices_key": "endings"
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "constant_B",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.24746066520613424,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 0.24746066520613424,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 10042,
+    "scored_samples": 10042,
+    "valid_predictions": 10042,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choices_key": "endings"
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "constant_C",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.25731925911173076,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 0.25731925911173076,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 10042,
+    "scored_samples": 10042,
+    "valid_predictions": 10042,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choices_key": "endings"
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "constant_D",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.24477195777733518,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 0.24477195777733518,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 10042,
+    "scored_samples": 10042,
+    "valid_predictions": 10042,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choices_key": "endings"
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "semantic_oracle_letter",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 1.0,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 1.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 10042,
+    "scored_samples": 10042,
+    "valid_predictions": 10042,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choices_key": "endings"
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "predictor": "semantic_oracle_text",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 1.0,
+    "metric": "choice_accuracy",
+    "official_metric": "acc_norm",
+    "score": 0.9980083648675563,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 10042,
+    "scored_samples": 10042,
+    "valid_predictions": 10042,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 0,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choices_key": "endings"
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "role": "gallery_default",
+    "predictor": "constant_A",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.0,
+    "metric": "choice_accuracy",
+    "official_metric": "accuracy",
+    "score": 1.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 33,
+    "scored_samples": 1,
+    "valid_predictions": 33,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 32,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choices_key": "distractors"
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "role": "gallery_default",
+    "predictor": "constant_B",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.0,
+    "metric": "choice_accuracy",
+    "official_metric": "accuracy",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 33,
+    "scored_samples": 1,
+    "valid_predictions": 33,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 32,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choices_key": "distractors"
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "role": "gallery_default",
+    "predictor": "constant_C",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.0,
+    "metric": "choice_accuracy",
+    "official_metric": "accuracy",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 33,
+    "scored_samples": 1,
+    "valid_predictions": 33,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 32,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choices_key": "distractors"
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "role": "gallery_default",
+    "predictor": "constant_D",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 0.0,
+    "metric": "choice_accuracy",
+    "official_metric": "accuracy",
+    "score": 0.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 33,
+    "scored_samples": 1,
+    "valid_predictions": 33,
+    "parse_failed": 0,
+    "empty_output": 0,
+    "invalid_references": 32,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choices_key": "distractors"
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  },
+  {
+    "bench": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "role": "gallery_default",
+    "predictor": "semantic_oracle_text",
+    "prediction_kind": "constructed_diagnostic_control",
+    "native_prompt_fields_resolved": true,
+    "semantic_source_accuracy": 1.0,
+    "metric": "choice_accuracy",
+    "official_metric": "accuracy",
+    "score": 1.0,
+    "score_source": "metric_stage",
+    "prediction_mode": "generation",
+    "denominator": "total",
+    "total_samples": 33,
+    "scored_samples": 1,
+    "valid_predictions": 1,
+    "parse_failed": 32,
+    "empty_output": 0,
+    "invalid_references": 32,
+    "parser": {
+      "type": "choice_letter",
+      "choices": "A-D",
+      "prefer": [
+        "tagged_answer",
+        "boxed_answer",
+        "final_answer_line",
+        "last_standalone_choice"
+      ],
+      "choices_key": "distractors"
+    },
+    "failure_policy": {
+      "parse_failed": "score_zero",
+      "empty_output": "score_zero",
+      "invalid_reference": "exclude"
+    },
+    "official_compatibility": null
+  }
+]

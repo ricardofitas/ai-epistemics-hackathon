@@ -1,0 +1,34 @@
+{
+  "run_id": 43521069094,
+  "status": "success",
+  "new_model_calls": 0,
+  "runtime": {
+    "python": "3.11.18 (main, Oct 26 2026, 02:48:29) [GCC 15.2.0]",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "new_model_calls": 0
+  },
+  "identical_result_files": [
+    "INDEPENDENT_SOURCE_AUDIT.json",
+    "MODEL_SMOKE_RESULTS.json",
+    "CHECKPOINT_NATIVE_RESULTS.json",
+    "SUMMARY.json",
+    "PROMPT_CORRECTION_VALIDATION.json",
+    "PUBLIC_METRIC_CLI_CONFIRMATION.json",
+    "NATIVE_PROMPT_WIRE_AUDIT.json",
+    "SOURCE_CORRECTION_VALIDATION.json",
+    "REPAIRED_CONTRACT_RESULTS.json",
+    "CHECKPOINT_COHORT_AUDIT.json",
+    "COHORT_AUDIT.json",
+    "MODEL_SMOKE_ROW_AUDIT.json",
+    "SCIQ_BALANCED_ROTATION_RESULTS.json",
+    "MODEL_CAPTURE_INDEPENDENT_AUDIT.json",
+    "NATIVE_PREDICTOR_RESULTS.json",
+    "NATIVE_PROMPT_WIRE_EXAMPLES.jsonl.gz",
+    "ROW_AUDIT.jsonl.gz",
+    "NATIVE_PROMPT_WIRE_HASHES.jsonl.gz"
+  ],
+  "identical_file_count": 18,
+  "artifact_id": 14082693167,
+  "artifact_sha256": "915f447b389feaad1561d1f5417b076be0c7ab633b844994d6208b36cd1442f3"
+}

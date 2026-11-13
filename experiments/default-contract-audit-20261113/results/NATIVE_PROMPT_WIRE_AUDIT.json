@@ -1,0 +1,186 @@
+{
+  "scope": "Original One-Eval preprocessing/prompt-resolution methods and locked open-dataflow1.0.10 generator/formatter methods. Registry/type-check decorators and unused generator base removed; in-memory storage and fixed diagnostic serving replace I/O/backend. No model inference.",
+  "comparison_to_model_smoke": "The prospective model smoke deliberately renders the intended gallery template directly; it is a scorer-layer experiment and does not include these native formatter failures.",
+  "rows": [
+    {
+      "bench": "sciq",
+      "split": "test",
+      "rows": 1000,
+      "status": "native_generator_replayed",
+      "serving_calls": 1,
+      "generator_return": [
+        "generated_ans"
+      ],
+      "question_present": 1000,
+      "question_mutation_changes_prompt": 1000,
+      "nonempty_context_rows": 884,
+      "context_present": 0,
+      "context_mutation_changes_prompt": 0,
+      "unresolved_template_field_rows": 1000,
+      "prompt_metadata": {
+        "prompt_source": "gallery",
+        "prompt_template_id": "sciq_contract_v1",
+        "prompt_hash": "sha256:22d7a02719cf30a91b3c4bd69697495694ef7663549a04bd7168efa4fba6a266",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "official_compatibility": null
+      }
+    },
+    {
+      "bench": "winogrande",
+      "split": "test",
+      "rows": 1767,
+      "status": "native_generator_replayed",
+      "serving_calls": 1,
+      "generator_return": [
+        "generated_ans"
+      ],
+      "question_present": 0,
+      "question_mutation_changes_prompt": 0,
+      "nonempty_context_rows": 0,
+      "context_present": 0,
+      "context_mutation_changes_prompt": 0,
+      "unresolved_template_field_rows": 1767,
+      "prompt_metadata": {
+        "prompt_source": "gallery",
+        "prompt_template_id": "winogrande_contract_v1",
+        "prompt_hash": "sha256:3d4029283f5439de86599034e608ee1486a6d1c8a9f21f1e377290d96ee0eb5c",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-B",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "official_compatibility": null
+      }
+    },
+    {
+      "bench": "winogrande",
+      "split": "validation",
+      "rows": 1267,
+      "status": "native_generator_replayed",
+      "serving_calls": 1,
+      "generator_return": [
+        "generated_ans"
+      ],
+      "question_present": 0,
+      "question_mutation_changes_prompt": 0,
+      "nonempty_context_rows": 0,
+      "context_present": 0,
+      "context_mutation_changes_prompt": 0,
+      "unresolved_template_field_rows": 1267,
+      "prompt_metadata": {
+        "prompt_source": "gallery",
+        "prompt_template_id": "winogrande_contract_v1",
+        "prompt_hash": "sha256:3d4029283f5439de86599034e608ee1486a6d1c8a9f21f1e377290d96ee0eb5c",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-B",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "official_compatibility": null
+      }
+    },
+    {
+      "bench": "boolq",
+      "split": "validation",
+      "rows": 3270,
+      "status": "blocked_before_serving",
+      "serving_calls": 0,
+      "choice_key_missing": true,
+      "generator_return": []
+    },
+    {
+      "bench": "pubmedqa",
+      "split": "train",
+      "rows": 1000,
+      "status": "blocked_before_serving",
+      "serving_calls": 0,
+      "choice_key_missing": true,
+      "generator_return": []
+    },
+    {
+      "bench": "medmcqa",
+      "split": "validation",
+      "rows": 4183,
+      "status": "native_generator_replayed",
+      "serving_calls": 1,
+      "generator_return": [
+        "generated_ans"
+      ],
+      "question_present": 4183,
+      "question_mutation_changes_prompt": 4183,
+      "nonempty_context_rows": 0,
+      "context_present": 0,
+      "context_mutation_changes_prompt": 0,
+      "unresolved_template_field_rows": 0,
+      "prompt_metadata": {
+        "prompt_source": "gallery",
+        "prompt_template_id": "medmcqa_contract_v1",
+        "prompt_hash": "sha256:cab4ac522a807aa872d0d31a3646a660d8bce284b51903a907156786dcef6a25",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "official_compatibility": null
+      }
+    },
+    {
+      "bench": "hellaswag",
+      "split": "validation",
+      "rows": 10042,
+      "status": "native_generator_replayed",
+      "serving_calls": 1,
+      "generator_return": [
+        "generated_ans"
+      ],
+      "question_present": 0,
+      "question_mutation_changes_prompt": 0,
+      "nonempty_context_rows": 0,
+      "context_present": 0,
+      "context_mutation_changes_prompt": 0,
+      "unresolved_template_field_rows": 10042,
+      "prompt_metadata": {
+        "prompt_source": "gallery",
+        "prompt_template_id": "hellaswag_contract_v1",
+        "prompt_hash": "sha256:1d253a5730646daa4c1190bf38db0eb4cc94179af672f44aa07474b98ba13ac7",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "official_compatibility": null
+      }
+    },
+    {
+      "bench": "lab-bench-language-agent-biology-benchmark",
+      "split": "train",
+      "rows": 33,
+      "status": "native_generator_replayed",
+      "serving_calls": 1,
+      "generator_return": [
+        "generated_ans"
+      ],
+      "question_present": 33,
+      "question_mutation_changes_prompt": 33,
+      "nonempty_context_rows": 0,
+      "context_present": 0,
+      "context_mutation_changes_prompt": 0,
+      "unresolved_template_field_rows": 33,
+      "prompt_metadata": {
+        "prompt_source": "gallery",
+        "prompt_template_id": "lab-bench-language-agent-biology-benchmark_contract_v1",
+        "prompt_hash": "sha256:0c3ae5a3881e9676026e9d95eb45a7c4dd60ca99a458884947c8e1918b4de31a",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "official_compatibility": null
+      }
+    }
+  ]
+}

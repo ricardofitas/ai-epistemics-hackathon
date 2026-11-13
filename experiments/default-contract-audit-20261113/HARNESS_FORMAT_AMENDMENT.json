@@ -1,0 +1,10 @@
+{
+  "phase": "Data-only harness validation, before any new model calls",
+  "initial_script_sha256": "f43ae392df5c457bf87922354b6ccbffa1706d7298e4340fcbf171f60abc4df1",
+  "reason": "Canonicalization assertion failed on MedMCQA: bare A/B/C/D strings can be interpreted as literal option text. Use the gallery requested <answer>CHOICE</answer> form for constructed letter predictions and canonical gold references. This isolates label-base and source-contract validity from bare-letter/text ambiguity.",
+  "source_rows_changed": false,
+  "rows_filtered": 0,
+  "new_model_calls": 0,
+  "original_script_and_failure_log_preserved": true,
+  "bare_option_text_oracle": "Retained as a separately identified diagnostic format."
+}

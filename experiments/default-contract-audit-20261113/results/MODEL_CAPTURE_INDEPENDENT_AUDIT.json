@@ -1,0 +1,681 @@
+{
+  "checked": 96,
+  "completed_nonempty": 94,
+  "minimum_recorded_start_interval_seconds": 5.00008,
+  "method": "Independent request canonicalization, journal hashes, terminal message text reconstruction; no transport module imported.",
+  "attempts_per_request": 1,
+  "checks": [
+    {
+      "trial_id": "DC-965f897643bbd0f67b",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-58cb9b0fd6129fba41",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-31d137b47cbc7137aa",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-6238f3ffd40f5aaa18",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-bd259e0f0a728c5825",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-30cabedb8a55cb9140",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-9b7d94e83617be6044",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": false
+    },
+    {
+      "trial_id": "DC-9878295caf2b461d55",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-719a81b96e58889360",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-8a3555b7dc9401c266",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-e0c2c8a1d0f861cfd9",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-7dcfd0c2b4642e1e31",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-72a67106ff7f388ab6",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-fbe146408f489f5db3",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-f48265980de2949526",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-447a3237ed03e06dee",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-6d62cb5b6c717e7522",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-581d5d404764edfd1a",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-95926dda6921ace03b",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-3e236ebf7bb4ff6635",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-bed623f1e737c01545",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-ac7ce99ed6e69ce302",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-ca9a454f7bffd5cdbd",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-83c63d9cd6e2de040f",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-962b53a28f14de7352",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-3a26ae081e627923f7",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-8d53410516414fb540",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-cbc17a234ec8975c06",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-09360fcaa9de60b3bf",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-5801ef90fde4f8b2a9",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-11930c079c27894b16",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-96d542bbcf8f418c92",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-90d210c8306d005d09",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-27eb015f65e6f03d77",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-3e673501cd5c5009cd",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-f05e9a8c36c1b0edea",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-11cee6c56b334fbf26",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-33e37f6e4c9972e8d6",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-fb8b5b8dd1c8c216a2",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-6296bda2aa043aa302",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-771eddbd32d3d602cc",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-818a862780e3944337",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-69b9b3a0c9cbf35bf2",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-6fa548f754164f64ee",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-63994bdfe23495095f",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-71d3255639dfb4e412",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-6435793a24d10dd70f",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-9fed410880b06df55e",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-33b70f1bb7976ac53c",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-af4ba161bad896bbfb",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-9bccd7cb83e0a094d9",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-85e7c1f28c6c84d64f",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": false
+    },
+    {
+      "trial_id": "DC-a2b67e8e1bae95db0d",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-3258f5ba0bc8b300cb",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-48950e223621bf6978",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-34a79e16aff1481482",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-c486b33b43b7bcdb3e",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-fd9cfe4ddd868b8f02",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-fcff77639b6c87c713",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-ca972babe88ee88b51",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-54218d60ca8fe411c0",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-1af5ff515137131e3e",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-75367a49b1b7f6ce24",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-36e31b86244f20dbc2",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-695d93e0bf562db173",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-b8e4e9e66307dfa19e",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-1bb1a5ae3d7b0ba214",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-119e83cff3c706ec57",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-cf491bc790ee34390d",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-a359e45538472bdfae",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-3bb749362c96a65ae3",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-904d8713e9420aa75a",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-59ec42ccad85dac431",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-373e87557c4b8deb3d",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-66b68b291668079616",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-39bf3d739b716471ff",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-cd47a53061f69cebd8",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-036f2938bce46190c6",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-6dbfb9021ca7728d59",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-876665afd006579251",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-22aa0fb6c8d28bfc06",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-63e65746e916d47297",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-09b59d21855f2ee5cd",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-a1d61de45a879b1938",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-69b842d094337ea2b1",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-bf93d686656a8fe2a4",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-a2462ace47df49432b",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-6182ec18a244566c91",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-3537546dc57c89447a",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-bebe396cd4b7392d24",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-72743cff4fac15df24",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-823dc003c72e03e23e",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-373c6920e66bec97c8",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-ab6273910771222471",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-30cd86ff11da5a4f7c",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    },
+    {
+      "trial_id": "DC-ba304a025a7208c2bc",
+      "http_status": 200,
+      "terminal_event": "response.completed",
+      "request_and_text_and_journal_verified": true,
+      "completed_nonempty": true
+    }
+  ]
+}

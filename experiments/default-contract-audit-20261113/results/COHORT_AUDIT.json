@@ -1,0 +1,591 @@
+[
+  {
+    "bench": "sciq",
+    "split": "test",
+    "role": "gallery_default",
+    "audited": true,
+    "rows": 1000,
+    "source_gold_available": 1000,
+    "unresolved_input_fields": {},
+    "native_complete_choices_rows": 1000,
+    "native_gold_visible_rows": 1000,
+    "native_choice_count_mismatch_rows": 0,
+    "preprocessed_key_mapping": {
+      "input_question_key": "question",
+      "input_choices_key": "merged_choices",
+      "input_label_key": "correct_answer",
+      "input_context_key": "support"
+    },
+    "gallery_readiness": {
+      "status": "reference_mapped",
+      "smoke_passed": false,
+      "golden_cases": null,
+      "known_limitations": [
+        "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+      ]
+    },
+    "native_oracle_letter_score": 0.9969909729187563,
+    "native_oracle_letter_scored_samples": 997,
+    "native_best_constant": {
+      "bench": "sciq",
+      "split": "test",
+      "role": "gallery_default",
+      "predictor": "constant_A",
+      "prediction_kind": "constructed_diagnostic_control",
+      "native_prompt_fields_resolved": true,
+      "semantic_source_accuracy": 1.0,
+      "metric": "choice_accuracy",
+      "official_metric": "acc_norm",
+      "score": 0.9969909729187563,
+      "score_source": "metric_stage",
+      "prediction_mode": "generation",
+      "denominator": "total",
+      "total_samples": 1000,
+      "scored_samples": 997,
+      "valid_predictions": 1000,
+      "parse_failed": 0,
+      "empty_output": 0,
+      "invalid_references": 3,
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "correct_answer",
+          "distractor1",
+          "distractor2",
+          "distractor3"
+        ]
+      },
+      "failure_policy": {
+        "parse_failed": "score_zero",
+        "empty_output": "score_zero",
+        "invalid_reference": "exclude"
+      },
+      "official_compatibility": null
+    }
+  },
+  {
+    "bench": "winogrande",
+    "split": "test",
+    "role": "gallery_default",
+    "audited": true,
+    "rows": 1767,
+    "source_gold_available": 0,
+    "unresolved_input_fields": {},
+    "native_complete_choices_rows": 1767,
+    "native_gold_visible_rows": 0,
+    "native_choice_count_mismatch_rows": 0,
+    "preprocessed_key_mapping": {
+      "input_question_key": "sentence",
+      "input_choices_key": "merged_choices",
+      "input_label_key": "answer"
+    },
+    "gallery_readiness": {
+      "status": "reference_mapped",
+      "smoke_passed": false,
+      "golden_cases": null,
+      "known_limitations": [
+        "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+      ]
+    },
+    "native_oracle_letter_score": null,
+    "native_oracle_letter_scored_samples": null,
+    "native_best_constant": {
+      "bench": "winogrande",
+      "split": "test",
+      "role": "gallery_default",
+      "predictor": "constant_A",
+      "prediction_kind": "constructed_diagnostic_control",
+      "native_prompt_fields_resolved": true,
+      "semantic_source_accuracy": null,
+      "metric": "choice_accuracy",
+      "official_metric": "acc",
+      "score": 0.0,
+      "score_source": "metric_stage",
+      "prediction_mode": "generation",
+      "denominator": "total",
+      "total_samples": 1767,
+      "scored_samples": 0,
+      "valid_predictions": 1767,
+      "parse_failed": 0,
+      "empty_output": 0,
+      "invalid_references": 1767,
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-B",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "option1",
+          "option2"
+        ]
+      },
+      "failure_policy": {
+        "parse_failed": "score_zero",
+        "empty_output": "score_zero",
+        "invalid_reference": "exclude"
+      },
+      "official_compatibility": null
+    }
+  },
+  {
+    "bench": "winogrande",
+    "split": "validation",
+    "role": "labelled_diagnostic_split_override",
+    "audited": true,
+    "rows": 1267,
+    "source_gold_available": 1267,
+    "unresolved_input_fields": {},
+    "native_complete_choices_rows": 1267,
+    "native_gold_visible_rows": 1267,
+    "native_choice_count_mismatch_rows": 0,
+    "preprocessed_key_mapping": {
+      "input_question_key": "sentence",
+      "input_choices_key": "merged_choices",
+      "input_label_key": "answer"
+    },
+    "gallery_readiness": {
+      "status": "reference_mapped",
+      "smoke_passed": false,
+      "golden_cases": null,
+      "known_limitations": [
+        "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+      ]
+    },
+    "native_oracle_letter_score": 0.5043409629044988,
+    "native_oracle_letter_scored_samples": 1267,
+    "native_best_constant": {
+      "bench": "winogrande",
+      "split": "validation",
+      "role": "labelled_diagnostic_split_override",
+      "predictor": "constant_B",
+      "prediction_kind": "constructed_diagnostic_control",
+      "native_prompt_fields_resolved": true,
+      "semantic_source_accuracy": 0.5043409629044988,
+      "metric": "choice_accuracy",
+      "official_metric": "acc",
+      "score": 1.0,
+      "score_source": "metric_stage",
+      "prediction_mode": "generation",
+      "denominator": "total",
+      "total_samples": 1267,
+      "scored_samples": 1267,
+      "valid_predictions": 1267,
+      "parse_failed": 0,
+      "empty_output": 0,
+      "invalid_references": 0,
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-B",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "option1",
+          "option2"
+        ]
+      },
+      "failure_policy": {
+        "parse_failed": "score_zero",
+        "empty_output": "score_zero",
+        "invalid_reference": "exclude"
+      },
+      "official_compatibility": null
+    }
+  },
+  {
+    "bench": "boolq",
+    "split": "validation",
+    "role": "gallery_default",
+    "audited": true,
+    "rows": 3270,
+    "source_gold_available": 3270,
+    "unresolved_input_fields": {
+      "input_choices_key": [
+        "true",
+        "false"
+      ]
+    },
+    "native_complete_choices_rows": 0,
+    "native_gold_visible_rows": 0,
+    "native_choice_count_mismatch_rows": 0,
+    "preprocessed_key_mapping": {
+      "input_question_key": "question",
+      "input_choices_key": [
+        "true",
+        "false"
+      ],
+      "input_label_key": "answer",
+      "input_context_key": "passage"
+    },
+    "gallery_readiness": {
+      "status": "reference_mapped",
+      "smoke_passed": false,
+      "golden_cases": null,
+      "known_limitations": [
+        "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+      ]
+    },
+    "native_oracle_letter_score": null,
+    "native_oracle_letter_scored_samples": null,
+    "native_best_constant": {
+      "bench": "boolq",
+      "split": "validation",
+      "role": "gallery_default",
+      "predictor": "constant_A",
+      "prediction_kind": "constructed_diagnostic_control",
+      "native_prompt_fields_resolved": false,
+      "semantic_source_accuracy": null,
+      "metric": "choice_accuracy",
+      "official_metric": "acc",
+      "score": 0.0,
+      "score_source": "metric_stage",
+      "prediction_mode": "generation",
+      "denominator": "total",
+      "total_samples": 3270,
+      "scored_samples": 0,
+      "valid_predictions": 3270,
+      "parse_failed": 0,
+      "empty_output": 0,
+      "invalid_references": 3270,
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-B",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "true",
+          "false"
+        ]
+      },
+      "failure_policy": {
+        "parse_failed": "score_zero",
+        "empty_output": "score_zero",
+        "invalid_reference": "exclude"
+      },
+      "official_compatibility": null
+    }
+  },
+  {
+    "bench": "pubmedqa",
+    "split": "train",
+    "role": "gallery_default",
+    "audited": true,
+    "rows": 1000,
+    "source_gold_available": 1000,
+    "unresolved_input_fields": {
+      "input_choices_key": [
+        "yes",
+        "no",
+        "maybe"
+      ]
+    },
+    "native_complete_choices_rows": 0,
+    "native_gold_visible_rows": 0,
+    "native_choice_count_mismatch_rows": 0,
+    "preprocessed_key_mapping": {
+      "input_question_key": "question",
+      "input_choices_key": [
+        "yes",
+        "no",
+        "maybe"
+      ],
+      "input_label_key": "final_decision",
+      "input_context_key": "context"
+    },
+    "gallery_readiness": {
+      "status": "reference_mapped",
+      "smoke_passed": false,
+      "golden_cases": null,
+      "known_limitations": [
+        "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+      ]
+    },
+    "native_oracle_letter_score": null,
+    "native_oracle_letter_scored_samples": null,
+    "native_best_constant": {
+      "bench": "pubmedqa",
+      "split": "train",
+      "role": "gallery_default",
+      "predictor": "constant_A",
+      "prediction_kind": "constructed_diagnostic_control",
+      "native_prompt_fields_resolved": false,
+      "semantic_source_accuracy": null,
+      "metric": "choice_accuracy",
+      "official_metric": "acc",
+      "score": 0.0,
+      "score_source": "metric_stage",
+      "prediction_mode": "generation",
+      "denominator": "total",
+      "total_samples": 1000,
+      "scored_samples": 0,
+      "valid_predictions": 1000,
+      "parse_failed": 0,
+      "empty_output": 0,
+      "invalid_references": 1000,
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-C",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "yes",
+          "no",
+          "maybe"
+        ]
+      },
+      "failure_policy": {
+        "parse_failed": "score_zero",
+        "empty_output": "score_zero",
+        "invalid_reference": "exclude"
+      },
+      "official_compatibility": null
+    }
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "audited": true,
+    "rows": 4183,
+    "source_gold_available": 4183,
+    "unresolved_input_fields": {},
+    "native_complete_choices_rows": 4183,
+    "native_gold_visible_rows": 4183,
+    "native_choice_count_mismatch_rows": 0,
+    "preprocessed_key_mapping": {
+      "input_question_key": "question",
+      "input_choices_key": "merged_choices",
+      "input_label_key": "cop"
+    },
+    "gallery_readiness": {
+      "status": "reference_mapped",
+      "smoke_passed": false,
+      "golden_cases": null,
+      "known_limitations": [
+        "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+      ]
+    },
+    "native_oracle_letter_score": 1.0,
+    "native_oracle_letter_scored_samples": 4183,
+    "native_best_constant": {
+      "bench": "medmcqa",
+      "split": "validation",
+      "role": "gallery_default_control",
+      "predictor": "constant_A",
+      "prediction_kind": "constructed_diagnostic_control",
+      "native_prompt_fields_resolved": true,
+      "semantic_source_accuracy": 0.3222567535261774,
+      "metric": "choice_accuracy",
+      "official_metric": "acc",
+      "score": 0.3222567535261774,
+      "score_source": "metric_stage",
+      "prediction_mode": "generation",
+      "denominator": "total",
+      "total_samples": 4183,
+      "scored_samples": 4183,
+      "valid_predictions": 4183,
+      "parse_failed": 0,
+      "empty_output": 0,
+      "invalid_references": 0,
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "opa",
+          "opb",
+          "opc",
+          "opd"
+        ]
+      },
+      "failure_policy": {
+        "parse_failed": "score_zero",
+        "empty_output": "score_zero",
+        "invalid_reference": "exclude"
+      },
+      "official_compatibility": null
+    }
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "role": "gallery_default_control",
+    "audited": true,
+    "rows": 10042,
+    "source_gold_available": 10042,
+    "unresolved_input_fields": {},
+    "native_complete_choices_rows": 10042,
+    "native_gold_visible_rows": 10042,
+    "native_choice_count_mismatch_rows": 0,
+    "preprocessed_key_mapping": {
+      "input_question_key": "ctx",
+      "input_choices_key": "normalized_choices",
+      "input_label_key": "label"
+    },
+    "gallery_readiness": {
+      "status": "reference_mapped",
+      "smoke_passed": false,
+      "golden_cases": null,
+      "known_limitations": [
+        "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+      ]
+    },
+    "native_oracle_letter_score": 1.0,
+    "native_oracle_letter_scored_samples": 10042,
+    "native_best_constant": {
+      "bench": "hellaswag",
+      "split": "validation",
+      "role": "gallery_default_control",
+      "predictor": "constant_C",
+      "prediction_kind": "constructed_diagnostic_control",
+      "native_prompt_fields_resolved": true,
+      "semantic_source_accuracy": 0.25731925911173076,
+      "metric": "choice_accuracy",
+      "official_metric": "acc_norm",
+      "score": 0.25731925911173076,
+      "score_source": "metric_stage",
+      "prediction_mode": "generation",
+      "denominator": "total",
+      "total_samples": 10042,
+      "scored_samples": 10042,
+      "valid_predictions": 10042,
+      "parse_failed": 0,
+      "empty_output": 0,
+      "invalid_references": 0,
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "endings"
+      },
+      "failure_policy": {
+        "parse_failed": "score_zero",
+        "empty_output": "score_zero",
+        "invalid_reference": "exclude"
+      },
+      "official_compatibility": null
+    }
+  },
+  {
+    "bench": "piqa",
+    "repo": "baber/piqa",
+    "config": "plain_text",
+    "split": "validation",
+    "role": "gallery_default_control_config_resolution",
+    "gold_rule": "label is zero-based option index",
+    "status": "acquisition_failed_or_gated",
+    "error_type": "HTTPError",
+    "error": "HTTP Error 400: Bad Request",
+    "audited": false
+  },
+  {
+    "bench": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "role": "gallery_default",
+    "audited": true,
+    "rows": 33,
+    "source_gold_available": 33,
+    "unresolved_input_fields": {},
+    "native_complete_choices_rows": 33,
+    "native_gold_visible_rows": 0,
+    "native_choice_count_mismatch_rows": 33,
+    "preprocessed_key_mapping": {
+      "input_question_key": "question",
+      "input_choices_key": "normalized_choices",
+      "input_label_key": "ideal",
+      "input_context_key": "source"
+    },
+    "gallery_readiness": {
+      "status": "contract_inferred",
+      "smoke_passed": false,
+      "golden_cases": null,
+      "known_limitations": [
+        "No direct lm-eval YAML match was found; contract fields are inferred from the requested bench list."
+      ]
+    },
+    "native_oracle_letter_score": null,
+    "native_oracle_letter_scored_samples": null,
+    "native_best_constant": {
+      "bench": "lab-bench-language-agent-biology-benchmark",
+      "split": "train",
+      "role": "gallery_default",
+      "predictor": "constant_A",
+      "prediction_kind": "constructed_diagnostic_control",
+      "native_prompt_fields_resolved": true,
+      "semantic_source_accuracy": 0.0,
+      "metric": "choice_accuracy",
+      "official_metric": "accuracy",
+      "score": 1.0,
+      "score_source": "metric_stage",
+      "prediction_mode": "generation",
+      "denominator": "total",
+      "total_samples": 33,
+      "scored_samples": 1,
+      "valid_predictions": 33,
+      "parse_failed": 0,
+      "empty_output": 0,
+      "invalid_references": 32,
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "distractors"
+      },
+      "failure_policy": {
+        "parse_failed": "score_zero",
+        "empty_output": "score_zero",
+        "invalid_reference": "exclude"
+      },
+      "official_compatibility": null
+    }
+  },
+  {
+    "bench": "gpqa",
+    "repo": "Idavidrein/gpqa",
+    "config": "gpqa_diamond",
+    "split": "train",
+    "role": "gallery_default_may_be_gated",
+    "gold_rule": "Correct Answer text; preserve gated outcome without using credentials or alternative mirrors",
+    "status": "acquisition_failed_or_gated",
+    "error_type": "HTTPError",
+    "error": "HTTP Error 401: Unauthorized",
+    "audited": false
+  }
+]

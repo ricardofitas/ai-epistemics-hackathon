@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-13",
+  "oneeval_commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "source_protocol_commit": "17d07c6861cf6257bc7280d88030d3c7c2b9f7be",
+  "model_protocol_commit": "6194325afaece15c4d1e09c0507b1a9793280153",
+  "source_capture": {
+    "run_id": 43515839794,
+    "artifact_id": 14080941663,
+    "execution_commit": "370cd9b9ffcf949dafeba32089c6e83ad0dd9e5b",
+    "archive": "default_contract_source_capture_20261113.zip",
+    "sha256": "a43b28ce6c9219c7c2155d979b2df2a54645e636f1ef1384256522c238a90a39"
+  },
+  "model_capture": {
+    "run_id": 43517809338,
+    "artifact_id": 14081991998,
+    "execution_commit": "a75a6b212afc3d92d2ba66363fa747f1b17344df",
+    "archive": "default_contract_model_capture_20261113.zip",
+    "sha256": "2a9abd3fd0c5f9108dd4c3812fba5d64c168b6e414d34e3b41191df869ba13df"
+  },
+  "locked_support": {
+    "run_id": 43519207330,
+    "artifact_id": 14082591487,
+    "execution_commit": "02c2b320a7d583bdbea8a6dd9e5d89ab6b790289",
+    "archive": "default_contract_locked_support_v2_20261113.zip",
+    "sha256": "945d064d442df8166bd4731ed03d478cb354c525792bf8c8441f922c61256dd8"
+  },
+  "supported_python_replay_execution_commit": "849762590fcfd5a3d261b3323bc827a935521b2a",
+  "private_research_repository": "ricardofitas/ai-epistemics-hackathon",
+  "research_branch": "experiment/advice-execution-transfer-20261113",
+  "new_provider_requests": 96,
+  "new_provider_model_retries": 0,
+  "third_party_messages_sent": 0,
+  "supported_python_replay": {
+    "run_id": 43521069094,
+    "artifact_id": 14082693167,
+    "archive": "default_contract_supported_replay_20261113.zip",
+    "sha256": "915f447b389feaad1561d1f5417b076be0c7ab633b844994d6208b36cd1442f3",
+    "status": "success",
+    "new_model_calls": 0
+  }
+}

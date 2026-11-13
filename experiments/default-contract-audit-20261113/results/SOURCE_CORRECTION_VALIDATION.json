@@ -1,0 +1,408 @@
+{
+  "scope": "Proposed explicit source adapter with original scorer. Generation orchestration is not changed or deployed. References canonicalized before inference; missing-gold source is rejected as a whole.",
+  "results": [
+    {
+      "bench": "sciq",
+      "split": "test",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 1000,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "sciq",
+      "split": "test",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 1000,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "sciq",
+      "split": "test",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 1000,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "sciq",
+      "split": "test",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 1000,
+      "score": 0.265,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "winogrande",
+      "split": "test",
+      "permuted": false,
+      "status": "benchmark_rejected_before_inference",
+      "source_rows": 1767,
+      "errors": {
+        "unavailable_or_invalid_one_based_gold": 1767
+      },
+      "score": null
+    },
+    {
+      "bench": "winogrande",
+      "split": "test",
+      "permuted": true,
+      "status": "benchmark_rejected_before_inference",
+      "source_rows": 1767,
+      "errors": {
+        "unavailable_or_invalid_one_based_gold": 1767
+      },
+      "score": null
+    },
+    {
+      "bench": "winogrande",
+      "split": "validation",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 1267,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        2
+      ]
+    },
+    {
+      "bench": "winogrande",
+      "split": "validation",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 1267,
+      "score": 0.4956590370955012,
+      "invalid_references": 0,
+      "choice_counts": [
+        2
+      ]
+    },
+    {
+      "bench": "winogrande",
+      "split": "validation",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 1267,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        2
+      ]
+    },
+    {
+      "bench": "winogrande",
+      "split": "validation",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 1267,
+      "score": 0.47908445146014206,
+      "invalid_references": 0,
+      "choice_counts": [
+        2
+      ]
+    },
+    {
+      "bench": "boolq",
+      "split": "validation",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 3270,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        2
+      ]
+    },
+    {
+      "bench": "boolq",
+      "split": "validation",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 3270,
+      "score": 0.6217125382262997,
+      "invalid_references": 0,
+      "choice_counts": [
+        2
+      ]
+    },
+    {
+      "bench": "boolq",
+      "split": "validation",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 3270,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        2
+      ]
+    },
+    {
+      "bench": "boolq",
+      "split": "validation",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 3270,
+      "score": 0.4984709480122324,
+      "invalid_references": 0,
+      "choice_counts": [
+        2
+      ]
+    },
+    {
+      "bench": "pubmedqa",
+      "split": "train",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 1000,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        3
+      ]
+    },
+    {
+      "bench": "pubmedqa",
+      "split": "train",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 1000,
+      "score": 0.552,
+      "invalid_references": 0,
+      "choice_counts": [
+        3
+      ]
+    },
+    {
+      "bench": "pubmedqa",
+      "split": "train",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 1000,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        3
+      ]
+    },
+    {
+      "bench": "pubmedqa",
+      "split": "train",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 1000,
+      "score": 0.322,
+      "invalid_references": 0,
+      "choice_counts": [
+        3
+      ]
+    },
+    {
+      "bench": "medmcqa",
+      "split": "validation",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 4183,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "medmcqa",
+      "split": "validation",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 4183,
+      "score": 0.3222567535261774,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "medmcqa",
+      "split": "validation",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 4183,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "medmcqa",
+      "split": "validation",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 4183,
+      "score": 0.2543628974420273,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "hellaswag",
+      "split": "validation",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 10042,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "hellaswag",
+      "split": "validation",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 10042,
+      "score": 0.2504481179047998,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "hellaswag",
+      "split": "validation",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 10042,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "hellaswag",
+      "split": "validation",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 10042,
+      "score": 0.24377614021111332,
+      "invalid_references": 0,
+      "choice_counts": [
+        4
+      ]
+    },
+    {
+      "bench": "lab-bench-language-agent-biology-benchmark",
+      "split": "train",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 33,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "bench": "lab-bench-language-agent-biology-benchmark",
+      "split": "train",
+      "permuted": false,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 33,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "bench": "lab-bench-language-agent-biology-benchmark",
+      "split": "train",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "semantic_oracle",
+      "rows": 33,
+      "score": 1.0,
+      "invalid_references": 0,
+      "choice_counts": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "bench": "lab-bench-language-agent-biology-benchmark",
+      "split": "train",
+      "permuted": true,
+      "status": "verified",
+      "predictor": "constant_A",
+      "rows": 33,
+      "score": 0.18181818181818182,
+      "invalid_references": 0,
+      "choice_counts": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "real_model_calls": 0
+}

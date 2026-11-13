@@ -1,0 +1,14 @@
+{
+  "reason": "For LAB-Bench the correct text is absent from native options. An intended repaired-options oracle letter is not a correct native letter response. Omit a native correct-letter oracle when the gold option is missing, and evaluate native constant letters against the actually displayed option texts. BoolQ/PubMedQA blocked-choice fixtures have no native answer interpretation.",
+  "unchanged_primary_cases": [
+    "SciQ",
+    "WinoGrande labelled diagnostic",
+    "MedMCQA",
+    "HellaSwag"
+  ],
+  "source_rows_changed": false,
+  "rows_filtered": 0,
+  "new_model_calls": 0,
+  "initial_results_retained": "results_initial_truth_scope",
+  "repair_predictions": "Reported independently for complete intended choice lists, not interpreted as the original prompts."
+}

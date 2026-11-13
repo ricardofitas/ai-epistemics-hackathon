@@ -1,0 +1,210 @@
+{
+  "orchestration_scope": "Actual public metrics stage, excluding dataset acquisition/generation/evaluator. Gallery path and absent custom-metric directory are the only common-module configuration overrides.",
+  "predictions_are_constructed_controls": true,
+  "observations": [
+    {
+      "bench": "winogrande",
+      "split": "validation",
+      "predictor": "semantic_oracle_letter",
+      "source": "Original public run_metrics.run_metrics; actual gallery file; constructed real-row fixture marked ok for metrics-stage replay.",
+      "primary_metric_result": {
+        "metric": "choice_accuracy",
+        "official_metric": "acc",
+        "score": 0.5043409629044988,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1267,
+        "scored_samples": 1267,
+        "valid_predictions": 1267,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 0,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-B",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "option1",
+            "option2"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      },
+      "step3_file_written": true
+    },
+    {
+      "bench": "winogrande",
+      "split": "validation",
+      "predictor": "constant_B",
+      "source": "Original public run_metrics.run_metrics; actual gallery file; constructed real-row fixture marked ok for metrics-stage replay.",
+      "primary_metric_result": {
+        "metric": "choice_accuracy",
+        "official_metric": "acc",
+        "score": 1.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1267,
+        "scored_samples": 1267,
+        "valid_predictions": 1267,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 0,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-B",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "option1",
+            "option2"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      },
+      "step3_file_written": true
+    },
+    {
+      "bench": "winogrande",
+      "split": "test",
+      "predictor": "constant_B",
+      "source": "Original public run_metrics.run_metrics; actual gallery file; constructed real-row fixture marked ok for metrics-stage replay.",
+      "primary_metric_result": {
+        "metric": "choice_accuracy",
+        "official_metric": "acc",
+        "score": 0.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1767,
+        "scored_samples": 0,
+        "valid_predictions": 1767,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 1767,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-B",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "option1",
+            "option2"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      },
+      "step3_file_written": true
+    },
+    {
+      "bench": "sciq",
+      "split": "test",
+      "predictor": "constant_A",
+      "source": "Original public run_metrics.run_metrics; actual gallery file; constructed real-row fixture marked ok for metrics-stage replay.",
+      "primary_metric_result": {
+        "metric": "choice_accuracy",
+        "official_metric": "acc_norm",
+        "score": 0.9969909729187563,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1000,
+        "scored_samples": 997,
+        "valid_predictions": 1000,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 3,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "correct_answer",
+            "distractor1",
+            "distractor2",
+            "distractor3"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      },
+      "step3_file_written": true
+    },
+    {
+      "bench": "lab-bench-language-agent-biology-benchmark",
+      "split": "train",
+      "predictor": "constant_A",
+      "source": "Original public run_metrics.run_metrics; actual gallery file; constructed real-row fixture marked ok for metrics-stage replay.",
+      "primary_metric_result": {
+        "metric": "choice_accuracy",
+        "official_metric": "accuracy",
+        "score": 1.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 33,
+        "scored_samples": 1,
+        "valid_predictions": 33,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 32,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choices_key": "distractors"
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      },
+      "step3_file_written": true
+    }
+  ]
+}

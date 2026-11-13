@@ -1,0 +1,70 @@
+{
+  "method": "Proposed single-pass source-field binding; all required question and nonempty context values preserved and causally influence the prompt. Unlabelled source rejected before inference.",
+  "rows": [
+    {
+      "bench": "sciq",
+      "split": "test",
+      "source_rows": 1000,
+      "verified_question_presence_and_dependency_rows": 1000,
+      "verified_nonempty_context_presence_and_dependency_rows": 884,
+      "rejected_before_inference_rows": 0
+    },
+    {
+      "bench": "winogrande",
+      "split": "test",
+      "source_rows": 1767,
+      "verified_question_presence_and_dependency_rows": 0,
+      "verified_nonempty_context_presence_and_dependency_rows": 0,
+      "rejected_before_inference_rows": 1767
+    },
+    {
+      "bench": "winogrande",
+      "split": "validation",
+      "source_rows": 1267,
+      "verified_question_presence_and_dependency_rows": 1267,
+      "verified_nonempty_context_presence_and_dependency_rows": 0,
+      "rejected_before_inference_rows": 0
+    },
+    {
+      "bench": "boolq",
+      "split": "validation",
+      "source_rows": 3270,
+      "verified_question_presence_and_dependency_rows": 3270,
+      "verified_nonempty_context_presence_and_dependency_rows": 3270,
+      "rejected_before_inference_rows": 0
+    },
+    {
+      "bench": "pubmedqa",
+      "split": "train",
+      "source_rows": 1000,
+      "verified_question_presence_and_dependency_rows": 1000,
+      "verified_nonempty_context_presence_and_dependency_rows": 1000,
+      "rejected_before_inference_rows": 0
+    },
+    {
+      "bench": "medmcqa",
+      "split": "validation",
+      "source_rows": 4183,
+      "verified_question_presence_and_dependency_rows": 4183,
+      "verified_nonempty_context_presence_and_dependency_rows": 0,
+      "rejected_before_inference_rows": 0
+    },
+    {
+      "bench": "hellaswag",
+      "split": "validation",
+      "source_rows": 10042,
+      "verified_question_presence_and_dependency_rows": 10042,
+      "verified_nonempty_context_presence_and_dependency_rows": 0,
+      "rejected_before_inference_rows": 0
+    },
+    {
+      "bench": "lab-bench-language-agent-biology-benchmark",
+      "split": "train",
+      "source_rows": 33,
+      "verified_question_presence_and_dependency_rows": 33,
+      "verified_nonempty_context_presence_and_dependency_rows": 0,
+      "rejected_before_inference_rows": 0
+    }
+  ],
+  "verified_labelled_rows": 20795
+}

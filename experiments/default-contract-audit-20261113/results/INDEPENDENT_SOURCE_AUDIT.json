@@ -1,0 +1,23 @@
+{
+  "method": "Independent exact counts and Fractions from source rows; no scorer/parser imports.",
+  "winogrande_label_counts": {
+    "2": 639,
+    "1": 628
+  },
+  "winogrande_oracle_bad_score_exact": "639/1267",
+  "winogrande_constant_B_bad_score": 1.0,
+  "winogrande_constant_B_true_score_exact": "639/1267",
+  "winogrande_test_missing_gold": 1767,
+  "sciq_constant_A_native_score_exact": "994/997",
+  "sciq_correct_source_first_position_rows": 1000,
+  "sciq_balanced_constant_A": 0.25,
+  "lab_missing_correct_option_rows": 33,
+  "lab_wrong_constant_A_native_score": 1,
+  "lab_wrong_constant_A_native_scored_samples": 1,
+  "lab_wrong_constant_A_true_score": 0,
+  "zero_based_controls_passed": [
+    "MedMCQA4183",
+    "HellaSwag10042"
+  ],
+  "model_calls": 0
+}

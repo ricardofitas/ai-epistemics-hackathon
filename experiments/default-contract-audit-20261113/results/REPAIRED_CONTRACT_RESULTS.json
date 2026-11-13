@@ -1,0 +1,272 @@
+[
+  {
+    "bench": "sciq",
+    "split": "test",
+    "predictor": "constant_A",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 1.0,
+    "semantic_source_accuracy": 1.0,
+    "scored_samples": 1000
+  },
+  {
+    "bench": "sciq",
+    "split": "test",
+    "predictor": "constant_B",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.0,
+    "semantic_source_accuracy": 0.0,
+    "scored_samples": 1000
+  },
+  {
+    "bench": "sciq",
+    "split": "test",
+    "predictor": "constant_C",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.0,
+    "semantic_source_accuracy": 0.0,
+    "scored_samples": 1000
+  },
+  {
+    "bench": "sciq",
+    "split": "test",
+    "predictor": "constant_D",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.0,
+    "semantic_source_accuracy": 0.0,
+    "scored_samples": 1000
+  },
+  {
+    "bench": "sciq",
+    "split": "test",
+    "predictor": "semantic_oracle_letter",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 1.0,
+    "semantic_source_accuracy": 1.0,
+    "scored_samples": 1000
+  },
+  {
+    "bench": "winogrande",
+    "split": "validation",
+    "predictor": "constant_A",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.4956590370955012,
+    "semantic_source_accuracy": 0.4956590370955012,
+    "scored_samples": 1267
+  },
+  {
+    "bench": "winogrande",
+    "split": "validation",
+    "predictor": "constant_B",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.5043409629044988,
+    "semantic_source_accuracy": 0.5043409629044988,
+    "scored_samples": 1267
+  },
+  {
+    "bench": "winogrande",
+    "split": "validation",
+    "predictor": "semantic_oracle_letter",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 1.0,
+    "semantic_source_accuracy": 1.0,
+    "scored_samples": 1267
+  },
+  {
+    "bench": "boolq",
+    "split": "validation",
+    "predictor": "constant_A",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.6217125382262997,
+    "semantic_source_accuracy": 0.6217125382262997,
+    "scored_samples": 3270
+  },
+  {
+    "bench": "boolq",
+    "split": "validation",
+    "predictor": "constant_B",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.3782874617737003,
+    "semantic_source_accuracy": 0.3782874617737003,
+    "scored_samples": 3270
+  },
+  {
+    "bench": "boolq",
+    "split": "validation",
+    "predictor": "semantic_oracle_letter",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 1.0,
+    "semantic_source_accuracy": 1.0,
+    "scored_samples": 3270
+  },
+  {
+    "bench": "pubmedqa",
+    "split": "train",
+    "predictor": "constant_A",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.552,
+    "semantic_source_accuracy": 0.552,
+    "scored_samples": 1000
+  },
+  {
+    "bench": "pubmedqa",
+    "split": "train",
+    "predictor": "constant_B",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.338,
+    "semantic_source_accuracy": 0.338,
+    "scored_samples": 1000
+  },
+  {
+    "bench": "pubmedqa",
+    "split": "train",
+    "predictor": "constant_C",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.11,
+    "semantic_source_accuracy": 0.11,
+    "scored_samples": 1000
+  },
+  {
+    "bench": "pubmedqa",
+    "split": "train",
+    "predictor": "semantic_oracle_letter",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 1.0,
+    "semantic_source_accuracy": 1.0,
+    "scored_samples": 1000
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "predictor": "constant_A",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.3222567535261774,
+    "semantic_source_accuracy": 0.3222567535261774,
+    "scored_samples": 4183
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "predictor": "constant_B",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.25938321778627776,
+    "semantic_source_accuracy": 0.25938321778627776,
+    "scored_samples": 4183
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "predictor": "constant_C",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.2211331580205594,
+    "semantic_source_accuracy": 0.2211331580205594,
+    "scored_samples": 4183
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "predictor": "constant_D",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.1972268706669854,
+    "semantic_source_accuracy": 0.1972268706669854,
+    "scored_samples": 4183
+  },
+  {
+    "bench": "medmcqa",
+    "split": "validation",
+    "predictor": "semantic_oracle_letter",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 1.0,
+    "semantic_source_accuracy": 1.0,
+    "scored_samples": 4183
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "predictor": "constant_A",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.2504481179047998,
+    "semantic_source_accuracy": 0.2504481179047998,
+    "scored_samples": 10042
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "predictor": "constant_B",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.24746066520613424,
+    "semantic_source_accuracy": 0.24746066520613424,
+    "scored_samples": 10042
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "predictor": "constant_C",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.25731925911173076,
+    "semantic_source_accuracy": 0.25731925911173076,
+    "scored_samples": 10042
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "predictor": "constant_D",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.24477195777733518,
+    "semantic_source_accuracy": 0.24477195777733518,
+    "scored_samples": 10042
+  },
+  {
+    "bench": "hellaswag",
+    "split": "validation",
+    "predictor": "semantic_oracle_letter",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 1.0,
+    "semantic_source_accuracy": 1.0,
+    "scored_samples": 10042
+  },
+  {
+    "bench": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "predictor": "constant_A",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 1.0,
+    "semantic_source_accuracy": 1.0,
+    "scored_samples": 33
+  },
+  {
+    "bench": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "predictor": "constant_B",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.0,
+    "semantic_source_accuracy": 0.0,
+    "scored_samples": 33
+  },
+  {
+    "bench": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "predictor": "constant_C",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.0,
+    "semantic_source_accuracy": 0.0,
+    "scored_samples": 33
+  },
+  {
+    "bench": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "predictor": "constant_D",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 0.0,
+    "semantic_source_accuracy": 0.0,
+    "scored_samples": 33
+  },
+  {
+    "bench": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "predictor": "semantic_oracle_letter",
+    "repair": "explicit source label semantics, complete choices and canonical gold letter",
+    "score": 1.0,
+    "semantic_source_accuracy": 1.0,
+    "scored_samples": 33
+  }
+]
