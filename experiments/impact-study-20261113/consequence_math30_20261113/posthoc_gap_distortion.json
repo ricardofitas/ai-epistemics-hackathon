@@ -1,0 +1,24 @@
+{
+  "analysis_status": "post_hoc_exploratory_descriptive_only",
+  "definition": "(DeepSeek-Gemma mean accuracy gap on P1/P2) minus (same gap on numerical substitution/paraphrase)",
+  "chosen_after_primary_results": true,
+  "primary_choice_reversal_result": false,
+  "per_source_family_sha256": "0a969d2e92028c968e903f7c550fcbf09e875df03e8959d53f49fc308c612e50",
+  "bounds_scope": "Sharp under the frozen independent [0,1] correctness boxes for unknown task scores, on this fixed source cohort; not population confidence intervals.",
+  "results": {
+    "selection": {
+      "families": 15,
+      "lower_fraction": "17/30",
+      "upper_fraction": "2/3",
+      "lower_pp": 56.666666666666664,
+      "upper_pp": 66.66666666666667
+    },
+    "confirmation": {
+      "families": 15,
+      "lower_fraction": "2/15",
+      "upper_fraction": "1/2",
+      "lower_pp": 13.333333333333334,
+      "upper_pp": 50.0
+    }
+  }
+}

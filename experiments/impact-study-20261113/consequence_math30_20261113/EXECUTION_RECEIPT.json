@@ -1,0 +1,65 @@
+{
+  "created_utc": "2026-11-13T18:16:53.688036+00:00",
+  "source_freeze_repository": "ricardofitas/ai-epistemics-hackathon",
+  "source_freeze_commit": "0408bd25c49f31ab1c7563747d92ac61217692a7",
+  "source_freeze_time": "2026-11-13T18:05:24Z",
+  "execution_repository": "ricardofitas/swarm-adaption-hackathon",
+  "execution_commit": "13930853871b890a8e4a599a262b1260fbe83000",
+  "execution_commit_time": "2026-11-13T18:06:39Z",
+  "workflow_run_id": 43479393991,
+  "workflow_run_status": "completed",
+  "workflow_run_conclusion": "success",
+  "workflow_run_url": "https://github.com/ricardofitas/swarm-adaption-hackathon/actions/runs/43479393991",
+  "artifact_id": 14065055861,
+  "artifact_name": "math-consequence30-43479393991",
+  "artifact_bytes": 1743620,
+  "artifact_sha256": "03dcd28542fd8edb511e939811ac2a8038f94655c052d0c8d357a8b6e048b344",
+  "requests": {
+    "format_admission": 2,
+    "main": 80,
+    "attempts_per_request": 1,
+    "retries": 0
+  },
+  "main_capture": {
+    "strict_complete_requests": 80,
+    "whole_batch_json_valid_requests": 76,
+    "planned_task_answers": 240,
+    "known_scores": 226,
+    "correct": 168,
+    "wrong": 58,
+    "unknown": 14
+  },
+  "primary_result": {
+    "both_policies_select": "deepseek-v4-flash",
+    "choice_reversal": false,
+    "confirmation_consequence_bounds": [
+      0,
+      0
+    ]
+  },
+  "independent_agent_audit": {
+    "passed": true,
+    "scope": [
+      "17 source/protocol/implementation blobs against both remote commit trees",
+      "82 unique capture journals and admission-before-main order",
+      "exact rational replay of 226 known item scores",
+      "14 preserved unknown scores",
+      "15 families and 5 co-batch blocks per split",
+      "primary same-winner zero contrast",
+      "posthoc family-level sharp box bounds"
+    ],
+    "not_external_human_certification": true
+  },
+  "sha256": {
+    "protocol.json": "059509f06163a1d84568dd72e11c500cdf8e0b0a2ba3fa9a6e9254807924f357",
+    "manifest.jsonl": "5f44066e35859b61c20ae087ba35e2f8f62daba0ebc84086e79c212e180a6412",
+    "admission/manifest.jsonl": "908ef8db19d2ae952d51dd279505a9b52955fe75f3d5e1cea062e202a7ba7ce4",
+    "selected_data.json": "0c2dd90102b50a64fa1b1aaee03583d40fbb50443bc4a879602499d9c5132552",
+    "prediction_rows.jsonl": "c28f4622a16ee3516bb24ec5ba0d15320c508325969f7a969aa472e14eef7ca2",
+    "capture_integrity.json": "a30b1c94324cace106a66f3fa942154a2527e447c6ffe79a662a698a186219bb",
+    "analysis/summary.json": "72d883c51a75d0d20542e1738c6715ba428a39c8276c32a9fb16c7978f631319",
+    "analysis/per_source_family.jsonl": "0a969d2e92028c968e903f7c550fcbf09e875df03e8959d53f49fc308c612e50",
+    "posthoc_gap_distortion.json": "df876d4f21851c1d4c69536ab30887282de48c93238bca22617907f13e702379",
+    "SOURCE_AUDIT.md": "d633472b71cd7bb0abd2e0812bd19259a370a2571bfbeccf02f6ac00baef4913"
+  }
+}
