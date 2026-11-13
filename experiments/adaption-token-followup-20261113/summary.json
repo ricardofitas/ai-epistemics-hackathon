@@ -1,0 +1,90 @@
+{
+  "cohort": "adaption_token_followup",
+  "attempted": 3,
+  "completed_nonempty": 2,
+  "trials": [
+    {
+      "trial_id": "AT-01",
+      "response_id": "T03",
+      "requested_model": "qwen3.5-397b",
+      "returned_model": null,
+      "http_status": 504,
+      "response_status": null,
+      "completed_nonempty": false,
+      "primary_labels": {
+        "a": "unscorable",
+        "b": "unscorable"
+      },
+      "criterion_ids": {
+        "a": [],
+        "b": []
+      },
+      "word_count": 0,
+      "reported_usage_cost": null
+    },
+    {
+      "trial_id": "AT-02",
+      "response_id": "T02",
+      "requested_model": "qwen3.8-27b",
+      "returned_model": "qwen3.8-27b",
+      "http_status": 200,
+      "response_status": "completed",
+      "completed_nonempty": true,
+      "primary_labels": {
+        "a": "no",
+        "b": "no"
+      },
+      "criterion_ids": {
+        "a": [],
+        "b": []
+      },
+      "word_count": 233,
+      "reported_usage_cost": 0.004348898
+    },
+    {
+      "trial_id": "AT-03",
+      "response_id": "T01",
+      "requested_model": "glm-53-flash",
+      "returned_model": "glm-53-flash",
+      "http_status": 200,
+      "response_status": "completed",
+      "completed_nonempty": true,
+      "primary_labels": {
+        "a": "yes",
+        "b": "yes"
+      },
+      "criterion_ids": {
+        "a": [
+          "C1"
+        ],
+        "b": [
+          "C1"
+        ]
+      },
+      "word_count": 217,
+      "reported_usage_cost": 0.0007210999999999999
+    }
+  ],
+  "primary_disagreements": [],
+  "all_starts_after_freeze": true,
+  "human_review": "pending",
+  "scope": "One selected case, one response per model in this cohort. Original and token-budget follow-up remain separate; no general model ranking or prevalence.",
+  "first_ratings_counts": {
+    "a": {
+      "yes": 1,
+      "no": 1,
+      "unscorable": 1
+    },
+    "b": {
+      "yes": 1,
+      "no": 1,
+      "unscorable": 1
+    }
+  },
+  "coordinator_primary_counts": {
+    "yes": 1,
+    "no": 1,
+    "unscorable": 1
+  },
+  "adjudication": "No changes to first ratings"
+}

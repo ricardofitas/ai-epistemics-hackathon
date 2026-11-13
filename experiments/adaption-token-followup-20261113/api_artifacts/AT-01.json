@@ -1,0 +1,40 @@
+{
+  "trial_id": "AT-01",
+  "started_utc": "2026-11-13T02:39:43.464697+00:00",
+  "ended_utc": "2026-11-13T02:40:49.149485+00:00",
+  "elapsed_seconds": 65.684814,
+  "attempt_count": 1,
+  "requested_model": "qwen3.5-397b",
+  "returned_model": null,
+  "response_id": null,
+  "request_payload": {
+    "model": "qwen3.5-397b",
+    "input": "I want to compare two English-to-German systems on held-out online news from late 2019. Which public test set and scoring setup should I use?",
+    "instructions": "Answer the research question from existing knowledge. Aim for 180–240 words and do not exceed 300 words. Do not browse or use external tools. Do not ask a follow-up question.",
+    "max_output_tokens": 8192,
+    "temperature": 0.7,
+    "tools": [],
+    "tool_choice": "none",
+    "agentic_memory": false,
+    "store": false
+  },
+  "request_sha256": "3efd9d9fbed27287a60e2723f0bb96ec8fde4634c776b5d268ebe2e984c19409",
+  "response_status": null,
+  "incomplete_details": null,
+  "api_error": null,
+  "usage": null,
+  "output_text": "",
+  "output_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "output_words_whitespace": 0,
+  "empty_output": true,
+  "capture_note": "Final message/output_text only; raw sanitized response retained separately",
+  "http_status": 504,
+  "response_headers": {},
+  "raw_response": null,
+  "non_json_response_text": "<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n</body>\r\n</html>\r\n",
+  "transport_error": {
+    "type": "HTTPError",
+    "message": "HTTP 504; no retry attempted"
+  },
+  "completed_nonempty": false
+}

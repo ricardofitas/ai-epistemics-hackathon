@@ -1,0 +1,51 @@
+{
+  "review_id": "adaption-api-report-prepublication-check",
+  "reviewed_utc": "2026-11-13T02:47:28.771840+00:00",
+  "status": "pass",
+  "reviewer": "independent agent; no API calls, secrets or raw reasoning inspected",
+  "report_sha256": "fcdf0973f3df52cd8707fe46f1b556c9b872a313716cc0908c68e1335f30cacb",
+  "checks": {
+    "all_ten_attempts_retained": true,
+    "catalog_seven_vs_completed_six_distinguished": true,
+    "initial_three_incomplete_captures_retained": true,
+    "two_budget_blocks_kept_separate": true,
+    "all_request_answer_artifact_hashes_match": true,
+    "review_keys_and_requested_model_mappings_match": true,
+    "blind_first_ratings_unchanged_in_summary": true,
+    "A02_yes_first_rating_separate_from_post_unblind_uncertain": true,
+    "504_kept_unscorable_not_substantive_error": true,
+    "reported_usage_sums_match": true,
+    "cross_interface_and_alias_limits_preserved": true,
+    "human_pending_clear": true,
+    "reviewed_docs_no_credential_token_pattern": true
+  },
+  "observed_counts": {
+    "initial_attempts": 7,
+    "initial_http200": 7,
+    "initial_complete": 4,
+    "initial_incomplete_empty": 3,
+    "followup_attempts": 3,
+    "followup_complete": 2,
+    "followup_http504": 1,
+    "distinct_complete_models_across_budgets": 6,
+    "initial_blind_labels": "both 4 yes, 3 unscorable",
+    "followup_blind_labels": "both 1 yes, 1 no, 1 unscorable",
+    "conservative_initial_synthesis": "3 C1 yes, 1 C4 uncertain, 3 unscorable",
+    "conservative_followup_synthesis": "1 C1 yes, 1 no, 1 unscorable"
+  },
+  "exact_model_mapping": {
+    "A01": "deepseek-v4-flash",
+    "A02": "gemma-4-26b-a4b-it",
+    "A03": "glm-5.2",
+    "A04": "glm-53-flash",
+    "A05": "qwen3.5-397b",
+    "A06": "gemma-4-31b-it",
+    "A07": "qwen3.8-27b",
+    "T01": "glm-53-flash",
+    "T02": "qwen3.8-27b",
+    "T03": "qwen3.5-397b"
+  },
+  "issues": [],
+  "important_boundary": "A02 original C4 yes ratings remain original; coordinator uncertain is transparently post-unblinding and not a new blind score. No claim of actual contamination or a general four-of-six rate.",
+  "credential_scan_scope": "Only reviewed report/audit text checked for known Adaption credential format; no secret retrieval and no assertion of a global credential-store audit."
+}

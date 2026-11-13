@@ -1,0 +1,176 @@
+{
+  "cohort": "adaption_pilot",
+  "attempted": 7,
+  "completed_nonempty": 4,
+  "trials": [
+    {
+      "trial_id": "AD-01",
+      "response_id": "A05",
+      "requested_model": "qwen3.5-397b",
+      "returned_model": "qwen3.5-397b",
+      "http_status": 200,
+      "response_status": "incomplete",
+      "completed_nonempty": false,
+      "primary_labels": {
+        "a": "unscorable",
+        "b": "unscorable"
+      },
+      "criterion_ids": {
+        "a": [],
+        "b": []
+      },
+      "word_count": 0,
+      "reported_usage_cost": 0.0072197
+    },
+    {
+      "trial_id": "AD-02",
+      "response_id": "A06",
+      "requested_model": "gemma-4-31b-it",
+      "returned_model": "gemma-4-31b-it",
+      "http_status": 200,
+      "response_status": "completed",
+      "completed_nonempty": true,
+      "primary_labels": {
+        "a": "yes",
+        "b": "yes"
+      },
+      "criterion_ids": {
+        "a": [
+          "C1"
+        ],
+        "b": [
+          "C1"
+        ]
+      },
+      "word_count": 183,
+      "reported_usage_cost": 0.00010258999999999999
+    },
+    {
+      "trial_id": "AD-03",
+      "response_id": "A02",
+      "requested_model": "gemma-4-26b-a4b-it",
+      "returned_model": "gemma-4-26b-a4b-it",
+      "http_status": 200,
+      "response_status": "completed",
+      "completed_nonempty": true,
+      "primary_labels": {
+        "a": "yes",
+        "b": "yes"
+      },
+      "criterion_ids": {
+        "a": [
+          "C4"
+        ],
+        "b": [
+          "C4"
+        ]
+      },
+      "word_count": 200,
+      "reported_usage_cost": 8.473649999999999e-05
+    },
+    {
+      "trial_id": "AD-04",
+      "response_id": "A04",
+      "requested_model": "glm-53-flash",
+      "returned_model": "glm-53-flash",
+      "http_status": 200,
+      "response_status": "incomplete",
+      "completed_nonempty": false,
+      "primary_labels": {
+        "a": "unscorable",
+        "b": "unscorable"
+      },
+      "criterion_ids": {
+        "a": [],
+        "b": []
+      },
+      "word_count": 0,
+      "reported_usage_cost": 0.0010366
+    },
+    {
+      "trial_id": "AD-05",
+      "response_id": "A03",
+      "requested_model": "glm-5.2",
+      "returned_model": "glm-5.2",
+      "http_status": 200,
+      "response_status": "completed",
+      "completed_nonempty": true,
+      "primary_labels": {
+        "a": "yes",
+        "b": "yes"
+      },
+      "criterion_ids": {
+        "a": [
+          "C1"
+        ],
+        "b": [
+          "C1"
+        ]
+      },
+      "word_count": 227,
+      "reported_usage_cost": 0.003796
+    },
+    {
+      "trial_id": "AD-06",
+      "response_id": "A07",
+      "requested_model": "qwen3.8-27b",
+      "returned_model": "qwen3.8-27b",
+      "http_status": 200,
+      "response_status": "incomplete",
+      "completed_nonempty": false,
+      "primary_labels": {
+        "a": "unscorable",
+        "b": "unscorable"
+      },
+      "criterion_ids": {
+        "a": [],
+        "b": []
+      },
+      "word_count": 0,
+      "reported_usage_cost": 0.002565148
+    },
+    {
+      "trial_id": "AD-07",
+      "response_id": "A01",
+      "requested_model": "deepseek-v4-flash",
+      "returned_model": "deepseek-v4-flash",
+      "http_status": 200,
+      "response_status": "completed",
+      "completed_nonempty": true,
+      "primary_labels": {
+        "a": "yes",
+        "b": "yes"
+      },
+      "criterion_ids": {
+        "a": [
+          "C1"
+        ],
+        "b": [
+          "C1"
+        ]
+      },
+      "word_count": 174,
+      "reported_usage_cost": 0.00012745392
+    }
+  ],
+  "primary_disagreements": [],
+  "all_starts_after_freeze": true,
+  "human_review": "pending",
+  "scope": "One selected case, one response per model in this cohort. Original and token-budget follow-up remain separate; no general model ranking or prevalence.",
+  "first_ratings_counts": {
+    "a": {
+      "yes": 4,
+      "unscorable": 3
+    },
+    "b": {
+      "yes": 4,
+      "unscorable": 3
+    }
+  },
+  "coordinator_primary_counts": {
+    "yes": 3,
+    "uncertain": 1,
+    "unscorable": 3
+  },
+  "adjudication": "A02 only: first blind labels yes/yes preserved, coordinator uncertain pending human scope adjudication; coordinator-adjudication.json"
+}
