@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-13",
+  "candidate": "One-Eval selective-denominator alias dispatch",
+  "status": "VERIFIED_TECHNICAL_FINDING_ANCILLARY_RESEARCH_RESULT",
+  "primary_real_corpus_effect_max_pp": 0.07106718259617395,
+  "primary_strict_pair_reversals": 0,
+  "secondary_distinct_reversed_pairs": 1,
+  "secondary_original_gap_pp": 0.00463899833725856,
+  "secondary_reversal_configurations": 6,
+  "affected_default_gallery_contracts_observed": 0,
+  "gallery_primary_contracts_inspected": 111,
+  "new_inference_calls": 0,
+  "scientific_impact_above_gammaf_established": false,
+  "next_action": "Retain reproducible fix and report; prioritize causal audits of configurations actually used in published evaluations. Do not expand easy GSM-Plus or this low-effect replay merely to increase benchmark counts.",
+  "promotion_gate": [
+    "Actual evaluation route and source provenance reproduced",
+    "Material consequence relative to comparison uncertainty",
+    "Causal control and corrective patch",
+    "Exposure or repeated occurrence measured"
+  ],
+  "public_messages_sent": 0,
+  "public_issues_or_prs_created": 0
+}

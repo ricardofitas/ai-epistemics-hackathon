@@ -1,0 +1,483 @@
+{
+  "repository": "OpenDCAI/One-Eval",
+  "date": "2026-11-13",
+  "listed_issues_and_prs": 67,
+  "limit": 100,
+  "searches": [
+    "accuracy parallel",
+    "valid_only"
+  ],
+  "search_matches": 0,
+  "scope": "Titles and issue/PR descriptions only; no assertion of first discovery or exhaustive novelty.",
+  "items": [
+    {
+      "number": 68,
+      "title": "add local bench registry for dataflow kind",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/68",
+      "body": "添加了在前端页面注册本地测评数据集的功能（仅支持jsonl格式的纯文本测评数据集）",
+      "comments": 0
+    },
+    {
+      "number": 67,
+      "title": "feat(external_repo): integrate OmniaBench + unify params schema for all external benches",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/67",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 66,
+      "title": "external-repo benchmark framework + 9 bench integrations",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/66",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 65,
+      "title": "docs: add GitHub Pages site with polished landing page and README badge",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/65",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 64,
+      "title": "chore(skill): remove conda, keep uv only; add post-eval GitHub star prompt",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/64",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 63,
+      "title": "0629-fix",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/63",
+      "body": "做了几点改动：\r\n1. bench gallery 重构：\r\n  - 改为一个bench一个（metric、 prompt、 parameter）组合，尽量与公开参数对齐\r\n  - bench 数量与paper对齐\r\n2. report 前端页面调整，\r\n  - 添加 bench sample 明细\r\n  - 添加侧边栏进行分页\r\n3. report 主分数调整为 primary metric，dataflow_eval_score 仅作参考\r\n4. 修复了dataflow_eval_tool 部分的答案提取与分数计算bug\r\n5. metric计算逻辑重构，针对mmlu-pro，c-eval等bench做了优化",
+      "comments": 0
+    },
+    {
+      "number": 62,
+      "title": "feat(metrics): add common evaluation metrics",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/62",
+      "body": "## Summary\r\n\r\nAdd common metrics for LLM evaluation:\r\n\r\n- `jaccard_similarity`\r\n- `set_f1`\r\n- `json_validity`\r\n- `empty_or_whitespace_rate`\r\n- `garbled_text_rate`\r\n- `sql_parse_validity`\r\n\r\nAlso register metric metadata and add the `sqlglot` dependency for SQL parsing.",
+      "comments": 0
+    },
+    {
+      "number": 61,
+      "title": "fix(skill): 安装流程降噪——优先复用已有环境，去掉伪选择与逐个确认",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/61",
+      "body": "排查到「装得久 + 反复确认库」的根因：① step 0 一上来就让用户三段式确认、\r\n还罗列 conda/uv/venv 让用户选机器上没装的工具（伪选择）；② doctor 把可选库\r\n报成「缺失/不可用」，诱导 agent 逐个征询是否安装；③ 真正的慢是首次从零装\r\ntorch 等 GB 级重包，与环境管理器选项无关。\r\n\r\n- SKILL step 0 改为「先扫现有环境，能复用就别装」：命中仓库 .venv / 已激活 venv/conda 且 doctor 通过即直接用、跳过全部安装；仅无可用环境时才装，且按 机器实际可用工具来，一次性问询不反复确认\r\n- doctor.py 增 _check_reusable_envs：探测并打印可直接复用的环境（.venv/conda）， 提示无需新建重装；可选依赖文案改为「非必需、按需再装、勿逐个征询用户」",
+      "comments": 0
+    },
+    {
+      "number": 60,
+      "title": "0621-fix",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/60",
+      "body": "做了几点改动：\r\n1. bench gallery 重构：\r\n     - 改为一个bench一个（metric、 prompt、 parameter）组合，尽量与公开参数对齐\r\n     - bench 数量与paper对齐\r\n2. report 前端页面调整，\r\n     - 添加 bench sample 明细\r\n     - 添加侧边栏进行分页\r\n3. report 主分数调整为 primary metric，dataflow_eval_score 仅作参考\r\n4. 修复了dataflow_eval_tool 部分的答案提取与分数计算bug\r\n5. metric计算逻辑重构，针对mmlu-pro，c-eval等bench做了优化",
+      "comments": 0
+    },
+    {
+      "number": 59,
+      "title": "add some evaluation metrics",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/59",
+      "body": "## Summary\r\n\r\nThis PR expands the built-in metric coverage for common LLM evaluation scenarios.\r\n\r\n## Changes\r\n\r\n- Add common metrics:\r\n  - `jaccard_similarity`\r\n  - `set_f1`\r\n  - `json_validity`\r\n  - `empty_or_whitespace_rate`\r\n  - `garbled_text_rate`\r\n  - `sql_parse_validity`\r\n- Register the new metrics with metadata, categories, aliases, and dimensions\r\n- Add `sqlglot` dependency for SQL parse-validity checking",
+      "comments": 0
+    },
+    {
+      "number": 58,
+      "title": "fix(skill): 安装流程降噪——优先复用已有环境，去掉伪选择与逐个确认",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/58",
+      "body": "排查到「装得久 + 反复确认库」的根因：① step 0 一上来就让用户三段式确认、\r\n还罗列 conda/uv/venv 让用户选机器上没装的工具（伪选择）；② doctor 把可选库\r\n报成「缺失/不可用」，诱导 agent 逐个征询是否安装；③ 真正的慢是首次从零装\r\ntorch 等 GB 级重包，与环境管理器选项无关。\r\n\r\n- SKILL step 0 改为「先扫现有环境，能复用就别装」：命中仓库 .venv / 已激活 venv/conda 且 doctor 通过即直接用、跳过全部安装；仅无可用环境时才装，且按 机器实际可用工具来，一次性问询不反复确认\r\n- doctor.py 增 _check_reusable_envs：探测并打印可直接复用的环境（.venv/conda）， 提示无需新建重装；可选依赖文案改为「非必需、按需再装、勿逐个征询用户」",
+      "comments": 0
+    },
+    {
+      "number": 57,
+      "title": "docs(skill): 强调全程用与用户相同的语言交流",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/57",
+      "body": "开篇加全局约束：澄清问题/确认项/进度/摘要报告都跟随用户当前对话语言，\r\n不因本文档或脚本输出是中/英文就在向用户提问时夹生切换；技术标识保持原文。",
+      "comments": 0
+    },
+    {
+      "number": 56,
+      "title": "Skill/post merge updates",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/56",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 55,
+      "title": "Skill merge updates",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/55",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 54,
+      "title": "Feat/one eval skill",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/54",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 53,
+      "title": "0610-fix",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/53",
+      "body": "添加了 setting 界面 model card 的删除功能",
+      "comments": 0
+    },
+    {
+      "number": 52,
+      "title": "0517-fix",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/52",
+      "body": "1.   修复workflow中断后恢复的问题\r\n2.  修复前端配置问题，配置丢失或失败时会显示原因",
+      "comments": 0
+    },
+    {
+      "number": 51,
+      "title": "Feature/docker deployment",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/51",
+      "body": "add relevant files for Docker deployment and fix bugs in the front-end code",
+      "comments": 1
+    },
+    {
+      "number": 50,
+      "title": "0511-fix",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/50",
+      "body": "1. 修复api model配置时无法自动填充的问题\r\n2. 修复前端build的问题",
+      "comments": 0
+    },
+    {
+      "number": 49,
+      "title": "0509-fix",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/49",
+      "body": "1. 修复了删除历史时报错404的问题\r\n2. 修复了metric recommend节点的进程卡死问题",
+      "comments": 0
+    },
+    {
+      "number": 48,
+      "title": "0509-fix",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/48",
+      "body": "1. 修复了删除history时报错404的问题\r\n2. 修复了metric recommend节点进程卡死的问题",
+      "comments": 0
+    },
+    {
+      "number": 47,
+      "title": "点击删除按钮，会返回404错误",
+      "url": "https://github.com/OpenDCAI/One-Eval/issues/47",
+      "body": "<img width=\"2406\" height=\"722\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/197f4c55-850d-4a98-959e-65cc37450e4c\" />\n<img width=\"2056\" height=\"110\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/5e122a68-d78a-4e99-a498-8cf24d5ec8ec\" />\n点击删除按钮，会返回404错误。",
+      "comments": 1
+    },
+    {
+      "number": 46,
+      "title": "0429 fix bugs",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/46",
+      "body": "1. fix agent service issue\r\n  - allow user add custom model in agent service\r\n  - allow longer timeout in metric recommend and llm analyst\r\n2. add bench domain report\r\n3. fix gallery issue",
+      "comments": 0
+    },
+    {
+      "number": 45,
+      "title": "0428-fix",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/45",
+      "body": "1. fix report generation\r\n2. fix agent service bug\r\n3. fix gallery adding issue",
+      "comments": 0
+    },
+    {
+      "number": 44,
+      "title": "0428 fix",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/44",
+      "body": "1. fix report generation\r\n2. fix agent service issue\r\n3. fix gallery adding issue",
+      "comments": 0
+    },
+    {
+      "number": 43,
+      "title": "fix gallery adding issue.",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/43",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 42,
+      "title": "本地运行报错了: cannot import name 'BenchAnswerGenerator' from 'dataflow.operators.core_text'",
+      "url": "https://github.com/OpenDCAI/One-Eval/issues/42",
+      "body": "File \"/Users/workplace/One-Eval/one_eval/server/app.py\", line 243, in <module>\n    from one_eval.graph.workflow_all import build_complete_workflow\n  File \"/Users/workplace/One-Eval/one_eval/graph/workflow_all.py\", line 22, in <module>\n    from one_eval.nodes.dataflow_eval_node import DataFlowEvalNode\n  File \"/Users/workplace/One-Eval/one_eval/nodes/dataflow_eval_node.py\", line 9, in <module>\n    from one_eval.toolkits.dataflow_eval_tool import DataFlowEvalTool\n  File \"/Users/workplace/One-Eval/one_eval/toolkits/dataflow_eval_tool.py\", line 13, in <module>\n    from dataflow.operators.core_text import BenchAnswerGenerator, UnifiedBenchDatasetEvaluator\nImportError: cannot import name 'BenchAnswerGenerator' from 'dataflow.operators.core_text'\n\nopen-dataflow==1.0.7\n\n执行命令：\nuvicorn one_eval.server.app:app --host 0.0.0.0 --port 8000\n\n分支代码：\ntag: v0.1.0\n\n",
+      "comments": 2
+    },
+    {
+      "number": 41,
+      "title": "fix agent service issue.",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/41",
+      "body": "fix agent service bug in Settings page",
+      "comments": 0
+    },
+    {
+      "number": 40,
+      "title": "使用 新增bench 按钮后，页面全白了",
+      "url": "https://github.com/OpenDCAI/One-Eval/issues/40",
+      "body": "在 http://localhost:5173/gallery 页面，点击 新增bench 按钮\n\n名字：tinyMMLU\n类型：其他 \nhttps://huggingface.co/datasets/tinyBenchmarks/tinyMMLU\n\n<img width=\"522\" height=\"631\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1bb63359-2c21-4f79-bc84-a9fd90348ac4\" />",
+      "comments": 1
+    },
+    {
+      "number": 39,
+      "title": "发现阶段报错，麻烦看下",
+      "url": "https://github.com/OpenDCAI/One-Eval/issues/39",
+      "body": "2026-04-28 12:06:53,894 | INFO     | OneEval-Server | app.py:810 | Starting workflow for thread_id=fad4a43f-b148-4924-b410-0ed5de82c43d\nINFO:     127.0.0.1:60800 - \"POST /api/workflow/start HTTP/1.1\" 200 OK\n2026-04-28 12:06:53,923 | INFO     | OneEval-Server | app.py:869 | Invoking graph for fad4a43f-b148-4924-b410-0ed5de82c43d\nINFO:     127.0.0.1:60800 - \"GET /api/workflow/history HTTP/1.1\" 200 OK\n2026-04-28 12:06:55,461 | INFO     | OneEval-Server | app.py:996 | [get_status] thread_id=fad4a43f-b148-4924-b410-0ed5de82c43d, status=running, next=('QueryUnderstandNode',), interrupts=0\nINFO:     127.0.0.1:60800 - \"GET /api/workflow/status/fad4a43f-b148-4924-b410-0ed5de82c43d HTTP/1.1\" 200 OK\n2026-04-28 12:06:56,113 | **ERROR**    | OneEval-Server | app.py:890 | Error executing graph for fad4a43f-b148-4924-b410-0ed5de82c43d: Client error '400 Bad Request' for url 'https://api.deepseek.com/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400\n2026-04-28 12:06:56,114 | INFO     | OneEval-Server | app.py:902 | Released vLLM serving after workflow fad4a43f-b148-4924-b410-0ed5de82c43d\n2026-04-28 12:06:56,959 | INFO     | OneEval-Server | app.py:996 | [get_status] thread_id=fad4a43f-b148-4924-b410-0ed5de82c43d, status=running, next=('QueryUnderstandNode',), interrupts=0",
+      "comments": 1
+    },
+    {
+      "number": 38,
+      "title": "uv run uvicorn one_eval.server.app:app --host 0.0.0.0 --port 8000  报错",
+      "url": "https://github.com/OpenDCAI/One-Eval/issues/38",
+      "body": "文件夹One-Eval 下执行 uv run uvicorn one_eval.server.app:app --host 0.0.0.0 --port 8000  报错。\n\n2026-04-27 18:18:48,176 | INFO     | OneEval-Server | app.py:352 | Loaded server config: {\n  \"hf\": {\n    \"endpoint\": \"https://hf-mirror.com\",\n    \"token\": null\n  },\n  \"agent\": {\n    \"provider\": \"openai_compatible\",\n    \"base_url\": \"http://123.129.219.111:3000/v1\",\n    \"model\": \"gpt-4o\",\n    \"api_key\": null,\n    \"timeout_s\": 15\n  },\n  \"judge_model\": {\n    \"enabled\": false,\n    \"model_name_or_path\": \"\",\n    \"is_api\": true,\n    \"api_url\": \"\",\n    \"api_key\": null,\n    \"api_provider\": \"openai_compatible\",\n    \"api_extra_body\": {},\n    \"api_max_workers\": 8,\n    \"api_connect_timeout\": 10.0,\n    \"api_read_timeout\": 120.0,\n    \"temperature\": 0.0,\n    \"top_p\": 1.0,\n    \"top_k\": -1,\n    \"repetition_penalty\": 1.0,\n    \"max_tokens\": 1024,\n    \"seed\": null,\n    \"tensor_parallel_size\": 1,\n    \"max_model_len\": null,\n    \"gpu_memory_utilization\": 0.9\n  }\n}\nTraceback (most recent call last):\n  File \"/Users/aaa/Projects/One-Eval/.venv/bin/uvicorn\", line 10, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/Users/aaa/Projects/One-Eval/.venv/lib/python3.12/site-packages/click/core.py\", line 1514, in __call__\n    return self.main(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/aaa/Projects/One-Eval/.venv/lib/python3.12/site-packages/click/core.py\", line 1435, in main\n    rv = self.invoke(ctx)\n         ^^^^^^^^^^^^^^^^\n  File \"/Users/aaa/Projects/One-Eval/.venv/lib/python3.12/site-packages/click/core.py\", line 1298, in invoke\n    return ctx.invoke(self.callback, **ctx.params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/aaa/Projects/One-Eval/.venv/lib/python3.12/site-packages/click/core.py\", line 853, in invoke\n    return callback(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/aaa/Projects/One-Eval/.venv/lib/python3.12/site-packages/uvicorn/main.py\", line 441, in main\n    run(\n  File \"/Users/aaa/Projects/One-Eval/.venv/lib/python3.12/site-packages/uvicorn/main.py\", line 617, in run\n    server.run()\n  File \"/Users/aaa/Projects/One-Eval/.venv/lib/python3.12/site-packages/uvicorn/server.py\", line 75, in run\n    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/aaa/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/runners.py\", line 195, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/Users/aaa/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/aaa/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/base_events.py\", line 691, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/Users/aaa/Projects/One-Eval/.venv/lib/python3.12/site-packages/uvicorn/server.py\", line 79, in serve\n    await self._serve(sockets)\n  File \"/Users/aaa/Projects/One-Eval/.venv/lib/python3.12/site-packages/uvicorn/server.py\", line 86, in _serve\n    config.load()\n  File \"/Users/aaa/Projects/One-Eval/.venv/lib/python3.12/site-packages/uvicorn/config.py\", line 449, in load\n    self.loaded_app = import_from_string(self.app)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/aaa/Projects/One-Eval/.venv/lib/python3.12/site-packages/uvicorn/importer.py\", line 19, in import_from_string\n    module = importlib.import_module(module_str)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/aaa/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/aaa/Projects/One-Eval/one_eval/server/app.py\", line 358, in <module>\n    from one_eval.graph.workflow_all import build_complete_workflow\n  File \"/Users/aaa/Projects/One-Eval/one_eval/graph/workflow_all.py\", line 22, in <module>\n    from one_eval.nodes.dataflow_eval_node import DataFlowEvalNode\n  File \"/Users/aaa/Projects/One-Eval/one_eval/nodes/dataflow_eval_node.py\", line 9, in <module>\n    from one_eval.toolkits.dataflow_eval_tool import DataFlowEvalTool\n  File \"/Users/aaa/Projects/One-Eval/one_eval/toolkits/dataflow_eval_tool.py\", line 14, in <module>\n    from dataflow.operators.core_text import BenchAnswerGenerator, UnifiedBenchDatasetEvaluator\nImportError: cannot import name 'BenchAnswerGenerator' from 'dataflow.operators.core_text' (unknown location)",
+      "comments": 8
+    },
+    {
+      "number": 37,
+      "title": "DeepSeek V4 模板需求",
+      "url": "https://github.com/OpenDCAI/One-Eval/issues/37",
+      "body": "你好，能做一个大陆网络环境下，接入 DeepSeek API 的模板吗？现在用起来有一些报错。",
+      "comments": 1
+    },
+    {
+      "number": 36,
+      "title": "add bench information in report generation, fix port issue",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/36",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 35,
+      "title": "add bench information in report generation.",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/35",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 34,
+      "title": "API测试请求异常",
+      "url": "https://github.com/OpenDCAI/One-Eval/issues/34",
+      "body": "API信息填好后，【测试API请求】点击显示 失败：请求异常。\n\n配置没填错\n\n<img width=\"946\" height=\"1708\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a19214ea-e06f-4119-b2f6-97230ebae521\" />",
+      "comments": 2
+    },
+    {
+      "number": 33,
+      "title": "fix the front end, add type referrence and user guide",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/33",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 32,
+      "title": "add vllm cleaner.",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/32",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 31,
+      "title": "Add api model evaluation options.",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/31",
+      "body": "1. add api model evaluation options in frontend and backend\r\n2. simple modification in dataflow_eval_tool to lift concurrency limit\r\n",
+      "comments": 0
+    },
+    {
+      "number": 30,
+      "title": "可以支持 API 测试吗？我看现在仅支持 llm 的测试",
+      "url": "https://github.com/OpenDCAI/One-Eval/issues/30",
+      "body": "可以支持 API 测试吗？我看现在仅支持 llm 的测试",
+      "comments": 2
+    },
+    {
+      "number": 29,
+      "title": "Demo & Img",
+      "url": "https://github.com/OpenDCAI/One-Eval/issues/29",
+      "body": null,
+      "comments": 5
+    },
+    {
+      "number": 28,
+      "title": "fix the front for report radar, bench scores and visualization",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/28",
+      "body": "1. fix the radar, set the dimensons from seven aspects: \r\n(\"knowledge\", \"知识与百科\"),\r\n(\"reasoning\", \"逻辑推理\"),\r\n(\"mathematics\", \"数学能力\"),\r\n(\"coding\", \"代码能力\"),\r\n(\"language\", \"理解与生成\"),\r\n(\"instruction\", \"指令遵循\"),\r\n(\"safety\", \"安全与对齐\"),\r\n\r\n2. set the primary score as the dataflow evaluator score\r\n\r\n3. fix the metric recommend window and add selection option\r\n\r\n4. add bar chart for bench visualization in metrics",
+      "comments": 0
+    },
+    {
+      "number": 27,
+      "title": "0314, fix the front for report radar,  bench scores and bench visualization",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/27",
+      "body": "1. fix the radar, set the dimensons from seven aspects: \r\n(\"knowledge\", \"知识与百科\"),\r\n(\"reasoning\", \"逻辑推理\"),\r\n(\"mathematics\", \"数学能力\"),\r\n(\"coding\", \"代码能力\"),\r\n(\"language\", \"理解与生成\"),\r\n(\"instruction\", \"指令遵循\"),\r\n(\"safety\", \"安全与对齐\"),\r\n\r\n2. set the primary score as the dataflow evaluator score\r\n\r\n3. fix the metric recommend window and add selection option",
+      "comments": 0
+    },
+    {
+      "number": 26,
+      "title": "Feat/reclassify bench categories",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/26",
+      "body": "添加中英文的description",
+      "comments": 0
+    },
+    {
+      "number": 24,
+      "title": "Feat/reclassify bench categories",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/24",
+      "body": "添加更多常用的benchmark，在本地已经完全通过测试。",
+      "comments": 0
+    },
+    {
+      "number": 23,
+      "title": "0310： update front for metric and report",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/23",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 22,
+      "title": "配置环境",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/22",
+      "body": "修改requirement.txt和pyproject.toml内容",
+      "comments": 0
+    },
+    {
+      "number": 21,
+      "title": "refactor: BenchGallery修复 还有当时论文做实验时候设置的阈值同步修改",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/21",
+      "body": "BenchGallery修复\r\n还有当时论文做实验时候设置的阈值同步修改\r\n\r\n- bench_gallery.json: reclassify 77 benchmarks from 6 to 9 categories (Agents & Tools, Knowledge & QA, Reasoning, Long Context & RAG, Instruction & Chat, Domain-Specific, Safety & Alignment, Math, Coding)\r\n- Gallery.tsx: update BenchCategory type, filter tabs, icons; remove unused sampleCount field\r\n- bench_name_suggest_node.py: add score threshold filtering (TFIDF=0.3, RAG=0.5), route low-quality results to BenchResolveAgent for HF search",
+      "comments": 0
+    },
+    {
+      "number": 20,
+      "title": "metric recommend·代码去冗余以及添加了部分report功能",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/20",
+      "body": "1. 简化了metric recommend部分的代码\r\n2. 添加了初步的 report generation，包括metric分数汇总、生成答案长度分布、错例展示、llm总结",
+      "comments": 0
+    },
+    {
+      "number": 19,
+      "title": "Revert \"fix the recommend system \"",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/19",
+      "body": "Reverts OpenDCAI/One-Eval#18",
+      "comments": 0
+    },
+    {
+      "number": 18,
+      "title": "fix the recommend system ",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/18",
+      "body": "1. 去除了metric recommend部分的代码冗余\r\n2. 添加了初步的 report_gen 的功能：包括测评分数结果汇总、LLM总结",
+      "comments": 0
+    },
+    {
+      "number": 17,
+      "title": "refine metric recommend and add score calc",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/17",
+      "body": "改动：\r\n1. 修改 one_eval/nodes/dataflow_eval_node.py 的测评逻辑，\r\n  1. 将键值对映射关系存储到state中，用于后续读取step_2文件\r\n  2. 取消节点内部循环evaluation流程，改为 build graph 时添加条件边（需构造一个判断函数）\r\n修改原因；原始的测评节点为单点内循环更新state值然后跳转到自身，在建图时需要设置一个eval_node -> metric_node 的边，这个边的设置比较麻烦，设置不当容易造成当前流程同时执行两个节点的任务（eval的循环以及metric的推荐，同时调用LLM导致request冲突）\r\nAI给出的方案是\r\n  - 【方案一】在 dataflow_eval_node.py 中，显示指定再测完所有bench之后，使用command指令跳转到 metric_recommend_node\r\n  - 【方案二】取消 dataflow_eval_node.py 的点内循环逻辑，改为在建图时使用条件边判断是否结束，需要用到一个判断函数（未来可以封装为toolkit），然后使用条件边进行跳转\r\n目前的修改采用的是方案二\r\n\r\n2. 修改 one_eval/toolkits/dataflow_eval_tool.py 返回值\r\n  1. 将键值对映射关系存储到state中，便于后续score计算时读取\r\n\r\n3. [服务器运行补丁] 修改 one_eval/core/graph.py 中的节点包装器\r\n  1. 目的是为了在py310的环境中顺利运行\r\n  2. 未来可将环境升级为 py311+vllm 的环境，则 graph.py 内容无需改动\r\n\r\n4. 添加 one_eval/graph/workflow_all_end.py，用于完整测试从自然语言到分数输出的测试文件\r\n\r\n5. 添加 metric推荐功能\r\n  1. 添加 one_eval/metrics 文件夹，用于存放metric注册文件以及注册表、导向、prompt生成等\r\n  2. 添加 one_eval/agents/metric_recommend_agent.py， 用于推荐metric（推荐逻辑进一步简化，均使用LLM分析兜底）\r\n  3. 添加 one_eval/nodes/metric_recommend_node.py\r\n  4. 添加 one_eval/core/metric_registry.py\r\n  5. 修改 one_eval/utils/prompts.py【待修改】\r\n  6. 添加 one_eval/utils/extractor.py\r\n  7. 添加 One-Eval/HOW_TO_REGISTER_METRIC.py，用于说明metric注册方式以及推荐逻辑\r\n\r\n6. 添加 score计算功能\r\n  1. 添加 one_eval/agents/score_calc_agent.py\r\n  2. 添加 one_eval/nodes/score_calc_node.py",
+      "comments": 0
+    },
+    {
+      "number": 16,
+      "title": "重构了metric推荐系统",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/16",
+      "body": "1.  删除了one-eval/metrics/core.py，移植为one-eval/core/metric_registry.py\r\n2.  重构了metric推荐逻辑。去除启发式推理部分，改为三层推荐：用户指定 > 注册表信息作为建议 > LLM推荐，具体可见 HOW_TO_REGISTER_METRIC.md 文档\r\n3.  微调了 one_eval/nodes/dataflow_eval_node.py 以及 one_eval/toolkits/dataflow_eval_tool.py， 用于向 state 注入 key映射 信息，便于后续计算 score",
+      "comments": 0
+    },
+    {
+      "number": 15,
+      "title": "改前端，做RAG后端接口实现，添加更多本地benchmark",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/15",
+      "body": "添加了新的xlsx，包含77个benchmark。\r\n修改了前端，添加了更多的benchmark卡片。\r\n添加了rag的处理逻辑，前后端都有。",
+      "comments": 0
+    },
+    {
+      "number": 14,
+      "title": "front bug fixed",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/14",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 13,
+      "title": "重构了metric注册方式,添加workflow全程测试文件",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/13",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 12,
+      "title": "feat: 添加BenchmarkSelect的新匹配算法以及RAG检索",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/12",
+      "body": "如题，添加benchmarkSelect的新算法：1，向量化检索，用同个API调用OpenAI的embedding模型向量化，然后算余弦相似度；2，TF词匹配，这个处理不了双语，如果输入是中文的话匹配效果很差。",
+      "comments": 0
+    },
+    {
+      "number": 11,
+      "title": "add score calc agent, metrics lib, and test script",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/11",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 10,
+      "title": "fix the metric recommend strategy",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/10",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 9,
+      "title": "fix metric_recommender_agent and add test scripts",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/9",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 8,
+      "title": "add metric_recommend_agent and test scripts",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/8",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 7,
+      "title": "add metric_recommend and test script",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/7",
+      "body": null,
+      "comments": 1
+    },
+    {
+      "number": 6,
+      "title": "Add test_ckpt and update test_interrupt",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/6",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 5,
+      "title": "fix interrupt，add checkpoiner",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/5",
+      "body": null,
+      "comments": 0
+    },
+    {
+      "number": 4,
+      "title": "ckpt与Interrupt",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/4",
+      "body": "添加改动：\r\n1. 修改了 graph.py 的 build() 与 _wrap_node_with_tools() 方法，用于支持传入 ckpt 与 config\r\n2. 修改了 workflow.py ，用于展示如何构建 支持ckpt的工作流\r\n3. 修改了 interrupt_node.py，修补潜在漏洞 ",
+      "comments": 1
+    },
+    {
+      "number": 3,
+      "title": "Add checkpointer",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/3",
+      "body": "修改了graph.py的build方法，在workflow.py中添加了使用checkpointer的样例",
+      "comments": 0
+    },
+    {
+      "number": 2,
+      "title": "人机交互中的 Interrupt ",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/2",
+      "body": "添加了 interrupt_node.py，实现 InterruptNode 类\r\n修改了 State.py， 添加 approved_warning_ids 字段\r\n添加了 test_interrupt.py，用于测试 InterruptNode 类",
+      "comments": 0
+    },
+    {
+      "number": 1,
+      "title": "xlsx to json",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/1",
+      "body": "添加了一个xlsx转换json的接口，添加了bench-key.xlsx文件",
+      "comments": 0
+    }
+  ]
+}

@@ -1,0 +1,1473 @@
+{
+  "repository": "OpenDCAI/One-Eval",
+  "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "git_blob_sha": "67e88a261cf481933df1464aef2c60502931d8f7",
+  "bench_count": 121,
+  "contract_counts": {
+    "choice_accuracy|total": 49,
+    "exact_match|total": 23,
+    "token_f1|total": 20,
+    "repetition_rate|total": 5,
+    "numerical_match|total": 5,
+    "math_verify|total": 8,
+    "code_validity|total": 1
+  },
+  "contracts": [
+    {
+      "path": "gallery.benches[0].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "distractors"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[1].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "correct_diagnosis",
+          "distractor1",
+          "distractor2",
+          "distractor3"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[2].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "option1",
+          "option2",
+          "option3",
+          "option4"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[3].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "opa",
+          "opb",
+          "opc",
+          "opd"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[4].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-C",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "yes",
+          "no",
+          "maybe"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[5].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "options"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[6].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[7].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-E",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "options.A",
+          "options.B",
+          "options.C",
+          "options.D",
+          "options.E"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[8].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[9].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[10].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[11].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[12].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[13].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[14].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "options"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[15].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[16].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[17].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[18].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "option_a",
+          "option_b",
+          "option_c",
+          "option_d"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[19].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[20].meta.evaluation",
+      "primary_metric": "repetition_rate",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[21].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation_proxy"
+    },
+    {
+      "path": "gallery.benches[22].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "decomposed_questions"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[23].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation_proxy"
+    },
+    {
+      "path": "gallery.benches[24].meta.evaluation",
+      "primary_metric": "repetition_rate",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[25].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[26].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[27].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[28].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation_proxy"
+    },
+    {
+      "path": "gallery.benches[29].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[30].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[31].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[32].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[33].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-J",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "options"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[34].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[35].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[36].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "correct_answer",
+          "distractor1",
+          "distractor2",
+          "distractor3"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[37].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[38].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "Correct Answer",
+          "Incorrect Answer 1",
+          "Incorrect Answer 2",
+          "Incorrect Answer 3"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[39].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[40].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "endings"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[41].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-B",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "true",
+          "false"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[42].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[43].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[44].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[45].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "options"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[46].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[47].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[48].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[49].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-B",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[50].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "supporting_sentences"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[51].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[52].meta.evaluation",
+      "primary_metric": "repetition_rate",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[53].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[54].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[55].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[56].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[57].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[58].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[59].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "choice_A",
+          "choice_B",
+          "choice_C",
+          "choice_D"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[60].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[61].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[62].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[63].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[64].meta.evaluation",
+      "primary_metric": "numerical_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[65].meta.evaluation",
+      "primary_metric": "numerical_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[66].meta.evaluation",
+      "primary_metric": "numerical_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[67].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-E",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "options"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[68].meta.evaluation",
+      "primary_metric": "numerical_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[69].meta.evaluation",
+      "primary_metric": "numerical_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[70].meta.evaluation",
+      "primary_metric": "math_verify",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[71].meta.evaluation",
+      "primary_metric": "math_verify",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[72].meta.evaluation",
+      "primary_metric": "math_verify",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[73].meta.evaluation",
+      "primary_metric": "math_verify",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[74].meta.evaluation",
+      "primary_metric": "math_verify",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[75].meta.evaluation",
+      "primary_metric": "math_verify",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[76].meta.evaluation",
+      "primary_metric": "math_verify",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[77].meta.evaluation",
+      "primary_metric": "math_verify",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[78].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[79].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "option"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[80].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[81].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[82].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-B",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "option1",
+          "option2"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[83].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "premise"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[84].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "hypothesis"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[85].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "hypothesis"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[86].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[87].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[88].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[89].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[90].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[91].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[92].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[93].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "choices"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[94].meta.evaluation",
+      "primary_metric": "code_validity",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[95].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "option_a",
+          "option_b",
+          "option_c",
+          "option_d"
+        ]
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[96].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[97].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation_proxy"
+    },
+    {
+      "path": "gallery.benches[98].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "options"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[99].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "sentences"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[100].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "pronoun"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[101].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation_proxy"
+    },
+    {
+      "path": "gallery.benches[102].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation_proxy"
+    },
+    {
+      "path": "gallery.benches[103].meta.evaluation",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "blue_conversations"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[104].meta.evaluation",
+      "primary_metric": "exact_match",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[105].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation_proxy"
+    },
+    {
+      "path": "gallery.benches[106].meta.evaluation",
+      "primary_metric": "repetition_rate",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[107].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation_proxy"
+    },
+    {
+      "path": "gallery.benches[108].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation_proxy"
+    },
+    {
+      "path": "gallery.benches[109].meta.evaluation",
+      "primary_metric": "repetition_rate",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation"
+    },
+    {
+      "path": "gallery.benches[110].meta.evaluation",
+      "primary_metric": "token_f1",
+      "denominator": "total",
+      "parser": {
+        "type": "no_parse"
+      },
+      "prediction_mode": "generation_proxy"
+    }
+  ]
+}

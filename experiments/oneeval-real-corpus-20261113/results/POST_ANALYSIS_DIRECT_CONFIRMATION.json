@@ -1,0 +1,53 @@
+{
+  "selection": "Post-analysis verification of observed extrema; not a new replication cohort.",
+  "observations": [
+    {
+      "dataset": "MMLUPRO",
+      "system": "TAM",
+      "cohort": "terminal_network",
+      "order": "sha256_seed_6",
+      "workers": 8,
+      "scores": {
+        "choice_accuracy": 0.7721518987341772,
+        "accuracy": 0.772862570560139,
+        "acc": 0.772862570560139
+      }
+    },
+    {
+      "dataset": "MMLUPRO",
+      "system": "TAM",
+      "cohort": "terminal_network",
+      "order": "source",
+      "workers": 8,
+      "scores": {
+        "choice_accuracy": 0.7721518987341772,
+        "accuracy": 0.771451955782313,
+        "acc": 0.771451955782313
+      }
+    },
+    {
+      "dataset": "MMLU",
+      "system": "TAM",
+      "cohort": "terminal_all_agents",
+      "order": "source",
+      "workers": 8,
+      "scores": {
+        "choice_accuracy": 0.6897216864149903,
+        "accuracy": 0.6898475895416476,
+        "acc": 0.6898475895416476
+      }
+    },
+    {
+      "dataset": "MMLU",
+      "system": "XG-Guard",
+      "cohort": "terminal_all_agents",
+      "order": "source",
+      "workers": 8,
+      "scores": {
+        "choice_accuracy": 0.6897680763983629,
+        "accuracy": 0.6893974970376215,
+        "acc": 0.6893974970376215
+      }
+    }
+  ]
+}

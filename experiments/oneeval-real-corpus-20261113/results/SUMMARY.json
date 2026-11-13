@@ -1,0 +1,54 @@
+{
+  "source_files": 21,
+  "source_identity_all_verified": true,
+  "within_dataset_gold_and_group_alignment": true,
+  "new_inference_calls": 0,
+  "actual_api_invocations_verified": 1848,
+  "exact_score_replay_combinations": 11088,
+  "strict_reversal_rows": 6,
+  "top_set_change_rows": 6,
+  "primary_network_rows": 8400,
+  "secondary_agent_rows": 84000,
+  "cohorts": {
+    "terminal_network": {
+      "max_absolute_change_pp": 0.07106718259617395,
+      "strict_reversal_rows": 0,
+      "parse_failed": 18,
+      "empty_output": 0,
+      "invalid_references": 0,
+      "max_change_example": {
+        "cohort": "terminal_network",
+        "dataset": "MMLUPRO",
+        "system": "TAM",
+        "denominator": "valid_only",
+        "name": "accuracy",
+        "workers": 8,
+        "order": "sha256_seed_6",
+        "score": 0.772862570560139,
+        "canonical_score": 0.7721518987341772,
+        "delta_pp": 0.07106718259617395,
+        "method": "exact_chunk_reducer_replay"
+      }
+    },
+    "terminal_all_agents": {
+      "max_absolute_change_pp": 0.06709044914371409,
+      "strict_reversal_rows": 6,
+      "parse_failed": 8338,
+      "empty_output": 120,
+      "invalid_references": 0,
+      "max_change_example": {
+        "cohort": "terminal_all_agents",
+        "dataset": "MMLUPRO",
+        "system": "DOMINANT",
+        "denominator": "valid_only",
+        "name": "accuracy",
+        "workers": 8,
+        "order": "source",
+        "score": 0.5946703539822161,
+        "canonical_score": 0.593999449490779,
+        "delta_pp": 0.06709044914371409,
+        "method": "exact_chunk_reducer_replay"
+      }
+    }
+  }
+}
