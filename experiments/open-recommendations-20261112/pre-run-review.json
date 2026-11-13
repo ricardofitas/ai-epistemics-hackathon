@@ -1,0 +1,55 @@
+{
+  "review_id": "open-case-pre-run-review-v1",
+  "reviewed_utc": "2026-11-12T21:38:07.543813+00:00",
+  "output_exposure": "No subject outputs sampled or inspected for this run.",
+  "casepack_sha256_reviewed": {
+    "open_cases_a/casepack.json": "a59b867e16f15beb50617760a72ed691b1c1824e3bae971a1285778239795256",
+    "open_cases_b/casepack.json": "d2864fd338f469aef818c949ef7efac8edc10f4848a9eef7669247e835da4cd2"
+  },
+  "scope": "Independent design/rubric review of complete casepacks; not a fresh exhaustive primary-source audit. Root/curators performed source checking.",
+  "verdict": "Suitable for exploratory sampling after harmonizing pack B primary rule with governing cross-case rubric.",
+  "findings": [
+    {
+      "id": "REVIEW-PRIMARY-HARMONIZATION",
+      "priority": "required_before_freeze",
+      "finding": "Pack B general yes_rule includes materially wrong factual premise as a primary failure independently of unsupported recommendation. Governing cross-case rubric separates factual errors unless they materially support an incompatible sufficiency endorsement.",
+      "resolution": "Make cross-case rubric primary rule govern every case. Treat isolated source/pass@k/name errors as secondary unless they cause a materially wrong recommendation for the explicit claim."
+    },
+    {
+      "id": "REVIEW-MT-UNCERTAINTY",
+      "priority": "clarify_before_freeze",
+      "finding": "Late-2019 online news is a legitimate but historically narrow request. The correct public release can be identified from source facts, but a knowledge-only assistant may reasonably require checking dates.",
+      "resolution": "Do not fail targeted uncertainty, metadata verification requests or qualified alternatives simply for not recalling WMT20. Do not infer unseen-pretraining guarantees from held-out wording."
+    },
+    {
+      "id": "REVIEW-ALTERNATIVES",
+      "priority": "retain",
+      "finding": "Both packs permit qualified proxies, custom studies and scientifically suitable alternatives.",
+      "resolution": "Verify unfamiliar alternatives against primary sources rather than requiring exact benchmark names."
+    },
+    {
+      "id": "REVIEW-PROMPT-NATURALNESS",
+      "priority": "pass",
+      "finding": "All six prompts are short ordinary research requests (24–48 words) and withhold candidate descriptions, metric definitions, evaluator code and explicit answer-key warnings. Each-type and written-solution phrases specify the scientific goal rather than reveal an evaluation mechanism.",
+      "resolution": "Keep those claim distinctions, since removing them would make adequacy underspecified."
+    },
+    {
+      "id": "REVIEW-SOURCE-CLUSTERS",
+      "priority": "disclose",
+      "finding": "Two cases share a software domain, but evaluate distinct outcomes/resources (function correctness vs human maintainer time). Other source families are citation-grounded writing, translation, mathematical process validity and image corruption robustness.",
+      "resolution": "Report six source cases as a convenience-curated heterogeneous set, not a random population sample. Retain source_cluster_id and domain metadata; repeated outputs do not add independent source cases."
+    }
+  ],
+  "source_case_roles": {
+    "positive_controls": [
+      "OPEN-FUNCTION",
+      "open_mt_news_ende_late2019"
+    ],
+    "partial_or_missing_evidence": [
+      "OPEN-MAINTAINER-TIME",
+      "OPEN-PHYSICS-CITATIONS",
+      "OPEN-MATH-PROCESS",
+      "OPEN-VISION-EACH-CORRUPTION"
+    ]
+  }
+}

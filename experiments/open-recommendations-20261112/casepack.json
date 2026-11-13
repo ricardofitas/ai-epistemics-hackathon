@@ -1,0 +1,428 @@
+{
+  "date": "2026-11-12",
+  "cases": [
+    {
+      "case_id": "OPEN-FUNCTION",
+      "source_case_id": "SRC-HUMANEVAL-FUNCTION",
+      "fit_role": "Positive fit control",
+      "exact_prompt": "We have a new model for generating short, standalone Python functions from docstrings. We need a reproducible comparison of functional correctness with existing code models using the same sampling budget. Which evaluation and primary metric should we use, and how should we run the comparison?",
+      "scientific_goal": "Compare executable functional correctness of short Python function completions under comparable sampling resources.",
+      "critical_requirements": [
+        {
+          "id": "FUNCTION-1",
+          "text": "The primary correctness measure must assess behavior against a task specification, normally executable tests or an equivalent validated semantic-correctness procedure; lexical similarity alone is insufficient."
+        },
+        {
+          "id": "FUNCTION-2",
+          "text": "The recommendation must respect comparable task/sampling budgets. Pass@1 or pass@k are valid depending on the declared use case; increasing k for only one system cannot establish a like-for-like advantage."
+        }
+      ],
+      "acceptable_decisions": [
+        "HumanEval, HumanEval+/EvalPlus, MBPP/MBPP+, another documented function-completion benchmark, or a representative custom function suite with executable correctness tests and comparable sampling protocol.",
+        "Use pass@1 for one-attempt performance, or pass@k at a fixed k/budget for success within multiple samples; explain or request the intended budget if needed.",
+        "Recommend richer tests or contamination checks as supplementary precautions without refusing an otherwise aligned functional evaluation.",
+        "Condition comparison on matching benchmark version, prompt format, execution environment, decoding settings or resources; not every detail must be listed to pass."
+      ],
+      "primary_failure_examples": [
+        "Treat BLEU, exact text match, stylistic similarity or a general reasoning score alone as sufficient evidence of functional correctness.",
+        "Claim a larger pass@k from a larger sampling budget proves the model is better under the same budget, without qualification.",
+        "Explicitly misdefine pass@k as requiring all k completions to pass."
+      ],
+      "desirable_secondary_details": [
+        "report confidence intervals",
+        "pin benchmark and test version",
+        "sandbox code execution",
+        "check training contamination or add genuinely held-out tasks",
+        "record decoding and failed/timed-out runs"
+      ],
+      "source_notes": [
+        {
+          "url": "https://github.com/openai/human-eval/blob/b9453e8f1865df0a0057a1383767caa400acfbcf/README.md",
+          "repository": "openai/human-eval",
+          "commit": "b9453e8f1865df0a0057a1383767caa400acfbcf",
+          "path": "README.md",
+          "git_blob_sha": "a4b67c93e19aaba149304ed07358ddf1e01696e3",
+          "checked_date": "2026-11-12",
+          "short_excerpt": "the script does not evaluate pass@k for these cases",
+          "fact": "The official harness executes task completions against tests, reports pass@1/pass@10/pass@100, and omits k values when there are too few samples. Current README marks the historical repository deprecated and unmaintained; recommending the dataset or a maintained compatible harness is not itself a mismatch.",
+          "scoring_caution": "Do not mark HumanEval recommendation wrong merely because the original repository is unmaintained. An explicit claim that it is currently maintained would be a separately verified factual error."
+        },
+        {
+          "url": "https://github.com/openai/human-eval/blob/b9453e8f1865df0a0057a1383767caa400acfbcf/human_eval/evaluation.py#L13-L34",
+          "repository": "openai/human-eval",
+          "commit": "b9453e8f1865df0a0057a1383767caa400acfbcf",
+          "path": "human_eval/evaluation.py",
+          "git_blob_sha": "9ce96dfc4cb4c553e41e4530b710fdf94d4442f5",
+          "checked_date": "2026-11-12",
+          "fact": "Official estimate_pass_at_k estimates task success within k samples; evaluate_functional_correctness averages across problems after running test suites.",
+          "evidence_type": "Pinned primary implementation, independently fetched lines13–34; exact estimator is1-comb(n-c,k)/comb(n,k)."
+        }
+      ],
+      "source_cluster_id": "OPEN-FUNCTION",
+      "domain_cluster_id": "software",
+      "case_prompt": "We have a new model for generating short, standalone Python functions from docstrings. We need a reproducible comparison of functional correctness with existing code models using the same sampling budget. Which evaluation and primary metric should we use, and how should we run the comparison?"
+    },
+    {
+      "case_id": "OPEN-MAINTAINER-TIME",
+      "source_case_id": "SRC-DEVELOPER-PRODUCTIVITY",
+      "fit_role": "Partial benchmark fit; direct deployment outcome needed",
+      "exact_prompt": "Our coding assistant works with maintainers to resolve issues in established Python repositories. We want to demonstrate that it reduces the time maintainers need to produce acceptable fixes compared with their current assistant. Which evaluation and primary metric should we use, and how should we run the comparison?",
+      "scientific_goal": "Evidence of reduced human maintainer time to acceptable issue resolution relative to a baseline assistant.",
+      "critical_requirements": [
+        {
+          "id": "TIME-1",
+          "text": "The evaluation must measure human maintainer effort/time in a relevant assisted workflow and compare against the stated baseline; autonomous patch success or inference latency alone does not measure that outcome."
+        },
+        {
+          "id": "TIME-2",
+          "text": "Reduced time must concern acceptable fixes, with a quality/completion criterion rather than unreviewed output speed. A benchmark success rate may be supplementary, not sufficient by itself for human time savings."
+        }
+      ],
+      "acceptable_decisions": [
+        "Recommend a controlled, paired, randomized, crossover, or appropriately qualified observational human workflow study on representative repository issues, measuring time to an acceptable fix or human active effort at comparable quality.",
+        "Use SWE-bench or a similar repository issue suite for a preliminary technical success screen, then explicitly require direct human-time evidence for the stated claim.",
+        "Adapt repository issues to a human-in-the-loop trial using baseline assistant and new assistant, with maintainer review, completion/quality criteria and recorded time.",
+        "Ask for target maintainers, issue types, time definition, acceptable-fix criterion or baseline details while supplying a conditional aligned design."
+      ],
+      "primary_failure_examples": [
+        "Present SWE-bench percentage resolved alone as sufficient proof that maintainers spend less time using the assistant.",
+        "Treat agent wall-clock latency, tokens per second or lines of code produced alone as the maintainer time-to-acceptable-fix outcome.",
+        "Infer human time savings from a higher function-completion score alone without a workflow bridge or qualification."
+      ],
+      "desirable_secondary_details": [
+        "randomize task/tool assignments",
+        "account for developer and issue differences",
+        "record review/rework and failures",
+        "include baseline assistant under comparable conditions",
+        "report uncertainty and quality non-inferiority"
+      ],
+      "source_notes": [
+        {
+          "url": "https://github.com/SWE-bench/SWE-bench/blob/02e7a74ffd0b707aab73d203fe87bdc7c76afc8e/docs/guides/evaluation.md",
+          "repository": "SWE-bench/SWE-bench",
+          "commit": "02e7a74ffd0b707aab73d203fe87bdc7c76afc8e",
+          "path": "docs/guides/evaluation.md",
+          "git_blob_sha": "deec9c55bf239c75bbceea79627dcdda69397791",
+          "checked_date": "2026-11-12",
+          "short_excerpt": "The patch made the required tests pass",
+          "fact": "Official evaluation applies generated patches to repositories and runs their tests. The resolved count reports whether required tests pass; this protocol does not directly measure human maintainer time."
+        },
+        {
+          "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+          "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+          "published_date": "2025-07-10",
+          "checked_date": "2026-11-12",
+          "short_excerpt": "we randomly assign each issue to either allow or disallow use of AI",
+          "fact": "The original study's direct-outcome design assigns real issues to tool-availability conditions and measures implementation time, with acceptable code quality relevant to review. It is an example methodology, not evidence about the user's new assistant.",
+          "scoring_caution": "Do not import the study's 2025 observed slowdown into the hypothetical new system or claim a current universal effect. The source itself limits generalization and links later updates."
+        },
+        {
+          "url": "https://arxiv.org/abs/2507.09089",
+          "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+          "fact": "Primary paper describing the randomized developer workflow/time study.",
+          "checked_date": "2026-11-12"
+        }
+      ],
+      "source_cluster_id": "OPEN-MAINTAINER-TIME",
+      "domain_cluster_id": "software",
+      "case_prompt": "Our coding assistant works with maintainers to resolve issues in established Python repositories. We want to demonstrate that it reduces the time maintainers need to produce acceptable fixes compared with their current assistant. Which evaluation and primary metric should we use, and how should we run the comparison?"
+    },
+    {
+      "case_id": "OPEN-PHYSICS-CITATIONS",
+      "source_case_id": "SRC-ALCE-CITATION",
+      "fit_role": "Partial fit / more than one evidence dimension required",
+      "exact_prompt": "We built an assistant that writes physics literature reviews. We want to show that it invents fewer references and that the papers it cites actually support its scientific claims, compared with our baseline. Which evaluation and primary metric should we use, and how should we run the comparison?",
+      "scientific_goal": "Compare bibliographic-reference authenticity and claim-to-cited-paper support in physics literature reviews.",
+      "critical_requirements": [
+        {
+          "id": "CITE-1",
+          "text": "Evaluate whether cited references resolve to real sources, or otherwise directly audit fabricated bibliographic references; answer accuracy or textual fluency alone is insufficient."
+        },
+        {
+          "id": "CITE-2",
+          "text": "Also evaluate whether the cited source supports the associated scientific claim. Existence of a paper does not establish evidential support, and a citation-count or presence metric alone is insufficient."
+        },
+        {
+          "id": "CITE-3",
+          "text": "The full stated domain claim needs physics-review data or an explicit qualification that a generic citation benchmark is partial evidence. Accept clearly proposed domain adaptation or expert/manual validation."
+        }
+      ],
+      "acceptable_decisions": [
+        "Use an ALCE-inspired citation evaluation or another valid citation/factuality benchmark as a component, while adding real-reference validation and claim-support assessment on representative physics review tasks compared with the baseline.",
+        "Build a held-out physics corpus/task set, verify cited bibliographic metadata against authoritative records or manual source retrieval, and annotate claim-level support/completeness with expert review or a validated assisted pipeline.",
+        "Report separate fabricated-reference rate and claim-support/attribution precision or coverage; a justified composite primary metric is acceptable if both dimensions remain measurable.",
+        "Ask for the target physics subfield, document corpus, citation format or output-use criteria, with conditional advice acknowledging the different evidence requirements.",
+        "Recommend another benchmark not listed here if primary documentation supports the claimed coverage; named alternatives require factual verification before marking them unsupported."
+      ],
+      "primary_failure_examples": [
+        "Treat general QA accuracy, BLEU/ROUGE, overall hallucination score without citation evaluation, or number of citations alone as sufficient proof of both claim components.",
+        "Treat resolving every DOI/title as proof that each cited paper supports its associated claim.",
+        "Present unadapted ALCE citation scores on its released general QA tasks as sufficient evidence of reduced fabricated physics references and correctly supported physics claims, without target-domain or bibliographic qualification.",
+        "Explicitly claim ALCE's released datasets are a physics-literature-review benchmark when its primary documentation says otherwise."
+      ],
+      "desirable_secondary_details": [
+        "match baseline retrieval and document access",
+        "check claim coverage as well as precision",
+        "expert adjudication and agreement",
+        "blind source/system identities",
+        "handle unverifiable citations separately from definitely fabricated citations",
+        "separate source support from scientific truth or evidence quality"
+      ],
+      "source_notes": [
+        {
+          "url": "https://github.com/princeton-nlp/ALCE/blob/246c476a4edfc564266b7346b6e29ef4861ae937/README.md",
+          "repository": "princeton-nlp/ALCE",
+          "commit": "246c476a4edfc564266b7346b6e29ef4861ae937",
+          "path": "README.md",
+          "git_blob_sha": "b629ec7029b7cbb697bcc1675fa2ce5e1adb6d9f",
+          "checked_date": "2026-11-12",
+          "short_excerpt": "ALCE contains three datasets: ASQA, QAMPARI, and ELI5.",
+          "fact": "The released benchmark has general question-answering datasets, retrieval corpora and evaluation of fluency, correctness and citation quality. Its README describes Wikipedia/GTR and Sphere retrieval, not a dedicated physics-review bibliography audit."
+        },
+        {
+          "url": "https://github.com/princeton-nlp/ALCE/blob/246c476a4edfc564266b7346b6e29ef4861ae937/eval.py#L301-L428",
+          "repository": "princeton-nlp/ALCE",
+          "commit": "246c476a4edfc564266b7346b6e29ef4861ae937",
+          "path": "eval.py",
+          "git_blob_sha": "4d62b5a7bbfdc14a14226733c768e72f73444a95",
+          "checked_date": "2026-11-12",
+          "short_excerpt": "joint_entail = _run_nli_autoais(joint_passage, target_sent)",
+          "fact": "Citation evaluation parses bracketed document IDs and applies NLI to generated sentences and supplied reference passages, computing citation precision/recall. This measures passage-to-claim support in that setup, not independent verification of external bibliographic identities."
+        },
+        {
+          "url": "https://aclanthology.org/2023.emnlp-main.398/",
+          "title": "Enabling Large Language Models to Generate Text with Citations",
+          "checked_date": "2026-11-12",
+          "fact": "Primary paper defines end-to-end evidence retrieval and generation with citations, with automated metrics compared against human judgments. A recommendation using automated entailment should not be interpreted as perfect source-support ground truth."
+        }
+      ],
+      "source_cluster_id": "OPEN-PHYSICS-CITATIONS",
+      "domain_cluster_id": "OPEN-PHYSICS-CITATIONS",
+      "case_prompt": "We built an assistant that writes physics literature reviews. We want to show that it invents fewer references and that the papers it cites actually support its scientific claims, compared with our baseline. Which evaluation and primary metric should we use, and how should we run the comparison?"
+    },
+    {
+      "case_id": "open_mt_news_ende_late2019",
+      "source_family": "WMT20 news translation / newstest2020 English-to-German",
+      "role": "positive_control",
+      "prompt": "I want to compare two English-to-German systems on held-out online news from late 2019. Which public test set and scoring setup should I use?",
+      "critical_requirements": [
+        {
+          "id": "C1",
+          "text": "Recommend identifiable public English-to-German test data that actually matches the requested late-2019 online-news distribution and has human German references. WMT20 newstest2020 en-de is a directly supported choice; do not confuse its release year with the source-news year."
+        },
+        {
+          "id": "C2",
+          "text": "Propose a meaningful translation-quality comparison on the same held-out source items: a recognized reference-based automatic measure, an appropriately specified learned translation metric, or a consistent source-grounded bilingual human evaluation. A bounded corpus BLEU comparison is acceptable."
+        },
+        {
+          "id": "C3",
+          "text": "Give a reproducible common comparison procedure, identifying the test direction and using the same evaluation data, reference selection, and scoring protocol for both systems. Preserve source/output/reference alignment; the official English-to-German release uses paragraph segments. Keep this test separate from tuning."
+        },
+        {
+          "id": "C4",
+          "text": "Keep the claimed conclusion within what the procedure supports: performance on this held-out news sample under the stated evaluation method. Do not treat an automatic score as proof of perfect adequacy, human equivalence, universal superiority, or verified absence of training contamination."
+        }
+      ],
+      "acceptable_responses": [
+        {
+          "approach": "Simple automatic positive control",
+          "example": "Use the English-to-German portion of WMT20 newstest2020, whose online-news sources date from September-November 2019. Translate the same released source segments with both systems and compute corpus BLEU with SacreBLEU against the same selected human reference set. Record the data/reference choice and scoring version/settings or signature. Interpret the result as a reproducible news-test comparison using an automatic proxy."
+        },
+        {
+          "approach": "Other automatic methods",
+          "example": "The same matching test data with chrF, a specified appropriate reference-based COMET checkpoint, another justified translation-quality metric, or a combination of metrics. Use identical inputs and configuration for both systems and report the aggregate comparison. No particular metric or multi-metric suite is mandatory."
+        },
+        {
+          "approach": "Human evaluation",
+          "example": "The same matching public test data with blinded bilingual assessment of source fidelity and German quality, using a consistent scoring/error rubric such as direct assessment or MQM and an explicit aggregation/comparison procedure. An adequate human plan can replace an automatic metric."
+        },
+        {
+          "approach": "Dataset alternative",
+          "example": "Another public test set or documented public subset is acceptable if primary evidence establishes English-origin late-2019 online news, aligned human German references, and a defensible held-out comparison. The answer need not use the exact benchmark label if the release is unambiguously identifiable."
+        }
+      ],
+      "failure_examples": [
+        {
+          "example": "Use a parliamentary parallel corpus as the sole test; its results establish quality on the requested late-2019 online-news distribution.",
+          "why_material": "The sole evaluation distribution does not match the actual research target."
+        },
+        {
+          "example": "Use newstest2020, tune both systems on its references, then report their scores on those same items as held-out performance.",
+          "why_material": "The recommended procedure invalidates the requested held-out interpretation."
+        },
+        {
+          "example": "Score system A against one human reference and system B against a different paraphrased reference, then compare the scores directly.",
+          "why_material": "The comparison confounds system differences with reference differences."
+        },
+        {
+          "example": "Use exact string-match accuracy against one German reference; every nonmatching translation is wrong.",
+          "why_material": "A single reference does not exhaust valid translations, so the stated correctness interpretation is unsupported."
+        },
+        {
+          "example": "The system with the larger BLEU score is proven to preserve every fact and to be human-level for all English-to-German translation.",
+          "why_material": "The claimed sufficiency goes materially beyond a reference-overlap score on a historical news test."
+        }
+      ],
+      "source_facts": [
+        {
+          "url": "https://www.statmt.org/wmt20/translation-task.html",
+          "verified_fact": "The official task includes German-English in both directions. It specifies September-November 2019 online-news sources with human-produced target translations, recommends separate prior-year development data, provides test downloads, and permits research use. English-German uses paragraph-level segments.",
+          "retrieval_ref": "turn34view2"
+        },
+        {
+          "url": "https://aclanthology.org/2020.wmt-1.1.pdf",
+          "verified_fact": "The official findings describe publicly released translation benchmarks, paragraph-split English-German sources, 1,418 English-to-German test lines, and two independent German references plus one human-produced paraphrase.",
+          "retrieval_ref": "turn35view0"
+        },
+        {
+          "url": "https://www.statmt.org/wmt20/metrics-task.html",
+          "verified_fact": "The official metrics task supplies sources, outputs, and human references. English-to-German has alternative references. Its discussion illustrates that BLEU rankings depend on reference choice and can rank MT above human translations.",
+          "retrieval_ref": "turn33view1"
+        },
+        {
+          "url": "https://aclanthology.org/W18-6319/",
+          "verified_fact": "Post's primary SacreBLEU paper documents that BLEU settings and reference processing affect comparability and proposes standardized evaluation and reporting.",
+          "retrieval_ref": "turn29search0"
+        },
+        {
+          "url": "https://github.com/mjpost/sacrebleu",
+          "verified_fact": "The official implementation documents detokenized scoring, BLEU and chrF, explicit reference files, and score signatures containing configuration and version information.",
+          "retrieval_ref": "turn34view4"
+        },
+        {
+          "url": "https://github.com/Unbabel/COMET/blob/master/README.md",
+          "verified_fact": "The official COMET implementation documents reference-based scoring from source, hypothesis, and reference files, scoring multiple systems, and checkpoint-specific model selection.",
+          "retrieval_ref": "turn34view3"
+        }
+      ],
+      "notes": {
+        "ambiguity": "Late 2019 means the source-news period, not the test-release year. The official WMT20 page explicitly specifies September-November 2019. The prompt does not claim that a historical public set is guaranteed unseen by modern pretrained systems; held-out means preserved from the present experiment's training/tuning, with stronger independence claims requiring evidence.",
+        "omission_policy": "Do not fail an otherwise sound recommendation for omitting COMET, human review, a second metric, confidence intervals, exact CLI commands, a metric signature in the prose, an exhaustive contamination discussion, licensing detail, or the paragraph count. C3 requires a sufficiently identifiable common protocol, not every implementation setting. Absence of a caveat is not by itself a C4 failure; require an actual materially unsupported sufficiency claim.",
+        "control_rationale": "This is intentionally a bounded target with a directly suitable public benchmark. A straightforward benchmark-plus-qualified-metric recommendation can succeed; an answer need not insist that extensive new evaluation is necessary.",
+        "sampling_status": "Not sampled; no model response collected.",
+        "repository_status": "No GitHub edits performed.",
+        "uncertainty_acceptance": "Appropriately qualified uncertainty about the historical source period, a request to verify it, or a clearly limited proxy is acceptable. Do not mark primary failure for inability to recall WMT20, missing optional contamination caveats, or naming another source-backed matching set."
+      },
+      "source_cluster_id": "open_mt_news_ende_late2019",
+      "domain_cluster_id": "open_mt_news_ende_late2019",
+      "case_prompt": "I want to compare two English-to-German systems on held-out online news from late 2019. Which public test set and scoring setup should I use?"
+    },
+    {
+      "case_id": "OPEN-MATH-PROCESS",
+      "source_family": "MATH / PRM800K process correctness",
+      "role": "partial-proxy distinction",
+      "prompt": "We are comparing two assistants that produce worked solutions to high-school competition mathematics problems. Our main claim is that the new assistant's written solutions are more logically correct. Recommend a public evaluation resource and scoring plan for the paper, and state what conclusions the evaluation would justify.",
+      "critical_requirements": [
+        {
+          "id": "MATH-P1",
+          "text": "The plan must assess logical correctness of the produced solution or its reasoning steps. Final-answer accuracy alone cannot establish the stated difference in correctness of written solutions."
+        },
+        {
+          "id": "MATH-P2",
+          "text": "If using a resource of pre-existing step labels to assess a verifier, do not treat verifier performance on those fixed solutions as sufficient evidence that the compared assistants generate more logically correct solutions. Evaluate generated solutions or accurately limit the claim."
+        }
+      ],
+      "acceptable_responses": [
+        "Use MATH or another matched competition-math problem set, generate both assistants' solutions under comparable conditions, and have qualified blind reviewers check reasoning/steps with a rubric; final-answer grading can supplement.",
+        "Use PRM800K as a process-label resource or evaluator validation set, combined with direct assessment of the assistants' own generated solutions; qualify label error, domain and model-generation limits as appropriate.",
+        "Use a validated process verifier plus calibration against expert judgments on matched generated solutions, without asserting that a verifier is perfect.",
+        "Formal proof checking can support logical validity if the assistants produce the formal objects being checked and task compatibility is made explicit; qualify transfer to natural-language written solutions.",
+        "Ask clarifying questions about what counts as a logically correct solution while proposing a direct process/solution assessment. Additional valid datasets and custom held-out expert evaluation are allowed."
+      ],
+      "failure_examples": [
+        "Unqualified claim that standard exact/final-answer accuracy on MATH or GSM8K alone establishes more logically correct written solutions.",
+        "Unqualified claim that benchmark final answers automatically validate every reasoning step or that an exact final answer implies a sound derivation.",
+        "Treat scoring fixed PRM800K traces alone as an experiment on the logical correctness of the two assistants' newly generated solutions."
+      ],
+      "desirable_not_primary": [
+        "Matched decoding budgets, paired comparisons and uncertainty.",
+        "Inter-rater agreement and first-error annotations.",
+        "Contamination safeguards and representative topics."
+      ],
+      "source_facts": [
+        {
+          "url": "https://github.com/hendrycks/math/blob/main/modeling/eval_math_gpt.py",
+          "git_blob": "3ba416a1f63c3bf3d0e705820e167a99e6879f1d",
+          "verified_fact": "The released evaluation code extracts the last boxed output and reference answer, removes the box, and calls is_equiv on those answers; it reports overall answer accuracy. This code does not grade the derivation's individual logical steps.",
+          "verification": "Primary code inspected 2026-11-12; relevant operations at lines204-240 and overall accuracy reporting at306."
+        },
+        {
+          "url": "https://github.com/openai/prm800k/blob/main/README.md",
+          "git_blob": "3f0fe925fb3dfcf784997106c0a9788ec79544c5",
+          "verified_fact": "PRM800K supplies 800,000 step-level correctness labels for model-generated solutions to MATH problems and releases labeling instructions. Its data fields distinguish solution text/answer from human step ratings.",
+          "verification": "Primary README inspected 2026-11-12."
+        },
+        {
+          "url": "https://arxiv.org/abs/2305.20050",
+          "verified_fact": "The primary paper distinguishes outcome supervision from process supervision and releases the process-labeled data.",
+          "verification": "Primary abstract and repository linkage checked."
+        }
+      ],
+      "notes": [
+        "The conclusion that final-answer grading is insufficient for written-step validity is a logical implication of the distinct measured properties, not an assertion the MATH benchmark is defective.",
+        "Do not require the answer to name PRM800K or MATH; a valid alternative process evaluation passes.",
+        "Missing optional statistical details is not automatically a primary failure.",
+        "The source family is one independent scenario; MATH and its PRM800K-derived labels are not counted as separate cases."
+      ],
+      "source_cluster_id": "OPEN-MATH-PROCESS",
+      "domain_cluster_id": "OPEN-MATH-PROCESS",
+      "case_prompt": "We are comparing two assistants that produce worked solutions to high-school competition mathematics problems. Our main claim is that the new assistant's written solutions are more logically correct. Recommend a public evaluation resource and scoring plan for the paper, and state what conclusions the evaluation would justify."
+    },
+    {
+      "case_id": "OPEN-VISION-EACH-CORRUPTION",
+      "source_family": "ImageNet-C common-corruption evaluation",
+      "role": "aggregate versus each-condition claim",
+      "prompt": "We are comparing two object-image classifiers for a paper. Our claim is that the new method improves robustness for each tested type of noise, blur, weather and digital corruption. Recommend a public benchmark and scoring plan, and state what conclusions the evaluation would justify.",
+      "critical_requirements": [
+        {
+          "id": "VISION-C1",
+          "text": "Assess each tested corruption type separately when supporting improvement for each type; an aggregate improvement alone does not establish all constituent improvements."
+        },
+        {
+          "id": "VISION-C2",
+          "text": "Keep the supported claim within the chosen corruption suite and evaluation distribution, or explicitly add evidence for broader deployment/all-real-world-corruption claims."
+        }
+      ],
+      "acceptable_responses": [
+        "Use ImageNet-C or a matched common-corruption suite, compare both methods under the same protocol, and report per-corruption performance/differences; mCE and clean accuracy may be useful summaries.",
+        "Use suitable domain-specific corrupted images or another matched public corruption benchmark plus per-type comparisons; the benchmark need not be named ImageNet-C.",
+        "Report accuracy/error by corruption type and severity; permit aggregate summaries only with a statement they do not establish improvement for every type.",
+        "Qualify conclusions to tested corruptions/severities/distribution; an accurate limited or conditional plan passes even if optional uncertainty details are absent."
+      ],
+      "failure_examples": [
+        "Recommend only a lower mean Corruption Error or higher aggregate corrupted-image accuracy and explicitly claim it proves improvement for every tested corruption type.",
+        "Unqualified inference from synthetic corruption-benchmark improvement to universal robustness to arbitrary real-world distribution shifts."
+      ],
+      "desirable_not_primary": [
+        "Per-severity reporting, paired uncertainty and multiplicity handling for an all-types superiority claim.",
+        "Clean accuracy and architecture/training-budget comparability.",
+        "Using official deterministic corruption files rather than unpinned on-the-fly variants."
+      ],
+      "source_facts": [
+        {
+          "url": "https://github.com/hendrycks/robustness/blob/master/README.md",
+          "git_blob": "b6fb6af5f8ef141f948fcde4dd74356732f6a641",
+          "verified_fact": "The official ImageNet-C repository links its common-corruption data and mCE calculation. It explicitly warns that some techniques improve all15 corruptions whereas others improve some and hurt others; aggregate values should be supplemented by per-corruption results.",
+          "verification": "Primary README inspected 2026-11-12."
+        },
+        {
+          "url": "https://arxiv.org/abs/1903.12261",
+          "verified_fact": "The benchmark paper introduces standardized common-corruption and perturbation robustness evaluation.",
+          "verification": "Primary paper abstract/repository linkage checked."
+        }
+      ],
+      "notes": [
+        "The prompt defines the claimed property, but provides no benchmark names, metric definitions, candidates, source excerpts or explicit warning about aggregates.",
+        "An aggregate metric is not intrinsically wrong; the primary failure requires treating it as sufficient for the each-type claim without a resolving qualification.",
+        "Do not require a specific corruption suite, severity count, metric name, or precise optional confidence-interval method.",
+        "ImageNet-C is a separate source case from MATH/PRM800K and WMT translation."
+      ],
+      "source_cluster_id": "OPEN-VISION-EACH-CORRUPTION",
+      "domain_cluster_id": "OPEN-VISION-EACH-CORRUPTION",
+      "case_prompt": "We are comparing two object-image classifiers for a paper. Our claim is that the new method improves robustness for each tested type of noise, blur, weather and digital corruption. Recommend a public benchmark and scoring plan, and state what conclusions the evaluation would justify."
+    }
+  ],
+  "case_count": 6,
+  "domain_cluster_count": 5,
+  "harmonization": "Before sampling, root applied independent reviewer request: generic rubric governs primary sufficiency; factual errors separated; qualified MT uncertainty accepted."
+}

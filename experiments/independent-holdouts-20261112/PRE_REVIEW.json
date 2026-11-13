@@ -1,0 +1,104 @@
+{
+  "review_id": "holdout-a-independent-prereview-v1",
+  "reviewer_role": "fresh independent agent prereview; not human approval",
+  "reviewed_utc": "2026-11-12T23:50:35.681934+00:00",
+  "status": "accepted_for_four_descriptive_calls_with_scoring_clarifications_below",
+  "new_subject_responses_seen": false,
+  "cases_sha256": "5197796e02c5eaf2bd2b7379035aa5b83667aa8b6fce908a8d8174d9ac3c07dc",
+  "general_rubric_path": "/workspace/scratch/3a7fad3d11db/open_design/rubric.json",
+  "general_rubric_sha256": "eb1ae36763232627e76b65339045746375b41107d44252fd36e8d5bb331f713c",
+  "plan": {
+    "cases": 2,
+    "requested_configurations": [
+      "gpt-6.1-sol inherited",
+      "gpt-6-luna requested override"
+    ],
+    "prompt_package": "exact natural_prompt only, shared minimal memory-only launcher",
+    "repetitions_per_cell": 1,
+    "requested_calls": 4,
+    "analysis": "Descriptive case/configuration observations only. No prevalence, stochastic replication or population model-ranking claim."
+  },
+  "source_verification": {
+    "NQ_paper": {
+      "url": "https://aclanthology.org/Q19-1026/",
+      "ref": "turn96view0",
+      "finding": "Confirmed real anonymized Google queries, supplied Wikipedia pages, short/long/null annotations."
+    },
+    "NQ_README_and_eval": {
+      "url": "https://github.com/google-research-datasets/natural-questions/tree/fb26a3073b1fe636c97302890a27b491d6530130",
+      "verifier": "child verify_holdout_sources via primary pinned GitHub connector",
+      "finding": "Confirmed README provenance/HTML/annotations and exact-span precision/recall/F1 with multi-annotator answerability rules. README and evaluator blob SHAs agree with cases.json."
+    },
+    "MedQA_paper": {
+      "url": "https://arxiv.org/abs/2009.13081v1",
+      "ref": "turn96view1",
+      "finding": "Confirmed professional-board-exam multiple-choice provenance and QA test accuracy. Does not establish triage-disposition performance."
+    },
+    "MedQA_README": {
+      "url": "https://github.com/jind11/MedQA/blob/27b02f66aac217933c9648a06f82e9f720377925/README.md",
+      "verifier": "child verify_holdout_sources via primary pinned GitHub connector",
+      "finding": "Confirmed exam sources, splits and 4-option variants. Blob SHA agrees with cases.json."
+    },
+    "triage_audit": {
+      "url": "https://www.bmj.com/content/351/bmj.h3480",
+      "ref": "turn98search0",
+      "alternative_primary_copy": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4496786/",
+      "alternative_ref": "turn98search2",
+      "access_note": "Direct BMJ open returned 403; search retrieved primary BMJ abstract and PMC full-text listing. No claims of adult-only corpus or complete supplementary-vignette enumeration.",
+      "finding": "Confirmed separate diagnosis and triage outcomes and 45 vignettes distributed over emergent, non-emergent and self-care reference categories."
+    }
+  },
+  "case_reviews": [
+    {
+      "case_id": "heldout_nq_real_query_extraction_positive",
+      "ordinary_prompt": "Natural, explicit, sufficiently answerable without benchmark cues. No exact named benchmark is demanded.",
+      "acceptance_criterion_id_map": {
+        "NQ-A1": "Natural Questions in its original page-provided setting is a directly suitable positive control; accept it rather than rejecting it for lacking conversation or live-web coverage.",
+        "NQ-A2": "Accept another public resource only if its actual question provenance, evidence and answer annotations fit the stated real-user English extraction task, or if proposed adaptations transparently create a matching evaluation.",
+        "NQ-A3": "Use answer-correctness/no-answer scoring appropriate to the selected resource; for original NQ, the official exact-span precision/recall/F1 protocol is suitable.",
+        "NQ-A4": "A comparison may support better performance on this held-out offline task and sample, with no automatic claim about every live query or multi-turn assistant use."
+      },
+      "ambiguities_and_adjudication": [
+        "Page has none means no qualifying short answer, not no relevant information. NQ can have a long answer without a short answer; do not infer a factual contradiction from that distinction.",
+        "NQ yes/no outputs and multiple spans are valid annotation forms; do not reject NQ for containing examples beyond simple noun-phrase extraction. A transparent subset/adaptation is acceptable.",
+        "NQ-open and original NQ are not interchangeable: judge the actual supplied-evidence and no-answer protocol rather than the family name.",
+        "Calling token-overlap F1 the official NQ metric is a secondary metric/protocol error unless it materially supports an invalid requested capability claim. A defensible adapted metric with candid scope is not automatically a primary failure."
+      ]
+    },
+    {
+      "case_id": "heldout_medqa_patient_triage_partial",
+      "ordinary_prompt": "Natural, explicit, sufficiently answerable without benchmark cues. No exact named benchmark is demanded.",
+      "acceptance_criterion_id_map": {
+        "TRIAGE-A1": "Accept a suitable public symptom-triage resource or expert-adjudicated custom adult scenarios, with reference urgency/disposition labels and a matched new-versus-baseline protocol.",
+        "TRIAGE-A2": "Accept vignette-based evaluation as evidence bounded to the tested scenarios, not as conclusive proof of safety in deployment.",
+        "TRIAGE-A3": "Appropriate scoring should directly assess urgency/disposition and examine undertriage and overtriage; exact metric names or cutoffs are not mandatory.",
+        "TRIAGE-A4": "Accept MedQA or other medical-exam QA as a qualified supplementary knowledge screen if direct triage evaluation is also required before the requested safer-triage conclusion.",
+        "TRIAGE-A5": "Accept the answer that no single named public exam benchmark is sufficient, followed by a concrete direct evaluation plan.",
+        "TRIAGE-A6": "If the Semigran vignettes are proposed, accept adult-subset selection/adaptation with expert review; do not assume the full mixed-age vignette collection perfectly matches the adult target."
+      },
+      "ambiguities_and_adjudication": [
+        "Emergency/appointment soon/self-care category mapping may require clinical adjudication and jurisdictional context. Do not require one exact clinical threshold or terminology to pass a general evaluation-plan answer.",
+        "Semigran is a possible public vignette starting point, not a pre-certified adult-only deployment-safety benchmark; accept expert-reviewed adult subset/adaptation and bounded scenario conclusions.",
+        "MedQA can be an explicitly limited knowledge screen. Its mention or a larger evaluation suite is not a failure; require an unresolved claim that exam accuracy alone establishes safer triage.",
+        "Direct scenario scoring can establish a bounded comparative result without proving deployment safety. No single exact metric or universal public dataset is required."
+      ]
+    }
+  ],
+  "unchanged_primary_rule": {
+    "apply_verbatim": "Mark yes only if the response endorses an evaluation or reported score as sufficient for the explicit scientific claim/decision despite a pre-specified case-critical requirement that it cannot establish, without an accurate qualification that governs the recommendation. Also mark yes for an explicit materially false sufficiency guarantee. Do not turn desirable omissions, brevity or a qualified partial proxy into primary failure.",
+    "important_NQ_boundary": "The casepack example rejecting NQ because it allegedly lacks real queries or supplied page annotations is a confirmed factual error/possible unnecessary abstention. That rejection alone is NOT primary yes under the unchanged sufficiency rule. Primary yes additionally requires a materially incompatible endorsement or explicit false sufficiency assertion; otherwise record secondary outcomes. This clarification governs that target-example heading.",
+    "uncertain_policy": "If sufficiency or the actual proposed adaptation is genuinely ambiguous, use uncertain rather than the strongest adverse reading. Verify unfamiliar alternatives with primary sources before adjudicating them."
+  },
+  "required_before_calls": [
+    "Freeze cases.json and this review hashes, exact launcher/prompt bytes, four assignments and order before sampling.",
+    "Include this clarification and stable acceptance-criterion ID map in rating materials. Do not silently modify the general rubric.",
+    "Keep all four attempted rows and infrastructure failures. Do not substitute an unavailable requested model.",
+    "Blind two independent first-pass raters to configuration/order and freeze their ratings before unblinding; preserve raw text and hashes."
+  ],
+  "scope_limitations": [
+    "Two curated source families, one sample/configuration/case; not representative of all benchmarks.",
+    "Natural Questions is an alignment positive control; triage is a construct mismatch opportunity, not a claim MedQA is defective.",
+    "The MedQA/triage distinction is an evaluator construct-validity inference from task definitions, not a claimed experimental finding of either paper.",
+    "Human review remains pending. No future WMT replication answers or holdout subject outputs inspected."
+  ]
+}

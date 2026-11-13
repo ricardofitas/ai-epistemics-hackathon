@@ -1,0 +1,15 @@
+{
+  "trial_id": "WR-01",
+  "evidence_label": "subject-generated",
+  "source_access": {
+    "mode": "memory-only",
+    "status": "retrieval not permitted and not attempted",
+    "requested_urls": [],
+    "tools_used": [
+      "functions.exec_command (read assigned prompt file; write permitted outputs)"
+    ],
+    "result_references": [],
+    "checked_excerpt": null,
+    "note": "No external source retrieval or independently captured trace."
+  }
+}

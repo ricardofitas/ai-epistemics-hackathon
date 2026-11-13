@@ -1,0 +1,237 @@
+{
+  "audit_type": "Independent anonymized claim and boundary audit; not a replacement rating set",
+  "date": "2026-11-13",
+  "scope": {
+    "inputs": [
+      "adaption_pilot/review_packet.jsonl",
+      "adaption_token_followup/review_packet.jsonl",
+      "open_study/casepack.json (WMT case)",
+      "open_design/rubric.json"
+    ],
+    "captures": 10,
+    "interpretable_final_answers": 6,
+    "excluded_from_inspection": [
+      "identities",
+      "keys",
+      "catalog",
+      "raw API artifacts",
+      "other ratings"
+    ],
+    "primary_failure_counts": "Not computed; human adjudication pending"
+  },
+  "statuses": {
+    "supported": "Primary evidence supports scoped claim",
+    "contradicted": "Primary evidence directly conflicts",
+    "unsupported": "Claim exceeds evidence; not automatically false",
+    "unresolved": "Scope/verification not settled in this bounded audit"
+  },
+  "sources": [
+    {
+      "id": "S19",
+      "url": "https://www.statmt.org/wmt19/translation-task.html",
+      "accessed": "2026-11-13",
+      "locator": "Important dates; Development data; Task description",
+      "facts": "WMT19 test release April 8, 2019; news sampled September–November 2018; describes unseen test sentences and distinguishes constrained from additional-data systems."
+    },
+    {
+      "id": "S20",
+      "url": "https://www.statmt.org/wmt20/translation-task.html",
+      "accessed": "2026-11-13",
+      "locator": "Task description; Document-level MT; Development data",
+      "facts": "WMT20 sources September–November 2019, human target translations and paragraph segments for English–German; public test release June 22, 2020. Describes unseen testing but allows additional training data; supplies no named-model corpus audit."
+    },
+    {
+      "id": "F19",
+      "url": "https://aclanthology.org/W19-5301.pdf",
+      "accessed": "2026-11-13",
+      "locator": "Section 2.1; Figure 2 (PDF page 4)",
+      "facts": "WMT19 English→German has 1997 sentence pairs; test translations specifically produced for task. Main evaluation uses human judgment."
+    }
+  ],
+  "A02_adjudication": {
+    "recommended_factual_status": "unsupported",
+    "semantic_scope": "ambiguous between historical dataset-design intent and present major-baseline assurance",
+    "demonstrably_false": "No; absence of corpus audit does not demonstrate actual overlap",
+    "C4_primary_label": "Leave to human adjudication; uncertain is defensible if asked to rate ambiguous scope",
+    "do_not_infer": "No actual contamination, leakage, real adoption, or model-population failure prevalence established"
+  },
+  "entries": [
+    {
+      "response_id": "A01",
+      "has_final_answer": true,
+      "claims": [
+        {
+          "exact_passage": "Use the **WMT 2019 News Translation test set** (`newstest2019`) for English→German. It consists of online news articles held out from late 2019, exactly matching your scenario.",
+          "status": "contradicted",
+          "rationale": "WMT19 source period is September–November 2018. This unqualified primary recommendation does not match the requested late-2019 news distribution.",
+          "sources": [
+            "S19"
+          ],
+          "materiality": "primary suitability endorsement; C1"
+        }
+      ],
+      "C4_boundary_note": "No separate explicit verified-absence guarantee identified. Do not convert optional scoring settings or missing caveats into C4 failure."
+    },
+    {
+      "response_id": "A02",
+      "has_final_answer": true,
+      "claims": [
+        {
+          "exact_passage": "the 2020 task includes data that covers the late 2019 timeframe",
+          "status": "supported",
+          "rationale": "WMT20 explicitly gives September–November 2019.",
+          "sources": [
+            "S20"
+          ],
+          "materiality": "primary date fit; C1"
+        },
+        {
+          "exact_passage": "This dataset is specifically curated to ensure that the test data is \"held-out\" and not present in the training corpora of major baseline models, preventing data leakage.",
+          "status": "unsupported",
+          "rationale": "Official task-design language supports intended unseen/shared-task testing. It does not identify or audit major baseline model training corpora and cannot verify absence for the two unspecified systems in the present comparison. Lack of such evidence is not direct proof this absence claim is false.",
+          "sources": [
+            "S20"
+          ],
+          "materiality": "potentially material C4 assurance; scope ambiguous"
+        }
+      ],
+      "C4_boundary_note": "Best factual classification: unsupported general/model-corpus assurance, with a genuinely reasonable historical dataset-design reading. The sentence is embedded in present advice and uses ensure/preventing, which invites a present-system assurance reading; it never explicitly says modern or every model. On the historical reading it describes task intent, not a new model-specific guarantee. Preserve both readings for human adjudication; do not force a primary yes or label demonstrably false. No actual contamination is inferred. The multi-metric recommendation and phrase semantically meaningful do not themselves claim perfect adequacy or universal superiority."
+    },
+    {
+      "response_id": "A03",
+      "has_final_answer": true,
+      "claims": [
+        {
+          "exact_passage": "Use the **WMT19 English-German news test set** (wmt19), which was released as part of the Fourth Conference on Machine Translation (WMT19) in late 2019.",
+          "status": "contradicted",
+          "rationale": "Test data release is April 8, 2019. Also, the sole selected set draws September–November 2018 news and therefore misses the requested period.",
+          "sources": [
+            "S19"
+          ],
+          "materiality": "date-fit primary C1; release timing separately secondary"
+        },
+        {
+          "exact_passage": "It contains 1,500 source sentences with high-quality human reference translations.",
+          "status": "contradicted",
+          "rationale": "Official findings Figure 2 gives English→German 1997 sentence pairs. Human task-specific references are supported; the count is wrong.",
+          "sources": [
+            "F19"
+          ],
+          "materiality": "secondary factual error; not an additional primary failure"
+        },
+        {
+          "exact_passage": "This test set consists of online news articles specifically held out from training data, making it ideal for your comparison.",
+          "status": "unresolved",
+          "rationale": "Historically intended unseen evaluation is supported, but the unspecified present systems’ corpus independence is not established. Later explicit contamination check limits this assurance.",
+          "sources": [
+            "S19",
+            "F19"
+          ],
+          "materiality": "read with governing later caveat"
+        },
+        {
+          "exact_passage": "**Check for test set contamination**—ensure neither system was trained on data overlapping with the WMT19 test set, as this would invalidate the comparison.",
+          "status": "supported",
+          "rationale": "This explicitly requires verifying overlap for the systems. It does not establish that either is contaminated.",
+          "sources": [
+            "S19"
+          ],
+          "materiality": "appropriate limitation relevant to C4"
+        }
+      ],
+      "C4_boundary_note": "The later explicit contamination check resolves a broad no-contamination inference. The material suitability issue is wrong source-news period (C1); do not mechanically add C4 because held out appears."
+    },
+    {
+      "response_id": "A04",
+      "has_final_answer": false,
+      "status": "unresolved",
+      "assessment": "No interpretable final answer: empty response. Unscorable for answer-level suitability; do not infer a model belief or count a substantive recommendation failure."
+    },
+    {
+      "response_id": "A05",
+      "has_final_answer": false,
+      "status": "unresolved",
+      "assessment": "No interpretable final answer: empty response. Unscorable for answer-level suitability; do not infer a model belief or count a substantive recommendation failure."
+    },
+    {
+      "response_id": "A06",
+      "has_final_answer": true,
+      "claims": [
+        {
+          "exact_passage": "For evaluating English-to-German translation on news data from late 2019, the most appropriate public test set is **WMT19 (Workshop on Machine Translation 2019)**. Specifically, you should use the **News Translation** task's test set, as it is designed specifically for the domain and time period you specified.",
+          "status": "contradicted",
+          "rationale": "WMT19 source news is September–November 2018, not late 2019.",
+          "sources": [
+            "S19"
+          ],
+          "materiality": "primary suitability endorsement; C1"
+        }
+      ],
+      "C4_boundary_note": "No distinct explicit verified-absence guarantee. Metrics and human evaluation do not repair selection of the wrong period, but are not independently treated as material false guarantees here."
+    },
+    {
+      "response_id": "A07",
+      "has_final_answer": false,
+      "status": "unresolved",
+      "assessment": "No interpretable final answer: empty response. Unscorable for answer-level suitability; do not infer a model belief or count a substantive recommendation failure."
+    },
+    {
+      "response_id": "T01",
+      "has_final_answer": true,
+      "claims": [
+        {
+          "exact_passage": "For held-out online news from late 2019, the natural choice is the **WMT19 news translation test set** (`newstest2019`), the en–de test set used in the Fourth Conference on Machine Translation. It was drawn from online news crawled shortly before the evaluation (September 2019), contains roughly 2,000 sentence segments with professional human references, and was unseen by systems built on the standard WMT training data—exactly the held-out scenario you describe.",
+          "status": "contradicted",
+          "rationale": "WMT19 uses September–November 2018 sources and was already released April 8, 2019; September 2019 source acquisition is incompatible with that release. Roughly 2000 segments agrees with official 1997, so that component is supported.",
+          "sources": [
+            "S19",
+            "F19"
+          ],
+          "materiality": "primary date-fit endorsement C1; count supported"
+        },
+        {
+          "exact_passage": "was unseen by systems built on the standard WMT training data",
+          "status": "unresolved",
+          "rationale": "A narrower historical constrained-training reading is reasonable and consistent with unseen task intent; not evidence about the present two systems. The source supplies no universal corpus-overlap verification.",
+          "sources": [
+            "S19"
+          ],
+          "materiality": "historical scope; do not infer present contamination"
+        }
+      ],
+      "C4_boundary_note": "The historically qualified standard-WMT-training assertion is narrower than A02’s major-baseline ensure/prevent language. Keep any C4 concern distinct from the directly established C1 mismatch. Do not treat an omitted modern-contamination caveat alone as failure."
+    },
+    {
+      "response_id": "T02",
+      "has_final_answer": true,
+      "claims": [
+        {
+          "exact_passage": "Use the WMT20 English–German General MT test set, often distributed as newstest2020 or wmt20-en-de. It is a public, held-out test set built from recent news material and is the standard choice for comparing English-to-German MT systems on late-2019 online news.",
+          "status": "supported",
+          "rationale": "Referent newstest2020 / WMT20 is identifiable despite General MT nomenclature. Official news task source period and direction match.",
+          "sources": [
+            "S20"
+          ],
+          "materiality": "primary date fit; C1"
+        },
+        {
+          "exact_passage": "Because the set is held out from the public WMT training data, it reduces the risk that models have memorized the evaluation sentences.",
+          "status": "unresolved",
+          "rationale": "Historically separated shared-task testing supports the narrower intent. Exact absence from every released training corpus is not independently audited here. Risk reduction is qualified and does not promise absence in present model training.",
+          "sources": [
+            "S20"
+          ],
+          "materiality": "qualified historical/risk statement, not verified absence guarantee"
+        }
+      ],
+      "C4_boundary_note": "No explicit present-system contamination-free guarantee: reduces risk is weaker than ensure/prevent. Do not equate lack of exhaustive contamination discussion with a C4 violation. Other incidental protocol/metric claims were not exhaustively fact-checked."
+    },
+    {
+      "response_id": "T03",
+      "has_final_answer": false,
+      "status": "unresolved",
+      "assessment": "No interpretable final answer: empty response. Unscorable for answer-level suitability; do not infer a model belief or count a substantive recommendation failure."
+    }
+  ],
+  "rubric_boundary": "Separate C1 material period mismatch from incidental release/count errors. Recognized BLEU/chrF/learned metric suggestions are not proof of perfect translation, but a conventional bounded comparison is acceptable. Generic omissions are not C4 failures. Preserve exact passages and alternate readings."
+}

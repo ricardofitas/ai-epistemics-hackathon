@@ -1,0 +1,41 @@
+{
+  "trial_id": "WR-12",
+  "evidence_label": "subject-generated",
+  "trace_note": "Subject-generated source-access record, not an independently captured trace.",
+  "tool_name": "mcp__codex_apps__search_service_web_run",
+  "tool_request": {
+    "open": [
+      {
+        "ref_id": "https://www.statmt.org/wmt19/translation-task.html"
+      },
+      {
+        "ref_id": "https://www.statmt.org/wmt20/translation-task.html"
+      }
+    ],
+    "response_length": "long"
+  },
+  "sources": [
+    {
+      "requested_url": "https://www.statmt.org/wmt19/translation-task.html",
+      "returned_url": "https://www.statmt.org/wmt19/translation-task.html",
+      "result_reference": "turn106view0",
+      "access_status": "success",
+      "checked_line": 104,
+      "checked_excerpt": "The 2019 test sets will be created from a sample of online newspapers from September-November 2018."
+    },
+    {
+      "requested_url": "https://www.statmt.org/wmt20/translation-task.html",
+      "returned_url": "https://www.statmt.org/wmt20/translation-task.html",
+      "result_reference": "turn106view1",
+      "access_status": "success",
+      "checked_line": 98,
+      "checked_excerpt": "The 2020 test sets will be created from a sample of online newspapers from September-November 2019.",
+      "additional_checked_lines": [
+        49,
+        82
+      ],
+      "additional_checks": "Paragraph-level English/German segmentation; SacreBLEU recommended for evaluation."
+    }
+  ],
+  "limitations": "Only the two permitted task pages were retrieved; no dataset files or secondary sources were retrieved. The collection period is the period documented on the official page."
+}

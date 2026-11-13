@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-12",
+  "collected_utc": "2026-11-12T22:21:06.608549+00:00",
+  "freeze_commit": "6b50c5155ac527b6bb83c893e2cdb80f9a2c4e49",
+  "requested": 24,
+  "completed": 24,
+  "source_cases": 6,
+  "domain_clusters": 5,
+  "prompt_forms": 2,
+  "repeats_per_model_form_case_cell": 1,
+  "model_configurations_requested": [
+    "gpt-6.1-sol (inherited)",
+    "gpt-6-luna (explicit collaboration model override)"
+  ],
+  "exact_returned_snapshot": null,
+  "generation_settings": "Inherited defaults, not surfaced per call",
+  "interface": "collaboration.spawn_agent, fork_turns none; exact launcher and file prompt retained",
+  "tools": "Subjects instructed to read only opaque prompt and write/hash only their own answer, without browsing/search/delegation",
+  "knowledge_policy": "Existing-knowledge only; source case notes/criteria and parent history withheld",
+  "capture": "Verbatim subject-written UTF-8 answer artifact, exact bytes hashed; no coordinator text transcription",
+  "timestamps": "Artifact filesystem write time is retained; not a provider request/response timestamp",
+  "system_context": "Platform system/developer instructions inherited, not a stateless API",
+  "response_word_limit_deviations": 1,
+  "manifest_sha256": "5626ef99935842aabe8cf93ace3d56385ee34ad2fe7a0ac6e57bf361a369447c",
+  "casepack_sha256": "c2a9b12dbe164c37598ef1d5a424bcc03e5396a7ec346432c6e629ac45fe85eb",
+  "packet_sha256": "625bb7f7757cc21fbaf7b72b570aafedb18232e8fe57029a8ffc6bb74fe79256",
+  "review": "Two fresh same-family agent reviewers blinded to condition/model; human review pending",
+  "scope": "Prospectively frozen descriptive 2-model x 2-prompt-package contrast on six selected cases. One response per cell does not estimate stochastic variance or population prevalence."
+}

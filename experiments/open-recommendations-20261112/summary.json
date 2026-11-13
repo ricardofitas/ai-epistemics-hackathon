@@ -1,0 +1,43 @@
+{
+  "source_cases": 6,
+  "model_configurations": 1,
+  "responses": 24,
+  "rating_counts": [
+    {
+      "no": 24
+    },
+    {
+      "no": 24
+    }
+  ],
+  "primary_disagreements": [],
+  "by_condition": {
+    "baseline": {
+      "no": 12
+    },
+    "structured": {
+      "no": 12
+    }
+  },
+  "by_variant": {
+    "OPEN-FUNCTION": {
+      "no": 4
+    },
+    "OPEN-MAINTAINER-TIME": {
+      "no": 4
+    },
+    "OPEN-MATH-PROCESS": {
+      "no": 4
+    },
+    "OPEN-PHYSICS-CITATIONS": {
+      "no": 4
+    },
+    "OPEN-VISION-EACH-CORRUPTION": {
+      "no": 4
+    },
+    "open_mt_news_ende_late2019": {
+      "no": 4
+    }
+  },
+  "interpretation": "Exploratory source-backed open prompts, one inherited configuration; repeated answers are not independent source cases. No general prevalence or checklist-efficacy claim."
+}

@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-13T02:44:41.673285+00:00",
+  "response_id": "A02",
+  "trial_id": "AD-03",
+  "first_agent_ratings": {
+    "a": "yes, C4",
+    "b": "yes, C4"
+  },
+  "coordinator_disposition": "uncertain_pending_human_scope_adjudication",
+  "reason": "Independent primary-source audit finds the no-leakage assurance unsupported but semantically ambiguous: historical shared-task test-design intent versus a guarantee about present baseline/user models. The unchanged rubric requires uncertain for genuinely ambiguous sufficiency. No evidence of actual contamination or a corpus-membership audit was obtained.",
+  "first_ratings_preserved": true,
+  "coordinator_blinding": "Post-unblinding coordinator synthesis; model identities were already visible. Not an independent blind rating.",
+  "verified_temporal_fit": "supported WMT20",
+  "human_review": "pending"
+}

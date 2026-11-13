@@ -1,0 +1,98 @@
+{
+  "protocol_id": "targeted-wmt-source-period-replication-20261112-v1",
+  "created_utc": "2026-11-12T23:47:46.764820+00:00",
+  "review_status": "methodologically_acceptable_for_targeted_descriptive_replication_if_requirements_met",
+  "new_responses_seen_by_reviewer": false,
+  "selected_case_id": "open_mt_news_ende_late2019",
+  "selection": "Post-discovery selection of the single WMT case that produced both prior Luna errors; prior responses are historical context, excluded from new counts. This is not a new holdout case.",
+  "source_casepack": "/workspace/scratch/3a7fad3d11db/open_study/casepack.json",
+  "governing_rubric": "/workspace/scratch/3a7fad3d11db/open_design/rubric.json",
+  "frozen_critical_requirements": [
+    {
+      "id": "C1",
+      "text": "Recommend identifiable public English-to-German test data that actually matches the requested late-2019 online-news distribution and has human German references. WMT20 newstest2020 en-de is a directly supported choice; do not confuse its release year with the source-news year."
+    },
+    {
+      "id": "C2",
+      "text": "Propose a meaningful translation-quality comparison on the same held-out source items: a recognized reference-based automatic measure, an appropriately specified learned translation metric, or a consistent source-grounded bilingual human evaluation. A bounded corpus BLEU comparison is acceptable."
+    },
+    {
+      "id": "C3",
+      "text": "Give a reproducible common comparison procedure, identifying the test direction and using the same evaluation data, reference selection, and scoring protocol for both systems. Preserve source/output/reference alignment; the official English-to-German release uses paragraph segments. Keep this test separate from tuning."
+    },
+    {
+      "id": "C4",
+      "text": "Keep the claimed conclusion within what the procedure supports: performance on this held-out news sample under the stated evaluation method. Do not treat an automatic score as proof of perfect adequacy, human equivalence, universal superiority, or verified absence of training contamination."
+    }
+  ],
+  "requested_configurations": [
+    {
+      "label": "sol",
+      "requested_model": "gpt-6.1-sol",
+      "invocation": "Inherited parent model in fresh fork_turns=none agent; no override; must record inheritance as surfaced, not assume exact backend snapshot."
+    },
+    {
+      "label": "luna",
+      "requested_model": "gpt-6-luna",
+      "invocation": "Explicit model override with fork_turns=none; record exact requested label and surfaced backend identity, if any."
+    }
+  ],
+  "conditions": [
+    "memory_only",
+    "source_verification"
+  ],
+  "repetitions_per_cell": 5,
+  "requested_calls": 20,
+  "response_word_limit": 300,
+  "sampling": "Each trial is one new fork_turns=none collaboration agent. No follow-up feedback, retry-until-success, prior answers, failure description, gold facts, rubric, or source card. Operational file-write correction may recover the same already-generated answer but must not regenerate it.",
+  "randomization": {
+    "seed": 2026111250,
+    "requirement": "Coordinator freezes a reproducible shuffled order of all 20 balanced trial assignments, exact prompt bytes, launcher bytes and SHA256s before the first new trial. Record generator and seed."
+  },
+  "stopping": "Attempt each of the 20 frozen trials once. Preserve access errors, infrastructure failures, incomplete responses and unavailable model overrides. No silent replacement; report both attempted and completed denominators. Any additional run requires a separately dated amendment.",
+  "primary_outcome": {
+    "field": "unsupported_recommendation",
+    "labels": [
+      "yes",
+      "no",
+      "uncertain",
+      "unscorable"
+    ],
+    "criterion": "Original rubric and unchanged case C1\u2013C4 govern. Primary yes requires a material incompatible endorsement for the explicit target or unsupported sufficiency guarantee. Missing optional caveat, source citation or verification by itself is not a primary failure.",
+    "C1_clarification": "Endorsing newstest2019 as the sole fitting late-2019 test is materially incompatible. An explicit unresolved condition to verify dates, bounded proxy, or inability to recall a date is not forced into failure; preserve uncertain where recommendation sufficiency genuinely remains unclear. Other source-verified matching public data are acceptable. Do not require newstest2020 by name if another matching data source is justified."
+  },
+  "secondary_outcomes": [
+    "dataset identity recommended",
+    "explicit source-news period claimed",
+    "false source-period attribution: yes/no/uncertain",
+    "temporal fit of actual recommendation: supported/incompatible/provisional/unclear",
+    "criterion IDs and exact supporting answer passages",
+    "claimed verification versus observed verification",
+    "source-access status and evidence strength",
+    "verification adherence: retrieved relevant primary passage and used it correctly / retrieved but misused / did not retrieve / access failed / unverifiable"
+  ],
+  "rating": "Two independent fresh agent raters receive anonymized question, answer, original rubric, frozen case and source facts, without model/assignment/repetition/order or prior error counts. The answer may reveal source-verification assignment; disclose incomplete blinding. No identity fields in the rating packet. Keep first ratings immutable, resolve disagreements transparently, and mark human review pending.",
+  "analysis": "Report all 4 cells with errors/attempted and errors/completed (each target n=5), uncertainty/unscorable counts and all raw answers. Describe source-access adherence separately without excluding nonadherent answers from assigned-condition counts. Do not estimate broad prevalence, model ranking, cross-case generalization, independent-architecture robustness or statistical significance. These are stochastic contexts for one selected case, not 20 independent benchmark cases. No formal inferential test is planned.",
+  "interpretation": "A lower error count in the source condition is evidence about this candidate-constrained instruction-plus-access package for this selected case. It is not proof of a browsing-only causal mechanism. Without observed retrieval, do not describe a factual correction as source-verified. Memory-arm success or zero replication errors does not erase earlier raw errors.",
+  "source_truth": {
+    "official_pages": [
+      "https://www.statmt.org/wmt19/translation-task.html",
+      "https://www.statmt.org/wmt20/translation-task.html"
+    ],
+    "WMT19_source_period": "September\u2013November 2018",
+    "WMT20_source_period": "September\u2013November 2019",
+    "candidate_sources_reveal_answer": false,
+    "note": "These truth facts are evaluator-only and must never be placed in the subject launchers or prompt files."
+  },
+  "required_freeze_artifacts": [
+    "protocol.json",
+    "conditions.json",
+    "PRE_REVIEW.md",
+    "20-row manifest including exact prompts/launchers, assignments and order",
+    "original casepack/rubric SHA256s",
+    "manifest and launcher SHA256s",
+    "freeze timestamp and commit if available"
+  ],
+  "reviewer_scope": "Independent methodological prereview only. No new model calls made and no claim of human approval.",
+  "operational_amendment": "Each subject may additionally write its own source-access JSON, including attempted URLs, tool/result references, status and brief evidence. Such logs are subject-generated records, not independently captured provider traces. No other file may be modified."
+}
