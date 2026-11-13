@@ -1,0 +1,1204 @@
+{
+  "rows": [
+    {
+      "task_id": "T0109",
+      "family_id": "GSM8K-1277",
+      "selection_slot": 1,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "numeric",
+      "gold_answer": "60",
+      "question_sha256": "050f12f420477e99a1281cc5f1b361ade47367897bd89e532f8f5f670af14893"
+    },
+    {
+      "task_id": "T0002",
+      "family_id": "GSM8K-1277",
+      "selection_slot": 1,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "paraphrase",
+      "gold_answer": "48",
+      "question_sha256": "e64d67a5b172e419880495af2b6a603b2a7d1805171bcb8571993c9a8438df04"
+    },
+    {
+      "task_id": "T0111",
+      "family_id": "GSM8K-1277",
+      "selection_slot": 1,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "p1",
+      "gold_answer": "30",
+      "question_sha256": "498adfa30f62ea0e27898ed0820c03be8f266ad1789d7e5498e350029c78c005"
+    },
+    {
+      "task_id": "T0025",
+      "family_id": "GSM8K-1277",
+      "selection_slot": 1,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "p2",
+      "gold_answer": "14",
+      "question_sha256": "6f41997c1ebfaae44925a586932f8f1b5951b6ac2d65617fb49f27e5a2305d4c"
+    },
+    {
+      "task_id": "T0100",
+      "family_id": "GSM8K-788",
+      "selection_slot": 2,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "numeric",
+      "gold_answer": "180",
+      "question_sha256": "57d8227c7f1630f3e48f18b22e2b4bb555c4dd74dd38d40d379db652704e6eee"
+    },
+    {
+      "task_id": "T0098",
+      "family_id": "GSM8K-788",
+      "selection_slot": 2,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "paraphrase",
+      "gold_answer": "100",
+      "question_sha256": "1116ce07cdc5c5f9b0f3ac7efc2f2997d45f63dd7e02cef1c62f31d56cc700d1"
+    },
+    {
+      "task_id": "T0118",
+      "family_id": "GSM8K-788",
+      "selection_slot": 2,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "p1",
+      "gold_answer": "225",
+      "question_sha256": "583babcfebc57b549bc1a6a5c439c6a4362dc5a9b28f7c6e1f034e947b3acea7"
+    },
+    {
+      "task_id": "T0038",
+      "family_id": "GSM8K-788",
+      "selection_slot": 2,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "p2",
+      "gold_answer": "595",
+      "question_sha256": "387759bba2fa2d021cd5cdd64fe460f6e3e69aaa5b9ac7d58c5a4c5d5d76d6ea"
+    },
+    {
+      "task_id": "T0030",
+      "family_id": "GSM8K-661",
+      "selection_slot": 3,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "numeric",
+      "gold_answer": "112.2",
+      "question_sha256": "945926c4916a6030f6e68b1f05ec0e63e5474fe983e8df108b0c25608ba19fdc"
+    },
+    {
+      "task_id": "T0050",
+      "family_id": "GSM8K-661",
+      "selection_slot": 3,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "paraphrase",
+      "gold_answer": "44",
+      "question_sha256": "80b1bde04f8ee761c326d7595be1cb51add124abe4117f88a6ebf7411a86776e"
+    },
+    {
+      "task_id": "T0055",
+      "family_id": "GSM8K-661",
+      "selection_slot": 3,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "p1",
+      "gold_answer": "85",
+      "question_sha256": "f8e7296e3f22ad1d3e692414f76ba4466e7c2b33b2791f393903f8555a53c512"
+    },
+    {
+      "task_id": "T0006",
+      "family_id": "GSM8K-661",
+      "selection_slot": 3,
+      "analysis_role": "selection",
+      "batch_block": 1,
+      "variant": "p2",
+      "gold_answer": "217",
+      "question_sha256": "098cc80572b72312fbb573c31e3b922d67577d5a935a6b3c6a2733975112ff65"
+    },
+    {
+      "task_id": "T0090",
+      "family_id": "GSM8K-491",
+      "selection_slot": 4,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "numeric",
+      "gold_answer": "20",
+      "question_sha256": "9453a9c14be187aef1c9b68ac270a7956ad15fa4b596560a74e0c5b73707cfda"
+    },
+    {
+      "task_id": "T0022",
+      "family_id": "GSM8K-491",
+      "selection_slot": 4,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "paraphrase",
+      "gold_answer": "16",
+      "question_sha256": "285ba09f0e082d1131d93303d0941d5edefeaf465917242785893e01f687f2f8"
+    },
+    {
+      "task_id": "T0060",
+      "family_id": "GSM8K-491",
+      "selection_slot": 4,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "p1",
+      "gold_answer": "6",
+      "question_sha256": "bf2e524786a71bfc28f6eae8e7b86f8a86a8a6e90c30c55a14be5ed43edcb3c0"
+    },
+    {
+      "task_id": "T0049",
+      "family_id": "GSM8K-491",
+      "selection_slot": 4,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "p2",
+      "gold_answer": "14",
+      "question_sha256": "8c823324e62bef6d65384200fcbebf434a073ba30f28d7e5b29af1ab3befbe8c"
+    },
+    {
+      "task_id": "T0069",
+      "family_id": "GSM8K-116",
+      "selection_slot": 5,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "numeric",
+      "gold_answer": "50",
+      "question_sha256": "dd68852b9a480b7a7940a5a5fcf036778aaa5f63eff2e865721a8cf4fc8683f2"
+    },
+    {
+      "task_id": "T0042",
+      "family_id": "GSM8K-116",
+      "selection_slot": 5,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "paraphrase",
+      "gold_answer": "42",
+      "question_sha256": "b458ce539f7d0ccd3c719bbf603b429170f33f04d323b158fe144f2cec139348"
+    },
+    {
+      "task_id": "T0071",
+      "family_id": "GSM8K-116",
+      "selection_slot": 5,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "p1",
+      "gold_answer": "378",
+      "question_sha256": "cbcf5e84e79d750c86d980ab444793c146aeeb2277a285feb06d758fb6ca1cf1"
+    },
+    {
+      "task_id": "T0044",
+      "family_id": "GSM8K-116",
+      "selection_slot": 5,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "p2",
+      "gold_answer": "68",
+      "question_sha256": "9447deaabf174b46fe54a62f233f9d8480d7e80c70af42cad4453c4d9733f97b"
+    },
+    {
+      "task_id": "T0031",
+      "family_id": "GSM8K-799",
+      "selection_slot": 6,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "numeric",
+      "gold_answer": "2",
+      "question_sha256": "1b1ec1eea99dacdf7c5b9aed5781a3cef267cb25155a5c1be083bcc14a6dd4d1"
+    },
+    {
+      "task_id": "T0068",
+      "family_id": "GSM8K-799",
+      "selection_slot": 6,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "paraphrase",
+      "gold_answer": "4",
+      "question_sha256": "0b80d3884d49c5e0c1abe65ee3f692228f6cb7fceb66d0bf217ecf4cceba17c0"
+    },
+    {
+      "task_id": "T0007",
+      "family_id": "GSM8K-799",
+      "selection_slot": 6,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "p1",
+      "gold_answer": "52",
+      "question_sha256": "86df90b577065e73a0b0bf459537d07f881ca2b28fa3a404783e67d6c06cb624"
+    },
+    {
+      "task_id": "T0077",
+      "family_id": "GSM8K-799",
+      "selection_slot": 6,
+      "analysis_role": "selection",
+      "batch_block": 2,
+      "variant": "p2",
+      "gold_answer": "11",
+      "question_sha256": "52d82aa07458b29680d31a7bc92ad517a434ecc111a1c697e6f0eae79698e770"
+    },
+    {
+      "task_id": "T0001",
+      "family_id": "GSM8K-496",
+      "selection_slot": 7,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "numeric",
+      "gold_answer": "25",
+      "question_sha256": "6d12810417b5c5e1d7151bdb05522d7281adf08c3eac24b1a23577be49954c6b"
+    },
+    {
+      "task_id": "T0108",
+      "family_id": "GSM8K-496",
+      "selection_slot": 7,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "paraphrase",
+      "gold_answer": "38",
+      "question_sha256": "ee758c87e3b6b2458c222c29835977cb02dc9e674ceb6e1c7cdd6ade6d70e2c6"
+    },
+    {
+      "task_id": "T0089",
+      "family_id": "GSM8K-496",
+      "selection_slot": 7,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "p1",
+      "gold_answer": "34",
+      "question_sha256": "7f4d7fcb5936f6963192076acf4769bcce3e23512355f61243a26e2322cf4deb"
+    },
+    {
+      "task_id": "T0051",
+      "family_id": "GSM8K-496",
+      "selection_slot": 7,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "p2",
+      "gold_answer": "27",
+      "question_sha256": "bdae7e2302bc90620b6750abc83fea0be361bb6a9e287894237f7eec0b4a64ce"
+    },
+    {
+      "task_id": "T0021",
+      "family_id": "GSM8K-989",
+      "selection_slot": 8,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "numeric",
+      "gold_answer": "34",
+      "question_sha256": "ae859daa831ac7f115aaf31a88560430bb344c84e461c47407672c643641165b"
+    },
+    {
+      "task_id": "T0107",
+      "family_id": "GSM8K-989",
+      "selection_slot": 8,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "paraphrase",
+      "gold_answer": "45",
+      "question_sha256": "cd7008e0d44d1400729dbb3333a4d222566e4b0306bdc54d5c20bf0ba77e9836"
+    },
+    {
+      "task_id": "T0009",
+      "family_id": "GSM8K-989",
+      "selection_slot": 8,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "p1",
+      "gold_answer": "63",
+      "question_sha256": "d2a6844ebcb81ef075539ac61588239ea28306747ec7ca32e8ea0456362f6101"
+    },
+    {
+      "task_id": "T0114",
+      "family_id": "GSM8K-989",
+      "selection_slot": 8,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "p2",
+      "gold_answer": "137",
+      "question_sha256": "440068118a977ea78cc3068739047d1c7664a2db8e5b63fc6c1deae55f686db0"
+    },
+    {
+      "task_id": "T0017",
+      "family_id": "GSM8K-1063",
+      "selection_slot": 9,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "numeric",
+      "gold_answer": "210",
+      "question_sha256": "50bd323b2a5b9f90eac5c97b9ddc15b4d4df95530e95427b267877ceb6867621"
+    },
+    {
+      "task_id": "T0041",
+      "family_id": "GSM8K-1063",
+      "selection_slot": 9,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "paraphrase",
+      "gold_answer": "320",
+      "question_sha256": "57db9fada1559d5a05139bfdccbab2aa7783c3659a04235d662dc942a8e1b4dd"
+    },
+    {
+      "task_id": "T0067",
+      "family_id": "GSM8K-1063",
+      "selection_slot": 9,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "p1",
+      "gold_answer": "100",
+      "question_sha256": "81a685349b3b9eaf8c0e0fad345db066a809a811a0d0c43a83886021643bae36"
+    },
+    {
+      "task_id": "T0097",
+      "family_id": "GSM8K-1063",
+      "selection_slot": 9,
+      "analysis_role": "selection",
+      "batch_block": 3,
+      "variant": "p2",
+      "gold_answer": "42",
+      "question_sha256": "36294f5117691b5b04584cd2632ef48fb7e9631886196217cf2c017063b281ca"
+    },
+    {
+      "task_id": "T0029",
+      "family_id": "GSM8K-1133",
+      "selection_slot": 10,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "numeric",
+      "gold_answer": "80",
+      "question_sha256": "9f654b9c4275a0bbff81eedb173764094c07435634e4c28d39370f1b1b525e4e"
+    },
+    {
+      "task_id": "T0076",
+      "family_id": "GSM8K-1133",
+      "selection_slot": 10,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "paraphrase",
+      "gold_answer": "50",
+      "question_sha256": "0e43e0ffe996d450459ece4a07ca41ab2352b415869421a382f1865991a36821"
+    },
+    {
+      "task_id": "T0112",
+      "family_id": "GSM8K-1133",
+      "selection_slot": 10,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "p1",
+      "gold_answer": "78",
+      "question_sha256": "b47d2914da14f23377028b76884c08d764d347415d19404d9204c5a229d594d6"
+    },
+    {
+      "task_id": "T0101",
+      "family_id": "GSM8K-1133",
+      "selection_slot": 10,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "p2",
+      "gold_answer": "80",
+      "question_sha256": "23d43eaa7c2f4adaf8107c3b635545a7234c1eafe8ffe213bd57f3bf78540d1f"
+    },
+    {
+      "task_id": "T0035",
+      "family_id": "GSM8K-1020",
+      "selection_slot": 11,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "numeric",
+      "gold_answer": "27",
+      "question_sha256": "a6d60a5f290f03b6b1f0c5e38a4a9cd331506f5800482c7a1103be664d106807"
+    },
+    {
+      "task_id": "T0084",
+      "family_id": "GSM8K-1020",
+      "selection_slot": 11,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "paraphrase",
+      "gold_answer": "22",
+      "question_sha256": "4ab780a94fa4a4a2f6b8eb5307630a3ebf896ba57cc89b28a4bed148e39dafb5"
+    },
+    {
+      "task_id": "T0119",
+      "family_id": "GSM8K-1020",
+      "selection_slot": 11,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "p1",
+      "gold_answer": "576",
+      "question_sha256": "10cb4fd2534849cd1bb617e11167c392c1a5f036024622ec833c48bc6d60044d"
+    },
+    {
+      "task_id": "T0037",
+      "family_id": "GSM8K-1020",
+      "selection_slot": 11,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "p2",
+      "gold_answer": "612",
+      "question_sha256": "43798f6c5960898ec6e4e10dc3fa3691da602beff12a079f6ab5074c6a8a1068"
+    },
+    {
+      "task_id": "T0086",
+      "family_id": "GSM8K-740",
+      "selection_slot": 12,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "numeric",
+      "gold_answer": "24",
+      "question_sha256": "c2a6b112ee07beed12edab0c5cfc59b05fe7256d2589ab533180f52a0bd34c34"
+    },
+    {
+      "task_id": "T0043",
+      "family_id": "GSM8K-740",
+      "selection_slot": 12,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "paraphrase",
+      "gold_answer": "25",
+      "question_sha256": "057a840cd8f4cd723e85cb13b96144e77089a7c4bf7cf79673da646cbb7006b9"
+    },
+    {
+      "task_id": "T0018",
+      "family_id": "GSM8K-740",
+      "selection_slot": 12,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "p1",
+      "gold_answer": "91",
+      "question_sha256": "ddca29d70d651aa0f8b8b885a26608407089b4846c92efa74518415fa85dd8ad"
+    },
+    {
+      "task_id": "T0057",
+      "family_id": "GSM8K-740",
+      "selection_slot": 12,
+      "analysis_role": "selection",
+      "batch_block": 4,
+      "variant": "p2",
+      "gold_answer": "50",
+      "question_sha256": "daa95ad296df24e74c5fef4ffecd5da0e15eb207b6dd251ad8febd3d6e017593"
+    },
+    {
+      "task_id": "T0105",
+      "family_id": "GSM8K-873",
+      "selection_slot": 13,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "numeric",
+      "gold_answer": "14.6",
+      "question_sha256": "65c75dca2e0e4685e993b04c3d495b06879df003f6cb6853814185cc113f4f43"
+    },
+    {
+      "task_id": "T0010",
+      "family_id": "GSM8K-873",
+      "selection_slot": 13,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "paraphrase",
+      "gold_answer": "12",
+      "question_sha256": "f05d647c75b830af66b99bc8b3131c8847a69b244f9b5183aef2666badd478a5"
+    },
+    {
+      "task_id": "T0004",
+      "family_id": "GSM8K-873",
+      "selection_slot": 13,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "p1",
+      "gold_answer": "71",
+      "question_sha256": "d0dcf65949df8bf9979f55dacaa09c49c0f872e53c62eab0d224df43be4cbb77"
+    },
+    {
+      "task_id": "T0115",
+      "family_id": "GSM8K-873",
+      "selection_slot": 13,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "p2",
+      "gold_answer": "12",
+      "question_sha256": "5d02387758a686bfbef375a9c696c2c9eaaec7460432381585871faebac59fc2"
+    },
+    {
+      "task_id": "T0085",
+      "family_id": "GSM8K-266",
+      "selection_slot": 14,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "numeric",
+      "gold_answer": "150000",
+      "question_sha256": "48a0bc905fb41864c0cf1e66340a7a2813809c67a26ca4f85a513057012a2f8d"
+    },
+    {
+      "task_id": "T0056",
+      "family_id": "GSM8K-266",
+      "selection_slot": 14,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "paraphrase",
+      "gold_answer": "118000",
+      "question_sha256": "c95de7d405944cb0e086687aeb2317f6466f581f2d379321923c72a321e81397"
+    },
+    {
+      "task_id": "T0028",
+      "family_id": "GSM8K-266",
+      "selection_slot": 14,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "p1",
+      "gold_answer": "16200",
+      "question_sha256": "913233e46ae5c4631088a4622070295cd8809bd3a93ab72ee38bd2ccd6e91738"
+    },
+    {
+      "task_id": "T0063",
+      "family_id": "GSM8K-266",
+      "selection_slot": 14,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "p2",
+      "gold_answer": "73326",
+      "question_sha256": "4ae75a8377e314bc01a0d04c0cf934311d89a3d1b1f9e0df2ff5b9cf5d0e9b6c"
+    },
+    {
+      "task_id": "T0053",
+      "family_id": "GSM8K-520",
+      "selection_slot": 15,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "numeric",
+      "gold_answer": "140",
+      "question_sha256": "be82671c96f604fec522057f9e5dd0a6cafdaf03c4f5f95a16e8a656e34c99d6"
+    },
+    {
+      "task_id": "T0039",
+      "family_id": "GSM8K-520",
+      "selection_slot": 15,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "paraphrase",
+      "gold_answer": "63",
+      "question_sha256": "cd25323ccfdde73e5cf28faf95cf62721cc4a9d77c4e74482bffa17113c84bd9"
+    },
+    {
+      "task_id": "T0008",
+      "family_id": "GSM8K-520",
+      "selection_slot": 15,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "p1",
+      "gold_answer": "138",
+      "question_sha256": "dd96216efbab644f97720d0f61848e7343b63729b0009046a74562e5baafab90"
+    },
+    {
+      "task_id": "T0064",
+      "family_id": "GSM8K-520",
+      "selection_slot": 15,
+      "analysis_role": "selection",
+      "batch_block": 5,
+      "variant": "p2",
+      "gold_answer": "106",
+      "question_sha256": "e781457447d1d63571e7c0adc02ba7dd341a8033e5dd83aba274689b394a1792"
+    },
+    {
+      "task_id": "T0087",
+      "family_id": "GSM8K-1264",
+      "selection_slot": 16,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "numeric",
+      "gold_answer": "420",
+      "question_sha256": "bfebbf9e0f1b5b032af08a1f642e7cb1617d53309cbf77f47961bd28373efd09"
+    },
+    {
+      "task_id": "T0013",
+      "family_id": "GSM8K-1264",
+      "selection_slot": 16,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "paraphrase",
+      "gold_answer": "210",
+      "question_sha256": "bfa7eb9371a968507425e1a8f976747fa289c921769cfc925d8a2fb5b4cbf85b"
+    },
+    {
+      "task_id": "T0116",
+      "family_id": "GSM8K-1264",
+      "selection_slot": 16,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "p1",
+      "gold_answer": "190",
+      "question_sha256": "95675c366e7309059b9dfb4d7e6ac66ed849f01152e5858d59fec496d26836d1"
+    },
+    {
+      "task_id": "T0027",
+      "family_id": "GSM8K-1264",
+      "selection_slot": 16,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "p2",
+      "gold_answer": "944",
+      "question_sha256": "c13bf770a897d195fdd36bfa0da12c1050e9ea1a24ecfed9e768160a0510acc7"
+    },
+    {
+      "task_id": "T0034",
+      "family_id": "GSM8K-145",
+      "selection_slot": 17,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "numeric",
+      "gold_answer": "10800",
+      "question_sha256": "4052da1186b1304c616ae6efab25ec531035633ce2216110ec688738dfc036bd"
+    },
+    {
+      "task_id": "T0072",
+      "family_id": "GSM8K-145",
+      "selection_slot": 17,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "paraphrase",
+      "gold_answer": "4000",
+      "question_sha256": "2a785bf755e358871292fa9262a1b419988ef3cd567b20ad893a8e779393578e"
+    },
+    {
+      "task_id": "T0082",
+      "family_id": "GSM8K-145",
+      "selection_slot": 17,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "p1",
+      "gold_answer": "1600",
+      "question_sha256": "0e48db9f63d6466034431d239650053e7cd579039d37bb9f293fe245ca647d2e"
+    },
+    {
+      "task_id": "T0073",
+      "family_id": "GSM8K-145",
+      "selection_slot": 17,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "p2",
+      "gold_answer": "3472",
+      "question_sha256": "c549c3a7f0e2b292980e8a91a43b4207e3d4feb8efa0a17a673872f30d5e73b4"
+    },
+    {
+      "task_id": "T0102",
+      "family_id": "GSM8K-265",
+      "selection_slot": 18,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "numeric",
+      "gold_answer": "22000",
+      "question_sha256": "65d957c3b1c1e0930a3be63c6b197aaa0e58b67913dd3d312c432cca8e4b95c9"
+    },
+    {
+      "task_id": "T0103",
+      "family_id": "GSM8K-265",
+      "selection_slot": 18,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "paraphrase",
+      "gold_answer": "9500",
+      "question_sha256": "a2c9db8fd22863b2d26652f307d9fc3beca91328fc73b2cb4d24165d25d4cf27"
+    },
+    {
+      "task_id": "T0066",
+      "family_id": "GSM8K-265",
+      "selection_slot": 18,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "p1",
+      "gold_answer": "112000",
+      "question_sha256": "a1e0290be990018a727271de64c4fe52cb30bfd2a95b03f189a1d452f4af11b7"
+    },
+    {
+      "task_id": "T0099",
+      "family_id": "GSM8K-265",
+      "selection_slot": 18,
+      "analysis_role": "confirmation",
+      "batch_block": 1,
+      "variant": "p2",
+      "gold_answer": "66000",
+      "question_sha256": "ccce3020b77cf9a9f341a40a7952c9c54f63269ea1f35c17818a0535c54007fa"
+    },
+    {
+      "task_id": "T0061",
+      "family_id": "GSM8K-1031",
+      "selection_slot": 19,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "numeric",
+      "gold_answer": "6",
+      "question_sha256": "62f2755bbb3c672bdc3d7fd0dab8aa787a2166c3ab5e9d4e2d5cd0667f6d81e7"
+    },
+    {
+      "task_id": "T0094",
+      "family_id": "GSM8K-1031",
+      "selection_slot": 19,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "paraphrase",
+      "gold_answer": "5",
+      "question_sha256": "f685bd1f3fdb0ed990c0d268d922f51cc0515da00c9bc09101b6a48c5aaff18c"
+    },
+    {
+      "task_id": "T0005",
+      "family_id": "GSM8K-1031",
+      "selection_slot": 19,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "p1",
+      "gold_answer": "2",
+      "question_sha256": "0ad7ea624200a3766efab947311efd314b393f92248d9a59b45ba169f2d35959"
+    },
+    {
+      "task_id": "T0113",
+      "family_id": "GSM8K-1031",
+      "selection_slot": 19,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "p2",
+      "gold_answer": "11",
+      "question_sha256": "1a80aa8ec57e96be633fd4c90508a614c6919730a5ddee8df82517f2ede26272"
+    },
+    {
+      "task_id": "T0020",
+      "family_id": "GSM8K-1223",
+      "selection_slot": 20,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "numeric",
+      "gold_answer": "11",
+      "question_sha256": "5075909d45d7394ea17c6cac917c7b497e29cbb2a0e986da9beaba511b23c718"
+    },
+    {
+      "task_id": "T0093",
+      "family_id": "GSM8K-1223",
+      "selection_slot": 20,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "paraphrase",
+      "gold_answer": "8",
+      "question_sha256": "e91860dcf2971d22abcde78d88cec4c442db4f3be972ba0c7876f6b4ba329766"
+    },
+    {
+      "task_id": "T0003",
+      "family_id": "GSM8K-1223",
+      "selection_slot": 20,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "p1",
+      "gold_answer": "16",
+      "question_sha256": "6516b178be387cf9f3666aad567eba869f0680e24ca947af459f23466b7a6628"
+    },
+    {
+      "task_id": "T0110",
+      "family_id": "GSM8K-1223",
+      "selection_slot": 20,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "p2",
+      "gold_answer": "17",
+      "question_sha256": "ce297c73e6bdae2973ee08ea4de0e358bb6be8b35ab3ba2855b052231a1ca80e"
+    },
+    {
+      "task_id": "T0032",
+      "family_id": "GSM8K-158",
+      "selection_slot": 21,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "numeric",
+      "gold_answer": "40.6",
+      "question_sha256": "49e6549130cde8c2b24be043293ab5272639d28041d905b39fc1bbcf47569902"
+    },
+    {
+      "task_id": "T0047",
+      "family_id": "GSM8K-158",
+      "selection_slot": 21,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "paraphrase",
+      "gold_answer": "34",
+      "question_sha256": "081ca9bbf35adc0d64873bdbe16113d352b62121eb3d8bd0c06f54b9f3e88506"
+    },
+    {
+      "task_id": "T0074",
+      "family_id": "GSM8K-158",
+      "selection_slot": 21,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "p1",
+      "gold_answer": "285",
+      "question_sha256": "44fd942a01aee93c21cd07db7cfbd41bfb811855bf83cc851aa2f7ff4d6499f2"
+    },
+    {
+      "task_id": "T0019",
+      "family_id": "GSM8K-158",
+      "selection_slot": 21,
+      "analysis_role": "confirmation",
+      "batch_block": 2,
+      "variant": "p2",
+      "gold_answer": "196",
+      "question_sha256": "a37449a09f97e659be97fc47b979340623478c72ebaacc9ba9e4f499cb741ec4"
+    },
+    {
+      "task_id": "T0024",
+      "family_id": "GSM8K-1268",
+      "selection_slot": 22,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "numeric",
+      "gold_answer": "32",
+      "question_sha256": "a377a799c391908693f4e5adb06ad7769509970342fcd1a1aefeb12651239224"
+    },
+    {
+      "task_id": "T0046",
+      "family_id": "GSM8K-1268",
+      "selection_slot": 22,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "paraphrase",
+      "gold_answer": "20",
+      "question_sha256": "cb9ae4d0b446bec51ffaa7eafc928905a321801d5b542fac8927f65fa816351f"
+    },
+    {
+      "task_id": "T0075",
+      "family_id": "GSM8K-1268",
+      "selection_slot": 22,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "p1",
+      "gold_answer": "30",
+      "question_sha256": "03fb432ece579d90ca541c5f1fc41b2d182787461e57c563074095d5a4379ce4"
+    },
+    {
+      "task_id": "T0095",
+      "family_id": "GSM8K-1268",
+      "selection_slot": 22,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "p2",
+      "gold_answer": "40",
+      "question_sha256": "a5a3b254a3e6223f426b4047a7864f64097e9f3270188be978b5112a5e4bb1ac"
+    },
+    {
+      "task_id": "T0079",
+      "family_id": "GSM8K-1165",
+      "selection_slot": 23,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "numeric",
+      "gold_answer": "2250",
+      "question_sha256": "b9a5aa58ff9a2e66ed0f517ac489ff87567cff2eb06c43b5a45ff510ce96722a"
+    },
+    {
+      "task_id": "T0023",
+      "family_id": "GSM8K-1165",
+      "selection_slot": 23,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "paraphrase",
+      "gold_answer": "1248",
+      "question_sha256": "8d8343c57953b05465bba040b55fbc5faa79b7bc7451379652c22c54c63bea37"
+    },
+    {
+      "task_id": "T0081",
+      "family_id": "GSM8K-1165",
+      "selection_slot": 23,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "p1",
+      "gold_answer": "1914",
+      "question_sha256": "25b6b65ef11a040c1cb3ee1312fb5de09067c066515b4171c166e16c5859bf35"
+    },
+    {
+      "task_id": "T0054",
+      "family_id": "GSM8K-1165",
+      "selection_slot": 23,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "p2",
+      "gold_answer": "594",
+      "question_sha256": "94594e7150f7ae069a6eda0518ece129ebd192ff45020a49ea3b30ea0c5097ea"
+    },
+    {
+      "task_id": "T0117",
+      "family_id": "GSM8K-99",
+      "selection_slot": 24,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "numeric",
+      "gold_answer": "55",
+      "question_sha256": "18cf548916f5c80785cc27ab6fb1134a91a03004874a6d37d4ebe52379fa9255"
+    },
+    {
+      "task_id": "T0120",
+      "family_id": "GSM8K-99",
+      "selection_slot": 24,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "paraphrase",
+      "gold_answer": "58",
+      "question_sha256": "a8908c77cefadb047c6c90e845118ef83299e125542ccf1bdcdec1642b2257ca"
+    },
+    {
+      "task_id": "T0080",
+      "family_id": "GSM8K-99",
+      "selection_slot": 24,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "p1",
+      "gold_answer": "523",
+      "question_sha256": "403ed68d1fce4a49990e09434c093694bb4b39a98a352cd6c8dfcb0729dc8cd9"
+    },
+    {
+      "task_id": "T0062",
+      "family_id": "GSM8K-99",
+      "selection_slot": 24,
+      "analysis_role": "confirmation",
+      "batch_block": 3,
+      "variant": "p2",
+      "gold_answer": "389",
+      "question_sha256": "e9b2f97860b9d6610a94a3a6fa8bfce9a456ac297d1e51e18a3eb73ba5db69fd"
+    },
+    {
+      "task_id": "T0040",
+      "family_id": "GSM8K-107",
+      "selection_slot": 25,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "numeric",
+      "gold_answer": "8",
+      "question_sha256": "f40512cc0efc696477bc02c2cf88eb382c59bdcd2b928c8bdb412ae24b61b6fd"
+    },
+    {
+      "task_id": "T0011",
+      "family_id": "GSM8K-107",
+      "selection_slot": 25,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "paraphrase",
+      "gold_answer": "3",
+      "question_sha256": "41e0a7f24996e26effecfd38aec349cc0f02bd2b1520d29d51517fd25205d2a4"
+    },
+    {
+      "task_id": "T0091",
+      "family_id": "GSM8K-107",
+      "selection_slot": 25,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "p1",
+      "gold_answer": "3",
+      "question_sha256": "c467bcf91f3325460667c13df62803601c3f535358d1fd955729cda824c96781"
+    },
+    {
+      "task_id": "T0088",
+      "family_id": "GSM8K-107",
+      "selection_slot": 25,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "p2",
+      "gold_answer": "1",
+      "question_sha256": "462e66948929182bc3f3d4b8008f95e0f1b054bfa3273151a7d5b10451c76c46"
+    },
+    {
+      "task_id": "T0059",
+      "family_id": "GSM8K-737",
+      "selection_slot": 26,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "numeric",
+      "gold_answer": "10",
+      "question_sha256": "5838bd40736bd11c7b974c0d0a709fbefcb85ec1c482bd4dc33e6a0ff06d1001"
+    },
+    {
+      "task_id": "T0092",
+      "family_id": "GSM8K-737",
+      "selection_slot": 26,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "paraphrase",
+      "gold_answer": "2",
+      "question_sha256": "36353314fd197f84ed5dbdc260d53f5159717ce98785317e48059552ba1faf87"
+    },
+    {
+      "task_id": "T0058",
+      "family_id": "GSM8K-737",
+      "selection_slot": 26,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "p1",
+      "gold_answer": "64",
+      "question_sha256": "ff374b8cda0d77a190fcb67365b5161bd4da3afdf1ac26f3e1047e1a035b6b31"
+    },
+    {
+      "task_id": "T0048",
+      "family_id": "GSM8K-737",
+      "selection_slot": 26,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "p2",
+      "gold_answer": "165",
+      "question_sha256": "7cc958c7b1d88b6346a5028e5900845ff49415bc7f599a7239649c4072deaf7e"
+    },
+    {
+      "task_id": "T0015",
+      "family_id": "GSM8K-458",
+      "selection_slot": 27,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "numeric",
+      "gold_answer": "50",
+      "question_sha256": "5c8356bc3ac83712dc1a66f5e34c633601499c9fbd8f197735a8687245c95dc0"
+    },
+    {
+      "task_id": "T0083",
+      "family_id": "GSM8K-458",
+      "selection_slot": 27,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "paraphrase",
+      "gold_answer": "35",
+      "question_sha256": "bd47ff10a8943ae7888c52dbc43cdcf617e41fadf54d08e6e60ebbed6d912a4c"
+    },
+    {
+      "task_id": "T0052",
+      "family_id": "GSM8K-458",
+      "selection_slot": 27,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "p1",
+      "gold_answer": "84",
+      "question_sha256": "aae1dd57a4ecff777a5f4a951010dc898feb4532552b61a1decff7675a3df19f"
+    },
+    {
+      "task_id": "T0078",
+      "family_id": "GSM8K-458",
+      "selection_slot": 27,
+      "analysis_role": "confirmation",
+      "batch_block": 4,
+      "variant": "p2",
+      "gold_answer": "89",
+      "question_sha256": "0a007757ba8057014b94d991c8d841becdcb0f278714f8c6759753dcbbfc9a94"
+    },
+    {
+      "task_id": "T0045",
+      "family_id": "GSM8K-976",
+      "selection_slot": 28,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "numeric",
+      "gold_answer": "962",
+      "question_sha256": "f9b0b2282897398343a82e523b129baa3bdb5995bf773d5eacc82ce52b82f6a2"
+    },
+    {
+      "task_id": "T0070",
+      "family_id": "GSM8K-976",
+      "selection_slot": 28,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "paraphrase",
+      "gold_answer": "540",
+      "question_sha256": "ed7b33ebd64ea1aa1298cd5e6359c7733cb2ca182e9b0ed45ef1c27821538185"
+    },
+    {
+      "task_id": "T0033",
+      "family_id": "GSM8K-976",
+      "selection_slot": 28,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "p1",
+      "gold_answer": "922",
+      "question_sha256": "0556694c6aab6d0735a11fa68548b3e655203d37655b89f009c53519db465dac"
+    },
+    {
+      "task_id": "T0104",
+      "family_id": "GSM8K-976",
+      "selection_slot": 28,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "p2",
+      "gold_answer": "1050",
+      "question_sha256": "f22a0bf6a8ab762cba27a53e3838fc1f4344b642843b8760a8305b412f0243b7"
+    },
+    {
+      "task_id": "T0016",
+      "family_id": "GSM8K-11",
+      "selection_slot": 29,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "numeric",
+      "gold_answer": "855",
+      "question_sha256": "09c44b467c067105074e58dd919a0ed87839c353e0eb85b1dba2e1824d165b59"
+    },
+    {
+      "task_id": "T0014",
+      "family_id": "GSM8K-11",
+      "selection_slot": 29,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "paraphrase",
+      "gold_answer": "694",
+      "question_sha256": "434dc78a44b0ce003d75406a5e6ff7db7620f1d84b8e7a14cbcc400774262866"
+    },
+    {
+      "task_id": "T0036",
+      "family_id": "GSM8K-11",
+      "selection_slot": 29,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "p1",
+      "gold_answer": "1422",
+      "question_sha256": "a27b713e83feaad9a0564457dd8e21ac9cdef24c9c16fffcba781c6262ec3298"
+    },
+    {
+      "task_id": "T0026",
+      "family_id": "GSM8K-11",
+      "selection_slot": 29,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "p2",
+      "gold_answer": "865",
+      "question_sha256": "609ebecaef106be3dc1f9bf386e5d129ce78cd66b21fb48308596f81b4ffe135"
+    },
+    {
+      "task_id": "T0012",
+      "family_id": "GSM8K-125",
+      "selection_slot": 30,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "numeric",
+      "gold_answer": "12",
+      "question_sha256": "7719bb0c93253a3eb0217826d89f066b55ff8ab83d37a7868c34a94fc9b00038"
+    },
+    {
+      "task_id": "T0096",
+      "family_id": "GSM8K-125",
+      "selection_slot": 30,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "paraphrase",
+      "gold_answer": "10",
+      "question_sha256": "e7a71abefd2bfc7c6462bea33d9d832c0b9b67521e18a6ce8c10d5034df79db7"
+    },
+    {
+      "task_id": "T0106",
+      "family_id": "GSM8K-125",
+      "selection_slot": 30,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "p1",
+      "gold_answer": "29",
+      "question_sha256": "8c0c9b13b3d4db0785322cb474650b6da6de9341c2d32a0c5ca14d16ff93a959"
+    },
+    {
+      "task_id": "T0065",
+      "family_id": "GSM8K-125",
+      "selection_slot": 30,
+      "analysis_role": "confirmation",
+      "batch_block": 5,
+      "variant": "p2",
+      "gold_answer": "28",
+      "question_sha256": "79afe1674cf892ed4de78300aafca4b86939550059aa0564652e209e1b1387f3"
+    }
+  ]
+}
