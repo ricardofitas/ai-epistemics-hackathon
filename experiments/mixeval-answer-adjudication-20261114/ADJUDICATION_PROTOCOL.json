@@ -1,0 +1,21 @@
+{
+ "study":"Separation of final answer, non-final reference-supported content and rule credit",
+ "stage":"Post-generation adjudication; criteria frozen before reviewing individual outputs in this iteration",
+ "prior_exposure":"Aggregate80trial results and exploratory lexical summary already known:69complete,11incomplete; reported14/18Qwenbinding-only A tags. Not blind hypothesis discovery or preregistration before generation.",
+ "input_archive_sha256":"3074bdac21c06028ff134bd1570ed63d19179c5ae638b0e34849e6f479d43919",
+ "universe":"All80frozen trials fromrun43606982014; review only69completed scored texts. Preserve11incomplete as UNKNOWN in all primary estimates. No source/trial replacement.",
+ "reviewers":"Two distinct assistant-agent reviewers, independent labels, no inter-reviewer communication until labels saved. These are model-assisted reference-grounded adjudications, NOT human validation, default MixEval judge or new provider experiment. No external requests or additional answer generation. No outcome-dependent tie-breaking.",
+ "blinding":"Opaque SHA256trial IDs and stable SHA256order. Hide model, condition, request, prior assigned score and paired identity. Show captured output, source question/context and official alias references only. Output style can reveal condition; acknowledge partial blinding. Reviewers inherit no parent history.",
+ "rubric":{
+  "final_span":"Identify the last explicit final-answer declaration if present (Answer, Final answer, boxed or answer-only tail). An isolated final letter A/optiontag is a symbolic answer even if earlier prose supplies facts. Otherwise use last nonempty sentence/line that purports to answer. Retain exact substring. Ambiguous/candidate lists ->uncertain, never choose a favorable span.",
+  "final_label":"SUPPORTED if final assertion unambiguously states an official accepted answer or minimal semantic equivalent grounded in question+aliases; SYMBOLIC if only A/optiontag for freeform; ABSENT if no final answer; INCOMPATIBLE if final assertion differs from supplied reference; UNCERTAIN for ambiguous extraction, truth/reference ambiguity or equivalence needing independent facts. INCOMPATIBLE is reference disagreement, not independently established factual error.",
+  "nonfinal_label":"SUPPORTED only if observable output outside final span affirmatively states a supplied accepted answer/minimal equivalent relevant to question. A hypothetical, negated, quoted prompt or mere candidate mention does not suffice. NOT_OBSERVED if absent; UNCERTAIN if assertion/equivalence ambiguous. This is visible nonfinal output, never hidden chain of thought or proof of internal knowledge.",
+  "evidence":"Every SUPPORTED label must quote an exact output substring. Annotate short reason and source of ambiguity. No outside research; official target trust is explicit.",
+  "no_score_assistance":"Reviewers do not run parser or see rule scores; no exact-alias override of original scores. Original captures remain unchanged."
+ },
+ "aggregation":"Per reviewer cross-tab final/nonfinal versus original official optional rule credit. Combined final score1only if both SUPPORTED; score0only if both labels in SYMBOLIC/ABSENT/INCOMPATIBLE; otherwiseUNKNOWN. Combined nonfinal1ifbothSUPPORTED,0ifbothNOT_OBSERVED,elseUNKNOWN. Preserve individual labels and disagreement, no consensus rewrite. Per-model paired gain bounds over SAME20questions with11captureunknowns retained. No40independent-question or population/confidence-interval claim.",
+ "verification":"Check69uniqueIDs and exact quote substrings, label domains, blind mapping/text/source hashes, paired arithmetic and original69rulescores; distinct verifier after both reviewers submit. If a reviewer fails to finish, mark stagepartial and do not fabricate agreement.",
+ "new_provider_model_calls":0,
+ "new_judge_api_calls":0,
+ "scope":"Targets proxy accepted references, not independent gold truth. Assistant reviewers share model family/correlated errors. Post-discovery fixed20sourcepanel, format and instruction conjoint change; no universal capability or external-impact claim. Manuscript revision only after material adjudication evidence."
+}
