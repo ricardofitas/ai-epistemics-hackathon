@@ -1,0 +1,47 @@
+{
+  "stage": "Installed native request/source/reference gate integration with local counting sink",
+  "base_research_commit": "7f44f5986711fecf1d0bf18342cd6c6a82e4b42d",
+  "engine_revision": "d6de81643928d653435c431bae19945d41d32520",
+  "input_archive_library_id": "libfile_fde3_f-1495775d18908191be98755887c985d6_198492b795908191b811098f9e84ee4a",
+  "input_archive_version": 0,
+  "input_archive_sha256": "f142560c2b21dea8fb10daf4d1db64dc34401fe1ff4ef8fd88e57bd542494b0f",
+  "source_selection": "Reuse all200 frozen selectedARC/OpenBookQA units from previous installed task-path study, in its order. No resampling or new source rows.",
+  "input_files_sha256": {
+    "input/arc_challenge_CONFIG.json": "e4622c846c3dc7d2988305bfdfe6531726574ea39d1d08f4c71f5b62e5c99fde",
+    "input/openbookqa_CONFIG.json": "1457d07de90f524088266b438a1502938b28f92ee4e18dc98ef00704530108f1",
+    "input/NATIVE_INSTALL_PROVENANCE.json": "adecdf459f2b20312901131021002a32e244c14690385ee730a67a7850ac0ca1",
+    "input/SELECTED_INPUTS.jsonl.gz": "5489c0e3add5d6139f4b4b58165b503dddd5134e9ef976cb658c22eb10fe1e44"
+  },
+  "gate_sha256": "1443f46343c4591a9fca5a6811f83e472b21c4351286b0392ca36fa158eb7d18",
+  "native_integrity": "Verify six installed native module hashes and recorded dependency versions against previous persistent provenance. Native package imports and localJSON ConfigurableTask/build_all_requests execute unmodified. No AST/monkeypatch.",
+  "adapter": "Pinned prior resolved native configs retain template/choice/target/output/metrics. Only runtime localJSON path/taskid/cache directory change; zero-shot, offlineHF. Official answerKey is resolved independently against choices.label and exact choices.text; official source bytes are anchored by the selected-source archive and per-record SHA256.",
+  "gate": "Construct trusted registry independently from frozen selected-source records before task loading. Verify every native Instance.doc digest, task/docid, ordered option indices, exact official continuations, source question in every actualcontext and native target alignment. Snapshot immutable primitive tuples; pass the SAME verified snapshot to a local counting sink. Unknown registry key -> INCOMPLETE; disagreement -> FAIL; sink only called afterPASS.",
+  "conditions": {
+    "healthy": "PASS",
+    "benign_context_spacing": "PASS",
+    "drop_continuation": "FAIL",
+    "replace_continuation": "FAIL",
+    "omit_question": "FAIL",
+    "wrong_reference": "FAIL",
+    "substitute_document": "FAIL",
+    "missing_trusted_source": "INCOMPLETE"
+  },
+  "expected_counts": {
+    "source_units": 200,
+    "conditions_per_unit": 8,
+    "condition_records": 1600,
+    "PASS": 400,
+    "FAIL": 1000,
+    "INCOMPLETE": 200,
+    "counting_sink_calls": 400
+  },
+  "mutations": "Spacing appends whitespace to each actualcontext only. Drop/replace first non-gold continuation; omission removes exact source question from all actualcontexts. Wrongreference changes target to first nongold. Document substitution changes the question field in Instance.doc only. Missing trusted source uses unknown registrykey. Old native metadata otherwise retained.",
+  "outcome_policy": "Retain all failed/unknown/import exceptions. No tuning sample, gate, criteria or scientific implementation after outcomes; operational errors recorded separately. All mutated conditions intentional, no new natural engine-fault claim.",
+  "limits": [
+    "All sources and fault mechanisms previously observed; integration evidence, not independent validation or fault prevalence.",
+    "Snapshot binding ends at local counting sink. No model/backend/tokenizer/remote provider transport or likelihood scoring execution.",
+    "Trusted source archive is an explicit trust anchor; hostile source corruption or arbitrary adversarial software is not covered.",
+    "Native task loading/request construction reused solely to exercise new gate path, not to re-count prior healthy outcomes."
+  ],
+  "provider_model_calls": 0
+}
