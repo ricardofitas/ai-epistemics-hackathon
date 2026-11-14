@@ -1,0 +1,14 @@
+{
+  "python": "3.12.14",
+  "principal_dependencies": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "execution_python": "scoring_env1352; exact full environment in environment_freeze.txt",
+  "ordinary_official_scoring_imports": true,
+  "ordinary_native_primary_metric_imports": true,
+  "native_rescore_caller": "ASTmethodbody cross-check only",
+  "new_generation_calls": 0,
+  "new_judge_calls": 0,
+  "new_tokenizer_calls": 0
+}

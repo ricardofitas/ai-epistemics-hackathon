@@ -1,0 +1,10 @@
+{
+  "source_errors_before_scoring": [
+    "Two guessed MixEval module paths returned404; tree-resolved package paths then captured with exact Gitblob checks."
+  ],
+  "environment": "Fresh isolated venv; missing openai/transformers/torch/tiktoken/word2number dependencies installed before corresponding ordinary imports. No model initialized. Original syntax warnings retained.",
+  "branch": "An initial update_ref for a new branch returned422. Branch then created explicitly at frozen protocolcommit before data acquisition.",
+  "verification": "First native rescore cross-check used nonexistent statskey denominator_count; actual source uses valid_samples. Corrected verification field only; original source/native outputs unchanged and rechecked.",
+  "primary_scoring_errors": [],
+  "post_outcome_scientific_changes": "Only separately registered exploratory exact-alias repair; primary official-rule results untouched."
+}

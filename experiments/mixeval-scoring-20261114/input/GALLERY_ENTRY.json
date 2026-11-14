@@ -1,0 +1,145 @@
+{
+  "bench_name": "mixeval",
+  "bench_table_exist": true,
+  "bench_source_url": "https://huggingface.co/datasets/MixEval/MixEval",
+  "bench_dataflow_eval_type": "key3_q_choices_a",
+  "bench_prompt_template": null,
+  "bench_keys": [
+    "id",
+    "problem_type",
+    "context",
+    "prompt",
+    "target",
+    "benchmark_name",
+    "options"
+  ],
+  "meta": {
+    "bench_name": "mixeval",
+    "source": "bench_item_list",
+    "aliases": [
+      "mixeval",
+      "MixEval"
+    ],
+    "category": "Instruction & Chat",
+    "tags": [
+      "conversation & chatbots",
+      "instruction & chat"
+    ],
+    "description": "A ground-truth-based dynamic benchmark derived from off-the-shelf benchmark mixtures.",
+    "hf_meta": {
+      "bench_name": "mixeval",
+      "hf_repo": "MixEval/MixEval",
+      "card_text": "A ground-truth-based dynamic benchmark derived from off-the-shelf benchmark mixtures.",
+      "tags": [
+        "conversation & chatbots"
+      ],
+      "exists_on_hf": true
+    },
+    "structure": {
+      "repo_id": "MixEval/MixEval",
+      "revision": null,
+      "subsets": [
+        {
+          "subset": "MixEval",
+          "splits": [
+            {
+              "name": "free_form",
+              "num_examples": null
+            },
+            {
+              "name": "multiple_choice",
+              "num_examples": null
+            }
+          ],
+          "features": null
+        },
+        {
+          "subset": "MixEval_Hard",
+          "splits": [
+            {
+              "name": "free_form",
+              "num_examples": null
+            },
+            {
+              "name": "multiple_choice",
+              "num_examples": null
+            }
+          ],
+          "features": null
+        }
+      ],
+      "ok": true,
+      "error": null
+    },
+    "download_config": {
+      "config": "MixEval",
+      "split": "free_form",
+      "reason": "\u9009\u62e9 'MixEval' \u4f5c\u4e3a\u4e3b\u6570\u636e\u96c6\uff0c\u56e0\u4e3a\u5b83\u53ef\u80fd\u662f\u6700\u5177\u4ee3\u8868\u6027\u7684\u57fa\u672c\u914d\u7f6e\uff0c\u800c 'MixEval_Hard' \u53ef\u80fd\u662f\u4e00\u4e2a\u66f4\u52a0\u56f0\u96be\u7684\u7248\u672c\u3002\u9009\u62e9 'free_form' split\uff0c\u56e0\u4e3a\u6ca1\u6709 'test' \u6216\u76f8\u5173\u5173\u952e\u8bcd\u7684 split\uff0c\u8fd9\u662f\u4e00\u4e2a\u8bc4\u6d4b\u7c7b\u4efb\u52a1\u7684\u5408\u7406\u9009\u62e9\u3002"
+    },
+    "key_mapping": {
+      "input_question_key": "prompt",
+      "input_choices_key": "options",
+      "input_label_key": "target",
+      "input_context_key": "context"
+    },
+    "key_mapping_reason": "\u5b57\u6bb5\u5217\u8868\u4e2d\u5b58\u5728 'prompt', 'options', \u548c 'target'\uff0c\u8fd9\u8868\u660e\u6570\u636e\u96c6\u53ef\u80fd\u6d89\u53ca\u9009\u62e9\u9898\u7c7b\u578b\uff0c\u5176\u4e2d\u6709\u5355\u4e2a\u6b63\u786e\u7b54\u6848\u3002\u6b64\u5916\u5b58\u5728 'context' \u5b57\u6bb5\uff0c\u4e3a\u4e86\u4e30\u5bcc\u95ee\u9898\u80cc\u666f\uff0c\u6620\u5c04\u4e3a 'input_context_key'\u3002",
+    "description_zh": "\u52a8\u6001\u6df7\u5408\u8bc4\u6d4b\uff0c\u6765\u81ea\u591a\u4e2a\u73b0\u6210 benchmark",
+    "radar_dimensions": [
+      "instruction",
+      "language"
+    ],
+    "evaluation": {
+      "score_source": "metric_stage",
+      "official_metric": "accuracy",
+      "primary_metric": "choice_accuracy",
+      "denominator": "total",
+      "prediction_mode": "generation",
+      "parser": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choices_key": "options"
+      },
+      "failure_policy": {
+        "parse_failed": "score_zero",
+        "empty_output": "score_zero",
+        "invalid_reference": "exclude"
+      }
+    },
+    "prompt": {
+      "source": "gallery",
+      "template_id": "mixeval_contract_v1",
+      "system_prompt": "",
+      "user_template": "Context:\n{context}\n\nQuestion:\n{prompt}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+      "output_format": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "answer_tag": "<answer>CHOICE</answer>"
+      },
+      "few_shot": {
+        "enabled": false,
+        "num_shots": 0,
+        "source_split": null
+      },
+      "generation": {
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "max_tokens": 1024,
+        "stop": []
+      }
+    },
+    "readiness": {
+      "status": "contract_inferred",
+      "smoke_passed": false,
+      "golden_cases": null,
+      "known_limitations": [
+        "No direct lm-eval YAML match was found; contract fields are inferred from the requested bench list."
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "stage": "Exploratory exact-alias repair; not an independent validation",
+  "prior_official_rule_counterexamples_preserved": true,
+  "rule": "If a freeform captured text equals an accepted source alias under edge trim/casefold, return1; otherwise retain original officialrule result. No change to original official files or initial experiment.",
+  "real_outputs": 49,
+  "real_score_changes": 0,
+  "real_typed_correct": {
+    "free_form": 13,
+    "multiple_choice": 20
+  },
+  "synthetic_oracle_fixtures": 200,
+  "synthetic_oracle_passes": 200,
+  "synthetic_oracle_repairs": 2,
+  "new_model_requests": 0,
+  "limits": "Source aliases are an explicit trust assumption. This guard enforces exact accepted-answer reflexivity; it does not validate approximate rule-based semantic grading or default model-judge agreement."
+}
