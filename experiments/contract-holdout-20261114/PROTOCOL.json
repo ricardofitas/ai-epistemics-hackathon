@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-14",
+  "framework_commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "selection_protocol_commit": "634d6cb1397b4060774c8a57b2964c99423ef0d4",
+  "checker_source_commit": "634d6cb1397b4060774c8a57b2964c99423ef0d4",
+  "checker_sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e",
+  "source_support_sha256": "199f4728548eb6674543e761fad341a0e2a2cd1929b263793055a9a86e9c6e8d",
+  "gallery_sha256": "657e48a140a4760606b81b14187f333b5031ffadca0cc450093a5117896294f4",
+  "maximum_sample_rows": 100,
+  "source_selection": "Sort all official split records by SHA256 of UTF8 canonical JSON (sort_keys=True, ensure_ascii=False, separators comma/colon); tie by original row index. Take first min(100,N). No outcome-dependent substitutions.",
+  "source_policy": "Resolve and preserve public main and converted-parquet revisions and full raw split before sampling. Three transport attempts for retryable public-source HTTP failures, no credentials or model requests. Acquisition failures remain in the disposition record.",
+  "oracle_semantics": {
+    "arc-challenge": "Look up answerKey in choices.label; retain the aligned choices.text and gold position. Numeric labels are symbols in this lookup.",
+    "openbookqa": "Look up answerKey in choices.label; retain aligned choices.text and gold position.",
+    "mmlu": "answer is a zero-based index into choices.",
+    "mmlu-pro": "answer_index is a zero-based index into options; independently require the answer letter to match when present."
+  },
+  "checks": "Frozen checker, independent field/choice/label checks, native question mutation probes, native scoring of canonical-letter and official-text oracles, every constant-letter control. The generator uses an inert local backend.",
+  "unknowns": "Retain every selected source row. Any schema or scoring failure is recorded explicitly; do not remove rows or change the frozen checker.",
+  "model_inference_calls": 0,
+  "calibration_restriction": "The checker file is byte-pinned and will not be changed based on these four panels; source adapters explicitly implement the prospective source semantics above.",
+  "interpretation": "Prospective diagnostic extension inside one framework. It does not estimate deployment prevalence or prove affected published model scores.",
+  "prespecified_repair": "Bind original question fields directly into the declared source template, preserve the official complete option order and canonical answer label, and use a parser sized to the source choice count. This is a source-bound intervention, not a change to the frozen checker."
+}

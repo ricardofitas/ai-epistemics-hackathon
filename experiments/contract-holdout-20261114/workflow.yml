@@ -1,0 +1,39 @@
+name: Prospective four-contract source audit
+on:
+  push:
+    branches: [ricardo/contract-holdout-20261114]
+    paths: [experiments/contract-holdout-20261114/LAUNCH.json]
+permissions:
+  contents: read
+concurrency:
+  group: contract-holdout-20261114
+  cancel-in-progress: false
+jobs:
+  audit:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: experiments/contract-holdout-20261114
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.11'
+      - name: Install fixed data-only dependencies
+        run: python -m pip install pandas==2.2.3 numpy==2.3.5 pyarrow==22.0.0
+      - name: Capture public source revisions and the frozen SHA samples
+        working-directory: experiments/contract-holdout-20261114
+        run: python capture_sources.py
+      - name: Execute the frozen checker and native scoring controls
+        working-directory: experiments/contract-holdout-20261114
+        run: python audit_holdout.py
+      - name: Preserve every acquisition and audit disposition
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: contract-holdout-${{ github.run_id }}
+          path: experiments/contract-holdout-20261114
+          retention-days: 90
+          if-no-files-found: error
