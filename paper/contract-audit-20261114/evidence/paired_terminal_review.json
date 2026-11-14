@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "sse_journal_hashes_verified": 80,
+  "terminal_events_reconciled": {
+    "response.completed": 80
+  },
+  "sse_frames_including_capture_end": 66816,
+  "model_condition_totals": {
+    "gemma-4-31b-it:binding_only": {
+      "planned": 20,
+      "completed_nonempty": 18,
+      "output_tokens": 11236,
+      "input_tokens": 1888
+    },
+    "qwen3.8-27b:binding_only": {
+      "planned": 20,
+      "completed_nonempty": 18,
+      "output_tokens": 22628,
+      "input_tokens": 2698
+    },
+    "gemma-4-31b-it:official_typed": {
+      "planned": 20,
+      "completed_nonempty": 16,
+      "output_tokens": 16828,
+      "input_tokens": 1344
+    },
+    "qwen3.8-27b:official_typed": {
+      "planned": 20,
+      "completed_nonempty": 17,
+      "output_tokens": 15612,
+      "input_tokens": 2132
+    }
+  },
+  "unknown_outputs": [
+    {
+      "trial_id": "MXG-01-B-G",
+      "source_index": 548,
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "incomplete",
+      "terminal_event": "response.completed",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output_tokens": 4096,
+      "primary_score": null,
+      "partial_text_preserved": true
+    },
+    {
+      "trial_id": "MXG-02-T-Q",
+      "source_index": 1562,
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "terminal_event": "response.completed",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output_tokens": 4096,
+      "primary_score": null,
+      "partial_text_preserved": false
+    },
+    {
+      "trial_id": "MXG-06-B-Q",
+      "source_index": 662,
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "incomplete",
+      "terminal_event": "response.completed",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output_tokens": 4096,
+      "primary_score": null,
+      "partial_text_preserved": false
+    },
+    {
+      "trial_id": "MXG-06-T-G",
+      "source_index": 662,
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "terminal_event": "response.completed",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output_tokens": 4096,
+      "primary_score": null,
+      "partial_text_preserved": true
+    },
+    {
+      "trial_id": "MXG-10-B-Q",
+      "source_index": 1100,
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "incomplete",
+      "terminal_event": "response.completed",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output_tokens": 4096,
+      "primary_score": null,
+      "partial_text_preserved": false
+    },
+    {
+      "trial_id": "MXG-12-T-G",
+      "source_index": 268,
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "terminal_event": "response.completed",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output_tokens": 4096,
+      "primary_score": null,
+      "partial_text_preserved": true
+    },
+    {
+      "trial_id": "MXG-12-T-Q",
+      "source_index": 268,
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "terminal_event": "response.completed",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output_tokens": 4096,
+      "primary_score": null,
+      "partial_text_preserved": false
+    },
+    {
+      "trial_id": "MXG-13-T-G",
+      "source_index": 992,
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "terminal_event": "response.completed",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output_tokens": 4096,
+      "primary_score": null,
+      "partial_text_preserved": true
+    },
+    {
+      "trial_id": "MXG-16-B-G",
+      "source_index": 896,
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "incomplete",
+      "terminal_event": "response.completed",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output_tokens": 4096,
+      "primary_score": null,
+      "partial_text_preserved": true
+    },
+    {
+      "trial_id": "MXG-16-T-Q",
+      "source_index": 896,
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "terminal_event": "response.completed",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output_tokens": 4096,
+      "primary_score": null,
+      "partial_text_preserved": false
+    },
+    {
+      "trial_id": "MXG-17-T-G",
+      "source_index": 1749,
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "terminal_event": "response.completed",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output_tokens": 4096,
+      "primary_score": null,
+      "partial_text_preserved": true
+    }
+  ],
+  "all_unknowns_at_output_cap": true,
+  "all_model_identifiers_exact": true,
+  "all_terminal_objects_and_output_texts_reconciled": true,
+  "no_model_or_judge_calls_by_reviewer": true
+}

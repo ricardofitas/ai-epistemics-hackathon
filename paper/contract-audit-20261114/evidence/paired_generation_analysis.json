@@ -1,0 +1,243 @@
+{
+  "status": "partial",
+  "planned_requests": 80,
+  "recorded_artifacts": 80,
+  "completed_scored": 69,
+  "effects": [
+    {
+      "model": "gemma-4-31b-it",
+      "pairs": 20,
+      "complete_pairs": 14,
+      "typed_wins": 3,
+      "binding_wins": 0,
+      "ties": 11,
+      "gain_bounds": [
+        -0.05,
+        0.25
+      ],
+      "pairs_detail": [
+        {
+          "source_index": 492,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 548,
+          "binding_only": null,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1562,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 1169,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 47,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1528,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 662,
+          "binding_only": 1.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 1217,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1425,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1705,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 1100,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 323,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 268,
+          "binding_only": 1.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 992,
+          "binding_only": 1.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 755,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 935,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 896,
+          "binding_only": null,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 1749,
+          "binding_only": 0.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 740,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 836,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        }
+      ]
+    },
+    {
+      "model": "qwen3.8-27b",
+      "pairs": 20,
+      "complete_pairs": 15,
+      "typed_wins": 10,
+      "binding_wins": 0,
+      "ties": 5,
+      "gain_bounds": [
+        0.5,
+        0.75
+      ],
+      "pairs_detail": [
+        {
+          "source_index": 492,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 548,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1562,
+          "binding_only": 0.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 1169,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 47,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1528,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 662,
+          "binding_only": null,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1217,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1425,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1705,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1100,
+          "binding_only": null,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 323,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 268,
+          "binding_only": 0.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 992,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 755,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 935,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 896,
+          "binding_only": 0.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 1749,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 740,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 836,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        }
+      ]
+    }
+  ],
+  "usage_records": 80,
+  "input_tokens": 8062,
+  "output_tokens": 66304,
+  "cost_units": "0.057821010000000003215",
+  "cost_currency": null,
+  "scoring_mode": "official_optional_rule_not_default_judge",
+  "new_judge_calls": 0
+}

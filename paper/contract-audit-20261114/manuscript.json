@@ -5,7 +5,7 @@
     "blocks": [
       {
         "kind": "meta",
-        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.3"
+        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.4"
       },
       {
         "kind": "heading",
@@ -13,7 +13,7 @@
       },
       {
         "kind": "p",
-        "text": "Evaluation software can change task kind, remove required information and alter scoring references while producing executable requests. We audit these interfaces in a pinned One-Eval revision using official records, native methods, controlled interventions and an existing two-model trial. A prospective four-contract extension found malformed ARC-Challenge and OpenBookQA construction, followed by complete captured-split confirmation. In a 50-question WinoGrande panel, Qwen's source-correct gain under joint question and format repair remains between 36 and 48 percentage points under conservative treatment of unknown answers. Re-scoring identical repaired-prompt outputs changes assigned scores by 40 and 42 points for the two models. Causal ablations isolate shared source-symbol and option-decoding faults. A subsequent prediction is confirmed on 100 French MMMLU records. A distinct MixEval test finds that 100 selected free-form questions receive multiple-choice instructions and an artificial None option despite field presence and agreement between inferred route and parser. Question binding alone preserves this task-kind failure. A typed generation repair restores free-text requests while leaving incompatible scoring metadata unresolved. Source-bound checks, healthy evaluator controls and a bounded installed native gate delimit the implemented intervention. Retained audit-adapter errors and overlapping source questions constrain generalization. The results establish attributable task-preservation failures and controlled consequences. Affected independently reported conclusions and broad fault prevalence remain unresolved."
+        "text": "Evaluation software can change task kind, remove required information and alter scoring references while returning numeric scores. We audit a pinned One-Eval revision using official records, native methods, controlled interventions and an existing two-model trial. A prospective four-contract extension found malformed ARC-Challenge and OpenBookQA construction, followed by captured-split confirmation. In a 50-question WinoGrande panel, Qwen's source-correct gain under joint question and format repair remains between 36 and 48 percentage points under conservative unknown-answer treatment. Re-scoring identical repaired-prompt outputs changes assigned scores by 40 and 42 points for the two models. Causal ablations isolate shared source-symbol and option-decoding faults, followed by a confirmed prediction on 100 French MMMLU records. MixEval reveals a distinct task-kind mismatch despite field presence and internally consistent inferred settings. Source placeholders are displayed as answer choices. Controlled scorer replays on 200 reused records reject all original list references yet return numeric zero. A separate fixed-output study matches 49 public responses and confirms reference exclusion; typed optional official rule scoring preserves interpretable outcomes and its own counterexamples. These replays isolate scorer behavior. A subsequent 20-question paired pilot makes 80 new generation calls under a common scorer. Qwen's score gain remains 50-75 percentage points under conservative incomplete-answer bounds; Gemma's -5 to +25 interval remains inconclusive. Source-bound checks, retained audit errors and bounded native-path tests delimit the intervention. Overlapping source content, incomplete cache coverage and unresolved affected external conclusions constrain generalization."
       },
       {
         "kind": "heading",
@@ -452,7 +452,7 @@
       },
       {
         "kind": "p",
-        "text": "All 100 selected free-form rows contain the configured prompt/options/target fields. The native route delivers an artificial A. None option and requests a choice letter. Restoring question binding preserves that task-family error. The typed generation intervention removes the artificial option and restores free-text requests in all 100 cases. The source-kind comparison exposes a failure that field presence and inferred-metadata agreement accept."
+        "text": "All 100 selected free-form rows contain the configured prompt/options/target fields, including the source placeholder options=[\"None\"]. The wrong native route displays this placeholder as A. None and requests a choice letter; preprocessing did not create its value. Restoring question binding preserves the task-kind error. The typed generation intervention restores free-text requests in all 100 cases. Field presence and agreement among inferred settings do not detect this source-task mismatch."
       },
       {
         "kind": "heading",
@@ -460,7 +460,7 @@
       },
       {
         "kind": "p",
-        "text": "The typed intervention changes generation while retaining original scoring metadata. Route/parser agreement therefore fails after the source-kind repair. Accepted free-form reference lists remain intact. Completing the MixEval evaluator requires aligned scoring and parsing. The measured outcomes concern request semantics, with model accuracy and official MixEval scores still open."
+        "text": "The initial typed intervention changes generation while retaining incompatible scoring metadata. Section 9 separately tests reference semantics and scoring. Request-level repair alone is insufficient; the optional official rule mode also has limitations and differs from default model judging."
       },
       {
         "kind": "p",
@@ -473,11 +473,144 @@
     ]
   },
   {
-    "title": "Positioning, limits and research readiness",
+    "title": "Scoring coverage and fixed-output consequences",
     "blocks": [
       {
         "kind": "heading",
-        "text": "9. Relation to existing work"
+        "text": "9. Reference exclusion can masquerade as a score"
+      },
+      {
+        "kind": "p",
+        "text": "A fixed post-discovery protocol reuses 200 selected MixEval records. Four constructed-output families and three scoring conditions yield 2,400 condition records. Each case receives identical response bytes across conditions, isolating reference/parser effects from question binding or generation. The native choice rescorer rejects all 100 original list-valued references in each split and reports zero with no eligible references. This is non-evaluable, not measured zero model accuracy."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Source-correct constructed output",
+          "Free-form eligible / correct",
+          "Choice eligible / correct"
+        ],
+        "rows": [
+          [
+            "Original list reference",
+            "0 / undefined",
+            "0 / undefined"
+          ],
+          [
+            "Singleton-reference extraction only",
+            "0 / undefined",
+            "100 / 98"
+          ],
+          [
+            "Official optional rule dispatch",
+            "100 / 98",
+            "100 / 100"
+          ]
+        ],
+        "widths": [
+          219,
+          130,
+          130
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "Singleton extraction is insufficient. Two five-option cases have source index 4 and correct letter E. Static A-D parsing rejects E and a one-based fallback maps index 4 to D. The typed rule dispatcher uses the original zero-based integer and all source options. Independent agent/code reconciliation verifies all 2,400 records and the frozen implementation. An integration adapter separately matches 800 official-rule controls and returns INCOMPLETE on 19 invalid-input cases."
+      },
+      {
+        "kind": "heading",
+        "text": "Existing public responses, incomplete matching"
+      },
+      {
+        "kind": "p",
+        "text": "A separate protocol matches the same fixed 200-source cohort to preexisting public response files. Only 49 matches are unique; 128 are unmatched and 23 ambiguous. These sets are preserved, without substitution. This is fixed-output replay, not generation under the faulty prompts or evidence that the public producer used One-Eval."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Matched split",
+          "Nominal N",
+          "Eligible native N",
+          "Typed rule correct"
+        ],
+        "rows": [
+          [
+            "Free-form",
+            "17",
+            "0",
+            "13 / 17"
+          ],
+          [
+            "Choice",
+            "32",
+            "0",
+            "20 / 32"
+          ]
+        ],
+        "widths": [
+          159,
+          70,
+          110,
+          140
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "An ordinary import of the original primary metric reproduces zero with all 49 references excluded. Although its requested policy is total, the code excludes invalid references before incrementing the effective denominator. Nominal N, policy and scored N must therefore be distinguished. Conditional native accuracy is undefined. The default model-judge score and a positive model-capability gain are not established."
+      },
+      {
+        "kind": "heading",
+        "text": "Official rule behavior is retained, not assumed ideal"
+      },
+      {
+        "kind": "p",
+        "text": "The official optional rule mode rejects two literal accepted aliases: Government of D.C. loses its terminal period only in the response; Tomorrow is another day is truncated at is. Empty choice outputs trigger random guesses: 25/100 in the constructed seed-42 control. Five of 32 public choice texts trigger this fallback, contributing one correct guess; treating those five as unresolved gives 19-24 correct. A separate exploratory exact-alias guard fixes the two constructed misses but changes none of the 49 real-output scores. It is not independently validated or the unmodified official mode."
+      }
+    ]
+  },
+  {
+    "title": "Paired follow-up, positioning and limitations",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "10. Paired real-generation follow-up"
+      },
+      {
+        "kind": "p",
+        "text": "A fixed exploratory pilot selects the first 20 free-form records from the existing stable order (16 TriviaQA, three DROP, one BBH). Both prompts bind the same question/context. Binding-only retains the wrong choice instruction; typed generation uses the official free-form constructor. Two fixed models receive 80 single-attempt requests, all scored afterward with the same unmodified optional rule evaluator. Of 80 responses, 69 complete and 11 reach the 4,096-token cap; capped cases remain unknown."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Model",
+          "Complete pairs / 20",
+          "Typed-minus-binding score bounds"
+        ],
+        "rows": [
+          [
+            "Gemma",
+            "14 / 20",
+            "-5 to +25 percentage points"
+          ],
+          [
+            "Qwen",
+            "15 / 20",
+            "+50 to +75 percentage points"
+          ]
+        ],
+        "widths": [
+          100,
+          140,
+          239
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "These are sensitivity bounds over the fixed panel, not population confidence intervals. Qwen retains a positive assigned-score effect even under worst-case treatment of missing answers. Gemma does not. The intervention changes task instructions and formatting together; source exposure, fixed request order and heuristic scoring constrain interpretation. Appendix C retains request, capture and resource checks."
+      },
+      {
+        "kind": "heading",
+        "text": "11. Relation to existing work"
       },
       {
         "kind": "p",
@@ -489,15 +622,15 @@
       },
       {
         "kind": "heading",
-        "text": "10. Supported conclusions and external evidence"
+        "text": "12. Supported conclusions and external evidence"
       },
       {
         "kind": "p",
-        "text": "The audited transformations can change the task kind, discard question information or corrupt scoring references. Qwen retains a positive repair effect under conservative unknown-answer treatment, and fixed-output replays isolate reference effects. Shared-cause interventions and the MMMLU prediction extend the explanation across configurations. MixEval shows that field presence and agreement among inferred settings can coexist with source-task loss. Its generation repair leaves the scoring gap visible."
+        "text": "The audited transformations change task kind, discard question information, corrupt references or exclude every eligible case while returning a numeric score. Shared-cause interventions and the MMMLU prediction extend the explanation across configurations. WinoGrande provides a paired generation consequence. MixEval fixed-output studies isolate measurement and reference failures, with source overlap and missing cache matches retained."
       },
       {
         "kind": "p",
-        "text": "Public evidence currently reaches gallery reuse, a related LoopAI component-execution log and copies of the audited component in two contributor forks. The log concerns general_text_eval and GSM8K. The inspected original paper's 100-request experiment ends before model evaluation. Validation of an affected independent conclusion still requires matching executable revision, effective configuration and request/output evidence. A 29-fork inventory and three pinned-tree inspections delimit the additional search. Public artifact coverage cannot establish private deployment frequency."
+        "text": "Public evidence reaches upstream demos with scores/conclusions, a LoopAI execution log and copied components. No matched executable revision/request/output trace establishes an independently affected conclusion. The inspected original 100-request paper study ends before model evaluation. Bounded searches do not establish deployment frequency."
       },
       {
         "kind": "heading",
@@ -505,11 +638,11 @@
       },
       {
         "kind": "p",
-        "text": "The paired diagnostic sample is enriched and contains incomplete or non-evaluable responses. Native heuristic parsing differs from the strict primary rule. Adapter reviews followed outcomes and are retained separately. Shared-cause studies reuse known cases. MMMLU translations and the MixEval mixture can overlap prior semantic questions. The installed gate is bounded by its trusted source and local counting sink. Source-family transfer and constructed controls support correspondingly bounded claims."
+        "text": "Source cohorts overlap, cache matching is incomplete and post-outcome adapter reviews remain separate. The paired pilot is small, source-exposed and fixed-order. Optional rule scores differ from default model judging. Native orchestration and installed gate claims end at their declared source, provider and dependency boundaries."
       },
       {
         "kind": "p",
-        "text": "The immediate implementation gap is alignment of MixEval generation, reference semantics and scoring through the ordinary execution path. A further scientific test should evaluate an unresolved mechanism under a fixed protocol. The manuscript is prepared for internal review, with global novelty assessment, independent review, external affected conclusions and venue/author preparation remaining open."
+        "text": "Bounded full-module orchestration carries the same 49 public responses with replaced provider/prompt/scoring boundaries and inert dependency facades (Appendix B). Complete installed-provider execution, global novelty assessment and default judge agreement remain open."
       }
     ]
   },
@@ -518,7 +651,7 @@
     "blocks": [
       {
         "kind": "small",
-        "text": "[1] Biderman et al. Lessons from the Trenches on Reproducible Evaluation of Language Models. arXiv:2405.14782, v3 (2026 revision). https://arxiv.org/abs/2405.14782v3<br/>[2] Hugging Face. Evaluation Guidebook: Troubleshooting reproducibility. Consulted 14 Nov 2026. github.com/huggingface/evaluation-guidebook<br/>[3] Ludwick and Hsiao. SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges. arXiv:2610.28886v2 (23 Oct 2026). https://arxiv.org/html/2610.28886v2<br/>[4] OpenDCAI/One-Eval, revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506.<br/>[5] EleutherAI/lm-evaluation-harness, revision d6de81643928d653435c431bae19945d41d32520.<br/>[6] Official source record captures, native implementation snapshots, protocols and analysis manifests identified in the accompanying evidence package.<br/>[7] Zhao et al. Towards Evaluation Engineering: An Empirical Study of ML Evaluation Harnesses in the Wild. arXiv:2605.24213v1. https://arxiv.org/html/2605.24213v1<br/>[8] Dev et al. Judge Reliability Harness. arXiv:2603.05399v1. https://arxiv.org/abs/2603.05399v1 (abstract-only comparison).<br/>[9] Social IQa official source and frozen transfer protocol: source revision and exact archive/checker hashes in SOURCE_ARCHIVES.json and evidence/social_protocol.json.<br/>[10] MixEval official custom-evaluation guide, revision 7c52b41929d461df7733573528bdfb08774b0c53. github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/docs/how_to_use_your_own_eval_code.md<br/>[11] OpenAI MMMLU official dataset, revision 325a01dc3e173cac1578df94120499aaca2e2504. huggingface.co/datasets/openai/MMMLU/tree/325a01dc3e173cac1578df94120499aaca2e2504<br/>[12] Shared-cause, native-gate and MixEval protocols, captures and verification in the accompanying version-pinned source archives."
+        "text": "[1] Biderman et al. Lessons from the Trenches on Reproducible Evaluation of Language Models. arXiv:2405.14782, v3 (2026 revision). https://arxiv.org/abs/2405.14782v3<br/>[2] Hugging Face. Evaluation Guidebook: Troubleshooting reproducibility. Consulted 14 Nov 2026. github.com/huggingface/evaluation-guidebook<br/>[3] Ludwick and Hsiao. SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges. arXiv:2610.28886v2 (23 Oct 2026). https://arxiv.org/html/2610.28886v2<br/>[4] OpenDCAI/One-Eval, revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506.<br/>[5] EleutherAI/lm-evaluation-harness, revision d6de81643928d653435c431bae19945d41d32520.<br/>[6] Official source record captures, native implementation snapshots, protocols and analysis manifests identified in the accompanying evidence package.<br/>[7] Zhao et al. Towards Evaluation Engineering: An Empirical Study of ML Evaluation Harnesses in the Wild. arXiv:2605.24213v1. https://arxiv.org/html/2605.24213v1<br/>[8] Dev et al. Judge Reliability Harness. arXiv:2603.05399v1. https://arxiv.org/abs/2603.05399v1 (abstract-only comparison).<br/>[9] Social IQa official source and frozen transfer protocol: source revision and exact archive/checker hashes in SOURCE_ARCHIVES.json and evidence/social_protocol.json.<br/>[10] MixEval official custom-evaluation guide, revision 7c52b41929d461df7733573528bdfb08774b0c53. github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/docs/how_to_use_your_own_eval_code.md<br/>[11] OpenAI MMMLU official dataset, revision 325a01dc3e173cac1578df94120499aaca2e2504. huggingface.co/datasets/openai/MMMLU/tree/325a01dc3e173cac1578df94120499aaca2e2504<br/>[12] Shared-cause, native-gate and MixEval protocols, captures and verification in the accompanying version-pinned source archives. <br/>[13] JinjieNi/MixEval optional rule and model scoring implementations, revision 7c52b41929d461df7733573528bdfb08774b0c53, mix_eval/utils/metric_utils.py and mix_eval/compute_metrics.py. Exact source/module hashes and fixed-output protocols accompany this manuscript."
       }
     ]
   },
@@ -609,11 +742,171 @@
     ]
   },
   {
-    "title": "Appendix B. Claim-to-evidence map",
+    "title": "Appendix B. Bounded native orchestration integration",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "B.1. What executes unchanged"
+      },
+      {
+        "kind": "p",
+        "text": "The integration fixes code and inputs before the two task-family runs in commit 0e2616f099b5f5defb395f3d545b3736c23b063a. It reuses the same 17 free-form and 32 choice responses. Full original source modules are imported through Python package modules rather than extracting native method ASTs. One-Eval run_eval, the generator and evaluator run entry points, and FileStorage execute unchanged. This is an orchestration transfer test with replayed responses, not new model inference."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Boundary",
+          "Intervention and measured scope"
+        ],
+        "rows": [
+          [
+            "Provider",
+            "Local captured-output serving; one batch per family; source-bound user-prompt and response association checked. Native default system instruction retained."
+          ],
+          [
+            "Prompt",
+            "Source-bound official constructor validates question, context and ordered choices."
+          ],
+          [
+            "Scoring",
+            "Per-task scoring delegates to pinned official optional rule functions; native choice post-rescoring is bypassed."
+          ],
+          [
+            "Dependencies",
+            "Package export facades and inert optional import sentinels avoid unrelated tensor/backend dependencies."
+          ],
+          [
+            "Coverage",
+            "Source/output identity, record and response bytes, reference semantics and complete scored coverage are required before a numeric aggregate."
+          ]
+        ],
+        "widths": [
+          80,
+          399
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "B.2. Observed scope and controls"
+      },
+      {
+        "kind": "p",
+        "text": "The 17-row free-form run and 32-row choice run preserve all rows and reproduce 13 and 20 correct rule outcomes, respectively. The five choice fallback guesses remain explicit. No optional-dependency sentinel is invoked. Ten separately fixed malformed identity/coverage controls return INCOMPLETE and no aggregate before any local generation batch. The selected rows overlap the earlier fixed-output replay and are not a new independent cohort."
+      },
+      {
+        "kind": "p",
+        "text": "Native statistics retain legacy metric-name labels because the surrounding evaluator run method is unchanged. Actual scoring is explicitly identified as optional official rule mode. Native returns are diagnostic, with display_as_primary=false; the original One-Eval primary metric runner is not executed in this integration."
+      },
+      {
+        "kind": "heading",
+        "text": "B.3. Provenance correction and limits"
+      },
+      {
+        "kind": "p",
+        "text": "Independent review identified a metadata collision in raw score captures: an adapter field labelled source_sha256 names the scoring-code hash and overwrites the intended record-hash label during dictionary assembly. Raw results are retained. The provenance erratum separates source_record_sha256 from scorer_source_sha256 using frozen inputs and source/output association checks. Scoring outcomes and the underlying source guards are unaffected. The corrected ledger is a derived reconciliation, not a rerun."
+      },
+      {
+        "kind": "p",
+        "text": "The import facades, local provider boundary and replaced scoring methods are part of the implemented test boundary. Successful orchestration does not establish a complete installed distribution, real model transport, default judge equivalence or an externally affected conclusion."
+      }
+    ]
+  },
+  {
+    "title": "Appendix C. Paired generation and capture audit",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "C.1. Fixed protocol and sources"
+      },
+      {
+        "kind": "p",
+        "text": "Execution repository ricardofitas/swarm-adaption-hackathon fixes protocol af6a19b7a39643cc57d6dcf4fb1e7e9a1be319b6 and common scoring/analysis 38f2b3d556e0d5376cf14dfcb7e2b10db7f85075 before single launch 676f3b618948253a9ff4f01f400e8ab1a2971a13. Run 43606982014, attempt 1, produces 80 unique request/response records. No output-dependent source/model substitution or retry occurs. The input cohort is previously observed; these are new model responses, not new independent question families."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Model and condition",
+          "Known correct",
+          "Complete / nominal",
+          "Unknown"
+        ],
+        "rows": [
+          [
+            "Gemma, binding only",
+            "11",
+            "18 / 20",
+            "2"
+          ],
+          [
+            "Gemma, official typed",
+            "12",
+            "16 / 20",
+            "4"
+          ],
+          [
+            "Qwen, binding only",
+            "2",
+            "18 / 20",
+            "2"
+          ],
+          [
+            "Qwen, official typed",
+            "14",
+            "17 / 20",
+            "3"
+          ]
+        ],
+        "widths": [
+          199,
+          85,
+          110,
+          85
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "C.2. Pairing and unknown-answer policy"
+      },
+      {
+        "kind": "p",
+        "text": "Every source/model pair receives both prompt conditions. The question and source context remain bound in both. The intervention changes the wrong choice-family instruction and official prompt wording together. A common official optional rule scorer evaluates completed nonempty outputs. Each incomplete answer remains in [0,1]; lower gain sums typed_min minus binding_max, and upper gain sums typed_max minus binding_min, over all 20 questions per model."
+      },
+      {
+        "kind": "p",
+        "text": "Among fully observed pairs, typed scoring wins on three of 14 Gemma pairs and ten of 15 Qwen pairs, with no binding-only wins. These complete-pair counts do not replace the prespecified all-20 sensitivity bounds. The same 20 source questions repeat across two models and are not 40 independent questions."
+      },
+      {
+        "kind": "heading",
+        "text": "C.3. Resource and terminal-event verification"
+      },
+      {
+        "kind": "p",
+        "text": "Independent reconciliation checks all 80 intent/record/artifact IDs, exact request/output/journal hashes, returned model identities, source pairing, output caps and request-start cadence. Available usage totals are 8,062 input and 66,304 output tokens. The provider cost field sums to 0.057821010000000003215 units; currency is unverified. The catalogue preflight confirms the two fixed model IDs before any generation call."
+      },
+      {
+        "kind": "p",
+        "text": "All 11 unknown answers have response.status=incomplete and reason=max_output_tokens at 4,096 tokens. Terminal SSE event type is response.completed even for these incomplete response objects. Capture completeness therefore uses the response status and full terminal/transport record, preserving all 11 as unknown. No extra judge calls are made."
+      },
+      {
+        "kind": "heading",
+        "text": "C.4. Interpretation"
+      },
+      {
+        "kind": "p",
+        "text": "This pilot demonstrates a model-dependent consequence of task-format repair under a common explicit scorer. It does not isolate each changed wording token, establish default judge equivalence, estimate a benchmark population gain or demonstrate an externally affected published conclusion. Raw response texts and heuristic-rule limitations remain available for audit."
+      },
+      {
+        "kind": "p",
+        "text": "A separately labelled post-outcome output review finds that 14 of 18 completed Qwen binding-only texts consist solely of the A answer tag. Gemma often gives explanatory text before a final A; heuristic rule scoring can credit that earlier text. Lexical alias/format counts are not semantic gold adjudication. This motivates direct output/scorer auditing rather than a claim of lost underlying capability."
+      }
+    ]
+  },
+  {
+    "title": "Appendix D. Claim-to-evidence map",
     "blocks": [
       {
         "kind": "p",
-        "text": "The package includes twelve machine-readable claims, compact source snapshots and exact archive identities. Source records and repeated conditions have distinct denominators."
+        "text": "The package includes fifteen machine-readable claims with exact source snapshots and archive identities. Reused sources and new generation responses retain separate units."
       },
       {
         "kind": "table",
@@ -682,6 +975,21 @@
             "C12",
             "MixEval uses 200 source records and 600 conditions. All 100 free-form native requests have the wrong task family.",
             "Partial generation repair and retained overlapping adapter alerts"
+          ],
+          [
+            "C13",
+            "MixEval scoring: 200 reused rows; 2,400 controls; 49 matched public outputs; all original references excluded.",
+            "Fixed responses; optional official rule mode; cache overlap and 151 nonunique/missing retained."
+          ],
+          [
+            "C14",
+            "Full-module orchestration preserves 49 replayed outputs; 10 invalid coverage controls block before local dispatch.",
+            "Provider/scorer replacements, inert import facades, diagnostic return; provenance erratum retained."
+          ],
+          [
+            "C15",
+            "Paired generation: 20 questions, 80 new calls, 69 complete and 11 capped; gains Qwen 50-75 pp, Gemma -5 to +25 pp.",
+            "Common official-rule scorer; unknown sensitivity bounds, exposed small panel and fixed order."
           ]
         ],
         "widths": [
@@ -696,7 +1004,7 @@
       },
       {
         "kind": "p",
-        "text": "Run verify_claims.py to reconcile twelve claims with the bundled source snapshots and their hashes. Use the original study archives for source selection, request captures and runtime verification. The synthesis check adds no experimental observations."
+        "text": "Run verify_claims.py to reconcile fifteen claims with the bundled source snapshots and hashes. Original study archives retain selection, request captures and runtime verification. Synthesis checks add no observations."
       },
       {
         "kind": "heading",
@@ -704,7 +1012,7 @@
       },
       {
         "kind": "p",
-        "text": "Version 1.3 integrates previously completed causal, MMMLU, MixEval and installed-gate results. This synthesis adds zero experiments and zero model requests. Scientific scope and outstanding scoring and external-impact gaps are retained."
+        "text": "Version 1.4 integrates controlled scoring, existing public-output replay, bounded native orchestration and a separate new 80-call paired generation pilot. Raw provenance/capture counterexamples and declared implementation boundaries remain explicit."
       }
     ]
   }

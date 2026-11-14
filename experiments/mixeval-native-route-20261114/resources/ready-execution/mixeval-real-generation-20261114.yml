@@ -1,0 +1,48 @@
+name: MixEval paired task-kind real generation
+on:
+  push:
+    branches: [ricardo/mixeval-real-generation-20261114]
+    paths:
+      - experiments/mixeval-real-generation-20261114/LAUNCH.json
+permissions:
+  contents: read
+concurrency:
+  group: mixeval-real-generation-20261114
+  cancel-in-progress: false
+jobs:
+  paired-generation:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: experiments/mixeval-real-generation-20261114
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.11'
+      - name: Verify frozen pairs without model calls
+        working-directory: experiments/mixeval-real-generation-20261114
+        run: python execute_paired.py preflight
+      - name: Capture fixed real generations once
+        timeout-minutes: 30
+        working-directory: experiments/mixeval-real-generation-20261114
+        env:
+          ADAPTION_API_KEY: ${{ secrets.ADAPTION_API_KEY }}
+        run: python execute_paired.py run
+      - name: Verify sanitized evidence
+        if: always()
+        id: scan
+        working-directory: experiments/mixeval-real-generation-20261114
+        env:
+          ADAPTION_API_KEY: ${{ secrets.ADAPTION_API_KEY }}
+        run: python execute_paired.py finalize
+      - name: Preserve all attempts and source pairs
+        if: always() && steps.scan.outputs.safe == 'true'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: mixeval-real-generation-${{ github.run_id }}
+          path: experiments/mixeval-real-generation-20261114
+          retention-days: 90
+          if-no-files-found: error

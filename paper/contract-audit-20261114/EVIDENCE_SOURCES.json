@@ -179,5 +179,96 @@
     "source_archive": "Epistemics_causas_partilhadas_MMMLU_e_impacto_externo_20261114.zip",
     "member": "external/FORK_INVENTORY.json",
     "sha256": "fe61b5afb40f48961acc7f86f42d1c14f5199890870ea8b5e2ef2f1b0783a220"
+  },
+  "scoring_replay_summary.json": {
+    "source_archive": "Epistemics_MixEval_pontuacao_denominadores_e_controlos_20261114.zip",
+    "member": "SUMMARY.json",
+    "sha256": "a2baae8c61c9acdd4d26c72a90e2f6689e4176d39bdd2c148e179fdb9f23eca8",
+    "source_note": "Exact saved experiment snapshot; denominator review independently reads primary source."
+  },
+  "scoring_replay_verification.json": {
+    "source_archive": "Epistemics_MixEval_pontuacao_denominadores_e_controlos_20261114.zip",
+    "member": "VERIFICATION.json",
+    "sha256": "66f4587bde5ee223daf29f16533d532eb019f032e8aa31843c98d8528d9b797a",
+    "source_note": "Exact saved experiment snapshot; denominator review independently reads primary source."
+  },
+  "scoring_adapter_verification.json": {
+    "source_archive": "Epistemics_MixEval_pontuacao_denominadores_e_controlos_20261114.zip",
+    "member": "ADAPTER_VERIFICATION.json",
+    "sha256": "cce0388c258f26e4a8bd0ee972abec4fa3c735c4ede77237b60217db01d8d830",
+    "source_note": "Exact saved experiment snapshot; denominator review independently reads primary source."
+  },
+  "public_score_summary.json": {
+    "source_archive": "Epistemics_MixEval_pontuacao_tipificada_e_respostas_publicas_20261114.zip",
+    "member": "SUMMARY.json",
+    "sha256": "6a69aeb02d0f1ce5c14546cad494c3b26091787e38b8d25cd2bf534290815850",
+    "source_note": "Exact saved experiment snapshot; denominator review independently reads primary source."
+  },
+  "public_score_verification.json": {
+    "source_archive": "Epistemics_MixEval_pontuacao_tipificada_e_respostas_publicas_20261114.zip",
+    "member": "VERIFICATION.json",
+    "sha256": "c2f71f656f6dd9158c54224001b63dfd9def9818abcbf6ed5912183f09968807",
+    "source_note": "Exact saved experiment snapshot; denominator review independently reads primary source."
+  },
+  "public_exact_alias_summary.json": {
+    "source_archive": "Epistemics_MixEval_pontuacao_tipificada_e_respostas_publicas_20261114.zip",
+    "member": "EXACT_ALIAS_REPAIR_SUMMARY.json",
+    "sha256": "23b605807cce6ef0b4c2d244a51b492f1921a9307e5c4cffd160a9aba6042949",
+    "source_note": "Exact saved experiment snapshot; denominator review independently reads primary source."
+  },
+  "denominator_review.json": {
+    "source_archive": null,
+    "member": "reviewer/DENOMINATOR_REVIEW.json",
+    "sha256": "e443913fcd5ccc38929702303d0295f220bdef5d348ca86df6000dcba215e5dd",
+    "source_note": "Exact saved experiment snapshot; denominator review independently reads primary source."
+  },
+  "native_route_free_form.json": {
+    "source_archive": "Epistemics_MixEval_integracao_e_geracao_emparelhada_20261114.zip",
+    "member": "integration/results/free_form/RESULT.json",
+    "sha256": "3153fba92eb59df2d3f12b7403b718c9652193e740231d6dca4518d2c44aba8f",
+    "source_note": "Raw bounded integration results, metadata collision retained and separately audited"
+  },
+  "native_route_multiple_choice.json": {
+    "source_archive": "Epistemics_MixEval_integracao_e_geracao_emparelhada_20261114.zip",
+    "member": "integration/results/multiple_choice/RESULT.json",
+    "sha256": "b85493a2910f4e0c0cc5dbc00e84c7f8c27eaff621aa6963795c0d2da2335075",
+    "source_note": "Raw bounded integration results, metadata collision retained and separately audited"
+  },
+  "native_route_controls.json": {
+    "source_archive": "Epistemics_MixEval_integracao_e_geracao_emparelhada_20261114.zip",
+    "member": "reviewer/COVERAGE_CONTROL_VERIFICATION.json",
+    "sha256": "da6a83fd7448857a36ad753927c8befab0732ed90b6d45d0532ba258b1eb1b98",
+    "source_note": "Raw bounded integration results, metadata collision retained and separately audited"
+  },
+  "native_route_verification.json": {
+    "source_archive": "Epistemics_MixEval_integracao_e_geracao_emparelhada_20261114.zip",
+    "member": "reviewer/NATIVE_INTEGRATION_VERIFICATION.json",
+    "sha256": "c0903be24d3598698b7618dca1e6b5de7656c3da5f0ab3c40ba0d260ba97a403"
+  },
+  "native_route_provenance_erratum.json": {
+    "source_archive": "Epistemics_MixEval_integracao_e_geracao_emparelhada_20261114.zip",
+    "member": "reviewer/SOURCE_PROVENANCE_ERRATUM.json",
+    "sha256": "711c01d35338adf64cf7db0de507bfd2f1f622763ab1497b38cf74ff406ec91c"
+  },
+  "paired_generation_analysis.json": {
+    "source_archive": "Epistemics_MixEval_integracao_e_geracao_emparelhada_20261114.zip",
+    "member": "real-generation/ANALYSIS_SUMMARY.json",
+    "sha256": "c60ad00816b7165c11c99c2e2591d1c719b8130842083808f0ac0d97a26b25b4"
+  },
+  "paired_generation_verification.json": {
+    "source_archive": "Epistemics_MixEval_integracao_e_geracao_emparelhada_20261114.zip",
+    "member": "reviewer/REAL_GENERATION_VERIFICATION.json",
+    "sha256": "42ce0ef4e38c7215403fcd42f7bbbc23497fe1c33f42467226788a01726b4c69"
+  },
+  "paired_terminal_review.json": {
+    "source_archive": "Epistemics_MixEval_integracao_e_geracao_emparelhada_20261114.zip",
+    "member": "reviewer/REAL_TERMINAL_REVIEW.json",
+    "sha256": "809165799159f87916eca1a496ad23eb231e40e1641e16fbe34db714f0341cd9"
+  },
+  "paired_output_review.json": {
+    "source_archive": "Epistemics_MixEval_integracao_e_geracao_emparelhada_20261114.zip",
+    "member": "real-generation/EXPLORATORY_OUTPUT_REVIEW.json",
+    "sha256": "bea9517b5689dc07f9a8315d7ffd70a381df55a07e9b9fa8e86e0a2132d51244",
+    "qualification": "Explicitlypost-outcome lexical/format inspection, not semantic/human correctness adjudication"
   }
 }

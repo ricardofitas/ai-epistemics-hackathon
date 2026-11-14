@@ -1,0 +1,13 @@
+{
+  "scope": "Pinned full-module ordinary run_eval integration; local captured-output serving",
+  "installed_distribution": false,
+  "new_model_calls": 0,
+  "native_primary_metric_stage_executed": false,
+  "native_return_role": "diagnostic",
+  "generation_calls": 0,
+  "typed_rule_mean": null,
+  "scoring_mode": "official_mixeval_rule_not_default_model_judge",
+  "seed": 42,
+  "status": "INCOMPLETE",
+  "error": "CoverageError:source_hash_or_reference_drift:multiple_choice:1776"
+}

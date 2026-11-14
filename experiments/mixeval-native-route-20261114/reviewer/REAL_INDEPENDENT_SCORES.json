@@ -1,0 +1,911 @@
+[
+  {
+    "trial_id": "MXG-00-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 492,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "typically completed with the phrase \"but prepare for the worst.\"",
+      "a."
+    ]
+  },
+  {
+    "trial_id": "MXG-00-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 492,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-00-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 492,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "but prepare for the worst"
+    ]
+  },
+  {
+    "trial_id": "MXG-00-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 492,
+    "condition": "official_typed",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "prepare for the worst"
+    ]
+  },
+  {
+    "trial_id": "MXG-01-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 548,
+    "condition": "binding_only",
+    "score": null,
+    "state": "capture_incomplete_or_empty",
+    "parsed": null
+  },
+  {
+    "trial_id": "MXG-01-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 548,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-01-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 548,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "used for classifying **climates**"
+    ]
+  },
+  {
+    "trial_id": "MXG-01-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 548,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "climate zones (world climates)"
+    ]
+  },
+  {
+    "trial_id": "MXG-02-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1562,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "incorrect, it suggests a lack of correct alternatives or a specific test format.",
+      "our children learning?}",
+      "plural.",
+      "the only choice provided:",
+      "our children learning?\"",
+      "singular."
+    ]
+  },
+  {
+    "trial_id": "MXG-02-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1562,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-02-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1562,
+    "condition": "official_typed",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "grammatically incorrect. it should be: **\"are our children learning?\"**"
+    ]
+  },
+  {
+    "trial_id": "MXG-02-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1562,
+    "condition": "official_typed",
+    "score": null,
+    "state": "capture_incomplete_or_empty",
+    "parsed": null
+  },
+  {
+    "trial_id": "MXG-03-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1169,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "the question based on the data, but the prompt asks to select the best option from the provided list:",
+      "the selected option."
+    ]
+  },
+  {
+    "trial_id": "MXG-03-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1169,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "a."
+    ]
+  },
+  {
+    "trial_id": "MXG-03-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1169,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "fewer girls"
+    ]
+  },
+  {
+    "trial_id": "MXG-03-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1169,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "girls"
+    ]
+  },
+  {
+    "trial_id": "MXG-04-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 47,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "a.",
+      "called a **sommelier**."
+    ]
+  },
+  {
+    "trial_id": "MXG-04-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 47,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-04-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 47,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "sommelier"
+    ]
+  },
+  {
+    "trial_id": "MXG-04-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 47,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "sommelier"
+    ]
+  },
+  {
+    "trial_id": "MXG-05-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1528,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "not listed as a separate option."
+    ]
+  },
+  {
+    "trial_id": "MXG-05-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1528,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-05-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1528,
+    "condition": "official_typed",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "pubs (or public houses)"
+    ]
+  },
+  {
+    "trial_id": "MXG-05-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1528,
+    "condition": "official_typed",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "pubs (the uk pub/bar sector)"
+    ]
+  },
+  {
+    "trial_id": "MXG-06-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 662,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "fortune was **mark twain**. twain was a lifelong enthusiast of new inventions and spent hundreds of thousands of dollars (a massive sum at the time) backing the project, which ultimately failed commercially.",
+      "not present among the choices:"
+    ]
+  },
+  {
+    "trial_id": "MXG-06-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 662,
+    "condition": "binding_only",
+    "score": null,
+    "state": "capture_incomplete_or_empty",
+    "parsed": null
+  },
+  {
+    "trial_id": "MXG-06-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 662,
+    "condition": "official_typed",
+    "score": null,
+    "state": "capture_incomplete_or_empty",
+    "parsed": null
+  },
+  {
+    "trial_id": "MXG-06-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 662,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "mark twain"
+    ]
+  },
+  {
+    "trial_id": "MXG-07-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1217,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "evaluated based on the \"four cs\": cut, colour, clarity, and carat. these are the universal standards used to determine the quality and value of **diamonds**.",
+      "a."
+    ]
+  },
+  {
+    "trial_id": "MXG-07-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1217,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-07-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1217,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "a diamond"
+    ]
+  },
+  {
+    "trial_id": "MXG-07-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1217,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "a diamond"
+    ]
+  },
+  {
+    "trial_id": "MXG-08-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1425,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "not listed among the choices provided in the prompt's options list (which only contains \"none\"), and the prompt asks to select the best option from the provided list:",
+      "a well-known neighborhood characterized by its riverside location and historical susceptibility to fog and smoke.",
+      "home to george washington university and the u.s. department of state."
+    ]
+  },
+  {
+    "trial_id": "MXG-08-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1425,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>washington, d.c.</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-08-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1425,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "washington, d.c"
+    ]
+  },
+  {
+    "trial_id": "MXG-08-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1425,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "washington, d.c"
+    ]
+  },
+  {
+    "trial_id": "MXG-09-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1705,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "\"none.\" based on the provided information:",
+      "a type of aromatic tobacco used for smoking).",
+      "a."
+    ]
+  },
+  {
+    "trial_id": "MXG-09-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1705,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-09-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1705,
+    "condition": "official_typed",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "a person would normally use perique as a blending tobacco, adding a small amount to a mixture of other tobaccos to provide a spicy, pungent flavor and aroma"
+    ]
+  },
+  {
+    "trial_id": "MXG-09-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1705,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "smoke it"
+    ]
+  },
+  {
+    "trial_id": "MXG-10-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1100,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "$2042 - 2017 = 25$ years.",
+      2017.0,
+      "missing. based strictly on the provided options:",
+      25.0,
+      2042.0
+    ]
+  },
+  {
+    "trial_id": "MXG-10-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1100,
+    "condition": "binding_only",
+    "score": null,
+    "state": "capture_incomplete_or_empty",
+    "parsed": null
+  },
+  {
+    "trial_id": "MXG-10-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1100,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      25.0,
+      2042.0,
+      2017.0,
+      "25 years (from 2017 to 2042)"
+    ]
+  },
+  {
+    "trial_id": "MXG-10-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1100,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "25 years",
+      25.0
+    ]
+  },
+  {
+    "trial_id": "MXG-11-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 323,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      1908.0,
+      "associated with the **pike place market** in seattle, washington. pike place market opened in 1907, but some sources associate specific charters or milestones with 1908. however, looking at the provided options:",
+      "a.",
+      "the longest continually running public farmers market in the us."
+    ]
+  },
+  {
+    "trial_id": "MXG-11-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 323,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-11-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 323,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "the pike place market"
+    ]
+  },
+  {
+    "trial_id": "MXG-11-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 323,
+    "condition": "official_typed",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "union square greenmarket"
+    ]
+  },
+  {
+    "trial_id": "MXG-12-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 268,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "a core part of buddhist practice.",
+      "\"none,\" we must select from the given list.",
+      "**a. none**."
+    ]
+  },
+  {
+    "trial_id": "MXG-12-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 268,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-12-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 268,
+    "condition": "official_typed",
+    "score": null,
+    "state": "capture_incomplete_or_empty",
+    "parsed": null
+  },
+  {
+    "trial_id": "MXG-12-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 268,
+    "condition": "official_typed",
+    "score": null,
+    "state": "capture_incomplete_or_empty",
+    "parsed": null
+  },
+  {
+    "trial_id": "MXG-13-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 992,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      0.5,
+      "year)} = 0.5\\text{ hours}$.",
+      "asking to evaluate the option provided:",
+      "0.5 hours)</answer>",
+      "wrong, we identify it. given the constraints of the provided options:",
+      13.5,
+      "incorrect.",
+      "year:** 13.5 hours.",
+      "year compared to last year, we look at the specific data provided in the text:",
+      "indicates a decrease of 0.5 hours.",
+      "year) = 0.5 hour decrease.",
+      "incorrect. however, based on the prompt's structure asking to select the best option from the provided list (which only contains \"none\"), and the factual evidence that it was indeed down by 0.5 hours, the provided option a does not match the data.",
+      "that it was down by 0.5 hours."
+    ]
+  },
+  {
+    "trial_id": "MXG-13-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 992,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "a. none."
+    ]
+  },
+  {
+    "trial_id": "MXG-13-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 992,
+    "condition": "official_typed",
+    "score": null,
+    "state": "capture_incomplete_or_empty",
+    "parsed": null
+  },
+  {
+    "trial_id": "MXG-13-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 992,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      0.5,
+      "0.5 hours"
+    ]
+  },
+  {
+    "trial_id": "MXG-14-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 755,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "\"none\"."
+    ]
+  },
+  {
+    "trial_id": "MXG-14-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 755,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-14-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 755,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "lindisfarne"
+    ]
+  },
+  {
+    "trial_id": "MXG-14-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 755,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "lindisfarne (holy island)"
+    ]
+  },
+  {
+    "trial_id": "MXG-15-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 935,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "caused by the long-term inhalation of coal dust, which occurs primarily in coal mining.",
+      "a."
+    ]
+  },
+  {
+    "trial_id": "MXG-15-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 935,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-15-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 935,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "coal mining"
+    ]
+  },
+  {
+    "trial_id": "MXG-15-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 935,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "coal miner"
+    ]
+  },
+  {
+    "trial_id": "MXG-16-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 896,
+    "condition": "binding_only",
+    "score": null,
+    "state": "capture_incomplete_or_empty",
+    "parsed": null
+  },
+  {
+    "trial_id": "MXG-16-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 896,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-16-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 896,
+    "condition": "official_typed",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "they were alice and jerry in the uk"
+    ]
+  },
+  {
+    "trial_id": "MXG-16-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 896,
+    "condition": "official_typed",
+    "score": null,
+    "state": "capture_incomplete_or_empty",
+    "parsed": null
+  },
+  {
+    "trial_id": "MXG-17-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1749,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "a."
+    ]
+  },
+  {
+    "trial_id": "MXG-17-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1749,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-17-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 1749,
+    "condition": "official_typed",
+    "score": null,
+    "state": "capture_incomplete_or_empty",
+    "parsed": null
+  },
+  {
+    "trial_id": "MXG-17-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 1749,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "aromatherapy"
+    ]
+  },
+  {
+    "trial_id": "MXG-18-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 740,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      0.0,
+      "not the starting point (0, 0).",
+      "\"forward\" (positive y-axis)."
+    ]
+  },
+  {
+    "trial_id": "MXG-18-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 740,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>no</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-18-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 740,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      0.0,
+      2.0,
+      "position:** (7, 2).",
+      "not the starting point (0, 0), you do not return to the starting point."
+    ]
+  },
+  {
+    "trial_id": "MXG-18-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 740,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      0.0,
+      1.0,
+      2.0,
+      4.0,
+      "no.\n\nstep by step:\n- start at (0, 0), facing forward.\n- take 1 step right \u2192 (1, 0)\n- take 2 steps forward \u2192 (1, 2)\n- take 2 steps right \u2192 (3, 2)\n- take 4 steps right \u2192 (7, 2)\n\nyou end at (7, 2), not the starting point"
+    ]
+  },
+  {
+    "trial_id": "MXG-19-B-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 836,
+    "condition": "binding_only",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "a book or digital record used to track financial transactions, specifically recording the increases and decreases in specific accounts (such as assets, liabilities, equity, revenues, and expenses) to determine the balance of those accounts.",
+      "a."
+    ]
+  },
+  {
+    "trial_id": "MXG-19-B-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 836,
+    "condition": "binding_only",
+    "score": 0.0,
+    "state": "completed_scored",
+    "parsed": [
+      "<answer>a</answer>"
+    ]
+  },
+  {
+    "trial_id": "MXG-19-T-G",
+    "model": "gemma-4-31b-it",
+    "source_index": 836,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "a ledger traditionally records **financial transactions**, including debits, credits, account balances, and the chronological history of a business's monetary movements"
+    ]
+  },
+  {
+    "trial_id": "MXG-19-T-Q",
+    "model": "qwen3.8-27b",
+    "source_index": 836,
+    "condition": "official_typed",
+    "score": 1.0,
+    "state": "completed_scored",
+    "parsed": [
+      "accounts"
+    ]
+  }
+]

@@ -1,0 +1,550 @@
+{
+  "run_id": 43606982014,
+  "job_id": 132483626542,
+  "head_sha": "676f3b618948253a9ff4f01f400e8ab1a2971a13",
+  "branch": "ricardo/mixeval-real-generation-20261114",
+  "run_attempt": 1,
+  "status": "completed",
+  "conclusion": "success",
+  "preflight": "success",
+  "capture_step": "success",
+  "recorded_requests": 80,
+  "completed_nonempty_by_logged_capture_flags": 69,
+  "incomplete_logged_trials": [
+    "MXG-01-B-G",
+    "MXG-02-T-Q",
+    "MXG-06-B-Q",
+    "MXG-06-T-G",
+    "MXG-10-B-Q",
+    "MXG-12-T-G",
+    "MXG-12-T-Q",
+    "MXG-13-T-G",
+    "MXG-16-B-G",
+    "MXG-16-T-Q",
+    "MXG-17-T-G"
+  ],
+  "catalogue_model_availability": "Run reached all80generation records; explicit CATALOGUE_RECEIPT.json remains in artifact for parent verification.",
+  "artifact": {
+    "id": 14118503149,
+    "name": "mixeval-real-generation-43606982014",
+    "size_in_bytes": 2191377,
+    "url": "https://api.github.com/repos/ricardofitas/swarm-adaption-hackathon/actions/artifacts/14118503149",
+    "archive_download_url": "https://api.github.com/repos/ricardofitas/swarm-adaption-hackathon/actions/artifacts/14118503149/zip",
+    "expired": false,
+    "created_at": "2026-11-14T15:08:48Z",
+    "expires_at": "2027-02-12T14:50:48Z",
+    "updated_at": "2026-11-14T15:08:48Z",
+    "digest": "sha256:410ff3c8ddc534e65c5056db49f4a3cc3ecd37344b12b969f710e29ef148830c",
+    "workflow_run": {
+      "id": 43606982014,
+      "repository_id": 1448718597,
+      "head_repository_id": 1448718597,
+      "head_branch": "ricardo/mixeval-real-generation-20261114",
+      "head_sha": "676f3b618948253a9ff4f01f400e8ab1a2971a13"
+    }
+  },
+  "milestones_retrospectively_from_final_log": [
+    {
+      "timestamp": "2026-11-14T14:54:52.9041210Z",
+      "trial_id": "MXG-04-T-Q",
+      "recorded": 20,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:58:45.0375893Z",
+      "trial_id": "MXG-09-T-Q",
+      "recorded": 40,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:08:45.7054695Z",
+      "trial_id": "MXG-19-T-Q",
+      "recorded": 80,
+      "completed_nonempty": true
+    }
+  ],
+  "monitoring_limit": "While job in progress, official job-log endpoint returned404BlobNotFound. Milestones reconstructed from final log, not live observations.",
+  "actions_taken": "Read-only Actions status/artifact metadata/log retrieval. No workflow changes, reruns, resends or model calls made by monitor.",
+  "progress_events": [
+    {
+      "timestamp": "2026-11-14T14:51:02.1450468Z",
+      "trial_id": "MXG-00-B-G",
+      "recorded": 1,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:51:09.8311398Z",
+      "trial_id": "MXG-00-B-Q",
+      "recorded": 2,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:51:11.4464369Z",
+      "trial_id": "MXG-00-T-G",
+      "recorded": 3,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:51:18.4583746Z",
+      "trial_id": "MXG-00-T-Q",
+      "recorded": 4,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:51:58.1854704Z",
+      "trial_id": "MXG-01-B-G",
+      "recorded": 5,
+      "completed_nonempty": false
+    },
+    {
+      "timestamp": "2026-11-14T14:52:02.5008881Z",
+      "trial_id": "MXG-01-B-Q",
+      "recorded": 6,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:52:03.7584191Z",
+      "trial_id": "MXG-01-T-G",
+      "recorded": 7,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:52:10.2026462Z",
+      "trial_id": "MXG-01-T-Q",
+      "recorded": 8,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:52:15.7091325Z",
+      "trial_id": "MXG-02-B-G",
+      "recorded": 9,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:52:22.1229181Z",
+      "trial_id": "MXG-02-B-Q",
+      "recorded": 10,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:52:23.7161728Z",
+      "trial_id": "MXG-02-T-G",
+      "recorded": 11,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:53:42.5585166Z",
+      "trial_id": "MXG-02-T-Q",
+      "recorded": 12,
+      "completed_nonempty": false
+    },
+    {
+      "timestamp": "2026-11-14T14:53:45.5202518Z",
+      "trial_id": "MXG-03-B-G",
+      "recorded": 13,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:54:26.2982803Z",
+      "trial_id": "MXG-03-B-Q",
+      "recorded": 14,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:54:26.6741390Z",
+      "trial_id": "MXG-03-T-G",
+      "recorded": 15,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:54:33.4510052Z",
+      "trial_id": "MXG-03-T-Q",
+      "recorded": 16,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:54:37.3556094Z",
+      "trial_id": "MXG-04-B-G",
+      "recorded": 17,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:54:46.1764422Z",
+      "trial_id": "MXG-04-B-Q",
+      "recorded": 18,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:54:46.6661442Z",
+      "trial_id": "MXG-04-T-G",
+      "recorded": 19,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:54:52.9041210Z",
+      "trial_id": "MXG-04-T-Q",
+      "recorded": 20,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:54:57.6989197Z",
+      "trial_id": "MXG-05-B-G",
+      "recorded": 21,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:55:08.2762781Z",
+      "trial_id": "MXG-05-B-Q",
+      "recorded": 22,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:55:08.6958069Z",
+      "trial_id": "MXG-05-T-G",
+      "recorded": 23,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:55:24.6063047Z",
+      "trial_id": "MXG-05-T-Q",
+      "recorded": 24,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:55:25.9320096Z",
+      "trial_id": "MXG-06-B-G",
+      "recorded": 25,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:56:38.4930481Z",
+      "trial_id": "MXG-06-B-Q",
+      "recorded": 26,
+      "completed_nonempty": false
+    },
+    {
+      "timestamp": "2026-11-14T14:57:15.4996260Z",
+      "trial_id": "MXG-06-T-G",
+      "recorded": 27,
+      "completed_nonempty": false
+    },
+    {
+      "timestamp": "2026-11-14T14:57:22.1743756Z",
+      "trial_id": "MXG-06-T-Q",
+      "recorded": 28,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:57:23.3723750Z",
+      "trial_id": "MXG-07-B-G",
+      "recorded": 29,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:57:36.8831748Z",
+      "trial_id": "MXG-07-B-Q",
+      "recorded": 30,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:57:37.2712956Z",
+      "trial_id": "MXG-07-T-G",
+      "recorded": 31,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:57:43.3068648Z",
+      "trial_id": "MXG-07-T-Q",
+      "recorded": 32,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:57:48.8106791Z",
+      "trial_id": "MXG-08-B-G",
+      "recorded": 33,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:58:17.6553914Z",
+      "trial_id": "MXG-08-B-Q",
+      "recorded": 34,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:58:18.0948684Z",
+      "trial_id": "MXG-08-T-G",
+      "recorded": 35,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:58:24.5485101Z",
+      "trial_id": "MXG-08-T-Q",
+      "recorded": 36,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:58:28.6992243Z",
+      "trial_id": "MXG-09-B-G",
+      "recorded": 37,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:58:35.4513185Z",
+      "trial_id": "MXG-09-B-Q",
+      "recorded": 38,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:58:38.2922485Z",
+      "trial_id": "MXG-09-T-G",
+      "recorded": 39,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:58:45.0375893Z",
+      "trial_id": "MXG-09-T-Q",
+      "recorded": 40,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:58:50.0797519Z",
+      "trial_id": "MXG-10-B-G",
+      "recorded": 41,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T14:59:56.6146779Z",
+      "trial_id": "MXG-10-B-Q",
+      "recorded": 42,
+      "completed_nonempty": false
+    },
+    {
+      "timestamp": "2026-11-14T14:59:57.1523474Z",
+      "trial_id": "MXG-10-T-G",
+      "recorded": 43,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:00:09.3559152Z",
+      "trial_id": "MXG-10-T-Q",
+      "recorded": 44,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:00:11.4589706Z",
+      "trial_id": "MXG-11-B-G",
+      "recorded": 45,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:00:38.6578825Z",
+      "trial_id": "MXG-11-B-Q",
+      "recorded": 46,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:00:39.0419900Z",
+      "trial_id": "MXG-11-T-G",
+      "recorded": 47,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:00:48.7189807Z",
+      "trial_id": "MXG-11-T-Q",
+      "recorded": 48,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:00:50.4081841Z",
+      "trial_id": "MXG-12-B-G",
+      "recorded": 49,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:01:34.1625161Z",
+      "trial_id": "MXG-12-B-Q",
+      "recorded": 50,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:02:11.6230760Z",
+      "trial_id": "MXG-12-T-G",
+      "recorded": 51,
+      "completed_nonempty": false
+    },
+    {
+      "timestamp": "2026-11-14T15:03:07.8040291Z",
+      "trial_id": "MXG-12-T-Q",
+      "recorded": 52,
+      "completed_nonempty": false
+    },
+    {
+      "timestamp": "2026-11-14T15:03:12.7204005Z",
+      "trial_id": "MXG-13-B-G",
+      "recorded": 53,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:03:35.1252975Z",
+      "trial_id": "MXG-13-B-Q",
+      "recorded": 54,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:04:12.2157588Z",
+      "trial_id": "MXG-13-T-G",
+      "recorded": 55,
+      "completed_nonempty": false
+    },
+    {
+      "timestamp": "2026-11-14T15:04:13.4963048Z",
+      "trial_id": "MXG-13-T-Q",
+      "recorded": 56,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:04:18.5144885Z",
+      "trial_id": "MXG-14-B-G",
+      "recorded": 57,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:04:45.3039178Z",
+      "trial_id": "MXG-14-B-Q",
+      "recorded": 58,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:04:45.6644715Z",
+      "trial_id": "MXG-14-T-G",
+      "recorded": 59,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:04:53.0930973Z",
+      "trial_id": "MXG-14-T-Q",
+      "recorded": 60,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:04:56.4841314Z",
+      "trial_id": "MXG-15-B-G",
+      "recorded": 61,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:05:03.0894011Z",
+      "trial_id": "MXG-15-B-Q",
+      "recorded": 62,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:05:05.6680099Z",
+      "trial_id": "MXG-15-T-G",
+      "recorded": 63,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:05:11.7021793Z",
+      "trial_id": "MXG-15-T-Q",
+      "recorded": 64,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:05:52.6006411Z",
+      "trial_id": "MXG-16-B-G",
+      "recorded": 65,
+      "completed_nonempty": false
+    },
+    {
+      "timestamp": "2026-11-14T15:05:55.6932036Z",
+      "trial_id": "MXG-16-B-Q",
+      "recorded": 66,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:05:58.0291634Z",
+      "trial_id": "MXG-16-T-G",
+      "recorded": 67,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:07:13.8049220Z",
+      "trial_id": "MXG-16-T-Q",
+      "recorded": 68,
+      "completed_nonempty": false
+    },
+    {
+      "timestamp": "2026-11-14T15:07:15.3056708Z",
+      "trial_id": "MXG-17-B-G",
+      "recorded": 69,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:07:25.5292894Z",
+      "trial_id": "MXG-17-B-Q",
+      "recorded": 70,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:08:02.9374174Z",
+      "trial_id": "MXG-17-T-G",
+      "recorded": 71,
+      "completed_nonempty": false
+    },
+    {
+      "timestamp": "2026-11-14T15:08:04.2135201Z",
+      "trial_id": "MXG-17-T-Q",
+      "recorded": 72,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:08:10.7319568Z",
+      "trial_id": "MXG-18-B-G",
+      "recorded": 73,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:08:17.7722831Z",
+      "trial_id": "MXG-18-B-Q",
+      "recorded": 74,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:08:20.6710123Z",
+      "trial_id": "MXG-18-T-G",
+      "recorded": 75,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:08:27.7089497Z",
+      "trial_id": "MXG-18-T-Q",
+      "recorded": 76,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:08:29.3432911Z",
+      "trial_id": "MXG-19-B-G",
+      "recorded": 77,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:08:35.3706113Z",
+      "trial_id": "MXG-19-B-Q",
+      "recorded": 78,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:08:38.5685052Z",
+      "trial_id": "MXG-19-T-G",
+      "recorded": 79,
+      "completed_nonempty": true
+    },
+    {
+      "timestamp": "2026-11-14T15:08:45.7054695Z",
+      "trial_id": "MXG-19-T-Q",
+      "recorded": 80,
+      "completed_nonempty": true
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "status": "STATIC_SOURCE_AND_SAVED_OUTPUT_RECONCILIATION_PASS",
+  "source_sha256": "dd7104eee19c829f3ddb5dd1faec0b97a230b253ab41b615d20b6799699d06a7",
+  "source_git_blob": "a2680bd6fa25c9dacb853e0cd85679a38d2d5bfa",
+  "source_lines": {
+    "reference_exclusion_before_increment": [
+      181,
+      186
+    ],
+    "eligible_increment": 198,
+    "zero_count_fallback": 215
+  },
+  "panels": {
+    "free_form": {
+      "score": 0.0,
+      "total_samples": 17,
+      "scored_samples": 0,
+      "invalid_references": 17,
+      "valid_predictions": 0,
+      "parse_failed": 17,
+      "empty_output": 0,
+      "denominator": "total"
+    },
+    "multiple_choice": {
+      "score": 0.0,
+      "total_samples": 32,
+      "scored_samples": 0,
+      "invalid_references": 32,
+      "valid_predictions": 20,
+      "parse_failed": 12,
+      "empty_output": 0,
+      "denominator": "total"
+    }
+  },
+  "saved_details_all_None": true,
+  "correction": "Requested denominator total is a policy label, not the arithmetic denominator in this all-excluded case. Effective scored_samples count is0, conditional numericfallback0.0. Nominal total_samples remains17/32.",
+  "new_native_scientific_runs": 0
+}

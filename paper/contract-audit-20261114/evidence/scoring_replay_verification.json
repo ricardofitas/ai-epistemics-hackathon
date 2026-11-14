@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "reviewer": "separate delegated scoring_review agent",
+  "frozen_protocol_commit": "fe6c1952e913391cd424825d8e703cc85d1375c7",
+  "frozen_files_checked": 22,
+  "source_rows_verified": 200,
+  "condition_records_verified": 2400,
+  "complete_unique_condition_coverage": true,
+  "preserved_original_selection_bytes": true,
+  "original_selection_byte_comparison": "PASS",
+  "frozen_selected_SHA256_verified": true,
+  "output_invariance_groups": 800,
+  "independent_official_helper_calls": 800,
+  "independent_native_parser_pairs": 1600,
+  "summary_panels_reconciled": 24,
+  "random_fallback_draws_reproduced": 100,
+  "native_capture_frame_and_stats_pairs_verified": 16,
+  "source_physical_types": {
+    "free_form:target_container:list": 100,
+    "free_form:all_target_elements:str": 100,
+    "free_form:options:list_containing_string_None": 100,
+    "multiple_choice:target_container:list": 100,
+    "multiple_choice:singleton_target_element:int": 100,
+    "multiple_choice:option_count:4": 73,
+    "multiple_choice:option_count:2": 14,
+    "multiple_choice:option_count:5": 10,
+    "multiple_choice:option_count:3": 3
+  },
+  "native_zero_denominators": 12,
+  "official_exact_first_alias_misses": 2,
+  "native_scalarized_MC_losses": 2,
+  "new_provider_model_calls": 0,
+  "retained_verifier_development_alerts": [
+    "Initial independent-review assertion expected free-form options JSON-null. Actual source options are already the list [\"None\"] in all100cases. Assertion corrected after inspecting physical source types; frozen runner/protocol/captures unchanged. Placeholder is displayed by wrong task-kind route, not inserted by preprocessing.",
+    "Initial comparison expected the original options field itself to be trimmed. Source options remain raw; normalized_choices carries stripped values. Assertions now distinguish both columns, preserving the previously documented one-row whitespace difference."
+  ],
+  "scope": "Independent agent/code reconciliation, exact original parser/helper re-execution, source hashes/physical types/order and captured outputs. Not independent human review or complete installed-engine/model execution."
+}

@@ -1,0 +1,170 @@
+{
+  "as_of": "2026-11-14",
+  "status": "BOUNDED_REAL_GENERATION_EXECUTION_PATH_IDENTIFIED_NO_CALLS_STARTED",
+  "secure_execution": {
+    "repository": "ricardofitas/swarm-adaption-hackathon",
+    "verified_prior_execution_commit": "a75a6b212afc3d92d2ba66363fa747f1b17344df",
+    "prior_successful_run_id": "43517809338",
+    "workflow_path": ".github/workflows/default-contract-model-smoke-20261113.yml",
+    "workflow_blob": "47826015f78cdf5edfc98a66219ef6639062cb2e",
+    "executor_path": "experiments/default-contract-model-smoke-20261113/execute_smoke.py",
+    "executor_blob": "5ac59838048adf56b56634bbcab665cdd826c1bb",
+    "transport_path": "experiments/default-contract-model-smoke-20261113/run_adaption_stream_pilot.py",
+    "transport_blob": "9f11821bd1f5981f17a6443669e0f86bd19da728",
+    "local_transport_sha256": "c280811c5f685cdc5b254d5097946835428cd87de6ea58218de1e2cad537fe5e",
+    "credential_reference": "ADAPTION_API_KEY, injected into GitHub Actions environment from existing repository secret. Secret values were neither requested nor read.",
+    "local_environment_presence_only": {
+      "ADAPTION_API_KEY": false,
+      "GITHUB_TOKEN": false
+    },
+    "endpoint": "https://api.prod.adaptionlabs.ai/api/v1/responses",
+    "catalogue_preflight": "GET https://api.prod.adaptionlabs.ai/api/v1/models?type=hosted",
+    "controls": [
+      "NoRedirect transport rejects redirect-based credential forwarding",
+      "Sanitize credential substrings out of journals and response artifacts",
+      "Final credential scan before artifact upload",
+      "Private repository, pinned checkout/python/upload Actions, persist-credentials false",
+      "Explicit branch/event/run-attempt guard",
+      "Frozen unique trial IDs and request hashes",
+      "One attempt per request, no retries, no preexisting output reuse"
+    ],
+    "required_adaptation": "Do not directly rerun the old executor. It is fixed to96requests and an old branch. Create a new experiment/workflow path and expected branch, freeze the new80-request manifest and protocol, then add a separate LAUNCH artifact. Check no overlapping inference run before launching."
+  },
+  "recorded_limits_and_usage": {
+    "prior_smoke": {
+      "planned": 96,
+      "recorded": 96,
+      "completed_nonempty": 94,
+      "max_output_tokens": 4096,
+      "minimum_start_interval_seconds": 5,
+      "concurrency": 1,
+      "retries": 0,
+      "models": [
+        "gemma-4-31b-it",
+        "qwen3.8-27b"
+      ],
+      "catalogue_observation_utc": "2026-11-13T22:15:55.711199+00:00",
+      "tokens": 47066
+    },
+    "paired200": {
+      "requests": 200,
+      "completed": 194,
+      "input_tokens": 14547,
+      "output_tokens": 97047,
+      "total_tokens": 111594,
+      "provider_cost_units": "0.109769073000000005186",
+      "currency": null,
+      "source": "paper/evidence/resources.json, from the completed paired trial"
+    },
+    "older_integration_allowance": {
+      "source": "docs/ADAPTION_PILOT.md and scripts/run_adaption_pilot.py on main tree78129df3fb4cf7bfd7adfe8479a2177a5709b287",
+      "per_run_credit_allowance": 1,
+      "max_requests": 865,
+      "max_output_tokens": 512,
+      "max_prompt_bytes": 8192,
+      "concurrency": 2,
+      "retries": 0,
+      "qualification": "This older per-run pilot allowance is a documented bounded precedent, not proof of a project-wide remaining balance."
+    },
+    "global_remaining_balance": "UNKNOWN",
+    "global_cumulative_ledger": "Not reconstructed in this review. Required for a claim about total remaining budget, not intrinsically necessary for a separately bounded scientific batch."
+  },
+  "recommended_minimal_batch": {
+    "source_questions": 20,
+    "conditions": 2,
+    "models": [
+      "gemma-4-31b-it",
+      "qwen3.8-27b"
+    ],
+    "maximum_generation_requests": 80,
+    "condition_design": "Binding-only vs fully typed generation/scoring on identical free-form source questions. Hold question/context binding fixed to isolate task-kind. Store exact native delivered prompts before inference.",
+    "source_selection": "Freeze stable source/hash selection before new generation outcomes. No replacement after failures; preserve paired denominators.",
+    "maximum_prompt_utf8_bytes_per_request": 8192,
+    "max_output_tokens_per_request": 4096,
+    "maximum_output_token_budget": 327680,
+    "maximum_aggregate_prompt_utf8_bytes": 655360,
+    "temperature": 0,
+    "tools": [],
+    "tool_choice": "none",
+    "agentic_memory": false,
+    "store": false,
+    "stream": true,
+    "attempts_per_request": 1,
+    "retries": 0,
+    "concurrency": 1,
+    "minimum_start_interval_seconds": 5,
+    "socket_timeout_seconds": 120,
+    "workflow_job_timeout_minutes": 40,
+    "suggested_generation_step_timeout_minutes": 30,
+    "stop_conditions": [
+      "Model not present in fresh catalogue",
+      "Authentication/payment/quota rejection, no automatic retry",
+      "Request count or prompt-byte/max-output bound violated",
+      "Missing usage accounting, transport/capture failure or provider billing limit cannot be reconciled; preserve result and stop before another request",
+      "Cumulative ledger plus conservative next-request reservation exceeds the explicit local allowance"
+    ],
+    "missing_outputs": "Retain every planned row and one-attempt status. Bound unknown semantic correctness0..1; do not drop incomplete/empty responses or silently replace models/cases.",
+    "scoring_limit": "Exact/alias fixture controls can be evaluated deterministically. A full official MixEval model score may require its grader protocol; do not relabel a literal-match diagnostic as official accuracy."
+  },
+  "price_planning": {
+    "source": "scripts/run_adaption_pilot.py main blob a994d53a03a2d4770d1d0aa22453fd6439c4b683; comment says verified2026-11-06",
+    "units": "Historical Adaption credits per million input/output tokens",
+    "historical_rates": {
+      "gemma-4-31b-it": {
+        "input": 0.09,
+        "output": 0.34
+      },
+      "qwen3.8-27b": {
+        "input": 0.039,
+        "output": 1.25
+      }
+    },
+    "input_proxy_tokens_per_request": 8448,
+    "proxy_formula": "40*((8192+256)*0.09+4096*0.34)/1e6 + 40*((8192+256)*0.039+4096*1.25)/1e6",
+    "historical_rate_planning_reserve_credits": 0.30409728,
+    "qualification": "This is a planning proxy at recorded rates, not a verified current monetary ceiling. Prompt bytes plus256 are not an exact provider tokenization bound, model overhead/pricing can change, and returned usage.cost currency is unspecified.",
+    "recommended_allowance": "A one-credit local reservation allowance is a documented precedent and comfortably exceeds the historical-rate80-request proxy. Parent must record the actual selected allowance in its frozen protocol. No blanket global-ledger gate is scientifically required."
+  },
+  "billing_discovery": {
+    "official_docs": [
+      {
+        "url": "https://docs.adaptionlabs.ai/api/",
+        "finding": "Public API overview documents Responses and Models. No general account-balance endpoint established in the inspected overview."
+      },
+      {
+        "url": "https://docs.adaptionlabs.ai/api/resources/responses/methods/create",
+        "finding": "Documents max_output_tokens, stream, explicit tools/no history, response usage. Public response-usage schema lists token usage but does not document a currency for observed cost."
+      },
+      {
+        "url": "https://docs.adaptionlabs.ai/api/resources/datasets/methods/get_preprocessing_credits",
+        "finding": "Read-only dataset preprocessing quote includes availableCredits team balance, but requires an existing authorized document dataset ID. No dataset was created or probed to exploit this route."
+      },
+      {
+        "url": "https://docs.adaptionlabs.ai/tools/opencode/",
+        "finding": "Current official model list includes both proposed model aliases."
+      }
+    ],
+    "balance_query_executed": false,
+    "reason": "No local credential, no already-resolved authorized dataset ID and no general balance endpoint established. Do not invent /balance or create a dataset merely to expose a quote.",
+    "current_prices_verified": false,
+    "current_models_catalogue_verified_by_authenticated_call": false
+  },
+  "genuine_blockers": [
+    "Local direct authenticated inference unavailable because credential is absent locally; use existing secure Actions path instead.",
+    "The parent must freeze new prompts, selected cases, request caps and branch guards before the launch.",
+    "An actual hard monetary cap cannot be certified solely from historical credit coefficients and currency-unknown usage.cost."
+  ],
+  "not_genuine_blockers": [
+    "No need to ask user to paste/reveal the repository secret.",
+    "No need to reconstruct every prior project request before a small request/output-bounded batch.",
+    "No need to know remaining global credit balance to prepare and validate the reproducible bounded batch.",
+    "No need to substitute more offline variants when a bounded real-generation comparison would resolve the concrete scientific gap."
+  ],
+  "actions_this_review": {
+    "model_requests": 0,
+    "authenticated_provider_calls": 0,
+    "workflow_launches": 0,
+    "secret_values_retrieved": 0,
+    "outbound_communications": 0
+  }
+}

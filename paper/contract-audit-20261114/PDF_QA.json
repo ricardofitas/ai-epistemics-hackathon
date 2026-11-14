@@ -1,18 +1,11 @@
 {
-  "working_draft_version": "1.3",
-  "page_count": 10,
-  "main_text_pages": 7,
-  "reference_pages": [
-    8
-  ],
-  "appendix_pages": [
-    9,
-    10
-  ],
+  "version": "1.4",
+  "main_text_pages": 8,
+  "page_count": 13,
   "pages": [
     {
       "page": 1,
-      "words": 452,
+      "words": 478,
       "out_of_bounds_characters": 0
     },
     {
@@ -37,33 +30,47 @@
     },
     {
       "page": 6,
-      "words": 360,
+      "words": 357,
       "out_of_bounds_characters": 0
     },
     {
       "page": 7,
-      "words": 386,
+      "words": 428,
       "out_of_bounds_characters": 0
     },
     {
       "page": 8,
-      "words": 171,
+      "words": 456,
       "out_of_bounds_characters": 0
     },
     {
       "page": 9,
-      "words": 405,
+      "words": 193,
       "out_of_bounds_characters": 0
     },
     {
       "page": 10,
-      "words": 374,
+      "words": 405,
+      "out_of_bounds_characters": 0
+    },
+    {
+      "page": 11,
+      "words": 386,
+      "out_of_bounds_characters": 0
+    },
+    {
+      "page": 12,
+      "words": 442,
+      "out_of_bounds_characters": 0
+    },
+    {
+      "page": 13,
+      "words": 454,
       "out_of_bounds_characters": 0
     }
   ],
-  "bounds_check": "PASS",
-  "all_used_fonts_embedded": true,
-  "unused_standard_font_resource": "Helvetica, not used by any rendered text glyph",
-  "visual_review": "PASS: final ten-page contact sheet inspected; full-page shared-cause/MMMLU, MixEval and claim-ledger renders inspected. No overflow or clipping.",
-  "claim_ledger_consistency": "PASS"
+  "bounds": "PASS",
+  "used_fonts_embedded": true,
+  "visual_review": "PASS: all13pages contact sheet, fullscoring/pilot/orchestration/claim-map pages inspected; nooverflow orclipping",
+  "independent_claim_verification": "PASS15claims"
 }

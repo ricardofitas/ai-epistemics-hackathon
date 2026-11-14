@@ -1,0 +1,773 @@
+[
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "492",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "\"Complete the proverb; \"\"Hope for the best....\"\"?\"",
+      "target": [
+        "But prepare for the worst"
+      ]
+    },
+    "source_index": 492,
+    "source_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+    "split": "free_form",
+    "selection_rank": 0,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{\"Complete the proverb; \"\"Hope for the best....\"\"?\"}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: \"Complete the proverb; \"\"Hope for the best....\"\"?\"\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "548",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "The Koppen Classification System is used for classifying what?",
+      "target": [
+        "Climate",
+        "World temperature",
+        "Global temperatures",
+        "Climatic zone",
+        "World climate",
+        "Climate system",
+        "Climatic",
+        "Global climate",
+        "Climates",
+        "Average annual temperature",
+        "Average day temperature",
+        "World temperatures",
+        "Global Temperature"
+      ]
+    },
+    "source_index": 548,
+    "source_sha256": "000fdd1945c82297682247dd1df03e4e1778e4a429397d1f71319fa32ec8ba81",
+    "split": "free_form",
+    "selection_rank": 1,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{The Koppen Classification System is used for classifying what?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: The Koppen Classification System is used for classifying what?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1562",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Rarely is the question asked: Is our children learning?",
+      "target": [
+        "George Walker Bush",
+        "Dubya",
+        "Bush, George W.",
+        "Bush Jr.",
+        "George W. Bush (painter)",
+        "W Bush",
+        "Bushian",
+        "Gorge w bush",
+        "Bush the younger",
+        "George w",
+        "Bush 43",
+        "Bush II",
+        "George the Younger",
+        "George W. Bussh",
+        "George W. Bush Street",
+        "George Bush (43rd U.S. President)",
+        "G W Bush",
+        "Dubyuh",
+        "George Bush jr.",
+        "G.W. Bush",
+        "W. bush",
+        "Dubya Bush",
+        "G. W. Bush",
+        "George W Bush",
+        "US President George W. Bush",
+        "G.w.bush",
+        "Bush Junior",
+        "George W. Bush, 43rd President of the United States",
+        "George Bush (2000)",
+        "George w.",
+        "George W",
+        "Gorge W. Bush",
+        "G. Walker Bush",
+        "GEORGE W. BUSH",
+        "George Dubya Bush",
+        "Geroge W Bush",
+        "2004 Republican Presidential Nominee",
+        "George w Bush",
+        "George Bush II",
+        "George Bush Jr.",
+        "Baby Bush",
+        "W. Bush",
+        "2000 Republican Presidential Nominee",
+        "Junior Bush",
+        "George W.",
+        "President Bush (2000)",
+        "Goerge W. Bush",
+        "George Bush Jr",
+        "George W. Budh",
+        "43rd President of the United States",
+        "George W. Buah",
+        "G Dub",
+        "George W Bush Jr",
+        "43rd Pesident of the United States",
+        "Jorge W. Bush",
+        "Bush the Younger",
+        "International perception of george W. Bush",
+        "GeorgeWBush",
+        "George w bush",
+        "George bush 43",
+        "Bush (43)",
+        "George Bush 2",
+        "George Bush (43)",
+        "Bush-43",
+        "George Bush Junior",
+        "W bush",
+        "George Wаlker Bush",
+        "Gw bush",
+        "George w. bush",
+        "G. W. B.",
+        "George W. bush",
+        "Bushists",
+        "Religious faith of George W. Bush",
+        "President Bush (43)",
+        "George W. Bush",
+        "George W.Bush",
+        "George W bush",
+        "George Bush, Jr.",
+        "G. Dub",
+        "GW Bush",
+        "President George W Bush",
+        "Former President George W. Bush",
+        "President George Walker Bush"
+      ]
+    },
+    "source_index": 1562,
+    "source_sha256": "0027202018bac66bb87df8591cd4e868384230f593bca419717c118d11b6d7b9",
+    "split": "free_form",
+    "selection_rank": 2,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{Rarely is the question asked: Is our children learning?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: Rarely is the question asked: Is our children learning?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "DROP",
+      "context": "The Population of Bermuda in 1727 included 4,470 whites (910 men; 1,261 boys; 1,168 women; 1,131 girls) and 3,877 coloured (787 men; 1,158 boys; 945 women; 987 girls). By 1871 the permanent population (not including the thousands of sailors and soldiers stationed in the colony) included 4,725 whites (2,118 males; 2,607 females) and 7,376 coloured (3,284 males and 4,112 females).",
+      "id": "1169",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "In 1727 were there fewer girls or boys?",
+      "target": [
+        "girls",
+        "girls"
+      ]
+    },
+    "source_index": 1169,
+    "source_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+    "split": "free_form",
+    "selection_rank": 3,
+    "binding_only_prompt": "Context:\n{The Population of Bermuda in 1727 included 4,470 whites (910 men; 1,261 boys; 1,168 women; 1,131 girls) and 3,877 coloured (787 men; 1,158 boys; 945 women; 987 girls). By 1871 the permanent population (not including the thousands of sailors and soldiers stationed in the colony) included 4,725 whites (2,118 males; 2,607 females) and 7,376 coloured (3,284 males and 4,112 females).}\n\nQuestion:\n{In 1727 were there fewer girls or boys?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: The Population of Bermuda in 1727 included 4,470 whites (910 men; 1,261 boys; 1,168 women; 1,131 girls) and 3,877 coloured (787 men; 1,158 boys; 945 women; 987 girls). By 1871 the permanent population (not including the thousands of sailors and soldiers stationed in the colony) included 4,725 whites (2,118 males; 2,607 females) and 7,376 coloured (3,284 males and 4,112 females).\nIn 1727 were there fewer girls or boys?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "47",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What name is given to the person in a restaurant responsible for the wine and assisting customers with their choice of wine?",
+      "target": [
+        "Wine Butler",
+        "Sommelière",
+        "Sommelier's",
+        "Sommeliers",
+        "Wine steward",
+        "Somellier",
+        "Somelier",
+        "Sommeliere",
+        "Sommelier",
+        "Master Sommelier",
+        "Sommellier"
+      ]
+    },
+    "source_index": 47,
+    "source_sha256": "00843fec011483674feec1e8fcb2d4c79265dccccaae6b01ae48296180385a87",
+    "split": "free_form",
+    "selection_rank": 4,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{What name is given to the person in a restaurant responsible for the wine and assisting customers with their choice of wine?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: What name is given to the person in a restaurant responsible for the wine and assisting customers with their choice of wine?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1528",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Charlotte, TJ's, Adelphi, Barfly; Joiners, and Forum are/were names in what UK market sector?",
+      "target": [
+        "Muzic",
+        "Interpretation (music)",
+        "Mucic",
+        "Music",
+        "Music's",
+        "Music And Musical Instruments",
+        "Musical interpretation",
+        "Musical Interpretation",
+        "1st Art",
+        "MuSic",
+        "Auditory art",
+        "Meaning (music)",
+        "Internet Music Video Database",
+        "Music lover",
+        "🎵"
+      ]
+    },
+    "source_index": 1528,
+    "source_sha256": "00ed2f59fca80c9cd9598621364249a50a639cd1994a32345234e26c1669b931",
+    "split": "free_form",
+    "selection_rank": 5,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{Charlotte, TJ's, Adelphi, Barfly; Joiners, and Forum are/were names in what UK market sector?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: Charlotte, TJ's, Adelphi, Barfly; Joiners, and Forum are/were names in what UK market sector?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "662",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "The 19th century invention Paige Compositor sought to replace the typewriter but ended up becoming a failure. Which American author lost nearly all his fortune for its development?",
+      "target": [
+        "Mark Twain",
+        "Thomas Jefferson Snodgrass",
+        "Sam Clemens",
+        "Samuel Clements",
+        "Twainesque",
+        "Samuel Langhorn Clemens",
+        "Mark twain",
+        "Twain, Mark",
+        "Sergeant Fathom",
+        "Samuel Longhorn Clemens",
+        "Samuel L. Clemens",
+        "Samuel Langhorne Clemens",
+        "Sam Langhorne Clemens",
+        "Samuel Clemens",
+        "SL Clemens",
+        "Twainian",
+        "Reports of my death are greatly exaggerated",
+        "Soleather",
+        "W. Epaminondas Adrastus Blab",
+        "Samuel Longhorne Clemens",
+        "Marc Twain",
+        "Samual Clemens"
+      ]
+    },
+    "source_index": 662,
+    "source_sha256": "0161b083df03880183df856758364841e13b41851a8a297288f8c56d2f97fb7c",
+    "split": "free_form",
+    "selection_rank": 6,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{The 19th century invention Paige Compositor sought to replace the typewriter but ended up becoming a failure. Which American author lost nearly all his fortune for its development?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: The 19th century invention Paige Compositor sought to replace the typewriter but ended up becoming a failure. Which American author lost nearly all his fortune for its development?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1217",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Cut, colour, clarity and carat are all considered when purchasing what?",
+      "target": [
+        "Diamond",
+        "4-C's of Diamond Grading",
+        "The 4 C's Of Diamonds",
+        "Polished diamond",
+        "Diamonds",
+        "Natural diamond",
+        "Diamond industry",
+        "Mitre-crozier applique",
+        "Diamond powder",
+        "Bortz",
+        "Industrial diamonds",
+        "Type-II diamond",
+        "Daimonds",
+        "Mitre-crozier appliqué",
+        "Impact diamonds",
+        "Diamonad",
+        "Industrial diamond",
+        "Industrial Diamond"
+      ]
+    },
+    "source_index": 1217,
+    "source_sha256": "0176dfad14c88ad78f0acae00ffdea61e8ef88932380087005769e5e29fa6e65",
+    "split": "free_form",
+    "selection_rank": 7,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{Cut, colour, clarity and carat are all considered when purchasing what?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: Cut, colour, clarity and carat are all considered when purchasing what?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1425",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Thought to have received the name because its riverside location made it susceptible to concentrations of fog and industrial smoke, Foggy Bottom is one of the oldest and best known neighborhoods of which US city?",
+      "target": [
+        "Government of D.C.",
+        "Washington-DC",
+        "Us capital",
+        "DC Washington",
+        "United States capital",
+        "UN/LOCODE:USWAS",
+        "Wasington D.C.",
+        "The District of Columbia",
+        "Washington,D.C",
+        "Washington, Dc",
+        "Washington city",
+        "Washington, D.C., United States",
+        "Washington (District of Columbia)",
+        "Washington dc",
+        "Washington, DC",
+        "D.C. Washington",
+        "Wash DC",
+        "Wash. DC",
+        "Wash, D.C.",
+        "WASHINGTON D.C",
+        "District of Columbia, District of Columbia",
+        "Distric of Columbia",
+        "Washington DC, United States of America",
+        "One District",
+        "Wash. D.C.",
+        "Culture of Washington, DC",
+        "United States Capital",
+        "District of Columbia, United States",
+        "Washington D. C.",
+        "Capital of the USA",
+        "District of Columbia",
+        "Washington City",
+        "Wasington, DC",
+        "Washington Dc",
+        "L'Enfant City",
+        "Distict of Columbia",
+        "Capital of the United States",
+        "Washington, D.C",
+        "Washington, US-DC",
+        "Washington District of Columbia",
+        "Washington (city)",
+        "Wasington DC",
+        "Federal district (United States)",
+        "Wash, DC",
+        "Washington, D.c.",
+        "Washington DC, USA",
+        "Washington DC.",
+        "District Of Columbia",
+        "Climate of Washington, D.C.",
+        "Distric of colombia",
+        "Washington, D C",
+        "District of Columbia County, DC",
+        "Washington D.C",
+        "District of columbia",
+        "Washington, DC.",
+        "District of Columbia government",
+        "American Federal District",
+        "Washington, District Of Columbia",
+        "Wahington D.C",
+        "Washington, District of Columbia",
+        "City of Washington",
+        "Federal district of the United States",
+        "Washington D.C.",
+        "Washington (D.C.)",
+        "Washington DC",
+        "1 District",
+        "Washington, D. C.",
+        "Districtofcolumbia",
+        "Washington, D.C., USA",
+        "Culture of Washington, D C",
+        "Washington, D.C.",
+        "Washingtondc",
+        "Culture of Washington, D. C.",
+        "Culture of Washington, D.C.",
+        "Economy of Washington, D.C.",
+        "Washington, dc",
+        "US-DC",
+        "Dist. of Columbia",
+        "Wash., D.C.",
+        "District of colombia",
+        "Washingotn, DC",
+        "Education in Washington, D.C.",
+        "Washington (DC)"
+      ]
+    },
+    "source_index": 1425,
+    "source_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+    "split": "free_form",
+    "selection_rank": 8,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{Thought to have received the name because its riverside location made it susceptible to concentrations of fog and industrial smoke, Foggy Bottom is one of the oldest and best known neighborhoods of which US city?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: Thought to have received the name because its riverside location made it susceptible to concentrations of fog and industrial smoke, Foggy Bottom is one of the oldest and best known neighborhoods of which US city?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1705",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What would a person normally do with perique?",
+      "target": [
+        "Smoke It",
+        "Smoke it"
+      ]
+    },
+    "source_index": 1705,
+    "source_sha256": "01a697c4aa0d87bfd488d87ab16b5fe74ada4c84bf84792a02ed5de3de132fe9",
+    "split": "free_form",
+    "selection_rank": 9,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{What would a person normally do with perique?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: What would a person normally do with perique?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "DROP",
+      "context": "In 1997, Russia and Ukraine signed the Partition Treaty, establishing two independent national fleets and dividing armaments and bases between them. Ukraine also agreed to lease major parts of its facilities to the Russian Black Sea Fleet until 2017. However, the treaty appeared to be far from perfect: permanent tensions on the lease details  control continued. The Fleet's main base is still situated in the Crimean port city of Sevastopol. In 2009 the Yushchenko Ukrainian government declared that the lease would not be extended and that the fleet would have to leave Sevastopol by 2017.  In 2010 the Russian leasehold was renegotiated with an extension until 2042 and an option for an additional five years until 2047.",
+      "id": "1100",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "For how many years from the original deadline was the lease extended?",
+      "target": [
+        "25",
+        "25"
+      ]
+    },
+    "source_index": 1100,
+    "source_sha256": "02214d0ee22b7968878f9e58c0b3f9ab5b5f8f47d2068c3fb4f86e599b21882f",
+    "split": "free_form",
+    "selection_rank": 10,
+    "binding_only_prompt": "Context:\n{In 1997, Russia and Ukraine signed the Partition Treaty, establishing two independent national fleets and dividing armaments and bases between them. Ukraine also agreed to lease major parts of its facilities to the Russian Black Sea Fleet until 2017. However, the treaty appeared to be far from perfect: permanent tensions on the lease details  control continued. The Fleet's main base is still situated in the Crimean port city of Sevastopol. In 2009 the Yushchenko Ukrainian government declared that the lease would not be extended and that the fleet would have to leave Sevastopol by 2017.  In 2010 the Russian leasehold was renegotiated with an extension until 2042 and an option for an additional five years until 2047.}\n\nQuestion:\n{For how many years from the original deadline was the lease extended?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: In 1997, Russia and Ukraine signed the Partition Treaty, establishing two independent national fleets and dividing armaments and bases between them. Ukraine also agreed to lease major parts of its facilities to the Russian Black Sea Fleet until 2017. However, the treaty appeared to be far from perfect: permanent tensions on the lease details  control continued. The Fleet's main base is still situated in the Crimean port city of Sevastopol. In 2009 the Yushchenko Ukrainian government declared that the lease would not be extended and that the fleet would have to leave Sevastopol by 2017.  In 2010 the Russian leasehold was renegotiated with an extension until 2042 and an option for an additional five years until 2047.\nFor how many years from the original deadline was the lease extended?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "323",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "August 17, 1908 saw the opening of what public farmers market, the longest continually running public farmers market in the US?",
+      "target": [
+        "Sanitary Market",
+        "Pike Place Preservation and Development Authority",
+        "Frank Goodwin",
+        "Friends of the Market",
+        "Pike Place Market Historic District",
+        "Corner Market",
+        "Pike Place Market Preservation and Development Authority",
+        "Economy Market",
+        "Pike Street Market",
+        "Pigs On Parade",
+        "Pike Market, Seattle, Washington",
+        "Pike's Place",
+        "Pike Place Market",
+        "Pike Place",
+        "Joe Desimone",
+        "Giuseppe Desimone",
+        "North Arcade",
+        "Rachel (pig)"
+      ]
+    },
+    "source_index": 323,
+    "source_sha256": "0227fdb0987066ca41eb0e62aad769bd3a0a02f9b1972171e8af60d8bf4ad98d",
+    "split": "free_form",
+    "selection_rank": 11,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{August 17, 1908 saw the opening of what public farmers market, the longest continually running public farmers market in the US?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: August 17, 1908 saw the opening of what public farmers market, the longest continually running public farmers market in the US?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "268",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Which religion has ten states of the mind including Neutrality, Rapture, Realization and Bodhisattva?",
+      "target": [
+        "Búdachas",
+        "Buddhadharma",
+        "Buddhadhamma",
+        "Buddhism in Asia",
+        "Budddhism",
+        "Buddhist",
+        "Budddhist",
+        "Buddhist Saying",
+        "Buddhism",
+        "Buddha's gospel",
+        "Buddh",
+        "Dhamma-Vinaya",
+        "Bouddhism",
+        "Bhuudis",
+        "Buddhisam",
+        "Budhism",
+        "Budhda birth date controversies",
+        "BuddhIsm",
+        "Buddha birth date controversies",
+        "BuddHism",
+        "Buddhists",
+        "Buhhdism",
+        "Dhamma-vinaya",
+        "Buddhity",
+        "Buddha Dharma",
+        "Buddhasasana",
+        "Budhist",
+        "Bauddhadharma",
+        "The teaching of the Buddha",
+        "Dhammavinaya",
+        "Buddhism religion",
+        "Buddhaity",
+        "Superbuddha",
+        "Budism",
+        "Buddist",
+        "Buddhisem",
+        "Buddism",
+        "Будизъм",
+        "Boudhism",
+        "Bhuddist",
+        "Dhamma Vinaya",
+        "Buddha Dhamma",
+        "Buddhist religious philosophy",
+        "BUDDHISM",
+        "Budddhists",
+        "Bhuddism",
+        "Three levels of suffering"
+      ]
+    },
+    "source_index": 268,
+    "source_sha256": "02695959cb4018c4802afac6b9aff4bc8336a14bba8362f79acb58f2431cb465",
+    "split": "free_form",
+    "selection_rank": 12,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{Which religion has ten states of the mind including Neutrality, Rapture, Realization and Bodhisattva?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: Which religion has ten states of the mind including Neutrality, Rapture, Realization and Bodhisattva?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "DROP",
+      "context": "The 2018 edition of the U.S. Open featured a total of 37 hours of coverage in the United States, with 19.5 hours being on Thursday and Friday, and 17.5 hours being on Saturday and Sunday; the Fox Sports 1 cable network carried a total of 13.5 hours of coverage on Thursday and Friday. The Fox broadcast network had a total of 23.5 hours of coverage Thursday through Sunday, with 6 hours Thursday and Friday, and 17.5 hours Saturday and Sunday. The overall 37-hour total was down 1.5 hours from last years total of 38.5 hours, due to the Fox broadcast networks coverage having 23.5 hours this year, compared to the 24.5 hours it had last year, and the Fox Sports 1 cable networks 13.5 hours this year, compared to the 14 hours it had last year.",
+      "id": "992",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "How many hours was Fox Sports 1 down this year compared to last year?",
+      "target": [
+        "1.5",
+        ".5"
+      ]
+    },
+    "source_index": 992,
+    "source_sha256": "0271279678d1933fc69fb8e010cda808b6486e1189427ba9085abba2ab3760af",
+    "split": "free_form",
+    "selection_rank": 13,
+    "binding_only_prompt": "Context:\n{The 2018 edition of the U.S. Open featured a total of 37 hours of coverage in the United States, with 19.5 hours being on Thursday and Friday, and 17.5 hours being on Saturday and Sunday; the Fox Sports 1 cable network carried a total of 13.5 hours of coverage on Thursday and Friday. The Fox broadcast network had a total of 23.5 hours of coverage Thursday through Sunday, with 6 hours Thursday and Friday, and 17.5 hours Saturday and Sunday. The overall 37-hour total was down 1.5 hours from last years total of 38.5 hours, due to the Fox broadcast networks coverage having 23.5 hours this year, compared to the 24.5 hours it had last year, and the Fox Sports 1 cable networks 13.5 hours this year, compared to the 14 hours it had last year.}\n\nQuestion:\n{How many hours was Fox Sports 1 down this year compared to last year?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: The 2018 edition of the U.S. Open featured a total of 37 hours of coverage in the United States, with 19.5 hours being on Thursday and Friday, and 17.5 hours being on Saturday and Sunday; the Fox Sports 1 cable network carried a total of 13.5 hours of coverage on Thursday and Friday. The Fox broadcast network had a total of 23.5 hours of coverage Thursday through Sunday, with 6 hours Thursday and Friday, and 17.5 hours Saturday and Sunday. The overall 37-hour total was down 1.5 hours from last years total of 38.5 hours, due to the Fox broadcast networks coverage having 23.5 hours this year, compared to the 24.5 hours it had last year, and the Fox Sports 1 cable networks 13.5 hours this year, compared to the 14 hours it had last year.\nHow many hours was Fox Sports 1 down this year compared to last year?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "755",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "On which island in the North Sea did both St Aidan and St Cuthbert live?",
+      "target": [
+        "Lindisfarne",
+        "LINDISFARNE"
+      ]
+    },
+    "source_index": 755,
+    "source_sha256": "030a5f637c160d9c70c2d6b64c3e8d7a0c1b47d8eae861932ef7dc0f6c7f924e",
+    "split": "free_form",
+    "selection_rank": 14,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{On which island in the North Sea did both St Aidan and St Cuthbert live?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: On which island in the North Sea did both St Aidan and St Cuthbert live?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "935",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What occupation puts one at risk for black lung?",
+      "target": [
+        "Coal seams",
+        "Collieries",
+        "Coal miner",
+        "Coal mines",
+        "Colliery",
+        "Coalminer",
+        "Coal mined",
+        "Surface coal mine",
+        "Coal Mining",
+        "Coal-miner",
+        "Coal mine",
+        "Coal extraction",
+        "Environmental impact of coal mining",
+        "Coalworks",
+        "Deep mine",
+        "Underground coal mining",
+        "Coal pit",
+        "Coal mining",
+        "Coal-mine",
+        "Highwall",
+        "Opencast coal mining",
+        "Coal production",
+        "Mining coal",
+        "Coalmining",
+        "Coal seam",
+        "Coal Miner",
+        "Opencast coalmine",
+        "Coal field",
+        "Coal-mining",
+        "Coalmine",
+        "Underground coal mine",
+        "Environmental impacts of coal mining"
+      ]
+    },
+    "source_index": 935,
+    "source_sha256": "035b51c81daa47a67fe25017a4f734420d08a9130312e1eb940d53c1ec3d27a6",
+    "split": "free_form",
+    "selection_rank": 15,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{What occupation puts one at risk for black lung?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: What occupation puts one at risk for black lung?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "896",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "The books were Alice and Jerry in the USA – what were they here?",
+      "target": [
+        "Janet and John",
+        "Janet and john"
+      ]
+    },
+    "source_index": 896,
+    "source_sha256": "03959ef8487345b99fe441152682b97586deb3fea4461e5dda22c0619598d5b1",
+    "split": "free_form",
+    "selection_rank": 16,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{The books were Alice and Jerry in the USA – what were they here?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: The books were Alice and Jerry in the USA – what were they here?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1749",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What is the name of the alternative medicine that uses essential oils?",
+      "target": [
+        "Reed diffuser",
+        "Aromatherapist",
+        "Aromatherapy",
+        "Aromatherapeutic",
+        "Menthol inhaler",
+        "Aroma therapy",
+        "Aromatherapy candles",
+        "Reed Diffusers",
+        "History of aromatherapy",
+        "Aromatherapy massage",
+        "Aromatherapy Candles"
+      ]
+    },
+    "source_index": 1749,
+    "source_sha256": "03b59b79bf5dd3c3a0230bf4ac8261090dbe1933e0a0bc0a64240ac3334b9fc0",
+    "split": "free_form",
+    "selection_rank": 17,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{What is the name of the alternative medicine that uses essential oils?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: What is the name of the alternative medicine that uses essential oils?\nAnswer the question shortly."
+  },
+  {
+    "record": {
+      "benchmark_name": "BBH",
+      "context": "None",
+      "id": "740",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "If you follow these instructions, do you return to the starting point? Always face forward. Take 1 step right. Take 2 steps forward. Take 2 steps right. Take 4 steps right.\nOptions:\n- Yes\n- No",
+      "target": [
+        "No"
+      ]
+    },
+    "source_index": 740,
+    "source_sha256": "03c9c6df40143fe06930dc5115e1930e9b356ff7dcaf8f76f12efcd115b6df75",
+    "split": "free_form",
+    "selection_rank": 18,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{If you follow these instructions, do you return to the starting point? Always face forward. Take 1 step right. Take 2 steps forward. Take 2 steps right. Take 4 steps right.\nOptions:\n- Yes\n- No}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: If you follow these instructions, do you return to the starting point? Always face forward. Take 1 step right. Take 2 steps forward. Take 2 steps right. Take 4 steps right.\nOptions:\n- Yes\n- No\nAnswer the question. \nLet's think step by step."
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "836",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What is traditionally written in a ledger?",
+      "target": [
+        "Account",
+        "Account holder",
+        "Accounts",
+        "Account (disambiguation)"
+      ]
+    },
+    "source_index": 836,
+    "source_sha256": "03caed8b6306dee460b33a1469f99d65d78b2b330bad7a68bfae8498b57eb150",
+    "split": "free_form",
+    "selection_rank": 19,
+    "binding_only_prompt": "Context:\n{None}\n\nQuestion:\n{What is traditionally written in a ledger?}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+    "official_typed_prompt": "Question: What is traditionally written in a ledger?\nAnswer the question shortly."
+  }
+]

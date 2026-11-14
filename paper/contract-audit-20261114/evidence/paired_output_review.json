@@ -1,0 +1,2334 @@
+{
+  "status": "POST_OUTCOME_EXPLORATORY_OUTPUT_REVIEW",
+  "created_at": "2026-11-14T15:16:56.152165+00:00",
+  "pre_registered": false,
+  "review_scope": "Read every69completed final output/tail and stored rule-parser capture. Preserve all80planned cases and11unknown statuses. No new model calls, generation/scoring reruns or scorer changes.",
+  "definitions": {
+    "terminal_answer_tag": "Last case-insensitive <answer>...</answer> element followed only by whitespace; its stripped payload is retained verbatim.",
+    "strict_terminal_A_tag": "Terminal tag payload exactly uppercase A, without extra text.",
+    "output_only_A_tag": "Strict terminal A tag with only whitespace before it; a descriptive format count.",
+    "prefix_literal_alias_present": "At least one source alias occurs case-insensitively before the terminal answer tag, with a negative word-character lookaround at each alphanumeric alias edge. No terminal tag gives null, not a negative semantic judgment.",
+    "prefix_warning": "Alias occurrence is lexical, not a claim that reasoning is correct or that a final answer is correct. Numeric aliases can match intermediate calculations. Negation, contradiction and semantic equivalence are not judged.",
+    "score": "Existing optional official RULE-mode score copied unchanged from ANALYSIS_CAPTURES.json. No strict-final-answer score or model-judge score was added.",
+    "selection": "Same20fixed source questions, repeated2models x2prompt conditions; source rows/conditions are not independent samples."
+  },
+  "source_files": {
+    "responses.jsonl": {
+      "sha256": "246fa417fae832f27936651d0b806c978a6c8d361a2df0f4ed4edfd1772cf048",
+      "bytes": 844132
+    },
+    "manifest.jsonl": {
+      "sha256": "c8b848a6eeda737a130a4ac3e4ebb0a5d3ac06d97eba39d27522036852826329",
+      "bytes": 61232
+    },
+    "ANALYSIS_CAPTURES.json": {
+      "sha256": "bef650d047fc404d1e33307459dc22a7c5f62509a9c097f8c83ab137111f214d",
+      "bytes": 91119
+    },
+    "ANALYSIS_SUMMARY.json": {
+      "sha256": "c60ad00816b7165c11c99c2e2591d1c719b8130842083808f0ac0d97a26b25b4",
+      "bytes": 5472
+    },
+    "selected20.json": {
+      "sha256": "09cf3ee65130629321a6ac125cb0fee2eff9a34e5b254847da98766ee6b982c9",
+      "bytes": 33603
+    }
+  },
+  "counts": {
+    "planned": 80,
+    "completed_reviewed": 69,
+    "unknown_preserved": 11
+  },
+  "groups": [
+    {
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "planned": 20,
+      "completed": 18,
+      "unknown": 2,
+      "common_rule_score_ones": 11,
+      "strict_terminal_A_tag": 14,
+      "strict_terminal_A_with_rule_score_one": 7,
+      "output_only_A_tag": 0,
+      "output_only_any_terminal_tag": 0,
+      "terminal_tag_payloads": {
+        "A": 14,
+        "A. None": 2,
+        "None of the above (Correct answer is 0.5 hours)": 1,
+        "No": 1
+      },
+      "prefix_literal_alias_present": 15,
+      "prefix_literal_alias_but_rule_score_zero": [
+        "MXG-03-B-G",
+        "MXG-05-B-G",
+        "MXG-08-B-G",
+        "MXG-14-B-G",
+        "MXG-17-B-G"
+      ],
+      "completed_trial_ids": [
+        "MXG-00-B-G",
+        "MXG-02-B-G",
+        "MXG-03-B-G",
+        "MXG-04-B-G",
+        "MXG-05-B-G",
+        "MXG-06-B-G",
+        "MXG-07-B-G",
+        "MXG-08-B-G",
+        "MXG-09-B-G",
+        "MXG-10-B-G",
+        "MXG-11-B-G",
+        "MXG-12-B-G",
+        "MXG-13-B-G",
+        "MXG-14-B-G",
+        "MXG-15-B-G",
+        "MXG-17-B-G",
+        "MXG-18-B-G",
+        "MXG-19-B-G"
+      ],
+      "unknown_trial_ids": [
+        "MXG-01-B-G",
+        "MXG-16-B-G"
+      ]
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "planned": 20,
+      "completed": 16,
+      "unknown": 4,
+      "common_rule_score_ones": 12,
+      "strict_terminal_A_tag": 0,
+      "strict_terminal_A_with_rule_score_one": 0,
+      "output_only_A_tag": 0,
+      "output_only_any_terminal_tag": 0,
+      "terminal_tag_payloads": {},
+      "prefix_literal_alias_present": 0,
+      "prefix_literal_alias_but_rule_score_zero": [],
+      "completed_trial_ids": [
+        "MXG-00-T-G",
+        "MXG-01-T-G",
+        "MXG-02-T-G",
+        "MXG-03-T-G",
+        "MXG-04-T-G",
+        "MXG-05-T-G",
+        "MXG-07-T-G",
+        "MXG-08-T-G",
+        "MXG-09-T-G",
+        "MXG-10-T-G",
+        "MXG-11-T-G",
+        "MXG-14-T-G",
+        "MXG-15-T-G",
+        "MXG-16-T-G",
+        "MXG-18-T-G",
+        "MXG-19-T-G"
+      ],
+      "unknown_trial_ids": [
+        "MXG-06-T-G",
+        "MXG-12-T-G",
+        "MXG-13-T-G",
+        "MXG-17-T-G"
+      ]
+    },
+    {
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "planned": 20,
+      "completed": 18,
+      "unknown": 2,
+      "common_rule_score_ones": 2,
+      "strict_terminal_A_tag": 16,
+      "strict_terminal_A_with_rule_score_one": 0,
+      "output_only_A_tag": 14,
+      "output_only_any_terminal_tag": 16,
+      "terminal_tag_payloads": {
+        "A": 16,
+        "Washington, D.C.": 1,
+        "No": 1
+      },
+      "prefix_literal_alias_present": 2,
+      "prefix_literal_alias_but_rule_score_zero": [
+        "MXG-03-B-Q",
+        "MXG-13-B-Q"
+      ],
+      "completed_trial_ids": [
+        "MXG-00-B-Q",
+        "MXG-01-B-Q",
+        "MXG-02-B-Q",
+        "MXG-03-B-Q",
+        "MXG-04-B-Q",
+        "MXG-05-B-Q",
+        "MXG-07-B-Q",
+        "MXG-08-B-Q",
+        "MXG-09-B-Q",
+        "MXG-11-B-Q",
+        "MXG-12-B-Q",
+        "MXG-13-B-Q",
+        "MXG-14-B-Q",
+        "MXG-15-B-Q",
+        "MXG-16-B-Q",
+        "MXG-17-B-Q",
+        "MXG-18-B-Q",
+        "MXG-19-B-Q"
+      ],
+      "unknown_trial_ids": [
+        "MXG-06-B-Q",
+        "MXG-10-B-Q"
+      ]
+    },
+    {
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "planned": 20,
+      "completed": 17,
+      "unknown": 3,
+      "common_rule_score_ones": 14,
+      "strict_terminal_A_tag": 0,
+      "strict_terminal_A_with_rule_score_one": 0,
+      "output_only_A_tag": 0,
+      "output_only_any_terminal_tag": 0,
+      "terminal_tag_payloads": {},
+      "prefix_literal_alias_present": 0,
+      "prefix_literal_alias_but_rule_score_zero": [],
+      "completed_trial_ids": [
+        "MXG-00-T-Q",
+        "MXG-01-T-Q",
+        "MXG-03-T-Q",
+        "MXG-04-T-Q",
+        "MXG-05-T-Q",
+        "MXG-06-T-Q",
+        "MXG-07-T-Q",
+        "MXG-08-T-Q",
+        "MXG-09-T-Q",
+        "MXG-10-T-Q",
+        "MXG-11-T-Q",
+        "MXG-13-T-Q",
+        "MXG-14-T-Q",
+        "MXG-15-T-Q",
+        "MXG-17-T-Q",
+        "MXG-18-T-Q",
+        "MXG-19-T-Q"
+      ],
+      "unknown_trial_ids": [
+        "MXG-02-T-Q",
+        "MXG-12-T-Q",
+        "MXG-16-T-Q"
+      ]
+    }
+  ],
+  "main_interpretation": [
+    "Qwen completed binding-only outputs include14/18literal A-tag-only responses;16/18end with strictA. Its other2completed outputs contain underlying-task semantic answer payloads No and Washington,D.C., and receive the2common-rule credits.",
+    "Gemma completed binding-only outputs contain explanatory prefixes in18/18cases and lexical source aliases in15/18prefixes. Fourteen end with strictA, and7of those14still receive common-rule credit from retained body candidates. This shows that rule-score differences are sensitive to output verbosity and answer extraction, beyond the terminal task-format error.",
+    "Five Gemma binding-only cases contain a literal source alias in the explanatory prefix but receive rule0 because saved extracted candidates omit that alias. Qwen's2explanatory binding-only outputs similarly mention an alias but receive0 after extraction of theA-oriented ending.",
+    "These observations support a format/instruction-mediated explanation for the measured Qwen sensitivity. They do not identify a loss of underlying knowledge or establish model capability rankings."
+  ],
+  "examples": [
+    {
+      "trial_ids": [
+        "MXG-04-B-Q",
+        "MXG-04-T-Q"
+      ],
+      "observation": "Same source47: binding-only emits onlyA; typed emitsSommelier, with stored rule0to1.",
+      "responses": [
+        {
+          "trial_id": "MXG-04-B-Q",
+          "source_index": 47,
+          "source_record_sha256": "00843fec011483674feec1e8fcb2d4c79265dccccaae6b01ae48296180385a87",
+          "model": "qwen3.8-27b",
+          "condition": "binding_only",
+          "source_question": "What name is given to the person in a restaurant responsible for the wine and assisting customers with their choice of wine?",
+          "score_as_previously_saved": 0.0,
+          "terminal_answer_tag_text": "A",
+          "output_text": "\n\n<answer>A</answer>",
+          "parsed_as_previously_saved": [
+            "<answer>a</answer>"
+          ]
+        },
+        {
+          "trial_id": "MXG-04-T-Q",
+          "source_index": 47,
+          "source_record_sha256": "00843fec011483674feec1e8fcb2d4c79265dccccaae6b01ae48296180385a87",
+          "model": "qwen3.8-27b",
+          "condition": "official_typed",
+          "source_question": "What name is given to the person in a restaurant responsible for the wine and assisting customers with their choice of wine?",
+          "score_as_previously_saved": 1.0,
+          "terminal_answer_tag_text": null,
+          "output_text": "\n\nSommelier",
+          "parsed_as_previously_saved": [
+            "sommelier"
+          ]
+        }
+      ]
+    },
+    {
+      "trial_ids": [
+        "MXG-00-B-G",
+        "MXG-00-B-Q"
+      ],
+      "observation": "Both finish withA under binding-only. Gemma includes the accepted proverb completion in its prefix and gets rule1; Qwen emits onlyA and gets0. This is descriptive cross-model evidence, not a randomized between-model mechanism estimate.",
+      "responses": [
+        {
+          "trial_id": "MXG-00-B-G",
+          "source_index": 492,
+          "source_record_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+          "model": "gemma-4-31b-it",
+          "condition": "binding_only",
+          "source_question": "\"Complete the proverb; \"\"Hope for the best....\"\"?\"",
+          "score_as_previously_saved": 1.0,
+          "terminal_answer_tag_text": "A",
+          "output_text": "The proverb \"Hope for the best\" is typically completed with the phrase \"but prepare for the worst.\" \n\nLooking at the provided options:\nA. None\n\nSince the correct completion (\"but prepare for the worst\") is not listed among the choices, and the only available option is \"None,\" the best selection based on the provided list is A.\n\n<answer>A</answer>",
+          "parsed_as_previously_saved": [
+            "a.",
+            "typically completed with the phrase \"but prepare for the worst.\""
+          ]
+        },
+        {
+          "trial_id": "MXG-00-B-Q",
+          "source_index": 492,
+          "source_record_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+          "model": "qwen3.8-27b",
+          "condition": "binding_only",
+          "source_question": "\"Complete the proverb; \"\"Hope for the best....\"\"?\"",
+          "score_as_previously_saved": 0.0,
+          "terminal_answer_tag_text": "A",
+          "output_text": "\n\n<answer>A</answer>",
+          "parsed_as_previously_saved": [
+            "<answer>a</answer>"
+          ]
+        }
+      ]
+    },
+    {
+      "trial_ids": [
+        "MXG-03-B-Q",
+        "MXG-03-T-Q"
+      ],
+      "observation": "Qwen binding-only explicitly calculates fewer girls in the prefix, then choosesA; the saved rule parser retainsa. and gives0. Typed emitsGirls and gets1.",
+      "responses": [
+        {
+          "trial_id": "MXG-03-B-Q",
+          "source_index": 1169,
+          "source_record_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+          "model": "qwen3.8-27b",
+          "condition": "binding_only",
+          "source_question": "In 1727 were there fewer girls or boys?",
+          "score_as_previously_saved": 0.0,
+          "terminal_answer_tag_text": "A",
+          "output_text": "\n\nIn 1727, total boys = 1,261 + 1,158 = 2,419, and total girls = 1,131 + 987 = 2,118, so there were fewer girls. Since the only provided option is “A. None,” the best selectable option is A.\n\n<answer>A</answer>",
+          "parsed_as_previously_saved": [
+            "a."
+          ]
+        },
+        {
+          "trial_id": "MXG-03-T-Q",
+          "source_index": 1169,
+          "source_record_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+          "model": "qwen3.8-27b",
+          "condition": "official_typed",
+          "source_question": "In 1727 were there fewer girls or boys?",
+          "score_as_previously_saved": 1.0,
+          "terminal_answer_tag_text": null,
+          "output_text": "\n\nGirls",
+          "parsed_as_previously_saved": [
+            "girls"
+          ]
+        }
+      ]
+    },
+    {
+      "trial_ids": [
+        "MXG-14-B-G",
+        "MXG-14-T-G"
+      ],
+      "observation": "Gemma binding-only namesLindisfarne before endingA, but saved parser retains onlynone and gives0. TypedLindisfarne gets1. This is extraction sensitivity, not proof the binding model lacked the fact.",
+      "responses": [
+        {
+          "trial_id": "MXG-14-B-G",
+          "source_index": 755,
+          "source_record_sha256": "030a5f637c160d9c70c2d6b64c3e8d7a0c1b47d8eae861932ef7dc0f6c7f924e",
+          "model": "gemma-4-31b-it",
+          "condition": "binding_only",
+          "source_question": "On which island in the North Sea did both St Aidan and St Cuthbert live?",
+          "score_as_previously_saved": 0.0,
+          "terminal_answer_tag_text": "A",
+          "output_text": "The question asks for the island in the North Sea where both St Aidan and St Cuthbert lived. \n\nHistorically, both St Aidan and St Cuthbert were associated with the monastery on the **Isle of Lindisfarne** (often referred to as Holy Island) off the coast of Northumbria.\n\nLooking at the provided options:\nA. None\n\nSince the correct answer (Lindisfarne) is not listed among the options, the only available choice is \"None\".\n\n<answer>A</answer>",
+          "parsed_as_previously_saved": [
+            "\"none\"."
+          ]
+        },
+        {
+          "trial_id": "MXG-14-T-G",
+          "source_index": 755,
+          "source_record_sha256": "030a5f637c160d9c70c2d6b64c3e8d7a0c1b47d8eae861932ef7dc0f6c7f924e",
+          "model": "gemma-4-31b-it",
+          "condition": "official_typed",
+          "source_question": "On which island in the North Sea did both St Aidan and St Cuthbert live?",
+          "score_as_previously_saved": 1.0,
+          "terminal_answer_tag_text": null,
+          "output_text": "Lindisfarne",
+          "parsed_as_previously_saved": [
+            "lindisfarne"
+          ]
+        }
+      ]
+    },
+    {
+      "trial_ids": [
+        "MXG-00-T-Q"
+      ],
+      "observation": "Typed outputPrepare for the worst gets rule0 againstBut prepare for the worst. The lexical rule's treatment must not be turned into a strict semantic-correctness judgment.",
+      "responses": [
+        {
+          "trial_id": "MXG-00-T-Q",
+          "source_index": 492,
+          "source_record_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+          "model": "qwen3.8-27b",
+          "condition": "official_typed",
+          "source_question": "\"Complete the proverb; \"\"Hope for the best....\"\"?\"",
+          "score_as_previously_saved": 0.0,
+          "terminal_answer_tag_text": null,
+          "output_text": "\n\nPrepare for the worst.",
+          "parsed_as_previously_saved": [
+            "prepare for the worst"
+          ]
+        }
+      ]
+    },
+    {
+      "trial_ids": [
+        "MXG-08-B-Q",
+        "MXG-18-B-Q"
+      ],
+      "observation": "Two Qwen binding-only outputs depart from the offeredA.None answer and returnWashington,D.C./No inside answer tags; they receive rule1.",
+      "responses": [
+        {
+          "trial_id": "MXG-08-B-Q",
+          "source_index": 1425,
+          "source_record_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+          "model": "qwen3.8-27b",
+          "condition": "binding_only",
+          "source_question": "Thought to have received the name because its riverside location made it susceptible to concentrations of fog and industrial smoke, Foggy Bottom is one of the oldest and best known neighborhoods of which US city?",
+          "score_as_previously_saved": 1.0,
+          "terminal_answer_tag_text": "Washington, D.C.",
+          "output_text": "\n\n<answer>Washington, D.C.</answer>",
+          "parsed_as_previously_saved": [
+            "<answer>washington, d.c.</answer>"
+          ]
+        },
+        {
+          "trial_id": "MXG-18-B-Q",
+          "source_index": 740,
+          "source_record_sha256": "03c9c6df40143fe06930dc5115e1930e9b356ff7dcaf8f76f12efcd115b6df75",
+          "model": "qwen3.8-27b",
+          "condition": "binding_only",
+          "source_question": "If you follow these instructions, do you return to the starting point? Always face forward. Take 1 step right. Take 2 steps forward. Take 2 steps right. Take 4 steps right.\nOptions:\n- Yes\n- No",
+          "score_as_previously_saved": 1.0,
+          "terminal_answer_tag_text": "No",
+          "output_text": "\n\n<answer>No</answer>",
+          "parsed_as_previously_saved": [
+            "<answer>no</answer>"
+          ]
+        }
+      ]
+    }
+  ],
+  "causal_limits": [
+    "This output review and regex definitions were chosen after outcomes and are exploratory.",
+    "The paired prompt intervention preserves source questions, but changes offered options, answer instructions and formatting together. It does not isolate one prompt subcomponent.",
+    "Common-rule score sensitivity is not semantic model capability and is not strict final-answer correctness.",
+    "Both original and repaired conditions use the same source references and scoring function in the main analysis; this review does not change their scores or uncertainty bounds.",
+    "Eleven incomplete responses remain unknown; differing completed subsets must not replace the fixed20-question paired estimand.",
+    "Model-specific output styles, existing benchmark/source exposure and this20-question selected panel limit generalization.",
+    "No new model calls or scorer runs were made for this review."
+  ],
+  "case_text_provenance": "Every completed case keeps its final700-character tail and full saved parser candidates. Full response bytes and aliases remain in responses.jsonl/selected20.json under the recorded hashes; representative examples reproduce full outputs.",
+  "cases": [
+    {
+      "trial_id": "MXG-00-B-G",
+      "source_index": 492,
+      "source_record_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "f3baf340359447e3066c6d2299c335a464d3abfd52e083577dd3a0ff369eb631",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "The proverb \"Hope for the best\" is typically completed with the phrase \"but prepare for the worst.\" \n\nLooking at the provided options:\nA. None\n\nSince the correct completion (\"but prepare for the worst\") is not listed among the choices, and the only available option is \"None,\" the best selection based on the provided list is A.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "a.",
+        "typically completed with the phrase \"but prepare for the worst.\""
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "But prepare for the worst"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 348
+    },
+    {
+      "trial_id": "MXG-00-B-Q",
+      "source_index": 492,
+      "source_record_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-00-T-G",
+      "source_index": 492,
+      "source_record_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "87dd20cf10b6437023ca3776d599b214e14c9242034b62b0428436ed3c6c5474",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "...but prepare for the worst.",
+      "parsed_as_previously_saved": [
+        "but prepare for the worst"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 29
+    },
+    {
+      "trial_id": "MXG-00-T-Q",
+      "source_index": 492,
+      "source_record_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "ace85f3165aae6250e34205f2b94528f8514a596f99ab30b0ad5ba20ad1a6013",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\nPrepare for the worst.",
+      "parsed_as_previously_saved": [
+        "prepare for the worst"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 24
+    },
+    {
+      "trial_id": "MXG-01-B-G",
+      "source_index": 548,
+      "source_record_sha256": "000fdd1945c82297682247dd1df03e4e1778e4a429397d1f71319fa32ec8ba81",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "incomplete",
+      "analysis_status": "capture_incomplete_or_empty",
+      "included_in_completed_format_counts": false,
+      "output_text_sha256": "81f1a5cb5eb3ac280e121c0270a485a0e22e5b3ef2c1e10c01e28c735a8a077b",
+      "score_as_previously_saved": null
+    },
+    {
+      "trial_id": "MXG-01-B-Q",
+      "source_index": 548,
+      "source_record_sha256": "000fdd1945c82297682247dd1df03e4e1778e4a429397d1f71319fa32ec8ba81",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-01-T-G",
+      "source_index": 548,
+      "source_record_sha256": "000fdd1945c82297682247dd1df03e4e1778e4a429397d1f71319fa32ec8ba81",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "f3b582ee6b18c01530bd739ff5a428800ab3d8fb3d25700ee939d3e55715299d",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "The Koppen Classification System is used for classifying **climates**.",
+      "parsed_as_previously_saved": [
+        "used for classifying **climates**"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 70
+    },
+    {
+      "trial_id": "MXG-01-T-Q",
+      "source_index": 548,
+      "source_record_sha256": "000fdd1945c82297682247dd1df03e4e1778e4a429397d1f71319fa32ec8ba81",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "8f6ea4121d2cef4e945157910e0defc7210c5730ff8272c12c9c3378f7a0aa66",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nClimate zones (world climates).",
+      "parsed_as_previously_saved": [
+        "climate zones (world climates)"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 33
+    },
+    {
+      "trial_id": "MXG-02-B-G",
+      "source_index": 1562,
+      "source_record_sha256": "0027202018bac66bb87df8591cd4e868384230f593bca419717c118d11b6d7b9",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "f09faf04759cfb1ed24e7617a41dbc633f98a6b762d4acb846251cffca3e0c12",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": " contains a grammatical error and the only provided option is \"A. None\" (which typically implies no error or no change), and there are no other options to correct the grammar, the question asks to select the best option from the provided list. However, in standard multiple-choice formats for error detection, if \"None\" is the only option and the sentence is incorrect, it suggests a lack of correct alternatives or a specific test format. \n\nGiven the context of the prompt provided:\nQuestion: {Rarely is the question asked: Is our children learning?}\nOption: {A. None}\n\nSince there are no other options to choose from to correct the error, and \"None\" is the only choice provided:\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "our children learning?\"",
+        "the only choice provided:",
+        "plural.",
+        "incorrect, it suggests a lack of correct alternatives or a specific test format.",
+        "singular.",
+        "our children learning?}"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 1061
+    },
+    {
+      "trial_id": "MXG-02-B-Q",
+      "source_index": 1562,
+      "source_record_sha256": "0027202018bac66bb87df8591cd4e868384230f593bca419717c118d11b6d7b9",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-02-T-G",
+      "source_index": 1562,
+      "source_record_sha256": "0027202018bac66bb87df8591cd4e868384230f593bca419717c118d11b6d7b9",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "00b9f0b85490f089162449259052020074f80417ee7d1865f0de6dd788951609",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "The question is grammatically incorrect. It should be: **\"Are our children learning?\"**",
+      "parsed_as_previously_saved": [
+        "grammatically incorrect. it should be: **\"are our children learning?\"**"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 87
+    },
+    {
+      "trial_id": "MXG-02-T-Q",
+      "source_index": 1562,
+      "source_record_sha256": "0027202018bac66bb87df8591cd4e868384230f593bca419717c118d11b6d7b9",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "analysis_status": "capture_incomplete_or_empty",
+      "included_in_completed_format_counts": false,
+      "output_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "score_as_previously_saved": null
+    },
+    {
+      "trial_id": "MXG-03-B-G",
+      "source_index": 1169,
+      "source_record_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "45589f4dce93fa054f1408bd226d4173890a29d8fac3a3f09721cd9f15b71247",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "19\n\n**Girls in 1727:**\n- White girls: 1,131\n- Coloured girls: 987\n- Total girls: 1,131 + 987 = 2,118\n\nComparing the two totals, there were 2,419 boys and 2,118 girls. Therefore, there were fewer girls.\n\nThe provided options for the question are limited to \"A. None\". However, based on the context provided, the answer is clearly \"girls\". Since the only provided option is \"None\" and it does not accurately answer the question based on the data, but the prompt asks to select the best option from the provided list:\n\nIn many standardized test formats of this type, if the correct answer (Girls) is not listed among the choices, \"None\" or \"None of the above\" is the selected option.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "the selected option.",
+        "the question based on the data, but the prompt asks to select the best option from the provided list:"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "girls",
+        "girls"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 953
+    },
+    {
+      "trial_id": "MXG-03-B-Q",
+      "source_index": 1169,
+      "source_record_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "74734c3fde5ce87a99d1a9d68dd5ac15d9c6754ec8b7075a4fba7a3091db8d09",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\nIn 1727, total boys = 1,261 + 1,158 = 2,419, and total girls = 1,131 + 987 = 2,118, so there were fewer girls. Since the only provided option is “A. None,” the best selectable option is A.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "a."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "girls",
+        "girls"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 210
+    },
+    {
+      "trial_id": "MXG-03-T-G",
+      "source_index": 1169,
+      "source_record_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "a8ba85cfaf740eea286211e2721ccbf17af35a3e6091ade53a6d818c03da8445",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "Fewer girls.",
+      "parsed_as_previously_saved": [
+        "fewer girls"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 12
+    },
+    {
+      "trial_id": "MXG-03-T-Q",
+      "source_index": 1169,
+      "source_record_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "f70cc5bae132218f57b654f0f897f25de0426d8cf62285395002046a88f69699",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nGirls",
+      "parsed_as_previously_saved": [
+        "girls"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 7
+    },
+    {
+      "trial_id": "MXG-04-B-G",
+      "source_index": 47,
+      "source_record_sha256": "00843fec011483674feec1e8fcb2d4c79265dccccaae6b01ae48296180385a87",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "3cdfe0eba8e68905fa742c108ac93a6c4f8d09d47ddb3b27d2bd953344819f23",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "The person in a restaurant responsible for the wine and assisting customers with their choice of wine is called a **sommelier**.\n\nLooking at the provided options:\nA. None\n\nSince the correct term (sommelier) is not listed among the options, and the only available option is \"None,\" the best choice based on the provided list is A.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "a.",
+        "called a **sommelier**."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "Sommelier"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 349
+    },
+    {
+      "trial_id": "MXG-04-B-Q",
+      "source_index": 47,
+      "source_record_sha256": "00843fec011483674feec1e8fcb2d4c79265dccccaae6b01ae48296180385a87",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-04-T-G",
+      "source_index": 47,
+      "source_record_sha256": "00843fec011483674feec1e8fcb2d4c79265dccccaae6b01ae48296180385a87",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "769bd1044c12ef44ace03c4d916496228e228264d19b7115ddb66cab34b24208",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "Sommelier",
+      "parsed_as_previously_saved": [
+        "sommelier"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 9
+    },
+    {
+      "trial_id": "MXG-04-T-Q",
+      "source_index": 47,
+      "source_record_sha256": "00843fec011483674feec1e8fcb2d4c79265dccccaae6b01ae48296180385a87",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "60ec3d89bc85873e96b3e747791b682fdf57b89a8f301c9f725809d576302110",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nSommelier",
+      "parsed_as_previously_saved": [
+        "sommelier"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 11
+    },
+    {
+      "trial_id": "MXG-05-B-G",
+      "source_index": 1528,
+      "source_record_sha256": "00ed2f59fca80c9cd9598621364249a50a639cd1994a32345234e26c1669b931",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "2c2ec75f071a472e387cc2ba744484e41144a1c71a6debb39ca8a5632601ad8a",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "The names listed (Charlotte, TJ's, Adelphi, Barfly, Joiners, and Forum) are all well-known former or current nightclubs and music venues, primarily associated with the nightlife and entertainment sector in the UK (specifically many of these were prominent in cities like Exeter).\n\nSince the provided options only include \"A. None\" and the question asks for the market sector, the correct choice based on the provided options is \"None\" because the actual sector (Nightclubs/Entertainment) is not listed as a separate option.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "not listed as a separate option."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "Music",
+        "MuSic"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 543
+    },
+    {
+      "trial_id": "MXG-05-B-Q",
+      "source_index": 1528,
+      "source_record_sha256": "00ed2f59fca80c9cd9598621364249a50a639cd1994a32345234e26c1669b931",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-05-T-G",
+      "source_index": 1528,
+      "source_record_sha256": "00ed2f59fca80c9cd9598621364249a50a639cd1994a32345234e26c1669b931",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "e3d47e59bb13b8d7a555637a182e3386aba1ce0aee8d01c656086daac6fe5156",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "Pubs (or Public Houses)",
+      "parsed_as_previously_saved": [
+        "pubs (or public houses)"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 23
+    },
+    {
+      "trial_id": "MXG-05-T-Q",
+      "source_index": 1528,
+      "source_record_sha256": "00ed2f59fca80c9cd9598621364249a50a639cd1994a32345234e26c1669b931",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "490ad6b4c6c781a8c3eef50a7bf6d419c3f53d189bf74b1ccb17a9046e5737e8",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\nPubs (the UK pub/bar sector).",
+      "parsed_as_previously_saved": [
+        "pubs (the uk pub/bar sector)"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 31
+    },
+    {
+      "trial_id": "MXG-06-B-G",
+      "source_index": 662,
+      "source_record_sha256": "0161b083df03880183df856758364841e13b41851a8a297288f8c56d2f97fb7c",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "629c56ce3cdabef8c347d02a02dbc2538f17a1321d45b399dfaa8d913962a242",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "The Paige Compositor was a complex typesetting machine developed by Bartlett Paige. However, the American author who invested heavily in its development and lost a significant portion of his fortune was **Mark Twain**. Twain was a lifelong enthusiast of new inventions and spent hundreds of thousands of dollars (a massive sum at the time) backing the project, which ultimately failed commercially.\n\nSince the provided options only list \"A. None,\" and the correct answer (Mark Twain) is not present among the choices:\n\n<answer>A. None</answer>",
+      "parsed_as_previously_saved": [
+        "not present among the choices:",
+        "fortune was **mark twain**. twain was a lifelong enthusiast of new inventions and spent hundreds of thousands of dollars (a massive sum at the time) backing the project, which ultimately failed commercially."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A. None",
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "Mark Twain",
+        "Mark twain"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 543
+    },
+    {
+      "trial_id": "MXG-06-B-Q",
+      "source_index": 662,
+      "source_record_sha256": "0161b083df03880183df856758364841e13b41851a8a297288f8c56d2f97fb7c",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "incomplete",
+      "analysis_status": "capture_incomplete_or_empty",
+      "included_in_completed_format_counts": false,
+      "output_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "score_as_previously_saved": null
+    },
+    {
+      "trial_id": "MXG-06-T-G",
+      "source_index": 662,
+      "source_record_sha256": "0161b083df03880183df856758364841e13b41851a8a297288f8c56d2f97fb7c",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "analysis_status": "capture_incomplete_or_empty",
+      "included_in_completed_format_counts": false,
+      "output_text_sha256": "81f1a5cb5eb3ac280e121c0270a485a0e22e5b3ef2c1e10c01e28c735a8a077b",
+      "score_as_previously_saved": null
+    },
+    {
+      "trial_id": "MXG-06-T-Q",
+      "source_index": 662,
+      "source_record_sha256": "0161b083df03880183df856758364841e13b41851a8a297288f8c56d2f97fb7c",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "9eae00e10d0a42d587755f968166d696b830be93a5a439d0e70845677e8faee5",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nMark Twain",
+      "parsed_as_previously_saved": [
+        "mark twain"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 12
+    },
+    {
+      "trial_id": "MXG-07-B-G",
+      "source_index": 1217,
+      "source_record_sha256": "0176dfad14c88ad78f0acae00ffdea61e8ef88932380087005769e5e29fa6e65",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "60acb45d1196b284322c62dcf26a7f341c330476d22f07045cb4245258cfa70b",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "The question asks what item is evaluated based on the \"four Cs\": cut, colour, clarity, and carat. These are the universal standards used to determine the quality and value of **diamonds**.\n\nLooking at the provided options:\nA. None\n\nSince the correct answer (Diamonds) is not listed among the options provided in the prompt, and the only available option is \"None,\" the best choice based on the provided list is A.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "a.",
+        "evaluated based on the \"four cs\": cut, colour, clarity, and carat. these are the universal standards used to determine the quality and value of **diamonds**."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "Diamonds"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 433
+    },
+    {
+      "trial_id": "MXG-07-B-Q",
+      "source_index": 1217,
+      "source_record_sha256": "0176dfad14c88ad78f0acae00ffdea61e8ef88932380087005769e5e29fa6e65",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-07-T-G",
+      "source_index": 1217,
+      "source_record_sha256": "0176dfad14c88ad78f0acae00ffdea61e8ef88932380087005769e5e29fa6e65",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "901e6ec5553124db095b83242e5aabcc354340c8ef04402b5329be54606ec7c5",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "A diamond.",
+      "parsed_as_previously_saved": [
+        "a diamond"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 10
+    },
+    {
+      "trial_id": "MXG-07-T-Q",
+      "source_index": 1217,
+      "source_record_sha256": "0176dfad14c88ad78f0acae00ffdea61e8ef88932380087005769e5e29fa6e65",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "df9e7ca488b6c4e7dc39499c475a395f9f7e59403720963c27686891f89e76aa",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nA diamond",
+      "parsed_as_previously_saved": [
+        "a diamond"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 11
+    },
+    {
+      "trial_id": "MXG-08-B-G",
+      "source_index": 1425,
+      "source_record_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "f949912f93d95fd11f8662fb0190bcd4e1b3ad02f89c5a59404abe56789e363b",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "ottom.\"\n\n1.  **Analyze the clue**: Foggy Bottom is a well-known neighborhood characterized by its riverside location and historical susceptibility to fog and smoke.\n2.  **Identify the location**: Foggy Bottom is a neighborhood in **Washington, D.C.** It is home to George Washington University and the U.S. Department of State.\n3.  **Evaluate the options**: The provided options list only \"A. None.\" However, the factual answer is Washington, D.C. Since the correct city is not listed among the choices provided in the prompt's options list (which only contains \"None\"), and the prompt asks to select the best option from the provided list:\n\nBased on the provided options:\nA. None\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "a well-known neighborhood characterized by its riverside location and historical susceptibility to fog and smoke.",
+        "not listed among the choices provided in the prompt's options list (which only contains \"none\"), and the prompt asks to select the best option from the provided list:",
+        "home to george washington university and the u.s. department of state."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "Washington, D.C",
+        "Washington, D.c.",
+        "Washington, D.C."
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 775
+    },
+    {
+      "trial_id": "MXG-08-B-Q",
+      "source_index": 1425,
+      "source_record_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "da77a361a46a53875498f0db7f6528d1d5a52804f49f8467c7617be530a0c2ae",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\n<answer>Washington, D.C.</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>washington, d.c.</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "Washington, D.C.",
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 35
+    },
+    {
+      "trial_id": "MXG-08-T-G",
+      "source_index": 1425,
+      "source_record_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1c8c1b29e99132f8ab4bc1d1a767f330d2f0204ec389d940b9ee84a2352bbcbc",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "Washington, D.C.",
+      "parsed_as_previously_saved": [
+        "washington, d.c"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 16
+    },
+    {
+      "trial_id": "MXG-08-T-Q",
+      "source_index": 1425,
+      "source_record_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "8f08de6372ff9a21cc96d87244f85f1fdeee5176fade69af8611c66d81b6d4a4",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nWashington, D.C.",
+      "parsed_as_previously_saved": [
+        "washington, d.c"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 18
+    },
+    {
+      "trial_id": "MXG-09-B-G",
+      "source_index": 1705,
+      "source_record_sha256": "01a697c4aa0d87bfd488d87ab16b5fe74ada4c84bf84792a02ed5de3de132fe9",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "94e38fc5ae523176a3ea2dd8f968dd1814b0a88c1f36b0d694fe1e8004336c77",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "The provided context is empty, and the only available option is \"None.\" Based on the provided information:\n\nQuestion: What would normally be done with perique? (Perique is a type of aromatic tobacco used for smoking).\nOption A: None.\n\nSince no other options are provided and the context is empty, the only selectable option is A.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "\"none.\" based on the provided information:",
+        "a.",
+        "a type of aromatic tobacco used for smoking)."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 349
+    },
+    {
+      "trial_id": "MXG-09-B-Q",
+      "source_index": 1705,
+      "source_record_sha256": "01a697c4aa0d87bfd488d87ab16b5fe74ada4c84bf84792a02ed5de3de132fe9",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-09-T-G",
+      "source_index": 1705,
+      "source_record_sha256": "01a697c4aa0d87bfd488d87ab16b5fe74ada4c84bf84792a02ed5de3de132fe9",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "f4825b22c6baa48ed1ffc7d34b8c1dc9c39f2fbc7932426ddbed89e89c728bcb",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "A person would normally use perique as a blending tobacco, adding a small amount to a mixture of other tobaccos to provide a spicy, pungent flavor and aroma.",
+      "parsed_as_previously_saved": [
+        "a person would normally use perique as a blending tobacco, adding a small amount to a mixture of other tobaccos to provide a spicy, pungent flavor and aroma"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 157
+    },
+    {
+      "trial_id": "MXG-09-T-Q",
+      "source_index": 1705,
+      "source_record_sha256": "01a697c4aa0d87bfd488d87ab16b5fe74ada4c84bf84792a02ed5de3de132fe9",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "913552271a89bba66a36d14cc788c89a1f91bae9b52a942eed6551324731a7ff",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nSmoke it.",
+      "parsed_as_previously_saved": [
+        "smoke it"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 11
+    },
+    {
+      "trial_id": "MXG-10-B-G",
+      "source_index": 1100,
+      "source_record_sha256": "02214d0ee22b7968878f9e58c0b3f9ab5b5f8f47d2068c3fb4f86e599b21882f",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "7816f3f4d4cb418a1e7aa69d88dbe2d798bbcdbc7bb0f4f4f75e85744018d5c9",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": " to the Russian Black Sea Fleet \"until 2017.\"\n2.  **Renegotiated Extension:** In 2010, the lease was renegotiated with an extension \"until 2042\" (with an option for an additional five years until 2047).\n3.  **Calculation:** The extension from the original deadline (2017) to the new primary deadline (2042) is $2042 - 2017 = 25$ years.\n\nThe provided option \"A. None\" does not match the calculation derived from the text. However, since the prompt asks to select the best option from the provided list and only \"A. None\" is given, it appears the options provided in the prompt are incomplete or the correct numerical answer is missing. Based strictly on the provided options:\n\n<answer>A. None</answer>",
+      "parsed_as_previously_saved": [
+        2017.0,
+        "missing. based strictly on the provided options:",
+        25.0,
+        2042.0,
+        "$2042 - 2017 = 25$ years."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A. None",
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "25",
+        "25"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 905
+    },
+    {
+      "trial_id": "MXG-10-B-Q",
+      "source_index": 1100,
+      "source_record_sha256": "02214d0ee22b7968878f9e58c0b3f9ab5b5f8f47d2068c3fb4f86e599b21882f",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "incomplete",
+      "analysis_status": "capture_incomplete_or_empty",
+      "included_in_completed_format_counts": false,
+      "output_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "score_as_previously_saved": null
+    },
+    {
+      "trial_id": "MXG-10-T-G",
+      "source_index": 1100,
+      "source_record_sha256": "02214d0ee22b7968878f9e58c0b3f9ab5b5f8f47d2068c3fb4f86e599b21882f",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "cfefbc8a80c47e6098cca66074e4d19d8f30fe3dcd24ba8fcf1c03a709c20770",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "25 years (from 2017 to 2042).",
+      "parsed_as_previously_saved": [
+        25.0,
+        "25 years (from 2017 to 2042)",
+        2042.0,
+        2017.0
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 29
+    },
+    {
+      "trial_id": "MXG-10-T-Q",
+      "source_index": 1100,
+      "source_record_sha256": "02214d0ee22b7968878f9e58c0b3f9ab5b5f8f47d2068c3fb4f86e599b21882f",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "9de1895431172a6025d3b6863da25ac1d102368d79d79a2b1316120582070231",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\n25 years",
+      "parsed_as_previously_saved": [
+        25.0,
+        "25 years"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 10
+    },
+    {
+      "trial_id": "MXG-11-B-G",
+      "source_index": 323,
+      "source_record_sha256": "0227fdb0987066ca41eb0e62aad769bd3a0a02f9b1972171e8af60d8bf4ad98d",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "5aa4bec6d4adc554250cea847997deda223a7a6c4a065b8e6db1f9c6f859b9fd",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "ly running public farmers market in the US.\n\nBased on historical records, the **Eastern Market** in Washington, D.C. (specifically the current brick structure/modern iteration of the public market system) is often cited, but the specific date of August 17, 1908, is associated with the **Pike Place Market** in Seattle, Washington. Pike Place Market opened in 1907, but some sources associate specific charters or milestones with 1908. However, looking at the provided options:\n\nThe only option provided is:\nA. None\n\nSince the correct answer (Pike Place Market) is not listed among the choices, and the only available choice is \"None,\" the best option from the provided list is A.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        1908.0,
+        "a.",
+        "the longest continually running public farmers market in the us.",
+        "associated with the **pike place market** in seattle, washington. pike place market opened in 1907, but some sources associate specific charters or milestones with 1908. however, looking at the provided options:"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "Pike Place Market",
+        "Pike Place"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 820
+    },
+    {
+      "trial_id": "MXG-11-B-Q",
+      "source_index": 323,
+      "source_record_sha256": "0227fdb0987066ca41eb0e62aad769bd3a0a02f9b1972171e8af60d8bf4ad98d",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-11-T-G",
+      "source_index": 323,
+      "source_record_sha256": "0227fdb0987066ca41eb0e62aad769bd3a0a02f9b1972171e8af60d8bf4ad98d",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "c65b2dc9778295a6af346a4b108a8aa15148356d96489bb1e4d60b609160efe0",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "The Pike Place Market.",
+      "parsed_as_previously_saved": [
+        "the pike place market"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 22
+    },
+    {
+      "trial_id": "MXG-11-T-Q",
+      "source_index": 323,
+      "source_record_sha256": "0227fdb0987066ca41eb0e62aad769bd3a0a02f9b1972171e8af60d8bf4ad98d",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "9596883d4ebf2dd41009a53be697e2ff31408a8a2fce169b7d9d7f98845ef50b",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\nUnion Square Greenmarket",
+      "parsed_as_previously_saved": [
+        "union square greenmarket"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 26
+    },
+    {
+      "trial_id": "MXG-12-B-G",
+      "source_index": 268,
+      "source_record_sha256": "02695959cb4018c4802afac6b9aff4bc8336a14bba8362f79acb58f2431cb465",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "7bdeaddcc4d2d1080affc53ac26fdb295546feeaa528e3e1a7d405e817a0075b",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": " asks which religion features ten states of the mind including Neutrality, Rapture, Realization, and Bodhisattva. \n\nIn the context of Buddhist psychology and various meditative paths (such as the *dhyanas* or stages of enlightenment), these terms are central. Specifically, the concept of the \"Bodhisattva\" is unique to Buddhism, and the progression through states of meditative absorption and realization is a core part of Buddhist practice.\n\nHowever, looking at the provided options:\nThe only option provided is **A. None**.\n\nSince no other religious options (like Buddhism) are listed to choose from, and the only available choice is \"None,\" we must select from the given list.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "a core part of buddhist practice.",
+        "\"none,\" we must select from the given list.",
+        "**a. none**."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "Buddhist",
+        "Buddhism",
+        "BuddhIsm",
+        "BuddHism",
+        "BUDDHISM"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 712
+    },
+    {
+      "trial_id": "MXG-12-B-Q",
+      "source_index": 268,
+      "source_record_sha256": "02695959cb4018c4802afac6b9aff4bc8336a14bba8362f79acb58f2431cb465",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-12-T-G",
+      "source_index": 268,
+      "source_record_sha256": "02695959cb4018c4802afac6b9aff4bc8336a14bba8362f79acb58f2431cb465",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "analysis_status": "capture_incomplete_or_empty",
+      "included_in_completed_format_counts": false,
+      "output_text_sha256": "81f1a5cb5eb3ac280e121c0270a485a0e22e5b3ef2c1e10c01e28c735a8a077b",
+      "score_as_previously_saved": null
+    },
+    {
+      "trial_id": "MXG-12-T-Q",
+      "source_index": 268,
+      "source_record_sha256": "02695959cb4018c4802afac6b9aff4bc8336a14bba8362f79acb58f2431cb465",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "analysis_status": "capture_incomplete_or_empty",
+      "included_in_completed_format_counts": false,
+      "output_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "score_as_previously_saved": null
+    },
+    {
+      "trial_id": "MXG-13-B-G",
+      "source_index": 992,
+      "source_record_sha256": "0271279678d1933fc69fb8e010cda808b6486e1189427ba9085abba2ab3760af",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "11d1c4b0f7a9d88004a42fd58e0000271195bf8031624c15beb334c1749e9620",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": " is factually wrong based on the text, there is no correct option listed. But if forced to choose from the provided set where A is the only choice and it is wrong, the answer is that it was down by 0.5 hours.\n\nWait, looking at the prompt again, it asks to select the best option. If \"None\" is the only option and it is wrong, the answer is simply the calculated value. But usually, in these formats, if the option is wrong, we identify it. Given the constraints of the provided options:\n\nFox Sports 1: 14 (last year) -> 13.5 (this year) = 0.5 hour decrease.\nOption A: None.\n\nThe answer is 0.5 hours. Since A is \"None\", A is incorrect.\n\n<answer>None of the above (Correct answer is 0.5 hours)</answer>",
+      "parsed_as_previously_saved": [
+        0.5,
+        "0.5 hours)</answer>",
+        "that it was down by 0.5 hours.",
+        "indicates a decrease of 0.5 hours.",
+        "year compared to last year, we look at the specific data provided in the text:",
+        13.5,
+        "wrong, we identify it. given the constraints of the provided options:",
+        "incorrect. however, based on the prompt's structure asking to select the best option from the provided list (which only contains \"none\"), and the factual evidence that it was indeed down by 0.5 hours, the provided option a does not match the data.",
+        "year)} = 0.5\\text{ hours}$.",
+        "incorrect.",
+        "year) = 0.5 hour decrease.",
+        "asking to evaluate the option provided:",
+        "year:** 13.5 hours."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "None of the above (Correct answer is 0.5 hours)",
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        ".5"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 1900
+    },
+    {
+      "trial_id": "MXG-13-B-Q",
+      "source_index": 992,
+      "source_record_sha256": "0271279678d1933fc69fb8e010cda808b6486e1189427ba9085abba2ab3760af",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "2547c9cf11c1dd7034677f0c94eceef1dbe560c9537f53887fe383221c8cceb8",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\nFox Sports 1 was down by 0.5 hours (14 − 13.5), but the only provided option is A. None.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "a. none."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        ".5"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 110
+    },
+    {
+      "trial_id": "MXG-13-T-G",
+      "source_index": 992,
+      "source_record_sha256": "0271279678d1933fc69fb8e010cda808b6486e1189427ba9085abba2ab3760af",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "analysis_status": "capture_incomplete_or_empty",
+      "included_in_completed_format_counts": false,
+      "output_text_sha256": "81f1a5cb5eb3ac280e121c0270a485a0e22e5b3ef2c1e10c01e28c735a8a077b",
+      "score_as_previously_saved": null
+    },
+    {
+      "trial_id": "MXG-13-T-Q",
+      "source_index": 992,
+      "source_record_sha256": "0271279678d1933fc69fb8e010cda808b6486e1189427ba9085abba2ab3760af",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "8fd0c704c21543fc979bea047286c4cad9f1b436df1f6f24e1107d124527eba7",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\n0.5 hours",
+      "parsed_as_previously_saved": [
+        0.5,
+        "0.5 hours"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 11
+    },
+    {
+      "trial_id": "MXG-14-B-G",
+      "source_index": 755,
+      "source_record_sha256": "030a5f637c160d9c70c2d6b64c3e8d7a0c1b47d8eae861932ef7dc0f6c7f924e",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "e71588d29195a4e4545846e311b63a503f73405187999abb70f5f4283102be5d",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "The question asks for the island in the North Sea where both St Aidan and St Cuthbert lived. \n\nHistorically, both St Aidan and St Cuthbert were associated with the monastery on the **Isle of Lindisfarne** (often referred to as Holy Island) off the coast of Northumbria.\n\nLooking at the provided options:\nA. None\n\nSince the correct answer (Lindisfarne) is not listed among the options, the only available choice is \"None\".\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "\"none\"."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "Lindisfarne",
+        "LINDISFARNE"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 441
+    },
+    {
+      "trial_id": "MXG-14-B-Q",
+      "source_index": 755,
+      "source_record_sha256": "030a5f637c160d9c70c2d6b64c3e8d7a0c1b47d8eae861932ef7dc0f6c7f924e",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-14-T-G",
+      "source_index": 755,
+      "source_record_sha256": "030a5f637c160d9c70c2d6b64c3e8d7a0c1b47d8eae861932ef7dc0f6c7f924e",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "a2a40f0b1a270a3ded631c63b1494148be79209c0a8f7167a75351d539c8a63d",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "Lindisfarne",
+      "parsed_as_previously_saved": [
+        "lindisfarne"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 11
+    },
+    {
+      "trial_id": "MXG-14-T-Q",
+      "source_index": 755,
+      "source_record_sha256": "030a5f637c160d9c70c2d6b64c3e8d7a0c1b47d8eae861932ef7dc0f6c7f924e",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1c5b34d6bcc2cd190a57545378f6116960e6bd41eb6d6837bef97b256996aa35",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nLindisfarne (Holy Island)",
+      "parsed_as_previously_saved": [
+        "lindisfarne (holy island)"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 27
+    },
+    {
+      "trial_id": "MXG-15-B-G",
+      "source_index": 935,
+      "source_record_sha256": "035b51c81daa47a67fe25017a4f734420d08a9130312e1eb940d53c1ec3d27a6",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "7e68dd90a1ee46e32b8299e6e1f56e3d43f23564c2db7ca5bba8a7540cca37de",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "The question asks which occupation puts a person at risk for black lung disease (coal workers' pneumoconiosis). Black lung is caused by the long-term inhalation of coal dust, which occurs primarily in coal mining.\n\nLooking at the provided options:\nA. None\n\nSince the only provided option is \"None,\" and the correct answer (Coal Mining) is not listed among the choices, the only available selection is A.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "a.",
+        "caused by the long-term inhalation of coal dust, which occurs primarily in coal mining."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "Coal Mining",
+        "Coal mining"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 423
+    },
+    {
+      "trial_id": "MXG-15-B-Q",
+      "source_index": 935,
+      "source_record_sha256": "035b51c81daa47a67fe25017a4f734420d08a9130312e1eb940d53c1ec3d27a6",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-15-T-G",
+      "source_index": 935,
+      "source_record_sha256": "035b51c81daa47a67fe25017a4f734420d08a9130312e1eb940d53c1ec3d27a6",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "51c5b77cd9f16e27fc0a2f2b2b039398676821d0d94ce2b0ef14238d1dcd11c8",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "Coal mining.",
+      "parsed_as_previously_saved": [
+        "coal mining"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 12
+    },
+    {
+      "trial_id": "MXG-15-T-Q",
+      "source_index": 935,
+      "source_record_sha256": "035b51c81daa47a67fe25017a4f734420d08a9130312e1eb940d53c1ec3d27a6",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "af670b936e43d2e93344ce5d77c5376447eecbd747b69a36d6bfdeb83efb9f0c",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nCoal miner",
+      "parsed_as_previously_saved": [
+        "coal miner"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 12
+    },
+    {
+      "trial_id": "MXG-16-B-G",
+      "source_index": 896,
+      "source_record_sha256": "03959ef8487345b99fe441152682b97586deb3fea4461e5dda22c0619598d5b1",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "incomplete",
+      "analysis_status": "capture_incomplete_or_empty",
+      "included_in_completed_format_counts": false,
+      "output_text_sha256": "3e918ca0ce5634ba49ee94d6a5cc9b2fe7a1fe456da60eec9bb217d4824d7392",
+      "score_as_previously_saved": null
+    },
+    {
+      "trial_id": "MXG-16-B-Q",
+      "source_index": 896,
+      "source_record_sha256": "03959ef8487345b99fe441152682b97586deb3fea4461e5dda22c0619598d5b1",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-16-T-G",
+      "source_index": 896,
+      "source_record_sha256": "03959ef8487345b99fe441152682b97586deb3fea4461e5dda22c0619598d5b1",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "3ce4f945a91738999656e3400d7b6c98fcec9d94a565c91b02dfb70e47e4b943",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "They were Alice and Jerry in the UK.",
+      "parsed_as_previously_saved": [
+        "they were alice and jerry in the uk"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 36
+    },
+    {
+      "trial_id": "MXG-16-T-Q",
+      "source_index": 896,
+      "source_record_sha256": "03959ef8487345b99fe441152682b97586deb3fea4461e5dda22c0619598d5b1",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "analysis_status": "capture_incomplete_or_empty",
+      "included_in_completed_format_counts": false,
+      "output_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "score_as_previously_saved": null
+    },
+    {
+      "trial_id": "MXG-17-B-G",
+      "source_index": 1749,
+      "source_record_sha256": "03b59b79bf5dd3c3a0230bf4ac8261090dbe1933e0a0bc0a64240ac3334b9fc0",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "fdd45aa52f3eeedcaebb8c82c609548a2701b5bd41ccd6c89f3ba3a8716ee185",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "The question asks for the name of the alternative medicine that uses essential oils. The provided options are:\nA. None\n\nBased on general knowledge, the practice of using essential oils for healing is called **aromatherapy**. However, looking at the provided options, \"Aromatherapy\" is not listed; the only option given is \"None\". Since the correct answer is not present among the choices, the best option from the provided list is A.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "a."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "Aromatherapy"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 453
+    },
+    {
+      "trial_id": "MXG-17-B-Q",
+      "source_index": 1749,
+      "source_record_sha256": "03b59b79bf5dd3c3a0230bf4ac8261090dbe1933e0a0bc0a64240ac3334b9fc0",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-17-T-G",
+      "source_index": 1749,
+      "source_record_sha256": "03b59b79bf5dd3c3a0230bf4ac8261090dbe1933e0a0bc0a64240ac3334b9fc0",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "incomplete",
+      "analysis_status": "capture_incomplete_or_empty",
+      "included_in_completed_format_counts": false,
+      "output_text_sha256": "81f1a5cb5eb3ac280e121c0270a485a0e22e5b3ef2c1e10c01e28c735a8a077b",
+      "score_as_previously_saved": null
+    },
+    {
+      "trial_id": "MXG-17-T-Q",
+      "source_index": 1749,
+      "source_record_sha256": "03b59b79bf5dd3c3a0230bf4ac8261090dbe1933e0a0bc0a64240ac3334b9fc0",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "04d2af6e36b1dba36fcbbf6e0bf7b3a6b2d4b84c9b4dd7206b94e863544ed866",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nAromatherapy",
+      "parsed_as_previously_saved": [
+        "aromatherapy"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 14
+    },
+    {
+      "trial_id": "MXG-18-B-G",
+      "source_index": 740,
+      "source_record_sha256": "03c9c6df40143fe06930dc5115e1930e9b356ff7dcaf8f76f12efcd115b6df75",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "20312ae874cb041b45389c329af554d47bbab015e215f04bc5d8b4085697f237",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "nt is (0, 0) and the initial facing direction is \"forward\" (positive y-axis).\n\n1.  **Starting Point:** (0, 0). Facing: Forward (+y).\n2.  **Take 1 step right:** Moving right relative to facing forward means moving in the +x direction.\n    *   New position: (1, 0).\n3.  **Take 2 steps forward:** Moving forward means moving in the +y direction.\n    *   New position: (1, 2).\n4.  **Take 2 steps right:** Moving right means moving in the +x direction.\n    *   New position: (1 + 2, 2) = (3, 2).\n5.  **Take 4 steps right:** Moving right means moving in the +x direction.\n    *   New position: (3 + 4, 2) = (7, 2).\n\nThe final position is (7, 2), which is not the starting point (0, 0).\n\n<answer>No</answer>",
+      "parsed_as_previously_saved": [
+        "\"forward\" (positive y-axis).",
+        0.0,
+        "not the starting point (0, 0)."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "No",
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 828
+    },
+    {
+      "trial_id": "MXG-18-B-Q",
+      "source_index": 740,
+      "source_record_sha256": "03c9c6df40143fe06930dc5115e1930e9b356ff7dcaf8f76f12efcd115b6df75",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "8f07f32b8c41ed3df4b9c80bf7b11de802ab0e7ac32a20cc8c73e2b6f1c23afc",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\n<answer>No</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>no</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "No",
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 21
+    },
+    {
+      "trial_id": "MXG-18-T-G",
+      "source_index": 740,
+      "source_record_sha256": "03c9c6df40143fe06930dc5115e1930e9b356ff7dcaf8f76f12efcd115b6df75",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "7f45a83ca5829fff11f3a57b7c38bd931f5d329c7b76c05df783e2a91895a6c1",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "positive Y-axis).\n\n1.  **Starting Point:** (0, 0). Facing: Forward (+Y).\n2.  **Take 1 step right:** Moving right relative to facing forward means moving in the +X direction.\n    *   New Position: (1, 0).\n3.  **Take 2 steps forward:** Moving forward means moving in the +Y direction.\n    *   New Position: (1, 2).\n4.  **Take 2 steps right:** Moving right means moving in the +X direction.\n    *   New Position: (1 + 2, 2) = (3, 2).\n5.  **Take 4 steps right:** Moving right means moving in the +X direction.\n    *   New Position: (3 + 4, 2) = (7, 2).\n\n**Final Position:** (7, 2).\nSince the final position (7, 2) is not the starting point (0, 0), you do not return to the starting point.\n\n**Answer:** No",
+      "parsed_as_previously_saved": [
+        0.0,
+        "position:** (7, 2).",
+        2.0,
+        "not the starting point (0, 0), you do not return to the starting point."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 839
+    },
+    {
+      "trial_id": "MXG-18-T-Q",
+      "source_index": 740,
+      "source_record_sha256": "03c9c6df40143fe06930dc5115e1930e9b356ff7dcaf8f76f12efcd115b6df75",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1018fe901cd5affe14c31d175607adcc1bd1d755550164f664194300ada73e74",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nNo.\n\nStep by step:\n- Start at (0, 0), facing forward.\n- Take 1 step right → (1, 0)\n- Take 2 steps forward → (1, 2)\n- Take 2 steps right → (3, 2)\n- Take 4 steps right → (7, 2)\n\nYou end at (7, 2), not the starting point.",
+      "parsed_as_previously_saved": [
+        0.0,
+        1.0,
+        2.0,
+        4.0,
+        "no.\n\nstep by step:\n- start at (0, 0), facing forward.\n- take 1 step right → (1, 0)\n- take 2 steps forward → (1, 2)\n- take 2 steps right → (3, 2)\n- take 4 steps right → (7, 2)\n\nyou end at (7, 2), not the starting point"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 220
+    },
+    {
+      "trial_id": "MXG-19-B-G",
+      "source_index": 836,
+      "source_record_sha256": "03caed8b6306dee460b33a1469f99d65d78b2b330bad7a68bfae8498b57eb150",
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "62f17f2915bbcc3c3d352768788f170b5345eafeae920e9429476b7eb5724bdf",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "The question asks what is traditionally written in a ledger. In accounting, a ledger is a book or digital record used to track financial transactions, specifically recording the increases and decreases in specific accounts (such as assets, liabilities, equity, revenues, and expenses) to determine the balance of those accounts.\n\nLooking at the provided options:\nA. None\n\nSince the only available option is \"None,\" and there are no other choices provided to describe financial transactions or account balances, the only selectable option is A.\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "a book or digital record used to track financial transactions, specifically recording the increases and decreases in specific accounts (such as assets, liabilities, equity, revenues, and expenses) to determine the balance of those accounts.",
+        "a."
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": [
+        "Account",
+        "Accounts"
+      ],
+      "prefix_contains_literal_alias": true,
+      "character_count": 563
+    },
+    {
+      "trial_id": "MXG-19-B-Q",
+      "source_index": 836,
+      "source_record_sha256": "03caed8b6306dee460b33a1469f99d65d78b2b330bad7a68bfae8498b57eb150",
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "score_as_previously_saved": 0.0,
+      "output_tail_700": "\n\n<answer>A</answer>",
+      "parsed_as_previously_saved": [
+        "<answer>a</answer>"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": "A",
+      "strict_terminal_A_tag": true,
+      "output_only_terminal_tag": true,
+      "output_only_A_tag": true,
+      "literal_aliases_in_prefix_before_terminal_tag": [],
+      "prefix_contains_literal_alias": false,
+      "character_count": 20
+    },
+    {
+      "trial_id": "MXG-19-T-G",
+      "source_index": 836,
+      "source_record_sha256": "03caed8b6306dee460b33a1469f99d65d78b2b330bad7a68bfae8498b57eb150",
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "a698be6c6a8ff2388cf354f4a80a8f47b20b1ecee78c208ec0ae0c38423c8bd1",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "A ledger traditionally records **financial transactions**, including debits, credits, account balances, and the chronological history of a business's monetary movements.",
+      "parsed_as_previously_saved": [
+        "a ledger traditionally records **financial transactions**, including debits, credits, account balances, and the chronological history of a business's monetary movements"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 169
+    },
+    {
+      "trial_id": "MXG-19-T-Q",
+      "source_index": 836,
+      "source_record_sha256": "03caed8b6306dee460b33a1469f99d65d78b2b330bad7a68bfae8498b57eb150",
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "response_status": "completed",
+      "analysis_status": "completed_scored",
+      "included_in_completed_format_counts": true,
+      "output_text_sha256": "40695d5446d6061aa8623d256cbbb23777f6f1448e87a364e83394f159e3b456",
+      "score_as_previously_saved": 1.0,
+      "output_tail_700": "\n\nAccounts",
+      "parsed_as_previously_saved": [
+        "accounts"
+      ],
+      "scorer_source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "terminal_answer_tag_text": null,
+      "strict_terminal_A_tag": false,
+      "output_only_terminal_tag": false,
+      "output_only_A_tag": false,
+      "literal_aliases_in_prefix_before_terminal_tag": null,
+      "prefix_contains_literal_alias": null,
+      "character_count": 10
+    }
+  ]
+}

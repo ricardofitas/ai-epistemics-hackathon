@@ -1,0 +1,67 @@
+{
+  "status": "completed",
+  "panels": {
+    "free_form": {
+      "fixed_source_rows": 100,
+      "public_rows_in_file": 2000,
+      "uniquely_matched_texts": 17,
+      "native_reference_valid": 0,
+      "native_reference_invalid": 17,
+      "native_correct": 0,
+      "native_valid_only_accuracy": null,
+      "typed_correct": 13,
+      "typed_accuracy_among_matched": 0.7647058823529411,
+      "typed_all_source_bounds": [
+        0.13,
+        0.96
+      ],
+      "native_all_source_bounds": [
+        0.0,
+        1.0
+      ],
+      "paired_gain_bounds": [
+        -0.87,
+        0.96
+      ],
+      "paired_scoring_disagreements": 0,
+      "typed_random_fallbacks": 0,
+      "native_prediction_parse_failures": 17
+    },
+    "multiple_choice": {
+      "fixed_source_rows": 100,
+      "public_rows_in_file": 2000,
+      "uniquely_matched_texts": 32,
+      "native_reference_valid": 0,
+      "native_reference_invalid": 32,
+      "native_correct": 0,
+      "native_valid_only_accuracy": null,
+      "typed_correct": 20,
+      "typed_accuracy_among_matched": 0.625,
+      "typed_all_source_bounds": [
+        0.2,
+        0.88
+      ],
+      "native_all_source_bounds": [
+        0.0,
+        1.0
+      ],
+      "paired_gain_bounds": [
+        -0.8,
+        0.88
+      ],
+      "paired_scoring_disagreements": 0,
+      "typed_random_fallbacks": 5,
+      "native_prediction_parse_failures": 12
+    }
+  },
+  "captured_real_outputs": 49,
+  "synthetic_oracle_fixtures": 200,
+  "fixture_correct": 198,
+  "contract_prompts": 200,
+  "ordinary_unmodified_official_module_imports": true,
+  "ast_projection": false,
+  "new_provider_calls": 0,
+  "models_instantiated": 0,
+  "errors": [],
+  "scope": "Fixed-public-output replay under native choice contract vs explicitly typed official rule mode, not default model-judge score or original faulty-prompt inference."
+}

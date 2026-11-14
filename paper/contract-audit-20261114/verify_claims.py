@@ -104,9 +104,42 @@ assert read('external_update.json')['independently_affected_run_verified'] is Fa
 assert len(read('fork_inventory.json')['forks']) == 29
 copies = read('external_update.json')['fork_followup']['inspected']
 assert len(copies) == 3 and sum(item['matching_current_native_tool'] for item in copies) == 2
+score = read('scoring_replay_summary.json')
+assert score['source_rows']==200 and score['condition_records']==2400 and score['errors']==[]
+raw=[r for r in score['panels'] if r['condition']=='native_list_reference']
+assert len(raw)==8 and all(r['valid_samples']==0 and r['invalid_references']==100 for r in raw)
+assert read('scoring_replay_verification.json')['status']=='PASS'
+assert read('scoring_adapter_verification.json')['status']=='PASS'
+public=read('public_score_summary.json');pv=read('public_score_verification.json')
+assert public['captured_real_outputs']==49 and pv['reference_exclusions_native']==49
+assert pv['typed_correct']=={'free_form':13,'multiple_choice':20}
+assert read('public_exact_alias_summary.json')['real_score_changes']==0
+assert read('public_exact_alias_summary.json')['synthetic_oracle_repairs']==2
+den=read('denominator_review.json')
+assert den['panels']['free_form']['scored_samples']==den['panels']['multiple_choice']['scored_samples']==0
+
+for name,n,correct in [('native_route_free_form.json',17,13),('native_route_multiple_choice.json',32,20)]:
+ r=read(name);assert r['status']=='PASS' and r['source_rows']==r['scored_rows']==n
+ assert r['shim_events']==[] and r['generation_calls']==1 and r['new_model_calls']==0
+ assert r['native_primary_metric_stage_executed'] is False
+ assert round(r['typed_rule_mean']*n)==correct
+controls=read('native_route_controls.json');assert controls['status']=='PASS' and len(controls['controls'])==10
+assert all(c['status']=='INCOMPLETE' and c['typed_rule_mean'] is None and c['local_generation_batches']==0 for c in controls['controls'])
+
+assert read('native_route_verification.json')['status']=='PASS_WITH_PROVENANCE_ERRATUM'
+generation=read('paired_generation_analysis.json')
+assert generation['planned_requests']==generation['recorded_artifacts']==80
+assert generation['completed_scored']==69
+assert generation['input_tokens']==8062 and generation['output_tokens']==66304
+ge={x['model']:x for x in generation['effects']}
+assert ge['gemma-4-31b-it']['gain_bounds']==[-.05,.25]
+assert ge['qwen3.8-27b']['gain_bounds']==[.5,.75]
+assert generation['new_judge_calls']==0
+assert read('paired_generation_verification.json')['status']=='PASS'
+
 pages = json.loads((P / 'manuscript.json').read_text())
 claims = json.loads((P / 'claims.json').read_text())
-assert len(pages) == 10 and len(claims) == 12
+assert len(pages) == 13 and len(claims) == 15
 assert 150 <= len(pages[0]['blocks'][2]['text'].split()) <= 250
 assert [row[0] for row in pages[-1]['blocks'][1]['rows']] == [claim['id'] for claim in claims]
 for claim in claims:
@@ -118,9 +151,9 @@ for row, claim in zip(ledger, claims):
     assert row == dict(claim_id=claim['id'], section=claim['section'],
                        numerical_or_status_claim=claim['claim'],
                        evidence_files=claim['evidence'], qualification=claim['qualification'])
-result = dict(status='PASS', claims_checked=12, working_draft_version='1.3',
+result = dict(status='PASS', claims_checked=15, working_draft_version='1.4',
               integrated_mechanisms=['native source gate', 'shared input causes', 'MMMLU prediction', 'MixEval task kind'],
-              new_model_requests=0, new_experiments=0,
+              verifier_model_requests=0, new_experiments_during_synthesis=0,
               scope='Synthesis consistency check against source snapshots')
 (P/'CLAIM_VERIFICATION.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result))

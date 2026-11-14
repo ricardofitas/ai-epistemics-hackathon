@@ -1,0 +1,27 @@
+{
+  "status": "READY_V2_RECEIPT_REWRITE_REGRESSION_PASSED_NOT_LAUNCHED",
+  "protocol": "PROTOCOL.json",
+  "manifest": "manifest.jsonl",
+  "cases": "selected20.json",
+  "runner": "execute_paired.py",
+  "workflow_source": "mixeval-real-generation-20261114.yml",
+  "workflow_destination": ".github/workflows/mixeval-real-generation-20261114.yml",
+  "experiment_destination": "experiments/mixeval-real-generation-20261114",
+  "branch": "ricardo/mixeval-real-generation-20261114",
+  "new_provider_calls": 0,
+  "parent_next_action": "Commit frozen protocol,manifest,selected20,official prompt source,transport,runner,workflow first. Then in separate commit fill LAUNCH.template.json protocol_commit and save as LAUNCH.json. This launches Actions once. Read all captures, retain unattempted planned rows on interruption.",
+  "do_not_copy_as_executable": [
+    "LAUNCH.template.json"
+  ],
+  "source_errors": [],
+  "protocol_sha256": "192cfc9ddae4b339816221be1cb84eba44a1ba773dc9b87aec50277cfc8bd3a8",
+  "regression": {
+    "two_consecutive_preflights": "PASS",
+    "mutable_progress_receipt_two_writes": "PASS",
+    "trial_artifact_exclusive_create": "PASS"
+  },
+  "exclude_from_protocol_commit": [
+    "PREFLIGHT_RECEIPT.json",
+    "__pycache__"
+  ]
+}

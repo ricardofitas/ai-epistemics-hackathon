@@ -1,0 +1,87 @@
+{
+  "status": "PASS_FOR_FROZEN_SINGLE_LAUNCH_WITH_RECORDED_LIMITS",
+  "reviewer": "separate delegated scoring_review agent",
+  "reviewed_at": "2026-11-14T14:48:03.044341+00:00",
+  "reviewed_protocol_sha256": "192cfc9ddae4b339816221be1cb84eba44a1ba773dc9b87aec50277cfc8bd3a8",
+  "reviewed_runner_sha256": "e6be58f3368d279ce111817b30082e95ff52a05466d1f94416408ab58fa4fe15",
+  "model_calls_made": 0,
+  "runner_executed": false,
+  "source_and_manifest_checks": {
+    "source_cases": 20,
+    "selected_source_indices": [
+      492,
+      548,
+      1562,
+      1169,
+      47,
+      1528,
+      662,
+      1217,
+      1425,
+      1705,
+      1100,
+      323,
+      268,
+      992,
+      755,
+      935,
+      896,
+      1749,
+      740,
+      836
+    ],
+    "first20_original_stable_order": true,
+    "binding_only_prompt_byteexact_prior_capture": true,
+    "typed_prompt_byteexact_official_constructor": true,
+    "frozen_file_hashes_match": true,
+    "manifest_source_major_fixed_order": true,
+    "manifest_rows": 80,
+    "unique_trial_ids": 80,
+    "prompt_and_request_hashes_match": true,
+    "all_bounded_payloads": true,
+    "max_output_tokens_total": 327680
+  },
+  "critical_issues": [],
+  "checked_design": {
+    "same_source_content": "Bothconditions carryidenticalsourcequestion; actualcontext text retained inboth forDROP. Source contextstringNone isdisplayed literally bybinding-only andsuppressed byofficialconstructor. This isformat/taskinstructionintervention, notsingle-token removal.",
+    "common_scoring": "Protocol fixes samepinnedoptionalofficialRULE parser/scorer forbothconditions; nojudgeresourcecalls, no defaultmodel-judge orofficialleaderboardclaim.",
+    "selection": "Alreadyobservedfirst20freeformstableSHAcases, no outcome-dependentreplacement.",
+    "pairing_order_limitation": "Fixedcondition/modelorder isnotcounterbalanced. Pairedcases constrainquestiondifferences, buttemporal/order/providerdrift remainsa limitation.",
+    "catalogue": "ExacttwoIDs checked beforemodelcalls. Missing/unreadablecatalogue ormodelunavailability stopswithout substitution.",
+    "transport": "Existing exact-hostHTTPS/SSE transport, noretries, noredirectauthorization forwarding, pertrialimmutable fsyncedartifacts/journals, finaloutput/status/incomplete flags retained.",
+    "secret_handling": "Secret injectedviaGitHubenvironment, notmanifest; logs limitedtotrialIDs/status; sanitizedSSEandresponse objects; finalexactcredential scan gatesupload. Noactualsecretreadorproviderrequestduringreview.",
+    "call_budget": "Cap80calls,4096outputtokens/request,5secondminimumstartinterval,concurrency1,run_attempt1guard. Actiontimeout canleaveplannedrowsunattempted; preserveasunknown, neverfillbyretry.",
+    "one_execution_scope": "CurrentguardpreventsActionsrerunattempts, not anadditionalfreshpush toLAUNCH. Parentmustmakeexactlyoneauthorizedlaunchpush; protocolcommitfieldshouldbelinked toimmutablepriorprotocolcommit inreceipt."
+  },
+  "next_action": "Parentcommitexactreviewedprotocol/manifest/source/runner/workflow beforeanyoutcome; thenoneLAUNCHpush linking priorprotocolcommit anddigests. Preserveeveryattemptandunknown. Reviewerhasnotexecutedrunnerormodelcalls.",
+  "previous_review": {
+    "status": "BLOCKED_PENDING_RUNNER_RECEIPT_FIX",
+    "runner_sha256": "e6be58f3368d279ce111817b30082e95ff52a05466d1f94416408ab58fa4fe15",
+    "protocol_sha256": "192cfc9ddae4b339816221be1cb84eba44a1ba773dc9b87aec50277cfc8bd3a8",
+    "critical_issues": [
+      {
+        "id": "P1",
+        "location": "execute_paired.write/preflight/run +workflow preflight step",
+        "issue": "write uses transport.atomic_json, whose os.link publication is exclusive. Workflow preflight publishesPREFLIGHT_RECEIPT, then run invokespreflight and publishes samepath again. It raisesFileExistsError before any modelcall. Including existing receipt inGit causesfirst preflightstep tofail already.",
+        "required_fix": "Use a distinct atomic-replace helper for mutable status/preflight receipts or uniqueperinvocation filenames; keep immutable pertrial artifacts/journals exclusive. Exclude generatedreceipts from initialGitinputs or makepreflight idempotent."
+      },
+      {
+        "id": "P2",
+        "location": "execute_paired.run EXECUTION_RECEIPT inside loop",
+        "issue": "Sameexclusive write republishesEXECUTION_RECEIPT aftereachresponse. Ifpreflight fixed alone, this failsaftersecondattempt and interruptscohort.",
+        "required_fix": "Atomicallyreplace mutableaggregate receipt with tempwrite/fsync/os.replace, or save uniqueperattempt receipts."
+      }
+    ]
+  },
+  "resolved_critical_issues": [
+    {
+      "id": "P1",
+      "resolution": "Mutable receipt helper now uses fsynced temporary write plus os.replace; immutable trial artifact publication remains exclusive. Owning agent reports two no-model preflight executions successful."
+    },
+    {
+      "id": "P2",
+      "resolution": "Mutable receipt helper now uses fsynced temporary write plus os.replace; immutable trial artifact publication remains exclusive. Owning agent reports two no-model preflight executions successful."
+    }
+  ],
+  "reviewed_workflow_sha256": "2f6a9a3853b53f92a83f58e883fb9d6141026fe0c4757fb74af24ed1bac41e97"
+}

@@ -1,0 +1,298 @@
+{
+  "status": "PASS",
+  "planned_trials": 80,
+  "source_questions": 20,
+  "distinct_requested_models": 2,
+  "attempt_started_events": 80,
+  "attempt_recorded_events": 80,
+  "per_trial_artifacts": 80,
+  "completed_scored": 69,
+  "minimum_observed_UTC_start_interval_seconds": 5.000076,
+  "usage_records": 80,
+  "input_tokens": 8062,
+  "output_tokens": 66304,
+  "cost_units": "0.057821010000000003215",
+  "cost_currency": null,
+  "analysis_summary_comparison": "PASS",
+  "effects": [
+    {
+      "model": "gemma-4-31b-it",
+      "pairs": 20,
+      "complete_pairs": 14,
+      "typed_wins": 3,
+      "binding_wins": 0,
+      "ties": 11,
+      "gain_bounds": [
+        -0.05,
+        0.25
+      ],
+      "pairs_detail": [
+        {
+          "source_index": 492,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 548,
+          "binding_only": null,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1562,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 1169,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 47,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1528,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 662,
+          "binding_only": 1.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 1217,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1425,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1705,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 1100,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 323,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 268,
+          "binding_only": 1.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 992,
+          "binding_only": 1.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 755,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 935,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 896,
+          "binding_only": null,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 1749,
+          "binding_only": 0.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 740,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 836,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        }
+      ]
+    },
+    {
+      "model": "qwen3.8-27b",
+      "pairs": 20,
+      "complete_pairs": 15,
+      "typed_wins": 10,
+      "binding_wins": 0,
+      "ties": 5,
+      "gain_bounds": [
+        0.5,
+        0.75
+      ],
+      "pairs_detail": [
+        {
+          "source_index": 492,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 548,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1562,
+          "binding_only": 0.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 1169,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 47,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1528,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 662,
+          "binding_only": null,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1217,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1425,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1705,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 1100,
+          "binding_only": null,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 323,
+          "binding_only": 0.0,
+          "official_typed": 0.0
+        },
+        {
+          "source_index": 268,
+          "binding_only": 0.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 992,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 755,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 935,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 896,
+          "binding_only": 0.0,
+          "official_typed": null
+        },
+        {
+          "source_index": 1749,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 740,
+          "binding_only": 1.0,
+          "official_typed": 1.0
+        },
+        {
+          "source_index": 836,
+          "binding_only": 0.0,
+          "official_typed": 1.0
+        }
+      ]
+    }
+  ],
+  "returned_model_pairs": [
+    {
+      "requested": "gemma-4-31b-it",
+      "returned": "gemma-4-31b-it",
+      "count": 40
+    },
+    {
+      "requested": "qwen3.8-27b",
+      "returned": "qwen3.8-27b",
+      "count": 40
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "new_provider_or_judge_calls_by_verifier": 0,
+  "scope": "Independent source/manifest/artifact-index/call-ledger/usage/official-rule/pair-bound reconciliation. Empty/incomplete/missing/local-error captures remain unknown. Native model execution and provider authenticity are not independently reproduced.",
+  "model_condition_score_totals": [
+    {
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "planned": 20,
+      "completed": 18,
+      "correct": 11,
+      "unknown": 2
+    },
+    {
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "planned": 20,
+      "completed": 18,
+      "correct": 2,
+      "unknown": 2
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "planned": 20,
+      "completed": 16,
+      "correct": 12,
+      "unknown": 4
+    },
+    {
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "planned": 20,
+      "completed": 17,
+      "correct": 14,
+      "unknown": 3
+    }
+  ],
+  "terminal_review": "REAL_TERMINAL_REVIEW.json:80journalhashes andterminalobject/text/usage reconciled; all11unknowns are4096-token statusincomplete despiteeventtyperesponse.completed."
+}

@@ -1,0 +1,14 @@
+{
+  "stage": "Fixed paired generation analysis before launch",
+  "primary_mode": "Pinned unmodified official optional MixEval RULE functions, via already independently verified typed adapter; identical scorer for both generation conditions",
+  "scorer_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+  "scorer_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+  "adapter_sha256": "c0e2bc7183c5716de0b55aefa7b0507dfddb7cbe4ebaffc3f84fd8c041033000",
+  "units": "20 fixed source questions per model, two paired prompt conditions; same questions repeated across two models are not40independent questions",
+  "primary_observation": "Only captured completed_nonempty=true, HTTP200, response_status completed, no stream/transport/API error, matching exact request and output hashes. Every other planned response remains unknown, including unattempted/empty/incomplete. Do not score partial text as completed in the primary analysis.",
+  "paired_effect": "For each model, official_typed minus binding_only. Each unknown score lies in[0,1]. Lower and upper gains are the sums of per-question typed_min-binding_max and typed_max-binding_min divided by20. Complete-pair counts, discordant outcomes and source indices reported separately.",
+  "resource_audit": "Reconcile all80plannedIDs, exclusive artifact/trial/request hashes and attempt_started ledger. Sum available input/output tokens and Decimal usage.cost units without assigning currency. Preserve missing usage and any provider cap violations.",
+  "counterexamples": "Retain all raw texts, official alias parsing failures and request-order/model interactions. No exact-alias override, no new judge call, no outcome-dependent source/model replacement.",
+  "limits": "Prompt intervention also changes official instruction/format wording. Fixed condition/model order, small previously observed20question panel,16TriviaQA/3DROP/1BBH. No population benchmark score, global model capability ranking or default model-judge claim.",
+  "new_judge_calls": 0
+}
