@@ -1,0 +1,323 @@
+{
+  "status": "PASS",
+  "adapter_sha256": "c0e2bc7183c5716de0b55aefa7b0507dfddb7cbe4ebaffc3f84fd8c041033000",
+  "reviewer": "separate delegated scoring_review agent",
+  "official_capture_comparisons": 800,
+  "panel_coverage": {
+    "free_form:source_first_reference": 100,
+    "free_form:explicit_wrong": 100,
+    "free_form:empty": 100,
+    "free_form:always_A": 100,
+    "multiple_choice:source_first_reference": 100,
+    "multiple_choice:explicit_wrong": 100,
+    "multiple_choice:empty": 100,
+    "multiple_choice:always_A": 100
+  },
+  "same_random_seed_and_order": true,
+  "random_fallback_draws_matched": 100,
+  "preserved_official_first_alias_miss_indices": [
+    1425,
+    1248
+  ],
+  "source_records_unchanged": true,
+  "malformed_source_or_response_cases": 19,
+  "malformed_cases_passed": 19,
+  "malformed_case_details": [
+    {
+      "case": "source_none",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": null,
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "source_not_mapping"
+      }
+    },
+    {
+      "case": "unknown_problem_type",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "unsupported",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "unsupported_problem_type"
+      }
+    },
+    {
+      "case": "problem_type_list",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": null,
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "unsupported_problem_type"
+      }
+    },
+    {
+      "case": "problem_type_dict",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": null,
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "unsupported_problem_type"
+      }
+    },
+    {
+      "case": "missing_prompt",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "free-form",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "invalid_source_prompt"
+      }
+    },
+    {
+      "case": "empty_benchmark",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "free-form",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "invalid_source_benchmark_name"
+      }
+    },
+    {
+      "case": "invalid_context",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "free-form",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "invalid_source_context"
+      }
+    },
+    {
+      "case": "missing_response",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "free-form",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "response_missing_or_not_text"
+      }
+    },
+    {
+      "case": "empty_targets",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "free-form",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "missing_or_invalid_target_list"
+      }
+    },
+    {
+      "case": "nontext_freeform_alias",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "free-form",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "invalid_freeform_alias_list"
+      }
+    },
+    {
+      "case": "nonlist_freeform_options",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "free-form",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "invalid_optional_freeform_options"
+      }
+    },
+    {
+      "case": "unsupported_QuAc_prompt",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "free-form",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "official_freeform_prompt_not_implemented_for_QuAc"
+      }
+    },
+    {
+      "case": "choice_one_option",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "multiple-choice",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "invalid_choice_options"
+      }
+    },
+    {
+      "case": "choice_bool_target",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "multiple-choice",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "choice_target_requires_one_zero_based_integer"
+      }
+    },
+    {
+      "case": "choice_string_target",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "multiple-choice",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "choice_target_requires_one_zero_based_integer"
+      }
+    },
+    {
+      "case": "choice_index_outside",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "multiple-choice",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "choice_target_index_out_of_range"
+      }
+    },
+    {
+      "case": "choice_blank_text",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "multiple-choice",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "invalid_choice_option_text"
+      }
+    },
+    {
+      "case": "choice_alphabet_overflow",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "multiple-choice",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "choice_alphabet_exceeds_A_to_Z"
+      }
+    },
+    {
+      "case": "choice_missing_rng",
+      "passed": true,
+      "result": {
+        "status": "INCOMPLETE",
+        "mode": "official_mixeval_rule",
+        "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+        "problem_type": "multiple-choice",
+        "score": null,
+        "parsed": null,
+        "random_fallback": false,
+        "random_draws": [],
+        "error": "choice_rng_not_provided"
+      }
+    }
+  ],
+  "frozen_files_unchanged": 22,
+  "provider_model_calls": 0,
+  "errors": [],
+  "scope": "Integration wrapper equivalence to pinned optional official-rule captures, including its imperfect alias parsing and random fallback. No default model-judge mode, model outputs or leaderboard score.",
+  "retained_adapter_review_finding": {
+    "type": "static_review_before_validation",
+    "issue": "Original unsupported-type set-membership test could raise TypeError for list/dict problem_type.",
+    "resolution": "Parent added isinstance(kind,str) guard before the single adapter validation execution.",
+    "validation": "Both list and dict problem_type now return INCOMPLETE without score; included among19malformed cases.",
+    "failed_native_or_model_runs": 0
+  }
+}

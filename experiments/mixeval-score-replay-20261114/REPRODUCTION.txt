@@ -1,0 +1,11 @@
+Private controlled-output source/scorer study. No model requests.
+Protocol commit fe6c1952e913391cd424825d8e703cc85d1375c7.
+Extract this package into its own directory. Run python run_score_replay.py and python verify_replay.py.
+Use requirements.txt versions recorded from the successful runtime.
+SELECTED.jsonl.gz is the exact previous selected source byte payload, pinned by protocol SHA256. It is not a newly independent panel. Original source dataset revision and prior exposure are recorded in PROTOCOL.json.
+Original source files and licenses/provenance are included. Official MixEval source declares MIT in setup.py but has no standalone LICENSE at the pinned tree; see official/LICENSE_PROVENANCE.json. This differs from HF dataset metadata. Nothing has been published externally.
+The optional official rule mode is distinct from the default model-judge mode. Rule-mode RNG, alias misses, empty-response fallback and source option/index semantics must be retained, not silently overridden.
+SCORING_CAPTURES.jsonl.gz contains2400case/condition records. captures/ retains native file inputs/outputs and stats. SUMMARY.json and COMPACT_RESULTS.json retain24panels and all denominators.
+The runner and original inputs were frozen before scoring. New adapter implementation and independent verification are subsequent integration work, not an unseen-data trial.
+Independent delegated review is not independent human review. AST dependency-isolated methods are not a complete installed-engine execution.
+Source response text/control inputs and all source rows remain private. Original public demo GIFs are included as binary assets for provenance; derived PNG/contact sheets are excluded.

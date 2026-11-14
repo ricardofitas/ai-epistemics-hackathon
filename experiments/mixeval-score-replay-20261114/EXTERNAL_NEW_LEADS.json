@@ -1,0 +1,144 @@
+{
+  "as_of": "2026-11-14",
+  "status": "NEW_PUBLIC_UPSTREAM_SCORE_AND_CONCLUSION_DEMO_FOUND; AFFECTED_INDEPENDENT_CONCLUSION_UNVERIFIED",
+  "scope": "Directed new primary leads: full upstream issue/PR collection, demo assets, one release, historical eval_outputs path and pinned project-site source. No repeated broad keyword searches.",
+  "prior_evidence": [
+    "research-causal-external-20261114/result/EXTERNAL_IMPACT_UPDATE.json",
+    "synthesis-v13-20261114/mixeval/EXTERNAL_FOLLOWUP.json"
+  ],
+  "new_leads": [
+    {
+      "kind": "Official upstream public model-score demo",
+      "url": "https://github.com/OpenDCAI/One-Eval/issues/29",
+      "comments": [
+        {
+          "url": "https://github.com/OpenDCAI/One-Eval/issues/29#issuecomment-4074386920",
+          "posted_at": "2026-03-17T11:48:13Z",
+          "asset_url": "https://github.com/user-attachments/assets/48e06595-1565-4020-9ca3-4b92ea420ba0",
+          "local_original": "external/demo_en.bin",
+          "mime": "image/gif",
+          "frames": 279,
+          "dimensions": [
+            800,
+            450
+          ]
+        },
+        {
+          "url": "https://github.com/OpenDCAI/One-Eval/issues/29#issuecomment-4074091141",
+          "posted_at": "2026-03-17T10:56:38Z",
+          "asset_url": "https://github.com/user-attachments/assets/129d9826-a48b-4ab5-8006-ad7d9595cc95",
+          "local_original": "external/demo_zh.bin",
+          "mime": "image/gif",
+          "frames": 210,
+          "dimensions": [
+            800,
+            450
+          ]
+        }
+      ],
+      "visual_observations": [
+        {
+          "asset": "demo_en",
+          "frame": 119,
+          "observation": "Target model alias visible; settings show temperature0, top_p1, top_k-1, max_tokens2048, tensor_parallel1, max_model_len32768, seed0. Executable model identity/path and source commit not established."
+        },
+        {
+          "asset": "demo_en",
+          "frame": 199,
+          "observation": "GSM8K shows SUCCESS, total_samples1319, score0.64. Displayed accuracy/math_verify round to0.6368; numerical_match rounds to0.4261."
+        },
+        {
+          "asset": "demo_en",
+          "frame": 238,
+          "observation": "AIME shows summary score0.2; numerical_match0.0333. These are visual rounded transcriptions, not raw per-question scores."
+        },
+        {
+          "asset": "demo_en",
+          "frame": 278,
+          "observation": "Final textual report characterizes AIME performance as mathematical-reasoning weakness and calls for numerical improvement. Final pipeline status COMPLETED."
+        },
+        {
+          "asset": "demo_zh",
+          "frame": 209,
+          "observation": "Chinese final report also contains per-benchmark conclusions, including a GSM8K summary. No exact numerical transcription used here."
+        }
+      ],
+      "finding": "This is more concrete than a component-execution log: primary public media displays scores and model conclusions.",
+      "qualification": "It remains a demonstration by upstream authors. We have not authenticated whether it is a live run, replay or edited demonstration. It is not an independent downstream affected result.",
+      "missing": [
+        "Executable revision matching the demo",
+        "Unambiguous evaluated model identity",
+        "Effective dataset mapping and request stream",
+        "Per-question outputs/references and replayable scoring",
+        "A demonstrated defect affecting the reported conclusion",
+        "An independent downstream claim, if that stronger claim is sought"
+      ],
+      "known_fault_overlap": "Displayed GSM8K/AIME are not the source contracts for which the prior natural mapping faults were demonstrated. Differences between diagnostic metrics alone do not establish wrong model scores.",
+      "disposition": "Retain as a genuine new public-score/conclusion lead, not confirmed external impact."
+    },
+    {
+      "kind": "Primary release metadata",
+      "url": "https://github.com/OpenDCAI/One-Eval/releases/tag/v0.1.0",
+      "release_id": 297935418,
+      "tag_commit": "1fab1425da186cfa4a1af9593803600098f401c0",
+      "published_at": "2026-03-17T13:05:16Z",
+      "assets_count": 0,
+      "body_empty": true,
+      "disposition": "No downloadable original run outputs. Same date as demo does not identify demo executable revision."
+    },
+    {
+      "kind": "Primary full issue/PR collection",
+      "url": "https://api.github.com/repos/OpenDCAI/One-Eval/issues?state=all&per_page=100",
+      "returned_items": 67,
+      "non_PR_issues": 9,
+      "completeness": "67 items returned under per_page100, numbers1-68 with a numbering gap. Bounded collection as retrieved.",
+      "disposition": "Non-PR issues inspected. Others principally install/API/discovery/UI failures. No non-demo original affected score trace identified."
+    },
+    {
+      "kind": "Tracked historical runtime path",
+      "url": "https://api.github.com/repos/OpenDCAI/One-Eval/commits?path=eval_outputs&per_page=100",
+      "results_count": 0,
+      "disposition": "No commit history returned at this exact path. Does not establish absence of outputs elsewhere or in private workspaces."
+    },
+    {
+      "kind": "Author acknowledged scoring changes",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/63",
+      "merge_commit": "9addc1ecd29a30d4e4187f4dfd55142958d641ea",
+      "head_commit": "8c0aa457eacda591667983e2f7573ed64c4dae9a",
+      "merged_at": "2026-07-01T11:47:40Z",
+      "native_tool_blob_in_PR": "7f75e97993020a0acda0a09e936ce1e66c02bbd0",
+      "finding": "PR body acknowledges extraction/scoring bug fixes and moving primary reporting from diagnostic DataFlow score to the declared primary metric. Native tool blob matches the later audited component.",
+      "qualification": "The PR body is not proof of any particular prior defect or external affected conclusion. It also makes release-date extrapolation to the later audited engine unsafe."
+    },
+    {
+      "source": "https://github.com/OpenDCAI/One-Eval/blob/8aba20ad17ee2c7d2391162ac03ffaebcbb17506/docs/index.html",
+      "blob": "a4529eefda412b4c8fc92be6c2d5dd0a82a0da37",
+      "finding": "Primary site content recovered through pinned source, previously homepage retrieval inaccessible. Abstract/repository/skill links and qualitative claims only; no embedded original run capture or independently affected conclusion."
+    }
+  ],
+  "source_retrieval_errors": [
+    {
+      "step": "Initial public GIF transfer script",
+      "error": "requests unavailable in initial invocation",
+      "recovery": "stdlib urllib downloaded both original GIFs successfully"
+    }
+  ],
+  "provider_model_requests": 0,
+  "outbound_communications": 0,
+  "independently_affected_conclusion_verified": false,
+  "public_upstream_score_and_conclusion_artifact_verified": true,
+  "next_target": "If external impact remains prioritized, reconstruct the exact demo backend/run artifact only from a new primary provenance link. Do not infer that differing metrics prove the report wrong and do not force GSM8K/AIME into previously demonstrated faulty contract families.",
+  "limits": "Exploratory primary-source follow-up, no preregistered sampling. Visual rounded transcriptions verified by the same executor, not independent human review. Public evidence is incomplete; no deployment-frequency or absence claim.",
+  "original_asset_hashes": [
+    {
+      "local_path": "external/demo_en.bin",
+      "bytes": 2363707,
+      "sha256": "a8facedccf21079ba609b027d9559f96a6db0aeb0198db5c523860d2edf0d5e0"
+    },
+    {
+      "local_path": "external/demo_zh.bin",
+      "bytes": 1804340,
+      "sha256": "31b08ee3621fcfa789377095365c0e0485880efc1940f5536454ffd853a4f9fc"
+    }
+  ]
+}

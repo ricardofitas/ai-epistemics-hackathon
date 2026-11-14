@@ -1,0 +1,203 @@
+{
+  "status": "STATIC_PRIMARY_SOURCE_SEMANTIC_REVIEW_COMPLETE",
+  "reviewer": "delegated mixeval_semantics agent",
+  "as_of": "2026-11-14",
+  "scope": "Independent static review of pinned official source and existing selected records; no new model calls, no scientific panel rerun and no claim of independently replicated results.",
+  "official_repository": "JinjieNi/MixEval",
+  "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+  "official_tree": "7c52b41929d461df7733573528bdfb08774b0c53",
+  "dataset_repository": "MixEval/MixEval",
+  "dataset_revision": "66a05ec3821a2b5089ed1e32a5d65ab6ecdbf906",
+  "sources": [
+    {
+      "path": "docs/evaluate_instructions.md",
+      "blob": "6b7ed1ee2c1d3ec784eab2c5948ddd8e3d4b0ee6",
+      "url": "https://github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/docs/evaluate_instructions.md",
+      "local_path": "official/docs/evaluate_instructions.md",
+      "bytes": 4145,
+      "sha256": "247df70d04c3bdf6c54459a4508dad4e47791560736b62398a8ae1c1d8ea1b6a"
+    },
+    {
+      "path": "mix_eval/compute_metrics.py",
+      "blob": "6c583219f6b74c69dbe1637ae4ccc12264742655",
+      "url": "https://github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/mix_eval/compute_metrics.py",
+      "local_path": "official/mix_eval/compute_metrics.py",
+      "bytes": 32537,
+      "sha256": "bd2768ce3216c14dd714a84f9c66dc921709b3a07833c07550048485538d0daf"
+    },
+    {
+      "path": "mix_eval/evaluate.py",
+      "blob": "a6c0914c178799c03a7e5757b3464a502820439d",
+      "url": "https://github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/mix_eval/evaluate.py",
+      "local_path": "official/mix_eval/evaluate.py",
+      "bytes": 9749,
+      "sha256": "01290d5781d13c62935ff1ec80c0e40bcae8f0301d213fac2e98ddf1ef47eb21"
+    },
+    {
+      "path": "mix_eval/prompts/evaluation_prompts.py",
+      "blob": "23b8300b1dbe733d93a75527f5b0e87b98654d62",
+      "url": "https://github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/mix_eval/prompts/evaluation_prompts.py",
+      "local_path": "official/mix_eval/prompts/evaluation_prompts.py",
+      "bytes": 8473,
+      "sha256": "7f7f5433576a05a5ee522923d7f53f77e8227ecac12dfdfd9b9163008153232b"
+    },
+    {
+      "path": "mix_eval/prompts/judge_prompts.py",
+      "blob": "9d899802c2b683388a1301ff7f61f473dd6b4766",
+      "url": "https://github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/mix_eval/prompts/judge_prompts.py",
+      "local_path": "official/mix_eval/prompts/judge_prompts.py",
+      "bytes": 6944,
+      "sha256": "11369cd8cd47e64a90ea3d5ba3a28d9e04d6b6f7bb95fd9476cc4896813a1c8e"
+    },
+    {
+      "path": "mix_eval/utils/common_utils.py",
+      "blob": "98f7ec93204e3d786f038ddfbb69afd42cc816ab",
+      "url": "https://github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/mix_eval/utils/common_utils.py",
+      "local_path": "official/mix_eval/utils/common_utils.py",
+      "bytes": 3795,
+      "sha256": "d213790c927610b7afa747a17444573e55127008fef5411056074f417260eed3"
+    },
+    {
+      "path": "mix_eval/utils/dataset.py",
+      "blob": "6d27bd56f0a1ca68d1081f89c5d77169c2cbb2a9",
+      "url": "https://github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/mix_eval/utils/dataset.py",
+      "local_path": "official/mix_eval/utils/dataset.py",
+      "bytes": 3160,
+      "sha256": "17f1aea1e238ffd2b126446ddb7d27c374d1b84e4d4dd092b5fc90bd8ea4df5c"
+    },
+    {
+      "path": "mix_eval/utils/judge_freeform_parser.py",
+      "blob": "289c6b9aa25496cab4352322a73e0d094194c057",
+      "url": "https://github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/mix_eval/utils/judge_freeform_parser.py",
+      "local_path": "official/mix_eval/utils/judge_freeform_parser.py",
+      "bytes": 11581,
+      "sha256": "ccedba0992dadcc45fe06b4515f7d65c40da846d6f0a90386e081be25a0424fc"
+    },
+    {
+      "path": "mix_eval/utils/judge_multichoice_parser.py",
+      "blob": "d58e36d8b5bded2c8b39ba685f06b68db5820ac8",
+      "url": "https://github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/mix_eval/utils/judge_multichoice_parser.py",
+      "local_path": "official/mix_eval/utils/judge_multichoice_parser.py",
+      "bytes": 11971,
+      "sha256": "cda22dc7f803907474be7a28da9a4fab6fb84d6f9b5515ea8fc74f81285f4642"
+    },
+    {
+      "path": "mix_eval/utils/metric_utils.py",
+      "blob": "f7f32ff5a7df39b93698d6cd4dab6e01d0f29cbf",
+      "url": "https://github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/mix_eval/utils/metric_utils.py",
+      "local_path": "official/mix_eval/utils/metric_utils.py",
+      "bytes": 14268,
+      "sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a"
+    }
+  ],
+  "guide": {
+    "path": "docs/how_to_use_your_own_eval_code.md",
+    "git_blob": "0d0bc70db579f3f1244b127167bc6238f81ac641",
+    "url": "https://github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/docs/how_to_use_your_own_eval_code.md",
+    "rules": [
+      "MixEval and MixEval-hard each consist of free-form plus multiple-choice files.",
+      "The overall reported metric includes both files; score combination weights split scores by sample counts.",
+      "Use the separate fixed prompt constructors; base models additionally receive the provided family-specific five-shot prefixes.",
+      "Retain all original row key-value pairs, including id, and add response.",
+      "Official parsing is strongly recommended, but custom parsing is explicitly permitted."
+    ]
+  },
+  "generation": {
+    "constructors": "mix_eval/prompts/evaluation_prompts.py::construct_prompt_freeform and construct_prompt_multichoice",
+    "free_form": "Question prefix, source context when nonempty and not none/null, original prompt, benchmark-specific response instruction. BBH, GSM8k, MATH get step-by-step suffix; QuAc raises NotImplementedError.",
+    "multiple_choice": "Original context/prompt, ordered source options labelled A onward, direct option-letter instruction.",
+    "type_labels": "Actual selected MC data problem_type=multiple-choice; guide example single-choice. Constructors and scoring branch selection do not require those strings to be identical."
+  },
+  "scoring": {
+    "default": "Both --free_form_parser and --multi_choice_parser default to model. Judge default gpt-3.5-turbo-0125. A local judge can be selected.",
+    "free_form_model": "All aliases are provided to a model judge. Prompt explicitly treats every target alternative as acceptable and permits correctness in0.1steps from0to1; implementation accepts parsed values throughout[0,1]. Mean may be fractional, rather than binary exact-match accuracy.",
+    "official_rule_mode": "Official source also provides --free_form_parser rule and --multi_choice_parser rule. Exact helper execution can establish conformance to this documented alternative, without judge calls; it does not establish equivalence to default model judging.",
+    "free_form_rule_functions": [
+      "parse_freeform_response_rule",
+      "eval_freeform_rule",
+      "normalize_str",
+      "extract_numbers",
+      "check_is_number"
+    ],
+    "free_form_rule_semantics": "Extract response tails using linguistic answer indicators; retain normalized candidate strings and extracted numbers; lowercase strings, convert number strings with commas to floats rounded to2decimals; accept if any normalized target alias is a substring of any string candidate or an exact match for a numeric candidate. One-character strings receive a space on one side. Target alternatives are OR, never a choice-label list.",
+    "multiple_choice_reference": "compute_metric_closeended_multichoice_* asserts target list length1, sets all_choices=[chr(ord('A')+i) for i in range(len(options))], then target_id=all_choices[target[0]]. Targets are zero-based integer indices. Selected MC source rows use actual integers; do not guess one-based indexing.",
+    "multiple_choice_rule": "parse_multi_choice_response_rule uses first matched option label across its patterns; for responses over5tokens it can fall back to option-text substring; if no candidate remains, random.choice(all_choices) returns a choice. eval_multi_choice compares chosen letter to derived target letter exactly.",
+    "multiple_choice_randomness": "metric_utils seeds random42 at import. Empty or unparseable MC responses get random-choice fallback, so per-row result depends on call order/RNG state and must not be assumed0.",
+    "aggregation": "compute_metric combines split/category scores using number_samples. Means for each split/category are first rounded to3decimals. Do not silently substitute a valid-reference denominator or drop unparseable cases."
+  },
+  "selected_panel_static_properties": {
+    "free_form_rows": 100,
+    "multiple_choice_rows": 100,
+    "free_form_problem_type": "free-form",
+    "multiple_choice_problem_type": "multiple-choice",
+    "free_form_target_list_lengths": "1to83 on selected panel; alternatives, not required joint answers",
+    "multiple_choice_target_length": 1,
+    "multiple_choice_target_element_type": "int, zero-based",
+    "source_overlap": "MixEval mixes preexisting benchmark content. This review does not establish global row-level independence."
+  },
+  "native_one_eval": {
+    "revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+    "gallery": "Default MixEval/free_form is configured key3_q_choices_a and choice_letter despite official free-form task. Gallery explicitly says contract_inferred and smoke_passed=false.",
+    "generation_only_limit": "Changing generator route to key2_q_ma recovers free-text generation but does not replace choice-letter scoring metadata or make original score a MixEval score.",
+    "kernel_multi_reference": "Captured DataFlow _eval_qa_multi uses any_math_verify plus text-containing heuristics over targets. It can represent alternative target answers but is not the official MixEval model or rule parser. Empty predictions are marked invalid, so denominator handling needs explicit checking.",
+    "native_choice_rescore": "_rescore_choice_single parses both prediction/reference using choice parser; invalid references are excluded, while unparseable/empty predictions with valid references receive0. This differs from official MC rule random fallback and cannot be labelled exact official parser behaviour.",
+    "complete_repair_requirements": [
+      "Dispatch by declared source task kind/split, validating schema without inferring task solely from field presence.",
+      "Use official family-specific input constructors and preserve source fields, context and option order.",
+      "Map MC source target integer index to its option letter explicitly using the actual option count.",
+      "Retain all free-form target aliases and score using an explicitly selected official rule or model mode.",
+      "Aggregate both split denominators by sample count; preserve empty/invalid/error counts and distinguish them from missing observations.",
+      "If original One-Eval installed run_eval path is bypassed, call the result a bounded replay/adapter intervention, not a complete installed native repair."
+    ]
+  },
+  "decisive_controls": [
+    {
+      "id": "freeform_alias_oracle",
+      "definition": "Replay each selected source alias (or a prespecified alias rule) as a constructed output through official free-form rule parsing and the native choice parser.",
+      "expectation": "Do not assert100% before observing outputs; official tail extraction can truncate literal aliases. Preserve all exceptions.",
+      "interpretation": "Constructed correctness probes measure scorer/reference compatibility, not model accuracy."
+    },
+    {
+      "id": "mc_source_index_oracle",
+      "definition": "For each MC row, replay chr(ord('A')+target[0]) as a constructed output; verify original options and zero-based mapping.",
+      "expectation": "Official MC rule parser should extract the supplied valid letter; this tests indexing/parser plumbing."
+    },
+    {
+      "id": "mc_explicit_wrong_letter",
+      "definition": "Use an explicit valid option letter whose index differs from target[0].",
+      "expectation": "Guaranteed incorrect MC reference match if parsed letter is preserved; unlike empty output this does not invoke random fallback."
+    },
+    {
+      "id": "empty_output",
+      "definition": "Keep as distinct diagnostic with fixed initial random seed and documented call order.",
+      "expectation": "Official MC rule may score it correct by random fallback. Do not classify expected score0 automatically."
+    },
+    {
+      "id": "aliases_and_numeric_normalization",
+      "definition": "Retain literal aliases, aliases embedded in answer sentences, and numeric forms as separate constructed controls.",
+      "expectation": "Official rule behaviour follows its exact normalization/tail-extraction implementation, including counterexamples; no claim of semantic-equivalence completeness."
+    },
+    {
+      "id": "same_output_rescoring",
+      "definition": "Keep response bytes/source cases fixed between binding-only and complete typed scoring comparisons.",
+      "expectation": "Any score difference then isolates scorer/reference treatment rather than model generation or recovered question content."
+    }
+  ],
+  "limits": [
+    "No model/parser-judge run was performed.",
+    "No claim that rule-mode equals default judged MixEval score.",
+    "No official overall score from200sampled rows alone.",
+    "AST extraction of exact helpers is a dependency-bounded execution, not a full repository install.",
+    "Literal source gold aliases are not guaranteed to be full-score under the heuristic rule parser.",
+    "Missing data or judge failures must remain unknown/error, not silently repaired into observed model outcomes."
+  ],
+  "recommended_minimal_dispatcher": {
+    "free_form": "official construct_prompt_freeform(record); parse_freeform_response_rule(args,response); eval_freeform_rule(record['target'],predictions)",
+    "multiple_choice": "official construct_prompt_multichoice(record); labels=all option letters in source order; reference=labels[record['target'][0]]; parse_multi_choice_response_rule(args,response,labels,dict(zip(labels,options))); eval_multi_choice(reference,predicted_letter)",
+    "required_labels": "Explicit official_rule_mode scope; constructed output provenance; random fallback policy/seed; full errors and denominator audit."
+  },
+  "source_blob_verification": "PASS: all10saved source files exactly match pinned Git blobs",
+  "code_license_provenance": "official/LICENSE_PROVENANCE.json",
+  "integration_adapter": "scoring_adapter.py",
+  "integration_checks": "test_scoring_adapter.py"
+}

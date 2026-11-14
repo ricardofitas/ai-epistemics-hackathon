@@ -1,0 +1,1144 @@
+{
+  "official_first_alias_misses": [
+    {
+      "source_index": 1425,
+      "source_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+      "response": "Government of D.C.",
+      "parsed": [
+        "government of d.c"
+      ],
+      "target": [
+        "Government of D.C.",
+        "Washington-DC",
+        "Us capital",
+        "DC Washington",
+        "United States capital",
+        "UN/LOCODE:USWAS",
+        "Wasington D.C.",
+        "The District of Columbia",
+        "Washington,D.C",
+        "Washington, Dc",
+        "Washington city",
+        "Washington, D.C., United States",
+        "Washington (District of Columbia)",
+        "Washington dc",
+        "Washington, DC",
+        "D.C. Washington",
+        "Wash DC",
+        "Wash. DC",
+        "Wash, D.C.",
+        "WASHINGTON D.C",
+        "District of Columbia, District of Columbia",
+        "Distric of Columbia",
+        "Washington DC, United States of America",
+        "One District",
+        "Wash. D.C.",
+        "Culture of Washington, DC",
+        "United States Capital",
+        "District of Columbia, United States",
+        "Washington D. C.",
+        "Capital of the USA",
+        "District of Columbia",
+        "Washington City",
+        "Wasington, DC",
+        "Washington Dc",
+        "L'Enfant City",
+        "Distict of Columbia",
+        "Capital of the United States",
+        "Washington, D.C",
+        "Washington, US-DC",
+        "Washington District of Columbia",
+        "Washington (city)",
+        "Wasington DC",
+        "Federal district (United States)",
+        "Wash, DC",
+        "Washington, D.c.",
+        "Washington DC, USA",
+        "Washington DC.",
+        "District Of Columbia",
+        "Climate of Washington, D.C.",
+        "Distric of colombia",
+        "Washington, D C",
+        "District of Columbia County, DC",
+        "Washington D.C",
+        "District of columbia",
+        "Washington, DC.",
+        "District of Columbia government",
+        "American Federal District",
+        "Washington, District Of Columbia",
+        "Wahington D.C",
+        "Washington, District of Columbia",
+        "City of Washington",
+        "Federal district of the United States",
+        "Washington D.C.",
+        "Washington (D.C.)",
+        "Washington DC",
+        "1 District",
+        "Washington, D. C.",
+        "Districtofcolumbia",
+        "Washington, D.C., USA",
+        "Culture of Washington, D C",
+        "Washington, D.C.",
+        "Washingtondc",
+        "Culture of Washington, D. C.",
+        "Culture of Washington, D.C.",
+        "Economy of Washington, D.C.",
+        "Washington, dc",
+        "US-DC",
+        "Dist. of Columbia",
+        "Wash., D.C.",
+        "District of colombia",
+        "Washingotn, DC",
+        "Education in Washington, D.C.",
+        "Washington (DC)"
+      ],
+      "reason": "Response strips final periods but target normalization does not."
+    },
+    {
+      "source_index": 1248,
+      "source_sha256": "0dce467d5cda070f4ac3f571e236470686828366662cbe0e24939c63aed35af1",
+      "response": "Tomorrow is another day",
+      "parsed": [
+        "another day"
+      ],
+      "target": [
+        "Tomorrow is another day",
+        "Domani e un altro giorno",
+        "Domani è un altro giorno"
+      ],
+      "reason": "Key-response extraction splits literal alias on the internal indicator is ."
+    }
+  ],
+  "native_scalarized_MC_reference_or_prediction_losses": [
+    {
+      "source_index": 1624,
+      "source_sha256": "027d7cd33a67c60d990da92377a8d3e6d5f2934c508ee87438d6fd79c2ce8008",
+      "source_target": [
+        4
+      ],
+      "source_correct_letter": "E",
+      "option_count": 5,
+      "options": [
+        "apartment building",
+        "disembark",
+        "stairwell",
+        "deplane",
+        "airport"
+      ],
+      "native_reference_choice": "D",
+      "native_prediction_choice": null,
+      "error": "parse_failed",
+      "reason": "Static A-D excludes source-correct E. Index4 then falls through to one-based fallback and is incorrectly normalized to D."
+    },
+    {
+      "source_index": 196,
+      "source_sha256": "07449e1772ce60d3a7ee5d28a856d6e558fbda71d07fee0b1841b242d77b154d",
+      "source_target": [
+        4
+      ],
+      "source_correct_letter": "E",
+      "option_count": 5,
+      "options": [
+        "satisfaction",
+        "heart",
+        "feel better",
+        "pay",
+        "happiness"
+      ],
+      "native_reference_choice": "D",
+      "native_prediction_choice": null,
+      "error": "parse_failed",
+      "reason": "Static A-D excludes source-correct E. Index4 then falls through to one-based fallback and is incorrectly normalized to D."
+    }
+  ],
+  "official_empty_MC_probe": {
+    "seed": 42,
+    "dedicated_rng": true,
+    "source_order": [
+      22,
+      1191,
+      1392,
+      1544,
+      1776,
+      1728,
+      708,
+      668,
+      828,
+      181,
+      1014,
+      935,
+      868,
+      1359,
+      1642,
+      1785,
+      1458,
+      707,
+      1376,
+      394,
+      1254,
+      1490,
+      1008,
+      1093,
+      1624,
+      831,
+      1620,
+      346,
+      1560,
+      1297,
+      1425,
+      1277,
+      1537,
+      1914,
+      1452,
+      1262,
+      239,
+      1874,
+      1005,
+      1259,
+      1077,
+      10,
+      58,
+      244,
+      289,
+      1903,
+      915,
+      1521,
+      1550,
+      1937,
+      980,
+      966,
+      1909,
+      23,
+      1563,
+      1930,
+      1461,
+      356,
+      1972,
+      592,
+      347,
+      1518,
+      872,
+      97,
+      481,
+      196,
+      1366,
+      604,
+      205,
+      631,
+      1153,
+      1935,
+      21,
+      901,
+      1991,
+      1471,
+      800,
+      1357,
+      509,
+      636,
+      1790,
+      612,
+      1817,
+      189,
+      1307,
+      908,
+      635,
+      1158,
+      1291,
+      1304,
+      998,
+      1166,
+      763,
+      1999,
+      565,
+      1755,
+      331,
+      516,
+      1349,
+      1957
+    ],
+    "fallback_count": 100,
+    "correct_guesses": 25,
+    "guesses": [
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "C"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "result": "E"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      },
+      {
+        "labels": [
+          "A",
+          "B"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "result": "A"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "B"
+      },
+      {
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "result": "D"
+      }
+    ],
+    "qualification": "Deterministic illustration of original optional rule fallback. Not a model score, prevalence estimate, or official model-judge result."
+  }
+}

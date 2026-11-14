@@ -1,0 +1,82 @@
+{
+  "status": "STATIC_REVIEW_COMPLETED_BEFORE_PARENT_REPLAY",
+  "reviewer": "separate delegated scoring_review agent",
+  "executed_native_score_outputs": false,
+  "model_calls": 0,
+  "source_references": {
+    "oneeval_tool": {
+      "path": "/workspace/scratch/d51e1eb9ae08/synthesis-v13-20261114/mixeval/upstream/dataflow_eval_tool.py",
+      "sha256": "640884f634a3009784a8698d4f4fd05a0485f991dad395b3c31fd630c6cf427b"
+    },
+    "dataflow_kernel": {
+      "path": "/workspace/scratch/d51e1eb9ae08/research-causal-external-20261114/source-audit/default_contract_source_capture_20261113/capture/dataflow_wheel__dataflow__operators__core_text__eval__unified_bench_dataset_evaluator.py",
+      "sha256": "a06f70fac52f9e5287b70aa908852468aa0b945be79f4445cf91566a04878c7f"
+    },
+    "gallery": {
+      "path": "/workspace/scratch/d51e1eb9ae08/synthesis-v13-20261114/mixeval/GALLERY_ENTRY.json",
+      "sha256": "2d19b8b5c47981e4c24ff07c2ca880f95a7e5935d65995b9b8fb982895fce50b"
+    },
+    "official_guide": {
+      "path": "/workspace/scratch/d51e1eb9ae08/synthesis-v13-20261114/mixeval/OFFICIAL_EVAL_GUIDE.md",
+      "sha256": "d52edd7bb03bb9a53321532608ebf9768c1b937f115b67b50e251276a120e642"
+    }
+  },
+  "parser_provenance": "reviewer/upstream/PARSER_PROVENANCE.json",
+  "findings": [
+    {
+      "id": "D1",
+      "location": "DataFlowEvalTool._rescore_choice_single lines850-984",
+      "finding": "Final API choice rescore feeds raw target through ChoiceLetterParser, including list-valued MixEval targets. Invalid references are excluded; zero denominator reports accuracy0.0. A reported scalar0.0 with zero eligible source references is unscorable, not measured0% model accuracy."
+    },
+    {
+      "id": "D2",
+      "location": "UnifiedBenchDatasetEvaluator._eval_mc_single / _normalize_label_to_index lines1060-1187",
+      "finding": "Kernel fallback does not unwrap list-valued labels. A list such as [0] or [\"0\"] is stringified and fails scalar index normalization. Parse failure yields eval_validFalse while score remains NaN. Keep kernel/final-rescore outcomes separate."
+    },
+    {
+      "id": "D3",
+      "location": "UnifiedBenchDatasetEvaluator.run lines689-744",
+      "finding": "Changing eval_type from key3_q_choices_a to key2_q_ma also requires input_targets_key=target. Keeping only input_label_key can cause required-column failure and no valid scoring result."
+    },
+    {
+      "id": "D4",
+      "location": "UnifiedBenchDatasetEvaluator._eval_qa_multi lines1012-1059; _text_contains_match lines225-234",
+      "finding": "Native multi-reference QA uses symmetric substring matching and math verification, with answer extraction. This is not the recommended official MixEval LLM parsing pipeline and can accept a short substring of a reference. Exact alias replay validates a necessary contract only, not complete official scoring equivalence."
+    },
+    {
+      "id": "D5",
+      "location": "ChoiceLetterParser.parse and normalize_choice_labels",
+      "finding": "Raw list is converted with str(value), numeric index parser requires the entire string to contain a numeric token, configured A-D takes precedence over record option count. choices_key controls choice-text lookup but does not dynamically expand A-D labels."
+    }
+  ],
+  "design": {
+    "unit": "The already selected200source rows; separate free-form100 and MC100. Conditions are repeated on same rows, not independent samples.",
+    "question_isolation": "Hold output bytes, source target and reference selection fixed while changing route/parser or metadata only. A score difference then concerns scoring semantics independently of missing question binding. It does not quantify model generation change.",
+    "replay_controls": [
+      "Source alias output from target list, deterministic selection recorded before scoring.",
+      "Every other accepted free-form alias, if scored, is a separate reference-alias case with source-row denominator retained.",
+      "Fixed non-answer output, empty output and None distinguish wrong, unparseable and missing. Choose negatives that are verified not equal to any source alias; unknown semantic equivalence stays unadjudicated.",
+      "MC source index converted to legal option letter, correct option TEXT, and a deterministic wrong legal letter. Preserve source0-based indices.",
+      "MC raw list targets vs explicitly scalarized target, and static A-D vs source-sized labels, as separate causal controls.",
+      "Free-form route-only repair vs key2_q_ma plus input_targets_key and a source-alias checker. Keep official parser unexecuted status explicit."
+    ],
+    "metrics": [
+      "Total source rows.",
+      "Eligible/reference-valid rows, invalid reference count.",
+      "Valid predictions vs parse failures and empty outputs.",
+      "Scored correct and wrong rows.",
+      "Conditional score denominator and all-source coverage.",
+      "Zero eligible score displayed value with unscorable status.",
+      "Exceptions, missing required columns and provider/import blockers."
+    ],
+    "guardrails": [
+      "Pin exact native method/source/parser bytes; no silent method edits.",
+      "Do not replace absent scoring with zero correctness.",
+      "A local exact-alias checker is a diagnostic source-contract control, not the official MixEval score.",
+      "Do not call source oracle replays outputs of an evaluated model.",
+      "A fail-closed dispatcher should return INCOMPLETE for unsupported semantic equivalence instead of claiming a full scoring repair.",
+      "Do not infer impact on a published ranking from replay outcomes."
+    ]
+  },
+  "pending": "Separate verification of parent frozen protocol and actual run artifacts when parent signals completion."
+}
