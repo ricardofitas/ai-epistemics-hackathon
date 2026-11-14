@@ -1,0 +1,20 @@
+{
+  "experiment": "Installed native Harness offline task-path integration",
+  "created_at": "2026-11-14T07:55:44.316Z",
+  "base_research_commit": "e3f01bee2f6b3f9c43e968af71ad6be67eabc9a5",
+  "engine_revision": "d6de81643928d653435c431bae19945d41d32520",
+  "engine_package_version_from_source": "0.4.14.dev0",
+  "source_archive_correct_library_id": "libfile_fde3_f-f081be24a8c48191b9bb00e0fa122ebd_198492b795908191b811098f9e84ee4a",
+  "selection": "Use exactly the200 source units and source order from the previous frozen Harness transfer's SELECTED_INPUTS.jsonl.gz; no replacement, source data already observed.",
+  "scope": "Import installed complete native modules, instantiate ConfigurableTask, load local JSON via native datasets API, build_all_requests through normal zero-shot context path, and run native process_results on constructed likelihood vectors. No AST projection, source patch, model, tokenizer or backend execution.",
+  "config_overrides": "Keep shipped task doc_to_text/doc_to_choice/doc_to_target/output_type/metrics and defaults. Explicitly override dataset_path=json and dataset_kwargs.data_files.test=local frozen rows; dataset_name=None, training_split=None,validation_split=None,test_split=test,num_fewshot=0,task=private integration identifier. Record all resolved config details and source hashes. No Hugging Face network access during test.",
+  "checks": "Native doc/target/choice semantics against independent source; complete per-doc requests and contexts; compare carrier bytes with previous native-method projection without assuming equality. Apply source-gold-positive and first-non-gold-positive likelihood fixtures, expecting acc=acc_norm1 and0 respectively for each200 record.",
+  "expected_counts": {
+    "source_units": 200,
+    "native_option_requests": 801,
+    "constructed_fixture_evaluations": 400,
+    "model_calls": 0
+  },
+  "outcome_policy": "Preserve all integration/import/config errors and carrier differences. Legitimate driver differences must be described rather than erased by changing the sample or source. Operational fixes must be recorded and cannot be used to tune scientific outcomes.",
+  "interpretation": "Task-path integration on reused diagnostic data with constructed score controls. Not real-model accuracy, new natural fault prevalence, arbitrary backend correctness, GPU/tokenization verification or an independently affected published evaluation."
+}
