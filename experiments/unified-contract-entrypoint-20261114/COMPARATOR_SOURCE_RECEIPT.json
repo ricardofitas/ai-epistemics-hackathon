@@ -1,0 +1,25 @@
+{
+  "repo": "modelscope/evalscope",
+  "selection_method": "First source-only GitHub API commits?per_page=1 result for official HEAD; connector used instead of CLI git ls-remote, before any comparison replay",
+  "commit": "59bb367bd8565f347266a48ac1230af0b5131b97",
+  "commit_date": "2026-11-13T08:57:50Z",
+  "commit_url": "https://github.com/modelscope/evalscope/commit/59bb367bd8565f347266a48ac1230af0b5131b97",
+  "tree_sha": "6bbe7a43f6d4c0c93c7f5e0e27916f9505810e18",
+  "tree_query_response_sha": "59bb367bd8565f347266a48ac1230af0b5131b97",
+  "tree_query_used_commitish": "59bb367bd8565f347266a48ac1230af0b5131b97",
+  "files": [
+    {
+      "path": "evalscope/metrics/nlp/metrics.py",
+      "blob_sha": "c5412fe6c0ebb0af9f78603d9f88aec2f42eba3d",
+      "size": 8924
+    },
+    {
+      "path": "evalscope/metrics/utils/functions.py",
+      "blob_sha": "d4df9f5d86b2857b52b9d15c84756e2e5a7ebf36",
+      "size": 6254
+    }
+  ],
+  "new_dataset_rows": 0,
+  "new_model_or_judge_calls": 0,
+  "source_only_connector_requests": 4
+}

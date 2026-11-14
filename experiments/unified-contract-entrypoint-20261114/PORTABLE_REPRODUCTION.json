@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "work",
+        "-p",
+        "test_contract.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "work",
+        "-p",
+        "test_gateway*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "work/test_gateway_independent.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "work/replay_existing.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "new_provider_calls": 0,
+  "new_installed_native_calls": 0,
+  "scope": "Same-executor fresh capsule reproduction; engineering checks on exposed captures, not independent semantic validation."
+}

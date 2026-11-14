@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "protocol_id": "independent-consumer-mixeval-freeform-chat-v1",
+  "created_at": "2026-11-14T18:06:51.929344+00:00",
+  "status": "PREPARED_NOT_EXECUTED_BLOCKED_ON_COMPARATOR_PIN_AND_ADAPTER_FREEZE",
+  "purpose": "Test whether source/request/reference/prediction representation invariants and a common declared exact-match contract survive a second independently maintained official metric consumer. This is bounded post-outcome engineering validation.",
+  "execution_this_task": {
+    "new_dataset_rows": 0,
+    "new_provider_calls": 0,
+    "new_judge_calls": 0,
+    "source_network_fetches": 0,
+    "comparison_executed": false,
+    "model_or_judge_credential_needed": false
+  },
+  "selection_tradeoff": {
+    "chosen": "EvalScope official exact-match metric consumer against One-Eval official compute_exact_match, consuming the same two exposed source-typed captures under an explicitly shared trim-plus-strict-equality contract.",
+    "benefit": "Independent scoring implementation without new inference, expanded benchmarks, or another review of the same outputs.",
+    "cost": "Only two previously exposed questions, known expected outcomes, and two implementation families. It cannot establish generalization, official MixEval accuracy, native EvalScope generation correctness, or provider transport compatibility.",
+    "reason_common_strict_contract": "One-Eval default normalize_text includes answer-marker extraction and other transformations. Different default normalization rules are different constructs. Strict equality after separately declared whitespace trimming isolates representation/alias transport and avoids calling those expected semantic differences defects.",
+    "fallback": "No alternative framework or replacement cases if EvalScope cannot provide the frozen contract. Mark UNSUPPORTED_COMPARATOR and stop. Any broader normalization study requires a separately versioned protocol."
+  },
+  "official_source_universe": {
+    "dataset": "https://huggingface.co/datasets/MixEval/MixEval",
+    "revision": "66a05ec3821a2b5089ed1e32a5d65ab6ecdbf906",
+    "config": "MixEval",
+    "split": "free_form",
+    "acquisition_policy": "No dataset acquisition: use only authenticated existing selected2.json and two original source_typed HTTP/result pairs. Dataset URI/revision identify original provenance and are not an instruction to re-download.",
+    "sampling_rule": "All and only the already selected source_index 40 and 200, in increasing numeric order. Both source_typed captures, no replacement or outcome-based exclusions.",
+    "cases": [
+      {
+        "source_index": 40,
+        "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+        "source_type": "free-form",
+        "benchmark_name": "TriviaQA"
+      },
+      {
+        "source_index": 200,
+        "source_sha256": "05ffdf0514950787a180a2568505a9b4867b87c392a9fc0da1a1ea8e4e6d304b",
+        "source_type": "free-form",
+        "benchmark_name": "TriviaQA"
+      }
+    ]
+  },
+  "implementation_pins": {
+    "one_eval": {
+      "official_repository": "https://github.com/OpenDCAI/One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "entrypoint": "one_eval.metrics.common.general.compute_exact_match",
+      "invocation": "compute_exact_match(preds=[canonical_final], refs=[canonical_alias_list], strict=True, use_containment=False)",
+      "boundary": "Official registered metric function; not a new run through native MetricRunner or HTTP client."
+    },
+    "dataflow": {
+      "distribution": "open-dataflow==1.0.10",
+      "wheel_sha256": "75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+      "required_for": "Only if full One-Eval declared installation requires it; no DataFlow generation invocation."
+    },
+    "evalscope": {
+      "official_repository": "https://github.com/modelscope/evalscope",
+      "commit": null,
+      "entrypoint": null,
+      "status": "UNRESOLVED_DO_NOT_EXECUTE",
+      "selection_rule": "First successful source-only git ls-remote --symref on official repository HEAD after this protocol; use that exact advertised HEAD commit. Record UTC, raw response, symbolic branch and full commit before checkout. Do not choose a revision based on replay output.",
+      "source_only_capability_question": "At the pinned revision, which official deterministic exact-match callable permits case-sensitive identity comparison with normalization/extraction disabled? Can it consume a single string reference without model/judge imports or downloads?",
+      "path_selection_rule": "Use official registered exact-match callable with exact-match name, not benchmark-specific answer extraction. Resolve its source, registry/config, transitive imports and package metadata only. If ambiguous or identity semantics unavailable, stop UNSUPPORTED_COMPARATOR. Do not invent an API or substitute a hand-written equality scorer.",
+      "reference_list_orchestration": "If native metric supports list[str] aliases with any-reference semantics, use it. Otherwise invoke that same official scalar-reference metric once per alias and take numeric max; record every alias score and this reduction. No reference-based prediction extraction.",
+      "must_freeze_before_replay": [
+        "full Git commit",
+        "Git tree or commit authentication receipt",
+        "official callable qualified name and configuration",
+        "all imported source file SHA256 values",
+        "dependency lock with exact versions and artifact hashes",
+        "runner and two independent adapter source SHA256 values",
+        "launch JSON with protocol/ledger/source pins",
+        "proof no One-Eval scorer/normalizer imported into EvalScope worker"
+      ]
+    },
+    "independence_rule": "Use separate processes/environments. Adapters independently read immutable existing source/request/response files; no gateway report, gateway normalized row, One-Eval parse_value, normalize_text, checker result or expected score is supplied to EvalScope. A common manifest may supply only paths, source IDs, hashes and declared schema. A cross-result reducer never computes replacement metric scores."
+  },
+  "supported_types": {
+    "profile_id": "mixeval-freeform-chatcompletions-source-typed-v1",
+    "source": {
+      "problem_type": "literal free-form",
+      "prompt": "nonempty str",
+      "context": "str including literal None",
+      "options": "original source metadata only, including [None-string]; never treated as displayed answer choices",
+      "target": "nonempty JSON list of nonempty strings; all aliases retained in order",
+      "id": "original value/type retained; delivered dtype conversion accepted only when exact str roundtrip preserves value"
+    },
+    "request": {
+      "kind": "nonstreaming ChatCompletions JSON",
+      "messages": "one user string in the captured payload; original other messages retained",
+      "source_binding": "Question and context equal frozen source strings at their declared template positions. Literal braces around those inserted values are preserved in the original captured template; do not reject solely because braces are present. No appended A. None carrier. Validate complete captured body hash rather than a substring-only claim.",
+      "request_role": "Already observed request validation; no new construction by EvalScope and no new HTTP transport."
+    },
+    "reference": "Exact original target list; source anchor never taken from delivered target. Copy all aliases. Reject changed, flattened, stringified, or truncated reference lists before metric invocation.",
+    "response": "HTTP200, original response ID, declared original model qwen3.8-27b, no error, exactly one choice index0, finish_reason stop, message.content nonempty str and valid original usage per native_probe contract. reasoning_content may coexist and is preserved as separate metadata.",
+    "prediction_view": "Only choices[0].message.content, copied verbatim and hashed before normalization. generated_ans and reasoning_content are retained separately and never searched for gold or merged into the declared final view.",
+    "metric_contract": {
+      "name": "trimmed_case_sensitive_alias_exact_match_v1",
+      "canonicalization": "Apply Python str.strip() independently to prediction and each source alias; no Unicode normalization, case conversion, punctuation/article removal, answer-marker extraction, containment, fuzzy match, or semantic equivalence. Retain pre/post hashes and strings.",
+      "score": "1 iff canonical prediction equals at least one canonical alias under the official consumer; else0. Exact original full alias list retained even if duplicate aliases normalize identically.",
+      "reporting": "Diagnostic consumer agreement only. Separate from original default One-Eval normalized exact_match and official MixEval RULE/model-judge endpoints."
+    }
+  },
+  "unsupported_handling": {
+    "UNSUPPORTED_PROFILE": [
+      "MixEval choice or any non-free-form task",
+      "loglikelihood, Responses API, SSE/streaming or multimodal content",
+      "tool/function call or structured message.content arrays",
+      "arbitrary prompt templates not identical to this frozen captured request profile",
+      "integer/scalar/empty/mixed reference values"
+    ],
+    "UNKNOWN_CAPTURE": [
+      "finish_reason length or missing",
+      "missing/invalid usage or missing/nonstring/empty final content",
+      "failed/unattempted HTTP capture"
+    ],
+    "INCOMPLETE_PROVENANCE": [
+      "absent original bytes/hash/response ID/source anchor",
+      "unresolved comparator commit/API/dependency pin"
+    ],
+    "FAIL_CONTRACT": [
+      "verified source hash mismatch",
+      "source/request binding mismatch",
+      "reference differs from original full alias list",
+      "declared final prediction differs from raw message.content"
+    ],
+    "policy": "Emit explicit status and retain planned unit; never turn unsupported, incomplete, or unknown into score0/model error. Unsupported controls are not false alerts. A predeclared supported healthy case rejected by the checker is a false alert even if the checker calls it unsupported. Integrity-failing cases cannot silently be excluded from counts."
+  },
+  "planned_arms": [
+    {
+      "arm": "healthy_final",
+      "kind": "healthy_existing_representation",
+      "planned_rows": 2,
+      "source_indices": [
+        40,
+        200
+      ],
+      "view": "Original raw structured message.content plus original full target aliases",
+      "expected_gate": "PASS",
+      "expected_official_scores": [
+        1,
+        1
+      ],
+      "expectation_basis": "Known raw contents Dance and Tony Blair with leading newlines, known references and completed prior rescore. These are predictions, not results of this comparison."
+    },
+    {
+      "arm": "natural_wrapper",
+      "kind": "natural_fault_existing_representation",
+      "planned_rows": 2,
+      "source_indices": [
+        40,
+        200
+      ],
+      "view": "Original native generated_ans containing reasoning wrapper, falsely declared as final content; raw bytes remain unchanged",
+      "expected_gate": "FAIL_CONTRACT: prediction_view_mismatch",
+      "diagnostic_metric_only": "In a separately marked bypass diagnostic, official strict consumers should both score0; this is not permissible scored throughput or model error. Original native normalized scores0 are prior evidence only.",
+      "fault_is_known": true
+    },
+    {
+      "arm": "native_gallery",
+      "kind": "unsupported_existing_profile",
+      "planned_rows": 2,
+      "source_indices": [
+        40,
+        200
+      ],
+      "view": "Original gallery condition only as unsupported-profile controls, not a third supported implementation",
+      "expected_gate": "UNSUPPORTED_PROFILE",
+      "score": null
+    }
+  ],
+  "synthetic_controls": {
+    "generate_only_after_adapter_freeze": true,
+    "source_cases": 2,
+    "mutations_per_source": 6,
+    "planned_mutated_views": 12,
+    "mutate_one_field_only": true,
+    "denominator": "12 constructed variants, paired within2source cases. Never combine with2naturalfaults or healthy false-alert denominator.",
+    "mutations": [
+      {
+        "id": "question_drop",
+        "change": "Remove source prompt from copied user content; preserve source anchor",
+        "expected": "FAIL_CONTRACT"
+      },
+      {
+        "id": "source_hash",
+        "change": "Replace copied declared source hash with64zeroes; preserve actual source bytes",
+        "expected": "FAIL_CONTRACT"
+      },
+      {
+        "id": "alias_truncate",
+        "change": "Replace delivered reference list by only its first alias; source target untouched",
+        "expected": "FAIL_CONTRACT"
+      },
+      {
+        "id": "alias_stringify",
+        "change": "Replace delivered reference list by its JSON string; source target untouched",
+        "expected": "FAIL_CONTRACT"
+      },
+      {
+        "id": "prediction_reasoning",
+        "change": "Use reasoning_content as declared final prediction while original raw content remains unchanged",
+        "expected": "FAIL_CONTRACT"
+      },
+      {
+        "id": "terminal_length",
+        "change": "Set copied finish_reason to length; preserve readable content",
+        "expected": "UNKNOWN_CAPTURE"
+      }
+    ],
+    "healthy_metamorphic_controls": {
+      "planned_views": 4,
+      "rule": "For each of2source cases, independently add empty reasoning_content and add nonempty reasoning_content containing a wrong answer to a copy while preserving raw content/target/request; both remain eligible and metric score1. Synthetic provenance is explicit.",
+      "denominator": "4 constructed healthy views; report separately from2naturalhealthyviews.",
+      "false_alert_definition": "Any rejection of these four declared supported healthy mutations, or any score change induced by reasoning-only content."
+    }
+  },
+  "independent_units_and_denominators": {
+    "implementation_families": 2,
+    "unique_source_questions": 2,
+    "independent_model_responses_used_for_supported_arms": 2,
+    "healthy_real_views": 2,
+    "natural_fault_views": 2,
+    "unsupported_gallery_controls": 2,
+    "synthetic_fault_views": 12,
+    "synthetic_healthy_views": 4,
+    "report_required": [
+      "healthy real false alerts: count/2",
+      "natural known-fault detection: count/2",
+      "synthetic contract-fault detection: count/10",
+      "synthetic terminal-unknown classification: count/2",
+      "synthetic healthy false alerts: count/4",
+      "unsupported gallery correct classification: count/2",
+      "metric agreement on supported healthy captures: count/2; per-case scores",
+      "every planned unit and status, including missing/unsupported"
+    ],
+    "dependence": "Views, aliases, metric invocations and mutations are repeated transformations within two source cases; they are not additional questions, new responses, independent model experiments or benchmark samples. Do not report confidence intervals, prevalence or significance."
+  },
+  "falsification_and_decisions": [
+    {
+      "claim": "Final-view transport does not need inference to repair",
+      "refuted_by": "Either consumer disagrees with the other or expected alias match on an authenticated supported healthy final view under the exact shared contract. Preserve mismatch and inspect one targeted code question; do not rewrite contract after outcome."
+    },
+    {
+      "claim": "Source anchoring catches representation faults without rejecting supported healthy inputs",
+      "refuted_by": "Any healthy real false alert, missed natural wrapper mismatch, missed injected source/reference/prediction mismatch, or promotion of length capture to known."
+    },
+    {
+      "claim": "Reasoning metadata is irrelevant to final-view score",
+      "refuted_by": "Any score/status change in synthetic healthy reasoning-only controls."
+    },
+    {
+      "claim": "Independent implementation adds evidence",
+      "not_supported_if": "EvalScope source/API cannot instantiate the predeclared identity metric, imports One-Eval parsing/scoring, or only a copied custom scorer executes. Report blocked/unsupported rather than success."
+    }
+  ],
+  "execution_gates": [
+    "G0: This file freezes universe, exposed selection, exact task/output/metric construct and expected outcomes now. It is not an execution-ready freeze.",
+    "G1: Resolve EvalScope official source commit metadata once; no dataset/provider/judge acquisition. Authenticate checkout and inspect only declared consumer/API capability. Record any code exposure in EXPOSURE_LEDGER.json append-only.",
+    "G2: Create independent adapters and runner, freeze exact code and full resolved dependency artifacts in separate Python3.11 environments. No benchmark datasets, model weights, provider secrets or remote judge. Reuse One-Eval250-version constraint file only for One-Eval env; do not force that lock onto EvalScope.",
+    "G3: Write immutable PIN_RESOLUTION_AND_FREEZE.json with protocol/ledger/code/dependency/input hashes before executing any comparison or creating synthetic variants. If a required source/API/dependency pin is absent, STOP.",
+    "G4: Future offline run verifies all pinned inputs; zero network permitted during replay. Emit complete rows and independent code-origin receipts. New implementation must read original artifacts, not a gateway-produced normalized projection.",
+    "G5: Verify counts, classifications, score contract and no-original-mutation invariants; report prepared/executed status accurately. No manuscript changes in this task."
+  ],
+  "exact_next_command": {
+    "run_now": false,
+    "command": "git ls-remote --symref https://github.com/modelscope/evalscope.git HEAD",
+    "purpose": "Code-source pin metadata only, before checkout or adapter implementation; capture stdout and UTC in a new pin-resolution receipt. Do not run benchmark loaders or inspect additional model responses.",
+    "subsequent_dependencies": [
+      "Authenticated checkout of advertised full EvalScope commit (unknown now), official deterministic exact-match callable and dependency artifact lock",
+      "One-Eval8aba20ad17ee2c7d2391162ac03ffaebcbb17506; full declared package installation with existing constraints and pip check",
+      "Python3.11 in separate One-Eval/EvalScope environments",
+      "Not-yet-written independent offline comparator runner and adapter files: freeze before replay. There is deliberately no claimed executable replay command yet."
+    ],
+    "launch_after_gates": "python <frozen_comparator_runner.py> --protocol run1758/work/NEXT_INDEPENDENT_COMPARISON_PROTOCOL.json --freeze run1758/work/PIN_RESOLUTION_AND_FREEZE.json --offline --maximum-provider-calls 0 --maximum-judge-calls 0",
+    "launch_status": "TEMPLATE_NOT_RUN: runner does not yet exist and this protocol cannot be marked execution-ready until it is implemented and pinned."
+  },
+  "prior_work_and_claim_limits": {
+    "PR63": "Already observed prior recognition of extraction/scoring and primary-metric reporting. Neither blind nor newly discovered here; not re-fetched. No claim of priority for generic semantic contracts.",
+    "GAMMAF": "This addition is a2case post-outcome engineering consumer comparison. It does not exceed or replace GAMMAF/Guards broader artifact/evaluation work and is not evidence of external impacted conclusions, prospective causal superiority, population capability or a new benchmark result.",
+    "no_repeat": "Do not repeat80/160/4requests, installed four-row rescore, masked annotations or external searches merely to populate comparison.",
+    "paper": "No manuscript/PDF/sourceZIP edits."
+  },
+  "frozen_existing_inputs": [
+    {
+      "path": "run1758/inputs/HACKATHON_EPISTEMICS_STATE.json",
+      "bytes": 242233,
+      "sha256": "a09abd2062610563f3c61a64892d2dad19fdf84d2093c9315b537d4d09dc514e"
+    },
+    {
+      "path": "run1758/package/external_followup/EXTERNAL_FOLLOWUP.json",
+      "bytes": 13172,
+      "sha256": "d46befa4ed451566318bda291af7efc655ca02df4e452e5a6b31ec051b24bbab"
+    },
+    {
+      "path": "run1758/package/external_followup/RESULTS.md",
+      "bytes": 1582,
+      "sha256": "fe8e108468d773a782f0bc1b488190e9b63888fae86b4e9d6de3f5b6bfa9185f"
+    },
+    {
+      "path": "run1758/source/check_contract.py",
+      "bytes": 6529,
+      "sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e"
+    },
+    {
+      "path": "run1758/source/native_source_gate.py",
+      "bytes": 2310,
+      "sha256": "1443f46343c4591a9fca5a6811f83e472b21c4351286b0392ca36fa158eb7d18"
+    },
+    {
+      "path": "run1758/real/native_probe.py",
+      "bytes": 18142,
+      "sha256": "6586ffa3591bdadb2cecc08faf284610e17a4b579c20b3bd1618906fff56aefd"
+    },
+    {
+      "path": "run1758/rescore/offline_rescore.py",
+      "bytes": 4770,
+      "sha256": "a385b0257f4cbe9f4f06df527c8085660d46d627c9f37c38984e5f3502f78d73"
+    },
+    {
+      "path": "run1758/real/selected2.json",
+      "bytes": 2470,
+      "sha256": "adf2bf8a0e56a5a9b34be106821631b68d11398690630a1756774d617b849161"
+    },
+    {
+      "path": "run1758/real/PROTOCOL.json",
+      "bytes": 6287,
+      "sha256": "f71f0e21f5f014de0707ff3790b7e2e3c14e4cdb84781cfd9052e1c749622864"
+    },
+    {
+      "path": "run1758/rescore/PROTOCOL.json",
+      "bytes": 2909,
+      "sha256": "8b1b6c5473138490083b3c2390b4555352bcbee9e3aa9e3ef53f68367c2ef000"
+    },
+    {
+      "path": "run1758/rescore/RESCORE_INPUTS.json",
+      "bytes": 50368,
+      "sha256": "0042527f975efefb813c5dd636fd269a5128c479f408526ff507003fb5c74cd2"
+    },
+    {
+      "path": "run1758/rescore/constraints.txt",
+      "bytes": 4620,
+      "sha256": "e0b660e1cb0b78a1a690d2376353f050584842146b716db14730c3e84cc80256"
+    },
+    {
+      "path": "run1758/real/INSTALL_RECEIPT.json",
+      "bytes": 471,
+      "sha256": "c3a8ae5bbb162d58c54d3029b25f4aab5ca12f25269a5fa26de4b5853f3a3e1f"
+    },
+    {
+      "path": "run1758/real/gallery_mixeval.json",
+      "bytes": 4293,
+      "sha256": "187c84dd41fcfad0de4c2994782eee011a7bc0e88046a22fe258d4d2dcaf1847"
+    },
+    {
+      "path": "run1758/real/results/real/40_source_typed/RESULT.json",
+      "bytes": 5731,
+      "sha256": "af36c296e1a9e6aca69e7cab564f6c9b6d8a768281d9ffce2cfadfc67d925af5"
+    },
+    {
+      "path": "run1758/real/results/real/40_source_typed/HTTP_TRACE.json",
+      "bytes": 2497,
+      "sha256": "0a4ed0b03dd1420b90038c239fac0d8439165fec08f2aaf090d2c7bab573f436"
+    },
+    {
+      "path": "run1758/rescore/results/40_source_typed/RESULT.json",
+      "bytes": 2695,
+      "sha256": "d6dcb1cedac7e8d8a996597ebd5b2d72cb431c2c8ef5c6ef765ca02f73c40cd2"
+    },
+    {
+      "path": "run1758/rescore/results/40_source_typed/records.jsonl",
+      "bytes": 2390,
+      "sha256": "4911841ef1190ff1a93e558b92ca30bd37773bc2464723803e1400bdfb594ae4"
+    },
+    {
+      "path": "run1758/real/results/real/200_source_typed/RESULT.json",
+      "bytes": 7326,
+      "sha256": "b79f264ad73252dd6fcde23496f1b4831a6f7da24e02fd6c3543cea956b45d63"
+    },
+    {
+      "path": "run1758/real/results/real/200_source_typed/HTTP_TRACE.json",
+      "bytes": 3043,
+      "sha256": "7792104d191ee0eeae95507eac7135e7037421a0464d61981188998ebf182d69"
+    },
+    {
+      "path": "run1758/rescore/results/200_source_typed/RESULT.json",
+      "bytes": 2698,
+      "sha256": "aa2bacd10baefc2a74efa5c2cb4e507ed1279691224a0236963943d49b5916f6"
+    },
+    {
+      "path": "run1758/rescore/results/200_source_typed/records.jsonl",
+      "bytes": 3859,
+      "sha256": "72579883fcd4c2299ef77292f1c032f6c336fb6a1907f3de2ecd079c070965a4"
+    }
+  ]
+}

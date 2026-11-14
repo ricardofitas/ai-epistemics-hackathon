@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "reviewer": "gateway_review",
+  "status": "COMPLETE_INDEPENDENT_123_CASES_PASS",
+  "scope": "Independent engineering regression of four already exposed captured requests; no prospective validation, new provider/model request, or claim of fresh native MetricRunner execution.",
+  "read_only_inputs": [
+    "real/native_probe.py",
+    "rescore/offline_rescore.py",
+    "real/selected2.json",
+    "real/results/real/*/HTTP_TRACE.json",
+    "real/results/real/*/RESULT.json",
+    "source/check_contract.py",
+    "source/native_source_gate.py"
+  ],
+  "supported_boundaries": {
+    "source": "Explicit supported version and free-form task type; JSON object with nonblank string prompt, string context, nonempty list of nonblank string target aliases, supported nonbool string/int id. Source selection is anchored by trusted canonical SHA-256, never by candidate self-assertion.",
+    "source_id": "Preserve source and native delivered values AND types. Allow str/int compatibility only when exact str(source_id)==str(delivered_id); no coercion through int/float, no trimming, no bool-as-int, no leading-zero aliasing. 40 string to 40 int is supported; 040 to 40 is rejected. Registry lookup identity (source_index) is separate from row id; a registered source_index 40 may validly hold row id case40. Integers must be nonnegative.",
+    "request": "One non-stream POST to the explicit captured endpoint; expected model and deterministic source-typed template, expected ordered system/user messages and all generation parameters bound to a trusted request snapshot. Stock malformed placeholder requests are negative natural controls even though capture succeeded.",
+    "response": "HTTP 200, parseable object, nonempty exact unique provider response id, exact expected model, no error, exactly one choice with index 0, finish_reason stop, assistant message and nonempty string content. Copy content verbatim including leading newlines, tags and literal text. Never extract from reasoning_content, generated_ans, gold aliases, or text parsing.",
+    "unsupported": "Unknown task/schema, choice/MCQ task absent explicit semantics, streaming/event stream, multiple choices, structured content arrays, tool/function/audio/refusal-only outputs, missing/blank final content, invalid JSON or non-object response are non-eligible with explicit reason; never silently default or cast to string."
+  },
+  "identity_checks": [
+    "Trusted source anchor is immutable deep snapshot and checked against source hash.",
+    "Request exact content and all consequential params validated against deterministic source-derived or trusted expected request; question and context substring checks alone insufficient.",
+    "Raw request-body SHA is distinct from canonical request-payload SHA because native HTTP serialization uses its own whitespace/Unicode escaping; never claim canonical hash proves unavailable request wire bytes.",
+    "Response raw-body hash verifies exact captured body bytes and stays distinct from canonical parsed-response hash and final-content UTF-8 hash.",
+    "A transaction binds source key/hash, condition, request identity, response body/id/model, and delivered row; swapping whole intact traces across sources or conditions must fail.",
+    "Duplicate response id/capture is excluded or explicitly blocked; same stock request hash on distinct captured responses is not itself proof of duplicate response.",
+    "In-place caller mutations after trust registration or ticket approval cannot change approved bytes or leak to dispatch/result; delivered fields must equal trusted source except documented exact-ID normalization."
+  ],
+  "native_metric_rules": {
+    "classification": "Captured native score 0 with scored_samples=0 and invalid reference is UNSCORABLE_REFERENCE with eligible score null. It is not an observed wrong answer.",
+    "details_fallback": "When native scored_samples is null, finite numeric nonbool per-row primary_metric_details may derive reference-eligible count, clearly labeled derived rather than replacing native field. Null/bool/NaN details never become eligible.",
+    "zero_eligible": "Aggregate zero eligible metrics yields no numeric eligible accuracy; report null and explicit unknown/unscorable classification.",
+    "native_claim": "Existing installed MetricRunner outputs may be replayed only with explicit historical replay provenance. No fresh installed-native execution claim unless module imported/executed and origins captured."
+  },
+  "test_groups": [
+    {
+      "group": "natural_controls",
+      "denominator": 4,
+      "cases": [
+        "40_source_typed passes typed-request gate",
+        "200_source_typed passes typed-request gate",
+        "40_native_gallery fails typed-request gate and native zero stays unscorable",
+        "200_native_gallery fails typed-request gate and native zero stays unscorable"
+      ]
+    },
+    {
+      "group": "artificial_source_faults",
+      "cases": [
+        "source hash/content altered",
+        "unknown source",
+        "missing prompt/context/target/id",
+        "blank or wrong type prompt/context",
+        "empty/wrong type/nonstring target aliases",
+        "unknown schema/task",
+        "unsupported choice/MCQ source",
+        "bool/float/list/dict ids",
+        "leading-zero and whitespace ID changes"
+      ]
+    },
+    {
+      "group": "artificial_request_faults",
+      "cases": [
+        "source swap",
+        "question mutation/removal",
+        "context mutation/removal",
+        "placeholder retained",
+        "option instruction injected",
+        "model/temperature/top_p/max_tokens/stream mutation",
+        "missing or extra user/system message",
+        "wrong message role",
+        "endpoint/method mutation",
+        "request hash tampering",
+        "whole request plus recomputed candidate hash tampering"
+      ]
+    },
+    {
+      "group": "artificial_capture_faults",
+      "cases": [
+        "response body altered without hash update",
+        "response body altered with candidate hash update but trusted capture identity preserved",
+        "HTTP non200",
+        "missing/empty/error response",
+        "invalid JSON",
+        "nonobject JSON",
+        "model mismatch",
+        "missing/blank/nonstring id",
+        "duplicate id",
+        "no/multiple choices",
+        "choice index !=0",
+        "unfinished finish_reason",
+        "missing/nonassistant message",
+        "missing/null/blank/nonstring/array content",
+        "missing/invalid usage if usage contract required",
+        "credential redaction must not claim original raw hash verification"
+      ]
+    },
+    {
+      "group": "artificial_integrity_faults",
+      "cases": [
+        "delivered source field altered",
+        "delivered ID differs only through int coercion",
+        "source mutated after registry creation",
+        "request mutated after approval",
+        "output mutated after retrieval cannot alter ticket provenance",
+        "duplicate capture in batch",
+        "zero eligible metric denominator",
+        "finite/nonbool detail checks",
+        "metadata-only edit changes metadata hash while source/request/final hashes remain identical"
+      ]
+    },
+    {
+      "group": "positive_preservation",
+      "cases": [
+        "verbatim newline final content equals response message.content",
+        "generated_ans unchanged",
+        "reasoning_content never substitutes final",
+        "literal answer/think tags in final preserved verbatim",
+        "gold changed in candidate cannot influence extraction",
+        "returned snapshot detached from caller object"
+      ]
+    }
+  ],
+  "reporting": {
+    "denominators": "Natural 2 typed positives and 2 stock negatives reported separately from synthetic positive-format controls and all artificial injected faults; no pooled predictive rate. Fault results report failures detected / faults tested with unique named cases.",
+    "limitations": [
+      "Four exposed captures only",
+      "Tests do not estimate unseen model performance",
+      "Unknown formats are explicitly unsupported rather than repaired heuristically",
+      "No endpoint calls or frozen input writes"
+    ]
+  },
+  "pending": "Optional review of parent replay_existing.py when notified ready.",
+  "final_report": "INDEPENDENT_GATEWAY_REVIEW_FINAL.json"
+}

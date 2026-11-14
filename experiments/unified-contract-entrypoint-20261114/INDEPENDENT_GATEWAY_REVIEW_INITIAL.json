@@ -1,0 +1,3473 @@
+{
+  "scope": "Engineering regression on four previously exposed archived requests; no prospective evaluation, new model/provider calls, or installed-native execution.",
+  "module_sha256": "f29ad207b7f2303538a39e15ea3212cf4ec0d1c82b8a4036894072a60b4418e2",
+  "new_provider_calls": 0,
+  "fresh_installed_metric_runner_calls": 0,
+  "results": [
+    {
+      "name": "archive_40_typed",
+      "group": "natural_controls",
+      "passed": true,
+      "expected": "VERIFIED_WITHOUT_METRIC; provider structured final string preserved verbatim; native delivered generated_ans untouched",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "archive_40_stock_typed_gate",
+      "group": "natural_controls",
+      "passed": true,
+      "expected": "INVALID before transport: stock request cannot pass typed profile",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "archive_40_stock_zero_replay",
+      "group": "historical_native_metric_replay",
+      "passed": true,
+      "expected": "UNSCORABLE; historical zero with scored_samples=0 and [null] must not become measured wrong answer",
+      "actual_status": "UNSCORABLE",
+      "failures": [
+        "no_eligible_per_row_metric_detail"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "archive_40_typed_original_zero_replay",
+      "group": "historical_native_metric_replay",
+      "passed": true,
+      "expected": "SCORED historical native diagnostic zero (numeric per-row detail); no fresh installed-native execution",
+      "actual_status": "SCORED",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "archive_200_typed",
+      "group": "natural_controls",
+      "passed": true,
+      "expected": "VERIFIED_WITHOUT_METRIC; provider structured final string preserved verbatim; native delivered generated_ans untouched",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "archive_200_stock_typed_gate",
+      "group": "natural_controls",
+      "passed": true,
+      "expected": "INVALID before transport: stock request cannot pass typed profile",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "archive_200_stock_zero_replay",
+      "group": "historical_native_metric_replay",
+      "passed": true,
+      "expected": "UNSCORABLE; historical zero with scored_samples=0 and [null] must not become measured wrong answer",
+      "actual_status": "UNSCORABLE",
+      "failures": [
+        "no_eligible_per_row_metric_detail"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "archive_200_typed_original_zero_replay",
+      "group": "historical_native_metric_replay",
+      "passed": true,
+      "expected": "SCORED historical native diagnostic zero (numeric per-row detail); no fresh installed-native execution",
+      "actual_status": "SCORED",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "malformed_source_prompt_0",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_source_prompt"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_prompt_1",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_source_prompt"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_prompt_2",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_source_prompt"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_prompt_3",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_source_prompt"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_prompt_4",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_source_prompt"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_context_0",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "unsupported_context_type"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_context_1",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "unsupported_context_type"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_context_2",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "unsupported_context_type"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_context_3",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "unsupported_context_type"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_target_0",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_alias_reference"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_target_1",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_alias_reference"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_target_2",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_alias_reference"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_target_3",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_alias_reference"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_target_4",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_alias_reference"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_target_5",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_alias_reference"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_problem_type_0",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "unsupported_source_problem_type"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_problem_type_1",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "unsupported_source_problem_type"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_problem_type_2",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "unsupported_source_problem_type"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "malformed_source_id_0",
+      "group": "artificial_source_faults",
+      "passed": false,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "True",
+          "1e9446ae2e05750b99d3039704e9fff68e2a7607db83350848c82faf8578898f"
+        ],
+        "source_sha256": "1e9446ae2e05750b99d3039704e9fff68e2a7607db83350848c82faf8578898f",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": true,
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "_observed_transport_calls": 1
+      }
+    },
+    {
+      "name": "malformed_source_id_1",
+      "group": "artificial_source_faults",
+      "passed": false,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "False",
+          "a40a81bc8d3165b46692937c8f649a2e75935f17dd5a3f0b77de8bc45c1df3dd"
+        ],
+        "source_sha256": "a40a81bc8d3165b46692937c8f649a2e75935f17dd5a3f0b77de8bc45c1df3dd",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": false,
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "_observed_transport_calls": 1
+      }
+    },
+    {
+      "name": "malformed_source_id_2",
+      "group": "artificial_source_faults",
+      "passed": false,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "None",
+          "da740dbffea15ebbd234bd2b652e5176a5c6fd58f643e882f5cc2ce72de733cd"
+        ],
+        "source_sha256": "da740dbffea15ebbd234bd2b652e5176a5c6fd58f643e882f5cc2ce72de733cd",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": null,
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "_observed_transport_calls": 1
+      }
+    },
+    {
+      "name": "malformed_source_id_3",
+      "group": "artificial_source_faults",
+      "passed": false,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40.0",
+          "9b7699a817e2184070dee1e5ef2724adfd0e9be9d70d1d31be47cd47c81fa2e8"
+        ],
+        "source_sha256": "9b7699a817e2184070dee1e5ef2724adfd0e9be9d70d1d31be47cd47c81fa2e8",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": 40.0,
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "_observed_transport_calls": 1
+      }
+    },
+    {
+      "name": "malformed_source_id_4",
+      "group": "artificial_source_faults",
+      "passed": false,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "[]",
+          "72085d5db4ed961219311bc88f6db92b870312adac2eff0532762da052026931"
+        ],
+        "source_sha256": "72085d5db4ed961219311bc88f6db92b870312adac2eff0532762da052026931",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": [],
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "_observed_transport_calls": 1
+      }
+    },
+    {
+      "name": "malformed_source_id_5",
+      "group": "artificial_source_faults",
+      "passed": false,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "{}",
+          "2cab6fb5177a1f78fed9041c7a55dfb5142da807ee15474b928cc0271d08e334"
+        ],
+        "source_sha256": "2cab6fb5177a1f78fed9041c7a55dfb5142da807ee15474b928cc0271d08e334",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": {},
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "_observed_transport_calls": 1
+      }
+    },
+    {
+      "name": "malformed_source_id_6",
+      "group": "artificial_source_faults",
+      "passed": false,
+      "expected": "non-eligible before transport under explicit supported source schema",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "{'a': 1}",
+          "cc87e6a061916ec535415502151490a25abc5b579a73ee79f8b7f54565b4dde9"
+        ],
+        "source_sha256": "cc87e6a061916ec535415502151490a25abc5b579a73ee79f8b7f54565b4dde9",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": {
+            "a": 1
+          },
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "_observed_transport_calls": 1
+      }
+    },
+    {
+      "name": "unknown_task",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "unsupported task fails before transport",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "unsupported_task_or_provider"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "unsupported_provider",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "unsupported provider fails before transport",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "unsupported_task_or_provider"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "unknown_source",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "unknown trusted source fails before transport",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "trusted_source_unavailable"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "source_content_tamper",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "source mismatch before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "source_hash_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "reference_tamper",
+      "group": "artificial_source_faults",
+      "passed": true,
+      "expected": "reference mismatch before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "reference_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "delivered_prompt",
+      "group": "artificial_integrity_faults",
+      "passed": true,
+      "expected": "trusted source field mutation rejected",
+      "actual_status": "INVALID",
+      "failures": [
+        "delivered_source_field_changed:prompt"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "delivered_context",
+      "group": "artificial_integrity_faults",
+      "passed": true,
+      "expected": "trusted source field mutation rejected",
+      "actual_status": "INVALID",
+      "failures": [
+        "delivered_source_field_changed:context"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "delivered_target",
+      "group": "artificial_integrity_faults",
+      "passed": true,
+      "expected": "trusted source field mutation rejected",
+      "actual_status": "INVALID",
+      "failures": [
+        "delivered_source_field_changed:target"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "delivered_bad_id_'040'",
+      "group": "artificial_integrity_faults",
+      "passed": true,
+      "expected": "exact ID roundtrip only; no numeric coercion",
+      "actual_status": "INVALID",
+      "failures": [
+        "delivered_source_field_changed:id"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "delivered_bad_id_'40 '",
+      "group": "artificial_integrity_faults",
+      "passed": true,
+      "expected": "exact ID roundtrip only; no numeric coercion",
+      "actual_status": "INVALID",
+      "failures": [
+        "delivered_source_field_changed:id"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "delivered_bad_id_True",
+      "group": "artificial_integrity_faults",
+      "passed": true,
+      "expected": "exact ID roundtrip only; no numeric coercion",
+      "actual_status": "INVALID",
+      "failures": [
+        "delivered_source_field_changed:id"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "delivered_bad_id_40.0",
+      "group": "artificial_integrity_faults",
+      "passed": true,
+      "expected": "exact ID roundtrip only; no numeric coercion",
+      "actual_status": "INVALID",
+      "failures": [
+        "delivered_source_field_changed:id"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "delivered_unsupported_type_True",
+      "group": "artificial_integrity_faults",
+      "passed": false,
+      "expected": "delivered ID normalization permits only supported string/int types",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "True",
+          "935d2f59e43f00f289881ab634d719297a71e150a40f706c811a98ec9082e53e"
+        ],
+        "source_sha256": "935d2f59e43f00f289881ab634d719297a71e150a40f706c811a98ec9082e53e",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": true,
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "_observed_transport_calls": 1
+      }
+    },
+    {
+      "name": "delivered_unsupported_type_40.0",
+      "group": "artificial_integrity_faults",
+      "passed": false,
+      "expected": "delivered ID normalization permits only supported string/int types",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40.0",
+          "0fb1a7ab642e96b76983db9da2d6c0ceaaf34fe1c11dd8ba004ca44fe0b7e844"
+        ],
+        "source_sha256": "0fb1a7ab642e96b76983db9da2d6c0ceaaf34fe1c11dd8ba004ca44fe0b7e844",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": 40.0,
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "_observed_transport_calls": 1
+      }
+    },
+    {
+      "name": "delivered_unsupported_type_None",
+      "group": "artificial_integrity_faults",
+      "passed": false,
+      "expected": "delivered ID normalization permits only supported string/int types",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "None",
+          "374a02feae5e1841d9a98c03cc165f183c0c47b431f25d5c692180a327746a0e"
+        ],
+        "source_sha256": "374a02feae5e1841d9a98c03cc165f183c0c47b431f25d5c692180a327746a0e",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": null,
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "_observed_transport_calls": 1
+      }
+    },
+    {
+      "name": "existing_final_column",
+      "group": "artificial_integrity_faults",
+      "passed": true,
+      "expected": "existing final column rejected",
+      "actual_status": "INVALID",
+      "failures": [
+        "provider_final_column_already_exists"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_model",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "native request mutation rejected before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_temperature",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "native request mutation rejected before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_top_p",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "native request mutation rejected before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_max_tokens",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "native request mutation rejected before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_stream",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "native request mutation rejected before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_missing_message",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "native request mutation rejected before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_extra_message",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "native request mutation rejected before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_role",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "native request mutation rejected before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_source_question",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "native request mutation rejected before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_source_context",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "native request mutation rejected before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_appended_instruction",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "native request mutation rejected before transport",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "request_source_swap",
+      "group": "artificial_request_faults",
+      "passed": true,
+      "expected": "whole source-200 request cannot be attached to source-40",
+      "actual_status": "INVALID",
+      "failures": [
+        "native_request_profile_mismatch"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "capture_method",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "inconsistent capture envelope rejected",
+      "actual_status": "INVALID",
+      "failures": [
+        "actual_request_binding_mismatch"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "capture_url",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "inconsistent capture envelope rejected",
+      "actual_status": "INVALID",
+      "failures": [
+        "actual_request_binding_mismatch"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "capture_provenance",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "inconsistent capture envelope rejected",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "capture_provenance_unavailable"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "capture_actual_body",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "inconsistent capture envelope rejected",
+      "actual_status": "INVALID",
+      "failures": [
+        "actual_request_binding_mismatch"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_http_error_body",
+      "group": "artificial_capture_faults",
+      "passed": false,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40",
+          "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7"
+        ],
+        "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "203f25c28a0c50d82bf5c95bfd6f8f108a172fa2b9f51b09497ec42bd89ea900",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1407,
+          "sha256": "203f25c28a0c50d82bf5c95bfd6f8f108a172fa2b9f51b09497ec42bd89ea900",
+          "utf8": "{\"id\": \"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\", \"created\": 1794677255, \"model\": \"qwen3.8-27b\", \"system_fingerprint\": \"vllm-0.31.0-2fda1141\", \"object\": \"chat.completion\", \"choices\": [{\"index\": 0, \"finish_reason\": \"stop\", \"message\": {\"role\": \"assistant\", \"content\": \"\\n\\nDance\", \"reasoning_content\": \"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}], \"usage\": {\"prompt_tokens\": 108, \"completion_tokens\": 204, \"total_tokens\": 312, \"prompt_tokens_details\": {\"cached_tokens\": 0}, \"completion_tokens_details\": {\"reasoning_tokens\": 199}}, \"error\": {\"message\": \"failed\"}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          },
+          "error": {
+            "message": "failed"
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": "40",
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        }
+      }
+    },
+    {
+      "name": "response_empty_error_object",
+      "group": "artificial_capture_faults",
+      "passed": false,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40",
+          "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7"
+        ],
+        "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "41ebc7c02ccc2e9b22afa3b7212b488db04bc27a129c771303a5a100b037d357",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1388,
+          "sha256": "41ebc7c02ccc2e9b22afa3b7212b488db04bc27a129c771303a5a100b037d357",
+          "utf8": "{\"id\": \"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\", \"created\": 1794677255, \"model\": \"qwen3.8-27b\", \"system_fingerprint\": \"vllm-0.31.0-2fda1141\", \"object\": \"chat.completion\", \"choices\": [{\"index\": 0, \"finish_reason\": \"stop\", \"message\": {\"role\": \"assistant\", \"content\": \"\\n\\nDance\", \"reasoning_content\": \"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}], \"usage\": {\"prompt_tokens\": 108, \"completion_tokens\": 204, \"total_tokens\": 312, \"prompt_tokens_details\": {\"cached_tokens\": 0}, \"completion_tokens_details\": {\"reasoning_tokens\": 199}}, \"error\": {}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          },
+          "error": {}
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": "40",
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        }
+      }
+    },
+    {
+      "name": "response_model",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INVALID",
+      "failures": [
+        "response_model_mismatch"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_object",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "unsupported_response_object"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_missing_id",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INVALID",
+      "failures": [
+        "missing_response_id"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_blank_id",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INVALID",
+      "failures": [
+        "missing_response_id"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_numeric_id",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INVALID",
+      "failures": [
+        "missing_response_id"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_no_choices",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "ambiguous_or_missing_choice"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_multiple_choices",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "ambiguous_or_missing_choice"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_wrong_index",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_choice_index"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_bool_index",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_choice_index"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_unfinished",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "completion_not_stopped"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_missing_message",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_assistant_message"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_wrong_role",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INVALID",
+      "failures": [
+        "invalid_assistant_message"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_missing_content",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "empty_or_nontext_final"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_null_content",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "empty_or_nontext_final"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_blank_content",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "empty_or_nontext_final"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_array_content",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "empty_or_nontext_final"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_numeric_content",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "empty_or_nontext_final"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_tool_calls",
+      "group": "artificial_capture_faults",
+      "passed": false,
+      "expected": "response with error/unsupported or incomplete final is non-eligible",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0,
+      "counterexample_report": {
+        "status": "VERIFIED_WITHOUT_METRIC",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40",
+          "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7"
+        ],
+        "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "4e51ede443466c74eb525fd6b344c4a1509db103c9577e36e2c383d660c4b0bc",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": null,
+        "metric_result_sha256": null,
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1473,
+          "sha256": "4e51ede443466c74eb525fd6b344c4a1509db103c9577e36e2c383d660c4b0bc",
+          "utf8": "{\"id\": \"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\", \"created\": 1794677255, \"model\": \"qwen3.8-27b\", \"system_fingerprint\": \"vllm-0.31.0-2fda1141\", \"object\": \"chat.completion\", \"choices\": [{\"index\": 0, \"finish_reason\": \"stop\", \"message\": {\"role\": \"assistant\", \"content\": \"\\n\\nDance\", \"reasoning_content\": \"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\", \"tool_calls\": [{\"id\": \"tool\", \"type\": \"function\", \"function\": {\"name\": \"f\", \"arguments\": \"{}\"}}]}}], \"usage\": {\"prompt_tokens\": 108, \"completion_tokens\": 204, \"total_tokens\": 312, \"prompt_tokens_details\": {\"cached_tokens\": 0}, \"completion_tokens_details\": {\"reasoning_tokens\": 199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n",
+                "tool_calls": [
+                  {
+                    "id": "tool",
+                    "type": "function",
+                    "function": {
+                      "name": "f",
+                      "arguments": "{}"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": "40",
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        }
+      }
+    },
+    {
+      "name": "response_invalid_json",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "malformed/unsupported response non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "malformed_response"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_not_object",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "malformed/unsupported response non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "unsupported_response_object"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_duplicate_keys",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "malformed/unsupported response non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "malformed_response"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_nonfinite",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "malformed/unsupported response non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "malformed_response"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "response_invalid_utf8",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "malformed/unsupported response non-eligible",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "malformed_response"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "http_500",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "HTTP status must be integer 200",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "non_200_http_status"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "http_401",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "HTTP status must be integer 200",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "non_200_http_status"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "http_True",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "HTTP status must be integer 200",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "non_200_http_status"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "http_'200'",
+      "group": "artificial_capture_faults",
+      "passed": true,
+      "expected": "HTTP status must be integer 200",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "non_200_http_status"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "duplicate_response",
+      "group": "artificial_integrity_faults",
+      "passed": true,
+      "expected": "second capture with identical response id blocked",
+      "actual_status": "INVALID",
+      "failures": [
+        "duplicate_response_id"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "registry_isolated_from_input_mutation",
+      "group": "positive_preservation",
+      "passed": true,
+      "expected": "registry copied anchor independently",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "inplace_mutation_during_transport",
+      "group": "positive_preservation",
+      "passed": true,
+      "expected": "approved source, reference and row stay snapshotted",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "reentrant_duplicate",
+      "group": "artificial_integrity_faults",
+      "passed": true,
+      "expected": "only one same-ID transaction eligible under reentrant callback",
+      "actual_status": "INVALID",
+      "failures": [
+        "duplicate_response_id"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "metric_null_details",
+      "group": "artificial_metric_faults",
+      "passed": true,
+      "expected": "no numeric eligible score for invalid/zero-eligible metric",
+      "actual_status": "UNSCORABLE",
+      "failures": [
+        "no_eligible_per_row_metric_detail"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "metric_bool_details",
+      "group": "artificial_metric_faults",
+      "passed": true,
+      "expected": "no numeric eligible score for invalid/zero-eligible metric",
+      "actual_status": "UNSCORABLE",
+      "failures": [
+        "no_eligible_per_row_metric_detail"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "metric_zero_eligible",
+      "group": "artificial_metric_faults",
+      "passed": true,
+      "expected": "no numeric eligible score for invalid/zero-eligible metric",
+      "actual_status": "UNSCORABLE",
+      "failures": [
+        "no_eligible_per_row_metric_detail"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "metric_invalid_reference",
+      "group": "artificial_metric_faults",
+      "passed": true,
+      "expected": "no numeric eligible score for invalid/zero-eligible metric",
+      "actual_status": "UNSCORABLE",
+      "failures": [
+        "no_eligible_per_row_metric_detail"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "metric_no_details",
+      "group": "artificial_metric_faults",
+      "passed": true,
+      "expected": "no numeric eligible score for invalid/zero-eligible metric",
+      "actual_status": "UNSCORABLE",
+      "failures": [
+        "no_eligible_per_row_metric_detail"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "metric_bool_score",
+      "group": "artificial_metric_faults",
+      "passed": true,
+      "expected": "no numeric eligible score for invalid/zero-eligible metric",
+      "actual_status": "UNSCORABLE",
+      "failures": [
+        "metric_score_unavailable"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "metric_nan_score",
+      "group": "artificial_metric_faults",
+      "passed": true,
+      "expected": "no numeric eligible score for invalid/zero-eligible metric",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "metric_adapter_error"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "metric_error_result",
+      "group": "artificial_metric_faults",
+      "passed": true,
+      "expected": "no numeric eligible score for invalid/zero-eligible metric",
+      "actual_status": "UNSCORABLE",
+      "failures": [
+        "invalid_metric_result"
+      ],
+      "transport_calls": 1,
+      "metric_calls": 1
+    },
+    {
+      "name": "metric_negative_count",
+      "group": "artificial_metric_faults",
+      "passed": false,
+      "expected": "malformed per-row metric evidence must not become SCORED",
+      "actual_status": "SCORED",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 1,
+      "counterexample_report": {
+        "status": "SCORED",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 1,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40",
+          "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7"
+        ],
+        "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "metric_result_sha256": "6e081bef4d33a5b76de0ef5a7a76c526736903c31aad019b72f3e6fec432f6e0",
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": "40",
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "metric_result": {
+          "primary_metric_result": {
+            "score": 0.0,
+            "scored_samples": -1
+          },
+          "primary_metric_details": [
+            0.0
+          ]
+        },
+        "eligible_metric_score": 0.0,
+        "eligible_metric_rows": 1
+      }
+    },
+    {
+      "name": "metric_bool_count",
+      "group": "artificial_metric_faults",
+      "passed": false,
+      "expected": "malformed per-row metric evidence must not become SCORED",
+      "actual_status": "SCORED",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 1,
+      "counterexample_report": {
+        "status": "SCORED",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 1,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40",
+          "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7"
+        ],
+        "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "metric_result_sha256": "bff977d08e319ab23854918835e6cdf7152fa34b314c12388635ce9eb575d053",
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": "40",
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "metric_result": {
+          "primary_metric_result": {
+            "score": 0.0,
+            "scored_samples": true
+          },
+          "primary_metric_details": [
+            0.0
+          ]
+        },
+        "eligible_metric_score": 0.0,
+        "eligible_metric_rows": 1
+      }
+    },
+    {
+      "name": "metric_string_count",
+      "group": "artificial_metric_faults",
+      "passed": false,
+      "expected": "malformed per-row metric evidence must not become SCORED",
+      "actual_status": "SCORED",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 1,
+      "counterexample_report": {
+        "status": "SCORED",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 1,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40",
+          "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7"
+        ],
+        "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "metric_result_sha256": "9677812473508e1bd1dafbef410b54cdd19e89948f08926d8f6e567e00ffd527",
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": "40",
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "metric_result": {
+          "primary_metric_result": {
+            "score": 0.0,
+            "scored_samples": "1"
+          },
+          "primary_metric_details": [
+            0.0
+          ]
+        },
+        "eligible_metric_score": 0.0,
+        "eligible_metric_rows": 1
+      }
+    },
+    {
+      "name": "metric_multiple_count",
+      "group": "artificial_metric_faults",
+      "passed": false,
+      "expected": "malformed per-row metric evidence must not become SCORED",
+      "actual_status": "SCORED",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 1,
+      "counterexample_report": {
+        "status": "SCORED",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 1,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40",
+          "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7"
+        ],
+        "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "metric_result_sha256": "3defe33df007bc06b81b2ddb0d9004bd7b2e856caf357a78b626f1a017cdc7ec",
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": "40",
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "metric_result": {
+          "primary_metric_result": {
+            "score": 0.0,
+            "scored_samples": 2
+          },
+          "primary_metric_details": [
+            0.0
+          ]
+        },
+        "eligible_metric_score": 0.0,
+        "eligible_metric_rows": 1
+      }
+    },
+    {
+      "name": "metric_inconsistent_score",
+      "group": "artificial_metric_faults",
+      "passed": false,
+      "expected": "malformed per-row metric evidence must not become SCORED",
+      "actual_status": "SCORED",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 1,
+      "counterexample_report": {
+        "status": "SCORED",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 1,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40",
+          "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7"
+        ],
+        "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "metric_result_sha256": "0c3b68d87d0c34e570ae9a18d18477ff978f4cf88e0ac3776c8be1ea0158d6c4",
+        "original_native_result": null,
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "bytes_length": 416,
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "utf8": "{\"model\": \"qwen3.8-27b\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant specialized in generating answers to questions.\"}, {\"role\": \"user\", \"content\": \"Context:\\n{None}\\n\\nQuestion:\\n{Benesh Notation is the written language of which activity?}\\nAnswer the question in free text. Output only the factual answer, without an answer tag.\"}], \"top_p\": 1.0, \"max_tokens\": 4096, \"temperature\": 0.0}"
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "bytes_length": 1341,
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "utf8": "{\"id\":\"chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b\",\"created\":1794677255,\"model\":\"qwen3.8-27b\",\"system_fingerprint\":\"vllm-0.31.0-2fda1141\",\"object\":\"chat.completion\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\nDance\",\"reasoning_content\":\"We need answer question: \\\"Benesh Notation is the written language of which activity?\\\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \\\"Benesh Notation is the written language of dance\\\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \\\"Benesh Notation is the written language of which activity?\\\" Answer: dance. Could be \\\"ballet\\\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \\\"the written language of dance\\\". The activity: dance. If asked \\\"which activity\\\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\\n\"}}],\"usage\":{\"prompt_tokens\":108,\"completion_tokens\":204,\"total_tokens\":312,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":199}}}"
+        },
+        "http_status": 200,
+        "capture_label": "historical archived HTTP_TRACE replay",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": "40",
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "provider_final_content": "\n\nDance"
+        },
+        "metric_result": {
+          "primary_metric_result": {
+            "score": 1
+          },
+          "primary_metric_details": [
+            0
+          ]
+        },
+        "eligible_metric_score": 1,
+        "eligible_metric_rows": 1
+      }
+    },
+    {
+      "name": "missing_scorer_identity",
+      "group": "artificial_metric_faults",
+      "passed": true,
+      "expected": "metric adapter requires explicit scorer identity before transport",
+      "actual_status": "INCOMPLETE",
+      "failures": [
+        "scorer_identity_unavailable"
+      ],
+      "transport_calls": 0,
+      "metric_calls": 0
+    },
+    {
+      "name": "literal_final_preserved",
+      "group": "positive_preservation",
+      "passed": true,
+      "expected": "API final content is copied verbatim; tags/whitespace/reasoning never parsed",
+      "actual_status": "VERIFIED_WITHOUT_METRIC",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 0
+    },
+    {
+      "name": "scorer_metadata_hash_separation",
+      "group": "positive_preservation",
+      "passed": true,
+      "expected": "scorer manifest identity stays separate from source/request/response/final/result hashes",
+      "actual_status": "SCORED",
+      "failures": [],
+      "transport_calls": 1,
+      "metric_calls": 1
+    }
+  ],
+  "groups": {
+    "artificial_capture_faults": {
+      "tested": 33,
+      "passed": 30
+    },
+    "artificial_integrity_faults": {
+      "tested": 13,
+      "passed": 10
+    },
+    "artificial_metric_faults": {
+      "tested": 14,
+      "passed": 9
+    },
+    "artificial_request_faults": {
+      "tested": 12,
+      "passed": 12
+    },
+    "artificial_source_faults": {
+      "tested": 30,
+      "passed": 23
+    },
+    "historical_native_metric_replay": {
+      "tested": 4,
+      "passed": 4
+    },
+    "natural_controls": {
+      "tested": 4,
+      "passed": 4
+    },
+    "positive_preservation": {
+      "tested": 4,
+      "passed": 4
+    }
+  },
+  "status": "FAIL"
+}

@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "files_reviewed": {
+    "check_contract.py": "2cd2d9b566c5e3431ba2ca809aefce44f874516c926d53ce6b2bfa925b6d1174",
+    "source_contract_gateway.py": "5b0004b1960a8c187106bef26a4c62aa0fad0abf5007084fac54dad849ba6dfa",
+    "replay_existing.py": "9c8af1e04161d3c93c6d0b8b1976062cdbda8b77c0641b5c0198a7bbc391c91a"
+  },
+  "public_checker_entrypoint": "run_source_bound_evaluation delegates directly to gateway run_entrypoint; existing normalized audit/read/guard/CLI functions AST-identical to original source/check_contract.py",
+  "checks": {
+    "source_wire_and_response_hashes": "PASS",
+    "full_derivative_row_equals_historical_installed_rescore_input": "PASS for both typed cases",
+    "historical_metric_result_exact_preservation": "PASS",
+    "scorer_manifest_actual_bench_evaluation_native_origins_and_hash_separation": "PASS",
+    "original_native_result_exact_preservation": "PASS all four",
+    "stock_requests_blocked_before_transport_and_metric_callback": "PASS both",
+    "native_zero_no_eligible_reference_classification": "UNSCORABLE_REFERENCE preserved for both stock cases",
+    "no_new_installed_native_or_inference_claim": "PASS",
+    "optional_installed_adapter": "UNEXECUTED"
+  },
+  "denominators": {
+    "archived_typed_cases": {
+      "tested": 2,
+      "scored_via_historical_replay": 2,
+      "score_each": 1
+    },
+    "archived_stock_negative_controls": {
+      "tested": 2,
+      "rejected_before_callbacks": 2
+    },
+    "independent_gateway_regression": {
+      "tested": 123,
+      "passed": 123,
+      "artificial_faults": 106,
+      "constructed_preservation": 7,
+      "constructed_trust_boundary_controls": 2,
+      "natural_requests": 4,
+      "historical_original_metric_replays": 4
+    }
+  },
+  "new_provider_calls": 0,
+  "new_installed_metric_calls": 0,
+  "original_extracted_files_unchanged": 71,
+  "cases": [
+    {
+      "source_index": 40,
+      "condition": "native_gallery",
+      "status": "INVALID",
+      "checks": "PASS",
+      "metric_evidence": "historical native-zero UNSCORABLE preserved; callback unexecuted"
+    },
+    {
+      "source_index": 40,
+      "condition": "source_typed",
+      "status": "SCORED",
+      "checks": "PASS",
+      "metric_evidence": "historical installed-result replay only"
+    },
+    {
+      "source_index": 200,
+      "condition": "native_gallery",
+      "status": "INVALID",
+      "checks": "PASS",
+      "metric_evidence": "historical native-zero UNSCORABLE preserved; callback unexecuted"
+    },
+    {
+      "source_index": 200,
+      "condition": "source_typed",
+      "status": "SCORED",
+      "checks": "PASS",
+      "metric_evidence": "historical installed-result replay only"
+    }
+  ],
+  "limitations": [
+    "Regression reuses two exposed source questions and four archived HTTP requests; it is not prospective validation.",
+    "Historical file contents and caller-supplied registry/transport are the trust anchors; observed hashes and local consistency checks do not establish independent provider authentication or source-response association.",
+    "The replay script verifies stored per-trace digests and before/after file preservation; it does not independently establish the external artifact custody chain. Any authenticated wording is limited to the supplied trusted archive context.",
+    "Only the two typed cases enter the historical metric callback. Stock cases have zero transport and metric callbacks, with original native UNSCORABLE evidence preserved separately."
+  ]
+}

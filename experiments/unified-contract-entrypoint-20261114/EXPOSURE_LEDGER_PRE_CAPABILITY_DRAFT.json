@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-14T18:06:51.929344+00:00",
+  "status": "PRE_OBSERVED_EXPOSURE_DECLARED_NOT_BLIND",
+  "protocol_id": "independent-consumer-mixeval-freeform-chat-v1",
+  "scope": "This worker prepared a protocol from existing local artifacts only. Paths/hashes below bind existing inputs; not a prospective source/response exposure census for all earlier actors.",
+  "exposure_classes": [
+    {
+      "class": "prior_source_panel",
+      "observed_before_protocol": true,
+      "details": "Entire prior20question factorial panel and49/200row audits are documented in canonical state; selected40/200 were reused in four native requests and rescore. This task reuses two source_typed responses only. No unseen-source claim."
+    },
+    {
+      "class": "selected_source_and_raw_output",
+      "observed_before_protocol": true,
+      "source_indices": [
+        40,
+        200
+      ],
+      "raw_final_contents": [
+        "\\n\\nDance",
+        "\\n\\nTony Blair"
+      ],
+      "details": "Raw final contents and original user payloads inspected in this task; reasoning_content presence observed; raw reasoning prose was not printed or semantically annotated. Original native generated_ans scores0 and prior final-content rescore1 are already known."
+    },
+    {
+      "class": "expected_outcomes",
+      "observed_before_protocol": true,
+      "details": "Healthy score1, wrapper score0 and source-reference mismatch examples informed design. Falsifiable deterministic engineering expectations, not blind scientific predictions."
+    },
+    {
+      "class": "comparator_code",
+      "observed_before_protocol": false,
+      "details": "No EvalScope executable source or fresh remote metadata acquired in this task. Existing local EvalScope panel filenames were seen; their dataset rows were not opened or selected. Capability/source pin unresolved."
+    },
+    {
+      "class": "one_eval_code",
+      "observed_before_protocol": true,
+      "details": "Requested checker, native gate, native probe and offline rescore read. Auxiliary existing compute_exact_match and normalize_text source inspected in run1352/packages; full runtime commit remains8aba20ad17ee2c7d2391162ac03ffaebcbb17506 from install receipt, auxiliary files are not substituted runtime pins."
+    },
+    {
+      "class": "external_prior_work",
+      "observed_before_protocol": true,
+      "details": "EXTERNAL_FOLLOWUP and RESULTS reviewed locally: PR63 is acknowledged prior recognition, merge9addc1ecd29a30d4e4187f4dfd55142958d641ea. DataFlow Table2 evaluator/provenance gap remains unresolved. No PR refetch, repeated search, paper edit or external communication."
+    }
+  ],
+  "local_artifact_exposure_manifest": [
+    {
+      "path": "run1758/inputs/HACKATHON_EPISTEMICS_STATE.json",
+      "bytes": 242233,
+      "sha256": "a09abd2062610563f3c61a64892d2dad19fdf84d2093c9315b537d4d09dc514e"
+    },
+    {
+      "path": "run1758/package/external_followup/EXTERNAL_FOLLOWUP.json",
+      "bytes": 13172,
+      "sha256": "d46befa4ed451566318bda291af7efc655ca02df4e452e5a6b31ec051b24bbab"
+    },
+    {
+      "path": "run1758/package/external_followup/RESULTS.md",
+      "bytes": 1582,
+      "sha256": "fe8e108468d773a782f0bc1b488190e9b63888fae86b4e9d6de3f5b6bfa9185f"
+    },
+    {
+      "path": "run1758/source/check_contract.py",
+      "bytes": 6529,
+      "sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e"
+    },
+    {
+      "path": "run1758/source/native_source_gate.py",
+      "bytes": 2310,
+      "sha256": "1443f46343c4591a9fca5a6811f83e472b21c4351286b0392ca36fa158eb7d18"
+    },
+    {
+      "path": "run1758/real/native_probe.py",
+      "bytes": 18142,
+      "sha256": "6586ffa3591bdadb2cecc08faf284610e17a4b579c20b3bd1618906fff56aefd"
+    },
+    {
+      "path": "run1758/rescore/offline_rescore.py",
+      "bytes": 4770,
+      "sha256": "a385b0257f4cbe9f4f06df527c8085660d46d627c9f37c38984e5f3502f78d73"
+    },
+    {
+      "path": "run1758/real/selected2.json",
+      "bytes": 2470,
+      "sha256": "adf2bf8a0e56a5a9b34be106821631b68d11398690630a1756774d617b849161"
+    },
+    {
+      "path": "run1758/real/PROTOCOL.json",
+      "bytes": 6287,
+      "sha256": "f71f0e21f5f014de0707ff3790b7e2e3c14e4cdb84781cfd9052e1c749622864"
+    },
+    {
+      "path": "run1758/rescore/PROTOCOL.json",
+      "bytes": 2909,
+      "sha256": "8b1b6c5473138490083b3c2390b4555352bcbee9e3aa9e3ef53f68367c2ef000"
+    },
+    {
+      "path": "run1758/rescore/RESCORE_INPUTS.json",
+      "bytes": 50368,
+      "sha256": "0042527f975efefb813c5dd636fd269a5128c479f408526ff507003fb5c74cd2"
+    },
+    {
+      "path": "run1758/rescore/constraints.txt",
+      "bytes": 4620,
+      "sha256": "e0b660e1cb0b78a1a690d2376353f050584842146b716db14730c3e84cc80256"
+    },
+    {
+      "path": "run1758/real/INSTALL_RECEIPT.json",
+      "bytes": 471,
+      "sha256": "c3a8ae5bbb162d58c54d3029b25f4aab5ca12f25269a5fa26de4b5853f3a3e1f"
+    },
+    {
+      "path": "run1758/real/gallery_mixeval.json",
+      "bytes": 4293,
+      "sha256": "187c84dd41fcfad0de4c2994782eee011a7bc0e88046a22fe258d4d2dcaf1847"
+    },
+    {
+      "path": "run1758/real/results/real/40_source_typed/RESULT.json",
+      "bytes": 5731,
+      "sha256": "af36c296e1a9e6aca69e7cab564f6c9b6d8a768281d9ffce2cfadfc67d925af5"
+    },
+    {
+      "path": "run1758/real/results/real/40_source_typed/HTTP_TRACE.json",
+      "bytes": 2497,
+      "sha256": "0a4ed0b03dd1420b90038c239fac0d8439165fec08f2aaf090d2c7bab573f436"
+    },
+    {
+      "path": "run1758/rescore/results/40_source_typed/RESULT.json",
+      "bytes": 2695,
+      "sha256": "d6dcb1cedac7e8d8a996597ebd5b2d72cb431c2c8ef5c6ef765ca02f73c40cd2"
+    },
+    {
+      "path": "run1758/rescore/results/40_source_typed/records.jsonl",
+      "bytes": 2390,
+      "sha256": "4911841ef1190ff1a93e558b92ca30bd37773bc2464723803e1400bdfb594ae4"
+    },
+    {
+      "path": "run1758/real/results/real/200_source_typed/RESULT.json",
+      "bytes": 7326,
+      "sha256": "b79f264ad73252dd6fcde23496f1b4831a6f7da24e02fd6c3543cea956b45d63"
+    },
+    {
+      "path": "run1758/real/results/real/200_source_typed/HTTP_TRACE.json",
+      "bytes": 3043,
+      "sha256": "7792104d191ee0eeae95507eac7135e7037421a0464d61981188998ebf182d69"
+    },
+    {
+      "path": "run1758/rescore/results/200_source_typed/RESULT.json",
+      "bytes": 2698,
+      "sha256": "aa2bacd10baefc2a74efa5c2cb4e507ed1279691224a0236963943d49b5916f6"
+    },
+    {
+      "path": "run1758/rescore/results/200_source_typed/records.jsonl",
+      "bytes": 3859,
+      "sha256": "72579883fcd4c2299ef77292f1c032f6c336fb6a1907f3de2ecd079c070965a4"
+    }
+  ],
+  "auxiliary_code_or_summary_exposure": [
+    {
+      "path": "run1352/packages/one_eval/metrics/common/general.py",
+      "bytes": 23269,
+      "sha256": "dd7104eee19c829f3ddb5dd1faec0b97a230b253ab41b615d20b6799699d06a7"
+    },
+    {
+      "path": "run1352/packages/one_eval/utils/extractor.py",
+      "bytes": 21020,
+      "sha256": "4577cd7ccca4e180afcf5fc7a10b5f454eada2ebbaf6741efef69dc179af1d90"
+    },
+    {
+      "path": "run1758/real/install_probe.py",
+      "bytes": 2520,
+      "sha256": "83072266c756e5ea102a7ab1385cd632382d989257663977df68adfc2a43809f"
+    },
+    {
+      "path": "run0852/related_work/NOVELTY_DECISION.json",
+      "bytes": 871,
+      "sha256": "e061c9fa8d498643871e3e61f7580bcda8af71b490601a45d9d7acae54ba5565"
+    }
+  ],
+  "future_append_only_events_required": [
+    "official comparator remote-ref receipt UTC and full commit",
+    "code paths read and SHA256 before replay",
+    "dependency metadata/resolver errors and lock artifacts",
+    "adapter code freeze receipt",
+    "first actual comparator execution outcome and all planned statuses"
+  ],
+  "acquisition_and_execution_receipt": {
+    "new_unique_source_rows": 0,
+    "new_model_responses": 0,
+    "new_model_or_judge_calls": 0,
+    "new_external_queries": 0,
+    "comparison_executed": false,
+    "synthetic_controls_executed": false,
+    "no_full_blinding_claim": true
+  }
+}

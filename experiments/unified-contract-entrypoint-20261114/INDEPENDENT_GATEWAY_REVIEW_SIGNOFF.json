@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "module_sha256": "5b0004b1960a8c187106bef26a4c62aa0fad0abf5007084fac54dad849ba6dfa",
+  "independent_suite": "test_gateway_independent.py",
+  "results": "INDEPENDENT_GATEWAY_REVIEW_FINAL.json",
+  "total_cases": 123,
+  "denominators": {
+    "natural_archived_request_controls": {
+      "passed": 4,
+      "tested": 4,
+      "typed_positive": 2,
+      "stock_negative": 2
+    },
+    "historical_native_metric_replay": {
+      "passed": 4,
+      "tested": 4,
+      "fresh_installed_native_calls": 0
+    },
+    "artificial_faults": {
+      "passed": 106,
+      "tested": 106
+    },
+    "constructed_positive_preservation": {
+      "passed": 7,
+      "tested": 7
+    },
+    "constructed_trust_boundary_demonstrations": {
+      "passed": 2,
+      "tested": 2
+    }
+  },
+  "static_review": "Previously demonstrated blockers fixed. No residual material issue found within declared narrow scope. Source lookup key and row ID now separate; ID normalization has explicit supported types; errors and unsupported nonempty assistant channels blocked; diagnostic metrics validate counts, row eligibility, range, and aggregate/detail agreement.",
+  "limitations": [
+    "Four previously exposed captured requests only, not prospective or external validation.",
+    "Caller registry and transport remain trust anchors. Same internally consistent request/response hashes do not prove actual provider/source association; cross-source callback and substituted-final controls demonstrate this limit.",
+    "Single string final content from nonstream single-choice Chat Completions only; structured arrays, tool/audio/refusal payloads and unknown tasks unsupported.",
+    "Historical native outputs replayed only; no installed-native evaluator imported or executed by independent tests.",
+    "All initial fault reports preserved."
+  ],
+  "new_model_or_provider_calls": 0,
+  "fresh_installed_native_calls": 0
+}

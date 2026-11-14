@@ -153,5 +153,18 @@ def main():
     return {'PASS': 0, 'FAIL': 1, 'INCOMPLETE': 2}[report['status']]
 
 
+
+def run_source_bound_evaluation(*args, **kwargs):
+    """Run the bounded source/request/structured-final gate before scoring.
+
+    Public engineering entrypoint for MixEval free-form, non-stream Chat
+    Completions under the declared native profile. Unsupported profiles are
+    INCOMPLETE before dispatch. See source_contract_gateway.run_entrypoint for
+    the explicit callback/capture trust boundary and scorer interface.
+    Existing normalized-contract audits and command-line behavior are unchanged.
+    """
+    from source_contract_gateway import run_entrypoint
+    return run_entrypoint(*args, **kwargs)
+
 if __name__ == '__main__':
     raise SystemExit(main())

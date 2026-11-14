@@ -1,0 +1,33 @@
+{
+  "stage": "post-outcomeengineering",
+  "new_provider_calls": 0,
+  "new_judge_api_calls": 0,
+  "new_installed_metric_calls": 0,
+  "new_source_question_rows": 0,
+  "captured_questions_reused": 2,
+  "archived_requests": 4,
+  "new_module_sha256": "5b0004b1960a8c187106bef26a4c62aa0fad0abf5007084fac54dad849ba6dfa",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "manuscript_unchanged": "v1.7PDF/sourceZIPv7,20claims",
+  "optional_installed_adapter_executed": false,
+  "source_archive": {
+    "library_file_id": "libfile_fde3_f-07bacec626fc8191a40d2442b9fb608c_198492b795908191b811098f9e84ee4a",
+    "version": 0,
+    "sha256": "59800a101fb9dc30616267ba3c4012f37d4c1b6bdc128e107f228bc5184e82ee"
+  },
+  "native_input_zips": {
+    "native_validation/real_actual/oneeval-native-live-43620987144.zip": {
+      "sha256": "d898dfd28a0d20708b2731a7fbd899d42aadddb5d0a1b2d1617a7c73c3eb47c8",
+      "bytes": 939156
+    },
+    "native_validation/rescore_actual/oneeval-native-offline-rescore-43621794887.zip": {
+      "sha256": "63c982408b442dd5771f52a63cdfa492d5446c0e652eab7471d0b4ac0d0b49db",
+      "bytes": 903148
+    }
+  },
+  "resource_scope": "Callback invocations in regression are local archived-result replay, not model or new installed metric execution. Independent active campaign has separate authorization/caps/ownership.",
+  "operational_notes": [
+    "Firstcheckpointguard27rejected becausedirectowneraddedactive3200slotcampaigninversion28. Fresh28read;engineeringclaimappendedwithoutalteringcampaign; savedversion29.",
+    "Source-onlyEvalScopeconsumerpinresolvedviaofficialGitHubAPIinsteadofplannedCLI;protocolamendmentanddraftretainedbeforeanycomparisonreplay."
+  ]
+}

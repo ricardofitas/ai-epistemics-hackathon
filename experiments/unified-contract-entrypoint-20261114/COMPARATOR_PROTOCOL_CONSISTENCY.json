@@ -1,0 +1,31 @@
+{
+  "status": "PASS_STATIC_CONSISTENCY_NOT_COMPARATOR_EXECUTION",
+  "checks": {
+    "supported_types_unchanged_from_pre_capability_draft": true,
+    "unsupported_handling_unchanged_from_pre_capability_draft": true,
+    "official_source_universe_unchanged_from_pre_capability_draft": true,
+    "planned_arms_unchanged_from_pre_capability_draft": true,
+    "synthetic_controls_unchanged_from_pre_capability_draft": true,
+    "independent_units_and_denominators_unchanged_from_pre_capability_draft": true,
+    "falsification_and_decisions_unchanged_from_pre_capability_draft": true,
+    "frozen_existing_inputs_unchanged_from_pre_capability_draft": true,
+    "review_protocol_ledger_same_commit": true,
+    "review_protocol_ledger_same_unsupported_status": true,
+    "all_actual_denominators_zero": true,
+    "no_current_next_command": true,
+    "archived_prior_protocol_hash": true,
+    "review_hash_matches_current_protocol": true,
+    "receipt_hash_matches_current_review": true,
+    "root_tree_pin_matches_receipt": true,
+    "evalscope/metrics/nlp/metrics.py_source_pins": true,
+    "evalscope/metrics/utils/functions.py_source_pins": true
+  },
+  "comparison_executed": false,
+  "new_model_or_judge_calls": 0,
+  "artifact_hashes": {
+    "COMPARATOR_CAPABILITY_REVIEW.json": "621bd06a0eea02645bc568e8fa9d98ca63b1e70d388ca81fceb5a547f71ada91",
+    "COMPARATOR_SOURCE_RECEIPT.json": "66b5e30775d1eb18e61d68cc414d3e5142893c72a9c63bb56defce98a67f8516",
+    "NEXT_INDEPENDENT_COMPARISON_PROTOCOL.json": "dd50c86c512d42c874e5763c7897cfb4d0f16fb7e121283b4f4fb037dac270bb",
+    "EXPOSURE_LEDGER.json": "75d458fdae7188272e4bd7423b35df6e3f5506a5ddc84636f2cae96ee0aab382"
+  }
+}

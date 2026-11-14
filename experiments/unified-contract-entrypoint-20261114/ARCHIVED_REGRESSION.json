@@ -1,0 +1,1542 @@
+{
+  "status": "PASS",
+  "stage": "Post-outcome engineering regression of newcode",
+  "source_questions_reused": 2,
+  "archived_http_requests": 4,
+  "typed_pass": 2,
+  "stock_known_request_faults_blocked": 2,
+  "new_provider_calls": 0,
+  "new_installed_metric_calls": 0,
+  "metric_callback_boundary": "Two authenticated historical installed-rescore results replayed after checking the complete derivative row against archivedrecords; this is not a new native MetricRunner invocation.",
+  "typed_transport_callbacks": 2,
+  "native_compatibility": "Optional installed runner adapter supplied by module but not installed/executed in this regression environment",
+  "original_extracted_files_unchanged": 71,
+  "cases": [
+    {
+      "source_index": 40,
+      "condition": "native_gallery",
+      "report": {
+        "status": "INVALID",
+        "failures": [
+          "native_request_profile_mismatch"
+        ],
+        "transport_calls": 0,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40",
+          "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7"
+        ],
+        "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": null,
+        "provider_final_content_sha256": null,
+        "scorer_sha256": "f2288fbd32e836e53250c50906ea59a877518e6c6e07a3b9d143a24d7dbd201a",
+        "metric_result_sha256": null,
+        "original_native_result": {
+          "run_eval": {
+            "stats": {
+              "total_samples": 1,
+              "valid_samples": 0,
+              "accuracy": 0.0,
+              "bench_name_or_prefix": "step",
+              "type": "key3_q_choices_a",
+              "metric": "choice_accuracy_parser",
+              "score": 0.0,
+              "valid_predictions": 0,
+              "parse_failed": 0,
+              "empty_output": 0,
+              "invalid_references": 1,
+              "rescored_rows": 1,
+              "rescored_by": "one_eval.choice_letter_parser",
+              "role": "diagnostic",
+              "display_as_primary": false,
+              "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+            },
+            "detail_path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/40_native_gallery/native/mixeval_1794677240_steps/step_step2.jsonl",
+            "key_mapping": {
+              "input_question_key": "prompt",
+              "input_choices_key": "normalized_choices",
+              "input_label_key": "target",
+              "input_context_key": "context"
+            },
+            "prompt": {
+              "prompt_source": "gallery",
+              "prompt_template_id": "mixeval_contract_v1",
+              "prompt_hash": "sha256:0c9f22ee46d2912139cd8e25c4913745c3eed40d0101ab3a83a1c04a5cbb2eaa",
+              "output_format": {
+                "type": "choice_letter",
+                "choices": "A-D",
+                "answer_tag": "<answer>CHOICE</answer>"
+              },
+              "official_compatibility": null
+            }
+          },
+          "native_metric_runner": {
+            "num_samples": 1,
+            "alignment": {
+              "mode": "records",
+              "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/40_native_gallery/native/mixeval_1794677240_steps/step_step2.jsonl"
+            },
+            "primary_metric_result": {
+              "metric": "choice_accuracy",
+              "official_metric": "accuracy",
+              "score": 0.0,
+              "score_source": "metric_stage",
+              "prediction_mode": "generation",
+              "denominator": "total",
+              "total_samples": 1,
+              "scored_samples": 0,
+              "valid_predictions": 1,
+              "parse_failed": 0,
+              "empty_output": 0,
+              "invalid_references": 1,
+              "parser": {
+                "type": "choice_letter",
+                "choices": "A-D",
+                "prefer": [
+                  "tagged_answer",
+                  "boxed_answer",
+                  "final_answer_line",
+                  "last_standalone_choice"
+                ],
+                "choices_key": "options"
+              },
+              "failure_policy": {
+                "parse_failed": "score_zero",
+                "empty_output": "score_zero",
+                "invalid_reference": "exclude"
+              },
+              "official_compatibility": null
+            },
+            "primary_metric_details": [
+              null
+            ],
+            "primary_metric_artifacts": {
+              "pred_choices": [
+                "A"
+              ],
+              "ref_choices": [
+                null
+              ],
+              "parse_results": [
+                {
+                  "pred": {
+                    "raw": "<think>We need answer user's prompt. User says:\nContext:\n{None}\n\nQuestion:\n{{prompt}}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.\n\nThis seems malformed. There is no actual question, just placeholder {{prompt}} and option A. None. Need select best option. Likely answer A. Need final <answer>A</answer>. But must be careful. The instruction: Select the best option and give final answer as <answer>CHOICE</answer>. Options: {A. None}. So only option A. None. We should output <answer>A</answer>. Need maybe no extra. Ensure final.\n</think>\n<answer>\n\n<answer>A</answer></answer>",
+                    "normalized": "A",
+                    "ok": true,
+                    "error": null,
+                    "evidence": "<answer>A</answer>",
+                    "strategy": "tagged_answer"
+                  },
+                  "ref": {
+                    "raw": [
+                      "Male dancers",
+                      "💃",
+                      "Dance writers",
+                      "Dancing",
+                      "Dance",
+                      "Dance awards",
+                      "Dancers",
+                      "Dance rhythm",
+                      "Dance magazines",
+                      "DanCe",
+                      "Dances",
+                      "Dancer",
+                      "DANCE",
+                      "Danse",
+                      "Dance organizations",
+                      "Dance by country",
+                      "Male dancer",
+                      "Western dance",
+                      "Dance show"
+                    ],
+                    "normalized": null,
+                    "ok": false,
+                    "error": "parse_failed",
+                    "evidence": null,
+                    "strategy": null
+                  }
+                }
+              ]
+            }
+          },
+          "delivered_row": {
+            "benchmark_name": "TriviaQA",
+            "context": "None",
+            "id": 40,
+            "options": [
+              "None"
+            ],
+            "problem_type": "free-form",
+            "prompt": "Benesh Notation is the written language of which activity?",
+            "target": [
+              "Male dancers",
+              "💃",
+              "Dance writers",
+              "Dancing",
+              "Dance",
+              "Dance awards",
+              "Dancers",
+              "Dance rhythm",
+              "Dance magazines",
+              "DanCe",
+              "Dances",
+              "Dancer",
+              "DANCE",
+              "Danse",
+              "Dance organizations",
+              "Dance by country",
+              "Male dancer",
+              "Western dance",
+              "Dance show"
+            ],
+            "normalized_choices": [
+              "None"
+            ],
+            "choices_text": "A. None",
+            "generated_ans": "<think>We need answer user's prompt. User says:\nContext:\n{None}\n\nQuestion:\n{{prompt}}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.\n\nThis seems malformed. There is no actual question, just placeholder {{prompt}} and option A. None. Need select best option. Likely answer A. Need final <answer>A</answer>. But must be careful. The instruction: Select the best option and give final answer as <answer>CHOICE</answer>. Options: {A. None}. So only option A. None. We should output <answer>A</answer>. Need maybe no extra. Ensure final.\n</think>\n<answer>\n\n<answer>A</answer></answer>",
+            "eval_valid": false,
+            "eval_error": "invalid_reference",
+            "eval_pred": 0.0,
+            "eval_score": null,
+            "eval_pred_choice": "A",
+            "eval_ref_choice": null,
+            "eval_parse_strategy": "tagged_answer"
+          },
+          "source_id_normalization": {
+            "source_value": "40",
+            "source_type": "str",
+            "delivered_value": 40,
+            "delivered_type": "int",
+            "comparison": "Exact str roundtrip; source and delivered values/types retained"
+          },
+          "captured_completion_eligible": true,
+          "usage": {
+            "prompt_tokens": 103,
+            "completion_tokens": 154,
+            "total_tokens": 257,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 145
+            }
+          },
+          "transport_stop": false,
+          "execution_boundary_status": "PASS",
+          "derived_reference_eligible_samples": 0,
+          "derived_count_note": "Derived from numeric native per-row primary_metric_details, not a replacement for native scored_samples field",
+          "outcome_status": "UNSCORABLE_REFERENCE",
+          "eligible_native_score": null,
+          "native_zero_interpretation": "UNSCORABLE: zero reference-valid scored samples",
+          "status": "PASS",
+          "mode": "real",
+          "source_index": 40,
+          "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+          "condition": "native_gallery",
+          "provider_calls": 1,
+          "local_fixture_calls": 0,
+          "native_distribution": "0.1.0",
+          "dataflow_distribution": "1.0.10"
+        },
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "encoding": "base64",
+          "data": "eyJtb2RlbCI6ICJxd2VuMy44LTI3YiIsICJtZXNzYWdlcyI6IFt7InJvbGUiOiAic3lzdGVtIiwgImNvbnRlbnQiOiAiWW91IGFyZSBhIGhlbHBmdWwgYXNzaXN0YW50IHNwZWNpYWxpemVkIGluIGdlbmVyYXRpbmcgYW5zd2VycyB0byBxdWVzdGlvbnMuIn0sIHsicm9sZSI6ICJ1c2VyIiwgImNvbnRlbnQiOiAiQ29udGV4dDpcbntOb25lfVxuXG5RdWVzdGlvbjpcbntCZW5lc2ggTm90YXRpb24gaXMgdGhlIHdyaXR0ZW4gbGFuZ3VhZ2Ugb2Ygd2hpY2ggYWN0aXZpdHk/fVxuQW5zd2VyIHRoZSBxdWVzdGlvbiBpbiBmcmVlIHRleHQuIE91dHB1dCBvbmx5IHRoZSBmYWN0dWFsIGFuc3dlciwgd2l0aG91dCBhbiBhbnN3ZXIgdGFnLiJ9XSwgInRvcF9wIjogMS4wLCAibWF4X3Rva2VucyI6IDQwOTYsICJ0ZW1wZXJhdHVyZSI6IDAuMH0=",
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "bytes": 416
+        }
+      },
+      "transport_callback_calls": 0,
+      "metric_replay_callback_calls": 0,
+      "historical_native_zero_status": "UNSCORABLE: zero reference-valid scored samples",
+      "historical_rescore_metric": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-offline-rescore-20261114/results/40_native_gallery/records.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "choice_accuracy",
+          "official_metric": "accuracy",
+          "score": 0.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": 0,
+          "valid_predictions": 1,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 1,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        "primary_metric_details": [
+          null
+        ],
+        "primary_metric_artifacts": {
+          "pred_choices": [
+            "A"
+          ],
+          "ref_choices": [
+            null
+          ],
+          "parse_results": [
+            {
+              "pred": {
+                "raw": "<think>We need answer user's prompt. User says:\nContext:\n{None}\n\nQuestion:\n{{prompt}}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.\n\nThis seems malformed. There is no actual question, just placeholder {{prompt}} and option A. None. Need select best option. Likely answer A. Need final <answer>A</answer>. But must be careful. The instruction: Select the best option and give final answer as <answer>CHOICE</answer>. Options: {A. None}. So only option A. None. We should output <answer>A</answer>. Need maybe no extra. Ensure final.\n</think>\n<answer>\n\n<answer>A</answer></answer>",
+                "normalized": "A",
+                "ok": true,
+                "error": null,
+                "evidence": "<answer>A</answer>",
+                "strategy": "tagged_answer"
+              },
+              "ref": {
+                "raw": [
+                  "Male dancers",
+                  "💃",
+                  "Dance writers",
+                  "Dancing",
+                  "Dance",
+                  "Dance awards",
+                  "Dancers",
+                  "Dance rhythm",
+                  "Dance magazines",
+                  "DanCe",
+                  "Dances",
+                  "Dancer",
+                  "DANCE",
+                  "Danse",
+                  "Dance organizations",
+                  "Dance by country",
+                  "Male dancer",
+                  "Western dance",
+                  "Dance show"
+                ],
+                "normalized": null,
+                "ok": false,
+                "error": "parse_failed",
+                "evidence": null,
+                "strategy": null
+              }
+            }
+          ]
+        }
+      },
+      "declared_scorer_manifest": {
+        "kind": "Authenticated historical native MetricRunner RESULT replay; not a new installed invocation",
+        "native_origins": {
+          "one_eval.metrics.runner": {
+            "path": "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/one_eval/metrics/runner.py",
+            "sha256": "d599a3665c2594fc1bce9b9c3cf664d704fd0cfcff57146961abeb4ac359b706"
+          },
+          "one_eval.metrics.common.general": {
+            "path": "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/one_eval/metrics/common/general.py",
+            "sha256": "dd7104eee19c829f3ddb5dd1faec0b97a230b253ab41b615d20b6799699d06a7"
+          }
+        },
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "accuracy",
+          "primary_metric": "choice_accuracy",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          }
+        },
+        "pred_key": "provider_final_content",
+        "ref_key": "target"
+      }
+    },
+    {
+      "source_index": 40,
+      "condition": "source_typed",
+      "report": {
+        "status": "SCORED",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 1,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "40",
+          "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7"
+        ],
+        "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+        "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "response_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+        "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+        "scorer_sha256": "5ed80d21dad5a703a3b95887fbe403cb7121fca314782aca444cb88f16babf8a",
+        "metric_result_sha256": "192bda8a6fb0f479359bc25a15f987dc63a77719735d68a66dc4816a3c89e623",
+        "original_native_result": {
+          "run_eval": {
+            "stats": {
+              "total_samples": 1,
+              "valid_samples": 1,
+              "accuracy": 1,
+              "bench_name_or_prefix": "step",
+              "type": "key2_q_ma",
+              "metric": "any_math_verify",
+              "role": "diagnostic",
+              "display_as_primary": false,
+              "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+            },
+            "detail_path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/40_source_typed/native/mixeval_1794677255_steps/step_step2.jsonl",
+            "key_mapping": {
+              "input_question_key": "prompt",
+              "input_context_key": "context",
+              "input_targets_key": "target"
+            },
+            "prompt": {
+              "prompt_source": "explicit_source_type_repair",
+              "prompt_template_id": "native_install_source_typed_v1",
+              "prompt_hash": "sha256:7f60a9c8cb85e29bcbd0b1b86889ec368967a52aa196cfcb356682a150bc2df6",
+              "output_format": null,
+              "official_compatibility": null
+            }
+          },
+          "native_metric_runner": {
+            "num_samples": 1,
+            "alignment": {
+              "mode": "records",
+              "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/40_source_typed/native/mixeval_1794677255_steps/step_step2.jsonl"
+            },
+            "primary_metric_result": {
+              "metric": "exact_match",
+              "official_metric": "diagnostic_exact_match",
+              "score": 0.0,
+              "score_source": "metric_stage",
+              "prediction_mode": "generation",
+              "denominator": "total",
+              "total_samples": 1,
+              "scored_samples": null,
+              "valid_predictions": null,
+              "parse_failed": null,
+              "empty_output": null,
+              "invalid_references": null,
+              "parser": null,
+              "failure_policy": {},
+              "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+            },
+            "primary_metric_details": [
+              0.0
+            ],
+            "primary_metric_artifacts": {}
+          },
+          "delivered_row": {
+            "benchmark_name": "TriviaQA",
+            "context": "None",
+            "id": 40,
+            "options": [
+              "None"
+            ],
+            "problem_type": "free-form",
+            "prompt": "Benesh Notation is the written language of which activity?",
+            "target": [
+              "Male dancers",
+              "💃",
+              "Dance writers",
+              "Dancing",
+              "Dance",
+              "Dance awards",
+              "Dancers",
+              "Dance rhythm",
+              "Dance magazines",
+              "DanCe",
+              "Dances",
+              "Dancer",
+              "DANCE",
+              "Danse",
+              "Dance organizations",
+              "Dance by country",
+              "Male dancer",
+              "Western dance",
+              "Dance show"
+            ],
+            "generated_ans": "<think>We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n</think>\n<answer>\n\nDance</answer>",
+            "eval_valid": true,
+            "eval_error": "",
+            "eval_pred": "<think>We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n</think>\n<answer>\n\nDance</answer>",
+            "eval_score": 1.0
+          },
+          "source_id_normalization": {
+            "source_value": "40",
+            "source_type": "str",
+            "delivered_value": 40,
+            "delivered_type": "int",
+            "comparison": "Exact str roundtrip; source and delivered values/types retained"
+          },
+          "captured_completion_eligible": true,
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          },
+          "transport_stop": false,
+          "execution_boundary_status": "PASS",
+          "derived_reference_eligible_samples": 1,
+          "derived_count_note": "Derived from numeric native per-row primary_metric_details, not a replacement for native scored_samples field",
+          "outcome_status": "KNOWN",
+          "eligible_native_score": 0.0,
+          "status": "PASS",
+          "mode": "real",
+          "source_index": 40,
+          "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+          "condition": "source_typed",
+          "provider_calls": 1,
+          "local_fixture_calls": 0,
+          "native_distribution": "0.1.0",
+          "dataflow_distribution": "1.0.10"
+        },
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{Benesh Notation is the written language of which activity?}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "encoding": "base64",
+          "data": "eyJtb2RlbCI6ICJxd2VuMy44LTI3YiIsICJtZXNzYWdlcyI6IFt7InJvbGUiOiAic3lzdGVtIiwgImNvbnRlbnQiOiAiWW91IGFyZSBhIGhlbHBmdWwgYXNzaXN0YW50IHNwZWNpYWxpemVkIGluIGdlbmVyYXRpbmcgYW5zd2VycyB0byBxdWVzdGlvbnMuIn0sIHsicm9sZSI6ICJ1c2VyIiwgImNvbnRlbnQiOiAiQ29udGV4dDpcbntOb25lfVxuXG5RdWVzdGlvbjpcbntCZW5lc2ggTm90YXRpb24gaXMgdGhlIHdyaXR0ZW4gbGFuZ3VhZ2Ugb2Ygd2hpY2ggYWN0aXZpdHk/fVxuQW5zd2VyIHRoZSBxdWVzdGlvbiBpbiBmcmVlIHRleHQuIE91dHB1dCBvbmx5IHRoZSBmYWN0dWFsIGFuc3dlciwgd2l0aG91dCBhbiBhbnN3ZXIgdGFnLiJ9XSwgInRvcF9wIjogMS4wLCAibWF4X3Rva2VucyI6IDQwOTYsICJ0ZW1wZXJhdHVyZSI6IDAuMH0=",
+          "sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+          "bytes": 416
+        },
+        "actual_request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+        "raw_response_bytes": {
+          "encoding": "base64",
+          "data": "eyJpZCI6ImNoYXRjbXBsLTg5ZmU3MDIxLTlkZTgtNDNiNy1iMjFmLWUxNGUyYTAwYjgxYiIsImNyZWF0ZWQiOjE3OTQ2NzcyNTUsIm1vZGVsIjoicXdlbjMuOC0yN2IiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJ2bGxtLTAuMzEuMC0yZmRhMTE0MSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNob2ljZXMiOlt7ImluZGV4IjowLCJmaW5pc2hfcmVhc29uIjoic3RvcCIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJcblxuRGFuY2UiLCJyZWFzb25pbmdfY29udGVudCI6IldlIG5lZWQgYW5zd2VyIHF1ZXN0aW9uOiBcIkJlbmVzaCBOb3RhdGlvbiBpcyB0aGUgd3JpdHRlbiBsYW5ndWFnZSBvZiB3aGljaCBhY3Rpdml0eT9cIiBOZWVkIGZhY3R1YWwgYW5zd2VyIG9ubHkuIE5lZWQgdGhpbmsuIEJlbmVzaCBOb3RhdGlvbj8gSXQncyBhIHN5c3RlbSBmb3Igbm90YXRpbmcgZGFuY2UsIGRldmVsb3BlZCBieSBBbm5lIGFuZCBBbHZpbiBCZW5lc2guIFdyaXR0ZW4gbGFuZ3VhZ2Ugb2YgZGFuY2U/IFNwZWNpZmljYWxseSBcIkJlbmVzaCBOb3RhdGlvbiBpcyB0aGUgd3JpdHRlbiBsYW5ndWFnZSBvZiBkYW5jZVwiIG1heWJlIGJhbGxldD8gTGV0J3MgdmVyaWZ5LiBCZW5lc2ggTm90YXRpb24gKGFsc28gQmVuZXNoIE1vdmVtZW50IE5vdGF0aW9uKSBpcyBhIHN5c3RlbSBmb3IgcmVjb3JkaW5nIGRhbmNlLiBJdCBpcyB0aGUgd3JpdHRlbiBsYW5ndWFnZSBvZiBkYW5jZS4gVGhlIHF1ZXN0aW9uIGxpa2VseSBmcm9tIHRyaXZpYTogXCJCZW5lc2ggTm90YXRpb24gaXMgdGhlIHdyaXR0ZW4gbGFuZ3VhZ2Ugb2Ygd2hpY2ggYWN0aXZpdHk/XCIgQW5zd2VyOiBkYW5jZS4gQ291bGQgYmUgXCJiYWxsZXRcIj8gTGV0J3MgcmVjYWxsOiBCZW5lc2ggTm90YXRpb24gaXMgYSBzeXN0ZW0gb2Ygbm90YXRpb24gZm9yIGRhbmNlLCBjcmVhdGVkIGJ5IEFsdmluIGFuZCBBbm5lIEJlbmVzaC4gSXQgaXMgc29tZXRpbWVzIGNhbGxlZCBcInRoZSB3cml0dGVuIGxhbmd1YWdlIG9mIGRhbmNlXCIuIFRoZSBhY3Rpdml0eTogZGFuY2UuIElmIGFza2VkIFwid2hpY2ggYWN0aXZpdHlcIiBsaWtlbHkgZGFuY2UuIE5lZWQgb3V0cHV0IG9ubHkgZmFjdHVhbCBhbnN3ZXIsIG5vIHRhZy4gU28gZmluYWw6IERhbmNlLiBFbnN1cmUgbm8gZXh0cmEuXG4ifX1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjoxMDgsImNvbXBsZXRpb25fdG9rZW5zIjoyMDQsInRvdGFsX3Rva2VucyI6MzEyLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MH0sImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6MTk5fX19",
+          "sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+          "bytes": 1341
+        },
+        "http_status": 200,
+        "capture_label": "Pinned original native HTTP_TRACE regression",
+        "raw_response": {
+          "id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+          "created": 1794677255,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nDance",
+                "reasoning_content": "We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 204,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            }
+          }
+        },
+        "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+        "provider_final_content": "\n\nDance",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": 40,
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "Benesh Notation is the written language of which activity?",
+          "target": [
+            "Male dancers",
+            "💃",
+            "Dance writers",
+            "Dancing",
+            "Dance",
+            "Dance awards",
+            "Dancers",
+            "Dance rhythm",
+            "Dance magazines",
+            "DanCe",
+            "Dances",
+            "Dancer",
+            "DANCE",
+            "Danse",
+            "Dance organizations",
+            "Dance by country",
+            "Male dancer",
+            "Western dance",
+            "Dance show"
+          ],
+          "generated_ans": "<think>We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n</think>\n<answer>\n\nDance</answer>",
+          "eval_valid": true,
+          "eval_error": "",
+          "eval_pred": "<think>We need answer question: \"Benesh Notation is the written language of which activity?\" Need factual answer only. Need think. Benesh Notation? It's a system for notating dance, developed by Anne and Alvin Benesh. Written language of dance? Specifically \"Benesh Notation is the written language of dance\" maybe ballet? Let's verify. Benesh Notation (also Benesh Movement Notation) is a system for recording dance. It is the written language of dance. The question likely from trivia: \"Benesh Notation is the written language of which activity?\" Answer: dance. Could be \"ballet\"? Let's recall: Benesh Notation is a system of notation for dance, created by Alvin and Anne Benesh. It is sometimes called \"the written language of dance\". The activity: dance. If asked \"which activity\" likely dance. Need output only factual answer, no tag. So final: Dance. Ensure no extra.\n</think>\n<answer>\n\nDance</answer>",
+          "eval_score": 1.0,
+          "provider_final_content": "\n\nDance"
+        },
+        "metric_result": {
+          "num_samples": 1,
+          "alignment": {
+            "mode": "records",
+            "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-offline-rescore-20261114/results/40_source_typed/records.jsonl"
+          },
+          "primary_metric_result": {
+            "metric": "exact_match",
+            "official_metric": "diagnostic_exact_match",
+            "score": 1.0,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 1,
+            "scored_samples": null,
+            "valid_predictions": null,
+            "parse_failed": null,
+            "empty_output": null,
+            "invalid_references": null,
+            "parser": null,
+            "failure_policy": {},
+            "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+          },
+          "primary_metric_details": [
+            1.0
+          ],
+          "primary_metric_artifacts": {}
+        },
+        "eligible_metric_score": 1.0,
+        "eligible_metric_rows": 1
+      },
+      "transport_callback_calls": 1,
+      "metric_replay_callback_calls": 1,
+      "historical_native_zero_status": null,
+      "historical_rescore_metric": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-offline-rescore-20261114/results/40_source_typed/records.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "exact_match",
+          "official_metric": "diagnostic_exact_match",
+          "score": 1.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": null,
+          "valid_predictions": null,
+          "parse_failed": null,
+          "empty_output": null,
+          "invalid_references": null,
+          "parser": null,
+          "failure_policy": {},
+          "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+        },
+        "primary_metric_details": [
+          1.0
+        ],
+        "primary_metric_artifacts": {}
+      },
+      "declared_scorer_manifest": {
+        "kind": "Authenticated historical native MetricRunner RESULT replay; not a new installed invocation",
+        "native_origins": {
+          "one_eval.metrics.runner": {
+            "path": "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/one_eval/metrics/runner.py",
+            "sha256": "d599a3665c2594fc1bce9b9c3cf664d704fd0cfcff57146961abeb4ac359b706"
+          },
+          "one_eval.metrics.common.general": {
+            "path": "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/one_eval/metrics/common/general.py",
+            "sha256": "dd7104eee19c829f3ddb5dd1faec0b97a230b253ab41b615d20b6799699d06a7"
+          }
+        },
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "diagnostic_exact_match",
+          "primary_metric": "exact_match",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+        },
+        "pred_key": "provider_final_content",
+        "ref_key": "target"
+      }
+    },
+    {
+      "source_index": 200,
+      "condition": "native_gallery",
+      "report": {
+        "status": "INVALID",
+        "failures": [
+          "native_request_profile_mismatch"
+        ],
+        "transport_calls": 0,
+        "metric_calls": 0,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "200",
+          "05ffdf0514950787a180a2568505a9b4867b87c392a9fc0da1a1ea8e4e6d304b"
+        ],
+        "source_sha256": "05ffdf0514950787a180a2568505a9b4867b87c392a9fc0da1a1ea8e4e6d304b",
+        "request_sha256": "fd778a1813ff85dd82640021bc2d6aea69195b86032c3eb9486bfb26a84e1cf3",
+        "response_sha256": null,
+        "provider_final_content_sha256": null,
+        "scorer_sha256": "f2288fbd32e836e53250c50906ea59a877518e6c6e07a3b9d143a24d7dbd201a",
+        "metric_result_sha256": null,
+        "original_native_result": {
+          "run_eval": {
+            "stats": {
+              "total_samples": 1,
+              "valid_samples": 0,
+              "accuracy": 0.0,
+              "bench_name_or_prefix": "step",
+              "type": "key3_q_choices_a",
+              "metric": "choice_accuracy_parser",
+              "score": 0.0,
+              "valid_predictions": 0,
+              "parse_failed": 0,
+              "empty_output": 0,
+              "invalid_references": 1,
+              "rescored_rows": 1,
+              "rescored_by": "one_eval.choice_letter_parser",
+              "role": "diagnostic",
+              "display_as_primary": false,
+              "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+            },
+            "detail_path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/200_native_gallery/native/mixeval_1794677270_steps/step_step2.jsonl",
+            "key_mapping": {
+              "input_question_key": "prompt",
+              "input_choices_key": "normalized_choices",
+              "input_label_key": "target",
+              "input_context_key": "context"
+            },
+            "prompt": {
+              "prompt_source": "gallery",
+              "prompt_template_id": "mixeval_contract_v1",
+              "prompt_hash": "sha256:0c9f22ee46d2912139cd8e25c4913745c3eed40d0101ab3a83a1c04a5cbb2eaa",
+              "output_format": {
+                "type": "choice_letter",
+                "choices": "A-D",
+                "answer_tag": "<answer>CHOICE</answer>"
+              },
+              "official_compatibility": null
+            }
+          },
+          "native_metric_runner": {
+            "num_samples": 1,
+            "alignment": {
+              "mode": "records",
+              "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/200_native_gallery/native/mixeval_1794677270_steps/step_step2.jsonl"
+            },
+            "primary_metric_result": {
+              "metric": "choice_accuracy",
+              "official_metric": "accuracy",
+              "score": 0.0,
+              "score_source": "metric_stage",
+              "prediction_mode": "generation",
+              "denominator": "total",
+              "total_samples": 1,
+              "scored_samples": 0,
+              "valid_predictions": 1,
+              "parse_failed": 0,
+              "empty_output": 0,
+              "invalid_references": 1,
+              "parser": {
+                "type": "choice_letter",
+                "choices": "A-D",
+                "prefer": [
+                  "tagged_answer",
+                  "boxed_answer",
+                  "final_answer_line",
+                  "last_standalone_choice"
+                ],
+                "choices_key": "options"
+              },
+              "failure_policy": {
+                "parse_failed": "score_zero",
+                "empty_output": "score_zero",
+                "invalid_reference": "exclude"
+              },
+              "official_compatibility": null
+            },
+            "primary_metric_details": [
+              null
+            ],
+            "primary_metric_artifacts": {
+              "pred_choices": [
+                "A"
+              ],
+              "ref_choices": [
+                null
+              ],
+              "parse_results": [
+                {
+                  "pred": {
+                    "raw": "<think>We need answer user's request. User says:\nContext:\n{None}\n\nQuestion:\n{{prompt}}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.\n\nWe need produce final answer likely <answer>A</answer>? Need infer. The prompt is malformed: Context None, Question {{prompt}}, options {A. None}. It asks select best option. Since only option A None, answer A. Need final only? They require final answer as <answer>CHOICE</answer>. So output <answer>A</answer>. Ensure no extra.\n</think>\n<answer>\n\n<answer>A</answer></answer>",
+                    "normalized": "A",
+                    "ok": true,
+                    "error": null,
+                    "evidence": "<answer>A</answer>",
+                    "strategy": "tagged_answer"
+                  },
+                  "ref": {
+                    "raw": [
+                      "Rt Hon Anthony Blair MP",
+                      "Tony blair",
+                      "The Tony Blair Sports Foundation",
+                      "Antony blair",
+                      "Tonie Blair",
+                      "Tony Balir",
+                      "Rt. Hon Tony Blair",
+                      "Blairian",
+                      "Tory Blair",
+                      "Tony Blairs",
+                      "Anthony C. L. Blair",
+                      "Anthony Charles Blair",
+                      "Tony Blaire",
+                      "Tony Blair Sports Foundation",
+                      "Antony Blair",
+                      "Anthony Charles Lynton %22Tony%22 Blair",
+                      "Family of Tony Blair",
+                      "Tonyblair",
+                      "Tony Blear",
+                      "Anthony (Tony) Blair",
+                      "Tony Blair's Private life",
+                      "Tony Blair PM",
+                      "Tony Bliar",
+                      "Tony Blaer",
+                      "Herr Blair",
+                      "President Blair",
+                      "Anthony Charles Lynton Blair",
+                      "Tony Blair's private life",
+                      "Education, education and education",
+                      "Rt. Hon. Anthony Charles Lynton Blair",
+                      "Toney Blair",
+                      "Education, education, education",
+                      "Tony Blari",
+                      "Blair doctrine",
+                      "Tony Blair",
+                      "Prime Minister Tony Blair",
+                      "Tony Blare"
+                    ],
+                    "normalized": null,
+                    "ok": false,
+                    "error": "parse_failed",
+                    "evidence": null,
+                    "strategy": null
+                  }
+                }
+              ]
+            }
+          },
+          "delivered_row": {
+            "benchmark_name": "TriviaQA",
+            "context": "None",
+            "id": 200,
+            "options": [
+              "None"
+            ],
+            "problem_type": "free-form",
+            "prompt": "\"In 2006 English politician George Galloway was widely quoted as saying that it would be \"\"morally justified if someone chose to assassinate \"\" whom?\"",
+            "target": [
+              "Rt Hon Anthony Blair MP",
+              "Tony blair",
+              "The Tony Blair Sports Foundation",
+              "Antony blair",
+              "Tonie Blair",
+              "Tony Balir",
+              "Rt. Hon Tony Blair",
+              "Blairian",
+              "Tory Blair",
+              "Tony Blairs",
+              "Anthony C. L. Blair",
+              "Anthony Charles Blair",
+              "Tony Blaire",
+              "Tony Blair Sports Foundation",
+              "Antony Blair",
+              "Anthony Charles Lynton %22Tony%22 Blair",
+              "Family of Tony Blair",
+              "Tonyblair",
+              "Tony Blear",
+              "Anthony (Tony) Blair",
+              "Tony Blair's Private life",
+              "Tony Blair PM",
+              "Tony Bliar",
+              "Tony Blaer",
+              "Herr Blair",
+              "President Blair",
+              "Anthony Charles Lynton Blair",
+              "Tony Blair's private life",
+              "Education, education and education",
+              "Rt. Hon. Anthony Charles Lynton Blair",
+              "Toney Blair",
+              "Education, education, education",
+              "Tony Blari",
+              "Blair doctrine",
+              "Tony Blair",
+              "Prime Minister Tony Blair",
+              "Tony Blare"
+            ],
+            "normalized_choices": [
+              "None"
+            ],
+            "choices_text": "A. None",
+            "generated_ans": "<think>We need answer user's request. User says:\nContext:\n{None}\n\nQuestion:\n{{prompt}}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.\n\nWe need produce final answer likely <answer>A</answer>? Need infer. The prompt is malformed: Context None, Question {{prompt}}, options {A. None}. It asks select best option. Since only option A None, answer A. Need final only? They require final answer as <answer>CHOICE</answer>. So output <answer>A</answer>. Ensure no extra.\n</think>\n<answer>\n\n<answer>A</answer></answer>",
+            "eval_valid": false,
+            "eval_error": "invalid_reference",
+            "eval_pred": 0.0,
+            "eval_score": null,
+            "eval_pred_choice": "A",
+            "eval_ref_choice": null,
+            "eval_parse_strategy": "tagged_answer"
+          },
+          "source_id_normalization": {
+            "source_value": "200",
+            "source_type": "str",
+            "delivered_value": 200,
+            "delivered_type": "int",
+            "comparison": "Exact str roundtrip; source and delivered values/types retained"
+          },
+          "captured_completion_eligible": true,
+          "usage": {
+            "prompt_tokens": 103,
+            "completion_tokens": 137,
+            "total_tokens": 240,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 128
+            }
+          },
+          "transport_stop": false,
+          "execution_boundary_status": "PASS",
+          "derived_reference_eligible_samples": 0,
+          "derived_count_note": "Derived from numeric native per-row primary_metric_details, not a replacement for native scored_samples field",
+          "outcome_status": "UNSCORABLE_REFERENCE",
+          "eligible_native_score": null,
+          "native_zero_interpretation": "UNSCORABLE: zero reference-valid scored samples",
+          "status": "PASS",
+          "mode": "real",
+          "source_index": 200,
+          "source_sha256": "05ffdf0514950787a180a2568505a9b4867b87c392a9fc0da1a1ea8e4e6d304b",
+          "condition": "native_gallery",
+          "provider_calls": 1,
+          "local_fixture_calls": 0,
+          "native_distribution": "0.1.0",
+          "dataflow_distribution": "1.0.10"
+        },
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{\"In 2006 English politician George Galloway was widely quoted as saying that it would be \"\"morally justified if someone chose to assassinate \"\" whom?\"}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "encoding": "base64",
+          "data": "eyJtb2RlbCI6ICJxd2VuMy44LTI3YiIsICJtZXNzYWdlcyI6IFt7InJvbGUiOiAic3lzdGVtIiwgImNvbnRlbnQiOiAiWW91IGFyZSBhIGhlbHBmdWwgYXNzaXN0YW50IHNwZWNpYWxpemVkIGluIGdlbmVyYXRpbmcgYW5zd2VycyB0byBxdWVzdGlvbnMuIn0sIHsicm9sZSI6ICJ1c2VyIiwgImNvbnRlbnQiOiAiQ29udGV4dDpcbntOb25lfVxuXG5RdWVzdGlvbjpcbntcIkluIDIwMDYgRW5nbGlzaCBwb2xpdGljaWFuIEdlb3JnZSBHYWxsb3dheSB3YXMgd2lkZWx5IHF1b3RlZCBhcyBzYXlpbmcgdGhhdCBpdCB3b3VsZCBiZSBcIlwibW9yYWxseSBqdXN0aWZpZWQgaWYgc29tZW9uZSBjaG9zZSB0byBhc3Nhc3NpbmF0ZSBcIlwiIHdob20/XCJ9XG5BbnN3ZXIgdGhlIHF1ZXN0aW9uIGluIGZyZWUgdGV4dC4gT3V0cHV0IG9ubHkgdGhlIGZhY3R1YWwgYW5zd2VyLCB3aXRob3V0IGFuIGFuc3dlciB0YWcuIn1dLCAidG9wX3AiOiAxLjAsICJtYXhfdG9rZW5zIjogNDA5NiwgInRlbXBlcmF0dXJlIjogMC4wfQ==",
+          "sha256": "fd778a1813ff85dd82640021bc2d6aea69195b86032c3eb9486bfb26a84e1cf3",
+          "bytes": 514
+        }
+      },
+      "transport_callback_calls": 0,
+      "metric_replay_callback_calls": 0,
+      "historical_native_zero_status": "UNSCORABLE: zero reference-valid scored samples",
+      "historical_rescore_metric": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-offline-rescore-20261114/results/200_native_gallery/records.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "choice_accuracy",
+          "official_metric": "accuracy",
+          "score": 0.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": 0,
+          "valid_predictions": 1,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 1,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        "primary_metric_details": [
+          null
+        ],
+        "primary_metric_artifacts": {
+          "pred_choices": [
+            "A"
+          ],
+          "ref_choices": [
+            null
+          ],
+          "parse_results": [
+            {
+              "pred": {
+                "raw": "<think>We need answer user's request. User says:\nContext:\n{None}\n\nQuestion:\n{{prompt}}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.\n\nWe need produce final answer likely <answer>A</answer>? Need infer. The prompt is malformed: Context None, Question {{prompt}}, options {A. None}. It asks select best option. Since only option A None, answer A. Need final only? They require final answer as <answer>CHOICE</answer>. So output <answer>A</answer>. Ensure no extra.\n</think>\n<answer>\n\n<answer>A</answer></answer>",
+                "normalized": "A",
+                "ok": true,
+                "error": null,
+                "evidence": "<answer>A</answer>",
+                "strategy": "tagged_answer"
+              },
+              "ref": {
+                "raw": [
+                  "Rt Hon Anthony Blair MP",
+                  "Tony blair",
+                  "The Tony Blair Sports Foundation",
+                  "Antony blair",
+                  "Tonie Blair",
+                  "Tony Balir",
+                  "Rt. Hon Tony Blair",
+                  "Blairian",
+                  "Tory Blair",
+                  "Tony Blairs",
+                  "Anthony C. L. Blair",
+                  "Anthony Charles Blair",
+                  "Tony Blaire",
+                  "Tony Blair Sports Foundation",
+                  "Antony Blair",
+                  "Anthony Charles Lynton %22Tony%22 Blair",
+                  "Family of Tony Blair",
+                  "Tonyblair",
+                  "Tony Blear",
+                  "Anthony (Tony) Blair",
+                  "Tony Blair's Private life",
+                  "Tony Blair PM",
+                  "Tony Bliar",
+                  "Tony Blaer",
+                  "Herr Blair",
+                  "President Blair",
+                  "Anthony Charles Lynton Blair",
+                  "Tony Blair's private life",
+                  "Education, education and education",
+                  "Rt. Hon. Anthony Charles Lynton Blair",
+                  "Toney Blair",
+                  "Education, education, education",
+                  "Tony Blari",
+                  "Blair doctrine",
+                  "Tony Blair",
+                  "Prime Minister Tony Blair",
+                  "Tony Blare"
+                ],
+                "normalized": null,
+                "ok": false,
+                "error": "parse_failed",
+                "evidence": null,
+                "strategy": null
+              }
+            }
+          ]
+        }
+      },
+      "declared_scorer_manifest": {
+        "kind": "Authenticated historical native MetricRunner RESULT replay; not a new installed invocation",
+        "native_origins": {
+          "one_eval.metrics.runner": {
+            "path": "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/one_eval/metrics/runner.py",
+            "sha256": "d599a3665c2594fc1bce9b9c3cf664d704fd0cfcff57146961abeb4ac359b706"
+          },
+          "one_eval.metrics.common.general": {
+            "path": "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/one_eval/metrics/common/general.py",
+            "sha256": "dd7104eee19c829f3ddb5dd1faec0b97a230b253ab41b615d20b6799699d06a7"
+          }
+        },
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "accuracy",
+          "primary_metric": "choice_accuracy",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          }
+        },
+        "pred_key": "provider_final_content",
+        "ref_key": "target"
+      }
+    },
+    {
+      "source_index": 200,
+      "condition": "source_typed",
+      "report": {
+        "status": "SCORED",
+        "failures": [],
+        "transport_calls": 1,
+        "metric_calls": 1,
+        "renderer_profile": "native_install_source_typed_v1_brace_preserving",
+        "task_type": "mixeval_freeform",
+        "provider_type": "chat_completions",
+        "source_key": [
+          "200",
+          "05ffdf0514950787a180a2568505a9b4867b87c392a9fc0da1a1ea8e4e6d304b"
+        ],
+        "source_sha256": "05ffdf0514950787a180a2568505a9b4867b87c392a9fc0da1a1ea8e4e6d304b",
+        "request_sha256": "fd778a1813ff85dd82640021bc2d6aea69195b86032c3eb9486bfb26a84e1cf3",
+        "response_sha256": "a7a32e06d7feda15c121f5bd5ea76747e3432cdc43512aa91ebaa54ffbb5af29",
+        "provider_final_content_sha256": "d66ce1486c546ce6e0b64b1717f5f461a0375ae6b0b2a740fe6dd8cbdf8c1bd8",
+        "scorer_sha256": "5ed80d21dad5a703a3b95887fbe403cb7121fca314782aca444cb88f16babf8a",
+        "metric_result_sha256": "5e22c71fbd5cfd5057d85e13d4c43946f645918712d33f0c2bb21dce5c178d43",
+        "original_native_result": {
+          "run_eval": {
+            "stats": {
+              "total_samples": 1,
+              "valid_samples": 1,
+              "accuracy": 1,
+              "bench_name_or_prefix": "step",
+              "type": "key2_q_ma",
+              "metric": "any_math_verify",
+              "role": "diagnostic",
+              "display_as_primary": false,
+              "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+            },
+            "detail_path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/200_source_typed/native/mixeval_1794677284_steps/step_step2.jsonl",
+            "key_mapping": {
+              "input_question_key": "prompt",
+              "input_context_key": "context",
+              "input_targets_key": "target"
+            },
+            "prompt": {
+              "prompt_source": "explicit_source_type_repair",
+              "prompt_template_id": "native_install_source_typed_v1",
+              "prompt_hash": "sha256:7f60a9c8cb85e29bcbd0b1b86889ec368967a52aa196cfcb356682a150bc2df6",
+              "output_format": null,
+              "official_compatibility": null
+            }
+          },
+          "native_metric_runner": {
+            "num_samples": 1,
+            "alignment": {
+              "mode": "records",
+              "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/200_source_typed/native/mixeval_1794677284_steps/step_step2.jsonl"
+            },
+            "primary_metric_result": {
+              "metric": "exact_match",
+              "official_metric": "diagnostic_exact_match",
+              "score": 0.0,
+              "score_source": "metric_stage",
+              "prediction_mode": "generation",
+              "denominator": "total",
+              "total_samples": 1,
+              "scored_samples": null,
+              "valid_predictions": null,
+              "parse_failed": null,
+              "empty_output": null,
+              "invalid_references": null,
+              "parser": null,
+              "failure_policy": {},
+              "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+            },
+            "primary_metric_details": [
+              0.0
+            ],
+            "primary_metric_artifacts": {}
+          },
+          "delivered_row": {
+            "benchmark_name": "TriviaQA",
+            "context": "None",
+            "id": 200,
+            "options": [
+              "None"
+            ],
+            "problem_type": "free-form",
+            "prompt": "\"In 2006 English politician George Galloway was widely quoted as saying that it would be \"\"morally justified if someone chose to assassinate \"\" whom?\"",
+            "target": [
+              "Rt Hon Anthony Blair MP",
+              "Tony blair",
+              "The Tony Blair Sports Foundation",
+              "Antony blair",
+              "Tonie Blair",
+              "Tony Balir",
+              "Rt. Hon Tony Blair",
+              "Blairian",
+              "Tory Blair",
+              "Tony Blairs",
+              "Anthony C. L. Blair",
+              "Anthony Charles Blair",
+              "Tony Blaire",
+              "Tony Blair Sports Foundation",
+              "Antony Blair",
+              "Anthony Charles Lynton %22Tony%22 Blair",
+              "Family of Tony Blair",
+              "Tonyblair",
+              "Tony Blear",
+              "Anthony (Tony) Blair",
+              "Tony Blair's Private life",
+              "Tony Blair PM",
+              "Tony Bliar",
+              "Tony Blaer",
+              "Herr Blair",
+              "President Blair",
+              "Anthony Charles Lynton Blair",
+              "Tony Blair's private life",
+              "Education, education and education",
+              "Rt. Hon. Anthony Charles Lynton Blair",
+              "Toney Blair",
+              "Education, education, education",
+              "Tony Blari",
+              "Blair doctrine",
+              "Tony Blair",
+              "Prime Minister Tony Blair",
+              "Tony Blare"
+            ],
+            "generated_ans": "<think>We need answer question: \"In 2006 English politician George Galloway was widely quoted as saying that it would be \"\"morally justified if someone chose to assassinate \"\" whom?\" Need factual answer. Need recall. George Galloway 2006 quote: \"morally justified if someone chose to assassinate\" Tony Blair? Let's verify. George Galloway, Labour MP, in 2006? He said it would be morally justified if someone assassinated Tony Blair? Maybe \"Tony Blair\" or \"the Prime Minister\"? Let's think.\n\nQuestion wording: In 2006 English politician George Galloway was widely quoted as saying that it would be \"morally justified if someone chose to assassinate\" whom? Likely Tony Blair. Need output only factual answer. Could be \"Tony Blair\". Let's ensure.\n\nSearch memory: George Galloway said in 2006: \"I think it would be morally justified if someone chose to assassinate Tony Blair\"? There was controversy. He was on a radio show? He said \"If someone assassinated Tony Blair, I would not be surprised\"? Let's recall exact.\n\nMaybe question from Wikipedia? \"In 2006, English politician George Galloway was widely quoted as saying that it would be 'morally justified if someone chose to assassinate' Tony Blair.\" Yes.\n\nNeed answer free text only factual answer. So final: Tony Blair.\n</think>\n<answer>\n\nTony Blair</answer>",
+            "eval_valid": true,
+            "eval_error": "",
+            "eval_pred": "<think>We need answer question: \"In 2006 English politician George Galloway was widely quoted as saying that it would be \"\"morally justified if someone chose to assassinate \"\" whom?\" Need factual answer. Need recall. George Galloway 2006 quote: \"morally justified if someone chose to assassinate\" Tony Blair? Let's verify. George Galloway, Labour MP, in 2006? He said it would be morally justified if someone assassinated Tony Blair? Maybe \"Tony Blair\" or \"the Prime Minister\"? Let's think.\n\nQuestion wording: In 2006 English politician George Galloway was widely quoted as saying that it would be \"morally justified if someone chose to assassinate\" whom? Likely Tony Blair. Need output only factual answer. Could be \"Tony Blair\". Let's ensure.\n\nSearch memory: George Galloway said in 2006: \"I think it would be morally justified if someone chose to assassinate Tony Blair\"? There was controversy. He was on a radio show? He said \"If someone assassinated Tony Blair, I would not be surprised\"? Let's recall exact.\n\nMaybe question from Wikipedia? \"In 2006, English politician George Galloway was widely quoted as saying that it would be 'morally justified if someone chose to assassinate' Tony Blair.\" Yes.\n\nNeed answer free text only factual answer. So final: Tony Blair.\n</think>\n<answer>\n\nTony Blair</answer>",
+            "eval_score": 1.0
+          },
+          "source_id_normalization": {
+            "source_value": "200",
+            "source_type": "str",
+            "delivered_value": 200,
+            "delivered_type": "int",
+            "comparison": "Exact str roundtrip; source and delivered values/types retained"
+          },
+          "captured_completion_eligible": true,
+          "usage": {
+            "prompt_tokens": 130,
+            "completion_tokens": 309,
+            "total_tokens": 439,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 304
+            }
+          },
+          "transport_stop": false,
+          "execution_boundary_status": "PASS",
+          "derived_reference_eligible_samples": 1,
+          "derived_count_note": "Derived from numeric native per-row primary_metric_details, not a replacement for native scored_samples field",
+          "outcome_status": "KNOWN",
+          "eligible_native_score": 0.0,
+          "status": "PASS",
+          "mode": "real",
+          "source_index": 200,
+          "source_sha256": "05ffdf0514950787a180a2568505a9b4867b87c392a9fc0da1a1ea8e4e6d304b",
+          "condition": "source_typed",
+          "provider_calls": 1,
+          "local_fixture_calls": 0,
+          "native_distribution": "0.1.0",
+          "dataflow_distribution": "1.0.10"
+        },
+        "trust_scope": "Caller-supplied registry and observed capture; no independent provider authentication or semantic correctness claim.",
+        "request_payload": {
+          "model": "qwen3.8-27b",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant specialized in generating answers to questions."
+            },
+            {
+              "role": "user",
+              "content": "Context:\n{None}\n\nQuestion:\n{\"In 2006 English politician George Galloway was widely quoted as saying that it would be \"\"morally justified if someone chose to assassinate \"\" whom?\"}\nAnswer the question in free text. Output only the factual answer, without an answer tag."
+            }
+          ],
+          "top_p": 1.0,
+          "max_tokens": 4096,
+          "temperature": 0.0
+        },
+        "request_bytes": {
+          "encoding": "base64",
+          "data": "eyJtb2RlbCI6ICJxd2VuMy44LTI3YiIsICJtZXNzYWdlcyI6IFt7InJvbGUiOiAic3lzdGVtIiwgImNvbnRlbnQiOiAiWW91IGFyZSBhIGhlbHBmdWwgYXNzaXN0YW50IHNwZWNpYWxpemVkIGluIGdlbmVyYXRpbmcgYW5zd2VycyB0byBxdWVzdGlvbnMuIn0sIHsicm9sZSI6ICJ1c2VyIiwgImNvbnRlbnQiOiAiQ29udGV4dDpcbntOb25lfVxuXG5RdWVzdGlvbjpcbntcIkluIDIwMDYgRW5nbGlzaCBwb2xpdGljaWFuIEdlb3JnZSBHYWxsb3dheSB3YXMgd2lkZWx5IHF1b3RlZCBhcyBzYXlpbmcgdGhhdCBpdCB3b3VsZCBiZSBcIlwibW9yYWxseSBqdXN0aWZpZWQgaWYgc29tZW9uZSBjaG9zZSB0byBhc3Nhc3NpbmF0ZSBcIlwiIHdob20/XCJ9XG5BbnN3ZXIgdGhlIHF1ZXN0aW9uIGluIGZyZWUgdGV4dC4gT3V0cHV0IG9ubHkgdGhlIGZhY3R1YWwgYW5zd2VyLCB3aXRob3V0IGFuIGFuc3dlciB0YWcuIn1dLCAidG9wX3AiOiAxLjAsICJtYXhfdG9rZW5zIjogNDA5NiwgInRlbXBlcmF0dXJlIjogMC4wfQ==",
+          "sha256": "fd778a1813ff85dd82640021bc2d6aea69195b86032c3eb9486bfb26a84e1cf3",
+          "bytes": 514
+        },
+        "actual_request_sha256": "fd778a1813ff85dd82640021bc2d6aea69195b86032c3eb9486bfb26a84e1cf3",
+        "raw_response_bytes": {
+          "encoding": "base64",
+          "data": "eyJpZCI6ImNoYXRjbXBsLTAzOGU0MDk3LWY5YzUtNDdmNC05M2U0LTk2NDdjNWExMmEyNSIsImNyZWF0ZWQiOjE3OTQ2NzcyODUsIm1vZGVsIjoicXdlbjMuOC0yN2IiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJ2bGxtLTAuMzEuMC0yZmRhMTE0MSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNob2ljZXMiOlt7ImluZGV4IjowLCJmaW5pc2hfcmVhc29uIjoic3RvcCIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJcblxuVG9ueSBCbGFpciIsInJlYXNvbmluZ19jb250ZW50IjoiV2UgbmVlZCBhbnN3ZXIgcXVlc3Rpb246IFwiSW4gMjAwNiBFbmdsaXNoIHBvbGl0aWNpYW4gR2VvcmdlIEdhbGxvd2F5IHdhcyB3aWRlbHkgcXVvdGVkIGFzIHNheWluZyB0aGF0IGl0IHdvdWxkIGJlIFwiXCJtb3JhbGx5IGp1c3RpZmllZCBpZiBzb21lb25lIGNob3NlIHRvIGFzc2Fzc2luYXRlIFwiXCIgd2hvbT9cIiBOZWVkIGZhY3R1YWwgYW5zd2VyLiBOZWVkIHJlY2FsbC4gR2VvcmdlIEdhbGxvd2F5IDIwMDYgcXVvdGU6IFwibW9yYWxseSBqdXN0aWZpZWQgaWYgc29tZW9uZSBjaG9zZSB0byBhc3Nhc3NpbmF0ZVwiIFRvbnkgQmxhaXI/IExldCdzIHZlcmlmeS4gR2VvcmdlIEdhbGxvd2F5LCBMYWJvdXIgTVAsIGluIDIwMDY/IEhlIHNhaWQgaXQgd291bGQgYmUgbW9yYWxseSBqdXN0aWZpZWQgaWYgc29tZW9uZSBhc3Nhc3NpbmF0ZWQgVG9ueSBCbGFpcj8gTWF5YmUgXCJUb255IEJsYWlyXCIgb3IgXCJ0aGUgUHJpbWUgTWluaXN0ZXJcIj8gTGV0J3MgdGhpbmsuXG5cblF1ZXN0aW9uIHdvcmRpbmc6IEluIDIwMDYgRW5nbGlzaCBwb2xpdGljaWFuIEdlb3JnZSBHYWxsb3dheSB3YXMgd2lkZWx5IHF1b3RlZCBhcyBzYXlpbmcgdGhhdCBpdCB3b3VsZCBiZSBcIm1vcmFsbHkganVzdGlmaWVkIGlmIHNvbWVvbmUgY2hvc2UgdG8gYXNzYXNzaW5hdGVcIiB3aG9tPyBMaWtlbHkgVG9ueSBCbGFpci4gTmVlZCBvdXRwdXQgb25seSBmYWN0dWFsIGFuc3dlci4gQ291bGQgYmUgXCJUb255IEJsYWlyXCIuIExldCdzIGVuc3VyZS5cblxuU2VhcmNoIG1lbW9yeTogR2VvcmdlIEdhbGxvd2F5IHNhaWQgaW4gMjAwNjogXCJJIHRoaW5rIGl0IHdvdWxkIGJlIG1vcmFsbHkganVzdGlmaWVkIGlmIHNvbWVvbmUgY2hvc2UgdG8gYXNzYXNzaW5hdGUgVG9ueSBCbGFpclwiPyBUaGVyZSB3YXMgY29udHJvdmVyc3kuIEhlIHdhcyBvbiBhIHJhZGlvIHNob3c/IEhlIHNhaWQgXCJJZiBzb21lb25lIGFzc2Fzc2luYXRlZCBUb255IEJsYWlyLCBJIHdvdWxkIG5vdCBiZSBzdXJwcmlzZWRcIj8gTGV0J3MgcmVjYWxsIGV4YWN0LlxuXG5NYXliZSBxdWVzdGlvbiBmcm9tIFdpa2lwZWRpYT8gXCJJbiAyMDA2LCBFbmdsaXNoIHBvbGl0aWNpYW4gR2VvcmdlIEdhbGxvd2F5IHdhcyB3aWRlbHkgcXVvdGVkIGFzIHNheWluZyB0aGF0IGl0IHdvdWxkIGJlICdtb3JhbGx5IGp1c3RpZmllZCBpZiBzb21lb25lIGNob3NlIHRvIGFzc2Fzc2luYXRlJyBUb255IEJsYWlyLlwiIFllcy5cblxuTmVlZCBhbnN3ZXIgZnJlZSB0ZXh0IG9ubHkgZmFjdHVhbCBhbnN3ZXIuIFNvIGZpbmFsOiBUb255IEJsYWlyLlxuIn19XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6MTMwLCJjb21wbGV0aW9uX3Rva2VucyI6MzA5LCJ0b3RhbF90b2tlbnMiOjQzOSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjB9LCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjMwNH19fQ==",
+          "sha256": "a7a32e06d7feda15c121f5bd5ea76747e3432cdc43512aa91ebaa54ffbb5af29",
+          "bytes": 1762
+        },
+        "http_status": 200,
+        "capture_label": "Pinned original native HTTP_TRACE regression",
+        "raw_response": {
+          "id": "chatcmpl-038e4097-f9c5-47f4-93e4-9647c5a12a25",
+          "created": 1794677285,
+          "model": "qwen3.8-27b",
+          "system_fingerprint": "vllm-0.31.0-2fda1141",
+          "object": "chat.completion",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "\n\nTony Blair",
+                "reasoning_content": "We need answer question: \"In 2006 English politician George Galloway was widely quoted as saying that it would be \"\"morally justified if someone chose to assassinate \"\" whom?\" Need factual answer. Need recall. George Galloway 2006 quote: \"morally justified if someone chose to assassinate\" Tony Blair? Let's verify. George Galloway, Labour MP, in 2006? He said it would be morally justified if someone assassinated Tony Blair? Maybe \"Tony Blair\" or \"the Prime Minister\"? Let's think.\n\nQuestion wording: In 2006 English politician George Galloway was widely quoted as saying that it would be \"morally justified if someone chose to assassinate\" whom? Likely Tony Blair. Need output only factual answer. Could be \"Tony Blair\". Let's ensure.\n\nSearch memory: George Galloway said in 2006: \"I think it would be morally justified if someone chose to assassinate Tony Blair\"? There was controversy. He was on a radio show? He said \"If someone assassinated Tony Blair, I would not be surprised\"? Let's recall exact.\n\nMaybe question from Wikipedia? \"In 2006, English politician George Galloway was widely quoted as saying that it would be 'morally justified if someone chose to assassinate' Tony Blair.\" Yes.\n\nNeed answer free text only factual answer. So final: Tony Blair.\n"
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 130,
+            "completion_tokens": 309,
+            "total_tokens": 439,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 304
+            }
+          }
+        },
+        "response_id": "chatcmpl-038e4097-f9c5-47f4-93e4-9647c5a12a25",
+        "provider_final_content": "\n\nTony Blair",
+        "delivered_row": {
+          "benchmark_name": "TriviaQA",
+          "context": "None",
+          "id": 200,
+          "options": [
+            "None"
+          ],
+          "problem_type": "free-form",
+          "prompt": "\"In 2006 English politician George Galloway was widely quoted as saying that it would be \"\"morally justified if someone chose to assassinate \"\" whom?\"",
+          "target": [
+            "Rt Hon Anthony Blair MP",
+            "Tony blair",
+            "The Tony Blair Sports Foundation",
+            "Antony blair",
+            "Tonie Blair",
+            "Tony Balir",
+            "Rt. Hon Tony Blair",
+            "Blairian",
+            "Tory Blair",
+            "Tony Blairs",
+            "Anthony C. L. Blair",
+            "Anthony Charles Blair",
+            "Tony Blaire",
+            "Tony Blair Sports Foundation",
+            "Antony Blair",
+            "Anthony Charles Lynton %22Tony%22 Blair",
+            "Family of Tony Blair",
+            "Tonyblair",
+            "Tony Blear",
+            "Anthony (Tony) Blair",
+            "Tony Blair's Private life",
+            "Tony Blair PM",
+            "Tony Bliar",
+            "Tony Blaer",
+            "Herr Blair",
+            "President Blair",
+            "Anthony Charles Lynton Blair",
+            "Tony Blair's private life",
+            "Education, education and education",
+            "Rt. Hon. Anthony Charles Lynton Blair",
+            "Toney Blair",
+            "Education, education, education",
+            "Tony Blari",
+            "Blair doctrine",
+            "Tony Blair",
+            "Prime Minister Tony Blair",
+            "Tony Blare"
+          ],
+          "generated_ans": "<think>We need answer question: \"In 2006 English politician George Galloway was widely quoted as saying that it would be \"\"morally justified if someone chose to assassinate \"\" whom?\" Need factual answer. Need recall. George Galloway 2006 quote: \"morally justified if someone chose to assassinate\" Tony Blair? Let's verify. George Galloway, Labour MP, in 2006? He said it would be morally justified if someone assassinated Tony Blair? Maybe \"Tony Blair\" or \"the Prime Minister\"? Let's think.\n\nQuestion wording: In 2006 English politician George Galloway was widely quoted as saying that it would be \"morally justified if someone chose to assassinate\" whom? Likely Tony Blair. Need output only factual answer. Could be \"Tony Blair\". Let's ensure.\n\nSearch memory: George Galloway said in 2006: \"I think it would be morally justified if someone chose to assassinate Tony Blair\"? There was controversy. He was on a radio show? He said \"If someone assassinated Tony Blair, I would not be surprised\"? Let's recall exact.\n\nMaybe question from Wikipedia? \"In 2006, English politician George Galloway was widely quoted as saying that it would be 'morally justified if someone chose to assassinate' Tony Blair.\" Yes.\n\nNeed answer free text only factual answer. So final: Tony Blair.\n</think>\n<answer>\n\nTony Blair</answer>",
+          "eval_valid": true,
+          "eval_error": "",
+          "eval_pred": "<think>We need answer question: \"In 2006 English politician George Galloway was widely quoted as saying that it would be \"\"morally justified if someone chose to assassinate \"\" whom?\" Need factual answer. Need recall. George Galloway 2006 quote: \"morally justified if someone chose to assassinate\" Tony Blair? Let's verify. George Galloway, Labour MP, in 2006? He said it would be morally justified if someone assassinated Tony Blair? Maybe \"Tony Blair\" or \"the Prime Minister\"? Let's think.\n\nQuestion wording: In 2006 English politician George Galloway was widely quoted as saying that it would be \"morally justified if someone chose to assassinate\" whom? Likely Tony Blair. Need output only factual answer. Could be \"Tony Blair\". Let's ensure.\n\nSearch memory: George Galloway said in 2006: \"I think it would be morally justified if someone chose to assassinate Tony Blair\"? There was controversy. He was on a radio show? He said \"If someone assassinated Tony Blair, I would not be surprised\"? Let's recall exact.\n\nMaybe question from Wikipedia? \"In 2006, English politician George Galloway was widely quoted as saying that it would be 'morally justified if someone chose to assassinate' Tony Blair.\" Yes.\n\nNeed answer free text only factual answer. So final: Tony Blair.\n</think>\n<answer>\n\nTony Blair</answer>",
+          "eval_score": 1.0,
+          "provider_final_content": "\n\nTony Blair"
+        },
+        "metric_result": {
+          "num_samples": 1,
+          "alignment": {
+            "mode": "records",
+            "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-offline-rescore-20261114/results/200_source_typed/records.jsonl"
+          },
+          "primary_metric_result": {
+            "metric": "exact_match",
+            "official_metric": "diagnostic_exact_match",
+            "score": 1.0,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 1,
+            "scored_samples": null,
+            "valid_predictions": null,
+            "parse_failed": null,
+            "empty_output": null,
+            "invalid_references": null,
+            "parser": null,
+            "failure_policy": {},
+            "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+          },
+          "primary_metric_details": [
+            1.0
+          ],
+          "primary_metric_artifacts": {}
+        },
+        "eligible_metric_score": 1.0,
+        "eligible_metric_rows": 1
+      },
+      "transport_callback_calls": 1,
+      "metric_replay_callback_calls": 1,
+      "historical_native_zero_status": null,
+      "historical_rescore_metric": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-offline-rescore-20261114/results/200_source_typed/records.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "exact_match",
+          "official_metric": "diagnostic_exact_match",
+          "score": 1.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": null,
+          "valid_predictions": null,
+          "parse_failed": null,
+          "empty_output": null,
+          "invalid_references": null,
+          "parser": null,
+          "failure_policy": {},
+          "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+        },
+        "primary_metric_details": [
+          1.0
+        ],
+        "primary_metric_artifacts": {}
+      },
+      "declared_scorer_manifest": {
+        "kind": "Authenticated historical native MetricRunner RESULT replay; not a new installed invocation",
+        "native_origins": {
+          "one_eval.metrics.runner": {
+            "path": "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/one_eval/metrics/runner.py",
+            "sha256": "d599a3665c2594fc1bce9b9c3cf664d704fd0cfcff57146961abeb4ac359b706"
+          },
+          "one_eval.metrics.common.general": {
+            "path": "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/one_eval/metrics/common/general.py",
+            "sha256": "dd7104eee19c829f3ddb5dd1faec0b97a230b253ab41b615d20b6799699d06a7"
+          }
+        },
+        "evaluation": {
+          "score_source": "metric_stage",
+          "official_metric": "diagnostic_exact_match",
+          "primary_metric": "exact_match",
+          "denominator": "total",
+          "prediction_mode": "generation",
+          "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+        },
+        "pred_key": "provider_final_content",
+        "ref_key": "target"
+      }
+    }
+  ]
+}
