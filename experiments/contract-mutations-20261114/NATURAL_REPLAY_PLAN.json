@@ -1,0 +1,9 @@
+{
+  "created_at": "2026-11-14T03:57:01.146Z",
+  "scope": "Development regression only",
+  "stage": "Recorded after synthetic outcomes but before this replay",
+  "plan": "Apply unchanged experimental source_bound.py to all four already observed remaining-split CHECKER_REVIEWED captures with source anchors reconstructed from exact SELECTED entries. Do not tune wrapper based on results. Preserve both pass/fail and all underlying v1 findings.",
+  "rows": 27346,
+  "new_model_requests": 0
+}
+

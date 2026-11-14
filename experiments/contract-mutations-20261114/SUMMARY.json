@@ -1,0 +1,208 @@
+{
+  "status": "completed",
+  "source_units": 200,
+  "condition_records": 2200,
+  "non_applicable": 0,
+  "provider_model_calls": 0,
+  "controlled_backend_calls_are_not_model_requests": true,
+  "conditions": [
+    {
+      "condition": "identity",
+      "rows": 200,
+      "v1": {
+        "PASS": 200,
+        "FAIL": 0,
+        "INCOMPLETE": 0
+      },
+      "v2": {
+        "PASS": 200,
+        "FAIL": 0,
+        "INCOMPLETE": 0
+      },
+      "backend_calls": {
+        "v1": 200,
+        "v2": 200
+      }
+    },
+    {
+      "condition": "trim_only",
+      "rows": 200,
+      "v1": {
+        "PASS": 200,
+        "FAIL": 0,
+        "INCOMPLETE": 0
+      },
+      "v2": {
+        "PASS": 200,
+        "FAIL": 0,
+        "INCOMPLETE": 0
+      },
+      "backend_calls": {
+        "v1": 200,
+        "v2": 200
+      }
+    },
+    {
+      "condition": "coherent_permutation",
+      "rows": 200,
+      "v1": {
+        "PASS": 200,
+        "FAIL": 0,
+        "INCOMPLETE": 0
+      },
+      "v2": {
+        "PASS": 200,
+        "FAIL": 0,
+        "INCOMPLETE": 0
+      },
+      "backend_calls": {
+        "v1": 200,
+        "v2": 200
+      }
+    },
+    {
+      "condition": "distractor_replace",
+      "rows": 200,
+      "v1": {
+        "PASS": 200,
+        "FAIL": 0,
+        "INCOMPLETE": 0
+      },
+      "v2": {
+        "PASS": 0,
+        "FAIL": 200,
+        "INCOMPLETE": 0
+      },
+      "backend_calls": {
+        "v1": 200,
+        "v2": 0
+      }
+    },
+    {
+      "condition": "distractor_drop",
+      "rows": 200,
+      "v1": {
+        "PASS": 200,
+        "FAIL": 0,
+        "INCOMPLETE": 0
+      },
+      "v2": {
+        "PASS": 0,
+        "FAIL": 200,
+        "INCOMPLETE": 0
+      },
+      "backend_calls": {
+        "v1": 200,
+        "v2": 0
+      }
+    },
+    {
+      "condition": "duplicate_gold",
+      "rows": 200,
+      "v1": {
+        "PASS": 200,
+        "FAIL": 0,
+        "INCOMPLETE": 0
+      },
+      "v2": {
+        "PASS": 0,
+        "FAIL": 200,
+        "INCOMPLETE": 0
+      },
+      "backend_calls": {
+        "v1": 200,
+        "v2": 0
+      }
+    },
+    {
+      "condition": "question_truncation",
+      "rows": 200,
+      "v1": {
+        "PASS": 200,
+        "FAIL": 0,
+        "INCOMPLETE": 0
+      },
+      "v2": {
+        "PASS": 0,
+        "FAIL": 200,
+        "INCOMPLETE": 0
+      },
+      "backend_calls": {
+        "v1": 200,
+        "v2": 0
+      }
+    },
+    {
+      "condition": "question_omission",
+      "rows": 200,
+      "v1": {
+        "PASS": 0,
+        "FAIL": 200,
+        "INCOMPLETE": 0
+      },
+      "v2": {
+        "PASS": 0,
+        "FAIL": 200,
+        "INCOMPLETE": 0
+      },
+      "backend_calls": {
+        "v1": 0,
+        "v2": 0
+      }
+    },
+    {
+      "condition": "gold_removed",
+      "rows": 200,
+      "v1": {
+        "PASS": 0,
+        "FAIL": 200,
+        "INCOMPLETE": 0
+      },
+      "v2": {
+        "PASS": 0,
+        "FAIL": 200,
+        "INCOMPLETE": 0
+      },
+      "backend_calls": {
+        "v1": 0,
+        "v2": 0
+      }
+    },
+    {
+      "condition": "wrong_reference",
+      "rows": 200,
+      "v1": {
+        "PASS": 0,
+        "FAIL": 200,
+        "INCOMPLETE": 0
+      },
+      "v2": {
+        "PASS": 0,
+        "FAIL": 200,
+        "INCOMPLETE": 0
+      },
+      "backend_calls": {
+        "v1": 0,
+        "v2": 0
+      }
+    },
+    {
+      "condition": "missing_source",
+      "rows": 200,
+      "v1": {
+        "PASS": 200,
+        "FAIL": 0,
+        "INCOMPLETE": 0
+      },
+      "v2": {
+        "PASS": 0,
+        "FAIL": 0,
+        "INCOMPLETE": 200
+      },
+      "backend_calls": {
+        "v1": 200,
+        "v2": 0
+      }
+    }
+  ]
+}

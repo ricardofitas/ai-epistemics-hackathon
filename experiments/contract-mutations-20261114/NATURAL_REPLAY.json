@@ -1,0 +1,62 @@
+{
+  "scope": "Development regression on previously observed natural rows; not an independent holdout",
+  "provider_calls": 0,
+  "panels": [
+    {
+      "benchmark": "arc-challenge",
+      "rows": 1072,
+      "report": {
+        "status": "FAIL",
+        "failures": {
+          "correct_choice_missing": 1072,
+          "source_choice_multiset_changed": 1072
+        },
+        "incomplete_checks": {},
+        "records": 1072,
+        "v1_status": "FAIL"
+      },
+      "original_capture_sha256": "42998a9009a2663ea92d0dbf92cb324aae42c5a1558c87f4eb2782401c8dd031"
+    },
+    {
+      "benchmark": "openbookqa",
+      "rows": 400,
+      "report": {
+        "status": "FAIL",
+        "failures": {
+          "question_not_bound": 400,
+          "correct_choice_missing": 400,
+          "source_question_incomplete": 400,
+          "source_choice_multiset_changed": 400
+        },
+        "incomplete_checks": {},
+        "records": 400,
+        "v1_status": "FAIL"
+      },
+      "original_capture_sha256": "7c745ebbbf362e9e5fe41791706abe18ba7b40ea05ef2ecf5759a1ed0e35d155"
+    },
+    {
+      "benchmark": "mmlu",
+      "rows": 13942,
+      "report": {
+        "status": "PASS",
+        "failures": {},
+        "incomplete_checks": {},
+        "records": 13942,
+        "v1_status": "PASS"
+      },
+      "original_capture_sha256": "5e4f4c63c685622767949f173a8ae422fe6343bf68da722a46d4c84c9fc3ead5"
+    },
+    {
+      "benchmark": "mmlu-pro",
+      "rows": 11932,
+      "report": {
+        "status": "PASS",
+        "failures": {},
+        "incomplete_checks": {},
+        "records": 11932,
+        "v1_status": "PASS"
+      },
+      "original_capture_sha256": "fa9ac81b2e82c137843ec56173fc2761c653e8a5c78993bb869fb81fb0adb7a2"
+    }
+  ]
+}
