@@ -70,13 +70,13 @@ def hf_frame(repo, split, prefix=None):
     return pd.concat(frames, ignore_index=True), dict(repo=repo, revision=revision, split=split, files=receipts)
 
 
-def gpqa_frame(plan):
+def gpqa_frame(plan, member_basename="gpqa_main.csv"):
     data = git_file("Idavidrein/gpqa", plan["gpqa_author_revision"], "dataset.zip", plan["gpqa_archive_git_blob"])
     readme = git_file("Idavidrein/gpqa", plan["gpqa_author_revision"], "README.md", plan["gpqa_readme_git_blob"]).decode()
     match = re.search(r"password[^`]*`([^`]+)`", readme, re.I)
     assert match, "Author-provided archive password not located"
     with zipfile.ZipFile(BytesIO(data)) as archive:
-        member = next(name for name in archive.namelist() if Path(name).name == "gpqa_main.csv")
+        member = next(name for name in archive.namelist() if Path(name).name == member_basename)
         contents = archive.read(member, pwd=match[1].encode())
     records = list(csv.DictReader(StringIO(contents.decode("utf-8-sig"))))
     return pd.DataFrame(records), dict(repo="Idavidrein/gpqa", revision=plan["gpqa_author_revision"],
