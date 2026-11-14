@@ -1,0 +1,79 @@
+{
+  "artifact_sha256": "0fff22307ea63ae0bbe15a9e03088344ce9479cf5d64d4d196e03efa2ed9871b",
+  "run_id": 43645404107,
+  "artifact_id": 14132959007,
+  "recounts": {
+    "cupcase": {
+      "A": {
+        "rows": 3562,
+        "valid": 3562,
+        "correct": 3562,
+        "question_present": 0,
+        "report_score": 1.0,
+        "ordinary_metric_score": 0.0,
+        "record_sha256": "7ed972fad9dccd9bb3bc44abce1ac048e0a4ed240e692144425e3eec287e280e"
+      },
+      "B": {
+        "rows": 3562,
+        "valid": 3562,
+        "correct": 0,
+        "question_present": 0,
+        "report_score": 0.0,
+        "ordinary_metric_score": 0.0,
+        "record_sha256": "65640238e94d411db62b9ac35fecacb47898887193613eeb87e7a5ff1f84a00a"
+      }
+    },
+    "sciq": {
+      "A": {
+        "rows": 1000,
+        "valid": 997,
+        "correct": 994,
+        "question_present": 1000,
+        "report_score": 0.9969909729187563,
+        "ordinary_metric_score": 0.0,
+        "record_sha256": "7cbbecc7e2d067fc62a43b27e6e5745f0f6eeab9a63e58fc0723906d3342a0be"
+      },
+      "B": {
+        "rows": 1000,
+        "valid": 997,
+        "correct": 0,
+        "question_present": 1000,
+        "report_score": 0.0,
+        "ordinary_metric_score": 0.0,
+        "record_sha256": "e3c90d4878170bfc03ae465d3b55e1dcf8ab80579646ec5f65f948d4c545053e"
+      }
+    },
+    "gpqa": {
+      "A": {
+        "rows": 448,
+        "valid": 427,
+        "correct": 412,
+        "question_present": 0,
+        "report_score": 0.9648711943793911,
+        "ordinary_metric_score": 0.0,
+        "record_sha256": "e7efff6893a6ec91452c1cfd4cd3837f1a0c0c4cb1c2d19df01465e036622f5e"
+      },
+      "B": {
+        "rows": 448,
+        "valid": 427,
+        "correct": 2,
+        "question_present": 0,
+        "report_score": 0.00468384074941452,
+        "ordinary_metric_score": 0.0,
+        "record_sha256": "55d862b934518c83e0cd93631eefa0ea1eb1a9d9f7c6cc52f6e1ae56d8882b67"
+      }
+    },
+    "mmlu": {
+      "A": {
+        "rows": 14042,
+        "valid": 14042,
+        "correct": 3222,
+        "question_present": 14042,
+        "report_score": 0.22945449366187154,
+        "ordinary_metric_score": 0.0,
+        "record_sha256": "2faa94f59f5e258e8a534d0a19b7d7322bc810197ac3ff62557c3f8332f6e7a6"
+      }
+    }
+  },
+  "boundary": "Original complete DataFlowEvalTool.run_eval, FileStorage, generator, UnifiedBenchDatasetEvaluator, rescorer, MetricRunner and report score selector; source-loaded registration/base dependencies and constant-serving cache. No installed CLI or LLM-generated report."
+}

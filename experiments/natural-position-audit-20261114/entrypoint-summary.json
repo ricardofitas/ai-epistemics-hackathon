@@ -1,0 +1,319 @@
+{
+  "one_eval_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "datasets": {
+    "cupcase": {
+      "source_rows": 3562,
+      "source_jsonl_sha256": "5eadadd376ab1cbd1064846889780b97eb1eb45db0049a671bf0116b7fe1c2a6",
+      "gold_position_counts": {
+        "0": 3562
+      },
+      "baselines": {
+        "A": {
+          "native_stats": {
+            "total_samples": 3562,
+            "valid_samples": 3562,
+            "accuracy": 1.0,
+            "bench_name_or_prefix": "step",
+            "type": "key3_q_choices_a",
+            "metric": "choice_accuracy_parser",
+            "score": 1.0,
+            "valid_predictions": 3562,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "rescored_rows": 3562,
+            "rescored_by": "one_eval.choice_letter_parser",
+            "role": "diagnostic",
+            "display_as_primary": false,
+            "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+          },
+          "report_score": 1.0,
+          "report_source": "dataflow_eval:accuracy",
+          "ordinary_metric_score": 0.0,
+          "diagnostic_removed_report_score": 0.0,
+          "diagnostic_removed_report_source": "dataflow_eval:missing",
+          "own_question_present": 0,
+          "rows": 3562,
+          "correct_rows": 3562,
+          "valid_rows": 3562,
+          "result_sha256": "7ed972fad9dccd9bb3bc44abce1ac048e0a4ed240e692144425e3eec287e280e"
+        },
+        "B": {
+          "native_stats": {
+            "total_samples": 3562,
+            "valid_samples": 3562,
+            "accuracy": 0.0,
+            "bench_name_or_prefix": "step",
+            "type": "key3_q_choices_a",
+            "metric": "choice_accuracy_parser",
+            "score": 0.0,
+            "valid_predictions": 3562,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "rescored_rows": 3562,
+            "rescored_by": "one_eval.choice_letter_parser",
+            "role": "diagnostic",
+            "display_as_primary": false,
+            "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+          },
+          "report_score": 0.0,
+          "report_source": "dataflow_eval:accuracy",
+          "ordinary_metric_score": 0.0,
+          "diagnostic_removed_report_score": 0.0,
+          "diagnostic_removed_report_source": "dataflow_eval:missing",
+          "own_question_present": 0,
+          "rows": 3562,
+          "correct_rows": 0,
+          "valid_rows": 3562,
+          "result_sha256": "65640238e94d411db62b9ac35fecacb47898887193613eeb87e7a5ff1f84a00a"
+        }
+      }
+    },
+    "sciq": {
+      "source_rows": 1000,
+      "source_jsonl_sha256": "013b531cd47d71d40a03767a0d01590e954d7c8a6620879bf6f1709200c683ed",
+      "gold_position_counts": {
+        "0": 1000
+      },
+      "baselines": {
+        "A": {
+          "native_stats": {
+            "total_samples": 1000,
+            "valid_samples": 997,
+            "accuracy": 0.9969909729187563,
+            "bench_name_or_prefix": "step",
+            "type": "key3_q_choices_a",
+            "metric": "choice_accuracy_parser",
+            "score": 0.9969909729187563,
+            "valid_predictions": 997,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 3,
+            "rescored_rows": 997,
+            "rescored_by": "one_eval.choice_letter_parser",
+            "role": "diagnostic",
+            "display_as_primary": false,
+            "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+          },
+          "report_score": 0.9969909729187563,
+          "report_source": "dataflow_eval:accuracy",
+          "ordinary_metric_score": 0.0,
+          "diagnostic_removed_report_score": 0.0,
+          "diagnostic_removed_report_source": "dataflow_eval:missing",
+          "own_question_present": 1000,
+          "rows": 1000,
+          "correct_rows": 994,
+          "valid_rows": 997,
+          "result_sha256": "7cbbecc7e2d067fc62a43b27e6e5745f0f6eeab9a63e58fc0723906d3342a0be"
+        },
+        "B": {
+          "native_stats": {
+            "total_samples": 1000,
+            "valid_samples": 997,
+            "accuracy": 0.0,
+            "bench_name_or_prefix": "step",
+            "type": "key3_q_choices_a",
+            "metric": "choice_accuracy_parser",
+            "score": 0.0,
+            "valid_predictions": 997,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 3,
+            "rescored_rows": 997,
+            "rescored_by": "one_eval.choice_letter_parser",
+            "role": "diagnostic",
+            "display_as_primary": false,
+            "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+          },
+          "report_score": 0.0,
+          "report_source": "dataflow_eval:accuracy",
+          "ordinary_metric_score": 0.0,
+          "diagnostic_removed_report_score": 0.0,
+          "diagnostic_removed_report_source": "dataflow_eval:missing",
+          "own_question_present": 1000,
+          "rows": 1000,
+          "correct_rows": 0,
+          "valid_rows": 997,
+          "result_sha256": "e3c90d4878170bfc03ae465d3b55e1dcf8ab80579646ec5f65f948d4c545053e"
+        }
+      }
+    },
+    "gpqa": {
+      "source_rows": 448,
+      "source_jsonl_sha256": "454fc88c03e466d1cabf8cabc64218426abcd0cf410927ade82c1a30ae416754",
+      "gold_position_counts": {
+        "0": 448
+      },
+      "baselines": {
+        "A": {
+          "native_stats": {
+            "total_samples": 448,
+            "valid_samples": 427,
+            "accuracy": 0.9648711943793911,
+            "bench_name_or_prefix": "step",
+            "type": "key3_q_choices_a",
+            "metric": "choice_accuracy_parser",
+            "score": 0.9648711943793911,
+            "valid_predictions": 427,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 21,
+            "rescored_rows": 431,
+            "rescored_by": "one_eval.choice_letter_parser",
+            "role": "diagnostic",
+            "display_as_primary": false,
+            "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+          },
+          "report_score": 0.9648711943793911,
+          "report_source": "dataflow_eval:accuracy",
+          "ordinary_metric_score": 0.0,
+          "diagnostic_removed_report_score": 0.0,
+          "diagnostic_removed_report_source": "dataflow_eval:missing",
+          "own_question_present": 0,
+          "rows": 448,
+          "correct_rows": 412,
+          "valid_rows": 427,
+          "result_sha256": "e7efff6893a6ec91452c1cfd4cd3837f1a0c0c4cb1c2d19df01465e036622f5e"
+        },
+        "B": {
+          "native_stats": {
+            "total_samples": 448,
+            "valid_samples": 427,
+            "accuracy": 0.00468384074941452,
+            "bench_name_or_prefix": "step",
+            "type": "key3_q_choices_a",
+            "metric": "choice_accuracy_parser",
+            "score": 0.00468384074941452,
+            "valid_predictions": 427,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 21,
+            "rescored_rows": 430,
+            "rescored_by": "one_eval.choice_letter_parser",
+            "role": "diagnostic",
+            "display_as_primary": false,
+            "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+          },
+          "report_score": 0.00468384074941452,
+          "report_source": "dataflow_eval:accuracy",
+          "ordinary_metric_score": 0.0,
+          "diagnostic_removed_report_score": 0.0,
+          "diagnostic_removed_report_source": "dataflow_eval:missing",
+          "own_question_present": 0,
+          "rows": 448,
+          "correct_rows": 2,
+          "valid_rows": 427,
+          "result_sha256": "55d862b934518c83e0cd93631eefa0ea1eb1a9d9f7c6cc52f6e1ae56d8882b67"
+        }
+      }
+    },
+    "mmlu": {
+      "source_rows": 14042,
+      "source_jsonl_sha256": "955f64f15cee258b0679c62f0c62234ec457e92ae38c77cb00c920a7de38a668",
+      "gold_position_counts": {
+        "1": 3462,
+        "2": 3582,
+        "3": 3776,
+        "0": 3222
+      },
+      "baselines": {
+        "A": {
+          "native_stats": {
+            "total_samples": 14042,
+            "valid_samples": 14042,
+            "accuracy": 0.22945449366187154,
+            "bench_name_or_prefix": "step",
+            "type": "key3_q_choices_a",
+            "metric": "choice_accuracy_parser",
+            "score": 0.22945449366187154,
+            "valid_predictions": 14042,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "rescored_rows": 0,
+            "rescored_by": "one_eval.choice_letter_parser",
+            "role": "diagnostic",
+            "display_as_primary": false,
+            "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+          },
+          "report_score": 0.22945449366187154,
+          "report_source": "dataflow_eval:accuracy",
+          "ordinary_metric_score": 0.0,
+          "diagnostic_removed_report_score": 0.0,
+          "diagnostic_removed_report_source": "dataflow_eval:missing",
+          "own_question_present": 14042,
+          "rows": 14042,
+          "correct_rows": 3222,
+          "valid_rows": 14042,
+          "result_sha256": "2faa94f59f5e258e8a534d0a19b7d7322bc810197ac3ff62557c3f8332f6e7a6"
+        }
+      }
+    }
+  },
+  "source_provenance": {
+    "cupcase": {
+      "repo": "ofir408/CupCase",
+      "revision": "157a85b1a0fa6d0e25e5209a1cdaf41cf1ff8753",
+      "split": "test",
+      "files": [
+        {
+          "path": "data/test-00000-of-00001.parquet",
+          "sha256": "928f961590534394f36b2cb62e2c79993ed6bce454b575c4ddf12aca1a173123",
+          "bytes": 8424692,
+          "declared_lfs_sha256": "928f961590534394f36b2cb62e2c79993ed6bce454b575c4ddf12aca1a173123"
+        }
+      ]
+    },
+    "sciq": {
+      "repo": "allenai/sciq",
+      "revision": "2c94ad3e1aafab77146f384e23536f97a4849815",
+      "split": "test",
+      "files": [
+        {
+          "path": "data/test-00000-of-00001.parquet",
+          "sha256": "3a719356a29b127fc54ef3c7f51a034db4bd105d5717215e8c85d2aa58d60667",
+          "bytes": 342808,
+          "declared_lfs_sha256": "3a719356a29b127fc54ef3c7f51a034db4bd105d5717215e8c85d2aa58d60667"
+        }
+      ]
+    },
+    "gpqa": {
+      "repo": "Idavidrein/gpqa",
+      "revision": "56686c06f5e19865c153de0fdb11be3890014df7",
+      "archive_git_blob": "80788cb325c4d63bbccad56c2e393b33389348fe",
+      "archive_sha256": "461ae7329f15a3e35f8184d2dac24b990f34fdf12f366ca4062d8e6638cd08dc",
+      "member": "dataset/gpqa_main.csv",
+      "member_sha256": "acdeeac8f622267f2cd727d7d474202ea08dec80f7d3c3593b3ef8644f19b8e3"
+    },
+    "mmlu": {
+      "repo": "cais/mmlu",
+      "revision": "c30699e8356da336a370243923dbaf21066bb9fe",
+      "split": "test",
+      "files": [
+        {
+          "path": "all/test-00000-of-00001.parquet",
+          "sha256": "74a41822ce7d3def56e1682f958469c04642a5336a5ce912fa375fdb90fb25d7",
+          "bytes": 3504718,
+          "declared_lfs_sha256": "74a41822ce7d3def56e1682f958469c04642a5336a5ce912fa375fdb90fb25d7"
+        }
+      ]
+    }
+  },
+  "dataflow": {
+    "pypi_version": "1.0.10",
+    "wheel": "open_dataflow-1.0.10-py3-none-any.whl",
+    "wheel_sha256": "75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "prompt_source": "dataflow/prompts/core_text.py",
+    "prompt_sha256": "5df1bf04fceea685ebf28bf4c398303cda49e46af8d87e769db0d04ca1c5600a",
+    "generator_source": "dataflow/operators/core_text/generate/bench_answer_generator.py",
+    "generator_sha256": "9b3b29c44c60d71510f88b0f19e964339806fc29bd0fd91ff16c97072219e09a"
+  },
+  "added_source_sha256": {
+    "dataflow/utils/reasoning/AnswerExtraction.py": "a133193bf1fdcab1dd594974b7e411737e5a16e20076c0ffe7e10ff04354b8c4",
+    "dataflow/utils/storage.py": "9497e91a1b9b63f354ecfc36adf5b600e0ac5b173eb9ca1bd3da52368bc3b58d",
+    "dataflow/operators/core_text/eval/unified_bench_dataset_evaluator.py": "a06f70fac52f9e5287b70aa908852468aa0b945be79f4445cf91566a04878c7f"
+  },
+  "new_model_calls": 0,
+  "boundary": "Original complete DataFlowEvalTool.run_eval, FileStorage, generator, UnifiedBenchDatasetEvaluator, rescorer, MetricRunner and report score selector; source-loaded registration/base dependencies and constant-serving cache. No installed CLI or LLM-generated report."
+}

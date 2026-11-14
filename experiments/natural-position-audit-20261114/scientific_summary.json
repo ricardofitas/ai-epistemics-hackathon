@@ -1,0 +1,171 @@
+{
+  "status": "NATURAL_NATIVE_API_PATH_FAILURE_VERIFIED_WITH_SOURCE_PRESERVING_CORRECTION_AND_RETAINED_RESIDUAL",
+  "upstream_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "unique_affected_source_rows": 5010,
+  "healthy_position_control_rows": 14042,
+  "new_model_calls": 0,
+  "new_human_labels": 0,
+  "manuscript_changes": 0,
+  "boundary": "Original complete DataFlowEvalTool.run_eval, FileStorage, generator, UnifiedBenchDatasetEvaluator, rescorer, MetricRunner and report score selector; source-loaded registration/base dependencies and constant-serving cache. No installed CLI or LLM-generated report.",
+  "datasets": {
+    "cupcase": {
+      "rows": 3562,
+      "gold_position_counts": {
+        "0": 3562
+      },
+      "A_correct": 3562,
+      "A_valid": 3562,
+      "A_report_score": 1.0,
+      "A_question_present": 0,
+      "ordinary_metric_score": 0.0,
+      "report_score_source": "dataflow_eval:accuracy"
+    },
+    "sciq": {
+      "rows": 1000,
+      "gold_position_counts": {
+        "0": 1000
+      },
+      "A_correct": 994,
+      "A_valid": 997,
+      "A_report_score": 0.9969909729187563,
+      "A_question_present": 1000,
+      "ordinary_metric_score": 0.0,
+      "report_score_source": "dataflow_eval:accuracy"
+    },
+    "gpqa": {
+      "rows": 448,
+      "gold_position_counts": {
+        "0": 448
+      },
+      "A_correct": 412,
+      "A_valid": 427,
+      "A_report_score": 0.9648711943793911,
+      "A_question_present": 0,
+      "ordinary_metric_score": 0.0,
+      "report_score_source": "dataflow_eval:accuracy"
+    },
+    "mmlu": {
+      "rows": 14042,
+      "gold_position_counts": {
+        "1": 3462,
+        "2": 3582,
+        "3": 3776,
+        "0": 3222
+      },
+      "A_correct": 3222,
+      "A_valid": 14042,
+      "A_report_score": 0.22945449366187154,
+      "A_question_present": 14042,
+      "ordinary_metric_score": 0.0,
+      "report_score_source": "dataflow_eval:accuracy"
+    }
+  },
+  "repair": {
+    "source_rows": 3562,
+    "A_native_correct": 905,
+    "A_denominator": 3562,
+    "A_score": 0.2540707467714767,
+    "B_native_correct": 888,
+    "B_independent_displayed_gold_correct": 882,
+    "B_denominator": 3562,
+    "residual_reference_drift_rows": 21,
+    "source_duplicate_option_rows": 54,
+    "question_preserved_in_all_requests": true,
+    "source_case_gold_and_option_multiset_exact": true,
+    "first_partial_repair": {
+      "native_A_correct": 3562,
+      "reason": "Parser choice_text_fields left gold-first; preregistered drop rejected; all artifacts retained"
+    }
+  },
+  "runs": {
+    "initial_native_methods": 43644200923,
+    "native_full_entrypoint_and_MMLU": 43645404107,
+    "partial_repair": 43645621491,
+    "aligned_repair_with_retained_residual": 43645998862
+  },
+  "artifacts": {
+    "native_full": {
+      "id": 14132959007,
+      "sha256": "0fff22307ea63ae0bbe15a9e03088344ce9479cf5d64d4d196e03efa2ed9871b"
+    },
+    "partial_repair": {
+      "id": 14134126317,
+      "sha256": "9389da696c473f37354b365d49f0ff8aca88cb418df4a1fccbfd36b7a9f678dd"
+    },
+    "aligned_repair": {
+      "id": 14133559844,
+      "sha256": "66de2030edca15d53c8318b59821d2e8ef06c31f3e94f8e7cba6d2bd4b5378fe"
+    }
+  },
+  "source_provenance": {
+    "cupcase": {
+      "repo": "ofir408/CupCase",
+      "revision": "157a85b1a0fa6d0e25e5209a1cdaf41cf1ff8753",
+      "split": "test",
+      "files": [
+        {
+          "path": "data/test-00000-of-00001.parquet",
+          "sha256": "928f961590534394f36b2cb62e2c79993ed6bce454b575c4ddf12aca1a173123",
+          "bytes": 8424692,
+          "declared_lfs_sha256": "928f961590534394f36b2cb62e2c79993ed6bce454b575c4ddf12aca1a173123"
+        }
+      ]
+    },
+    "sciq": {
+      "repo": "allenai/sciq",
+      "revision": "2c94ad3e1aafab77146f384e23536f97a4849815",
+      "split": "test",
+      "files": [
+        {
+          "path": "data/test-00000-of-00001.parquet",
+          "sha256": "3a719356a29b127fc54ef3c7f51a034db4bd105d5717215e8c85d2aa58d60667",
+          "bytes": 342808,
+          "declared_lfs_sha256": "3a719356a29b127fc54ef3c7f51a034db4bd105d5717215e8c85d2aa58d60667"
+        }
+      ]
+    },
+    "gpqa": {
+      "repo": "Idavidrein/gpqa",
+      "revision": "56686c06f5e19865c153de0fdb11be3890014df7",
+      "archive_git_blob": "80788cb325c4d63bbccad56c2e393b33389348fe",
+      "archive_sha256": "461ae7329f15a3e35f8184d2dac24b990f34fdf12f366ca4062d8e6638cd08dc",
+      "member": "dataset/gpqa_main.csv",
+      "member_sha256": "acdeeac8f622267f2cd727d7d474202ea08dec80f7d3c3593b3ef8644f19b8e3"
+    },
+    "mmlu": {
+      "repo": "cais/mmlu",
+      "revision": "c30699e8356da336a370243923dbaf21066bb9fe",
+      "split": "test",
+      "files": [
+        {
+          "path": "all/test-00000-of-00001.parquet",
+          "sha256": "74a41822ce7d3def56e1682f958469c04642a5336a5ce912fa375fdb90fb25d7",
+          "bytes": 3504718,
+          "declared_lfs_sha256": "74a41822ce7d3def56e1682f958469c04642a5336a5ce912fa375fdb90fb25d7"
+        }
+      ]
+    }
+  },
+  "dataflow": {
+    "pypi_version": "1.0.10",
+    "wheel": "open_dataflow-1.0.10-py3-none-any.whl",
+    "wheel_sha256": "75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "prompt_source": "dataflow/prompts/core_text.py",
+    "prompt_sha256": "5df1bf04fceea685ebf28bf4c398303cda49e46af8d87e769db0d04ca1c5600a",
+    "generator_source": "dataflow/operators/core_text/generate/bench_answer_generator.py",
+    "generator_sha256": "9b3b29c44c60d71510f88b0f19e964339806fc29bd0fd91ff16c97072219e09a"
+  },
+  "support_source_sha256": {
+    "dataflow/utils/reasoning/AnswerExtraction.py": "a133193bf1fdcab1dd594974b7e411737e5a16e20076c0ffe7e10ff04354b8c4",
+    "dataflow/utils/storage.py": "9497e91a1b9b63f354ecfc36adf5b600e0ac5b173eb9ca1bd3da52368bc3b58d",
+    "dataflow/operators/core_text/eval/unified_bench_dataset_evaluator.py": "a06f70fac52f9e5287b70aa908852468aa0b945be79f4445cf91566a04878c7f"
+  },
+  "limitations": [
+    "Only the documented API generation path; not a claim about loglikelihood/local serving.",
+    "Original complete evaluation entry point and native scoring/report selector source-loaded with declared dependency facades and cached constant serving; installed CLI and generated report not executed.",
+    "Current source-configuration validity failure, not proof that the authors published affected model results.",
+    "Generic answer-position bias and answer-extraction failures are known; broader novelty and independent external reproduction remain open.",
+    "Native metric stage is zero even on MMLU; MMLU is healthy only for question and position transport, not all stages.",
+    "Aligned repair fixes constant-A inflation and missing question; residual parser deduplication still changes 21 gold letters, and makes B=888 instead of source-correct 882."
+  ]
+}
