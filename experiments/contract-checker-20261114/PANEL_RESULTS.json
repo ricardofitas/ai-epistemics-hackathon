@@ -1,0 +1,878 @@
+[
+  {
+    "status": "FAIL",
+    "counts": {
+      "records": 1000,
+      "source_gold_available": 1000,
+      "source_scorable_rows": 1000
+    },
+    "failures": {
+      "context_not_bound": 884,
+      "reference_changed_answer": 3,
+      "native_reference_invalid": 3
+    },
+    "incomplete_checks": {},
+    "examples": {
+      "context_not_bound": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reference_changed_answer": [
+        "269",
+        "392",
+        "951"
+      ],
+      "native_reference_invalid": [
+        "566",
+        "601",
+        "872"
+      ]
+    },
+    "source_target_counts": {
+      "A": 1000
+    },
+    "attention": [
+      "one_constant_answer_is_perfect_on_the_source_targets"
+    ],
+    "input_collisions": {
+      "visible_prompts": 1000,
+      "covered_rows": 1000,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "oneeval__sciq__test",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "sciq",
+      "split": "test",
+      "raw_source_sha256": "cd0a2c8be9b2eafc95bd1bab6d2ae553826c1f3b7ddbe5e415e130c30abddddd"
+    },
+    "input_file": "panels/oneeval__sciq__test.jsonl.gz",
+    "input_sha256": "c9b553180929faba120bcd29584a397f97437549ca63b8dd932275aa4d2dabe9"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 1000,
+      "source_gold_available": 1000,
+      "source_scorable_rows": 1000
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "C": 260,
+      "B": 265,
+      "D": 232,
+      "A": 243
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 1000,
+      "covered_rows": 1000,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "repaired__sciq__test",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "sciq",
+      "split": "test",
+      "raw_source_sha256": "cd0a2c8be9b2eafc95bd1bab6d2ae553826c1f3b7ddbe5e415e130c30abddddd",
+      "variant": "typed source correction"
+    },
+    "input_file": "panels/repaired__sciq__test.jsonl.gz",
+    "input_sha256": "e1b81e1710fff1cac07ed531d6eb6836c158a296f5291cc89d35270f8f18b79e"
+  },
+  {
+    "status": "FAIL",
+    "counts": {
+      "records": 1767
+    },
+    "failures": {
+      "question_not_bound": 1767,
+      "source_gold_unavailable": 1767
+    },
+    "incomplete_checks": {},
+    "examples": {
+      "question_not_bound": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "source_gold_unavailable": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "source_target_counts": {},
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 0,
+      "covered_rows": 0,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": null
+    },
+    "model_calls": 0,
+    "panel": "oneeval__winogrande__test",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "winogrande",
+      "split": "test",
+      "raw_source_sha256": "af16b21a07d5f6ff3cbbd28b020411e73c02d8716bba650eb5cb6a52662b3414"
+    },
+    "input_file": "panels/oneeval__winogrande__test.jsonl.gz",
+    "input_sha256": "0ae15da8130ce79c2e12b248566fd58c7197062f275e800bbdee01219919f7c2"
+  },
+  {
+    "status": "FAIL",
+    "counts": {
+      "records": 1267,
+      "source_gold_available": 1267,
+      "source_scorable_rows": 1267
+    },
+    "failures": {
+      "question_not_bound": 1267,
+      "reference_changed_answer": 628,
+      "conflicting_gold_for_same_prompt_groups": 300
+    },
+    "incomplete_checks": {},
+    "examples": {
+      "question_not_bound": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reference_changed_answer": [
+        "1",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    "source_target_counts": {
+      "B": 639,
+      "A": 628
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 895,
+      "covered_rows": 1267,
+      "rows_in_conflicting_groups": 655,
+      "minimum_deterministic_errors": 309,
+      "empirical_prompt_only_accuracy_ceiling": 0.7561168113654302
+    },
+    "model_calls": 0,
+    "panel": "oneeval__winogrande__validation",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "winogrande",
+      "split": "validation",
+      "raw_source_sha256": "69f3d7f3a900d775339b04c7de672609c40fca573e50f594f2ae66d8782505be"
+    },
+    "input_file": "panels/oneeval__winogrande__validation.jsonl.gz",
+    "input_sha256": "35e8d231c4d5520a82d85506d00aea6e9b1c06261e220adb6f45e49b4a2a887c"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 1267,
+      "source_gold_available": 1267,
+      "source_scorable_rows": 1267
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "A": 634,
+      "B": 633
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 1267,
+      "covered_rows": 1267,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "repaired__winogrande__validation",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "winogrande",
+      "split": "validation",
+      "raw_source_sha256": "69f3d7f3a900d775339b04c7de672609c40fca573e50f594f2ae66d8782505be",
+      "variant": "typed source correction"
+    },
+    "input_file": "panels/repaired__winogrande__validation.jsonl.gz",
+    "input_sha256": "f8cd15872683241994369edbf450dbc4a2eda0244922214b3a00eff8804af885"
+  },
+  {
+    "status": "FAIL",
+    "counts": {
+      "records": 3270,
+      "source_gold_available": 3270
+    },
+    "failures": {
+      "prompt_unavailable": 3270,
+      "choices_unresolved": 3270
+    },
+    "incomplete_checks": {},
+    "examples": {
+      "prompt_unavailable": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "choices_unresolved": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "source_target_counts": {},
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 0,
+      "covered_rows": 0,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": null
+    },
+    "model_calls": 0,
+    "panel": "oneeval__boolq__validation",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "boolq",
+      "split": "validation",
+      "raw_source_sha256": "dbad2984e58eaa2184b6d0acfe2e94a73b9868381046255d6be6c3bed9088b68"
+    },
+    "input_file": "panels/oneeval__boolq__validation.jsonl.gz",
+    "input_sha256": "128f12ee22cc81a05b30aa2e7dad3cefff9acddc5ed4bd26709151b23644886d"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 3270,
+      "source_gold_available": 3270,
+      "source_scorable_rows": 3270
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "A": 1612,
+      "B": 1658
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 3270,
+      "covered_rows": 3270,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "repaired__boolq__validation",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "boolq",
+      "split": "validation",
+      "raw_source_sha256": "dbad2984e58eaa2184b6d0acfe2e94a73b9868381046255d6be6c3bed9088b68",
+      "variant": "typed source correction"
+    },
+    "input_file": "panels/repaired__boolq__validation.jsonl.gz",
+    "input_sha256": "fc16ac1ab9e10ebdcfac4b00571916df40ed67bf8659d1267287c9e4c0665e67"
+  },
+  {
+    "status": "FAIL",
+    "counts": {
+      "records": 1000,
+      "source_gold_available": 1000
+    },
+    "failures": {
+      "prompt_unavailable": 1000,
+      "choices_unresolved": 1000
+    },
+    "incomplete_checks": {},
+    "examples": {
+      "prompt_unavailable": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "choices_unresolved": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "source_target_counts": {},
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 0,
+      "covered_rows": 0,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": null
+    },
+    "model_calls": 0,
+    "panel": "oneeval__pubmedqa__train",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "pubmedqa",
+      "split": "train",
+      "raw_source_sha256": "0b9b06e379d39fff0b7c7acb33bdeb96c843049f1ad071e41c02aeaae16277fe"
+    },
+    "input_file": "panels/oneeval__pubmedqa__train.jsonl.gz",
+    "input_sha256": "9661bfc658057b077a5cd3e8f2207b4ea199cd23cabd9105c7d24015ae1ddd57"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 1000,
+      "source_gold_available": 1000,
+      "source_scorable_rows": 1000
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "B": 331,
+      "A": 341,
+      "C": 328
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 1000,
+      "covered_rows": 1000,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "repaired__pubmedqa__train",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "pubmedqa",
+      "split": "train",
+      "raw_source_sha256": "0b9b06e379d39fff0b7c7acb33bdeb96c843049f1ad071e41c02aeaae16277fe",
+      "variant": "typed source correction"
+    },
+    "input_file": "panels/repaired__pubmedqa__train.jsonl.gz",
+    "input_sha256": "c1d5aede71cf9d65ff02cd9044141b521a1d69333511ff7f1cf560120fb5bafb"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 4183,
+      "source_gold_available": 4183,
+      "source_scorable_rows": 4183
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "A": 1348,
+      "C": 925,
+      "B": 1085,
+      "D": 825
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 4183,
+      "covered_rows": 4183,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "oneeval__medmcqa__validation",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "medmcqa",
+      "split": "validation",
+      "raw_source_sha256": "2b85e43806bb0e9cf7519f1887bbab471bb062bdea1217c1d0cccc2ed22699ba"
+    },
+    "input_file": "panels/oneeval__medmcqa__validation.jsonl.gz",
+    "input_sha256": "da56b1034e1e9a8cc1472117197031799a0023ea38bb9f213caaf19bc24ee21a"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 4183,
+      "source_gold_available": 4183,
+      "source_scorable_rows": 4183
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "C": 1029,
+      "B": 1047,
+      "D": 1035,
+      "A": 1072
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 4183,
+      "covered_rows": 4183,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "repaired__medmcqa__validation",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "medmcqa",
+      "split": "validation",
+      "raw_source_sha256": "2b85e43806bb0e9cf7519f1887bbab471bb062bdea1217c1d0cccc2ed22699ba",
+      "variant": "typed source correction"
+    },
+    "input_file": "panels/repaired__medmcqa__validation.jsonl.gz",
+    "input_sha256": "913242e8f980ca8cdf4d47e58aaf1e6c183100931dfa1094c5c50b9298efc0ec"
+  },
+  {
+    "status": "FAIL",
+    "counts": {
+      "records": 10042,
+      "source_gold_available": 10042,
+      "source_scorable_rows": 10042
+    },
+    "failures": {
+      "question_not_bound": 10042
+    },
+    "incomplete_checks": {},
+    "examples": {
+      "question_not_bound": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "source_target_counts": {
+      "D": 2458,
+      "C": 2584,
+      "B": 2485,
+      "A": 2515
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 10042,
+      "covered_rows": 10042,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "oneeval__hellaswag__validation",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "hellaswag",
+      "split": "validation",
+      "raw_source_sha256": "d5c08c3e5771307e73886dc9d2744df8ca5f372a7857f32fe77df8c58942f950"
+    },
+    "input_file": "panels/oneeval__hellaswag__validation.jsonl.gz",
+    "input_sha256": "54d4fec1a68dc58e3bb64e9ce3a4eac0096ebb9e508686198ab44490d5213c76"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 10042,
+      "source_gold_available": 10042,
+      "source_scorable_rows": 10042
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "B": 2478,
+      "D": 2501,
+      "C": 2521,
+      "A": 2542
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 10042,
+      "covered_rows": 10042,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "repaired__hellaswag__validation",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "hellaswag",
+      "split": "validation",
+      "raw_source_sha256": "d5c08c3e5771307e73886dc9d2744df8ca5f372a7857f32fe77df8c58942f950",
+      "variant": "typed source correction"
+    },
+    "input_file": "panels/repaired__hellaswag__validation.jsonl.gz",
+    "input_sha256": "462be1b3b3f92bf567e2ee8043bb76645472f6fc5f2e2584f7f4cbb7548097ed"
+  },
+  {
+    "status": "FAIL",
+    "counts": {
+      "records": 33,
+      "source_gold_available": 33
+    },
+    "failures": {
+      "correct_choice_missing": 33
+    },
+    "incomplete_checks": {},
+    "examples": {
+      "correct_choice_missing": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "source_target_counts": {},
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 0,
+      "covered_rows": 0,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": null
+    },
+    "model_calls": 0,
+    "panel": "oneeval__lab-bench-language-agent-biology-benchmark__train",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "lab-bench-language-agent-biology-benchmark",
+      "split": "train",
+      "raw_source_sha256": "d356a11073ea5c12850895d61f10a2bea0c2082d3d97a10f89e4eebbebb5f80f"
+    },
+    "input_file": "panels/oneeval__lab-bench-language-agent-biology-benchmark__train.jsonl.gz",
+    "input_sha256": "c315dabdd703f3375038d30da1d192bb1a90ed41d943bef2b4490b90dd663c34"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 33,
+      "source_gold_available": 33,
+      "source_scorable_rows": 33
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "C": 9,
+      "B": 5,
+      "D": 9,
+      "E": 1,
+      "F": 1,
+      "A": 7,
+      "G": 1
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 33,
+      "covered_rows": 33,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "repaired__lab-bench-language-agent-biology-benchmark__train",
+    "provenance": {
+      "framework": "One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "dataflow": "1.0.10",
+      "benchmark": "lab-bench-language-agent-biology-benchmark",
+      "split": "train",
+      "raw_source_sha256": "d356a11073ea5c12850895d61f10a2bea0c2082d3d97a10f89e4eebbebb5f80f",
+      "variant": "typed source correction"
+    },
+    "input_file": "panels/repaired__lab-bench-language-agent-biology-benchmark__train.jsonl.gz",
+    "input_sha256": "6ff9dd5b71d69f7956b0c1f5ebfc8f693c5cd4175adcfb27ecd527bd8f78a7b4"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 3270,
+      "source_gold_available": 3270,
+      "source_scorable_rows": 3270
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "B": 1237,
+      "A": 2033
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 3270,
+      "covered_rows": 3270,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "evalscope__boolq",
+    "provenance": {
+      "framework": "EvalScope",
+      "commit": "59bb367bd8565f347266a48ac1230af0b5131b97",
+      "dataset": "google/boolq",
+      "benchmark": "boolq",
+      "split": "validation",
+      "raw_source_sha256": "885c282e073e098ce224ce8c32cba616a1257e9e57e716a740a4f11d1bd5de4f",
+      "probe_capture_sha256": "f88e133c956bb1467a4901d4284e5a9b8c7d8661b64382aab3c26bee4055bbb1",
+      "probe_reexecution_this_stage": false
+    },
+    "input_file": "panels/evalscope__boolq.jsonl.gz",
+    "input_sha256": "a30f666624f8e45c12a84aedad79cbbcf77b83cad914a448eb6a4dcc77bb2895"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 10042,
+      "source_gold_available": 10042,
+      "source_scorable_rows": 10042
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "D": 2458,
+      "C": 2584,
+      "B": 2485,
+      "A": 2515
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 10042,
+      "covered_rows": 10042,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "evalscope__hellaswag",
+    "provenance": {
+      "framework": "EvalScope",
+      "commit": "59bb367bd8565f347266a48ac1230af0b5131b97",
+      "dataset": "evalscope/hellaswag",
+      "benchmark": "hellaswag",
+      "split": "validation",
+      "raw_source_sha256": "9d512468b9b5a90e6241f525835dba10afa7b2b201c92df9230701697fb3be60",
+      "probe_capture_sha256": "d1842d778a11bbd8864c81c78f19d0c13573224fb7264c51849462da387742a8",
+      "probe_reexecution_this_stage": false
+    },
+    "input_file": "panels/evalscope__hellaswag.jsonl.gz",
+    "input_sha256": "a079da01ebd30b0d91efb583ebef4a6ccd2d53fa10f4ea28854820062c58cff4"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 4183,
+      "source_gold_available": 4183,
+      "source_scorable_rows": 4183
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "A": 1348,
+      "C": 925,
+      "B": 1085,
+      "D": 825
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 4183,
+      "covered_rows": 4183,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "evalscope__med_mcqa",
+    "provenance": {
+      "framework": "EvalScope",
+      "commit": "59bb367bd8565f347266a48ac1230af0b5131b97",
+      "dataset": "extraordinarylab/medmcqa",
+      "benchmark": "med_mcqa",
+      "split": "validation",
+      "raw_source_sha256": "7de4439165a2e3092a5cc29615051a69faad67f479ec153a9a8525c1daa227e0",
+      "probe_capture_sha256": "eb27b00f15db79966b52b665e1b5e6efe66c0db8cfaee0e025ed823ae11b64a4",
+      "probe_reexecution_this_stage": false
+    },
+    "input_file": "panels/evalscope__med_mcqa.jsonl.gz",
+    "input_sha256": "5f923a2692e9f5774e2134b3ced777c91a5bcbdc0f15410687c3965aace7c313"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 1000,
+      "source_gold_available": 1000,
+      "source_scorable_rows": 1000
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "YES": 552,
+      "NO": 338,
+      "MAYBE": 110
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 1000,
+      "covered_rows": 1000,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "evalscope__pubmedqa",
+    "provenance": {
+      "framework": "EvalScope",
+      "commit": "59bb367bd8565f347266a48ac1230af0b5131b97",
+      "dataset": "extraordinarylab/pubmed-qa",
+      "benchmark": "pubmedqa",
+      "split": "test",
+      "raw_source_sha256": "7a665ad7feb6851a63368ab7d6182fbfbd2901e77ac4379d3d3cafefa16557e6",
+      "probe_capture_sha256": "5d1ab622fc1518519af6d47b8279fe862a35751c7f22492801604c8625a76e4e",
+      "probe_reexecution_this_stage": false
+    },
+    "input_file": "panels/evalscope__pubmedqa.jsonl.gz",
+    "input_sha256": "33da198af23b3e9c60b0a0a3a84d6465d0286bfd7bc72e2397dfef792c682020"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 1000,
+      "source_gold_available": 1000,
+      "source_scorable_rows": 1000
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "D": 253,
+      "A": 250,
+      "B": 250,
+      "C": 247
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 1000,
+      "covered_rows": 1000,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "evalscope__sciq",
+    "provenance": {
+      "framework": "EvalScope",
+      "commit": "59bb367bd8565f347266a48ac1230af0b5131b97",
+      "dataset": "extraordinarylab/sciq",
+      "benchmark": "sciq",
+      "split": "test",
+      "raw_source_sha256": "6b572e877b351c5d44edd6598e63f444ab44001378271c2b52d29da52cd6ea8b",
+      "probe_capture_sha256": "4ad00360c0b61a86f467fa2c3b50b1e21c5ea282c8f48b08bb3be71fa844001c",
+      "probe_reexecution_this_stage": false
+    },
+    "input_file": "panels/evalscope__sciq.jsonl.gz",
+    "input_sha256": "589bd0a10bf1550ab152a28c41144bcaed45f322c420eb295fdc28dd7a654d59"
+  },
+  {
+    "status": "PASS",
+    "counts": {
+      "records": 1267,
+      "source_gold_available": 1267,
+      "source_scorable_rows": 1267
+    },
+    "failures": {},
+    "incomplete_checks": {},
+    "examples": {},
+    "source_target_counts": {
+      "B": 639,
+      "A": 628
+    },
+    "attention": [],
+    "input_collisions": {
+      "visible_prompts": 1267,
+      "covered_rows": 1267,
+      "rows_in_conflicting_groups": 0,
+      "minimum_deterministic_errors": 0,
+      "empirical_prompt_only_accuracy_ceiling": 1.0
+    },
+    "model_calls": 0,
+    "panel": "evalscope__winogrande",
+    "provenance": {
+      "framework": "EvalScope",
+      "commit": "59bb367bd8565f347266a48ac1230af0b5131b97",
+      "dataset": "AI-ModelScope/winogrande_val",
+      "benchmark": "winogrande",
+      "split": "validation",
+      "raw_source_sha256": "d12c09ee24bda0142d92aaedc70d92260784dcdf51719dc6c4081eef3468d845",
+      "probe_capture_sha256": "f9707976d406ecd15a0fa11dab69a458d36bc64c5537497844d87cbb0d873d8d",
+      "probe_reexecution_this_stage": false
+    },
+    "input_file": "panels/evalscope__winogrande.jsonl.gz",
+    "input_sha256": "00e7016a5f6a5cea3aea14a48fa5253a029f642f1a2d884d16522ff21037b02f"
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "benchmark": "winogrande",
+  "split": "labelled validation (diagnostic override in One-Eval)",
+  "quantity": "Maximum accuracy on this fixed corpus for a deterministic answer that depends only on the exact visible prompt, evaluated with source-correct gold. Sum the within-prompt majority counts, then divide by N.",
+  "selection": "Exploratory analysis after observing the prompt-formatting defect.",
+  "native_one_eval": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "dataflow": "1.0.10",
+  "native_evalscope": "59bb367bd8565f347266a48ac1230af0b5131b97",
+  "verified_source_rows_and_order": 1267,
+  "model_inference_requests": 0,
+  "evidence_rows_uncompressed_sha256": "999aefd330f19bb10c6a84c47e12343ab24a6884898119cf718d5ea60ee6e0a8",
+  "systems": {
+    "One-Eval native": {
+      "rows": 1267,
+      "distinct_prompts": 895,
+      "repeated_prompt_groups": 316,
+      "mixed_gold_groups": 300,
+      "rows_in_mixed_groups": 655,
+      "unavoidable_errors": 309,
+      "maximum_correct": 958,
+      "deterministic_visible_input_accuracy_ceiling": 0.7561168113654302
+    },
+    "One-Eval source-bound renderer": {
+      "rows": 1267,
+      "distinct_prompts": 1267,
+      "repeated_prompt_groups": 0,
+      "mixed_gold_groups": 0,
+      "rows_in_mixed_groups": 0,
+      "unavoidable_errors": 0,
+      "maximum_correct": 1267,
+      "deterministic_visible_input_accuracy_ceiling": 1.0
+    },
+    "EvalScope native": {
+      "rows": 1267,
+      "distinct_prompts": 1267,
+      "repeated_prompt_groups": 0,
+      "mixed_gold_groups": 0,
+      "rows_in_mixed_groups": 0,
+      "unavoidable_errors": 0,
+      "maximum_correct": 1267,
+      "deterministic_visible_input_accuracy_ceiling": 1.0
+    }
+  },
+  "independent_hash_check_unavoidable_errors": 309,
+  "scope": "Finite-corpus upper bound. A 100% ceiling only indicates absence of conflicting targets for identical visible prompts. Measured model accuracy and third-party impact remain distinct quantities."
+}
