@@ -1,5 +1,6 @@
 {
-  "protocol_sha256": "d18fec1a0521fcc128179272d2ba90a1c1b60eab8e7f9b1cfcb55143e45c84b3",
+  "protocol_sha256": "35dcfb99d2b6dda278c5b7c02d4d544d0f4c65277dca1baa5a4f9a98fb9607f2",
+  "protocol_commit": "76bbc7001c39612d2a6aecde7bf2c88b0edda427",
   "base_commit": "d4419f160252adee3d639df9ea23cd1600277c32",
   "planned_model_calls": 0,
   "planned_judge_calls": 0,
@@ -7,8 +8,6 @@
   "maximum_source_bytes": 111232152,
   "expected_tests": 38,
   "no_retry": true,
-  "protocol_commit": "1297876c0da9dc6af12f14553f6b544ee5da06dd",
-  "replaces_preexecution_validation_run": 43615909285,
-  "prior_jobs_executed": 0,
-  "reason": "Validated folded YAML command; no rawsource download previously attempted."
+  "previous_zero_source_attempt_run": 43616175169,
+  "reason": "Pin true Gitblobs and bytecounts instead of normalizedsnapshot SHA256; sameAST reviewedpatch."
 }
