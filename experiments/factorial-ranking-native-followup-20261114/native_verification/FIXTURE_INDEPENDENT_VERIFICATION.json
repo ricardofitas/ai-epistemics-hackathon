@@ -1,0 +1,217 @@
+{
+  "status": "PASS",
+  "mode": "fixture",
+  "archive": {
+    "sha256": "40daaed0a78e59a451785df9391589295f5acae80d68e0d8756826b66fc00359",
+    "retained_members": 45
+  },
+  "protocol_sha256": "d1db2156799373570be820f79d8792782666262642abf955dbb59c638642dec5",
+  "protocol_commit": "c4f4856a5e7741d0fdb362f8811d427cad32a694",
+  "executable_sha256": "1156256ea01ed79838179aaafde7f62e795f9c5b7b287d463377c8d459c4bcda",
+  "planned_slots": 4,
+  "observed_http_attempts": 4,
+  "new_provider_calls": 0,
+  "known_interpreted_scores": 2,
+  "minimum_actual_http_interval_seconds": 8.86942744255066,
+  "verified_output_tokens": 0,
+  "slots": [
+    {
+      "source_index": 40,
+      "condition": "native_gallery",
+      "original_probe_status": "INCOMPLETE",
+      "capture_eligible": true,
+      "eligible_native_score": null,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0
+      },
+      "source_id_annotation": {
+        "source": "40",
+        "source_type": "str",
+        "delivered": 40,
+        "delivered_type": "int"
+      },
+      "native_primary": {
+        "metric": "choice_accuracy",
+        "official_metric": "accuracy",
+        "score": 0.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1,
+        "scored_samples": 0,
+        "valid_predictions": 1,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 1,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choices_key": "options"
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      },
+      "native_details": [
+        null
+      ],
+      "outcome": "UNSCORABLE_REFERENCE",
+      "derived_erratum": "Original audit rejected an ID representation change. Source/delivered values remain preserved and exact string-roundtrip matched."
+    },
+    {
+      "source_index": 40,
+      "condition": "source_typed",
+      "original_probe_status": "INCOMPLETE",
+      "capture_eligible": true,
+      "eligible_native_score": 1.0,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0
+      },
+      "source_id_annotation": {
+        "source": "40",
+        "source_type": "str",
+        "delivered": 40,
+        "delivered_type": "int"
+      },
+      "native_primary": {
+        "metric": "exact_match",
+        "official_metric": "diagnostic_exact_match",
+        "score": 1.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1,
+        "scored_samples": null,
+        "valid_predictions": null,
+        "parse_failed": null,
+        "empty_output": null,
+        "invalid_references": null,
+        "parser": null,
+        "failure_policy": {},
+        "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+      },
+      "native_details": [
+        1.0
+      ],
+      "outcome": "KNOWN",
+      "derived_erratum": "Original audit rejected an ID representation change. Source/delivered values remain preserved and exact string-roundtrip matched."
+    },
+    {
+      "source_index": 200,
+      "condition": "native_gallery",
+      "original_probe_status": "INCOMPLETE",
+      "capture_eligible": true,
+      "eligible_native_score": null,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0
+      },
+      "source_id_annotation": {
+        "source": "200",
+        "source_type": "str",
+        "delivered": 200,
+        "delivered_type": "int"
+      },
+      "native_primary": {
+        "metric": "choice_accuracy",
+        "official_metric": "accuracy",
+        "score": 0.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1,
+        "scored_samples": 0,
+        "valid_predictions": 1,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 1,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choices_key": "options"
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      },
+      "native_details": [
+        null
+      ],
+      "outcome": "UNSCORABLE_REFERENCE",
+      "derived_erratum": "Original audit rejected an ID representation change. Source/delivered values remain preserved and exact string-roundtrip matched."
+    },
+    {
+      "source_index": 200,
+      "condition": "source_typed",
+      "original_probe_status": "INCOMPLETE",
+      "capture_eligible": true,
+      "eligible_native_score": 1.0,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0
+      },
+      "source_id_annotation": {
+        "source": "200",
+        "source_type": "str",
+        "delivered": 200,
+        "delivered_type": "int"
+      },
+      "native_primary": {
+        "metric": "exact_match",
+        "official_metric": "diagnostic_exact_match",
+        "score": 1.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1,
+        "scored_samples": null,
+        "valid_predictions": null,
+        "parse_failed": null,
+        "empty_output": null,
+        "invalid_references": null,
+        "parser": null,
+        "failure_policy": {},
+        "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+      },
+      "native_details": [
+        1.0
+      ],
+      "outcome": "KNOWN",
+      "derived_erratum": "Original audit rejected an ID representation change. Source/delivered values remain preserved and exact string-roundtrip matched."
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "frozen_file_not_retained:native-installed-preflight-20261114.yml",
+    "initial_fixture_has_no_separate_global_ledger"
+  ],
+  "scope": "Independent retained-artifact audit, with pinned source normalization copied for native EM reproduction. No probe imports, provider calls, semantic judging, or independent provider attestation. Original native raw scores and original audit failures remain preserved."
+}

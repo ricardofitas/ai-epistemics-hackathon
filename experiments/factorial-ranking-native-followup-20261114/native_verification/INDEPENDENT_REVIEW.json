@@ -1,0 +1,253 @@
+{
+  "stage": "Independent static review of installed native probe before live provider phase",
+  "reviewed_at": "2026-11-14T17:18:11.410348+00:00",
+  "reviewed_native_probe_sha256": "1156256ea01ed79838179aaafde7f62e795f9c5b7b287d463377c8d459c4bcda",
+  "reviewed_protocol_sha256": "d1db2156799373570be820f79d8792782666262642abf955dbb59c638642dec5",
+  "fixture_status": "ZERO_PROVIDER_PREFLIGHT_SAFE_WITH_RECORDED_SCOPE",
+  "real_status": "BLOCKED_PENDING_CAPTURE_ELIGIBILITY_CADENCE_AND_REQUEST_BINDING_CHECKS",
+  "checks": {
+    "all_six_frozen_files_match_protocol": true,
+    "both_selected_sources_equal_prior_frozen_records": true,
+    "transport_review_source_equals_pinned_dataflow_wheel": true,
+    "no_provider_credential_in_fixture_workflow": true,
+    "native_HTTP_retry_zero": true,
+    "one_attempt_per_cell_via_adapter_guard_and_native_max_retries_one": true,
+    "original_alias_list_supported_by_native_exact_match": true,
+    "original_gallery_zero_scored_references_marked_unscorable": true,
+    "typed_fixture_known_answer_score_one_required": true,
+    "source_columns_preserved_after_native_path": true
+  },
+  "required_before_real": [
+    {
+      "finding": "Real capture eligibility false still permits generic PASS and leaves native raw numeric score interpretable without an explicit unknown scored endpoint",
+      "resolution_required": "Preserve native raw diagnostic and expose separate integration/terminal/score-eligibility statuses with unknown/null interpreted score on truncated/empty/error/mismatched captures"
+    },
+    {
+      "finding": "Five-second gap measured at subprocess launch cannot ensure five seconds between HTTP starts under variable import time",
+      "resolution_required": "Wait five seconds after previous child termination and verify actual POST ledger interval, or enforce at transport using a shared ledger"
+    },
+    {
+      "finding": "Known-answer fixture does not test that native repaired request actually carries source question/context",
+      "resolution_required": "Assert exact prompt/context in captured typed usermessage and no unresolved template fields before dispatch"
+    },
+    {
+      "finding": "Protocol records code hashes without runtime verification",
+      "resolution_required": "Validate exact protocol file hashes and selectedsource hashes before live calls"
+    }
+  ],
+  "native_metric_note": "compute_exact_match supports accepted answer lists unchanged and returns score/details, while raw scored_samples is None. Any numeric eligible count should be declared derived from actual details and preserved source references.",
+  "scope": "Static review and pinned-source comparison only, no installed imports or provider calls executed by reviewer. Fixture completion does not establish hosted endpoint compatibility.",
+  "new_model_or_judge_calls": 0,
+  "real_derivative_review": {
+    "reviewed_at": "2026-11-14T17:19:22.863778+00:00",
+    "path": "real_phase/native_probe.py",
+    "sha256": "8cea34c0607b64c5b99ed19d89810f183fa1680e89675f3cca182384742f6161",
+    "status": "STATIC_PASS_CONDITIONAL_ON_SUCCESSFUL_INSTALLED_FIXTURE_AND_FINAL_PROTOCOL_FREEZE",
+    "resolved_findings": {
+      "terminal_completion_and_empty_error_checks": true,
+      "execution_boundary_and_outcome_eligibility_separated": true,
+      "unknown_and_unscorable_eligible_score_null": true,
+      "persistent_actual_http_ledger_cap4_unique_cells_min5seconds": true,
+      "parent_waits_after_child_termination": true,
+      "actual_typed_request_source_question_context_binding": true,
+      "protocol_and_frozen_file_hash_verification": true
+    },
+    "remaining_required_evidence": [
+      "Successful real installed dependency/import/native fixture artifacts",
+      "Finalrealphase protocol/launch freeze and root coordination",
+      "Actual provider response evidence before endpoint compatibility or full native provider success can be claimed"
+    ],
+    "terminal_eligibility_expression_controls": {
+      "method": "Exact eligibility AST expression compiled from amended source; no network or imports of the native application",
+      "passed": 9,
+      "cases": [
+        "complete",
+        "length",
+        "whitespace",
+        "empty",
+        "wrong_model",
+        "missing_id",
+        "api_error",
+        "http_error",
+        "missing_choice"
+      ]
+    },
+    "latest_after_identifier_guard_sha256": "6586ffa3591bdadb2cecc08faf284610e17a4b579c20b3bd1618906fff56aefd"
+  },
+  "initial_actual_fixture_verification": {
+    "reviewed_at": "2026-11-14T17:23:23.961321+00:00",
+    "status": "PASS_WITH_ID_TYPE_ERRATUM",
+    "run_id": 43620236269,
+    "job_original_status": "failure",
+    "archive_sha256": "40daaed0a78e59a451785df9391589295f5acae80d68e0d8756826b66fc00359",
+    "all_archive_files_preserved_byte_identical": 45,
+    "ordinary_native_runs": 4,
+    "local_http_fixture_attempts": 4,
+    "new_provider_calls": 0,
+    "corrected_identifier_guard_applied_to_existing_delivered_rows": "PASS4",
+    "altered_id_prompt_target_and_leading_zero_rejection_controls": 16,
+    "original_results_changed": false,
+    "native_source_changed": false,
+    "minimum_observed_http_interval_seconds": 8.86942744255066,
+    "installed_module_source_hash_authentication": "4dataflow module hashes match pinned wheel;3one_eval module hashes match pinned source or previously pinned vendor bytes",
+    "interpretation": "All four ordinary installed native entrypoints and native primary metrics completed. The original audit rejected string-to-integer identifier representation changes after metrics completed. The derived interpretation preserves that failure, validates exact string roundtrip for the two fixed identifiers, and retains every other source column exactly. It does not imply original strict audit success or live provider execution.",
+    "slots": [
+      {
+        "source_index": 200,
+        "condition": "native_gallery",
+        "original_audit_status": "INCOMPLETE",
+        "original_audit_error": "source_column_changed:id",
+        "corrected_identifier_guard": "PASS",
+        "source_id": "200",
+        "source_id_type": "str",
+        "delivered_id": 200,
+        "delivered_id_type": "int",
+        "endpoint": "UNSCORABLE_REFERENCE",
+        "native_metric": {
+          "metric": "choice_accuracy",
+          "official_metric": "accuracy",
+          "score": 0.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": 0,
+          "valid_predictions": 1,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 1,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        "source_other_columns_exact": true,
+        "http_status": 200,
+        "site_packages_origins": 7
+      },
+      {
+        "source_index": 200,
+        "condition": "source_typed",
+        "original_audit_status": "INCOMPLETE",
+        "original_audit_error": "source_column_changed:id",
+        "corrected_identifier_guard": "PASS",
+        "source_id": "200",
+        "source_id_type": "str",
+        "delivered_id": 200,
+        "delivered_id_type": "int",
+        "endpoint": "FIXTURE_KNOWN_EXACT_MATCH_ONE",
+        "native_metric": {
+          "metric": "exact_match",
+          "official_metric": "diagnostic_exact_match",
+          "score": 1.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": null,
+          "valid_predictions": null,
+          "parse_failed": null,
+          "empty_output": null,
+          "invalid_references": null,
+          "parser": null,
+          "failure_policy": {},
+          "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+        },
+        "source_other_columns_exact": true,
+        "http_status": 200,
+        "site_packages_origins": 7
+      },
+      {
+        "source_index": 40,
+        "condition": "native_gallery",
+        "original_audit_status": "INCOMPLETE",
+        "original_audit_error": "source_column_changed:id",
+        "corrected_identifier_guard": "PASS",
+        "source_id": "40",
+        "source_id_type": "str",
+        "delivered_id": 40,
+        "delivered_id_type": "int",
+        "endpoint": "UNSCORABLE_REFERENCE",
+        "native_metric": {
+          "metric": "choice_accuracy",
+          "official_metric": "accuracy",
+          "score": 0.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": 0,
+          "valid_predictions": 1,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 1,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        "source_other_columns_exact": true,
+        "http_status": 200,
+        "site_packages_origins": 7
+      },
+      {
+        "source_index": 40,
+        "condition": "source_typed",
+        "original_audit_status": "INCOMPLETE",
+        "original_audit_error": "source_column_changed:id",
+        "corrected_identifier_guard": "PASS",
+        "source_id": "40",
+        "source_id_type": "str",
+        "delivered_id": 40,
+        "delivered_id_type": "int",
+        "endpoint": "FIXTURE_KNOWN_EXACT_MATCH_ONE",
+        "native_metric": {
+          "metric": "exact_match",
+          "official_metric": "diagnostic_exact_match",
+          "score": 1.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": null,
+          "valid_predictions": null,
+          "parse_failed": null,
+          "empty_output": null,
+          "invalid_references": null,
+          "parser": null,
+          "failure_policy": {},
+          "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+        },
+        "source_other_columns_exact": true,
+        "http_status": 200,
+        "site_packages_origins": 7
+      }
+    ]
+  }
+}
