@@ -1,0 +1,45 @@
+{
+  "one_eval_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "one_eval_files": {
+    "one_eval/toolkits/dataflow_eval_tool.py": "7f75e97993020a0acda0a09e936ce1e66c02bbd0",
+    "one_eval/metrics/parsers/choice.py": "aabfa6eb1ff0d24db6ef0c358a504b5db0db7f76",
+    "one_eval/utils/bench_table/bench_gallery.json": "67e88a261cf481933df1464aef2c60502931d8f7",
+    "one_eval/metrics/parsers/__init__.py": "098afac15a917545f2c21d2807975a4b18b0cdfb",
+    "one_eval/metrics/parsers/base.py": "79c84b4f5b44d7b26397ba1825fcb1e06da83024",
+    "one_eval/metrics/common/general.py": "a2680bd6fa25c9dacb853e0cd85679a38d2d5bfa",
+    "one_eval/metrics/runner.py": "4ab430ab3ff60d3e44b34b5777fcfaba9919fa07",
+    "one_eval/agents/score_calc_agent.py": "de5ccb22f4fa452fdca2cac75f0637f3e300d9c5",
+    "one_eval/nodes/dataflow_eval_node.py": "97c7a62b2411d21338b0b8aa4ea95a03edcc364a",
+    "one_eval/agents/report_gen_agent.py": "d6d8eb74b871d22f5a813206cf2db96189ef8272",
+    "one_eval/utils/extractor.py": "b7822dc74d0d16ee2bcf86143d8373165cce5cfc"
+  },
+  "cup_author_revision": "898d77c1c6da71e852b7090c482ff1c82c403dd7",
+  "cup_author_files": {
+    "gpt_and_med_lm_evaluation/gpt_qa_eval.py": "a394a042bbd89dd6cbee5b43903c79c5b4585543",
+    "lm_eval_evaluation/lm_eval/tasks/cupcase/cupcase_qa.yaml": "6b0c1fd72c47bf39d00b6ffeba75a08ba9e57819"
+  },
+  "dataset": "ofir408/CupCase",
+  "dataset_revision": "resolve immutable SHA from official HF metadata before any rows are loaded",
+  "new_model_calls": 0,
+  "dataset_sources": [
+    {
+      "name": "cupcase",
+      "hf": "ofir408/CupCase",
+      "split": "test"
+    },
+    {
+      "name": "sciq",
+      "hf": "allenai/sciq",
+      "split": "test"
+    },
+    {
+      "name": "gpqa",
+      "github": "Idavidrein/gpqa",
+      "archive": "dataset.zip",
+      "member": "gpqa_main.csv"
+    }
+  ],
+  "gpqa_author_revision": "56686c06f5e19865c153de0fdb11be3890014df7",
+  "gpqa_archive_git_blob": "80788cb325c4d63bbccad56c2e393b33389348fe",
+  "gpqa_readme_git_blob": "d6a8771787f76704e25e86937fd4932048371838"
+}
