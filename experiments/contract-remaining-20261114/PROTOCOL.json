@@ -1,0 +1,20 @@
+{
+  "experiment": "Remaining captured split audit",
+  "created_at": "2026-11-14T02:53:52.230Z",
+  "base_research_commit": "7143c224a7ced1cb5b9dc21a5069bebd92ee9f32",
+  "source_package_library_id": "libfile_fde3_f-6cd20a4f0f7481919bd290b257097f0f_198492b795908191b811098f9e84ee4a",
+  "framework_commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "selection": "All rows in each of the four captured SOURCE_ROWS files except source_index values already present in the 100-row SELECTED file. Preserve original source order. No outcome-dependent selection or removal.",
+  "scope": "Post-discovery diagnostic expansion within the same captured splits. Not independent framework validation, prevalence, or external deployment impact.",
+  "frozen_checker_sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e",
+  "adapter": "Use the already documented choice_adapter.py without changing it; preserve both raw and reviewed reports.",
+  "outcomes": [
+    "native contract failures and independent source probes",
+    "reviewed checker outcomes and false alerts",
+    "corrected contract outcomes",
+    "native source-label scoring fixtures and corrected fixtures"
+  ],
+  "failure_policy": "Record all exceptions and preserve every source row. An execution error is not a pass or a model result.",
+  "provider_model_calls": 0,
+  "network_requests_by_experiment": 0
+}
