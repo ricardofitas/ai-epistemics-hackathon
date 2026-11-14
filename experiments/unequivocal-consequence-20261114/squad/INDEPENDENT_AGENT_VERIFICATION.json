@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "reviewer": "Independent child assistant, not human certification",
+  "zip_files_authenticated": 9,
+  "extracted_zip_members_byte_checked": 3311,
+  "source_cases_checked": 100,
+  "planned_slots_checked": 1600,
+  "terminal_objects_checked": 1591,
+  "complete": 1539,
+  "unknown": 61,
+  "witness_all_four_models_verified": true,
+  "paired_results": {
+    "qwen3.8-27b": {
+      "both_correct": 19,
+      "both_wrong": 17,
+      "clear_correct_none_wrong": 50,
+      "clear_correct_none_dummy": 50,
+      "unknown_pair": 12,
+      "none_correct_clear_wrong": 2,
+      "drop_lower_pp": 44,
+      "drop_upper_pp": 56
+    },
+    "deepseek-v4-flash": {
+      "both_correct": 14,
+      "both_wrong": 24,
+      "clear_correct_none_wrong": 44,
+      "clear_correct_none_dummy": 42,
+      "unknown_pair": 17,
+      "none_correct_clear_wrong": 1,
+      "drop_lower_pp": 40,
+      "drop_upper_pp": 57
+    },
+    "gemma-4-31b-it": {
+      "clear_correct_none_wrong": 81,
+      "clear_correct_none_dummy": 81,
+      "unknown_pair": 3,
+      "both_wrong": 15,
+      "both_correct": 1,
+      "drop_lower_pp": 80,
+      "drop_upper_pp": 84
+    },
+    "glm-5.2": {
+      "unknown_pair": 19,
+      "clear_correct_none_wrong": 41,
+      "clear_correct_none_dummy": 41,
+      "both_correct": 23,
+      "both_wrong": 16,
+      "none_correct_clear_wrong": 1,
+      "drop_lower_pp": 36,
+      "drop_upper_pp": 55
+    }
+  },
+  "findings": [
+    "All four British/Arthur Woolf witness finals and source spans match authenticated raw captures.",
+    "The only choice-arm request change is the deliberately added sole A. None option; free_none controls retain British.",
+    "Normalized EM and F1 scores, missing-response extremes, pair counts and quoted bounds independently match.",
+    "This is a controlled task-contract perturbation, not an information-equivalent format-only change.",
+    "The official SQuAD scorer correctly penalizes wrong final answers relative to the original factual task; this analysis does not establish an official scorer bug.",
+    "The official scorer execution revalidates existing captures/endpoints; it is not a new independent model experiment or new raw discovery.",
+    "The stated scope accurately leaves ordinary native One-Eval SQuAD execution and changed published scientific conclusions unestablished."
+  ],
+  "new_model_calls": 0,
+  "new_judge_calls": 0,
+  "new_external_calls": 0
+}

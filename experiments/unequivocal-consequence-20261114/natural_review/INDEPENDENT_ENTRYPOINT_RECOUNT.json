@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "artifact_sha256": "0fff22307ea63ae0bbe15a9e03088344ce9479cf5d64d4d196e03efa2ed9871b",
+  "source_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "datasets": {
+    "cupcase": {
+      "source_rows": 3562,
+      "gold_positions": {
+        "0": 3562
+      },
+      "baselines": {
+        "A": {
+          "rows": 3562,
+          "valid": 3562,
+          "correct": 3562,
+          "report_score": 1.0,
+          "question_present": 0,
+          "unresolved_question_placeholder": 3562,
+          "original_source_task_fields_identical": true,
+          "primary_metric_display": 0.0,
+          "selected_diagnostic_marked_nonprimary": true
+        },
+        "B": {
+          "rows": 3562,
+          "valid": 3562,
+          "correct": 0,
+          "report_score": 0.0,
+          "question_present": 0,
+          "unresolved_question_placeholder": 3562,
+          "original_source_task_fields_identical": true,
+          "primary_metric_display": 0.0,
+          "selected_diagnostic_marked_nonprimary": true
+        }
+      }
+    },
+    "sciq": {
+      "source_rows": 1000,
+      "gold_positions": {
+        "0": 1000
+      },
+      "baselines": {
+        "A": {
+          "rows": 1000,
+          "valid": 997,
+          "correct": 994,
+          "report_score": 0.9969909729187563,
+          "question_present": 1000,
+          "unresolved_question_placeholder": 0,
+          "original_source_task_fields_identical": true,
+          "primary_metric_display": 0.0,
+          "selected_diagnostic_marked_nonprimary": true
+        },
+        "B": {
+          "rows": 1000,
+          "valid": 997,
+          "correct": 0,
+          "report_score": 0.0,
+          "question_present": 1000,
+          "unresolved_question_placeholder": 0,
+          "original_source_task_fields_identical": true,
+          "primary_metric_display": 0.0,
+          "selected_diagnostic_marked_nonprimary": true
+        }
+      }
+    },
+    "gpqa": {
+      "source_rows": 448,
+      "gold_positions": {
+        "0": 448
+      },
+      "baselines": {
+        "A": {
+          "rows": 448,
+          "valid": 427,
+          "correct": 412,
+          "report_score": 0.9648711943793911,
+          "question_present": 0,
+          "unresolved_question_placeholder": 448,
+          "original_source_task_fields_identical": true,
+          "primary_metric_display": 0.0,
+          "selected_diagnostic_marked_nonprimary": true
+        },
+        "B": {
+          "rows": 448,
+          "valid": 427,
+          "correct": 2,
+          "report_score": 0.00468384074941452,
+          "question_present": 0,
+          "unresolved_question_placeholder": 448,
+          "original_source_task_fields_identical": true,
+          "primary_metric_display": 0.0,
+          "selected_diagnostic_marked_nonprimary": true
+        }
+      }
+    },
+    "mmlu": {
+      "source_rows": 14042,
+      "gold_positions": {
+        "1": 3462,
+        "2": 3582,
+        "3": 3776,
+        "0": 3222
+      },
+      "baselines": {
+        "A": {
+          "rows": 14042,
+          "valid": 14042,
+          "correct": 3222,
+          "report_score": 0.22945449366187154,
+          "question_present": 14042,
+          "unresolved_question_placeholder": 0,
+          "original_source_task_fields_identical": true,
+          "primary_metric_display": 0.0,
+          "selected_diagnostic_marked_nonprimary": true
+        }
+      }
+    }
+  },
+  "new_native_runs": 0,
+  "new_model_calls": 0,
+  "scope": "Independent retained-artifact identity/task-field/prompt/score recount, not installed CLI or third-party historical result attribution."
+}

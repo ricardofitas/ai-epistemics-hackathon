@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "raw_output_checks": 24,
+  "source_gold_derived_from_original_one_based_answer": true,
+  "request_payloads_unchanged": true,
+  "models": {
+    "qwen3.8-27b": {
+      "n": 12,
+      "known_correct": 12,
+      "unknown": 0,
+      "source_correct_bounds": [
+        1.0,
+        1.0
+      ],
+      "constant_B_correct": 6,
+      "constant_B_accuracy": 0.5,
+      "model_strictly_better_for_every_unknown_assignment": true
+    },
+    "gemma-4-31b-it": {
+      "n": 12,
+      "known_correct": 11,
+      "unknown": 1,
+      "source_correct_bounds": [
+        0.9166666666666666,
+        1.0
+      ],
+      "constant_B_correct": 6,
+      "constant_B_accuracy": 0.5,
+      "model_strictly_better_for_every_unknown_assignment": true
+    }
+  },
+  "scope": "Independent artifact and semantic-tag check by root; native scoring route tested separately. No new generation or human labels."
+}

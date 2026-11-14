@@ -1,0 +1,240 @@
+{
+  "source": {
+    "context": "A method to lessen the magnitude of this heating and cooling was invented in 1804 by British engineer Arthur Woolf, who patented his Woolf high-pressure compound engine in 1805. In the compound engine, high-pressure steam from the boiler expands in a high-pressure (HP) cylinder and then enters one or more subsequent lower-pressure (LP) cylinders. The complete expansion of the steam now occurs across multiple cylinders and as less expansion now occurs in each cylinder less heat is lost by the steam in each. This reduces the magnitude of cylinder heating and cooling, increasing the efficiency of the engine. By staging the expansion in multiple cylinders, torque variability can be reduced. To derive equal work from lower-pressure steam requires a larger cylinder volume as this steam occupies a greater volume. Therefore, the bore, and often the stroke, are increased in low-pressure cylinders resulting in larger cylinders.",
+    "dataset": "squad",
+    "gold": [
+      "British"
+    ],
+    "group": "Steam_engine",
+    "id": "5711541350c2381900b54a70",
+    "question": "What nationality was Arthur Woolf?",
+    "record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+    "unit": ""
+  },
+  "models": [
+    {
+      "model": "gemma-4-31b-it",
+      "rows": {
+        "choice_clear": {
+          "key": "squad-5711541350c2381900b54a70-m0-a2",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "gemma-4-31b-it",
+          "arm": "choice_clear",
+          "eligible": true,
+          "request_sha": "bbd496126bc4ea2dfca20dc6f8e9088125a498313c6c329fa733a39361b8ff23",
+          "terminal_sha": "c6d1141ceaa0d4886bb563dd4e259d9940b46ddeef42d9766ad655c63e2ba5ae",
+          "output_sha": "8f96fbd575b445a5bc5ef142f449c59d7c17342515f75395d5e14349ac7e6a60",
+          "final": "British",
+          "extraction_route": "tag",
+          "official_em": true,
+          "official_f1": 1.0,
+          "dummy": false
+        },
+        "choice_none": {
+          "key": "squad-5711541350c2381900b54a70-m0-a3",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "gemma-4-31b-it",
+          "arm": "choice_none",
+          "eligible": true,
+          "request_sha": "efc1a4f7e3d77971a71f521c600daaaa94cd48e83e2433475638ad8b9be07015",
+          "terminal_sha": "d55af9fe7b4ff6ea035bafd40be4746f79450a66531a39190d4e59d0cdfd8bcf",
+          "output_sha": "c3ec8c3f02fba658deaaadf6377ce0942182275830172f7dc1206ff916de3a90",
+          "final": "A",
+          "extraction_route": "tag",
+          "official_em": false,
+          "official_f1": 0,
+          "dummy": true
+        },
+        "free_none": {
+          "key": "squad-5711541350c2381900b54a70-m0-a1",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "gemma-4-31b-it",
+          "arm": "free_none",
+          "eligible": true,
+          "request_sha": "a2dc1b68f5d51cff3b92d9a30f2155e2e4cb18fcc74d6edf1d6e31fc841363f2",
+          "terminal_sha": "71486cfef66d646daa1429545eedd9111dd4fd3fff9d9797b62449927054cbc6",
+          "output_sha": "8f96fbd575b445a5bc5ef142f449c59d7c17342515f75395d5e14349ac7e6a60",
+          "final": "British",
+          "extraction_route": "tag",
+          "official_em": true,
+          "official_f1": 1.0,
+          "dummy": false
+        }
+      }
+    },
+    {
+      "model": "qwen3.8-27b",
+      "rows": {
+        "choice_clear": {
+          "key": "squad-5711541350c2381900b54a70-m1-a2",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "qwen3.8-27b",
+          "arm": "choice_clear",
+          "eligible": true,
+          "request_sha": "cefa89b006e1a9eca293143d227cc99d6b8071e998509094b2f3c1954501e0e7",
+          "terminal_sha": "f964124b9aa3ac53925de5651a38ad01600a0f5bbcf14c557523c91f2dca2393",
+          "output_sha": "b5a62fcaaf8cd2529da3eb78009826583d927d1b4a2b15d8a3e389c5f7db6d01",
+          "final": "British",
+          "extraction_route": "tag",
+          "official_em": true,
+          "official_f1": 1.0,
+          "dummy": false
+        },
+        "choice_none": {
+          "key": "squad-5711541350c2381900b54a70-m1-a3",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "qwen3.8-27b",
+          "arm": "choice_none",
+          "eligible": true,
+          "request_sha": "27c182f2033461ff0601109b6bc21bcfc0e948c2b00392fb0e67072575cf7f2b",
+          "terminal_sha": "4eb5e3f9e456bb2163c29dc92aaba3c0f7aad53e323d96cae521fa0e73a487b3",
+          "output_sha": "41d117b45029ca2c82cb2912303d1223d797985a183225b4ca191a932bc15bbf",
+          "final": "A. None",
+          "extraction_route": "tag",
+          "official_em": false,
+          "official_f1": 0,
+          "dummy": true
+        },
+        "free_none": {
+          "key": "squad-5711541350c2381900b54a70-m1-a1",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "qwen3.8-27b",
+          "arm": "free_none",
+          "eligible": true,
+          "request_sha": "5baf1bb161aa71b34163ef37608c2aca34348807a4714aa6ab11a14ead4878e0",
+          "terminal_sha": "3f022a77c598ced9458ba3444a9aaa42ff56a6f380d013a9f8f3433480e82ef4",
+          "output_sha": "b5a62fcaaf8cd2529da3eb78009826583d927d1b4a2b15d8a3e389c5f7db6d01",
+          "final": "British",
+          "extraction_route": "tag",
+          "official_em": true,
+          "official_f1": 1.0,
+          "dummy": false
+        }
+      }
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "rows": {
+        "choice_clear": {
+          "key": "squad-5711541350c2381900b54a70-m2-a2",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "deepseek-v4-flash",
+          "arm": "choice_clear",
+          "eligible": true,
+          "request_sha": "f966adc423cddd404ae0a60cd9b7201a6fe43b52625c339ed72175af3ad3359a",
+          "terminal_sha": "965cf46452abd213530b2a353ae1ec507de86d161c71b28fc6e5df82ea85d535",
+          "output_sha": "e37d028d2153d0194b6eeb0947d735d513478ccf850681cf4f76c8fe19bc4f22",
+          "final": "British",
+          "extraction_route": "tag",
+          "official_em": true,
+          "official_f1": 1.0,
+          "dummy": false
+        },
+        "choice_none": {
+          "key": "squad-5711541350c2381900b54a70-m2-a3",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "deepseek-v4-flash",
+          "arm": "choice_none",
+          "eligible": true,
+          "request_sha": "7dc9477a9ed813e8177ed635a62014e32996d5d0f81ee4ffa30cf7e1b9b97985",
+          "terminal_sha": "93f6ac5f54df60aa3a8bd51b56aa030a7c7bcb6115602d25c573af58af3977b3",
+          "output_sha": "578f5853b75dceb94e7d885ed43ed98346159dd34c5d50e083b614a39800ab2b",
+          "final": "A. None",
+          "extraction_route": "tag",
+          "official_em": false,
+          "official_f1": 0,
+          "dummy": true
+        },
+        "free_none": {
+          "key": "squad-5711541350c2381900b54a70-m2-a1",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "deepseek-v4-flash",
+          "arm": "free_none",
+          "eligible": true,
+          "request_sha": "cf9775c1500dc727b81b03b7dd3ab308763f6809192da7f0b2487d537ddb891f",
+          "terminal_sha": "5a1fbaf6e5b7b0ddaca99ea8c832c4095e2e25ab197b43aeb68a8504cb2e211f",
+          "output_sha": "e37d028d2153d0194b6eeb0947d735d513478ccf850681cf4f76c8fe19bc4f22",
+          "final": "British",
+          "extraction_route": "tag",
+          "official_em": true,
+          "official_f1": 1.0,
+          "dummy": false
+        }
+      }
+    },
+    {
+      "model": "glm-5.2",
+      "rows": {
+        "choice_clear": {
+          "key": "squad-5711541350c2381900b54a70-m3-a2",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "glm-5.2",
+          "arm": "choice_clear",
+          "eligible": true,
+          "request_sha": "0062bc015bed0cfa410595da408fa478695a7d1690a93ea608f92ea6ff694113",
+          "terminal_sha": "ea7f65fa78071365d570323bec9e7e7c6b80058b62451d0aa7d9bab44bc14fc3",
+          "output_sha": "e37d028d2153d0194b6eeb0947d735d513478ccf850681cf4f76c8fe19bc4f22",
+          "final": "British",
+          "extraction_route": "tag",
+          "official_em": true,
+          "official_f1": 1.0,
+          "dummy": false
+        },
+        "choice_none": {
+          "key": "squad-5711541350c2381900b54a70-m3-a3",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "glm-5.2",
+          "arm": "choice_none",
+          "eligible": true,
+          "request_sha": "ba4ca3dd284c70359b61672d2e9a44351467e3f13d5a93ee61cf1ef4c6e7aa00",
+          "terminal_sha": "91ac61b9d09ee0b225600ad65c560f150ef7800475a8100c45c90cff7bd06e90",
+          "output_sha": "578f5853b75dceb94e7d885ed43ed98346159dd34c5d50e083b614a39800ab2b",
+          "final": "A. None",
+          "extraction_route": "tag",
+          "official_em": false,
+          "official_f1": 0,
+          "dummy": true
+        },
+        "free_none": {
+          "key": "squad-5711541350c2381900b54a70-m3-a1",
+          "case_index": 156,
+          "source_id": "5711541350c2381900b54a70",
+          "source_record_sha": "0e412c36b25d702aad9edbe541077fb68fd55ddfba415e485ad3f271233c5fa7",
+          "model": "glm-5.2",
+          "arm": "free_none",
+          "eligible": true,
+          "request_sha": "dca4497ea52a687d5124c6f77f64026d904158d43ac8ec72e51b06c8847fb9bc",
+          "terminal_sha": "6a31dcc1a36b2e08e11c055873d0519847c0ebf6544b5fc4be58f76c1e72a7c3",
+          "output_sha": "e37d028d2153d0194b6eeb0947d735d513478ccf850681cf4f76c8fe19bc4f22",
+          "final": "British",
+          "extraction_route": "tag",
+          "official_em": true,
+          "official_f1": 1.0,
+          "dummy": false
+        }
+      }
+    }
+  ]
+}

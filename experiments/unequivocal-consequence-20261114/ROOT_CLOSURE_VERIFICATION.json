@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "root_cross_checks": 39,
+  "primary_consequence": "WinoGrande reference-only correction reverses fixed-model-output vs constant-B comparison",
+  "original_model_outputs_reused": 24,
+  "source_questions_for_models": 12,
+  "full_source_constructed_control_questions": 1267,
+  "human_labels": 0,
+  "new_model_calls": 0,
+  "new_judge_calls": 0,
+  "manuscript_files_changed": 0,
+  "scope": "Root arithmetic/identity cross-check plus separately executed native metric replay. Does not assert third-party historical leaderboard impact or population model accuracy."
+}

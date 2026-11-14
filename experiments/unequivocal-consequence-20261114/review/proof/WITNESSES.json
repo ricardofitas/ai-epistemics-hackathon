@@ -1,0 +1,1178 @@
+[
+  {
+    "case_id": "winogrande_727_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 727,
+    "question": "Maria told Monica they looked too sick to go to work and asked if they had a fever. _ went to the Doctor.",
+    "choices": [
+      "Maria",
+      "Monica"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "To determine who went to the doctor, we must analyze the pronouns and the context of the sentence:\n\n1.  **\"Maria told Monica they looked too sick...\"**: In this context, \"they\" refers to Monica (the person being spoken to). Maria is observing Monica's appearance.\n2.  **\"...and asked if they had a fever\"**: Again, \"they\" refers to Monica. Maria is questioning Monica's health.\n3.  **\"\\_ went to the Doctor\"**: Since Monica is the one who \"looked too sick\" and was questioned about having a fever, it is logically Monica who would need to visit the doctor.\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "To determine who went to the doctor, we must analyze the pronouns and the context of the sentence:\n\n1.  **\"Maria told Monica they looked too sick...\"**: In this context, \"they\" refers to Monica (the person being spoken to). Maria is observing Monica's appearance.\n2.  **\"...and asked if they had a fever\"**: Again, \"they\" refers to Monica. Maria is questioning Monica's health.\n3.  **\"\\_ went to the Doctor\"**: Since Monica is the one who \"looked too sick\" and was questioned about having a fever, it is logically Monica who would need to visit the doctor.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "To determine who went to the doctor, we must analyze the pronouns and the context of the sentence:\n\n1.  **\"Maria told Monica they looked too sick...\"**: In this context, \"they\" refers to Monica (the person being spoken to). Maria is observing Monica's appearance.\n2.  **\"...and asked if they had a fever\"**: Again, \"they\" refers to Monica. Maria is questioning Monica's health.\n3.  **\"\\_ went to the Doctor\"**: Since Monica is the one who \"looked too sick\" and was questioned about having a fever, it is logically Monica who would need to visit the doctor.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_1217_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 1217,
+    "question": "Jennifer has more money than Amy, so _ became a homeowner at a young age.",
+    "choices": [
+      "Jennifer",
+      "Amy"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": " our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": " our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our",
+        "normalized": null,
+        "ok": false,
+        "error": "parse_failed",
+        "evidence": null,
+        "strategy": null
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": " our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our our",
+        "normalized": null,
+        "ok": false,
+        "error": "parse_failed",
+        "evidence": null,
+        "strategy": null
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_160_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 160,
+    "question": "William liked to be outside more than Kyle so _ spent time arguing against getting a pool.",
+    "choices": [
+      "William",
+      "Kyle"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "To determine the correct answer, we must analyze the logic of the sentence:\n\n1.  **Premise:** William liked to be outside more than Kyle.\n2.  **Action:** Someone spent time arguing *against* getting a pool.\n3.  **Inference:** A pool is an outdoor amenity. Someone who enjoys being outside (William) would typically be *in favor* of a pool. Someone who enjoys being outside less (Kyle) would be more likely to argue *against* it, as they have less interest in outdoor activities.\n\nTherefore, Kyle is the person most likely to argue against getting a pool.\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "To determine the correct answer, we must analyze the logic of the sentence:\n\n1.  **Premise:** William liked to be outside more than Kyle.\n2.  **Action:** Someone spent time arguing *against* getting a pool.\n3.  **Inference:** A pool is an outdoor amenity. Someone who enjoys being outside (William) would typically be *in favor* of a pool. Someone who enjoys being outside less (Kyle) would be more likely to argue *against* it, as they have less interest in outdoor activities.\n\nTherefore, Kyle is the person most likely to argue against getting a pool.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "To determine the correct answer, we must analyze the logic of the sentence:\n\n1.  **Premise:** William liked to be outside more than Kyle.\n2.  **Action:** Someone spent time arguing *against* getting a pool.\n3.  **Inference:** A pool is an outdoor amenity. Someone who enjoys being outside (William) would typically be *in favor* of a pool. Someone who enjoys being outside less (Kyle) would be more likely to argue *against* it, as they have less interest in outdoor activities.\n\nTherefore, Kyle is the person most likely to argue against getting a pool.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_545_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 545,
+    "question": "Rachel wanted children, but Megan had no interest, so _ looked for someone else to have freedom with.",
+    "choices": [
+      "Rachel",
+      "Megan"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "To determine the correct answer, we must analyze the logic of the sentence:\n\n1.  **Rachel's desire:** She wanted children.\n2.  **Megan's desire:** She had no interest in children.\n3.  **The goal of the subject:** The subject \"looked for someone else to have **freedom** with.\"\n\nIn this context, \"freedom\" refers to a life without the responsibilities and constraints that come with having children. Since Rachel wanted children, she would not be looking for \"freedom\" from them. Megan, however, had no interest in children, meaning her priority was maintaining her freedom. Therefore, Megan is the one who would seek a partner who shares that desire for a child-free life.\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "To determine the correct answer, we must analyze the logic of the sentence:\n\n1.  **Rachel's desire:** She wanted children.\n2.  **Megan's desire:** She had no interest in children.\n3.  **The goal of the subject:** The subject \"looked for someone else to have **freedom** with.\"\n\nIn this context, \"freedom\" refers to a life without the responsibilities and constraints that come with having children. Since Rachel wanted children, she would not be looking for \"freedom\" from them. Megan, however, had no interest in children, meaning her priority was maintaining her freedom. Therefore, Megan is the one who would seek a partner who shares that desire for a child-free life.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "To determine the correct answer, we must analyze the logic of the sentence:\n\n1.  **Rachel's desire:** She wanted children.\n2.  **Megan's desire:** She had no interest in children.\n3.  **The goal of the subject:** The subject \"looked for someone else to have **freedom** with.\"\n\nIn this context, \"freedom\" refers to a life without the responsibilities and constraints that come with having children. Since Rachel wanted children, she would not be looking for \"freedom\" from them. Megan, however, had no interest in children, meaning her priority was maintaining her freedom. Therefore, Megan is the one who would seek a partner who shares that desire for a child-free life.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_915_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 915,
+    "question": "Cynthia felt very thirsty but Sarah did not feel thirsty. _ bought a bag of chips.",
+    "choices": [
+      "Cynthia",
+      "Sarah"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "To determine the best option, we must look at the logic of the sentences.\n\n1.  **Cynthia** felt very thirsty.\n2.  **Sarah** did not feel thirsty.\n3.  The action is buying a **bag of chips**.\n\nEating salty chips typically makes a person feel thirstier. Therefore, it is logically more likely that the person who was *not* already thirsty (Sarah) would be the one to buy and eat something salty, whereas someone who is already very thirsty (Cynthia) would likely seek a drink rather than a salty snack that would worsen their thirst.\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "To determine the best option, we must look at the logic of the sentences.\n\n1.  **Cynthia** felt very thirsty.\n2.  **Sarah** did not feel thirsty.\n3.  The action is buying a **bag of chips**.\n\nEating salty chips typically makes a person feel thirstier. Therefore, it is logically more likely that the person who was *not* already thirsty (Sarah) would be the one to buy and eat something salty, whereas someone who is already very thirsty (Cynthia) would likely seek a drink rather than a salty snack that would worsen their thirst.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "To determine the best option, we must look at the logic of the sentences.\n\n1.  **Cynthia** felt very thirsty.\n2.  **Sarah** did not feel thirsty.\n3.  The action is buying a **bag of chips**.\n\nEating salty chips typically makes a person feel thirstier. Therefore, it is logically more likely that the person who was *not* already thirsty (Sarah) would be the one to buy and eat something salty, whereas someone who is already very thirsty (Cynthia) would likely seek a drink rather than a salty snack that would worsen their thirst.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_862_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 862,
+    "question": "While at the store, Logan grabbed a head of lettuce for Eric to use for dinner because _ knew there was none at home.",
+    "choices": [
+      "Logan",
+      "Eric"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": "The sentence describes a situation where Logan is performing an action (buying lettuce) for Eric. The reason for this action is that the person shopping realized there was no lettuce at home. In this context, the person who \"knew there was none at home\" is the person currently at the store making the decision to buy it.\n\n1. Logan is at the store.\n2. Logan grabs the lettuce.\n3. Logan does this because he (Logan) knows there is none at home.\n\nWhile it is grammatically possible for Eric to have known there was none at home (and perhaps told Logan), the most logical flow of the sentence identifies the subject (Logan) as the one acting upon the knowledge.\n\n<answer>A</answer>",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": "The sentence describes a situation where Logan is performing an action (buying lettuce) for Eric. The reason for this action is that the person shopping realized there was no lettuce at home. In this context, the person who \"knew there was none at home\" is the person currently at the store making the decision to buy it.\n\n1. Logan is at the store.\n2. Logan grabs the lettuce.\n3. Logan does this because he (Logan) knows there is none at home.\n\nWhile it is grammatically possible for Eric to have known there was none at home (and perhaps told Logan), the most logical flow of the sentence identifies the subject (Logan) as the one acting upon the knowledge.\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "The sentence describes a situation where Logan is performing an action (buying lettuce) for Eric. The reason for this action is that the person shopping realized there was no lettuce at home. In this context, the person who \"knew there was none at home\" is the person currently at the store making the decision to buy it.\n\n1. Logan is at the store.\n2. Logan grabs the lettuce.\n3. Logan does this because he (Logan) knows there is none at home.\n\nWhile it is grammatically possible for Eric to have known there was none at home (and perhaps told Logan), the most logical flow of the sentence identifies the subject (Logan) as the one acting upon the knowledge.\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_445_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 445,
+    "question": "John opened the window for air to come him when he was sweating in his bedroom. The _ is cold.",
+    "choices": [
+      "bedroom",
+      "air"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "The sentence describes John opening a window to let air enter his room because he was sweating. In this context, the reason he wants the air to come in is that the air outside is cold, which would help cool him down. While the bedroom is where he is, the \"cold\" element being introduced to change the temperature is the air.\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "The sentence describes John opening a window to let air enter his room because he was sweating. In this context, the reason he wants the air to come in is that the air outside is cold, which would help cool him down. While the bedroom is where he is, the \"cold\" element being introduced to change the temperature is the air.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "The sentence describes John opening a window to let air enter his room because he was sweating. In this context, the reason he wants the air to come in is that the air outside is cold, which would help cool him down. While the bedroom is where he is, the \"cold\" element being introduced to change the temperature is the air.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_383_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 383,
+    "question": "Diana went to the laundromat and she used the washer but not the dryer because she only had enough money for the _ .",
+    "choices": [
+      "washer",
+      "dryer"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": "The sentence describes a situation where Diana used the washer but did not use the dryer. The reason provided is that she only had enough money for one of the two. Since she successfully used the washer, she must have had the money for it, but lacked the money for the dryer.\n\nTherefore, she only had enough money for the washer.\n\n<answer>A</answer>",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": "The sentence describes a situation where Diana used the washer but did not use the dryer. The reason provided is that she only had enough money for one of the two. Since she successfully used the washer, she must have had the money for it, but lacked the money for the dryer.\n\nTherefore, she only had enough money for the washer.\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "The sentence describes a situation where Diana used the washer but did not use the dryer. The reason provided is that she only had enough money for one of the two. Since she successfully used the washer, she must have had the money for it, but lacked the money for the dryer.\n\nTherefore, she only had enough money for the washer.\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_601_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 601,
+    "question": "Neil told Lawrence that he was training to be a race car driver.  _ was worried about him.",
+    "choices": [
+      "Neil",
+      "Lawrence"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "To determine the correct answer, we must look at the logic of the sentence: \"Neil told Lawrence that he was training to be a race car driver.\"\n\n1.  **The Action:** Neil is the one training to be a race car driver.\n2.  **The Context:** Race car driving is a dangerous profession.\n3.  **The Reaction:** The person who is \"worried\" would logically be the person listening to the news about the dangerous activity, not the person performing the activity.\n\nSince Neil is the one taking the risk, Lawrence is the one who would be worried about him.\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "To determine the correct answer, we must look at the logic of the sentence: \"Neil told Lawrence that he was training to be a race car driver.\"\n\n1.  **The Action:** Neil is the one training to be a race car driver.\n2.  **The Context:** Race car driving is a dangerous profession.\n3.  **The Reaction:** The person who is \"worried\" would logically be the person listening to the news about the dangerous activity, not the person performing the activity.\n\nSince Neil is the one taking the risk, Lawrence is the one who would be worried about him.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "To determine the correct answer, we must look at the logic of the sentence: \"Neil told Lawrence that he was training to be a race car driver.\"\n\n1.  **The Action:** Neil is the one training to be a race car driver.\n2.  **The Context:** Race car driving is a dangerous profession.\n3.  **The Reaction:** The person who is \"worried\" would logically be the person listening to the news about the dangerous activity, not the person performing the activity.\n\nSince Neil is the one taking the risk, Lawrence is the one who would be worried about him.\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_40_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 40,
+    "question": "Brian was jealous of Brett's new car because _ couldn't afford to buy a new car.",
+    "choices": [
+      "Brian",
+      "Brett"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": "To determine the correct pronoun reference, we must look at the logic of the sentence:\n\n1.  **The Situation:** Brian is jealous of Brett's new car.\n2.  **The Reason:** Jealousy typically arises when someone wants something that another person has but they themselves cannot obtain.\n3.  **The Logic:** If Brian is the one feeling jealous, it is because **Brian** is the one who cannot afford the car. If Brett couldn't afford the car, he wouldn't have a new car to be jealous of.\n\nTherefore, the blank refers to Brian.\n\n<answer>A</answer>",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": "To determine the correct pronoun reference, we must look at the logic of the sentence:\n\n1.  **The Situation:** Brian is jealous of Brett's new car.\n2.  **The Reason:** Jealousy typically arises when someone wants something that another person has but they themselves cannot obtain.\n3.  **The Logic:** If Brian is the one feeling jealous, it is because **Brian** is the one who cannot afford the car. If Brett couldn't afford the car, he wouldn't have a new car to be jealous of.\n\nTherefore, the blank refers to Brian.\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "To determine the correct pronoun reference, we must look at the logic of the sentence:\n\n1.  **The Situation:** Brian is jealous of Brett's new car.\n2.  **The Reason:** Jealousy typically arises when someone wants something that another person has but they themselves cannot obtain.\n3.  **The Logic:** If Brian is the one feeling jealous, it is because **Brian** is the one who cannot afford the car. If Brett couldn't afford the car, he wouldn't have a new car to be jealous of.\n\nTherefore, the blank refers to Brian.\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_1069_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 1069,
+    "question": "Nick did not like sauces made from tomato, only creamy sauces. Ryan knew this so he only made white sauce when _ came over.",
+    "choices": [
+      "Nick",
+      "Ryan"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": "The sentence describes a situation where Ryan is preparing food for someone based on that person's specific dietary preference (disliking tomato sauces and preferring creamy sauces). \n\n1. The first sentence establishes that **Nick** is the one who only likes creamy sauces.\n2. The second sentence states that **Ryan** (the cook) knew this preference.\n3. Therefore, Ryan would make the white sauce (a creamy sauce) for the person who likes it.\n\nThe person who came over must be Nick.\n\n<answer>A</answer>",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": "The sentence describes a situation where Ryan is preparing food for someone based on that person's specific dietary preference (disliking tomato sauces and preferring creamy sauces). \n\n1. The first sentence establishes that **Nick** is the one who only likes creamy sauces.\n2. The second sentence states that **Ryan** (the cook) knew this preference.\n3. Therefore, Ryan would make the white sauce (a creamy sauce) for the person who likes it.\n\nThe person who came over must be Nick.\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "The sentence describes a situation where Ryan is preparing food for someone based on that person's specific dietary preference (disliking tomato sauces and preferring creamy sauces). \n\n1. The first sentence establishes that **Nick** is the one who only likes creamy sauces.\n2. The second sentence states that **Ryan** (the cook) knew this preference.\n3. Therefore, Ryan would make the white sauce (a creamy sauce) for the person who likes it.\n\nThe person who came over must be Nick.\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_416_native_order",
+    "model": "gemma-4-31b-it",
+    "source_row_index": 416,
+    "question": "When we go hiking I bring my backpack because it has built in water bottles and places for snacks. Today I forgot to bring the _ and was starving.",
+    "choices": [
+      "snacks",
+      "water bottles"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": "The sentence states that the backpack has \"places for snacks.\" If the speaker was \"starving,\" it means they lacked food. While the backpack also holds water bottles, starvation specifically relates to a lack of food (snacks). Therefore, the missing item that caused the hunger was the snacks.\n\n<answer>A</answer>",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": "The sentence states that the backpack has \"places for snacks.\" If the speaker was \"starving,\" it means they lacked food. While the backpack also holds water bottles, starvation specifically relates to a lack of food (snacks). Therefore, the missing item that caused the hunger was the snacks.\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "The sentence states that the backpack has \"places for snacks.\" If the speaker was \"starving,\" it means they lacked food. While the backpack also holds water bottles, starvation specifically relates to a lack of food (snacks). Therefore, the missing item that caused the hunger was the snacks.\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_383_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 383,
+    "question": "Diana went to the laundromat and she used the washer but not the dryer because she only had enough money for the _ .",
+    "choices": [
+      "washer",
+      "dryer"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": "\n\n<answer>A</answer>",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_915_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 915,
+    "question": "Cynthia felt very thirsty but Sarah did not feel thirsty. _ bought a bag of chips.",
+    "choices": [
+      "Cynthia",
+      "Sarah"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_727_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 727,
+    "question": "Maria told Monica they looked too sick to go to work and asked if they had a fever. _ went to the Doctor.",
+    "choices": [
+      "Maria",
+      "Monica"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_862_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 862,
+    "question": "While at the store, Logan grabbed a head of lettuce for Eric to use for dinner because _ knew there was none at home.",
+    "choices": [
+      "Logan",
+      "Eric"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": "\n\n<answer>A</answer>",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_601_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 601,
+    "question": "Neil told Lawrence that he was training to be a race car driver.  _ was worried about him.",
+    "choices": [
+      "Neil",
+      "Lawrence"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_160_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 160,
+    "question": "William liked to be outside more than Kyle so _ spent time arguing against getting a pool.",
+    "choices": [
+      "William",
+      "Kyle"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_545_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 545,
+    "question": "Rachel wanted children, but Megan had no interest, so _ looked for someone else to have freedom with.",
+    "choices": [
+      "Rachel",
+      "Megan"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_1217_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 1217,
+    "question": "Jennifer has more money than Amy, so _ became a homeowner at a young age.",
+    "choices": [
+      "Jennifer",
+      "Amy"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": "\n\n<answer>A</answer>",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_40_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 40,
+    "question": "Brian was jealous of Brett's new car because _ couldn't afford to buy a new car.",
+    "choices": [
+      "Brian",
+      "Brett"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": "\n\n<answer>A</answer>",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_416_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 416,
+    "question": "When we go hiking I bring my backpack because it has built in water bottles and places for snacks. Today I forgot to bring the _ and was starving.",
+    "choices": [
+      "snacks",
+      "water bottles"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": "\n\n<answer>A</answer>",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_1069_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 1069,
+    "question": "Nick did not like sauces made from tomato, only creamy sauces. Ryan knew this so he only made white sauce when _ came over.",
+    "choices": [
+      "Nick",
+      "Ryan"
+    ],
+    "raw_source_answer": "1",
+    "raw_output": "\n\n<answer>A</answer>",
+    "source_gold": "A",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "1",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "1",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>A</answer>",
+        "normalized": "A",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>A</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  },
+  {
+    "case_id": "winogrande_445_native_order",
+    "model": "qwen3.8-27b",
+    "source_row_index": 445,
+    "question": "John opened the window for air to come him when he was sweating in his bedroom. The _ is cold.",
+    "choices": [
+      "bedroom",
+      "air"
+    ],
+    "raw_source_answer": "2",
+    "raw_output": "\n\n<answer>B</answer>",
+    "source_gold": "B",
+    "native_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "2",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "2",
+        "strategy": "index"
+      }
+    },
+    "reference_only_parse": {
+      "pred": {
+        "raw": "\n\n<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      },
+      "ref": {
+        "raw": "<answer>B</answer>",
+        "normalized": "B",
+        "ok": true,
+        "error": null,
+        "evidence": "<answer>B</answer>",
+        "strategy": "tagged_answer"
+      }
+    }
+  }
+]

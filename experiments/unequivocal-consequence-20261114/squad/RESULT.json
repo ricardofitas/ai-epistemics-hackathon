@@ -1,0 +1,221 @@
+{
+  "status": "PASS_OFFICIAL_SCORER_CAUSAL_PANEL_RECHECK",
+  "source_questions": 100,
+  "planned_captured_requests": 1600,
+  "complete": 1539,
+  "unknown": 61,
+  "model_calls": 0,
+  "judge_calls": 0,
+  "summary": {
+    "gemma-4-31b-it": {
+      "free_clear": {
+        "n": 100,
+        "known": 99,
+        "unknown": 1,
+        "official_em_lower": 70.0,
+        "official_em_upper": 71.0,
+        "official_f1_lower": 82.72396217550973,
+        "official_f1_upper": 83.72396217550973
+      },
+      "free_none": {
+        "n": 100,
+        "known": 99,
+        "unknown": 1,
+        "official_em_lower": 77.0,
+        "official_em_upper": 78.0,
+        "official_f1_lower": 86.66838984813812,
+        "official_f1_upper": 87.66838984813812
+      },
+      "choice_clear": {
+        "n": 100,
+        "known": 98,
+        "unknown": 2,
+        "official_em_lower": 83.0,
+        "official_em_upper": 85.0,
+        "official_f1_lower": 92.00228758169935,
+        "official_f1_upper": 94.00228758169935
+      },
+      "choice_none": {
+        "n": 100,
+        "known": 98,
+        "unknown": 2,
+        "official_em_lower": 1.0,
+        "official_em_upper": 3.0,
+        "official_f1_lower": 1.0,
+        "official_f1_upper": 3.0
+      }
+    },
+    "qwen3.8-27b": {
+      "free_clear": {
+        "n": 100,
+        "known": 100,
+        "unknown": 0,
+        "official_em_lower": 57.0,
+        "official_em_upper": 57.0,
+        "official_f1_lower": 77.44054883166426,
+        "official_f1_upper": 77.44054883166426
+      },
+      "free_none": {
+        "n": 100,
+        "known": 98,
+        "unknown": 2,
+        "official_em_lower": 70.0,
+        "official_em_upper": 72.0,
+        "official_f1_lower": 86.08455877455879,
+        "official_f1_upper": 88.08455877455879
+      },
+      "choice_clear": {
+        "n": 100,
+        "known": 100,
+        "unknown": 0,
+        "official_em_lower": 77.0,
+        "official_em_upper": 77.0,
+        "official_f1_lower": 91.11205491205492,
+        "official_f1_upper": 91.11205491205492
+      },
+      "choice_none": {
+        "n": 100,
+        "known": 88,
+        "unknown": 12,
+        "official_em_lower": 21.0,
+        "official_em_upper": 33.0,
+        "official_f1_lower": 21.5,
+        "official_f1_upper": 33.5
+      }
+    },
+    "deepseek-v4-flash": {
+      "free_clear": {
+        "n": 100,
+        "known": 100,
+        "unknown": 0,
+        "official_em_lower": 53.0,
+        "official_em_upper": 53.0,
+        "official_f1_lower": 71.09154777792365,
+        "official_f1_upper": 71.09154777792365
+      },
+      "free_none": {
+        "n": 100,
+        "known": 100,
+        "unknown": 0,
+        "official_em_lower": 64.0,
+        "official_em_upper": 64.0,
+        "official_f1_lower": 78.90354102052868,
+        "official_f1_upper": 78.90354102052868
+      },
+      "choice_clear": {
+        "n": 100,
+        "known": 100,
+        "unknown": 0,
+        "official_em_lower": 72.0,
+        "official_em_upper": 72.0,
+        "official_f1_lower": 85.3497069841623,
+        "official_f1_upper": 85.3497069841623
+      },
+      "choice_none": {
+        "n": 100,
+        "known": 83,
+        "unknown": 17,
+        "official_em_lower": 15.0,
+        "official_em_upper": 32.0,
+        "official_f1_lower": 16.46969696969697,
+        "official_f1_upper": 33.46969696969697
+      }
+    },
+    "glm-5.2": {
+      "free_clear": {
+        "n": 100,
+        "known": 96,
+        "unknown": 4,
+        "official_em_lower": 72.0,
+        "official_em_upper": 76.0,
+        "official_f1_lower": 85.8710200265554,
+        "official_f1_upper": 89.8710200265554
+      },
+      "free_none": {
+        "n": 100,
+        "known": 99,
+        "unknown": 1,
+        "official_em_lower": 77.0,
+        "official_em_upper": 78.0,
+        "official_f1_lower": 89.5175158175158,
+        "official_f1_upper": 90.5175158175158
+      },
+      "choice_clear": {
+        "n": 100,
+        "known": 100,
+        "unknown": 0,
+        "official_em_lower": 79.0,
+        "official_em_upper": 79.0,
+        "official_f1_lower": 91.80960310105539,
+        "official_f1_upper": 91.80960310105539
+      },
+      "choice_none": {
+        "n": 100,
+        "known": 81,
+        "unknown": 19,
+        "official_em_lower": 24.0,
+        "official_em_upper": 43.0,
+        "official_f1_lower": 24.0,
+        "official_f1_upper": 43.0
+      }
+    }
+  },
+  "pairs": {
+    "gemma-4-31b-it": {
+      "clear_correct_none_wrong": 81,
+      "clear_correct_none_dummy": 81,
+      "unknown_pair": 3,
+      "both_wrong": 15,
+      "both_correct": 1,
+      "drop_lower_pp": 80.0,
+      "drop_upper_pp": 84.0
+    },
+    "qwen3.8-27b": {
+      "both_correct": 19,
+      "both_wrong": 17,
+      "clear_correct_none_wrong": 50,
+      "clear_correct_none_dummy": 50,
+      "unknown_pair": 12,
+      "none_correct_clear_wrong": 2,
+      "drop_lower_pp": 44.0,
+      "drop_upper_pp": 56.0
+    },
+    "deepseek-v4-flash": {
+      "both_correct": 14,
+      "both_wrong": 24,
+      "clear_correct_none_wrong": 44,
+      "clear_correct_none_dummy": 42,
+      "unknown_pair": 17,
+      "none_correct_clear_wrong": 1,
+      "drop_lower_pp": 40.0,
+      "drop_upper_pp": 57.0
+    },
+    "glm-5.2": {
+      "unknown_pair": 19,
+      "clear_correct_none_wrong": 41,
+      "clear_correct_none_dummy": 41,
+      "both_correct": 23,
+      "both_wrong": 16,
+      "none_correct_clear_wrong": 1,
+      "drop_lower_pp": 36.0,
+      "drop_upper_pp": 55.0
+    }
+  },
+  "strongest_witness_models": 4,
+  "witness_source_count": 82,
+  "official_scorer": {
+    "repository": "huggingface/evaluate",
+    "path": "metrics/squad/compute_score.py",
+    "git_blob": "e60acfd1044319e43a59ffe8db75e63b68785ba7"
+  },
+  "closure": {
+    "source_authentication": "PASS",
+    "actual_serialized_request_hash": "PASS",
+    "captured_final_answer": "PASS",
+    "official_squad_metric_execution": "PASS",
+    "one_eval_native_squad_generation": "NOT_EXECUTED",
+    "natural_supported_native_fault_attribution": "UNESTABLISHED",
+    "external_published_conclusion_changed": "UNESTABLISHED",
+    "scope": "Actual prospective standalone Adaption captures, not ordinary One-Eval SQuAD generation. Carrier manipulation was deliberately introduced; official SQuAD scorer was run directly on prespecified extracted final answers. This independently verifies the measured causal final-answer consequence, not natural pipeline prevalence or a published ranking reversal."
+  }
+}

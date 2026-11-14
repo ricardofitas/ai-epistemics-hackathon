@@ -1,0 +1,695 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-11-14T22:06:22.962374+00:00",
+  "source_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "original_capture_sha256": "45b5eb305790ae8f2bf5ceddc46ddabaf230d8654f4260d092443c008a7ffc2b",
+  "models_called": 0,
+  "judges_called": 0,
+  "source_questions": 300,
+  "conditions": 1200,
+  "results": [
+    {
+      "benchmark": "arc-challenge",
+      "source_rows": 100,
+      "conditions": {
+        "original": {
+          "question_present": 100,
+          "choices_preserved": 0,
+          "label_not_offered": 46,
+          "credited_unoffered_labels": 45,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 0.98,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          },
+          "constant_C": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 0.24,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          },
+          "constant_D": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 0.23,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        },
+        "choices_only": {
+          "question_present": 100,
+          "choices_preserved": 100,
+          "label_not_offered": 0,
+          "credited_unoffered_labels": 0,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 0.98,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        },
+        "binding_only": {
+          "question_present": 100,
+          "choices_preserved": 0,
+          "label_not_offered": 46,
+          "credited_unoffered_labels": 45,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 0.98,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        },
+        "choices_and_binding": {
+          "question_present": 100,
+          "choices_preserved": 100,
+          "label_not_offered": 0,
+          "credited_unoffered_labels": 0,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 0.98,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        }
+      }
+    },
+    {
+      "benchmark": "openbookqa",
+      "source_rows": 100,
+      "conditions": {
+        "original": {
+          "question_present": 0,
+          "choices_preserved": 0,
+          "label_not_offered": 43,
+          "credited_unoffered_labels": 43,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 1.0,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          },
+          "constant_C": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 0.26,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          },
+          "constant_D": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 0.17,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        },
+        "choices_only": {
+          "question_present": 0,
+          "choices_preserved": 100,
+          "label_not_offered": 0,
+          "credited_unoffered_labels": 0,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 1.0,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        },
+        "binding_only": {
+          "question_present": 100,
+          "choices_preserved": 0,
+          "label_not_offered": 43,
+          "credited_unoffered_labels": 43,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 1.0,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        },
+        "choices_and_binding": {
+          "question_present": 100,
+          "choices_preserved": 100,
+          "label_not_offered": 0,
+          "credited_unoffered_labels": 0,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc_norm",
+            "score": 1.0,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        }
+      }
+    },
+    {
+      "benchmark": "mmlu",
+      "source_rows": 100,
+      "conditions": {
+        "original": {
+          "question_present": 100,
+          "choices_preserved": 100,
+          "label_not_offered": 0,
+          "credited_unoffered_labels": 0,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc",
+            "score": 1.0,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          },
+          "constant_C": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc",
+            "score": 0.28,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          },
+          "constant_D": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc",
+            "score": 0.25,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        },
+        "choices_only": {
+          "question_present": 100,
+          "choices_preserved": 100,
+          "label_not_offered": 0,
+          "credited_unoffered_labels": 0,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc",
+            "score": 1.0,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        },
+        "binding_only": {
+          "question_present": 100,
+          "choices_preserved": 100,
+          "label_not_offered": 0,
+          "credited_unoffered_labels": 0,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc",
+            "score": 1.0,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        },
+        "choices_and_binding": {
+          "question_present": 100,
+          "choices_preserved": 100,
+          "label_not_offered": 0,
+          "credited_unoffered_labels": 0,
+          "source_letter_fixture_score": {
+            "metric": "choice_accuracy",
+            "official_metric": "acc",
+            "score": 1.0,
+            "score_source": "metric_stage",
+            "prediction_mode": "generation",
+            "denominator": "total",
+            "total_samples": 100,
+            "scored_samples": 100,
+            "valid_predictions": 100,
+            "parse_failed": 0,
+            "empty_output": 0,
+            "invalid_references": 0,
+            "parser": {
+              "type": "choice_letter",
+              "choices": "A-D",
+              "prefer": [
+                "tagged_answer",
+                "boxed_answer",
+                "final_answer_line",
+                "last_standalone_choice"
+              ],
+              "choices_key": "choices"
+            },
+            "failure_policy": {
+              "parse_failed": "score_zero",
+              "empty_output": "score_zero",
+              "invalid_reference": "exclude"
+            },
+            "official_compatibility": null
+          }
+        }
+      }
+    }
+  ],
+  "modules": {
+    "BenchAnswerGenerator": {
+      "path": "/workspace/scratch/a67858fecdec/consequence/arc_openbook/venv/lib/python3.11/site-packages/dataflow/operators/core_text/generate/bench_answer_generator.py",
+      "sha256": "9b3b29c44c60d71510f88b0f19e964339806fc29bd0fd91ff16c97072219e09a",
+      "normal_import": true
+    },
+    "FormatStrPrompt": {
+      "path": "/workspace/scratch/a67858fecdec/consequence/arc_openbook/venv/lib/python3.11/site-packages/dataflow/prompts/core_text.py",
+      "sha256": "5df1bf04fceea685ebf28bf4c398303cda49e46af8d87e769db0d04ca1c5600a",
+      "normal_import": true
+    },
+    "FileStorage": {
+      "path": "/workspace/scratch/a67858fecdec/consequence/arc_openbook/venv/lib/python3.11/site-packages/dataflow/utils/storage.py",
+      "sha256": "9497e91a1b9b63f354ecfc36adf5b600e0ac5b173eb9ca1bd3da52368bc3b58d",
+      "normal_import": true
+    },
+    "MetricRunner": {
+      "path": "/workspace/scratch/a67858fecdec/consequence/arc_openbook/support/oneeval_alias_evidence_20261113/one_eval/metrics/runner.py",
+      "sha256": "d599a3665c2594fc1bce9b9c3cf664d704fd0cfcff57146961abeb4ac359b706",
+      "normal_import": true
+    },
+    "BenchInfo": {
+      "path": "/workspace/scratch/a67858fecdec/consequence/arc_openbook/support/oneeval_alias_evidence_20261113/one_eval/core/state.py",
+      "sha256": "af00f96608ba1c1176e056fb8d1ad34902232dd759571c2ecc9afc67b30604ce",
+      "normal_import": true
+    }
+  },
+  "versions": {
+    "open-dataflow": "1.0.10",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "langgraph": "1.2.22",
+    "langchain-core": "1.8.0"
+  },
+  "scope": "Installed unmodified generator, formatter, FileStorage, original metric registry/parser/MetricRunner/BenchInfo normal imports. Original preprocessor inputs authenticated from prior captures; full DataFlowEvalTool and graph/serving orchestration NOT executed. Serving is a deterministic constructed fixture, not a model. Choice accuracy is the gallery generation metric, not official ARC/OpenBook acc_norm. Gallery metadata warns contract_inferred/reference_mapped, smoke_passed=false."
+}

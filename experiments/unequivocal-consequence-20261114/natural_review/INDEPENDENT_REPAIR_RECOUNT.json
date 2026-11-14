@@ -1,0 +1,53 @@
+{
+  "status": "PASS_WITH_RETAINED_PARSER_DISAGREEMENTS",
+  "source_rows": 3562,
+  "original_source_fields_unchanged": true,
+  "seeded_choice_multisets_and_order_preserved": true,
+  "full_source_question_restored": true,
+  "baselines": {
+    "A": {
+      "native_correct": 905,
+      "source_semantic_correct": 905,
+      "first_occurrence_position_correct": 905,
+      "native_source_semantic_confusion": {
+        "(False, False)": 2657,
+        "(True, True)": 905
+      },
+      "native_source_semantic_mismatch_rows": [],
+      "own_question_present": 3562,
+      "report_score": 0.2540707467714767,
+      "same_constant_prediction_bytes": true,
+      "source_fields_unchanged": true,
+      "selected_report_source": "dataflow_eval:accuracy",
+      "primary_metric_display": 0.0
+    },
+    "B": {
+      "native_correct": 888,
+      "source_semantic_correct": 882,
+      "first_occurrence_position_correct": 882,
+      "native_source_semantic_confusion": {
+        "(False, False)": 2674,
+        "(True, True)": 882,
+        "(False, True)": 6
+      },
+      "native_source_semantic_mismatch_rows": [
+        876,
+        1024,
+        1093,
+        1569,
+        2677,
+        3294
+      ],
+      "own_question_present": 3562,
+      "report_score": 0.2492981471083661,
+      "same_constant_prediction_bytes": true,
+      "source_fields_unchanged": true,
+      "selected_report_source": "dataflow_eval:accuracy",
+      "primary_metric_display": 0.0
+    }
+  },
+  "source_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "artifact_sha256": "66de2030edca15d53c8318b59821d2e8ef06c31f3e94f8e7cba6d2bd4b5378fe",
+  "new_native_runs": 0,
+  "new_model_calls": 0
+}
