@@ -45,4 +45,13 @@ class Tests(unittest.TestCase):
         self.path.parent.mkdir();self.path.write_bytes(b'bad');op=Fake(self.data)
         with self.assertRaises(ValueError):m.acquire(self.e,self.path,'https://raw.githubusercontent.com/x',opener=op)
         self.assertEqual(op.calls,0);self.assertEqual(self.path.read_bytes(),b'bad')
+    def test_checkout_git_identity_accepts_exact_bytes(self):
+        self.path.parent.mkdir();self.path.write_bytes(self.data)
+        r=m.verify_original(self.path,self.e);self.assertEqual(r['git_blob'],self.e['blob'])
+    def test_checkout_git_identity_rejects_normalized_extra_linefeed(self):
+        self.path.parent.mkdir();self.path.write_bytes(self.data+b'\n')
+        with self.assertRaises(AssertionError):m.verify_original(self.path,self.e)
+    def test_checkout_git_identity_rejects_same_size_wrong_bytes(self):
+        self.path.parent.mkdir();self.path.write_bytes(self.data.replace(b'items',b'other'))
+        with self.assertRaises(AssertionError):m.verify_original(self.path,self.e)
 if __name__=='__main__':unittest.main()

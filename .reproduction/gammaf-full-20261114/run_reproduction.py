@@ -15,6 +15,12 @@ def write(name, data):
 class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,*args,**kwargs): raise RuntimeError('Unexpected source redirect')
 def blob_hash(data):return hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+def verify_original(path, expected):
+    """Authenticate checkout bytes against the pinned repository's Git tree."""
+    data=path.read_bytes()
+    assert len(data)==expected['bytes'], str(path)+' original byte count'
+    assert blob_hash(data)==expected['blob'], str(path)+' original Git blob'
+    return {'bytes':len(data),'git_blob':expected['blob'],'sha256':hashlib.sha256(data).hexdigest()}
 def acquire(entry, destination, url, *, opener=None, deadline=None):
     """Single-attempt bounded fetch; verify length and Git object before install."""
     if destination.exists():
@@ -49,7 +55,7 @@ def acquire(entry, destination, url, *, opener=None, deadline=None):
     return {'status':'downloaded_verified','bytes':len(data),'blob':entry['blob'],'sha256':hashlib.sha256(data).hexdigest()}
 def bootstrap(protocol, deadline):
     manifest_path=HANDOFF/'gamma_sources.json'
-    assert digest(manifest_path)==protocol['sources_manifest_sha256']
+    verify_original(manifest_path,protocol['sources_manifest_git_identity'])
     manifest=json.loads(manifest_path.read_text());entries={k:v for k,v in manifest['files'].items() if k!='summary'}
     assert manifest['repo']=='pmateo-uc3m/GAMMAF' and manifest['commit']==protocol['upstream_commit']
     assert len(entries)==28 and sum(x['bytes'] for x in entries.values())==111232152
@@ -66,13 +72,13 @@ def preflight():
     p=json.loads((HERE/'PROTOCOL.json').read_text())
     for name,expected in p['frozen_files'].items():assert digest(HERE/name)==expected,name
     assert digest(ROOT/p['workflow_path'])==p['workflow_sha256']
-    assert digest(HANDOFF/'gamma_sources.json')==p['sources_manifest_sha256']
-    assert digest(ROOT/'artifacts/results.json')==p['original_results_sha256']
+    originals={'swarmlab-gammaf/gammaf_handoff/gamma_sources.json':verify_original(HANDOFF/'gamma_sources.json',p['sources_manifest_git_identity']),
+               'artifacts/results.json':verify_original(ROOT/'artifacts/results.json',p['original_results_git_identity'])}
     assert digest(HANDOFF/'gamma_debates.jsonl.gz')==p['terminal_projection_sha256']
-    for path,expected in p['original_code_sha256'].items():assert digest(ROOT/path)==expected,path
-    assert len(p['original_code_sha256'])>=8
+    for path,expected in p['original_code_git_identity'].items():originals[path]=verify_original(ROOT/path,expected)
+    assert len(p['original_code_git_identity'])>=8
     assert p['new_model_calls']==p['new_judge_calls']==0
-    write('PREFLIGHT.json',{'status':'PASS','utc':now(),'protocol_sha256':digest(HERE/'PROTOCOL.json'),'base_commit':p['base_commit'],'new_model_calls':0})
+    write('PREFLIGHT.json',{'status':'PASS','utc':now(),'protocol_sha256':digest(HERE/'PROTOCOL.json'),'base_commit':p['base_commit'],'authenticated_checkout_files':originals,'new_model_calls':0})
     return p
 def command(args, log, deadline):
     remaining=max(1,int(deadline-clock()))
@@ -123,7 +129,7 @@ def run():
     rc=command([sys.executable,'scripts/run_hackathon_experiments.py','--handoff',str(HANDOFF),'--out',str(OUT/'reproduced'),'--only','all','--bootstrap','10000','--seed','20261112','--no-figures'],'runner.log',deadline)
     if rc:raise RuntimeError('Full runner failed; inspect runner.log')
     result=compare()
-    assert digest(ROOT/'artifacts/results.json')==p['original_results_sha256']
+    verify_original(ROOT/'artifacts/results.json',p['original_results_git_identity'])
     assert digest(HANDOFF/'gamma_debates.jsonl.gz')==p['terminal_projection_sha256']
     write('FINAL.json',{'status':result['status'],'utc':now(),'elapsed_seconds':clock()-started,'frozen_original_results_unchanged':True,'frozen_terminal_projection_unchanged':True,'raw_files_verified':28,'raw_bytes':111232152,'tests':counts,'new_model_calls':0,'new_judge_calls':0,'run_id':os.environ.get('GITHUB_RUN_ID'),'execution_sha':os.environ.get('GITHUB_SHA')})
 def main():

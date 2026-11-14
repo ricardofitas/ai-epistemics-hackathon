@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "protocol_sha256": "35dcfb99d2b6dda278c5b7c02d4d544d0f4c65277dca1baa5a4f9a98fb9607f2",
+  "exact_git_blob_files": 13,
+  "raw_original_git_blob_identity_checked": true,
+  "exact_checkout_preflight": "PASS",
+  "exact_checkout_patch_apply_check": "PASS",
+  "normalized_snapshot_problem": "All13 original text snapshots appended one LF. Authentic13Gitblobs now independently fetched and serializedwithoutline reconstruction, exactbytecounts/Gitblob hashes verified. SnapshotSHA256pins replacedby bytecount/Gitblobpins; actualSHA256recordedbyproductionpreflight.",
+  "patch_rebased_to_exact_checkout": "SamePythonASTasreviewedproposal; removeonlysnapshot-added terminalblanklines so originaltestEOFhunk applies. Originalpatch retained inteam_review/; newderivativecapsulepatch frozen.",
+  "source_integrity_tests": 12,
+  "source_trajectory_downloads": 0,
+  "model_calls": 0,
+  "judge_calls": 0,
+  "patched_exact_checkout_focused_tests": "PASS5",
+  "patched_exact_checkout_suite_collection": "PASS38"
+}

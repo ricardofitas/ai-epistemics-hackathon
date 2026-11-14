@@ -49,7 +49,7 @@
      latex_table(
 --- a/tests/test_audit_proofs.py
 +++ b/tests/test_audit_proofs.py
-@@ -115,5 +115,7 @@
+@@ -115,4 +115,6 @@
      assert 0.0 <= summary["detector_rate_percent"] <= 100.0
      assert summary["control_rate_percent"] >= summary["detector_rate_percent"]
      assert summary["by_task"]["GSM8K"]["contaminated"] == 0
@@ -57,7 +57,6 @@
 +    assert summary["events"] >= summary["detector_contaminated_debates"]
 +    assert summary["control_events"] >= summary["control_contaminated_debates"]
 +    assert summary["total_events"] >= summary["contaminated_debates"]
- 
 --- /dev/null
 +++ b/tests/test_shadow_population_counts.py
 @@ -0,0 +1,87 @@
