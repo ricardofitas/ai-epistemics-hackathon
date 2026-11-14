@@ -22,3 +22,6 @@ Secondary controls: pretrained base/large models at matched sizes; each family's
 
 ## Deliverable and decision
 A reproducible script, machine-readable results, claim-to-source mapping and a focused report outside the manuscript. Report what a 64-row human reading can and cannot establish. If a robust relevant conclusion change is not demonstrated, explicitly retain that negative outcome and identify the exact missing evidence. No automatic GAMMAF-superiority claim.
+
+## Amendment before headline-output acquisition
+The frozen public repository inventory also contains four GPT-3 test files and one PromptPG test file, all named seed_2. Their contents have not been inspected in this follow-up. Audit those archived files as a separate targeted extension: authenticate each Git blob; inspect whether it is a cache or scored result; replay the authors' own GPT-3 extraction and grading before applying the same prespecified zero-tie/exact-option policies to the extracted final answer. A single released seed cannot reproduce or invalidate a three-trial average. Keep seed-level consequences, headline aggregate coverage and missing runs explicit. No model generation or judge calls.
