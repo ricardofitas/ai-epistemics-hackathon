@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-11-14T15:59:04.058992+00:00",
+  "document": "RESULTS.md",
+  "document_sha256": "7503cc73194c07f6c2e651ba916cbbc2422dacf6f013e125819ef63ef09bc98d",
+  "reviewer": "Independent masked adjudicator and aggregate verifier",
+  "checks": {
+    "numbers_and_bounds_match_independent_recomputation": true,
+    "nine_gemma_credits_described_as_whole_text_vs_final_answer_construct_difference": true,
+    "correct_rationale_not_misrepresented_as_nine_factual_errors": true,
+    "qwen_missed_proverb_equivalence_qualified": true,
+    "retrospective_assistant_review_and_aggregate_prior_exposure_disclosed": true,
+    "possible_format_mask_leakage_disclosed": true,
+    "eleven_original_incomplete_and_one_consensus_unknown_preserved": true,
+    "fixed20_denominators_and_sensitivity_not_confidence_limits_explicit": true,
+    "original_rule_scores_not_replaced": true,
+    "no_hidden_knowledge_or_general_capability_claim": true,
+    "instruction_and_format_confound_retained": true
+  },
+  "required_changes": [],
+  "note": "Supersedes the pending wording-review note in INDEPENDENT_VERIFICATION.json. No extra experiments or API calls."
+}

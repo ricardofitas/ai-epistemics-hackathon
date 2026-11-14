@@ -1,0 +1,587 @@
+[
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1893",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What online travel agency uses The Roaming Gnome as its' TV spokesperson?",
+      "target": [
+        "AllHotels",
+        "Travelocity",
+        "Easy Sabre",
+        "SAABRE",
+        "Eaasy Sabre",
+        "Easy Saabre",
+        "Travelocity.com",
+        "Saabre",
+        "Eaasy SABRE",
+        "Travelosity",
+        "Easy SAABRE",
+        "Travelocity Business",
+        "The roaming gnome",
+        "Easy SABRE"
+      ]
+    },
+    "source_index": 1893,
+    "source_sha256": "03cdc4769e2f6db7ffa81485e202350a10498f645ddaf85398171ccf968e1d04",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1238",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Which event held in Alberta, Canada, which bills itself as The Greatest Outdoor Show on Earth, is a large festival, exhibition, and rodeo held for 10 days every summer in July, attracts more than 1.2 million visitors?",
+      "target": [
+        "Calgary stampede",
+        "Calgary Exhibition and Stampede",
+        "Rangeland derby",
+        "Calgary Stampede Parade",
+        "Calgary Stampede and Exhibition",
+        "Calgary Stampede",
+        "Stampede Park",
+        "Calgary Stampede Rodeo",
+        "The Calgary Stampede",
+        "The Greatest Outdoor Show on Earth"
+      ]
+    },
+    "source_index": 1238,
+    "source_sha256": "03eb64b7825d4fc53fcc3f6c161999c4106d9919db0a4b566b500f81555f613d",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1246",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What are fairy rings made of?",
+      "target": [
+        "Psychoactive mushroom",
+        "Bacidocarp",
+        "Macrofungi",
+        "Mushroom",
+        "Toadstools",
+        "Mushroom Curry",
+        "Mushrooms",
+        "Psychoactive fungi",
+        "Toadstool",
+        "Psychoactive fungus",
+        "Psychoactive mushrooms",
+        "Mushroom curry",
+        "🍄",
+        "Fungophobia"
+      ]
+    },
+    "source_index": 1246,
+    "source_sha256": "03f52c7bfdacd007f7de80936103d8f6b157f0af563271e5786cdaced44dd829",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1637",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Hircine refers to being like or related to what creature?",
+      "target": [
+        "Nanny goat",
+        "Dairy goat",
+        "Kid (goat)",
+        "Nanny Goat",
+        "Capra aegagrus hircus",
+        "She goat",
+        "Billy Goat",
+        "Goat",
+        "Goat penis",
+        "Goat's milk",
+        "He-goat",
+        "She-Goat",
+        "Billy goat",
+        "She-goats",
+        "Domestic goat",
+        "Billies",
+        "Goatfighting",
+        "Goatry",
+        "Capra hircus",
+        "Domestic goats",
+        "Domestic Goat",
+        "Goat milk",
+        "🐐",
+        "She goats",
+        "Billygoat",
+        "Dairy Goats",
+        "Goats' milk",
+        "Goats"
+      ]
+    },
+    "source_index": 1637,
+    "source_sha256": "044cbd617ca33d9577a60f427ea6a67c14dafaee8b2ae3bdde61c6e54aab986b",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "BBH",
+      "context": "None",
+      "id": "281",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "How would a typical person answer each of the following questions about causation?\nAn intern is taking care of a patient in a hospital. The intern notices that the patient is having some kidney problems. Recently, the intern read a series of studies about a new drug that can alleviate problems like this one, and he decides to administer the drug in this case. Before the intern can administer the drug, he needs to get the signature of the pharmacist (to confirm that the hospital has enough in stock) and the signature of the attending doctor (to confirm that the drug is appropriate for this patient). So he sends off requests to both the pharmacist and the attending doctor. The pharmacist receives the request, checks to see that they have enough in stock, and immediately signs off. The attending doctor receives the request at the same time and immediately realizes that there are strong reasons to refuse. Although some studies show that the drug can help people with kidney problems, there are also a number of studies showing that the drug can have very dangerous side effects. For this reason, the hospital has a policy forbidding the use of this drug for kidney problems. Despite this policy, the doctor decides to sign off. Since both signatures were received, the patient is administered the drug. As it happens, the patient immediately recovers, and the drug has no adverse effects. Did the attending doctor's decision cause the patient's recovery?\nOptions:\n- Yes\n- No",
+      "target": [
+        "Yes"
+      ]
+    },
+    "source_index": 281,
+    "source_sha256": "046ccc96b832c0ad9869e184b689ca1b4af044b1575e61b95474364392733ae5",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1191",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What is identified by an I. S. B. N.?",
+      "target": [
+        "Booke",
+        "🕮",
+        "Book",
+        "📕",
+        "📗",
+        "📙",
+        "📘",
+        "Book and paper conservation",
+        "📚",
+        "Books"
+      ]
+    },
+    "source_index": 1191,
+    "source_sha256": "047634dbff495cfc20676796ec4ef931a21c144f0c459847e543e7b4cdefedbf",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "334",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "The Hubble sequence that classifies galaxies is also known for being drawn in what shape?",
+      "target": [
+        "Tuning-fork",
+        "Ragg tuning fork",
+        "Tuning Fork",
+        "Tuning forks",
+        "Tuning fork",
+        "Fork Tuning"
+      ]
+    },
+    "source_index": 334,
+    "source_sha256": "04aeab5cfdbbccd0bb133b88d6c4f1cfc1e1aecc45c3505a814bec51312e2ed9",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "860",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Who holds the post of Defence Secretary?",
+      "target": [
+        "Michael Cathal Fallon",
+        "Michael Cathel Fallon",
+        "Michael Fallon"
+      ]
+    },
+    "source_index": 860,
+    "source_sha256": "04b1aa8ec7259aa091904ba42498587bcbb0d40c0182187bbe427c702a2f8540",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1332",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Which U.S. state was the first to legalize same-sex marriage, in 2004?",
+      "target": [
+        "Masachusetts",
+        "Masshole Commonwealth",
+        "Massachusetts (state)",
+        "Massachusetts culture",
+        "Massachusetts, United States",
+        "Masachussetts",
+        "Commonwealth of Masachusetts",
+        "The Bay State",
+        "Commonwealth of Masachussets",
+        "Culture of Massachusetts",
+        "Commonwealth of Massachusetts",
+        "MA (state)",
+        "Massechusetts",
+        "Commonwealth of Masachusets",
+        "Commonwealth of Massachussets",
+        "Religion in Massachusetts",
+        "Masschusetts",
+        "Masachussets",
+        "Commonwealth of Massachussetts",
+        "Massachusetts",
+        "Transport in Massachusetts",
+        "Massachusite",
+        "Economy of Massachusetts",
+        "6th State",
+        "Massitchusits",
+        "Massachsuetts",
+        "Commonwealth of Masachussetts",
+        "The Commonwealth of Massachusetts",
+        "Massachussets",
+        "Massachus",
+        "Massechussets",
+        "Transportation in Massachusetts",
+        "Massachusets",
+        "Masachusets",
+        "Mass.",
+        "Massachusetts state",
+        "Sixth State",
+        "Massachusites",
+        "Massacheusetts",
+        "Most Serene Commonwealth of Massachusetts",
+        "US-MA",
+        "Commonwealth of Massachusets",
+        "Massachussetts",
+        "Massachusetts (U.S. state)",
+        "Taxachusetts",
+        "State of Massachusetts",
+        "Massachusettes",
+        "Massachusettsan",
+        "Education in Massachusetts"
+      ]
+    },
+    "source_index": 1332,
+    "source_sha256": "04be24cf38ca9470947a202d01dc923c6bc964f13299d6ea9c47d6bc21a1c0c6",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "DROP",
+      "context": "The Conference of Ambassadors drew the first demarcation line on June 18. The line, drawn about 5 km  west of the Warsaw - Saint Petersburg Railway, was based on the military situation on the ground rather than ethnic composition. Neither Poles nor Lithuanians were content with the line. The Polish Ministry of Foreign Affairs rejected the line as it would require the Polish forces to retreat up to 35 km . The Lithuanians protested leaving Vilnius and Hrodna under Polish control. As German volunteers were departing from Lithuania and Lithuanian forces were preoccupied with battles against the Soviets in northern Lithuania, Poland mounted an offensive on 100 km  wide front moving 20-30 km  deeper into the Lithuanian territory. On July 18, Ferdinand Foch proposed the second demarcation line, known as the Foch Line. It was approved by the Entente on July 26. The Lithuanians were informed about the new line only on August 3. Two major modifications favorable to the Poles were made: the Suwałki Region was assigned to Poland and the entire line was moved about 7 km  west. Again, both Poles and Lithuanians protested the line as it would require them to withdraw their armies from the Vilnius and Suwałki Regions respectively. German administration, which had not yet retreated from the Suwałki Region, also opposed the Foch Line. The new line did not immediately halt the hostilities. After a couple of Polish attacks on July 29 and August 2, the front stabilized.",
+      "id": "212",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What happened first, the Conference of Ambassadors or the Foch Line proposal?",
+      "target": [
+        "The Conference of Ambassadors",
+        "Conference of Ambassadors",
+        "Conference of Ambassadors"
+      ]
+    },
+    "source_index": 212,
+    "source_sha256": "05384554ac2a496bcd8930886bee076f88b0b1b47c873561496159afcea1785d",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1958",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What often poisonous compound, CN, found in fruit seeds and stones, named from Greek for dark blue, comprises Carbon and Nitrogen?",
+      "target": [
+        "CN-",
+        "Cyanides",
+        "Inorganic Cyanides",
+        "Inorganic cyanides",
+        "Cyanogenesis",
+        "(CN)-",
+        "Cyanide Group",
+        "Cyanide",
+        "Cyanide ion",
+        "Cyanide anion",
+        "Cyadine",
+        "Cyano",
+        "Chemical test for cyanide"
+      ]
+    },
+    "source_index": 1958,
+    "source_sha256": "0543cb4259296f45d1dbeed1116f003ee33c31cf922d90312b5ee89ac5949be2",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "DROP",
+      "context": "Among Richmond residents, 64.56% residents speak English, 23.13% speak Spanish, 2.11% speak Tagalog language, 1.75% speak Chinese, 1.20% speak Hmong-Mien languages, 1.12% speak Laotian language, 0.72% speak Punjabi language, 0.54% speak Cantonese language, 0.51% speak French, 0.5% speak Vietnamese language, 3.49% speak other languages, none of which represents more than half of one percent of the population.",
+      "id": "1504",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "How many percent did not speak Laotian?",
+      "target": [
+        "98.88",
+        "98.88"
+      ]
+    },
+    "source_index": 1504,
+    "source_sha256": "054a102ce3a7f879ff21c7f178311197450d60739a61cc7615abcd9b19a7d81c",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "809",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Referring to a 1950s song what is the traditional bingo call for the number 76?",
+      "target": [
+        "Harmonic glissando",
+        "Zugposaune",
+        "Trombone (instrument)",
+        "Inverted glissando",
+        "False glissando",
+        "Trombone slide",
+        "Trombones",
+        "Trombonist",
+        "Trombone position",
+        "Trombone smear",
+        "Slide trombone",
+        "Posaune",
+        "Trombone",
+        "Broken glissando",
+        "Slide position",
+        "Valve trombonist",
+        "The Trombone",
+        "Tromboner"
+      ]
+    },
+    "source_index": 809,
+    "source_sha256": "055ad061be15293fb9e6c9f0a845e027284664bdd1cf5663e1901887f3bf49bb",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "DROP",
+      "context": "The Conference of Ambassadors drew the first demarcation line on June 18. The line, drawn about 5 km  west of the Warsaw - Saint Petersburg Railway, was based on the military situation on the ground rather than ethnic composition. Neither Poles nor Lithuanians were content with the line. The Polish Ministry of Foreign Affairs rejected the line as it would require the Polish forces to retreat up to 35 km . The Lithuanians protested leaving Vilnius and Hrodna under Polish control. As German volunteers were departing from Lithuania and Lithuanian forces were preoccupied with battles against the Soviets in northern Lithuania, Poland mounted an offensive on 100 km  wide front moving 20-30 km  deeper into the Lithuanian territory. On July 18, Ferdinand Foch proposed the second demarcation line, known as the Foch Line. It was approved by the Entente on July 26. The Lithuanians were informed about the new line only on August 3. Two major modifications favorable to the Poles were made: the Suwałki Region was assigned to Poland and the entire line was moved about 7 km  west. Again, both Poles and Lithuanians protested the line as it would require them to withdraw their armies from the Vilnius and Suwałki Regions respectively. German administration, which had not yet retreated from the Suwałki Region, also opposed the Foch Line. The new line did not immediately halt the hostilities. After a couple of Polish attacks on July 29 and August 2, the front stabilized.",
+      "id": "871",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "How many days passed between the drawing and approval of the second line?",
+      "target": [
+        "8",
+        "9"
+      ]
+    },
+    "source_index": 871,
+    "source_sha256": "056291d87c1e5c5f8e76c7e657af9ab32bbd574a5a54ae29e8d2ceae849d3551",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "DROP",
+      "context": "In 1989 Ricklefs was elected a Fellow of the Australian Academy of the Humanities. The Government of Australia awarded him in 2001 the Centenary Medal for service to Australian society and the humanities in the study of Indonesia. In 2010 he was elected as an erelid  of the Netherlands Koninklijk Instituut voor Taal-, Land- en Volkenkunde, one of only eight people currently recognised in this way. He was awarded the 2015 George McT. Kahin Prize of the Association for Asian Studies, ‘given biennially to an outstanding scholar of Southeast Asian studies from any discipline or country specialization to recognize distinguished scholarly work on Southeast Asia beyond the author's first book' for his work Islamisation and its opponents in Java: A political, social, cultural and religious history, c. 1930 to the present . In 2016 the Indonesian Ministry of Education and Culture presented Professor Ricklefs with its prestigious Cultural Award . In June 2017, Professor Ricklefs was made a member of the Order of Australia.",
+      "id": "1618",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Where was he made a member?",
+      "target": [
+        "the Order of Australia",
+        "Order of Australia"
+      ]
+    },
+    "source_index": 1618,
+    "source_sha256": "0580c73af9c8ed97916944266765f6880536e05bc29e0444e8edf44c90f19e81",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1875",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "\"In the Bible, which of Jesus\"\" disciples tried to walk on water?\"",
+      "target": [
+        "PETER",
+        "The Peter",
+        "Peter Pomegranate"
+      ]
+    },
+    "source_index": 1875,
+    "source_sha256": "05e3e51be48bb26ce9f4f95459c4a944e2db71dabec86f48366209fee8af3d40",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "200",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "\"In 2006 English politician George Galloway was widely quoted as saying that it would be \"\"morally justified if someone chose to assassinate \"\" whom?\"",
+      "target": [
+        "Rt Hon Anthony Blair MP",
+        "Tony blair",
+        "The Tony Blair Sports Foundation",
+        "Antony blair",
+        "Tonie Blair",
+        "Tony Balir",
+        "Rt. Hon Tony Blair",
+        "Blairian",
+        "Tory Blair",
+        "Tony Blairs",
+        "Anthony C. L. Blair",
+        "Anthony Charles Blair",
+        "Tony Blaire",
+        "Tony Blair Sports Foundation",
+        "Antony Blair",
+        "Anthony Charles Lynton %22Tony%22 Blair",
+        "Family of Tony Blair",
+        "Tonyblair",
+        "Tony Blear",
+        "Anthony (Tony) Blair",
+        "Tony Blair's Private life",
+        "Tony Blair PM",
+        "Tony Bliar",
+        "Tony Blaer",
+        "Herr Blair",
+        "President Blair",
+        "Anthony Charles Lynton Blair",
+        "Tony Blair's private life",
+        "Education, education and education",
+        "Rt. Hon. Anthony Charles Lynton Blair",
+        "Toney Blair",
+        "Education, education, education",
+        "Tony Blari",
+        "Blair doctrine",
+        "Tony Blair",
+        "Prime Minister Tony Blair",
+        "Tony Blare"
+      ]
+    },
+    "source_index": 200,
+    "source_sha256": "05ffdf0514950787a180a2568505a9b4867b87c392a9fc0da1a1ea8e4e6d304b",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "DROP",
+      "context": "Of Saratoga Countys population in 2010, 6.3% were between ages of 5 and 9 years, 6.7% between 10 and 14 years, 6.5% between 15 and 19 years, 5.5% between 20 and 24 years, 5.5% between 25 and 29 years, 5.8% between 30 and 34 years, 6.6% between 35 and 39 years, 7.9% between 40 and 44 years, 8.5% between 45 and 49 years, 8.0% between 50 and 54 years, 7.0% between 55 and 59 years, 6.4% between 60 and 64 years, and 13.7% of age 65 years and over. 22.7% of the countys population was under age 18. The median age was 40.9 years.",
+      "id": "571",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What were the two smallest age ranges listed?",
+      "target": [
+        "20 and 24",
+        "25 and 29",
+        "between 20 and 24 years",
+        "between 25 and 29 years"
+      ]
+    },
+    "source_index": 571,
+    "source_sha256": "061cc0b7c0aaa6c0232434f68d0a63d376eff7705ae0407a5bdb662f29790807",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "40",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Benesh Notation is the written language of which activity?",
+      "target": [
+        "Male dancers",
+        "💃",
+        "Dance writers",
+        "Dancing",
+        "Dance",
+        "Dance awards",
+        "Dancers",
+        "Dance rhythm",
+        "Dance magazines",
+        "DanCe",
+        "Dances",
+        "Dancer",
+        "DANCE",
+        "Danse",
+        "Dance organizations",
+        "Dance by country",
+        "Male dancer",
+        "Western dance",
+        "Dance show"
+      ]
+    },
+    "source_index": 40,
+    "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+    "split": "free_form"
+  },
+  {
+    "record": {
+      "benchmark_name": "TriviaQA",
+      "context": "None",
+      "id": "1966",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "As a figure of speech, what is a statement made in exaggerated terms?",
+      "target": [
+        "Overstatement",
+        "Hyperbolical",
+        "HYPERBOLE",
+        "Hyped",
+        "A hype",
+        "Hyperboles",
+        "Hyperbole"
+      ]
+    },
+    "source_index": 1966,
+    "source_sha256": "0685fbe9f72d4860ef746c556d57cce3bbea291b106d52850686c78a4969756b",
+    "split": "free_form"
+  }
+]

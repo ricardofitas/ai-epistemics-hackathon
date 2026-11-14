@@ -1,0 +1,391 @@
+{
+  "repository": "ricardofitas/ai-epistemics-hackathon",
+  "branches": [
+    {
+      "name": "experiment/advice-execution-transfer-20261113",
+      "commit": {
+        "sha": "8d6ea4d0758577366db3db07ec32beb59dd6f488",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/8d6ea4d0758577366db3db07ec32beb59dd6f488"
+      },
+      "protected": false
+    },
+    {
+      "name": "experiment/open-recommendations-20261112",
+      "commit": {
+        "sha": "d7f1509fc27b650716249956c68acfe5688c385a",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/d7f1509fc27b650716249956c68acfe5688c385a"
+      },
+      "protected": false
+    },
+    {
+      "name": "feat/gammaf-epistemic-audit",
+      "commit": {
+        "sha": "d4419f160252adee3d639df9ea23cd1600277c32",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/d4419f160252adee3d639df9ea23cd1600277c32"
+      },
+      "protected": false
+    },
+    {
+      "name": "main",
+      "commit": {
+        "sha": "c272d9fc2b46bcfa317b03f0787af8732ad6e5fe",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/c272d9fc2b46bcfa317b03f0787af8732ad6e5fe"
+      },
+      "protected": false
+    },
+    {
+      "name": "pilot/civilcomments-claim-fit-20261112",
+      "commit": {
+        "sha": "4f98874cd648a7b61c2d283c624ff77b717ae474",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/4f98874cd648a7b61c2d283c624ff77b717ae474"
+      },
+      "protected": false
+    },
+    {
+      "name": "pilot/hans-claim-fit-20261112",
+      "commit": {
+        "sha": "4aac341c6bc6d5c1da9cc7adf6a8215dbe210349",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/4aac341c6bc6d5c1da9cc7adf6a8215dbe210349"
+      },
+      "protected": false
+    },
+    {
+      "name": "pilot/spr-baseline-integrity-20261112",
+      "commit": {
+        "sha": "26e2ac372c0289936c1dbad5eaddaf60420718ad",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/26e2ac372c0289936c1dbad5eaddaf60420718ad"
+      },
+      "protected": false
+    },
+    {
+      "name": "pilot/truthfulqa-mc2-stability-20261112",
+      "commit": {
+        "sha": "a2a2eda5e1beefd0dcfbcb8b1ff398391969a1e2",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/a2a2eda5e1beefd0dcfbcb8b1ff398391969a1e2"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/causal-external-audit-20261114",
+      "commit": {
+        "sha": "a845436eefcb83b5f71701492969c4852cc3a5e0",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/a845436eefcb83b5f71701492969c4852cc3a5e0"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/contract-mutations-20261114",
+      "commit": {
+        "sha": "e7fdffc48b7de75addaff807f29c5ac4bb033c5b",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/e7fdffc48b7de75addaff807f29c5ac4bb033c5b"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/contract-remaining-20261114",
+      "commit": {
+        "sha": "ace1535710048e8a617be9901f111a6166ebd93b",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/ace1535710048e8a617be9901f111a6166ebd93b"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/harness-native-integration-20261114",
+      "commit": {
+        "sha": "8526dce68b14d8b4967d488fb8d36f1502b04cfe",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/8526dce68b14d8b4967d488fb8d36f1502b04cfe"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/harness-transfer-20261114",
+      "commit": {
+        "sha": "8059da92a97861d8f7ecfcfd1ef31365e8ba7127",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/8059da92a97861d8f7ecfcfd1ef31365e8ba7127"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/manuscript-synthesis-20261114",
+      "commit": {
+        "sha": "e3f01bee2f6b3f9c43e968af71ad6be67eabc9a5",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/e3f01bee2f6b3f9c43e968af71ad6be67eabc9a5"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/manuscript-synthesis-v13-20261114",
+      "commit": {
+        "sha": "73ca316e6124beb4f7d0e123f9e2d125f98e48b0",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/73ca316e6124beb4f7d0e123f9e2d125f98e48b0"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/mixeval-analysis-fault-audit-20261114",
+      "commit": {
+        "sha": "a8d15e39547e55856feb187611f264e5a4bae0e4",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/a8d15e39547e55856feb187611f264e5a4bae0e4"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/mixeval-native-route-20261114",
+      "commit": {
+        "sha": "c7f053b358e1b014f4e2848e7bc414bc479d06a3",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/c7f053b358e1b014f4e2848e7bc414bc479d06a3"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/mixeval-score-replay-20261114",
+      "commit": {
+        "sha": "baab7add5be4b423a7e7c2c259c2ab689bdf5fc2",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/baab7add5be4b423a7e7c2c259c2ab689bdf5fc2"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/mixeval-scoring-20261114",
+      "commit": {
+        "sha": "5d059bab5cc59aef75b49f211ddac260e2db4d15",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/5d059bab5cc59aef75b49f211ddac260e2db4d15"
+      },
+      "protected": false
+    },
+    {
+      "name": "ricardo/paired-reconciliation-20261114",
+      "commit": {
+        "sha": "0a736fe14dede6d6767e5f2832388a4de95fb812",
+        "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/commits/0a736fe14dede6d6767e5f2832388a4de95fb812"
+      },
+      "protected": false
+    }
+  ],
+  "team_commit": {
+    "sha": "d4419f160252adee3d639df9ea23cd1600277c32",
+    "node_id": "C_kwDOVpvTRNoAKGQ0NDE5ZjE2MDI1MmFkZWUzZDYzOWRmOWVhMjNjZDE2MDAyNzdjMzI",
+    "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/git/commits/d4419f160252adee3d639df9ea23cd1600277c32",
+    "html_url": "https://github.com/ricardofitas/ai-epistemics-hackathon/commit/d4419f160252adee3d639df9ea23cd1600277c32",
+    "author": {
+      "name": "antGalasso",
+      "email": "antogalassozerotre@gmail.com",
+      "date": "2026-11-13T04:20:47Z"
+    },
+    "committer": {
+      "name": "antGalasso",
+      "email": "antogalassozerotre@gmail.com",
+      "date": "2026-11-13T04:20:47Z"
+    },
+    "tree": {
+      "sha": "5b321b30dcca2c96ae78010e03bc156f4aeceaec",
+      "url": "https://api.github.com/repos/ricardofitas/ai-epistemics-hackathon/git/trees/5b321b30dcca2c96ae78010e03bc156f4aeceaec"
+    },
+    "message": "feat(gammaf): add GAMMAF-Clean audit, shadow contamination proof, and EpistemicGuard",
+    "parents": [],
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "prs": {
+    "issues": [
+      {
+        "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/pull/5",
+        "number": 5,
+        "state": "open",
+        "merged": false,
+        "mergeable": true,
+        "draft": true,
+        "body": "This draft audits whether LLM scientific-evaluation recommendations support an explicit research claim. It preserves the earlier cohorts and expands the inventory to 21 source-backed recommendation case families, with frozen prompts/source criteria, raw captures, independent first agent judgments, transparent scope handling and nulls.\n\nThe new prospectively frozen Adaption wave attempted 60 requests across four requested configurations: six new families and three fresh contexts for each of three selected cases. There are 53 complete answers and seven empty token-limit incompletes. Final preliminary labels are 12 material unsupported recommendations, 36 without a primary violation, five uncertain and seven unscorable. This selected heterogeneous design does not estimate general error prevalence or rank models.\n\n- WMT source-period mismatch meets the descriptive >=2/3 recurrence flag in Gemma and DeepSeek; the nonsignificance-to-equivalence inference error meets it in DeepSeek.\n- The old PAWS-to-directional-NLI mechanism has zero exact recurrences in ten complete answers. Its separately prepared actual-data consequence pilot was not run under the registered gate; no ranking consequence is claimed.\n- Three additional observed mechanisms concern SVAMP's mixed variations, invalid coreference-to-contradiction conversion, and an unsupported internal-reasoning conclusion. They remain S0 candidates requiring fresh repetition. An authentic official WSC source witness supports the label-conversion logic without inventing official NLI gold.\n- Both first review files were committed at d592e6df7d8aef413ece3b3986b75f75f1b7b49e before coordinator unblinding. A separate scope disposition conservatively reduces Q47 from agreed yes to uncertain. Original first labels are unchanged.\n- The narrow resource-fit subset contains eight positives; excluding the mixed WMT endorsement leaves 11 broad positives and preserves both WMT recurrence flags. Human review is pending; a declared 27-answer packet is ready.\n- Four additional coverage candidates and fidelity-reviewed unused wording probes are prepared. They add zero tested families until actual sampling.\n\nValidation: all 60 payload/text/artifact/aggregate/SSE-journal checks passed; all starts follow the sampling freeze; all 60 archived journals reconstruct byte-identically; the proposed published layout reproduces the summary bytes and independent sensitivity audit. All 549 prior files were preserved unchanged when adding the final 41 artifacts.\n\n[Results](https://github.com/ricardofitas/ai-epistemics-hackathon/blob/c6d978b1f3be912d8d2ec236c4ac4b8969b9d085/experiments/paper-research-wave1-20261113/RESULTS.md) · [Reproduction](https://github.com/ricardofitas/ai-epistemics-hackathon/blob/c6d978b1f3be912d8d2ec236c4ac4b8969b9d085/experiments/paper-research-wave1-20261113/REPRODUCE.md) · [Paper direction](https://github.com/ricardofitas/ai-epistemics-hackathon/blob/c6d978b1f3be912d8d2ec236c4ac4b8969b9d085/experiments/paper-research-wave1-20261113/PAPER_PLAN.md) · [Next four families](https://github.com/ricardofitas/ai-epistemics-hackathon/blob/c6d978b1f3be912d8d2ec236c4ac4b8969b9d085/experiments/paper-research-wave1-20261113/next_four_candidates.md)\n\nNo intrinsic benchmark defect, representative failure rate, human validation or downstream reversal is asserted. Closely related work and the current contribution limits are recorded in the linked artifacts.",
+        "title": "Audit scientific evaluation advice across 21 case families with frozen recurrence tests",
+        "base": "main",
+        "base_sha": "c272d9fc2b46bcfa317b03f0787af8732ad6e5fe",
+        "head": "experiment/open-recommendations-20261112",
+        "head_sha": "d7f1509fc27b650716249956c68acfe5688c385a",
+        "head_repo_id": 1453052740,
+        "head_repo_full_name": "ricardofitas/ai-epistemics-hackathon",
+        "merge_commit_sha": null,
+        "user": {
+          "login": "ricardofitas",
+          "name": null,
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/43917854?v=4",
+          "id": 43917854
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-11-12T21:51:13Z",
+        "updated_at": "2026-11-13T19:09:18Z",
+        "closed_at": null,
+        "merged_at": null,
+        "commits": 43,
+        "changed_files": null,
+        "additions": null,
+        "deletions": null,
+        "display_url": "https://github.com/ricardofitas/ai-epistemics-hackathon/pull/5",
+        "display_title": "Audit scientific evaluation advice across 21 case families with frozen recurrence tests"
+      },
+      {
+        "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/pull/4",
+        "number": 4,
+        "state": "open",
+        "merged": false,
+        "mergeable": true,
+        "draft": true,
+        "body": "Tests the practical effect of two known TruthfulQA MC2 evaluator defects and whether fresh agents recommend scoring appropriate to an explicit numerical contract.\n\n- **Underflow:** reproducible on constructed finite inputs, but 0/12,255 archived item-run scores differ from stable scoring by >1e-12; checkpoint ordering unchanged. Three SFT model families × five checkpoints ×817 shared questions, not independent research cases.\n- **Lighteval label gaps:** 2/817 unmodified current dataset rows are structurally mishandled. Cross-implementation replay of the same public likelihoods changes 28/12,255 item scores beyond1e-12. Maximum complete-checkpoint mean difference is0.000185584 percentage points; no checkpoint-order change. This is not native Lighteval inference or a correction of the published harness scores.\n- **Recommendations:** eight fresh-context responses on paired input-range claims, two conditions and two repeats. Two blinded agent reviewers agree on0/8 unsupported recommendations. Prompts/rubric were committed before sampling; exact code/evidence were supplied. One inherited model configuration; human review pending.\n\nBoth defects were already documented upstream (harness#4108, Evalchemy#157, Lighteval#1444). No new defect discovery or general error prevalence is claimed. Includes pinned source/data hashes, complete prompt/answer/rating records, independent evaluator review, downloadable-source manifests, checked reproduction scripts and `docs/progress-20261112.md` with the next experiment. Raw85.9MB traces remain at their pinned public source.\n\nCoordinator independently reran complete data scans/replay with identical outputs; separate reviewer checked real dataset labels and high-precision scoring. This is exploratory pre-sprint work.",
+        "title": "Audit TruthfulQA evaluators on public traces and complete recommendation pilot",
+        "base": "main",
+        "base_sha": "c272d9fc2b46bcfa317b03f0787af8732ad6e5fe",
+        "head": "pilot/truthfulqa-mc2-stability-20261112",
+        "head_sha": "a2a2eda5e1beefd0dcfbcb8b1ff398391969a1e2",
+        "head_repo_id": 1453052740,
+        "head_repo_full_name": "ricardofitas/ai-epistemics-hackathon",
+        "merge_commit_sha": null,
+        "user": {
+          "login": "ricardofitas",
+          "name": null,
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/43917854?v=4",
+          "id": 43917854
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-11-12T20:57:24Z",
+        "updated_at": "2026-11-12T21:15:28Z",
+        "closed_at": null,
+        "merged_at": null,
+        "commits": 5,
+        "changed_files": null,
+        "additions": null,
+        "deletions": null,
+        "display_url": "https://github.com/ricardofitas/ai-epistemics-hackathon/pull/4",
+        "display_title": "Audit TruthfulQA evaluators on public traces and complete recommendation pilot"
+      },
+      {
+        "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/pull/3",
+        "number": 3,
+        "state": "open",
+        "merged": false,
+        "mergeable": true,
+        "draft": true,
+        "body": "## Provisional cross-file audit — original run prompt still missing\n\nThe public AIScientistPitfalls archive contains an Agent Laboratory report whose code/log/report use four assumed benchmark baselines of 80–85%. The released SPR task table lists 20 synthetic references ranging from 52.3% to 72.6%. Applying that published table's exact name-to-score mapping to the four logged accuracies would change the comparison from 0/4 above reference to 3/4 above reference.\n\n**This conditional calculation is not yet a proven error relative to the prompt the agent saw.** I have not located the original run's exact prompt, benchmark order or name-to-score mapping, and the study permutes mappings in some procedures. The four numbers in the code were marked as assumed examples, then presented without that qualification in the report; the cross-file discrepancy is real. Before counting it as an observed AI failure in this project, recover the original run input or reproduce it in a fresh controlled run.\n\nThis draft PR links all four original artifacts and includes a reproducible file-to-file checker. It is pre-sprint reanalysis of prior work, not a new assistant sample, independent replication, or prevalence result.",
+        "title": "Investigate inconsistent references in an AI scientist archive",
+        "base": "main",
+        "base_sha": "c272d9fc2b46bcfa317b03f0787af8732ad6e5fe",
+        "head": "pilot/spr-baseline-integrity-20261112",
+        "head_sha": "26e2ac372c0289936c1dbad5eaddaf60420718ad",
+        "head_repo_id": 1453052740,
+        "head_repo_full_name": "ricardofitas/ai-epistemics-hackathon",
+        "merge_commit_sha": null,
+        "user": {
+          "login": "ricardofitas",
+          "name": null,
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/43917854?v=4",
+          "id": 43917854
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-11-12T20:15:08Z",
+        "updated_at": "2026-11-12T20:18:49Z",
+        "closed_at": null,
+        "merged_at": null,
+        "commits": 4,
+        "changed_files": null,
+        "additions": null,
+        "deletions": null,
+        "display_url": "https://github.com/ricardofitas/ai-epistemics-hackathon/pull/3",
+        "display_title": "Investigate inconsistent references in an AI scientist archive"
+      },
+      {
+        "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/pull/2",
+        "number": 2,
+        "state": "open",
+        "merged": false,
+        "mergeable": true,
+        "draft": true,
+        "body": "## Exploratory pre-sprint result\n\nI reanalyzed the 100 fine-tuned BERT runs published by McCoy, Min and Linzen (2020) using their run-level CSV. There are 53 pairs with identical reported MNLI matched development accuracy. The largest deliberately selected example is runs 37 and 72: both score 84.411615% on MNLI, while their HANS subject–object swap accuracies are 62.5% and 1.3% (61.2 percentage-point difference). Among all 53 tied pairs, the median absolute swap gap is 16.2 percentage points. These pairs overlap and are descriptive, not independent trials.\n\n## Contents\n\n- `docs/pilots/hans-claim-fit.md`: primary sources, run-level comparison, four claim-specific assessment variants, and limitations.\n- `scripts/analyze_hans_runs.py`: reproducible analysis of the [authors' CSV](https://github.com/tommccoy1/hans/blob/master/berts_of_a_feather/berts_of_a_feather_accuracies_by_run.csv). Run with `python3 scripts/analyze_hans_runs.py berts_of_a_feather_accuracies_by_run.csv`.\n\nThis is a pre-sprint source audit of published model evaluations. It is not yet an observation of any AI research assistant's benchmark recommendations. The extreme pair was selected after inspection and should not be described as a typical effect or a new training result.",
+        "title": "Add sourced MNLI/HANS benchmark-fit pilot",
+        "base": "main",
+        "base_sha": "c272d9fc2b46bcfa317b03f0787af8732ad6e5fe",
+        "head": "pilot/hans-claim-fit-20261112",
+        "head_sha": "4aac341c6bc6d5c1da9cc7adf6a8215dbe210349",
+        "head_repo_id": 1453052740,
+        "head_repo_full_name": "ricardofitas/ai-epistemics-hackathon",
+        "merge_commit_sha": null,
+        "user": {
+          "login": "ricardofitas",
+          "name": null,
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/43917854?v=4",
+          "id": 43917854
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-11-12T20:06:51Z",
+        "updated_at": "2026-11-12T20:06:51Z",
+        "closed_at": null,
+        "merged_at": null,
+        "commits": 2,
+        "changed_files": null,
+        "additions": null,
+        "deletions": null,
+        "display_url": "https://github.com/ricardofitas/ai-epistemics-hackathon/pull/2",
+        "display_title": "Add sourced MNLI/HANS benchmark-fit pilot"
+      },
+      {
+        "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/pull/1",
+        "number": 1,
+        "state": "open",
+        "merged": false,
+        "mergeable": true,
+        "draft": true,
+        "body": "Completed the exploratory CivilComments pilot through fresh collaboration agents: four claim variants × two prompting conditions × two repeats, one inherited model configuration. Two independent agents rated an anonymized packet; both found 0/16 unsupported recommendations, with no primary disagreements or missing outputs.\n\nIncludes exact prompts committed before sampling, complete final answers, model/interface metadata, independently prepared rubric, both rating sets and a reproducible summary script. See `docs/pilots/civilcomments-agents-20261112.md` for the design and limits. Rubric preparation overlapped the first three calls but its curator saw no outputs; this remains exploratory pre-sprint work. The evidence is supplied explicitly, reviewers share the subjects' model family, and human review is pending. No claim of general assistant reliability or checklist improvement is supported.",
+        "title": "Run and document 16 fresh-context CivilComments recommendations",
+        "base": "main",
+        "base_sha": "c272d9fc2b46bcfa317b03f0787af8732ad6e5fe",
+        "head": "pilot/civilcomments-claim-fit-20261112",
+        "head_sha": "4f98874cd648a7b61c2d283c624ff77b717ae474",
+        "head_repo_id": 1453052740,
+        "head_repo_full_name": "ricardofitas/ai-epistemics-hackathon",
+        "merge_commit_sha": null,
+        "user": {
+          "login": "ricardofitas",
+          "name": null,
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/43917854?v=4",
+          "id": 43917854
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-11-12T18:52:33Z",
+        "updated_at": "2026-11-12T20:55:54Z",
+        "closed_at": null,
+        "merged_at": null,
+        "commits": 8,
+        "changed_files": null,
+        "additions": null,
+        "deletions": null,
+        "display_url": "https://github.com/ricardofitas/ai-epistemics-hackathon/pull/1",
+        "display_title": "Run and document 16 fresh-context CivilComments recommendations"
+      }
+    ]
+  },
+  "issues": {
+    "issues": []
+  }
+}

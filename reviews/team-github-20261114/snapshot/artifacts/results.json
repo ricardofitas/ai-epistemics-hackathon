@@ -1,0 +1,1932 @@
+{
+  "clean": {
+    "counterfactual": {
+      "by_task": {
+        "CSQA": {
+          "debates_with_release_flip": 167,
+          "debates_with_release_flip_prior_flagged": 123,
+          "g_del_changes": 0,
+          "release_flips": 679,
+          "release_flips_prior_flagged": 394,
+          "substitutions": 30876
+        },
+        "GSM8K": {
+          "debates_with_release_flip": 35,
+          "debates_with_release_flip_prior_flagged": 24,
+          "g_del_changes": 0,
+          "release_flips": 117,
+          "release_flips_prior_flagged": 60,
+          "substitutions": 22095
+        },
+        "MMLU": {
+          "debates_with_release_flip": 104,
+          "debates_with_release_flip_prior_flagged": 75,
+          "g_del_changes": 0,
+          "release_flips": 372,
+          "release_flips_prior_flagged": 223,
+          "substitutions": 23269
+        },
+        "MMLUPRO": {
+          "debates_with_release_flip": 164,
+          "debates_with_release_flip_prior_flagged": 121,
+          "g_del_changes": 0,
+          "release_flips": 1193,
+          "release_flips_prior_flagged": 791,
+          "substitutions": 66238
+        }
+      },
+      "invariance_holds": true,
+      "reference": {
+        "release_flips": 121,
+        "release_flips_prior_flagged": 89,
+        "substitutions": 33025
+      },
+      "totals": {
+        "debates_with_release_flip": 470,
+        "debates_with_release_flip_prior_flagged": 343,
+        "g_del_changes": 0,
+        "release_flips": 2361,
+        "release_flips_prior_flagged": 1468,
+        "substitutions": 142478
+      }
+    },
+    "detection_credit": {
+      "by_task_method": {
+        "CSQA": {
+          "BlindGuard": {
+            "debates": 400,
+            "executed_adr_percent": 57.916475000000034,
+            "padded_full_credit": 192,
+            "padded_rounds": 194,
+            "phantom_percent": 3.166550000000008,
+            "released_adr_percent": 61.08302500000004
+          },
+          "CASPIAN": {
+            "debates": 400,
+            "executed_adr_percent": 79.58337499999998,
+            "padded_full_credit": 578,
+            "padded_rounds": 619,
+            "phantom_percent": 6.500074999999981,
+            "released_adr_percent": 86.08344999999996
+          },
+          "DOMINANT": {
+            "debates": 400,
+            "executed_adr_percent": 66.0003749999999,
+            "padded_full_credit": 109,
+            "padded_rounds": 112,
+            "phantom_percent": 3.3332750000000146,
+            "released_adr_percent": 69.33364999999992
+          },
+          "PREM": {
+            "debates": 400,
+            "executed_adr_percent": 69.58332500000004,
+            "padded_full_credit": 401,
+            "padded_rounds": 419,
+            "phantom_percent": -1.5833999999999833,
+            "released_adr_percent": 67.99992500000006
+          },
+          "TAM": {
+            "debates": 400,
+            "executed_adr_percent": 35.499374999999986,
+            "padded_full_credit": 190,
+            "padded_rounds": 198,
+            "phantom_percent": 2.6665749999999946,
+            "released_adr_percent": 38.16594999999998
+          },
+          "XG-Guard": {
+            "debates": 400,
+            "executed_adr_percent": 99.750025,
+            "padded_full_credit": 582,
+            "padded_rounds": 609,
+            "phantom_percent": -3.916674999999998,
+            "released_adr_percent": 95.83335
+          },
+          "no_defense_baseline": {
+            "debates": 400,
+            "executed_adr_percent": 0.0,
+            "padded_full_credit": 19,
+            "padded_rounds": 20,
+            "phantom_percent": 2.5,
+            "released_adr_percent": 2.5
+          }
+        },
+        "GSM8K": {
+          "BlindGuard": {
+            "debates": 400,
+            "executed_adr_percent": 47.41660000000002,
+            "padded_full_credit": 87,
+            "padded_rounds": 88,
+            "phantom_percent": 5.333125000000017,
+            "released_adr_percent": 52.74972500000003
+          },
+          "CASPIAN": {
+            "debates": 400,
+            "executed_adr_percent": 94.00007499999997,
+            "padded_full_credit": 726,
+            "padded_rounds": 751,
+            "phantom_percent": -0.5001249999999402,
+            "released_adr_percent": 93.49995000000003
+          },
+          "DOMINANT": {
+            "debates": 400,
+            "executed_adr_percent": 31.082674999999984,
+            "padded_full_credit": 53,
+            "padded_rounds": 53,
+            "phantom_percent": 6.083274999999997,
+            "released_adr_percent": 37.16594999999998
+          },
+          "PREM": {
+            "debates": 400,
+            "executed_adr_percent": 34.91594999999999,
+            "padded_full_credit": 44,
+            "padded_rounds": 44,
+            "phantom_percent": 2.2500249999999937,
+            "released_adr_percent": 37.16597499999998
+          },
+          "TAM": {
+            "debates": 400,
+            "executed_adr_percent": 34.749124999999985,
+            "padded_full_credit": 129,
+            "padded_rounds": 133,
+            "phantom_percent": 10.833250000000064,
+            "released_adr_percent": 45.58237500000005
+          },
+          "XG-Guard": {
+            "debates": 400,
+            "executed_adr_percent": 82.25067499999979,
+            "padded_full_credit": 311,
+            "padded_rounds": 318,
+            "phantom_percent": 4.916175000000138,
+            "released_adr_percent": 87.16684999999993
+          },
+          "no_defense_baseline": {
+            "debates": 400,
+            "executed_adr_percent": 0.0,
+            "padded_full_credit": 1,
+            "padded_rounds": 1,
+            "phantom_percent": 0.25,
+            "released_adr_percent": 0.25
+          }
+        },
+        "MMLU": {
+          "BlindGuard": {
+            "debates": 400,
+            "executed_adr_percent": 63.33377499999995,
+            "padded_full_credit": 238,
+            "padded_rounds": 261,
+            "phantom_percent": 1.999750000000013,
+            "released_adr_percent": 65.33352499999997
+          },
+          "CASPIAN": {
+            "debates": 400,
+            "executed_adr_percent": 75.24992500000006,
+            "padded_full_credit": 581,
+            "padded_rounds": 669,
+            "phantom_percent": 6.3335249999999235,
+            "released_adr_percent": 81.58344999999998
+          },
+          "DOMINANT": {
+            "debates": 400,
+            "executed_adr_percent": 68.25057499999988,
+            "padded_full_credit": 162,
+            "padded_rounds": 183,
+            "phantom_percent": 5.500100000000003,
+            "released_adr_percent": 73.75067499999989
+          },
+          "PREM": {
+            "debates": 400,
+            "executed_adr_percent": 70.99995000000003,
+            "padded_full_credit": 397,
+            "padded_rounds": 451,
+            "phantom_percent": -5.916749999999993,
+            "released_adr_percent": 65.08320000000003
+          },
+          "TAM": {
+            "debates": 400,
+            "executed_adr_percent": 40.41619999999999,
+            "padded_full_credit": 238,
+            "padded_rounds": 263,
+            "phantom_percent": 3.6666000000000096,
+            "released_adr_percent": 44.0828
+          },
+          "XG-Guard": {
+            "debates": 400,
+            "executed_adr_percent": 99.00007499999998,
+            "padded_full_credit": 549,
+            "padded_rounds": 626,
+            "phantom_percent": -11.333375000000004,
+            "released_adr_percent": 87.66669999999998
+          },
+          "no_defense_baseline": {
+            "debates": 400,
+            "executed_adr_percent": 0.0,
+            "padded_full_credit": 58,
+            "padded_rounds": 63,
+            "phantom_percent": 8.0,
+            "released_adr_percent": 8.0
+          }
+        },
+        "MMLUPRO": {
+          "BlindGuard": {
+            "debates": 400,
+            "executed_adr_percent": 57.000024999999994,
+            "padded_full_credit": 184,
+            "padded_rounds": 195,
+            "phantom_percent": 1.4998250000000297,
+            "released_adr_percent": 58.49985000000002
+          },
+          "CASPIAN": {
+            "debates": 400,
+            "executed_adr_percent": 78.16664999999999,
+            "padded_full_credit": 510,
+            "padded_rounds": 551,
+            "phantom_percent": 3.6667249999999854,
+            "released_adr_percent": 81.83337499999998
+          },
+          "DOMINANT": {
+            "debates": 400,
+            "executed_adr_percent": 68.66742499999981,
+            "padded_full_credit": 100,
+            "padded_rounds": 108,
+            "phantom_percent": 2.5833750000000038,
+            "released_adr_percent": 71.25079999999981
+          },
+          "PREM": {
+            "debates": 400,
+            "executed_adr_percent": 70.58315000000005,
+            "padded_full_credit": 351,
+            "padded_rounds": 380,
+            "phantom_percent": -3.0000500000000017,
+            "released_adr_percent": 67.58310000000004
+          },
+          "TAM": {
+            "debates": 400,
+            "executed_adr_percent": 31.665874999999986,
+            "padded_full_credit": 172,
+            "padded_rounds": 181,
+            "phantom_percent": 2.416700000000006,
+            "released_adr_percent": 34.08257499999999
+          },
+          "XG-Guard": {
+            "debates": 400,
+            "executed_adr_percent": 99.33339999999998,
+            "padded_full_credit": 496,
+            "padded_rounds": 533,
+            "phantom_percent": -5.916674999999998,
+            "released_adr_percent": 93.41672499999999
+          },
+          "no_defense_baseline": {
+            "debates": 400,
+            "executed_adr_percent": 0.0,
+            "padded_full_credit": 34,
+            "padded_rounds": 37,
+            "phantom_percent": 4.75,
+            "released_adr_percent": 4.75
+          }
+        }
+      },
+      "control_executed_max_percent": 0.0,
+      "controls": {
+        "CSQA": {
+          "debates": 400,
+          "executed_adr_percent": 0.0,
+          "padded_full_credit": 19,
+          "padded_rounds": 20,
+          "phantom_percent": 2.5,
+          "released_adr_percent": 2.5
+        },
+        "GSM8K": {
+          "debates": 400,
+          "executed_adr_percent": 0.0,
+          "padded_full_credit": 1,
+          "padded_rounds": 1,
+          "phantom_percent": 0.25,
+          "released_adr_percent": 0.25
+        },
+        "MMLU": {
+          "debates": 400,
+          "executed_adr_percent": 0.0,
+          "padded_full_credit": 58,
+          "padded_rounds": 63,
+          "phantom_percent": 8.0,
+          "released_adr_percent": 8.0
+        },
+        "MMLUPRO": {
+          "debates": 400,
+          "executed_adr_percent": 0.0,
+          "padded_full_credit": 34,
+          "padded_rounds": 37,
+          "phantom_percent": 4.75,
+          "released_adr_percent": 4.75
+        }
+      },
+      "eliminates_phantom": true,
+      "mmlu_control_phantom_percent": 8.0,
+      "reference": {
+        "control_detection_credit_percent": 0.0,
+        "mmlu_phantom_detection_percent": 8.0
+      }
+    },
+    "discrepancy": {
+      "by_task": {
+        "CSQA": {
+          "BlindGuard": {
+            "debates": 400,
+            "delivered_correct": 337,
+            "disagreements": 15,
+            "false_credits": 7,
+            "missed_credits": 8,
+            "released_correct": 336
+          },
+          "CASPIAN": {
+            "debates": 400,
+            "delivered_correct": 340,
+            "disagreements": 3,
+            "false_credits": 1,
+            "missed_credits": 2,
+            "released_correct": 339
+          },
+          "DOMINANT": {
+            "debates": 400,
+            "delivered_correct": 306,
+            "disagreements": 27,
+            "false_credits": 15,
+            "missed_credits": 12,
+            "released_correct": 309
+          },
+          "PREM": {
+            "debates": 400,
+            "delivered_correct": 328,
+            "disagreements": 25,
+            "false_credits": 23,
+            "missed_credits": 2,
+            "released_correct": 349
+          },
+          "TAM": {
+            "debates": 400,
+            "delivered_correct": 354,
+            "disagreements": 12,
+            "false_credits": 10,
+            "missed_credits": 2,
+            "released_correct": 362
+          },
+          "XG-Guard": {
+            "debates": 400,
+            "delivered_correct": 359,
+            "disagreements": 4,
+            "false_credits": 2,
+            "missed_credits": 2,
+            "released_correct": 359
+          }
+        },
+        "GSM8K": {
+          "BlindGuard": {
+            "debates": 400,
+            "delivered_correct": 377,
+            "disagreements": 1,
+            "false_credits": 0,
+            "missed_credits": 1,
+            "released_correct": 376
+          },
+          "CASPIAN": {
+            "debates": 400,
+            "delivered_correct": 379,
+            "disagreements": 0,
+            "false_credits": 0,
+            "missed_credits": 0,
+            "released_correct": 379
+          },
+          "DOMINANT": {
+            "debates": 400,
+            "delivered_correct": 378,
+            "disagreements": 3,
+            "false_credits": 1,
+            "missed_credits": 2,
+            "released_correct": 377
+          },
+          "PREM": {
+            "debates": 400,
+            "delivered_correct": 383,
+            "disagreements": 2,
+            "false_credits": 1,
+            "missed_credits": 1,
+            "released_correct": 383
+          },
+          "TAM": {
+            "debates": 400,
+            "delivered_correct": 380,
+            "disagreements": 2,
+            "false_credits": 1,
+            "missed_credits": 1,
+            "released_correct": 380
+          },
+          "XG-Guard": {
+            "debates": 400,
+            "delivered_correct": 380,
+            "disagreements": 4,
+            "false_credits": 2,
+            "missed_credits": 2,
+            "released_correct": 380
+          }
+        },
+        "MMLU": {
+          "BlindGuard": {
+            "debates": 400,
+            "delivered_correct": 321,
+            "disagreements": 7,
+            "false_credits": 6,
+            "missed_credits": 1,
+            "released_correct": 326
+          },
+          "CASPIAN": {
+            "debates": 400,
+            "delivered_correct": 320,
+            "disagreements": 1,
+            "false_credits": 1,
+            "missed_credits": 0,
+            "released_correct": 321
+          },
+          "DOMINANT": {
+            "debates": 400,
+            "delivered_correct": 301,
+            "disagreements": 15,
+            "false_credits": 11,
+            "missed_credits": 4,
+            "released_correct": 308
+          },
+          "PREM": {
+            "debates": 400,
+            "delivered_correct": 297,
+            "disagreements": 23,
+            "false_credits": 23,
+            "missed_credits": 0,
+            "released_correct": 320
+          },
+          "TAM": {
+            "debates": 400,
+            "delivered_correct": 328,
+            "disagreements": 7,
+            "false_credits": 3,
+            "missed_credits": 4,
+            "released_correct": 327
+          },
+          "XG-Guard": {
+            "debates": 400,
+            "delivered_correct": 328,
+            "disagreements": 4,
+            "false_credits": 2,
+            "missed_credits": 2,
+            "released_correct": 328
+          }
+        },
+        "MMLUPRO": {
+          "BlindGuard": {
+            "debates": 400,
+            "delivered_correct": 313,
+            "disagreements": 13,
+            "false_credits": 9,
+            "missed_credits": 4,
+            "released_correct": 318
+          },
+          "CASPIAN": {
+            "debates": 400,
+            "delivered_correct": 316,
+            "disagreements": 0,
+            "false_credits": 0,
+            "missed_credits": 0,
+            "released_correct": 316
+          },
+          "DOMINANT": {
+            "debates": 400,
+            "delivered_correct": 300,
+            "disagreements": 23,
+            "false_credits": 9,
+            "missed_credits": 14,
+            "released_correct": 295
+          },
+          "PREM": {
+            "debates": 400,
+            "delivered_correct": 297,
+            "disagreements": 16,
+            "false_credits": 15,
+            "missed_credits": 1,
+            "released_correct": 311
+          },
+          "TAM": {
+            "debates": 400,
+            "delivered_correct": 305,
+            "disagreements": 16,
+            "false_credits": 12,
+            "missed_credits": 4,
+            "released_correct": 313
+          },
+          "XG-Guard": {
+            "debates": 400,
+            "delivered_correct": 321,
+            "disagreements": 4,
+            "false_credits": 2,
+            "missed_credits": 2,
+            "released_correct": 321
+          }
+        }
+      },
+      "controls": {
+        "debates": 1600,
+        "disagreements": 0
+      },
+      "matches_reference": true,
+      "reference": {
+        "control_disagreements": 0,
+        "disagreements": 227,
+        "false_credits": 156,
+        "missed_credits": 71
+      },
+      "totals": {
+        "debates": 9600,
+        "delivered_correct": 8048,
+        "disagreements": 227,
+        "false_credits": 156,
+        "missed_credits": 71,
+        "released_correct": 8133
+      }
+    },
+    "empty_eligible": {
+      "archived_cases": 0,
+      "modes": {
+        "soft_fallback": "a_del = v[argmin s], g_del = check(a_del, y)",
+        "strict_abstain": "a_del = ABSTAIN, g_del = 0"
+      }
+    },
+    "stratification": {
+      "counts": {
+        "ALL_400": {
+          "control_debates": 1600,
+          "detector_debates": 9600,
+          "questions": 400
+        },
+        "SELF_SABOTAGED_64": {
+          "control_debates": 256,
+          "detector_debates": 1536,
+          "questions": 64
+        },
+        "TRUE_ADVERSARIAL_236": {
+          "control_debates": 1344,
+          "detector_debates": 8064,
+          "questions": 336
+        }
+      },
+      "rows": [
+        [
+          "ALL\\_400",
+          400,
+          9600,
+          "84.72",
+          "83.83",
+          156,
+          71
+        ],
+        [
+          "TRUE\\_ADVERSARIAL\\_236",
+          336,
+          8064,
+          "83.87",
+          "83.00",
+          136,
+          66
+        ],
+        [
+          "SELF\\_SABOTAGED\\_64",
+          64,
+          1536,
+          "89.19",
+          "88.22",
+          20,
+          5
+        ]
+      ]
+    }
+  },
+  "guard": {
+    "cells_16": {
+      "BlindGuard": {
+        "CSQA + chain": 86.25,
+        "CSQA + random": 81.25,
+        "CSQA + star": 81.25,
+        "CSQA + tree": 86.25,
+        "GSM8K + chain": 93.75,
+        "GSM8K + random": 95.0,
+        "GSM8K + star": 93.75,
+        "GSM8K + tree": 93.75,
+        "MMLU + chain": 82.5,
+        "MMLU + random": 82.5,
+        "MMLU + star": 83.75,
+        "MMLU + tree": 82.5,
+        "MMLU-Pro + chain": 76.25,
+        "MMLU-Pro + random": 76.25,
+        "MMLU-Pro + star": 78.75,
+        "MMLU-Pro + tree": 80.0
+      },
+      "CASPIAN": {
+        "CSQA + chain": 85.0,
+        "CSQA + random": 81.25,
+        "CSQA + star": 82.5,
+        "CSQA + tree": 83.75,
+        "GSM8K + chain": 95.0,
+        "GSM8K + random": 95.0,
+        "GSM8K + star": 93.75,
+        "GSM8K + tree": 95.0,
+        "MMLU + chain": 85.0,
+        "MMLU + random": 80.0,
+        "MMLU + star": 82.5,
+        "MMLU + tree": 82.5,
+        "MMLU-Pro + chain": 78.75,
+        "MMLU-Pro + random": 80.0,
+        "MMLU-Pro + star": 78.75,
+        "MMLU-Pro + tree": 82.5
+      },
+      "DOMINANT": {
+        "CSQA + chain": 83.75,
+        "CSQA + random": 63.74999999999999,
+        "CSQA + star": 76.25,
+        "CSQA + tree": 82.5,
+        "GSM8K + chain": 95.0,
+        "GSM8K + random": 95.0,
+        "GSM8K + star": 92.5,
+        "GSM8K + tree": 92.5,
+        "MMLU + chain": 83.75,
+        "MMLU + random": 71.25,
+        "MMLU + star": 72.5,
+        "MMLU + tree": 82.5,
+        "MMLU-Pro + chain": 77.5,
+        "MMLU-Pro + random": 70.0,
+        "MMLU-Pro + star": 71.25,
+        "MMLU-Pro + tree": 78.75
+      },
+      "EpistemicGuard-Hard": {
+        "CSQA + chain": 86.66666666666667,
+        "CSQA + random": 84.375,
+        "CSQA + star": 84.375,
+        "CSQA + tree": 84.58333333333333,
+        "GSM8K + chain": 94.58333333333333,
+        "GSM8K + random": 95.41666666666667,
+        "GSM8K + star": 94.16666666666667,
+        "GSM8K + tree": 93.54166666666667,
+        "MMLU + chain": 83.33333333333334,
+        "MMLU + random": 84.16666666666667,
+        "MMLU + star": 82.08333333333333,
+        "MMLU + tree": 84.16666666666667,
+        "MMLU-Pro + chain": 78.75,
+        "MMLU-Pro + random": 79.16666666666666,
+        "MMLU-Pro + star": 76.66666666666667,
+        "MMLU-Pro + tree": 78.75
+      },
+      "EpistemicGuard-Soft": {
+        "CSQA + chain": 86.45833333333334,
+        "CSQA + random": 85.83333333333333,
+        "CSQA + star": 85.0,
+        "CSQA + tree": 85.41666666666666,
+        "GSM8K + chain": 94.79166666666666,
+        "GSM8K + random": 95.0,
+        "GSM8K + star": 94.16666666666667,
+        "GSM8K + tree": 93.54166666666667,
+        "MMLU + chain": 83.75,
+        "MMLU + random": 83.33333333333334,
+        "MMLU + star": 82.70833333333333,
+        "MMLU + tree": 83.95833333333333,
+        "MMLU-Pro + chain": 78.54166666666667,
+        "MMLU-Pro + random": 80.20833333333334,
+        "MMLU-Pro + star": 76.66666666666667,
+        "MMLU-Pro + tree": 78.95833333333333
+      },
+      "PREM": {
+        "CSQA + chain": 75.0,
+        "CSQA + random": 90.0,
+        "CSQA + star": 88.75,
+        "CSQA + tree": 68.75,
+        "GSM8K + chain": 95.0,
+        "GSM8K + random": 97.5,
+        "GSM8K + star": 92.5,
+        "GSM8K + tree": 95.0,
+        "MMLU + chain": 71.25,
+        "MMLU + random": 85.0,
+        "MMLU + star": 81.25,
+        "MMLU + tree": 67.5,
+        "MMLU-Pro + chain": 68.75,
+        "MMLU-Pro + random": 80.0,
+        "MMLU-Pro + star": 76.25,
+        "MMLU-Pro + tree": 65.0
+      },
+      "TAM": {
+        "CSQA + chain": 83.75,
+        "CSQA + random": 90.0,
+        "CSQA + star": 87.5,
+        "CSQA + tree": 85.0,
+        "GSM8K + chain": 95.0,
+        "GSM8K + random": 95.0,
+        "GSM8K + star": 96.25,
+        "GSM8K + tree": 93.75,
+        "MMLU + chain": 83.75,
+        "MMLU + random": 85.0,
+        "MMLU + star": 83.75,
+        "MMLU + tree": 86.25,
+        "MMLU-Pro + chain": 75.0,
+        "MMLU-Pro + random": 77.5,
+        "MMLU-Pro + star": 75.0,
+        "MMLU-Pro + tree": 77.5
+      },
+      "XG-Guard": {
+        "CSQA + chain": 90.0,
+        "CSQA + random": 88.75,
+        "CSQA + star": 87.5,
+        "CSQA + tree": 88.75,
+        "GSM8K + chain": 93.75,
+        "GSM8K + random": 93.75,
+        "GSM8K + star": 95.0,
+        "GSM8K + tree": 93.75,
+        "MMLU + chain": 83.75,
+        "MMLU + random": 83.75,
+        "MMLU + star": 85.0,
+        "MMLU + tree": 83.75,
+        "MMLU-Pro + chain": 80.0,
+        "MMLU-Pro + random": 80.0,
+        "MMLU-Pro + star": 76.25,
+        "MMLU-Pro + tree": 77.5
+      }
+    },
+    "empty_eligible": 0,
+    "full": [
+      {
+        "csqa_tree_percent": 85.0,
+        "debates": 1600,
+        "delivered_percent": 84.25,
+        "false_credits": 22,
+        "inflation_pp": 0.5,
+        "missed_credits": 14,
+        "mmlu_random_percent": 81.0,
+        "name": "BlindGuard",
+        "released_percent": 84.75,
+        "self_sabotaged_percent": 87.890625,
+        "true_adversarial_percent": 83.55654761904762
+      },
+      {
+        "csqa_tree_percent": 85.0,
+        "debates": 1600,
+        "delivered_percent": 84.6875,
+        "false_credits": 2,
+        "inflation_pp": 0.0,
+        "missed_credits": 2,
+        "mmlu_random_percent": 78.0,
+        "name": "CASPIAN",
+        "released_percent": 84.6875,
+        "self_sabotaged_percent": 91.796875,
+        "true_adversarial_percent": 83.33333333333334
+      },
+      {
+        "csqa_tree_percent": 84.0,
+        "debates": 1600,
+        "delivered_percent": 80.3125,
+        "false_credits": 36,
+        "inflation_pp": 0.25,
+        "missed_credits": 32,
+        "mmlu_random_percent": 68.0,
+        "name": "DOMINANT",
+        "released_percent": 80.5625,
+        "self_sabotaged_percent": 88.28125,
+        "true_adversarial_percent": 78.79464285714286
+      },
+      {
+        "csqa_tree_percent": 73.0,
+        "debates": 1600,
+        "delivered_percent": 81.5625,
+        "false_credits": 62,
+        "inflation_pp": 3.625,
+        "missed_credits": 4,
+        "mmlu_random_percent": 83.0,
+        "name": "PREM",
+        "released_percent": 85.1875,
+        "self_sabotaged_percent": 87.109375,
+        "true_adversarial_percent": 80.50595238095238
+      },
+      {
+        "csqa_tree_percent": 88.0,
+        "debates": 1600,
+        "delivered_percent": 85.4375,
+        "false_credits": 26,
+        "inflation_pp": 0.9375,
+        "missed_credits": 11,
+        "mmlu_random_percent": 83.0,
+        "name": "TAM",
+        "released_percent": 86.375,
+        "self_sabotaged_percent": 88.671875,
+        "true_adversarial_percent": 84.82142857142857
+      },
+      {
+        "csqa_tree_percent": 89.0,
+        "debates": 1600,
+        "delivered_percent": 86.75,
+        "false_credits": 8,
+        "inflation_pp": 0.0,
+        "missed_credits": 8,
+        "mmlu_random_percent": 81.0,
+        "name": "XG-Guard",
+        "released_percent": 86.75,
+        "self_sabotaged_percent": 85.546875,
+        "true_adversarial_percent": 86.97916666666666
+      },
+      {
+        "csqa_tree_percent": 86.33333333333333,
+        "debates": 9600,
+        "delivered_percent": 85.30208333333333,
+        "false_credits": 29,
+        "inflation_pp": -0.5833333333333286,
+        "missed_credits": 85,
+        "mmlu_random_percent": 81.5,
+        "name": "EpistemicGuard-Hard",
+        "released_percent": 84.71875,
+        "self_sabotaged_percent": 88.80208333333334,
+        "true_adversarial_percent": 84.63541666666666
+      },
+      {
+        "csqa_tree_percent": 87.33333333333333,
+        "debates": 9600,
+        "delivered_percent": 85.48958333333333,
+        "false_credits": 47,
+        "inflation_pp": -0.7708333333333286,
+        "missed_credits": 121,
+        "mmlu_random_percent": 80.66666666666666,
+        "name": "EpistemicGuard-Soft",
+        "released_percent": 84.71875,
+        "self_sabotaged_percent": 88.80208333333334,
+        "true_adversarial_percent": 84.85863095238095
+      },
+      {
+        "csqa_tree_percent": 56.99999999999999,
+        "debates": 1600,
+        "delivered_percent": 68.4375,
+        "false_credits": 0,
+        "inflation_pp": 0.0,
+        "missed_credits": 0,
+        "mmlu_random_percent": 56.99999999999999,
+        "name": "No detector",
+        "released_percent": 68.4375,
+        "self_sabotaged_percent": 92.96875,
+        "true_adversarial_percent": 63.764880952380956
+      }
+    ],
+    "guard_hard_mean_flags": 1.2722916666666666,
+    "guard_soft_mean_suspicion": 0.3727187633281054,
+    "held_out": [
+      {
+        "csqa_tree_percent": 86.25,
+        "debates": 1280,
+        "delivered_percent": 84.609375,
+        "false_credits": 17,
+        "inflation_pp": 0.390625,
+        "missed_credits": 12,
+        "mmlu_random_percent": 82.5,
+        "name": "BlindGuard",
+        "released_percent": 85.0,
+        "self_sabotaged_percent": 88.58695652173914,
+        "true_adversarial_percent": 83.94160583941606
+      },
+      {
+        "csqa_tree_percent": 83.75,
+        "debates": 1280,
+        "delivered_percent": 85.078125,
+        "false_credits": 1,
+        "inflation_pp": -0.078125,
+        "missed_credits": 2,
+        "mmlu_random_percent": 80.0,
+        "name": "CASPIAN",
+        "released_percent": 85.0,
+        "self_sabotaged_percent": 91.84782608695652,
+        "true_adversarial_percent": 83.94160583941606
+      },
+      {
+        "csqa_tree_percent": 82.5,
+        "debates": 1280,
+        "delivered_percent": 80.546875,
+        "false_credits": 28,
+        "inflation_pp": 0.390625,
+        "missed_credits": 23,
+        "mmlu_random_percent": 71.25,
+        "name": "DOMINANT",
+        "released_percent": 80.9375,
+        "self_sabotaged_percent": 87.5,
+        "true_adversarial_percent": 79.37956204379562
+      },
+      {
+        "csqa_tree_percent": 68.75,
+        "debates": 1280,
+        "delivered_percent": 81.09375,
+        "false_credits": 52,
+        "inflation_pp": 3.828125,
+        "missed_credits": 3,
+        "mmlu_random_percent": 85.0,
+        "name": "PREM",
+        "released_percent": 84.921875,
+        "self_sabotaged_percent": 86.95652173913044,
+        "true_adversarial_percent": 80.1094890510949
+      },
+      {
+        "csqa_tree_percent": 85.0,
+        "debates": 1280,
+        "delivered_percent": 85.625,
+        "false_credits": 20,
+        "inflation_pp": 0.859375,
+        "missed_credits": 9,
+        "mmlu_random_percent": 85.0,
+        "name": "TAM",
+        "released_percent": 86.484375,
+        "self_sabotaged_percent": 89.13043478260869,
+        "true_adversarial_percent": 85.03649635036497
+      },
+      {
+        "csqa_tree_percent": 88.75,
+        "debates": 1280,
+        "delivered_percent": 86.328125,
+        "false_credits": 5,
+        "inflation_pp": 0.15625,
+        "missed_credits": 3,
+        "mmlu_random_percent": 83.75,
+        "name": "XG-Guard",
+        "released_percent": 86.484375,
+        "self_sabotaged_percent": 85.32608695652173,
+        "true_adversarial_percent": 86.4963503649635
+      },
+      {
+        "csqa_tree_percent": 84.58333333333333,
+        "debates": 7680,
+        "delivered_percent": 85.29947916666667,
+        "false_credits": 24,
+        "inflation_pp": -0.4947916666666714,
+        "missed_credits": 62,
+        "mmlu_random_percent": 84.16666666666667,
+        "name": "EpistemicGuard-Hard",
+        "released_percent": 84.8046875,
+        "self_sabotaged_percent": 88.04347826086956,
+        "true_adversarial_percent": 84.83880778588808
+      },
+      {
+        "csqa_tree_percent": 85.41666666666666,
+        "debates": 7680,
+        "delivered_percent": 85.52083333333333,
+        "false_credits": 33,
+        "inflation_pp": -0.7161458333333286,
+        "missed_credits": 88,
+        "mmlu_random_percent": 83.33333333333334,
+        "name": "EpistemicGuard-Soft",
+        "released_percent": 84.8046875,
+        "self_sabotaged_percent": 88.22463768115942,
+        "true_adversarial_percent": 85.0669099756691
+      },
+      {
+        "csqa_tree_percent": 55.00000000000001,
+        "debates": 1280,
+        "delivered_percent": 68.046875,
+        "false_credits": 0,
+        "inflation_pp": 0.0,
+        "missed_credits": 0,
+        "mmlu_random_percent": 56.25,
+        "name": "No detector",
+        "released_percent": 68.046875,
+        "self_sabotaged_percent": 94.02173913043478,
+        "true_adversarial_percent": 63.68613138686131
+      }
+    ],
+    "oracle_insider_held_out_percent": 85.78125,
+    "stats": {
+      "EpistemicGuard-Hard vs BlindGuard": {
+        "ci_high_pp": 1.875,
+        "ci_low_pp": 0.23437499999999994,
+        "comparison_set": "BlindGuard",
+        "delta_pp": 1.015625,
+        "p_holm": 0.07820107637154218,
+        "p_value": 0.019550269092885545,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 1.875,
+            "ci_low_pp": -1.5625,
+            "mean_pp": 0.0,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.0,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 2.8125,
+            "ci_low_pp": 0.0,
+            "mean_pp": 1.25,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 5.3125,
+            "ci_low_pp": 0.3125,
+            "mean_pp": 2.8125,
+            "questions": 80
+          }
+        }
+      },
+      "EpistemicGuard-Hard vs CASPIAN": {
+        "ci_high_pp": 0.546875,
+        "ci_low_pp": -0.234375,
+        "comparison_set": "CASPIAN",
+        "delta_pp": 0.15625,
+        "p_holm": 0.8284323564850506,
+        "p_value": 0.4142161782425253,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.0,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.0,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 1.5625,
+            "ci_low_pp": -0.9375,
+            "mean_pp": 0.3125,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 0.9375,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.3125,
+            "questions": 80
+          }
+        }
+      },
+      "EpistemicGuard-Hard vs DOMINANT": {
+        "ci_high_pp": 3.4374999999999996,
+        "ci_low_pp": 0.9375000000000001,
+        "comparison_set": "DOMINANT",
+        "delta_pp": 2.1875,
+        "p_holm": 0.005308403003727349,
+        "p_value": 0.0010616806007454698,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 6.875000000000001,
+            "ci_low_pp": 0.3125,
+            "mean_pp": 3.4375000000000004,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 0.9375,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.3125,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 7.187499999999999,
+            "ci_low_pp": 1.875,
+            "mean_pp": 4.375,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 3.125,
+            "ci_low_pp": -1.875,
+            "mean_pp": 0.625,
+            "questions": 80
+          }
+        }
+      },
+      "EpistemicGuard-Hard vs PREM": {
+        "ci_high_pp": 5.390625,
+        "ci_low_pp": 2.890625,
+        "comparison_set": "PREM",
+        "delta_pp": 4.140625000000001,
+        "p_holm": 1.376503097038184e-08,
+        "p_value": 2.2941718283969734e-09,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 8.4375,
+            "ci_low_pp": 2.1875,
+            "mean_pp": 5.3125,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": -1.5625,
+            "mean_pp": -0.625,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 9.6875,
+            "ci_low_pp": 4.375,
+            "mean_pp": 6.875000000000001,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 7.5,
+            "ci_low_pp": 2.8125,
+            "mean_pp": 5.0,
+            "questions": 80
+          }
+        }
+      },
+      "EpistemicGuard-Hard vs TAM": {
+        "ci_high_pp": 1.953125,
+        "ci_low_pp": 0.15625,
+        "comparison_set": "TAM",
+        "delta_pp": 1.0156249999999998,
+        "p_holm": 0.09514015407310485,
+        "p_value": 0.03171338469103495,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 4.375,
+            "ci_low_pp": 0.3125,
+            "mean_pp": 2.1875,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": -0.9375,
+            "mean_pp": -0.3125,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 1.25,
+            "ci_low_pp": -1.25,
+            "mean_pp": 0.0,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 5.0,
+            "ci_low_pp": 0.0,
+            "mean_pp": 2.1875,
+            "questions": 80
+          }
+        }
+      },
+      "EpistemicGuard-Hard vs XG-Guard": {
+        "ci_high_pp": 0.3125,
+        "ci_low_pp": -0.3125,
+        "comparison_set": "XG-Guard",
+        "delta_pp": 0.0,
+        "p_holm": 1.0,
+        "p_value": 1.0,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": -0.9375,
+            "mean_pp": -0.3125,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 1.5625,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.625,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.0,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": -0.9375,
+            "mean_pp": -0.3125,
+            "questions": 80
+          }
+        }
+      },
+      "EpistemicGuard-Soft vs BlindGuard": {
+        "ci_high_pp": 2.5,
+        "ci_low_pp": 0.8593750000000001,
+        "comparison_set": "BlindGuard",
+        "delta_pp": 1.640625,
+        "p_holm": 0.0006485270081757054,
+        "p_value": 0.00016213175204392636,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 3.125,
+            "ci_low_pp": 0.0,
+            "mean_pp": 1.5625,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 0.9375,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.3125,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 3.125,
+            "ci_low_pp": 0.3125,
+            "mean_pp": 1.5625,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 5.625,
+            "ci_low_pp": 0.625,
+            "mean_pp": 3.125,
+            "questions": 80
+          }
+        }
+      },
+      "EpistemicGuard-Soft vs CASPIAN": {
+        "ci_high_pp": 0.234375,
+        "ci_low_pp": -0.546875,
+        "comparison_set": "CASPIAN",
+        "delta_pp": -0.15625,
+        "p_holm": 0.4142161782425253,
+        "p_value": 0.4142161782425253,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.0,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.0,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 0.625,
+            "ci_low_pp": -1.5625,
+            "mean_pp": -0.3125,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 0.625,
+            "ci_low_pp": -1.25,
+            "mean_pp": -0.3125,
+            "questions": 80
+          }
+        }
+      },
+      "EpistemicGuard-Soft vs DOMINANT": {
+        "ci_high_pp": 4.765625,
+        "ci_low_pp": 2.03125,
+        "comparison_set": "DOMINANT",
+        "delta_pp": 3.359375,
+        "p_holm": 1.2975574747845769e-05,
+        "p_value": 2.595114949569154e-06,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 9.6875,
+            "ci_low_pp": 2.5,
+            "mean_pp": 5.9375,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 0.9375,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.3125,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 7.8125,
+            "ci_low_pp": 1.875,
+            "mean_pp": 4.6875,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 5.3125,
+            "ci_low_pp": -0.3125,
+            "mean_pp": 2.5,
+            "questions": 80
+          }
+        }
+      },
+      "EpistemicGuard-Soft vs PREM": {
+        "ci_high_pp": 5.703125000000001,
+        "ci_low_pp": 3.2031249999999996,
+        "comparison_set": "PREM",
+        "delta_pp": 4.453124999999999,
+        "p_holm": 3.3590846097711084e-09,
+        "p_value": 5.598474349618514e-10,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 9.0625,
+            "ci_low_pp": 2.8125,
+            "mean_pp": 5.9375,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": -2.1875,
+            "mean_pp": -0.9375,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 10.0,
+            "ci_low_pp": 4.375,
+            "mean_pp": 7.187499999999999,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 8.4375,
+            "ci_low_pp": 3.125,
+            "mean_pp": 5.625,
+            "questions": 80
+          }
+        }
+      },
+      "EpistemicGuard-Soft vs TAM": {
+        "ci_high_pp": 1.7187500000000002,
+        "ci_low_pp": 0.07812499999999999,
+        "comparison_set": "TAM",
+        "delta_pp": 0.8593750000000001,
+        "p_holm": 0.13299095218924412,
+        "p_value": 0.04433031739641471,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 4.375,
+            "ci_low_pp": 0.3125,
+            "mean_pp": 2.1875,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": -0.9375,
+            "mean_pp": -0.3125,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 0.625,
+            "ci_low_pp": -1.5625,
+            "mean_pp": -0.3125,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 4.375,
+            "ci_low_pp": -0.3125,
+            "mean_pp": 1.875,
+            "questions": 80
+          }
+        }
+      },
+      "EpistemicGuard-Soft vs XG-Guard": {
+        "ci_high_pp": 4.336808689942018e-17,
+        "ci_low_pp": -0.703125,
+        "comparison_set": "XG-Guard",
+        "delta_pp": -0.3125,
+        "p_holm": 0.20494086971949882,
+        "p_value": 0.10247043485974941,
+        "per_task": {
+          "CSQA": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": -2.1875,
+            "mean_pp": -0.9375,
+            "questions": 80
+          },
+          "GSM8K": {
+            "ci_high_pp": 0.9375,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.3125,
+            "questions": 80
+          },
+          "MMLU": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": 0.0,
+            "mean_pp": 0.0,
+            "questions": 80
+          },
+          "MMLUPRO": {
+            "ci_high_pp": 0.0,
+            "ci_low_pp": -1.5625,
+            "mean_pp": -0.625,
+            "questions": 80
+          }
+        }
+      }
+    },
+    "strata": {
+      "BlindGuard": {
+        "baseline_percent": 84.25,
+        "debates": 1600,
+        "hard_percent": 85.5625,
+        "soft_percent": 86.0
+      },
+      "CASPIAN": {
+        "baseline_percent": 84.6875,
+        "debates": 1600,
+        "hard_percent": 84.875,
+        "soft_percent": 84.625
+      },
+      "DOMINANT": {
+        "baseline_percent": 80.3125,
+        "debates": 1600,
+        "hard_percent": 82.625,
+        "soft_percent": 83.625
+      },
+      "PREM": {
+        "baseline_percent": 81.5625,
+        "debates": 1600,
+        "hard_percent": 85.4375,
+        "soft_percent": 85.875
+      },
+      "TAM": {
+        "baseline_percent": 85.4375,
+        "debates": 1600,
+        "hard_percent": 86.5625,
+        "soft_percent": 86.3125
+      },
+      "XG-Guard": {
+        "baseline_percent": 86.75,
+        "debates": 1600,
+        "hard_percent": 86.75,
+        "soft_percent": 86.5
+      }
+    },
+    "tuning": {
+      "evaluated": 784,
+      "held_debates": 7680,
+      "held_questions": 320,
+      "params": {
+        "a1": 2.0,
+        "a2": 4.0,
+        "a3": 1.0,
+        "a4": 0.0,
+        "b": 1.0,
+        "eta": 0.6,
+        "gamma": 0.7,
+        "lam": 0.5,
+        "tau": 0.65,
+        "top_k": 3
+      },
+      "tune_accuracy_percent": 85.3125,
+      "tune_accuracy_soft_percent": 85.36458333333333,
+      "tune_debates": 1920,
+      "tune_questions": 80
+    },
+    "verdict": {
+      "beats_all_six_strictly": false,
+      "best_pooled_baseline": "XG-Guard",
+      "best_pooled_baseline_percent": 86.328125,
+      "guard_hard_pooled_percent": 85.29947916666667,
+      "guard_soft_pooled_percent": 85.52083333333333,
+      "oracle_insider_percent": 85.78125,
+      "significant_improvements_hard": [
+        "DOMINANT",
+        "PREM"
+      ],
+      "significant_improvements_soft": [
+        "BlindGuard",
+        "DOMINANT",
+        "PREM"
+      ],
+      "weakly_dominates_within_strata": true
+    },
+    "within_stratum_delta_pp": {
+      "EpistemicGuard-Hard": {
+        "BlindGuard": 1.015625,
+        "CASPIAN": 0.15625,
+        "DOMINANT": 2.1875,
+        "PREM": 4.140625000000001,
+        "TAM": 1.0156249999999998,
+        "XG-Guard": 0.0
+      },
+      "EpistemicGuard-Soft": {
+        "BlindGuard": 1.640625,
+        "CASPIAN": -0.15625,
+        "DOMINANT": 3.359375,
+        "PREM": 4.453124999999999,
+        "TAM": 0.8593750000000001,
+        "XG-Guard": -0.3125
+      }
+    }
+  },
+  "meta": {
+    "commit": "53be3249ebfa631d8e960c9fb1c931d526654697",
+    "control_debates": 1600,
+    "debates": 11200,
+    "detector_debates": 9600,
+    "generated_at": "2026-11-12T17:05:16.617165+00:00",
+    "questions": 400,
+    "reference": {
+      "control_detection_credit_percent": 0.0,
+      "control_disagreements": 0,
+      "counterfactual_substitutions": 33025,
+      "disagreements": 227,
+      "false_credits": 156,
+      "missed_credits": 71,
+      "mmlu_phantom_detection_percent": 8.0,
+      "multiple_choice_questions": 300,
+      "release_flips": 121,
+      "release_flips_prior_flagged": 89,
+      "self_sabotaged_mcq": 64,
+      "true_adversarial_mcq": 236
+    },
+    "seed": 20261112
+  },
+  "shadow": {
+    "by_graph": {
+      "chain": {
+        "contaminated": 48,
+        "debates": 1494,
+        "rate_percent": 3.21285140562249
+      },
+      "random": {
+        "contaminated": 75,
+        "debates": 1227,
+        "rate_percent": 6.112469437652812
+      },
+      "star": {
+        "contaminated": 54,
+        "debates": 1333,
+        "rate_percent": 4.051012753188297
+      },
+      "tree": {
+        "contaminated": 40,
+        "debates": 1464,
+        "rate_percent": 2.73224043715847
+      }
+    },
+    "by_method": {
+      "BlindGuard": {
+        "contaminated": 28,
+        "debates": 1182,
+        "rate_percent": 2.3688663282571913
+      },
+      "CASPIAN": {
+        "contaminated": 27,
+        "debates": 324,
+        "rate_percent": 8.333333333333334
+      },
+      "DOMINANT": {
+        "contaminated": 93,
+        "debates": 1322,
+        "rate_percent": 7.034795763993949
+      },
+      "PREM": {
+        "contaminated": 65,
+        "debates": 896,
+        "rate_percent": 7.254464285714286
+      },
+      "TAM": {
+        "contaminated": 4,
+        "debates": 1144,
+        "rate_percent": 0.34965034965034963
+      },
+      "XG-Guard": {
+        "contaminated": 0,
+        "debates": 650,
+        "rate_percent": 0.0
+      }
+    },
+    "by_task": {
+      "CSQA": {
+        "contaminated": 96,
+        "debates": 1187,
+        "rate_percent": 8.087615838247682
+      },
+      "GSM8K": {
+        "contaminated": 0,
+        "debates": 1927,
+        "rate_percent": 0.0
+      },
+      "MMLU": {
+        "contaminated": 58,
+        "debates": 1025,
+        "rate_percent": 5.658536585365853
+      },
+      "MMLUPRO": {
+        "contaminated": 63,
+        "debates": 1379,
+        "rate_percent": 4.568527918781726
+      }
+    },
+    "contaminated_debates": 540,
+    "contamination_rate_percent": 9.786154403769482,
+    "control_debates": 1341,
+    "control_events": 1333,
+    "control_rate_percent": 24.086502609992543,
+    "debates_considered": 6859,
+    "debates_with_event_by_round": {
+      "round_1": 108,
+      "round_2": 143
+    },
+    "delivered_failures": 1671,
+    "detector_debates": 5518,
+    "detector_rate_percent": 3.932584269662921,
+    "events": 559,
+    "examples": [
+      {
+        "dataset": "MMLU",
+        "graph": "tree",
+        "honest_agent": 2,
+        "insider": 5,
+        "item": 29440,
+        "method": "BlindGuard",
+        "round": 1
+      },
+      {
+        "dataset": "MMLU",
+        "graph": "star",
+        "honest_agent": 4,
+        "insider": 0,
+        "item": 65169,
+        "method": "BlindGuard",
+        "round": 2
+      },
+      {
+        "dataset": "MMLU",
+        "graph": "random",
+        "honest_agent": 2,
+        "insider": 0,
+        "item": 1355,
+        "method": "CASPIAN",
+        "round": 1
+      },
+      {
+        "dataset": "MMLU",
+        "graph": "random",
+        "honest_agent": 6,
+        "insider": 0,
+        "item": 1355,
+        "method": "CASPIAN",
+        "round": 1
+      },
+      {
+        "dataset": "MMLU",
+        "graph": "tree",
+        "honest_agent": 7,
+        "insider": 3,
+        "item": 1355,
+        "method": "CASPIAN",
+        "round": 1
+      },
+      {
+        "dataset": "MMLU",
+        "graph": "tree",
+        "honest_agent": 8,
+        "insider": 3,
+        "item": 1355,
+        "method": "CASPIAN",
+        "round": 1
+      },
+      {
+        "dataset": "MMLU",
+        "graph": "tree",
+        "honest_agent": 9,
+        "insider": 4,
+        "item": 13937,
+        "method": "CASPIAN",
+        "round": 2
+      },
+      {
+        "dataset": "MMLU",
+        "graph": "random",
+        "honest_agent": 0,
+        "insider": 1,
+        "item": 60168,
+        "method": "CASPIAN",
+        "round": 1
+      }
+    ],
+    "mean_events_per_contaminated_debate": 1.0351851851851852,
+    "require_delivered_failure": true
+  },
+  "theory": {
+    "archive_ties": {
+      "false_credits": 156,
+      "false_credits_tied_release": 26,
+      "false_credits_unique_release": 130,
+      "missed_credits": 71,
+      "missed_credits_tied_eligible": 11
+    },
+    "curve": [
+      {
+        "alpha": 0.0,
+        "false_credit_rate": 0.0,
+        "inflation_pp": -14.27666666666666,
+        "missed_credit_rate": 0.14276666666666665,
+        "p_delivered": 0.9399666666666666,
+        "p_release": 0.7972
+      },
+      {
+        "alpha": 0.05,
+        "false_credit_rate": 0.0041916666666666665,
+        "inflation_pp": -13.437500000000002,
+        "missed_credit_rate": 0.13856666666666667,
+        "p_delivered": 0.9306166666666666,
+        "p_release": 0.7962416666666666
+      },
+      {
+        "alpha": 0.1,
+        "false_credit_rate": 0.009633333333333334,
+        "inflation_pp": -12.34749999999999,
+        "missed_credit_rate": 0.13310833333333333,
+        "p_delivered": 0.9203583333333333,
+        "p_release": 0.7968833333333334
+      },
+      {
+        "alpha": 0.15,
+        "false_credit_rate": 0.015183333333333333,
+        "inflation_pp": -11.289166666666672,
+        "missed_credit_rate": 0.128075,
+        "p_delivered": 0.909725,
+        "p_release": 0.7968333333333333
+      },
+      {
+        "alpha": 0.2,
+        "false_credit_rate": 0.022925,
+        "inflation_pp": -9.976666666666667,
+        "missed_credit_rate": 0.12269166666666667,
+        "p_delivered": 0.8966583333333333,
+        "p_release": 0.7968916666666667
+      },
+      {
+        "alpha": 0.3,
+        "false_credit_rate": 0.044875,
+        "inflation_pp": -6.977500000000003,
+        "missed_credit_rate": 0.11465,
+        "p_delivered": 0.8651,
+        "p_release": 0.795325
+      },
+      {
+        "alpha": 0.4,
+        "false_credit_rate": 0.075475,
+        "inflation_pp": -3.0683333333333396,
+        "missed_credit_rate": 0.10615833333333333,
+        "p_delivered": 0.8273833333333334,
+        "p_release": 0.7967
+      },
+      {
+        "alpha": 0.5,
+        "false_credit_rate": 0.11113333333333333,
+        "inflation_pp": 1.3966666666666572,
+        "missed_credit_rate": 0.09716666666666667,
+        "p_delivered": 0.7833583333333334,
+        "p_release": 0.797325
+      },
+      {
+        "alpha": 0.6,
+        "false_credit_rate": 0.16345833333333334,
+        "inflation_pp": 7.342500000000007,
+        "missed_credit_rate": 0.09003333333333334,
+        "p_delivered": 0.7216583333333333,
+        "p_release": 0.7950833333333334
+      },
+      {
+        "alpha": 0.7,
+        "false_credit_rate": 0.23481666666666667,
+        "inflation_pp": 15.520833333333329,
+        "missed_credit_rate": 0.07960833333333334,
+        "p_delivered": 0.6453083333333334,
+        "p_release": 0.8005166666666667
+      }
+    ],
+    "monotonicity": {
+      "alphas": [
+        0.0,
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7
+      ],
+      "beta": 0.2,
+      "false_credit_rates": [
+        0.0,
+        0.003916666666666666,
+        0.0098,
+        0.015433333333333334,
+        0.0234,
+        0.04253333333333333,
+        0.07283333333333333,
+        0.11385,
+        0.163,
+        0.23758333333333334
+      ],
+      "inflation_pp": [
+        -14.151666666666662,
+        -13.428333333333331,
+        -12.345000000000006,
+        -11.308333333333332,
+        -9.901666666666664,
+        -7.171666666666665,
+        -3.3766666666666723,
+        1.880000000000004,
+        7.110000000000005,
+        15.92499999999999
+      ],
+      "nondecreasing": true,
+      "p_h": 0.7,
+      "violations": []
+    },
+    "profiles": {
+      "correlation_alpha_vs_observed_fc": 0.48985526472232244,
+      "correlation_predicted_vs_observed": 0.24859532362524409,
+      "honest_accuracy_under_attack": 0.7138392857142857,
+      "mean_absolute_error": 0.0218375,
+      "rows": {
+        "BlindGuard": {
+          "alpha": 0.18678571428571428,
+          "debates": 1600,
+          "delivered_accuracy_percent": 84.25,
+          "false_credits": 22,
+          "inflation_pp": 0.5,
+          "missed_credits": 14,
+          "observed_false_credit_rate": 0.01375,
+          "predicted_false_credit_rate": 0.03414166666666667,
+          "predicted_inflation_pp": -5.4266666666666685,
+          "released_accuracy_percent": 84.75,
+          "tpr": 0.5641666666666667
+        },
+        "CASPIAN": {
+          "alpha": 0.07821428571428571,
+          "debates": 1600,
+          "delivered_accuracy_percent": 84.6875,
+          "false_credits": 2,
+          "inflation_pp": 0.0,
+          "missed_credits": 2,
+          "observed_false_credit_rate": 0.00125,
+          "predicted_false_credit_rate": 0.005941666666666666,
+          "predicted_inflation_pp": -12.020833333333336,
+          "released_accuracy_percent": 84.6875,
+          "tpr": 0.8175
+        },
+        "DOMINANT": {
+          "alpha": 0.17785714285714285,
+          "debates": 1600,
+          "delivered_accuracy_percent": 80.3125,
+          "false_credits": 36,
+          "inflation_pp": 0.25,
+          "missed_credits": 32,
+          "observed_false_credit_rate": 0.0225,
+          "predicted_false_credit_rate": 0.030608333333333335,
+          "predicted_inflation_pp": -6.080833333333335,
+          "released_accuracy_percent": 80.5625,
+          "tpr": 0.585
+        },
+        "PREM": {
+          "alpha": 0.1649107142857143,
+          "debates": 1600,
+          "delivered_accuracy_percent": 81.5625,
+          "false_credits": 62,
+          "inflation_pp": 3.625,
+          "missed_credits": 4,
+          "observed_false_credit_rate": 0.03875,
+          "predicted_false_credit_rate": 0.025308333333333332,
+          "predicted_inflation_pp": -7.053333333333334,
+          "released_accuracy_percent": 85.1875,
+          "tpr": 0.6152083333333334
+        },
+        "TAM": {
+          "alpha": 0.2760714285714286,
+          "debates": 1600,
+          "delivered_accuracy_percent": 85.4375,
+          "false_credits": 26,
+          "inflation_pp": 0.9375,
+          "missed_credits": 11,
+          "observed_false_credit_rate": 0.01625,
+          "predicted_false_credit_rate": 0.096825,
+          "predicted_inflation_pp": 3.834166666666672,
+          "released_accuracy_percent": 86.375,
+          "tpr": 0.35583333333333333
+        },
+        "XG-Guard": {
+          "alpha": 0.02107142857142857,
+          "debates": 1600,
+          "delivered_accuracy_percent": 86.75,
+          "false_credits": 8,
+          "inflation_pp": 0.0,
+          "missed_credits": 8,
+          "observed_false_credit_rate": 0.005,
+          "predicted_false_credit_rate": 0.0011833333333333333,
+          "predicted_inflation_pp": -14.102499999999996,
+          "released_accuracy_percent": 86.75,
+          "tpr": 0.9508333333333333
+        }
+      }
+    },
+    "theorem": {
+      "assumptions": [
+        "Honest votes are exchangeable and correct with probability p_h.",
+        "Insider votes are pinned to a non-gold target z.",
+        "Flags are independent of the vote draw given agent type.",
+        "Released correctness uses the all-agent plurality; delivered correctness uses the unflagged plurality."
+      ],
+      "corollary": "A detector with alpha=0 can never earn false credit: no honest vote is expelled, so the two electorates coincide and g_release=g_del.",
+      "mechanism": "The released tally counts correct honest votes that the delivered tally has expelled. Excluding a correct vote can only leave the eligible plurality weakly worse, while the released plurality is unchanged, so the disagreement set grows with the number of expelled correct votes.",
+      "proposition": "Fix the honest accuracy p_h, the insider count K, and the insider detection rate 1-beta. If honest agents are flagged independently with false-positive rate alpha, then P(g_release=1, g_del=0) is nondecreasing in alpha, and strictly increasing whenever the expected number of excluded correct honest votes crosses a plurality margin."
+    },
+    "tie_free_bound": {
+      "alpha": 0.3,
+      "beta": 0.2,
+      "p_false_credit": 0.0,
+      "p_missed_credit": 0.1203946931785594
+    }
+  }
+}
+

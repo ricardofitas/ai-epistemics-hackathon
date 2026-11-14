@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "stage": "retrospective masked assistant adjudication",
+  "protocol_commit": "de205ec97d15cb290815063d4f190279e7410632",
+  "reviewed": 69,
+  "capture_unknown": 11,
+  "fixed_questions_per_model": 20,
+  "agreement": {
+    "final": 68,
+    "content": 68
+  },
+  "disagreements": [
+    {
+      "opaque_id": "5045d03e182d8317",
+      "dimension": "final",
+      "reviewer_a": "incorrect",
+      "reviewer_b": "uncertain"
+    },
+    {
+      "opaque_id": "5045d03e182d8317",
+      "dimension": "content",
+      "reviewer_a": "incorrect",
+      "reviewer_b": "uncertain"
+    }
+  ],
+  "models": {
+    "gemma-4-31b-it": {
+      "final": {
+        "counts": {
+          "binding_only": {
+            "incorrect": 16,
+            "correct": 2,
+            "unknown": 2
+          },
+          "official_typed": {
+            "correct": 12,
+            "unknown": 5,
+            "incorrect": 3
+          }
+        },
+        "paired_gain_bounds_pp": [
+          40,
+          75
+        ]
+      },
+      "content": {
+        "counts": {
+          "binding_only": {
+            "correct": 17,
+            "incorrect": 1,
+            "unknown": 2
+          },
+          "official_typed": {
+            "correct": 12,
+            "unknown": 5,
+            "incorrect": 3
+          }
+        },
+        "paired_gain_bounds_pp": [
+          -35,
+          0
+        ]
+      },
+      "original_rule_counts": {
+        "binding_only": {
+          "correct": 11,
+          "incorrect": 7,
+          "unknown": 2
+        },
+        "official_typed": {
+          "correct": 12,
+          "unknown": 4,
+          "incorrect": 4
+        }
+      },
+      "correct_content_in_incorrect_final": [
+        "MXG-12-B-G",
+        "MXG-10-B-G",
+        "MXG-17-B-G",
+        "MXG-11-B-G",
+        "MXG-04-B-G",
+        "MXG-06-B-G",
+        "MXG-08-B-G",
+        "MXG-05-B-G",
+        "MXG-03-B-G",
+        "MXG-15-B-G",
+        "MXG-19-B-G",
+        "MXG-14-B-G",
+        "MXG-07-B-G",
+        "MXG-00-B-G",
+        "MXG-09-B-G"
+      ],
+      "rule_credit_without_correct_final": [
+        "MXG-12-B-G",
+        "MXG-10-B-G",
+        "MXG-11-B-G",
+        "MXG-04-B-G",
+        "MXG-06-B-G",
+        "MXG-15-B-G",
+        "MXG-19-B-G",
+        "MXG-07-B-G",
+        "MXG-00-B-G"
+      ],
+      "correct_final_without_rule_credit": []
+    },
+    "qwen3.8-27b": {
+      "final": {
+        "counts": {
+          "binding_only": {
+            "incorrect": 16,
+            "correct": 2,
+            "unknown": 2
+          },
+          "official_typed": {
+            "correct": 15,
+            "unknown": 3,
+            "incorrect": 2
+          }
+        },
+        "paired_gain_bounds_pp": [
+          55,
+          80
+        ]
+      },
+      "content": {
+        "counts": {
+          "binding_only": {
+            "incorrect": 14,
+            "correct": 4,
+            "unknown": 2
+          },
+          "official_typed": {
+            "correct": 15,
+            "unknown": 3,
+            "incorrect": 2
+          }
+        },
+        "paired_gain_bounds_pp": [
+          45,
+          70
+        ]
+      },
+      "original_rule_counts": {
+        "binding_only": {
+          "incorrect": 16,
+          "correct": 2,
+          "unknown": 2
+        },
+        "official_typed": {
+          "correct": 14,
+          "incorrect": 3,
+          "unknown": 3
+        }
+      },
+      "correct_content_in_incorrect_final": [
+        "MXG-13-B-Q",
+        "MXG-03-B-Q"
+      ],
+      "rule_credit_without_correct_final": [],
+      "correct_final_without_rule_credit": [
+        "MXG-00-T-Q"
+      ]
+    }
+  },
+  "new_model_api_calls": 0,
+  "new_judge_api_calls": 0,
+  "limits": [
+    "Two assistant reviewers, not human or official default judge",
+    "Previously exposed20case panel; fixedprotocol before individual adjudication does not make retrospective review a prospective trial",
+    "Original rule score retained; final-answer/content axes are distinct declared constructs",
+    "Bounds are worstcase unknown-answer sensitivity on fixedpanel, notconfidenceintervals"
+  ]
+}

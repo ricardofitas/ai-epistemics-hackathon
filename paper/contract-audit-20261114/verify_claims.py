@@ -137,11 +137,22 @@ assert ge['qwen3.8-27b']['gain_bounds']==[.5,.75]
 assert generation['new_judge_calls']==0
 assert read('paired_generation_verification.json')['status']=='PASS'
 
+semantic=read('semantic_review_summary.json')
+assert semantic['status']=='PASS' and semantic['reviewed']==69 and semantic['capture_unknown']==11
+assert semantic['agreement']=={'final':68,'content':68}
+sm=semantic['models'];sg=sm['gemma-4-31b-it'];sq=sm['qwen3.8-27b']
+assert sg['final']['paired_gain_bounds_pp']==[40,75] and sg['content']['paired_gain_bounds_pp']==[-35,0]
+assert sq['final']['paired_gain_bounds_pp']==[55,80] and sq['content']['paired_gain_bounds_pp']==[45,70]
+assert len(sg['correct_content_in_incorrect_final'])==15 and len(sq['correct_content_in_incorrect_final'])==2
+assert len(sg['rule_credit_without_correct_final'])==9 and len(sq['correct_final_without_rule_credit'])==1
+assert read('semantic_review_verification.json')['status']=='PASS'
+assert read('semantic_review_protocol.json')['version']==1
+
 pages = json.loads((P / 'manuscript.json').read_text())
 claims = json.loads((P / 'claims.json').read_text())
-assert len(pages) == 13 and len(claims) == 15
+assert len(pages) == 14 and len(claims) == 16
 assert 150 <= len(pages[0]['blocks'][2]['text'].split()) <= 250
-assert [row[0] for row in pages[-1]['blocks'][1]['rows']] == [claim['id'] for claim in claims]
+assert [row[0] for row in pages[-2]['blocks'][1]['rows']] == [claim['id'] for claim in claims]
 for claim in claims:
     assert all((P / 'evidence' / name).is_file() for name in claim['evidence'].split(';'))
 with (P / 'claim_evidence.csv').open(newline='') as stream:
@@ -151,7 +162,7 @@ for row, claim in zip(ledger, claims):
     assert row == dict(claim_id=claim['id'], section=claim['section'],
                        numerical_or_status_claim=claim['claim'],
                        evidence_files=claim['evidence'], qualification=claim['qualification'])
-result = dict(status='PASS', claims_checked=15, working_draft_version='1.4',
+result = dict(status='PASS', claims_checked=16, working_draft_version='1.5',
               integrated_mechanisms=['native source gate', 'shared input causes', 'MMMLU prediction', 'MixEval task kind'],
               verifier_model_requests=0, new_experiments_during_synthesis=0,
               scope='Synthesis consistency check against source snapshots')

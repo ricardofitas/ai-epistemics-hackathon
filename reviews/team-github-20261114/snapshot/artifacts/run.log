@@ -1,0 +1,122 @@
+loaded 11200 debates from auto-discovery
+detector debates: 9600; controls: 1600; questions: 400
+trajectories: 11200 debates with a raw round grid; rounds per debate: [1, 2, 3]
+
+=== 1. GAMMAF-Clean invariants ===
+
+Released vs delivered score (9,600 detector debates + 1,600 controls)
+Task               Debates  g_rel  g_del  Disagree  False credit  Missed credit
+-----------------  -------  -----  -----  --------  ------------  -------------
+MMLU               2400     1930   1895   57        46            11           
+MMLU-Pro           2400     1874   1852   72        47            25           
+CSQA               2400     2054   2024   86        58            28           
+GSM8K              2400     2275   2277   12        5             7            
+Total              9600     8133   8048   227       156           71           
+Disabled controls  1600     -      -      0         0             0            
+reference match (227/156/71, 0 control): True
+
+Empty eligible set U = empty (archived cases: 0)
+Mode            a_del        g_del            Note                                
+--------------  -----------  ---------------  ------------------------------------
+strict_abstain  ABSTAIN      0                live-judge rule: abstention is wrong
+soft_fallback   v[argmin s]  check(a_del, y)  requires suspicion scores           
+
+Disabled-detector detection credit: released third round vs last executed round
+Task      Padded rounds  Released ADR %  Executed ADR %  Phantom pp
+--------  -------------  --------------  --------------  ----------
+MMLU      63             8.00            0.00            +8.00     
+MMLU-Pro  37             4.75            0.00            +4.75     
+CSQA      20             2.50            0.00            +2.50     
+GSM8K     1              0.25            0.00            +0.25     
+phantom eliminated under executed-round accounting: True
+
+Counterfactual substitution invariance (replace one excluded vote)
+Task      Substitutions  g_del changes  g_rel flips  Debates flipped  Prior-flag flips
+--------  -------------  -------------  -----------  ---------------  ----------------
+MMLU      23269          0              372          104              223             
+MMLU-Pro  66238          0              1193         164              791             
+CSQA      30876          0              679          167              394             
+GSM8K     22095          0              117          35               60              
+Total     142478         0              2361         470              1468            
+invariance g_del(v,f) == g_del(v',f) for v_U == v'_U: True
+
+Attack-target stratification
+Slice                   Questions  Debates  g_rel %  g_del %  False credit  Missed credit
+----------------------  ---------  -------  -------  -------  ------------  -------------
+ALL\_400                400        9600     84.72    83.83    156           71           
+TRUE\_ADVERSARIAL\_236  336        8064     83.87    83.00    136           66           
+SELF\_SABOTAGED\_64     64         1536     89.19    88.22    20            5            
+
+=== 2. False-credit inflation ===
+
+Detector false-positive rate, true-positive rate and false credit
+Detector    alpha  TPR    Inflation pp  FC  MC  Pred FC %  Obs FC %
+----------  -----  -----  ------------  --  --  ---------  --------
+BlindGuard  0.187  0.564  +0.500        22  14  3.41       1.38    
+CASPIAN     0.078  0.818  +0.000        2   2   0.59       0.12    
+DOMINANT    0.178  0.585  +0.250        36  32  3.06       2.25    
+PREM        0.165  0.615  +3.625        62  4   2.53       3.88    
+TAM         0.276  0.356  +0.938        26  11  9.68       1.62    
+XG-Guard    0.021  0.951  +0.000        8   8   0.12       0.50    
+corr(alpha, observed FC) = 0.490; corr(predicted, observed) = 0.249; MAE = 2.18 pp
+false credit nondecreasing in alpha at fixed TPR: True
+tie-free enumeration at alpha=0.3, TPR=0.8: FC=0.00% (a uniform-distractor artefact that understates the evaluator)
+archive: 26/156 false credits and 11/71 missed credits involve a tied tally, so 130 false credits are unique-winner flips caused by expelling correct votes rather than by the tie rule
+
+=== 3. Pre-exclusion epistemic shadow contamination ===
+
+Debates where an honest agent adopted the attack target from a not-yet-flagged insider
+Cell              Debates  Contaminated  Rate %
+----------------  -------  ------------  ------
+CSQA              1187     96            8.09  
+GSM8K             1927     0             0.00  
+MMLU              1025     58            5.66  
+MMLU-Pro          1379     63            4.57  
+----------------  -------  ------------  ------
+topology: chain   1494     48            3.21  
+topology: random  1227     75            6.11  
+topology: star    1333     54            4.05  
+topology: tree    1464     40            2.73  
+detector debates: 3.93% (540 debates, 559 events); disabled controls: 24.09%
+delivered failures: 1671; mean events per contaminated debate: 1.04
+
+=== 4. EpistemicGuard head-to-head ===
+
+Held-out delivered accuracy (80% of question IDs, tuned on 20%):
+
+Leaderboard
+Detector             n     g_del %  g_rel %  FC  TrueAdv %  SelfSab %  CSQA+Tree %
+-------------------  ----  -------  -------  --  ---------  ---------  -----------
+BlindGuard           1280  84.61    85.00    17  83.94      88.59      86.25      
+CASPIAN              1280  85.08    85.00    1   83.94      91.85      83.75      
+DOMINANT             1280  80.55    80.94    28  79.38      87.50      82.50      
+PREM                 1280  81.09    84.92    52  80.11      86.96      68.75      
+TAM                  1280  85.62    86.48    20  85.04      89.13      85.00      
+XG-Guard             1280  86.33    86.48    5   86.50      85.33      88.75      
+EpistemicGuard-Hard  7680  85.30    84.80    24  84.84      88.04      84.58      
+EpistemicGuard-Soft  7680  85.52    84.80    33  85.07      88.22      85.42      
+No detector          1280  68.05    68.05    0   63.69      94.02      55.00      
+
+Paired within-conversation bootstrap (10k) and Wilcoxon, Holm-corrected
+Comparison                                              Delta pp  95% CI          p       p_Holm   
+------------------------------------------------------  --------  --------------  ------  ------  -
+EpistemicGuard-Hard vs PREM (PREM debates)              +4.14     [+2.89, +5.39]  0.0000  0.0000  *
+EpistemicGuard-Hard vs DOMINANT (DOMINANT debates)      +2.19     [+0.94, +3.44]  0.0011  0.0053  *
+EpistemicGuard-Hard vs BlindGuard (BlindGuard debates)  +1.02     [+0.23, +1.88]  0.0196  0.0782   
+EpistemicGuard-Hard vs TAM (TAM debates)                +1.02     [+0.16, +1.95]  0.0317  0.0951   
+EpistemicGuard-Hard vs CASPIAN (CASPIAN debates)        +0.16     [-0.23, +0.55]  0.4142  0.8284   
+EpistemicGuard-Hard vs XG-Guard (XG-Guard debates)      +0.00     [-0.31, +0.31]  1.0000  1.0000   
+EpistemicGuard-Soft vs PREM (PREM debates)              +4.45     [+3.20, +5.70]  0.0000  0.0000  *
+EpistemicGuard-Soft vs DOMINANT (DOMINANT debates)      +3.36     [+2.03, +4.77]  0.0000  0.0000  *
+EpistemicGuard-Soft vs BlindGuard (BlindGuard debates)  +1.64     [+0.86, +2.50]  0.0002  0.0006  *
+EpistemicGuard-Soft vs TAM (TAM debates)                +0.86     [+0.08, +1.72]  0.0443  0.1330   
+EpistemicGuard-Soft vs XG-Guard (XG-Guard debates)      -0.31     [-0.70, +0.00]  0.1025  0.2049   
+EpistemicGuard-Soft vs CASPIAN (CASPIAN debates)        -0.16     [-0.55, +0.23]  0.4142  0.4142   
+
+Pooled held-out: hard 85.30%, soft 85.52%; best pooled baseline XG-Guard 86.33%. Pooled comparisons are unpaired (different conversation sets) and are reported only for context.
+Within each baseline's own debates, Guard-Hard delta (pp): BlindGuard +1.02; CASPIAN +0.16; DOMINANT +2.19; PREM +4.14; TAM +1.02; XG-Guard +0.00
+weakly dominates all six: True; significant improvements: ['DOMINANT', 'PREM']; oracle (true insiders excluded) 85.78%.
+VERDICT: a strict 'outperforms all six' claim is NOT supported. The guard matches or exceeds every baseline on its own debates, but ties XG-Guard and has non-significant gains over CASPIAN and TAM. The oracle diagnostic explains why the ceiling is low: excluding the true insiders scores below the best released detector, so delivered accuracy rewards lucky exclusion of honest dissenters as much as correct insider identification.
+
+artifacts written to C:\Users\Antonio\Desktop\dev tools\hacklaton\ai epistemics\artifacts
+

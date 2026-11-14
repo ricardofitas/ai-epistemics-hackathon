@@ -1,0 +1,113 @@
+{
+  "reviewed_at": "2026-11-14",
+  "repository": "ricardofitas/ai-epistemics-hackathon",
+  "read_only": true,
+  "new_model_calls": 0,
+  "branch_inventory": {
+    "count": 20,
+    "main": {
+      "sha": "c272d9fc2b46bcfa317b03f0787af8732ad6e5fe",
+      "last_commit": "2026-11-10T18:44:17Z",
+      "commits": 2,
+      "content": "planning only; README says no experiments yet"
+    },
+    "pull_requests": {
+      "count": 5,
+      "state": "all open draft",
+      "authors": [
+        "ricardofitas"
+      ],
+      "numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "issues_found": 0
+  },
+  "visible_teammate_work": {
+    "branch": "feat/gammaf-epistemic-audit",
+    "sha": "d4419f160252adee3d639df9ea23cd1600277c32",
+    "author_login": "AntGalasso",
+    "git_author": "antGalasso",
+    "date": "2026-11-13T04:20:47Z",
+    "commits": 1,
+    "parents": [],
+    "scope": "GAMMAF-Clean evaluator, false-credit simulation, shadow-event diagnostic, EpistemicGuard hard/soft offline aggregator, tests and artifacts",
+    "attribution_limit": "Do not conclude other team members did no work; only visible repo activity reviewed. Ricardo-account commits can contain manual or agent work."
+  },
+  "verified": {
+    "terminal_projection": "All11200 saved release/delivery labels match teammate recomputation; discrepancies227=156false+71missed;1600controls0",
+    "question_split": "Frozen split implementation gives80tuning and320held questions, disjoint",
+    "pytest": "19 passed;14setup errors all caused by unavailable raw trajectories; no synthetic test failure",
+    "hash": "Committed compact projection SHA256107aef0ac18fa1067b6a45c69d8d42caa857aa2131da14705762e82677b334bb",
+    "fresh_checkout_blocker": "Defaultload_debates raises missing trajectory MMLU/BlindGuard/1355/chain. 28rawfiles absent. Older handoff README documents python gammaf_handoff/run.py --from-source to download sourcecache; newrun must document/reuse bootstrap."
+  },
+  "findings": [
+    {
+      "priority": 1,
+      "status": "REPRODUCED",
+      "title": "Shadow summary mixes control and detector populations",
+      "location": "gammaf_epistemic/audit_proofs.py:443-520; scripts/run_hackathon_experiments.py:531-538",
+      "minimal_witness": "1detector+1control, each100% event-bearing, yields contamination_rate_percent200%",
+      "saved_artifact": "Detector217/5518=3.9326%;control323/1341=24.0865%;540combined hits divided by5518detector denom yields9.7862% invalidmix. Correct combined rate540/6859=7.8729%. Detector559events/217hits=2.5760, savedmean uses559/540=1.0352.",
+      "effect": "Task-specific and detector/control-specific rate fields remain arithmetically coherent; global rate, mean, and log statement need correction.",
+      "fix": "Separate detector_hits/control_hits/combined_hits and samepopulation denominators; label event-vs-debate counts; add mixed control+detector regression."
+    },
+    {
+      "priority": 2,
+      "status": "SOURCE_VERIFIED_SCOPE_LIMIT",
+      "title": "Shadow audit is observational, not a proof of message causation",
+      "location": "gammaf_epistemic/audit_proofs.py:390-440",
+      "details": "Checks gold-to-attack vote transition, adjacent insider's previousvote and prior flags. No message intervention, alternative source exclusion or counterfactualgeneration. Multiple insiders may produce multiple events for the same honest switch.",
+      "fix": "Call these candidate exposure-associated transitions. Reserve causal claims for controlled ablation or message-level provenance. Caption says conditioned on failure but denominator includes all considered debates with>=2rounds; clarify conditional numerator vsdenominator."
+    },
+    {
+      "priority": 2,
+      "status": "SOURCE_VERIFIED_SCOPE_LIMIT",
+      "title": "EpistemicGuard results concern offline terminal reaggregation",
+      "location": "scripts/run_hackathon_experiments.py:624-674",
+      "details": "New guard reweights terminalvotes from conversations already shaped by each originaldetector. Pairedwithinconversation comparison is meaningful for aggregation; cannot infer performance of replacing originaldetector throughout a livedebate. Heldout set is task-stratifiedquestiondisjoint but allfrom previouslyexaminedfixedarchive.",
+      "fix": "Explicitly position terminal reaggregation and retrospective holdout. Use newunseenconversations/prospectivefrozenprotocol for end-to-end claim."
+    },
+    {
+      "priority": 3,
+      "status": "VERIFIED_METADATA",
+      "title": "Team branch has unrelated root history and no PR",
+      "details": "d4419f1 has no parents; main planningbranch has differentroot. All5existingdraftPRs areRicardoaccount; noneforAntoniofeaturebranch.",
+      "fix": "Preservebranch; portonlynewgammaf_epistemic/tests/artifactfiles ontobranchbasedonmain/currentresearch. Reviewbeforemerge; avoid wholesaleunrelatedhistorymerge/importedswarmlabtree."
+    },
+    {
+      "priority": 3,
+      "status": "VERIFIED_METADATA",
+      "title": "Main and PR descriptions lag current research",
+      "details": "mainREADME still planning/noresults while actualexperiments inbranches. PR5body summarizes21family wave but headcontainslatermath/source-repair/replication commits.",
+      "fix": "Prepareconsolidatedstatus/index and refreshPRdescriptionwhenready; do not infer lackofworkfrommain or GitHubdefaultbranchcommitsearch."
+    }
+  ],
+  "reported_not_independently_recomputed": {
+    "guard_heldout": {
+      "hard_percent": 85.3,
+      "soft_percent": 85.52,
+      "best_baseline_xg_percent": 86.33
+    },
+    "within_baseline_claim": "Hard+4.14ppvsPREM,+2.19vsDOMINANT(significant Holm);tiesXG0.00;strictoutperformsall6explicitlyrejectedbyartifact",
+    "status": "Archived results and code reviewed; fulltrajectoryrun not rerun"
+  },
+  "next_actions": [
+    "Correctshadowpopulationfields and reporting; preservefrozenoriginals.",
+    "Document/bootstrap28rawinputfiles thenrun33tests andfullfrozenreproduction.",
+    "Reframeguardasofflineaggregator andshadowasobservationaldiagnostic.",
+    "Portfocusedchangeswithhistorypreservation; keepourOneEvalstudyseparateuntilscientificintegrationjustified."
+  ],
+  "evidence": [
+    "https://github.com/ricardofitas/ai-epistemics-hackathon/tree/feat/gammaf-epistemic-audit",
+    "https://github.com/ricardofitas/ai-epistemics-hackathon/commit/d4419f160252adee3d639df9ea23cd1600277c32",
+    "https://github.com/ricardofitas/ai-epistemics-hackathon/blob/d4419f160252adee3d639df9ea23cd1600277c32/gammaf_epistemic/audit_proofs.py#L443",
+    "https://github.com/ricardofitas/ai-epistemics-hackathon/blob/d4419f160252adee3d639df9ea23cd1600277c32/artifacts/results.json",
+    "https://github.com/ricardofitas/ai-epistemics-hackathon/pull/5",
+    "https://github.com/ricardofitas/ai-epistemics-hackathon/blob/main/README.md"
+  ]
+}

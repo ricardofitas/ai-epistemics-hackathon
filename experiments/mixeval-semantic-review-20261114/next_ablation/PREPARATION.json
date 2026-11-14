@@ -1,0 +1,37 @@
+{
+  "status": "OFFLINE_PASS_PREPARED_ONLY",
+  "pool_records": 200,
+  "freeform_pool_records": 100,
+  "eligible_after_exclusion": 77,
+  "removed": {
+    "prior_generation_overlap": 23
+  },
+  "selected": 20,
+  "prior_generation_exact_and_normalized_overlap": 0,
+  "models": [
+    "gemma-4-31b-it",
+    "qwen3.8-27b"
+  ],
+  "conditions": [
+    "free_form__absent",
+    "free_form__A.None",
+    "choice__absent",
+    "choice__A.None"
+  ],
+  "planned_calls": 160,
+  "maximum_total_output_tokens": 655360,
+  "actual_model_calls": 0,
+  "source_composition": {
+    "TriviaQA": 14,
+    "BBH": 1,
+    "DROP": 5
+  },
+  "counterbalance_each_model_condition_position": 5,
+  "factor_only_byte_differences_pass": true,
+  "max_prompt_bytes": 1767,
+  "protocol_sha256": "50cb29c351e73db09868652bf011bb06d0686b31e41ed0fa7ad1f42dc7c0463a",
+  "source_pool_sha256": "c00abfba2d087d451bec17ef6b2367cb0582831aa1f128e61288f597841cd568",
+  "selected_sha256": "cedb9444a136bbcb39bc1ee02a7e1d1b7cd765f1aed5cfa8b7a2576e5d913407",
+  "manifest_sha256": "cc51b3ccb0fb17d92f62b19cd0ee79dbd20719ab83f86820f2f53a6a3c270252",
+  "exclusion_sha256": "e933fa3fa418b519580b0f3f660935434f433423b376973ca6f0b7b082896577"
+}

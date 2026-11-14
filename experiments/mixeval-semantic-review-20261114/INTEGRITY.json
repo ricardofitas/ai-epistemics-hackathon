@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "files": {
+    "PROTOCOL.json": "0d60c49b5bccb8cb0452a0cdab383378fc393e3cbde37cb61bab22264487304a",
+    "packet.jsonl": "dc6c2d088150c26824baaf75153c3966d2d87024ee42d6ed13363e4600065960",
+    "key.jsonl": "826d946518587272e9393dcd3a39d006723decd4bc55e10561843ce4e8c018b0",
+    "reviewer_a.jsonl": "2f28da9163397b4fb732ea540810fa296a14f6a42c44979d9c2e7766a2dabfa3",
+    "reviewer_b.jsonl": "3b4a951ad697571484e6f5645917cf1bb61c66fa7100b3b557182bf9a7e55e47",
+    "SUMMARY.json": "f24443439df02d7d5015eca4919022755492e11f77300e4c416266d0814e444c",
+    "CONSENSUS.jsonl": "6bb8cdb5f6ef0c3cdf2d03f2e9b12363a8431cb3ec05daa4695a3176f6e68488"
+  },
+  "packet_key_bijection": true,
+  "grounded_correct_excerpts": true,
+  "preserved_primary_unknown": 11
+}

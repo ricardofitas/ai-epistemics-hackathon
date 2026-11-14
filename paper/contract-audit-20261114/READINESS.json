@@ -1,7 +1,7 @@
 {
   "status": "PRIVATE_WORKING_DRAFT_READY_FOR_INTERNAL_REVIEW",
-  "pages": 13,
-  "claims": 15,
+  "pages": 14,
+  "claims": 16,
   "numerical_consistency": "PASS",
   "visual_review": "PASS",
   "not_ready_for_external_submission": [
@@ -10,16 +10,16 @@
     "Full installeddistribution/provider/tokenizer/native-primarymetric integration untested; nativeorchestration usesexplicitdependencyfacades and replacedprovider/scoring.",
     "Defaultofficialmodeljudge and independentlyaffectedexternalconclusion unverified.",
     "Authoragreement/venuepresentation pending.",
-    "New20questionpilot is source-exposed,fixedorder and evaluatedwithheuristicrules. Post-outcomeformatreviewislexical,notindependenthuman/defaultjudge correctnessvalidation."
+    "Small source-exposed fixed-order pilot; retrospective assistant adjudication is not human/default-judge validation; final-answer/content constructs remain separate."
   ],
   "strongest_supported_claim": "Pinned source-to-request, task-kind and source-to-reference defects with controlled empirical consequences and bounded causal/transfer interventions.",
   "next_actions": [
-    "Audit source-correct final answers versus heuristicrulecredit and formatting/rationale effects under fixed criteria.",
+    "Run fixed prospective instruction/carrier ablation on new informative questions; preserve all unknown captures and semantic ambiguities.",
     "Design a bounded prospective extension/minimal-format ablation with new informative source cases; preserve unknown outcomes.",
     "Close installed dependencies and realprovider/nativeorchestration boundary without replacing its invariant checks.",
     "Pursue affected externalconclusion only from a newprimaryprovenancelink."
   ],
-  "working_draft_version": "1.4",
+  "working_draft_version": "1.5",
   "native_task_path_integration": "PASS200cases/801requests/400constructed scoring fixtures; models and tokenizers excluded",
   "integrated_updates": [
     "Installed native source/request gate",
@@ -29,7 +29,8 @@
     "Constructed scoring replay and original-reference exclusions",
     "49existingpublicresponse replay with incomplete matching",
     "Bounded fullmodule nativeorchestration and identity/coveragecontrols",
-    "Source-placeholder and denominator clarification; rawhashcollision erratum retained"
+    "Source-placeholder and denominator clarification; rawhashcollision erratum retained",
+    "Masked assistant adjudication of final answers and endorsed factual content on69existingcompleteoutputs"
   ],
   "main_text_pages": 8,
   "native_orchestration": "PASS_WITH_PROVENANCE_ERRATUM;49reusedresponses,10coveragecontrols,fullnativefileswithdeclaredinterventions",
@@ -37,5 +38,6 @@
   "source_latest_pilot_model_requests": 80,
   "latest_pilot_complete_responses": 69,
   "latest_pilot_unknown_responses": 11,
-  "latest_pilot_verification": "PASS independent80request/source/terminal/ledger/common-score/bounds reconciliation"
+  "latest_pilot_verification": "PASS independent80request/source/terminal/ledger/common-score/bounds reconciliation",
+  "semantic_review": "PASS68/69agreementperaxis;17content/finaldiscordances;newAPIcalls0"
 }

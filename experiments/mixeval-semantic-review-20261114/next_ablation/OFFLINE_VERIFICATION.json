@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checks": [
+    "equal_allcorrect",
+    "pure_instruction",
+    "pure_carrier",
+    "conjunction",
+    "allmissing_preserves160slots_and_interaction_bounds",
+    "duplicate_rejected",
+    "unknown_id_rejected",
+    "bad_hash_rejected",
+    "unverified_rejected"
+  ],
+  "new_model_calls": 0,
+  "new_judge_calls": 0,
+  "purpose": "Constructed offline verification of coverage, identity and factorial contrast arithmetic. Not empirical results."
+}

@@ -1,0 +1,53 @@
+{
+  "branch": "feat/gammaf-epistemic-audit",
+  "commit": "d4419f160252adee3d639df9ea23cd1600277c32",
+  "new_model_calls": 0,
+  "terminal_data_sha256": "107aef0ac18fa1067b6a45c69d8d42caa857aa2131da14705762e82677b334bb",
+  "terminal_only_replay": {
+    "debates": 11200,
+    "all_11200_saved_labels_match": true,
+    "discrepancy": {
+      "debates": 9600,
+      "released_correct": 8133,
+      "delivered_correct": 8048,
+      "disagreements": 227,
+      "false_credits": 156,
+      "missed_credits": 71
+    },
+    "control_disagreements": 0,
+    "tune_questions": 80,
+    "held_questions": 320,
+    "question_split_disjoint": true
+  },
+  "reproduced_bug": {
+    "kind": "mixed_population_shadow_summary",
+    "minimal_witness": {
+      "detector_debates": 1,
+      "control_debates": 1,
+      "detector_rate_percent": 100.0,
+      "control_rate_percent": 100.0,
+      "contamination_rate_percent": 200.0,
+      "mean_events_per_contaminated_debate": 7.5
+    },
+    "saved_artifact": {
+      "detector_hits": 217,
+      "detector_denominator": 5518,
+      "detector_rate_percent": 3.932584269662921,
+      "control_hits": 323,
+      "control_denominator": 1341,
+      "control_rate_percent": 24.086502609992543,
+      "contaminated_debates_combined": 540,
+      "published_mixed_denominator_rate_percent": 9.786154403769482,
+      "correct_combined_population_rate_percent": 7.872867764980318,
+      "detector_events": 559,
+      "correct_detector_events_per_detector_hit": 2.576036866359447,
+      "published_events_over_combined_hits": 1.0351851851851852
+    }
+  },
+  "limitations": [
+    "Terminal labels replayed from committed compact projection, not independent public-source authentication.",
+    "28 upstream raw trajectory files are absent from Git tree. New full-trajectory detector and shadow rates not independently rerun. Handoff documents a source-download setup for old replay.",
+    "Shadow events are observational temporal adjacency/vote-change patterns; no counterfactual model intervention proves transmission.",
+    "EpistemicGuard is offline reaggregation of trajectories generated under other detectors; no live superiority claim verified."
+  ]
+}

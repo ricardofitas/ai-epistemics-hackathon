@@ -1,4 +1,4 @@
-Private research manuscript v1.4 and evidence synthesis.
+Private research manuscript v1.5 and evidence synthesis.
 Run python verify_claims.py to reconcile the current claim ledger, numeric/status claims and exact source snapshot hashes. Run python render_manuscript.py [optional-output-path] to reproduce the PDF. Use requirements.txt and installed LiberationSerif/Sans fonts.
 The structured manuscript is manuscript.json. There are eight main-text pages followed by references, source-family transfer, bounded native orchestration and claim-map appendices. Consult READINESS.json for current counts and remaining gaps.
 SOURCE_ARCHIVES.json identifies experiment archives. EVIDENCE_SOURCES.json maps each bundled evidence snapshot to exact archived members and hashes. Historical source_ids.json, prepare_evidence.py and RELATED_WORK_COMPARISON.md describe earlier authoring stages and must not regenerate the current ledger.
@@ -8,3 +8,5 @@ Bounded full-module orchestration reuses the same49publictexts through native ru
 Official optional rule mode is distinct from default model judging. Literal-alias misses and random-choice fallback remain unmodified. A separately declared exploratory exact-alias guard changes two constructed controls and zero of49real outputs; it is not independently validated.
 A separate matched real-generation pilot has protocol and common-scoring analysis fixed before its80maximum singleattempt requests. Its execution and completeness status are recorded separately; do not infer completed requests from a launch receipt. Captured/model outputs, scoring replays and source aliases are distinct evidence types.
 Nothing was submitted, published or sent to third parties.
+
+Version1.5: verify_claims.py also checks maskedreview summary/protocol/independentverification. Full protocol, maskedpacket/key,69-rowreviews and80-rowconsensus are in the separate semantic-review study package. This is retrospective assistant review; no new model or judge API calls.

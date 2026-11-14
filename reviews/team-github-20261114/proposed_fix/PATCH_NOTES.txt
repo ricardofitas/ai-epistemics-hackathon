@@ -1,0 +1,64 @@
+Proposed isolated correction: shadow population accounting
+
+Base: ricardofitas/ai-epistemics-hackathon, feat/gammaf-epistemic-audit,
+d4419f160252adee3d639df9ea23cd1600277c32. This directory is a proposal;
+the teammate branch and its frozen artifacts have not been modified.
+
+Scope
+
+Keep existing events as detector-only and control_events as control-only.
+Add total_events, detector_contaminated_debates and control_contaminated_debates.
+Make contamination_rate_percent use combined hits / combined considered debates.
+Make the unqualified mean use combined events / combined affected debates.
+Expose explicit detector and control means. Correct the existing printed detector
+count to use detector hits. Preserve the frozen results.json and run.log verbatim.
+
+Expected values from the saved aggregate counts (not a new trajectory replay):
+
+detectors: 217 / 5518 = 3.9325842697 percent; 559 events / 217 affected = 2.5760368664
+controls: 323 / 1341 = 24.0865026100 percent; 1333 events / 323 affected = 4.1269349845
+combined: 540 / 6859 = 7.8728677650 percent; 1892 events / 540 affected = 3.5037037037
+
+The former global field divided 540 combined hits by 5518 detector debates.
+The former mean divided 559 detector events by 540 combined hits.
+The detector/control rates and per-task/per-topology rates already had coherent
+denominators; they are unchanged. This patch does not change classifications,
+terminal labels, EpistemicGuard inference or its leaderboard.
+
+Regression validation
+
+tests/test_shadow_population_counts.py covers a real two-debate exposure witness,
+detector-only and control-only populations, empty input, and a controlled event
+provider matching the archived population totals. The last test validates summary
+aggregation, not the original event classification. Five tests passed locally.
+
+Raw fixtures required for full archive tests
+
+The committed compact gamma_debates.jsonl.gz supports terminal-only replay, which
+independently matched all 11200 labels. Default load_debates(with_trajectories=True)
+also requires the 28 pinned per-task/per-method original JSON files under:
+
+swarmlab-gammaf/gammaf_handoff/_source/experiments-Information-Sciences/
+experiment1/results/summary-exp1-scores/<TASK>/<METHOD>.json
+
+They are absent from the branch Git tree. gamma_sources.json pins public repository
+pmateo-uc3m/GAMMAF at 53be3249ebfa631d8e960c9fb1c931d526654697, exact paths,
+byte counts and Git blobs. The older handoff README documents running its run.py
+with --from-source (NumPy + public network; approximately 122 MB) to populate the
+ignored cache. The new runner should document this setup before full reproduction.
+Without those files the original suite had 19 passes and 14 setup errors for
+missing trajectories. None of those errors was counted as a passed archive test.
+
+phase_three_sweep
+
+No path or reference named phase_three_sweep occurs in the complete 695-entry
+tree at d4419f1, nor in the inspected new modules/runner. Impact on another
+commit's phase_three_sweep cannot be determined without its exact source.
+
+Reproduction of the proposed focused tests
+
+With NumPy and pytest installed, from this directory:
+python3 -m pytest -q tests/test_shadow_population_counts.py
+
+The archived fixed code/results remain under ../snapshot. The unified patch
+contains only changed files plus this note and the new regression file.

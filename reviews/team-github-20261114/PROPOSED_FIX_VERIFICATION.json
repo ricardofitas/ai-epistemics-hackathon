@@ -1,0 +1,21 @@
+{
+  "base_commit": "d4419f160252adee3d639df9ea23cd1600277c32",
+  "remote_mutations": 0,
+  "new_model_calls": 0,
+  "focused_tests": {
+    "passed": 5,
+    "failed": 0
+  },
+  "full_archive_replay": "Not rerun: 28rawtrajectoryfiles absent; prior terminal-only11200labels PASS",
+  "changed_files": [
+    "gammaf_epistemic/audit_proofs.py",
+    "scripts/run_hackathon_experiments.py",
+    "tests/test_audit_proofs.py",
+    "tests/test_shadow_population_counts.py",
+    "PATCH_NOTES.txt"
+  ],
+  "patch_sha256": "66069733a17d2337a66bfda78a4b757eab2b3b2b90c693c3ad2eafe7e8580d77",
+  "phase_three_sweep": "No such path in complete695entrytree atbase; sourceawaited for other revisions.",
+  "git_apply_check": "PASS against original snapshot",
+  "changed_python_syntax": "PASS"
+}

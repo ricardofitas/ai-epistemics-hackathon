@@ -1,0 +1,23 @@
+{
+  "stage": "Post-outcome masked content adjudication of existing MixEval captures",
+  "version": 1,
+  "scope": "Same 80 captured requests on 20 previously exposed questions; no new model or judge API calls",
+  "prior_exposure": "Aggregate scores and exploratory lexical result (14/18 Qwen binding complete texts equal A) were already known. Individual texts not read by this reviewer before this protocol. Masking does not make this an independent prospective trial.",
+  "eligibility": "Use frozen ANALYSIS_CAPTURES judged=true only. Preserve all 11 unjudged captures as unknown; never upgrade using partial output.",
+  "masking": "Shuffle by SHA256 with fixed semantic-review-v1 salt; opaque ID only, omit model, condition, original score and prompt wording. Supply official question/context, accepted aliases and complete response text. The response itself can reveal format and hence possible condition.",
+  "adjudicators": "Two assistant reviewers independently apply rubric, not human annotation or the default official model judge. Compare only after both complete. Unresolved disagreement becomes unknown for consensus sensitivity bounds.",
+  "final_answer_rubric": {
+    "correct": "Clearly endorsed final factual answer conveys an official accepted alias or unambiguous equivalent, including an explicit final answer sentence. Bare A with no actual source answer options is not an answer to free-form source task.",
+    "incorrect": "Explicit endorsed wrong factual answer, or non-answer/sole choice tag with no source choices, or a final choice tag after rationale with no endorsed final factual answer.",
+    "uncertain": "Ambiguous final commitment, conflicting final factual answers, specialized equivalence not grounded in supplied aliases, or insufficient evidence. Do not guess a final fact from a tag."
+  },
+  "content_rubric": {
+    "correct": "Response explicitly endorses the correct fact anywhere, even if followed by a non-informative final tag; count factual content separately from final answer.",
+    "incorrect": "No endorsed correct source answer; incidental substring, rejected candidate, quoted question, unrelated number and negated alias do not qualify.",
+    "uncertain": "Correctness or endorsement cannot be reliably resolved from supplied official aliases and text."
+  },
+  "fields": ["opaque_id", "final_label", "content_label", "final_excerpt", "content_excerpt", "reason"],
+  "analysis": "Report each reviewer, exact agreement, conservative consensus and original common-rule scores separately. For consensus label correct/incorrect require reviewer agreement; all other pairs are unknown. Fixed 20 denominators per model. Paired bounds sum typed_min-binding_max and typed_max-binding_min over20. No significance or population claim. Review known common-rule credits assigned to final tags separately.",
+  "integrity": "Bind package SHA256, manifest, response and frozen capture hashes; retain all original bytes untouched. Validate 80 unique IDs, 69 eligible and11unknown, 2models x2conditions x20, full packet/key bijection. Every eligible review needs one unique ID and grounded excerpt for correct judgments.",
+  "limits": "Retrospective assistant adjudication with prior aggregate exposure, small repeated panel, possible masking leakage and source alias errors. Measures declared final answer and endorsed factual content, not hidden knowledge or model capability."
+}

@@ -1,7 +1,7 @@
 {
-  "version": "1.4",
+  "version": "1.5",
   "main_text_pages": 8,
-  "page_count": 13,
+  "page_count": 14,
   "pages": [
     {
       "page": 1,
@@ -40,7 +40,7 @@
     },
     {
       "page": 8,
-      "words": 456,
+      "words": 457,
       "out_of_bounds_characters": 0
     },
     {
@@ -60,17 +60,28 @@
     },
     {
       "page": 12,
-      "words": 442,
+      "words": 436,
       "out_of_bounds_characters": 0
     },
     {
       "page": 13,
-      "words": 454,
+      "words": 442,
+      "out_of_bounds_characters": 0
+    },
+    {
+      "page": 14,
+      "words": 401,
       "out_of_bounds_characters": 0
     }
   ],
   "bounds": "PASS",
   "used_fonts_embedded": true,
-  "visual_review": "PASS: all13pages contact sheet, fullscoring/pilot/orchestration/claim-map pages inspected; nooverflow orclipping",
-  "independent_claim_verification": "PASS15claims"
+  "used_fonts": [
+    "LiberationSans",
+    "LiberationSans-Bold",
+    "LiberationSerif"
+  ],
+  "unused_resource_font": "Helvetica resource is unembedded but not used in any text span",
+  "visual_review": "PASS: all14pages contact sheet plusfullchanged8,12,13,14 inspected; nooverfloworclipping",
+  "independent_claim_verification": "PASS16claims"
 }

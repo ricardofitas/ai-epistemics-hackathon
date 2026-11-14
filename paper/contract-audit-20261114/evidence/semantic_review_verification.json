@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-11-14T15:56:28.897612+00:00",
+  "verifier": "Independent masked adjudicator after completing reviewer_b; direct recomputation, did not import/run analyze_review.py",
+  "raw_records": 80,
+  "eligible": 69,
+  "preserved_capture_unknown": 11,
+  "additional_consensus_unknown": {
+    "trial_id": "MXG-09-T-G",
+    "reason": "incorrect-vs-uncertain perique blending/smoking equivalence"
+  },
+  "agreement": {
+    "final": 68,
+    "content": 68
+  },
+  "checks": [
+    "80unique raw/manifest/capture/key IDs,20questions/model/condition",
+    "packet official question/context/aliases and output bytes equal source/raw",
+    "request/output hashes and saved preparation/integrity digests match",
+    "all correct excerpts are verbatim grounded",
+    "consensus exactly reconstructed from both independent reviews",
+    "bounds recomputed by totals with fixed20denominator",
+    "17content/finaldiscordances,9Gemma wholetextcredits without factualfinal,1Qwen factualfinalmiss confirmed"
+  ],
+  "models": {
+    "gemma-4-31b-it": {
+      "final": {
+        "counts": {
+          "binding_only": {
+            "incorrect": 16,
+            "correct": 2,
+            "unknown": 2
+          },
+          "official_typed": {
+            "correct": 12,
+            "unknown": 5,
+            "incorrect": 3
+          }
+        },
+        "gain_bounds_pp": [
+          40,
+          75
+        ]
+      },
+      "content": {
+        "counts": {
+          "binding_only": {
+            "correct": 17,
+            "incorrect": 1,
+            "unknown": 2
+          },
+          "official_typed": {
+            "correct": 12,
+            "unknown": 5,
+            "incorrect": 3
+          }
+        },
+        "gain_bounds_pp": [
+          -35,
+          0
+        ]
+      },
+      "correct_content_in_incorrect_final": [
+        "MXG-12-B-G",
+        "MXG-10-B-G",
+        "MXG-17-B-G",
+        "MXG-11-B-G",
+        "MXG-04-B-G",
+        "MXG-06-B-G",
+        "MXG-08-B-G",
+        "MXG-05-B-G",
+        "MXG-03-B-G",
+        "MXG-15-B-G",
+        "MXG-19-B-G",
+        "MXG-14-B-G",
+        "MXG-07-B-G",
+        "MXG-00-B-G",
+        "MXG-09-B-G"
+      ],
+      "rule_credit_without_correct_final": [
+        "MXG-12-B-G",
+        "MXG-10-B-G",
+        "MXG-11-B-G",
+        "MXG-04-B-G",
+        "MXG-06-B-G",
+        "MXG-15-B-G",
+        "MXG-19-B-G",
+        "MXG-07-B-G",
+        "MXG-00-B-G"
+      ],
+      "correct_final_without_rule_credit": []
+    },
+    "qwen3.8-27b": {
+      "final": {
+        "counts": {
+          "binding_only": {
+            "incorrect": 16,
+            "correct": 2,
+            "unknown": 2
+          },
+          "official_typed": {
+            "correct": 15,
+            "unknown": 3,
+            "incorrect": 2
+          }
+        },
+        "gain_bounds_pp": [
+          55,
+          80
+        ]
+      },
+      "content": {
+        "counts": {
+          "binding_only": {
+            "incorrect": 14,
+            "correct": 4,
+            "unknown": 2
+          },
+          "official_typed": {
+            "correct": 15,
+            "unknown": 3,
+            "incorrect": 2
+          }
+        },
+        "gain_bounds_pp": [
+          45,
+          70
+        ]
+      },
+      "correct_content_in_incorrect_final": [
+        "MXG-13-B-Q",
+        "MXG-03-B-Q"
+      ],
+      "rule_credit_without_correct_final": [],
+      "correct_final_without_rule_credit": [
+        "MXG-00-T-Q"
+      ]
+    }
+  },
+  "interpretation_review": {
+    "nine_gemma_credits": "Explicitly correct rationale content followed byA/None; not incidental substring hits. Wholetextcredit and finalanswercorrectness are distinct constructs; do not call allninefactuallywrong outputs orprovenscorerfalsepositives.",
+    "qwen_missed": "Prepare for the worst is an unambiguous semantic equivalent ofButpreparefortheworst; punctuation/connective/aliasrule lacks this credit.",
+    "content_claim": "Content axis measures endorsed supplied-source answer in visible output, not hidden knowledge or capability.",
+    "prospective_status": "Retrospective assistant adjudication with aggregate exposure, masked model/condition but possible format leakage; not humanannotation or officialdefaultjudge."
+  },
+  "readme_claim_review": "Pending README creation; mathematical and interpretation checks complete."
+}

@@ -270,5 +270,23 @@
     "member": "real-generation/EXPLORATORY_OUTPUT_REVIEW.json",
     "sha256": "bea9517b5689dc07f9a8315d7ffd70a381df55a07e9b9fa8e86e0a2132d51244",
     "qualification": "Explicitlypost-outcome lexical/format inspection, not semantic/human correctness adjudication"
+  },
+  "semantic_review_summary.json": {
+    "source_archive": "Epistemics_revisao_semantica_equipa_e_ablacao_20261114.zip",
+    "member": "semantic_review/SUMMARY.json",
+    "sha256": "f24443439df02d7d5015eca4919022755492e11f77300e4c416266d0814e444c",
+    "qualification": "Retrospective masked assistant adjudication, separately labelled from frozen rule scores"
+  },
+  "semantic_review_verification.json": {
+    "source_archive": "Epistemics_revisao_semantica_equipa_e_ablacao_20261114.zip",
+    "member": "semantic_review/INDEPENDENT_VERIFICATION.json",
+    "sha256": "2dcd123d02131234758d13720f8a03a078939e98a9c2f9eab8cb88bfe4a41790",
+    "qualification": "Retrospective masked assistant adjudication, separately labelled from frozen rule scores"
+  },
+  "semantic_review_protocol.json": {
+    "source_archive": "Epistemics_revisao_semantica_equipa_e_ablacao_20261114.zip",
+    "member": "semantic_review/PROTOCOL.json",
+    "sha256": "0d60c49b5bccb8cb0452a0cdab383378fc393e3cbde37cb61bab22264487304a",
+    "qualification": "Retrospective masked assistant adjudication, separately labelled from frozen rule scores"
   }
 }

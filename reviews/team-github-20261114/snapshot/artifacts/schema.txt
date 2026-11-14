@@ -1,0 +1,50 @@
+handoff: C:\Users\Antonio\Desktop\dev tools\hacklaton\ai epistemics\swarmlab-gammaf\gammaf_handoff
+terminal file: gamma_debates.jsonl.gz  records=11200
+terminal record fields:
+  actual             int
+  alerts             int
+  all_answer         str
+  dataset            str
+  delivered          str
+  disagreement       int
+  executed_rounds    int
+  false_credit       int
+  flagged            list[10] of int
+  gold               str
+  graph              str
+  item               int
+  method             str
+  missed_credit      int
+  perturbable        int
+  published          int
+  votes              list[10] of str
+
+upstream round record: _source\experiments-Information-Sciences\experiment1\results\summary-exp1-scores\MMLU\BlindGuard.json
+round record fields:
+  agent_answers      list[10] of str
+  agent_correct      list[10] of bool
+  agent_final_answers list[10] of str
+  agent_safe         list[10] of int
+  anomaly_scores     list[10] of float
+  consensus          bool
+  effective_seeds    object{answer_seed_effective, malicious_seed_effective, questions_random_seed, topology_seed_effective}
+  final_answer       str
+  flags              list[10] of int
+  ground_truth       str
+  included           bool
+  initial_topology   list[10] of list[10] of int
+  is_correct         bool
+  loader_index       int
+  malicious_agent_indexes list[3] of int
+  malicious_flagged  list[3] of int
+  metrics            object{ADR, AIR, ASR, AUROC_beh, AUROC_gt, F1, FPR, UnFlagASR}
+  n_agents           int
+  n_malicious        int
+  padded             bool
+  question_index     int
+  round              int
+  topology           str
+
+derived Debate fields:
+  dataset, method, item, graph, gold, votes[10], flags[10], executed_rounds, published, actual, all_answer, delivered, rounds[], padded_rounds[], adjacency[10][10], insiders[], attack_target, seed
+

@@ -5,7 +5,7 @@
     "blocks": [
       {
         "kind": "meta",
-        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.4"
+        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.5"
       },
       {
         "kind": "heading",
@@ -606,7 +606,7 @@
       },
       {
         "kind": "p",
-        "text": "These are sensitivity bounds over the fixed panel, not population confidence intervals. Qwen retains a positive assigned-score effect even under worst-case treatment of missing answers. Gemma does not. The intervention changes task instructions and formatting together; source exposure, fixed request order and heuristic scoring constrain interpretation. Appendix C retains request, capture and resource checks."
+        "text": "These are fixed-panel sensitivity bounds, not population confidence intervals. The instruction/format intervention, exposed sources, fixed order and heuristic scoring constrain interpretation. Retrospective masked assistant review separates final factual answers from endorsed rationale content (Appendix E): Gemma can retain correct content before a final A tag. This additional construct-specific analysis preserves the original common-rule result above."
       },
       {
         "kind": "heading",
@@ -897,7 +897,7 @@
       },
       {
         "kind": "p",
-        "text": "A separately labelled post-outcome output review finds that 14 of 18 completed Qwen binding-only texts consist solely of the A answer tag. Gemma often gives explanatory text before a final A; heuristic rule scoring can credit that earlier text. Lexical alias/format counts are not semantic gold adjudication. This motivates direct output/scorer auditing rather than a claim of lost underlying capability."
+        "text": "The exploratory lexical review finds 14 of 18 completed Qwen binding-only texts contain only the A answer tag. A later masked assistant adjudication under fixed criteria separates final factual answers, endorsed content and common-rule credit (Appendix E). It reuses these outputs, leaves the original rule analysis unchanged and is not human or default-judge validation."
       }
     ]
   },
@@ -906,7 +906,7 @@
     "blocks": [
       {
         "kind": "p",
-        "text": "The package includes fifteen machine-readable claims with exact source snapshots and archive identities. Reused sources and new generation responses retain separate units."
+        "text": "The package includes sixteen machine-readable claims with exact source snapshots and archive identities. Reused sources and new generation responses retain separate units."
       },
       {
         "kind": "table",
@@ -990,6 +990,11 @@
             "C15",
             "Paired generation: 20 questions, 80 new calls, 69 complete and 11 capped; gains Qwen 50-75 pp, Gemma -5 to +25 pp.",
             "Common official-rule scorer; unknown sensitivity bounds, exposed small panel and fixed order."
+          ],
+          [
+            "C16",
+            "Masked review: 69 outputs, 68/69 agreement per axis; 17 correct-content/final-tag discordances.",
+            "Retrospective assistant review; separate final/content constructs; Appendix E."
           ]
         ],
         "widths": [
@@ -1004,15 +1009,73 @@
       },
       {
         "kind": "p",
-        "text": "Run verify_claims.py to reconcile fifteen claims with the bundled source snapshots and hashes. Original study archives retain selection, request captures and runtime verification. Synthesis checks add no observations."
-      },
+        "text": "Run verify_claims.py to reconcile sixteen claims with the bundled source snapshots and hashes. Original study archives retain selection, request captures and runtime verification. Synthesis checks add no observations."
+      }
+    ]
+  },
+  {
+    "title": "Appendix E. Final answers and factual content",
+    "blocks": [
       {
         "kind": "heading",
-        "text": "Status of this revision"
+        "text": "E.1. Fixed retrospective review criteria"
       },
       {
         "kind": "p",
-        "text": "Version 1.4 integrates controlled scoring, existing public-output replay, bounded native orchestration and a separate new 80-call paired generation pilot. Raw provenance/capture counterexamples and declared implementation boundaries remain explicit."
+        "text": "Protocol de205ec97d15cb290815063d4f190279e7410632 fixes the rubric before individual adjudication. Two assistant reviewers independently inspect all 69 complete outputs in opaque-ID order with model, condition and original score hidden. They receive the source question/context and accepted aliases. Prior aggregate exposure and possible format leakage remain; this is retrospective assistant annotation, not human annotation or the official default model judge. All 11 incomplete captures remain unknown."
+      },
+      {
+        "kind": "p",
+        "text": "The final-answer axis requires an endorsed factual answer; a bare A/None tag does not answer a source free-form task. The content axis separately credits an explicitly endorsed correct fact anywhere in the output. Incidental or negated alias mentions do not qualify. Each axis has correct, incorrect or uncertain labels. Consensus requires agreement; one disagreement about using perique as blending tobacco, without explicitly stating smoking, stays unknown."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Model",
+          "Original common-rule gain",
+          "Final-answer gain",
+          "Factual-content gain"
+        ],
+        "rows": [
+          [
+            "Gemma",
+            "-5 to +25 pp",
+            "+40 to +75 pp",
+            "-35 to 0 pp"
+          ],
+          [
+            "Qwen",
+            "+50 to +75 pp",
+            "+55 to +80 pp",
+            "+45 to +70 pp"
+          ]
+        ],
+        "widths": [
+          60,
+          140,
+          140,
+          139
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "E.2. What the disagreement between constructs shows"
+      },
+      {
+        "kind": "p",
+        "text": "Reviewers agree on 68/69 labels on each axis. Seventeen completed outputs endorse the source-correct fact but end with an uninformative choice tag: 15 Gemma and two Qwen binding-only outputs. Nine of these Gemma outputs receive common-rule credit from the preceding rationale. Those are differences between whole-text credit and the declared final-answer criterion, not nine demonstrated factual false positives. One Qwen final answer, Prepare for the worst., is semantically correct despite failing the longer accepted alias But prepare for the worst."
+      },
+      {
+        "kind": "p",
+        "text": "For Gemma, binding-only has two consensus-correct final answers but 17 correct-content outputs; typed generation has 12 on both axes. Typed Gemma has five unknown labels: four incomplete captures plus the adjudication uncertainty. Qwen has two binding-only final answers and four correct-content outputs; typed generation has 15 on both axes. Original rule outcomes remain unchanged."
+      },
+      {
+        "kind": "heading",
+        "text": "E.3. Bounds, verification and the next test"
+      },
+      {
+        "kind": "p",
+        "text": "All bounds pair the same 20 questions per model, assigning each unknown correctness in [0,1]. They are finite-panel sensitivity bounds, not confidence intervals. Source/request identities, packet/key bijection, grounded excerpts and independent aggregate reconstruction pass. No new model or judge API calls are made. The review does not establish hidden capability loss or population superiority; a prospective instruction-by-carrier ablation on new questions is the next causal test."
       }
     ]
   }

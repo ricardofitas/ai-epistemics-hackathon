@@ -1,0 +1,49 @@
+{
+  "study": "MixEval instruction-by-options-carrier factorial diagnostic",
+  "status": "PREPARED_ONLY_NO_MODEL_CALLS",
+  "protocol_version": 1,
+  "source_repository": "MixEval/MixEval",
+  "source_revision": "66a05ec3821a2b5089ed1e32a5d65ab6ecdbf906",
+  "input_pool": "Previously captured 200-record selection, 100 free-form. Source snapshot retained as SOURCE_POOL.jsonl.gz from research commit2637c3d18cc9dd5f8005f1f6385dfd6a3862c603, blob1232735d070afc7882f481103b5df532f8359c48; original capture SHA256 c00abfba2d087d451bec17ef6b2367cb0582831aa1f128e61288f597841cd568.",
+  "selection": "Free-form pool sorted ascending existing source_sha256; exclude all20priorgeneration cases by canonical source hash OR Unicode NFKC/casefold/whitespace-normalized exact question+context hash; select first20remaining. No replacement after outcomes. Duplicate semantic exact forms removed before selection. This exclusion is exact normalized text, not semantic equivalence detection.",
+  "prior_exposure": "Entire100freeform source pool was used in earlier source/scoring audits. New panel is disjoint from20priorgeneration questions by declared exact rules, not globally blind data, independent dataset transfer, or fresh official acquisition. No future model outputs observed.",
+  "hypothesis": "The wrong choice instruction and the bogus A.None carrier independently or jointly alter free-form answer production; model-specific effects need not agree. All other bytes remain fixed within a source/model.",
+  "factors": {
+    "instruction": ["free_form", "choice"],
+    "options_carrier": ["absent", "A.None"]
+  },
+  "conditions": ["free_form__absent", "free_form__A.None", "choice__absent", "choice__A.None"],
+  "template": {
+    "shared_prefix": "Answer the source question using its context when relevant.",
+    "free_form_instruction": "Give the factual answer to the question in free form.",
+    "choice_instruction": "Select the best answer from the provided options.",
+    "shared_suffix": "Put your final answer in <answer>...</answer> tags.",
+    "carrier_present": "Options:\nA. None",
+    "carrier_absent": "",
+    "source_blocks": "Question:\n{exact_source_prompt}\n\nContext:\n{exact_source_context}"
+  },
+  "design_boundary": "Custom crossed diagnostic, not byteexact official constructors or an installed/native upstream evaluation. Choice-without-options and freeform-with-bogus-options are intentional diagnostic interventions. Both baseline prior binding-only and officialtyped endpoints remain archived references, not claimed replicated here. No effects of arbitrary instruction wording or answer-tag format separately identified.",
+  "source_questions": 20,
+  "models": ["gemma-4-31b-it", "qwen3.8-27b"],
+  "maximum_requests": 160,
+  "maximum_output_tokens_per_request": 4096,
+  "maximum_output_tokens_total": 655360,
+  "maximum_prompt_utf8_bytes_per_request": 8192,
+  "temperature": 0,
+  "attempts_per_request": 1,
+  "retry": false,
+  "concurrency": 1,
+  "minimum_start_interval_seconds": 5,
+  "ordering": "Source-major fixed stable order. At source rankj, rotate4condition positions byj modulo4 independently per model with model offset2; model presented first alternates byj parity. Across20sources each condition occupies each serial position5times/model and each model leads10sources. Deterministic counterbalance reduces fixed-order confounding, not a randomization-based causal population guarantee.",
+  "scoring": "Same pinned optional official RULE scorer and immutable source targets across all4conditions, eligibility complete/http200/nonempty/verified request+output hashes only. Preserve official parser counterexamples. Additional final-answer/content adjudication requires separately frozen masked rubric before any newoutputs; do not silently call RULE a capability score or default official modeljudge.",
+  "analysis": "For each model and20fixedcases, compute instruction contrast (free_form-choice) at each carrier, carrier contrast (absent-present) at each instruction, and interaction. Preserve per-source pairing. Unknown eligible scores range0..1, including every incomplete/unattempted/error; propagate coefficient signs for conservative bounds. Contrasts and interaction describe this panel, not benchmark prevalence. Interaction range may exceed100percentagepoints and must not be mislabeled probability.",
+  "before_launch_requirements": [
+    "Protocol, manifest, implementation and analysis hashes saved in reviewable commit before any request",
+    "Parent scientific review accepts factorial meaning and prospectively fixed endpoints",
+    "Future local-error hardening and request/source identity controls pass baseline and fault tests",
+    "Read current provider model catalogue and recover authorized resource ceiling; current160call/4096output caps are proposal limits, not proof of billing authorization or available credits",
+    "No rerun/resume/substitution of original80requests; no defaultjudge calls inside160generationcall allowance"
+  ],
+  "launch_authorization": "Not launched by preparation task. No credential use or network model call is implemented by prepare.py.",
+  "new_model_calls": 0
+}

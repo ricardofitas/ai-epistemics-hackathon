@@ -103,5 +103,12 @@
     "claim": "20fixedsourcequestions;80newrequests;69complete11unknown;Gemmagain[-.05,.25];Qwengain[.5,.75];8062input66304outputtokens",
     "evidence": "paired_generation_analysis.json;paired_generation_verification.json;paired_terminal_review.json;paired_output_review.json",
     "qualification": "Prespecified common-rule scoring and unknown bounds; small exposed source panel, fixed order, instructions/format jointly changed"
+  },
+  {
+    "id": "C16",
+    "section": "10 and Appendix E",
+    "claim": "69maskedresponses;68/69agreement peraxis;17content/finaldiscordances;9Gemmarulecreditswithoutcorrectfinal;Gemmafinal40..75pp/content-35..0pp;Qwenfinal55..80pp/content45..70pp",
+    "evidence": "semantic_review_summary.json;semantic_review_verification.json;semantic_review_protocol.json",
+    "qualification": "Retrospective two-assistant adjudication of exposed outputs; construct-specific labels,11captureunknowns plus1adjudicationuncertainty; no human/defaultjudge or population claim"
   }
 ]

@@ -1,0 +1,706 @@
+{
+  "status": "PASS",
+  "baseline": {
+    "exact_invariant_fields": [
+      "status",
+      "planned_requests",
+      "recorded_artifacts",
+      "completed_scored",
+      "effects",
+      "usage_records",
+      "input_tokens",
+      "output_tokens",
+      "cost_units",
+      "cost_currency",
+      "scoring_mode",
+      "new_judge_calls"
+    ],
+    "all_80_per_slot_scores_identical": true,
+    "judged_results_identical_after_ordering_official_unordered_parsed_candidates": true,
+    "parsed_candidate_order_note": "Official list(set(...)) candidate order is process-hash dependent; sorted only for verification comparison, not scorer execution.",
+    "completed_scored": 69,
+    "unknown": 11,
+    "effects": [
+      {
+        "model": "gemma-4-31b-it",
+        "pairs": 20,
+        "complete_pairs": 14,
+        "typed_wins": 3,
+        "binding_wins": 0,
+        "ties": 11,
+        "gain_bounds": [
+          -0.05,
+          0.25
+        ],
+        "pairs_detail": [
+          {
+            "source_index": 492,
+            "binding_only": 1.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 548,
+            "binding_only": null,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 1562,
+            "binding_only": 0.0,
+            "official_typed": 0.0
+          },
+          {
+            "source_index": 1169,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 47,
+            "binding_only": 1.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 1528,
+            "binding_only": 0.0,
+            "official_typed": 0.0
+          },
+          {
+            "source_index": 662,
+            "binding_only": 1.0,
+            "official_typed": null
+          },
+          {
+            "source_index": 1217,
+            "binding_only": 1.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 1425,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 1705,
+            "binding_only": 0.0,
+            "official_typed": 0.0
+          },
+          {
+            "source_index": 1100,
+            "binding_only": 1.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 323,
+            "binding_only": 1.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 268,
+            "binding_only": 1.0,
+            "official_typed": null
+          },
+          {
+            "source_index": 992,
+            "binding_only": 1.0,
+            "official_typed": null
+          },
+          {
+            "source_index": 755,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 935,
+            "binding_only": 1.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 896,
+            "binding_only": null,
+            "official_typed": 0.0
+          },
+          {
+            "source_index": 1749,
+            "binding_only": 0.0,
+            "official_typed": null
+          },
+          {
+            "source_index": 740,
+            "binding_only": 1.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 836,
+            "binding_only": 1.0,
+            "official_typed": 1.0
+          }
+        ]
+      },
+      {
+        "model": "qwen3.8-27b",
+        "pairs": 20,
+        "complete_pairs": 15,
+        "typed_wins": 10,
+        "binding_wins": 0,
+        "ties": 5,
+        "gain_bounds": [
+          0.5,
+          0.75
+        ],
+        "pairs_detail": [
+          {
+            "source_index": 492,
+            "binding_only": 0.0,
+            "official_typed": 0.0
+          },
+          {
+            "source_index": 548,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 1562,
+            "binding_only": 0.0,
+            "official_typed": null
+          },
+          {
+            "source_index": 1169,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 47,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 1528,
+            "binding_only": 0.0,
+            "official_typed": 0.0
+          },
+          {
+            "source_index": 662,
+            "binding_only": null,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 1217,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 1425,
+            "binding_only": 1.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 1705,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 1100,
+            "binding_only": null,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 323,
+            "binding_only": 0.0,
+            "official_typed": 0.0
+          },
+          {
+            "source_index": 268,
+            "binding_only": 0.0,
+            "official_typed": null
+          },
+          {
+            "source_index": 992,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 755,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 935,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 896,
+            "binding_only": 0.0,
+            "official_typed": null
+          },
+          {
+            "source_index": 1749,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 740,
+            "binding_only": 1.0,
+            "official_typed": 1.0
+          },
+          {
+            "source_index": 836,
+            "binding_only": 0.0,
+            "official_typed": 1.0
+          }
+        ]
+      }
+    ]
+  },
+  "fault_controls": [
+    {
+      "control": "minimal_local_capture_error",
+      "status": "PASS",
+      "integrity_status": "PASS",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "missing_artifact",
+      "status": "PASS",
+      "integrity_status": "PASS",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "unreadable_artifact",
+      "status": "PASS",
+      "integrity_status": "PASS",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "missing_trial_id",
+      "status": "PASS",
+      "integrity_status": "PASS",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "missing_request_hash",
+      "status": "PASS",
+      "integrity_status": "PASS",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "missing_output_hash",
+      "status": "PASS",
+      "integrity_status": "PASS",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "missing_request_payload",
+      "status": "PASS",
+      "integrity_status": "PASS",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "wrong_request_hash",
+      "status": "PASS",
+      "integrity_status": "FAIL",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "changed_payload",
+      "status": "PASS",
+      "integrity_status": "FAIL",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "changed_output_bytes",
+      "status": "PASS",
+      "integrity_status": "FAIL",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "wrong_returned_model",
+      "status": "PASS",
+      "integrity_status": "FAIL",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "wrong_trial_identity",
+      "status": "PASS",
+      "integrity_status": "FAIL",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "duplicate_trial_identity",
+      "status": "PASS",
+      "integrity_status": "FAIL",
+      "completed_scored": 67,
+      "unknown": 13,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.45,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "duplicate_provider_response_id",
+      "status": "PASS",
+      "integrity_status": "FAIL",
+      "completed_scored": 67,
+      "unknown": 13,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.45,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "unexpected_extra_receipt",
+      "status": "PASS",
+      "integrity_status": "FAIL",
+      "completed_scored": 69,
+      "unknown": 11,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.25
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "incomplete_even_if_completion_flag_true",
+      "status": "PASS",
+      "integrity_status": "PASS",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "cap_violation",
+      "status": "PASS",
+      "integrity_status": "FAIL",
+      "completed_scored": 68,
+      "unknown": 12,
+      "effects": [
+        {
+          "model": "gemma-4-31b-it",
+          "pairs": 20,
+          "gain_bounds": [
+            -0.05,
+            0.3
+          ]
+        },
+        {
+          "model": "qwen3.8-27b",
+          "pairs": 20,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ]
+        }
+      ]
+    },
+    {
+      "control": "duplicate_manifest_id",
+      "status": "PASS",
+      "fatal_design_error": "duplicate_or_invalid_manifest_trial_id"
+    },
+    {
+      "control": "missing_manifest_slot",
+      "status": "PASS",
+      "fatal_design_error": "expected_20_sources_and_80_planned_slots"
+    },
+    {
+      "control": "changed_source_record",
+      "status": "PASS",
+      "fatal_design_error": "manifest_source_hash_mismatch"
+    }
+  ],
+  "control_count": 20,
+  "original_files_unchanged": true,
+  "original_file_count": 183,
+  "original_tree_hash": "0959fa8ef3d8d140eae14db17c709417b24a22f35e307d3d696ee298c6a83779",
+  "new_model_calls": 0,
+  "limits": [
+    "Local derivative and deliberate fault controls only; not full installed-provider integration.",
+    "Scientific scores remain the pinned optional official RULE mode, not semantic adjudication.",
+    "Unknown integrity means evidence missing; FAIL means contradictory or duplicate identity/hash evidence."
+  ]
+}
