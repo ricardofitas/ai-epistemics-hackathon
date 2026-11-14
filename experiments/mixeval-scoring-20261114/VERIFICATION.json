@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "source_rows": 200,
+  "uniquely_matched_cached_outputs": 49,
+  "reference_exclusions_native": 49,
+  "typed_correct": {
+    "free_form": 13,
+    "multiple_choice": 20
+  },
+  "typed_denominators": {
+    "free_form": 17,
+    "multiple_choice": 32
+  },
+  "oracle_controls": {
+    "total": 200,
+    "pass": 198,
+    "counterexamples": 2
+  },
+  "choice_random_fallback": {
+    "cases": 5,
+    "correct_with_seed42": 1,
+    "correct_without_fallback": 19,
+    "matched_denominator": 32
+  },
+  "initial_cohort_not_expanded": true,
+  "new_provider_calls": 0,
+  "source_and_module_hashes_verified": true,
+  "scope": "Separate source/identity/capture and ordinary original-scoring re-evaluation by same executor; no human gold audit or default model-judge run."
+}

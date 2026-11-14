@@ -1,0 +1,30 @@
+[
+  {
+    "fixture": "official_gold_text_or_letter",
+    "output": "Government of D.C.",
+    "source_index": 1425,
+    "source_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+    "split": "free_form",
+    "typed": {
+      "parsed": [
+        "government of d.c"
+      ],
+      "random_fallback": false,
+      "score": 0
+    }
+  },
+  {
+    "fixture": "official_gold_text_or_letter",
+    "output": "Tomorrow is another day",
+    "source_index": 1248,
+    "source_sha256": "0dce467d5cda070f4ac3f571e236470686828366662cbe0e24939c63aed35af1",
+    "split": "free_form",
+    "typed": {
+      "parsed": [
+        "another day"
+      ],
+      "random_fallback": false,
+      "score": 0
+    }
+  }
+]

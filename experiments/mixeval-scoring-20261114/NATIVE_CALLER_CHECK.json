@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "panels": {
+    "free_form": {
+      "total_samples": 17,
+      "valid_samples": 0,
+      "accuracy": 0.0,
+      "score": 0.0,
+      "metric": "choice_accuracy_parser",
+      "valid_predictions": 0,
+      "parse_failed": 0,
+      "empty_output": 0,
+      "invalid_references": 17,
+      "rescored_rows": 17,
+      "rescored_by": "one_eval.choice_letter_parser"
+    },
+    "multiple_choice": {
+      "total_samples": 32,
+      "valid_samples": 0,
+      "accuracy": 0.0,
+      "score": 0.0,
+      "metric": "choice_accuracy_parser",
+      "valid_predictions": 0,
+      "parse_failed": 0,
+      "empty_output": 0,
+      "invalid_references": 32,
+      "rescored_rows": 32,
+      "rescored_by": "one_eval.choice_letter_parser"
+    }
+  },
+  "scope": "Exact native rescore method body under existing AST scaffold; ordinary original parser modules. No full installed OneEval engine."
+}
