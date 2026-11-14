@@ -1,0 +1,33 @@
+{
+  "status": "completed",
+  "source_units_completed": 200,
+  "native_option_requests": 801,
+  "constructed_fixture_evaluations": 400,
+  "projection_carrier_differences": 0,
+  "provider_model_calls": 0,
+  "model_backends_instantiated": 0,
+  "errors": [],
+  "tasks": [
+    {
+      "task": "arc_challenge",
+      "status": "completed",
+      "source_rows": 100,
+      "native_request_objects": 401,
+      "fixture_evaluations": 200,
+      "source_gold_fixture_correct": 100,
+      "nongold_fixture_rejected": 100,
+      "projection_carrier_differences": 0
+    },
+    {
+      "task": "openbookqa",
+      "status": "completed",
+      "source_rows": 100,
+      "native_request_objects": 400,
+      "fixture_evaluations": 200,
+      "source_gold_fixture_correct": 100,
+      "nongold_fixture_rejected": 100,
+      "projection_carrier_differences": 0
+    }
+  ],
+  "scope": "Import installed complete native modules, instantiate ConfigurableTask, load local JSON via native datasets API, build_all_requests through normal zero-shot context path, and run native process_results on constructed likelihood vectors. No AST projection, source patch, model, tokenizer or backend execution."
+}

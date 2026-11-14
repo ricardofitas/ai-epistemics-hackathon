@@ -5,7 +5,7 @@
     "blocks": [
       {
         "kind": "meta",
-        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1"
+        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.1"
       },
       {
         "kind": "heading",
@@ -13,7 +13,7 @@
       },
       {
         "kind": "p",
-        "text": "Evaluation software can change the task before a model answers and can change the meaning of the reference after the answer is produced. We audit these two interfaces in a pinned One-Eval revision using official source records, native preprocessing and scoring methods, deterministic controls, and an existing paired trial of two hosted models. A prospectively selected four-contract extension identified malformed ARC-Challenge and OpenBookQA task construction. A later diagnostic expansion confirmed the mechanisms throughout their captured test splits. In a 50-question WinoGrande panel, Qwen's source-correct accuracy gain under joint question/format repair is 42 percentage points under the observed scoring convention and remains between 36 and 48 points under conservative treatment of unknown answers. Gemma's corresponding sensitivity interval includes zero. Re-scoring identical corrected-prompt outputs with source-aligned references changes assigned scores by 40 and 42 points respectively. An experimental pre-inference checker detects selected source-contract failures, while controlled diagnostics expose the limits of trusting adapter metadata. Healthy controls in EvalScope and a bounded native-method projection of LM Evaluation Harness delimit the scope. These findings establish specific implementation faults and controlled consequences; affected independent deployments and broad fault prevalence remain unverified."
+        "text": "Evaluation software can change the task before a model answers and can change the meaning of the reference after the answer is produced. We audit these two interfaces in a pinned One-Eval revision using official source records, native preprocessing and scoring methods, deterministic controls, and an existing paired trial of two hosted models. A prospectively selected four-contract extension identified malformed ARC-Challenge and OpenBookQA task construction. A later diagnostic expansion confirmed the mechanisms throughout their captured test splits. In a 50-question WinoGrande panel, Qwen's source-correct accuracy gain under joint question/format repair is 42 percentage points under the observed scoring convention and remains between 36 and 48 points under conservative treatment of unknown answers. Gemma's corresponding sensitivity interval includes zero. Re-scoring identical corrected-prompt outputs with source-aligned references changes assigned scores by 40 and 42 points respectively. An experimental pre-inference checker detects selected source-contract failures, while controlled diagnostics expose the limits of trusting adapter metadata. Healthy controls in EvalScope and bounded native-method and installed task-path tests of LM Evaluation Harness delimit the scope. These findings establish specific implementation faults and controlled consequences; affected independent deployments and broad fault prevalence remain unverified."
       },
       {
         "kind": "heading",
@@ -314,7 +314,7 @@
       },
       {
         "kind": "p",
-        "text": "This transfer evidence covers native method projection on reused data. It does not cover the complete loader, fewshot driver, tokenizer, likelihood scoring or metric pipeline, nor blind unseen-source validation. A source-bound record cannot prove that an adapter truthfully describes the request eventually sent."
+        "text": "A subsequent installed-package smoke test used the unmodified native ConfigurableTask, local JSON dataset loading, build_all_requests zero-shot context path and process_results. The same 200 records produced 801 requests, identical to the projection. All 400 constructed likelihood fixtures gave expected acc and acc_norm outcomes: source-gold-positive fixtures passed and non-gold-positive fixtures failed. Six installed native module files matched the pinned checkout byte-for-byte. Model inference, tokenization, non-zero-shot rendering and remote dataset acquisition remain outside this integration scope."
       }
     ]
   },
@@ -351,11 +351,11 @@
       },
       {
         "kind": "p",
-        "text": "The diagnostic sample is deliberately enriched, model responses can be incomplete or non-evaluable, and native heuristic parsing differs from the strict primary rule. Full-split counts refer to captured bytes and the pinned software, not current installations. One adapter was corrected after outcomes, and exact-method execution uses dependency scaffolds whose scope is documented. Synthetic conditions reuse source units and are not independent natural faults. Full cross-engine integration and unseen-source checker validation remain open."
+        "text": "The diagnostic sample is deliberately enriched, model responses can be incomplete or non-evaluable, and native heuristic parsing differs from the strict primary rule. Full-split counts refer to captured bytes and the pinned software, not current installations. One adapter was corrected after outcomes, and exact-method execution uses dependency scaffolds whose scope is documented. Synthetic conditions reuse source units and are not independent natural faults. Model-backed evaluation, non-zero-shot rendering and unseen-source checker validation remain open."
       },
       {
         "kind": "p",
-        "text": "The next useful work is a bounded integration test or a concrete external exposure lead that resolves one of those gaps. Repeating the same development panels or searching indiscriminately for a positive result would not strengthen the main claim. The draft is ready for internal scientific review, not external submission: author approval, close related-work comparison, venue formatting and any expanded validation must be resolved first."
+        "text": "The next useful work is a close primary-method comparison or a concrete external exposure lead. The installed-package task-path smoke test resolves a bounded integration gap; repeating the same diagnostic panels would not establish unseen-source generalization. The draft is ready for internal scientific review, not external submission: author approval, close related-work comparison, venue formatting and any expanded validation must be resolved first."
       },
       {
         "kind": "heading",
@@ -419,8 +419,8 @@
           ],
           [
             "C8",
-            "Harness projection: 200 natural cases, 801 option requests; 600 altered carriers rejected directly.",
-            "Native methods only; known source data reused."
+            "Harness: 200 natural cases, 801 option requests; installed-package task path matches, with 400 constructed scoring fixtures.",
+            "Reused data; model backend and tokenizer untested."
           ],
           [
             "C9",
@@ -456,7 +456,7 @@
       },
       {
         "kind": "p",
-        "text": "Private evidence synthesis, version 1. No new model requests, sample expansion or public dissemination occurred while preparing it. Numerical support is verified against the captured artifacts. Literature positioning is preliminary, complete engine integration is not claimed, and external exposure is unresolved. The work remains active for internal review and targeted validation."
+        "text": "Private evidence synthesis, version 1.1. No new model requests, sample expansion or public dissemination occurred while preparing it. Numerical support is verified against the captured artifacts. Literature positioning is preliminary, complete model-backed engine integration is not claimed, and external exposure is unresolved. The work remains active for internal review and targeted validation."
       }
     ]
   }

@@ -1,0 +1,22 @@
+[
+  {
+    "task": "arc_challenge",
+    "status": "completed",
+    "source_rows": 100,
+    "native_request_objects": 401,
+    "fixture_evaluations": 200,
+    "source_gold_fixture_correct": 100,
+    "nongold_fixture_rejected": 100,
+    "projection_carrier_differences": 0
+  },
+  {
+    "task": "openbookqa",
+    "status": "completed",
+    "source_rows": 100,
+    "native_request_objects": 400,
+    "fixture_evaluations": 200,
+    "source_gold_fixture_correct": 100,
+    "nongold_fixture_rejected": 100,
+    "projection_carrier_differences": 0
+  }
+]

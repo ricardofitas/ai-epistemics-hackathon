@@ -1,6 +1,7 @@
-Private working manuscript and evidence synthesis.
+Private working manuscript v1.1 and evidence synthesis.
 Run python verify_claims.py to check numerical claims and source-snapshot hashes.
-Run python render_manuscript.py to recreate the PDF. Python dependencies are pinned in requirements.txt; rendering uses system Liberation Serif and Sans fonts under /usr/share/fonts/truetype/liberation/.
-The machine-readable manuscript is manuscript.json. All original experiment packages are listed with exact Library identities, versions and archive hashes in SOURCE_ARCHIVES.json. Compact unmodified JSON source snapshots are under evidence/.
-CLAIM_VERIFICATION.json validates synthesis consistency only; consult original experiment captures for native, request-stream and source-selection verification. No additional experiments or inference were performed for this draft.
+Run python render_manuscript.py to recreate the PDF. Dependencies are pinned in requirements.txt; rendering uses system Liberation Serif and Sans fonts under /usr/share/fonts/truetype/liberation/.
+The machine-readable manuscript is manuscript.json. Original experiment archives are identified in SOURCE_ARCHIVES.json and EVIDENCE_SOURCES.json; compact JSON evidence snapshots are under evidence/.
+The separate Epistemics_LMHarness_integracao_nativa_20261114.zip contains the newly completed installed-package offline integration, its prior frozen inputs, protocol, scripts, request captures, scoring fixtures and verification. It reuses200 source units and executes801 native option requests plus400 constructed scoring controls. No model, tokenizer or backend was instantiated and no inference was requested. These constructed controls are not model accuracy.
+CLAIM_VERIFICATION.json checks synthesis consistency; use original experiment captures for request-stream and source-selection verification. prepare_evidence.py is a historical authoring helper requiring the original extracted source packages; it is unnecessary for verifying or rendering this self-contained draft.
 READINESS.json records unresolved scientific and submission-readiness gaps. Nothing was sent or published externally.

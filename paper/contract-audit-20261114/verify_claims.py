@@ -32,6 +32,7 @@ m=read('mutations.json');assert (m['source_units'],m['synthetic_variants'],m['v1
 h=read('harness.json');assert (h['source_units'],h['native_condition_rows'],h['native_per_option_request_objects'])==(200,200,801)
 assert h['counts']['controlled_stale_metadata_rejected_at_wire']==600
 assert read('external.json')['affected_external_run_verified'] is False
+ni=read('native_integration.json');assert ni['status']=='completed' and ni['source_units_completed']==200 and ni['native_option_requests']==801 and ni['constructed_fixture_evaluations']==400 and ni['projection_carrier_differences']==0 and ni['errors']==[]
 result=dict(status='PASS',claims_checked=9,additional_mechanism_checks=5,new_model_requests=0,scope='Synthesis consistency check against source snapshots; not new experimental evidence')
 (P/'CLAIM_VERIFICATION.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result))

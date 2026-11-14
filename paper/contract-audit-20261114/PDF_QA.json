@@ -2,7 +2,7 @@
   "pages": [
     {
       "page": 1,
-      "words": 446
+      "words": 448
     },
     {
       "page": 2,
@@ -14,18 +14,19 @@
     },
     {
       "page": 4,
-      "words": 457
+      "words": 487
     },
     {
       "page": 5,
-      "words": 511
+      "words": 508
     },
     {
       "page": 6,
-      "words": 392
+      "words": 396
     }
   ],
   "bounds_check": "PASS",
   "embedded_fonts": true,
-  "visual_review": "PASS after final embedded-font rendering; six-page contact sheet plus detailed page3"
+  "visual_review": "PASS: final six-page contact sheet and full-resolution page4 inspected after v1.1 integration update.",
+  "working_draft_version": "1.1"
 }
