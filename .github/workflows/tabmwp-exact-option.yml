@@ -1,0 +1,26 @@
+name: Test explicit transcription on verified published TabMWP outputs
+on:
+  push:
+    branches: [ricardo/external-contract-transfer-20261114]
+    paths: ['experiments/tabmwp-archive-audit-20261114/EXACT_RUN.json']
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            experiments/external-contract-transfer-20261114
+            experiments/tabmwp-archive-audit-20261114
+      - name: Match explicit options on all released baseline outputs
+        run: python3 experiments/tabmwp-archive-audit-20261114/exact_options.py
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: tabmwp-exact-options-sensitivity
+          path: |
+            experiments/tabmwp-archive-audit-20261114/exact_results.json
+            experiments/tabmwp-archive-audit-20261114/exact_witnesses.jsonl
