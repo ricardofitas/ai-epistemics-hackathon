@@ -804,7 +804,7 @@
   "retained_errors": [
     {
       "operation": "GitHub forks collection through connector fetch",
-      "result": "400 endpoint rejected; forks were not enumerated."
+      "result": "400 endpoint rejected. Public read-only HTTP fallback subsequently recovered29 fork metadata entries."
     },
     {
       "operation": "Project homepage through web retrieval",
@@ -822,6 +822,47 @@
   "next_target": "Follow a new original report or trace for a specifically affected native contract, including effective configuration, executable revision and the delivered request/response or equivalent original artifact. The observed LoopAI log is for other task configurations.",
   "inference_calls": 0,
   "outbound_communications": 0,
-  "limits": "Public artifacts and bounded indexed searches only. Missing public evidence does not establish absence of affected private runs."
+  "limits": "Public artifacts and bounded indexed searches only. Missing public evidence does not establish absence of affected private runs.",
+  "fork_followup": {
+    "inventory_file": "external/FORK_INVENTORY.json",
+    "selection": "Largest fork by metadata size, plus the project-homepage fork and the most recently pushed contributor public fork, selected before tree contents.",
+    "inspected": [
+      {
+        "repository": "Tyduss/Z-Eval",
+        "commit": "78718cab034577c6223985a9bf5763f049b13c98",
+        "tree_truncated": false,
+        "tree_entries": 185,
+        "native_tool_blob": "86777cbb868bb83eebed35d3de62fdd23d868eed",
+        "matching_current_native_tool": false,
+        "candidate_paths": [
+          "one-eval-web/src/components/judge/JudgeResultPanel.tsx",
+          "one-eval-web/src/components/ui/result-preview-modal.tsx"
+        ]
+      },
+      {
+        "repository": "EriccirEgyz/One-Eval",
+        "commit": "faf8cb6dcafcd892d42b1b8aab2da739c49269da",
+        "tree_truncated": false,
+        "tree_entries": 233,
+        "native_tool_blob": "7f75e97993020a0acda0a09e936ce1e66c02bbd0",
+        "matching_current_native_tool": true,
+        "candidate_paths": [
+          "one-eval-skill/assets/evalspec.template.yaml"
+        ]
+      },
+      {
+        "repository": "houhyh/One-Eval-Public",
+        "commit": "ecf0c57eb454d44f83dfaface64630af2a27b446",
+        "tree_truncated": false,
+        "tree_entries": 229,
+        "native_tool_blob": "7f75e97993020a0acda0a09e936ce1e66c02bbd0",
+        "matching_current_native_tool": true,
+        "candidate_paths": [
+          "one-eval-skill/assets/evalspec.template.yaml"
+        ]
+      }
+    ],
+    "outcome": "Inspected pinned default-branch trees yielded code, template/reference and project-documentation candidates, without a matching original affected run trace in the inspected paths. This is a bounded three-fork follow-up."
+  }
 }
 

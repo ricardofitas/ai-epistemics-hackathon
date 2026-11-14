@@ -60,7 +60,7 @@ The LoopAI repository belongs to the same organization as One-Eval. The public l
 
 Function-specific indexed searches added no matching external copy of the shared choice-normalizer class. A broader one_eval and winogrande query produced eight files. All eight blobs were inspected and matched generic function names or output path substrings, with no direct One-Eval import or explicit project reference. A project-reference plus eval_outputs query returned zero matches. These are bounded search outcomes.
 
-The forks endpoint was rejected by the connector. The project homepage retrieval failed. Both errors are retained. Public missing artifacts cannot determine the frequency of affected private runs.
+The forks endpoint was rejected by the connector, then recovered through a read-only public HTTP fallback. The recovered inventory contains 29 forks. Three pinned fork trees were inspected using selection by repository size and project/contributor association. The inspected candidate paths yielded code, reference templates and project documentation, without an original matching affected-run trace. The project homepage retrieval failed. Both initial errors and the recovery are retained. Public missing artifacts cannot determine the frequency of affected private runs.
 
 The strongest next external target remains a concrete original report or trace for an affected contract with the effective configuration and request/output evidence. An important affected conclusion could strengthen the comparison with GAMMAF. Its value depends on what the correction changes and how independently the evidence can be verified.
 
