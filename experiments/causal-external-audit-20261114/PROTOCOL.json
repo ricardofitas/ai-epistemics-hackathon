@@ -1,0 +1,91 @@
+{
+  "study": "Shared-cause interventions and external-impact audit",
+  "date": "2026-11-14",
+  "status": "FROZEN_BEFORE_NEW_ABLATION_EXECUTION",
+  "base_commit": "8526dce68b14d8b4967d488fb8d36f1502b04cfe",
+  "framework_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "dataflow_version": "1.0.10",
+  "scope": "Post-discovery causal diagnosis of previously captured cases. All natural fault families were known before this protocol. No independent blind validation or population prevalence estimate.",
+  "questions": [
+    "Do canonical-only generator arguments explain omitted source-field dependencies across several configurations?",
+    "Does one shared dictionary normalization explain both ARC-Challenge and OpenBookQA option corruption?",
+    "Do those shared repairs leave a known source-specific LAB-Bench omission unresolved?",
+    "Does new primary external evidence connect an affected configuration to a reported conclusion?"
+  ],
+  "source_cases": [
+    {
+      "bench": "winogrande",
+      "split": "validation",
+      "max_rows": 100
+    },
+    {
+      "bench": "sciq",
+      "split": "test",
+      "max_rows": 100
+    },
+    {
+      "bench": "lab-bench-language-agent-biology-benchmark",
+      "split": "train",
+      "max_rows": 100
+    },
+    {
+      "bench": "arc-challenge",
+      "split": "test",
+      "max_rows": 100
+    },
+    {
+      "bench": "openbookqa",
+      "split": "test",
+      "max_rows": 100
+    },
+    {
+      "bench": "medmcqa",
+      "split": "validation",
+      "max_rows": 100
+    },
+    {
+      "bench": "mmlu",
+      "split": "test",
+      "max_rows": 100
+    }
+  ],
+  "selection": "Use prior frozen SELECTED records for ARC/OpenBookQA/MMLU. For other captured corpora select up to100 by ascending SHA256 of canonical JSON for complete official record, tied by original index. Keep failures/unknowns. Report reused rows and variants separately.",
+  "conditions": [
+    "native",
+    "bind_source_symbols",
+    "decode_parallel_choices",
+    "both_shared_repairs",
+    "lab_complete_options",
+    "all_input_repairs"
+  ],
+  "interventions": {
+    "bind_source_symbols": "Before native prompt resolution, rewrite placeholders for mapped source question/context fields to canonical question/context names. Preserve native formatter and all other template text.",
+    "decode_parallel_choices": "Handle only validated label/text parallel-list dictionaries by returning normalized text list. Delegate all other representations to unchanged native normalizer.",
+    "lab_complete_options": "For LAB-Bench only, supply ideal followed by distractors as the complete choices field. Explicit source-specific repair."
+  },
+  "outcomes": [
+    "actual captured prompt depends on question nonce",
+    "actual captured prompt depends on a nonempty declared context nonce",
+    "displayed choice sequence matches official source after edge-whitespace normalization",
+    "official correct option is present"
+  ],
+  "expected": {
+    "winogrande": "Question dependence restored by symbol binding only.",
+    "sciq": "Declared support dependence restored by symbol binding; question remains bound.",
+    "lab_bench": "Shared repairs preserve absent-gold error; explicit source-specific completion required.",
+    "arc_challenge": "Choice structure restored by parallel-list decoder only.",
+    "openbookqa": "Both shared repairs needed to restore question dependence and full option sequence.",
+    "controls": "Native question/choice preservation retained on medmcqa and mmlu."
+  },
+  "method": "Execute original One-Eval preprocessing and prompt resolver and original locked DataFlow generator/formatter method bodies under previously documented data-only AST scaffold. In-memory storage and local recording serving replace I/O/model. Use actual run entry and captured requests. Zero model inference.",
+  "external_audit": {
+    "new_leads": [
+      "One-Eval primary paper experimental endpoint and released artifact pointers",
+      "Function-specific external code reuse search",
+      "Dataflow-LoopAI captured one_eval.log and matching run code"
+    ],
+    "confirmation_requires": "Identify actual affected version/configuration and delivered request/output or equivalent original run evidence linked to a reported conclusion. Keep partial use evidence.",
+    "outbound_communications": false
+  },
+  "inference_requests": 0
+}
