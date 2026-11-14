@@ -1,0 +1,46 @@
+{
+  "stage": "supplemental independent analyzer fault-path audit",
+  "utc": "2026-11-14T15:02:40.166109+00:00",
+  "repository": "ricardofitas/swarm-adaption-hackathon",
+  "execution_commit": "676f3b618948253a9ff4f01f400e8ab1a2971a13",
+  "analysis_preregistered_commit": "38f2b3d556e0d5376cf14dfcb7e2b10db7f85075",
+  "launch_protocol_commit": "af6a19b7a39643cc57d6dcf4fb1e7e9a1be319b6",
+  "source_files": {
+    "ANALYSIS_PROTOCOL.json": {
+      "sha256": "5e28616b176f46bb933979356246ada983d25f6df4c6c176ee102915943567d3",
+      "bytes": 2032
+    },
+    "LAUNCH.json": {
+      "sha256": "ccacbcf75f91b2c6a64e2fac7b270fd0b958dccb626f6bae9d3ecdee5e36934e",
+      "bytes": 369
+    },
+    "PROTOCOL.json": {
+      "sha256": "192cfc9ddae4b339816221be1cb84eba44a1ba773dc9b87aec50277cfc8bd3a8",
+      "bytes": 3961
+    },
+    "analyze_paired.py": {
+      "sha256": "9d9cc6281f39be9fcb59a46028f39d3fed7fa59b94f6ffadc1a653c848749ce0",
+      "bytes": 3647
+    },
+    "execute_paired.py": {
+      "sha256": "e6be58f3368d279ce111817b30082e95ff52a05466d1f94416408ab58fa4fe15",
+      "bytes": 9060
+    },
+    "run_adaption_stream_pilot.py": {
+      "sha256": "c280811c5f685cdc5b254d5097946835428cd87de6ea58218de1e2cad537fe5e",
+      "bytes": 20338
+    }
+  },
+  "run_observation": {
+    "id": 43606982014,
+    "status": "in_progress",
+    "conclusion": null,
+    "attempt": 1,
+    "created_at": "2026-11-14T14:50:47Z"
+  },
+  "live_outputs_accessed": 0,
+  "new_model_requests": 0,
+  "changes_to_active_protocol_or_files": 0,
+  "scope": "Fault-path compatibility, no live-run outcome or performance inference",
+  "followup": "Classify local-error receipts using manifest/attempt-ledger, keep unknown bounds; no additional calls. Owner should separately verify ledger reconciliation."
+}

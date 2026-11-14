@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-11-14",
+  "study": "MixEval task-kind isolated paired real-generation pilot",
+  "source_selection": "First20 free-form rows, preserving existing100-row stable SHA256 selection order; source_indices fixed; no new source acquisition or replacement. Previously observed source content, new model outputs.",
+  "source_repository": "MixEval/MixEval",
+  "source_revision": "66a05ec3821a2b5089ed1e32a5d65ab6ecdbf906",
+  "official_prompt_repository": "JinjieNi/MixEval",
+  "official_prompt_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+  "models": [
+    "gemma-4-31b-it",
+    "qwen3.8-27b"
+  ],
+  "conditions": [
+    "binding_only",
+    "official_typed"
+  ],
+  "source_questions": 20,
+  "planned_model_calls": 80,
+  "maximum_requests": 80,
+  "maximum_output_tokens_per_request": 4096,
+  "maximum_output_tokens_total": 327680,
+  "maximum_prompt_utf8_bytes_per_request": 8192,
+  "temperature": 0,
+  "retry": false,
+  "attempts_per_request": 1,
+  "concurrency": 1,
+  "minimum_start_interval_seconds": 5,
+  "catalogue_url": "https://api.prod.adaptionlabs.ai/api/v1/models?type=hosted",
+  "response_endpoint": "https://api.prod.adaptionlabs.ai/api/v1/responses",
+  "execution_branch": "ricardo/mixeval-real-generation-20261114",
+  "same_context": "Both prompts bind identical source question/context, system empty in both. Binding-only request is byteexact prior capture; typed request uses original official construct_prompt_freeform. Task-kind intervention also entails official format/instruction wording, so do not claim removal-of-None is the only changed token.",
+  "pairing": "Every source case crossed with both conditions and fixed two models. Fixed source-major/condition/model request order; no output-dependent reordering.",
+  "scoring": "After capture, apply SAME pinned unmodified official RULE parser/scorer to both generation conditions, preserving source targets. No grader calls in this80generationrequest budget. Treat literal/alias diagnostic separately and never call it default model-judge MixEval score.",
+  "unsupported": "Constructor exceptions and byte-bound failures preserve case as unsupported/unknown with no replacement. The pre-generation20-case compilation found0exceptions and0byte-bound failures; raw source selection retained.",
+  "missing_outputs": "Every planned row remains in denominator; incomplete, empty, unattempted and parser exceptions recorded separately and bounded0..1. Do not replace a source, model or response after outcomes.",
+  "resource_scope": "Hard request cap80, explicit output cap4096 each, input byte cap8192. Global remaining credits and usage.cost currency unknown. No USD claim. Historical per-run one-credit allowance is a planning precedent, not verified current billing ceiling.",
+  "scientific_status": "Targeted exploratory model-response consequence test on already observed source panel, not a population benchmark estimate or independent source transfer.",
+  "source_capture_hashes": {
+    "SELECTED.jsonl.gz": "c00abfba2d087d451bec17ef6b2367cb0582831aa1f128e61288f597841cd568",
+    "CAPTURES.jsonl.gz": "dbefeeaa68868b0125ea5b642384ca9f2f2fa77c756fdad6c9c1db3c5eb730ae"
+  },
+  "frozen_files": {
+    "selected20.json": "09cf3ee65130629321a6ac125cb0fee2eff9a34e5b254847da98766ee6b982c9",
+    "manifest.jsonl": "c8b848a6eeda737a130a4ac3e4ebb0a5d3ac06d97eba39d27522036852826329",
+    "SOURCE_ERRORS.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "official_evaluation_prompts.py": "7f7f5433576a05a5ee522923d7f53f77e8227ecac12dfdfd9b9163008153232b",
+    "run_adaption_stream_pilot.py": "c280811c5f685cdc5b254d5097946835428cd87de6ea58218de1e2cad537fe5e",
+    "execute_paired.py": "e6be58f3368d279ce111817b30082e95ff52a05466d1f94416408ab58fa4fe15"
+  },
+  "receipt_policy": "Mutable progress/PREFLIGHT/EXECUTION receipts use atomic tempfile+os.replace. Trial artifacts in original transport retain exclusive create and cannot be regenerated."
+}
