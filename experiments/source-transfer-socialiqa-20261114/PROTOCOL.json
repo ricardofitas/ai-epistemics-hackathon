@@ -1,0 +1,49 @@
+{
+  "stage": "Held-out source-family transfer of frozen source-bound checker; custom deterministic adapter, not native evaluator audit",
+  "created_before_source_rows_and_results": true,
+  "base_research_commit": "23ad77201d59f241562268f2c7f881e3a62fb7ed",
+  "source": {
+    "dataset": "allenai/social_i_qa",
+    "revision": "8835ceb9141d7896d9d968634a9b21ae440e3ec5",
+    "loader": "social_i_qa.py",
+    "official_archive": "https://storage.googleapis.com/ai2-mosaic/public/socialiqa/socialiqa-train-dev.zip",
+    "expected_archive_sha256": "ee073914a0fc33265cfbcfc50ec20df9b2e07809c3f420f599138d1f394ef5c3",
+    "split": "dev",
+    "rows_member": "dev.jsonl",
+    "labels_member": "dev-labels.lst"
+  },
+  "frozen_checker_sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e",
+  "frozen_wrapper_sha256": "ced1e14f65213bc64f124a82f52f8c3a6d98b6b068026e8a0b486e8ad15228cf",
+  "selection": "Join official dev row with same-index one-based label. Sort SHA256 of UTF8 canonical JSON {record:raw,label:integer} with sort_keys=True,ensure_ascii=False,separators comma/colon; tie original index; first min(100,N). No substitutions, errors retained.",
+  "adapter": "Context newline question is source_question; answerA/B/C exact source_choices; label1/2/3 maps to zero-based source index. Prompt is context newline question newline A/B/C options newline instruction. Source-gold exact text and aligned letter reference. Independently measured question and required-context nonce substitution probes.",
+  "conditions": [
+    "healthy",
+    "coherent_permutation",
+    "distractor_drop",
+    "question_omission",
+    "context_omission",
+    "missing_source"
+  ],
+  "expected_v2": {
+    "healthy": "PASS",
+    "coherent_permutation": "PASS",
+    "distractor_drop": "FAIL",
+    "question_omission": "FAIL",
+    "context_omission": "FAIL",
+    "missing_source": "INCOMPLETE"
+  },
+  "expected_v1": {
+    "healthy": "PASS",
+    "coherent_permutation": "PASS",
+    "distractor_drop": "PASS",
+    "question_omission": "FAIL",
+    "context_omission": "FAIL",
+    "missing_source": "PASS"
+  },
+  "record_policy": "Run every selected row/condition once; retain unknown schemas, unavailable labels, non-applicable mutations and exceptions. Freeze all source/adapter/checker bytes before evaluation. No post-outcome fixes in this stage.",
+  "acquisition": "One request to each pinned loader/archive; preserve errors and no alternate corpus. No credentials. Official archive checksum required. No source row or label preview before protocol commit.",
+  "units": "Report source rows, unique source questions, shared context groups and condition variants separately. Reused failure mechanisms; source-family holdout does not equal fault-family holdout. Healthy adapter controls are not proven natural framework behavior.",
+  "model_calls": 0,
+  "statistics": "Descriptive counts only. No deployment prevalence, population precision or model accuracy estimates.",
+  "exposure_limit": "Bounded documentary exposure review, not a complete row-level hash census of every earlier project package or private executor. Claim is held-out from documented checker development; do not claim globally blind independent validation."
+}
