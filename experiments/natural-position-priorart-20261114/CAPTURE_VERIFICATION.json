@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "checks": 118,
+  "failures": [],
+  "datasets": {
+    "cupcase": {
+      "rows": 3562,
+      "source_gold_first": 3562,
+      "captured_source_columns_sha256": "bdb31324cfe9ad4bf3f87603869429cd14bfcf155e8104fa4e01bb56ded35e0e",
+      "label_results": {
+        "A": {
+          "correct": 3562,
+          "valid": 3562,
+          "invalid": 0,
+          "report_score": 1.0,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        },
+        "B": {
+          "correct": 0,
+          "valid": 3562,
+          "invalid": 0,
+          "report_score": 0.0,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        },
+        "C": {
+          "correct": 0,
+          "valid": 3562,
+          "invalid": 0,
+          "report_score": 0.0,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        },
+        "D": {
+          "correct": 0,
+          "valid": 3562,
+          "invalid": 0,
+          "report_score": 0.0,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        }
+      },
+      "source_ref_parse_positions": {
+        "A": 3562
+      },
+      "question_present": 0,
+      "first_option_present": 3562,
+      "source_hash_receipts": 3562
+    },
+    "sciq": {
+      "rows": 1000,
+      "source_gold_first": 1000,
+      "captured_source_columns_sha256": "e965d5df39f501dc7f816bcc8feda25c1fb8843b50de148801f3e10880257f36",
+      "label_results": {
+        "A": {
+          "correct": 994,
+          "valid": 997,
+          "invalid": 3,
+          "report_score": 0.9969909729187563,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        },
+        "B": {
+          "correct": 0,
+          "valid": 997,
+          "invalid": 3,
+          "report_score": 0.0,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        },
+        "C": {
+          "correct": 0,
+          "valid": 997,
+          "invalid": 3,
+          "report_score": 0.0,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        },
+        "D": {
+          "correct": 3,
+          "valid": 997,
+          "invalid": 3,
+          "report_score": 0.003009027081243731,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        }
+      },
+      "source_ref_parse_positions": {
+        "A": 994,
+        "D": 3,
+        "None": 3
+      },
+      "question_present": 1000,
+      "first_option_present": 1000,
+      "source_hash_receipts": 1000
+    },
+    "gpqa": {
+      "rows": 448,
+      "source_gold_first": 448,
+      "captured_source_columns_sha256": "8cb966cd606027694b945adea41fdac028c112bea7b92fdbfefa2f73bbb547a2",
+      "label_results": {
+        "A": {
+          "correct": 412,
+          "valid": 427,
+          "invalid": 21,
+          "report_score": 0.9648711943793911,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        },
+        "B": {
+          "correct": 2,
+          "valid": 427,
+          "invalid": 21,
+          "report_score": 0.00468384074941452,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        },
+        "C": {
+          "correct": 2,
+          "valid": 427,
+          "invalid": 21,
+          "report_score": 0.00468384074941452,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        },
+        "D": {
+          "correct": 11,
+          "valid": 427,
+          "invalid": 21,
+          "report_score": 0.02576112412177986,
+          "stats_file_stage": "before_mark_diagnostic",
+          "ordinary_metric_score": 0.0
+        }
+      },
+      "source_ref_parse_positions": {
+        "A": 412,
+        "None": 21,
+        "D": 11,
+        "B": 2,
+        "C": 2
+      },
+      "question_present": 0,
+      "first_option_present": 448,
+      "source_hash_receipts": 448
+    }
+  },
+  "native_source_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "artifact_sha256": "ed328b8026f49436f0ab13e821c7ad87e2d3187737bcdb705f4b2625a63ede54",
+  "scope": "Independent captured-record arithmetic/identity audit only. Original native/CLI methods not rerun; no historical affected conclusion established.",
+  "limitations": [
+    "Official raw Parquet/CSV acquisition hashes retained in originalsummary, not independently reacquired here.",
+    "Prompt text bytes not retained in originalartifact, only hashes/presence flags. This checks capture consistency, not independent re-rendering.",
+    "Ordinary metric score/report-selector score are different recorded stages; CLI closeout belongs to another executor.",
+    "All-A is a deterministic input-independent baseline, not measured LLM behavior.",
+    "Original GPQA question/answer content remains private and is not emitted in this report."
+  ],
+  "new_model_calls": 0,
+  "new_native_runs": 0
+}

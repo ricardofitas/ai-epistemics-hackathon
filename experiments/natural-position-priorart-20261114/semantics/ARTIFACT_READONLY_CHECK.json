@@ -1,0 +1,265 @@
+{
+  "operation": "Read-only inspection of authentic existing original.zip and summary.json; no native execution or model calls",
+  "summary_sha256": "69e002b8ec76a75a8c6607835056f972f31f60d3ed92098057a406b8e2672f1d",
+  "original_zip_sha256": "ed328b8026f49436f0ab13e821c7ad87e2d3187737bcdb705f4b2625a63ede54",
+  "datasets": {
+    "cupcase": {
+      "n": 3562,
+      "gold_position_counts": {
+        "0": 3562
+      },
+      "own_question_present": 0,
+      "baseline_results": {
+        "A": {
+          "records_sha256": "5cd0eaf8acd47c6c5e876edc558f533ba73837f75c050c8bbfc35db491feb88f",
+          "records_count": 3562,
+          "diagnostic_score": 1.0,
+          "valid_references": 3562,
+          "invalid_references": 0,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 1.0,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 3562
+          },
+          "reference_parsed_label_counts": {
+            "A": 3562
+          }
+        },
+        "B": {
+          "records_sha256": "95b9ab1a0138ee0ea3cc9d621217de4a75bd91b09832a2234033a2c5578c893e",
+          "records_count": 3562,
+          "diagnostic_score": 0.0,
+          "valid_references": 3562,
+          "invalid_references": 0,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 0.0,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 3562
+          },
+          "reference_parsed_label_counts": {
+            "A": 3562
+          }
+        },
+        "C": {
+          "records_sha256": "e9bbb2ac4e67a18d944bdd41ee2a8301d600bcd478d0cd55c8845743d120f2b3",
+          "records_count": 3562,
+          "diagnostic_score": 0.0,
+          "valid_references": 3562,
+          "invalid_references": 0,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 0.0,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 3562
+          },
+          "reference_parsed_label_counts": {
+            "A": 3562
+          }
+        },
+        "D": {
+          "records_sha256": "8ec8efac146bcd81375d4f0a4a27256a22e36c74adf7a7f8367417f68eeb9d4f",
+          "records_count": 3562,
+          "diagnostic_score": 0.0,
+          "valid_references": 3562,
+          "invalid_references": 0,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 0.0,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 3562
+          },
+          "reference_parsed_label_counts": {
+            "A": 3562
+          }
+        }
+      },
+      "independently_checked_existing_record_gold_first_count": 3562
+    },
+    "sciq": {
+      "n": 1000,
+      "gold_position_counts": {
+        "0": 1000
+      },
+      "own_question_present": 1000,
+      "baseline_results": {
+        "A": {
+          "records_sha256": "ef3936c172daf8684579efd2ac1afc160a056ad44679670474d7df08b59b2818",
+          "records_count": 1000,
+          "diagnostic_score": 0.9969909729187563,
+          "valid_references": 997,
+          "invalid_references": 3,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 0.9969909729187563,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 1000
+          },
+          "reference_parsed_label_counts": {
+            "A": 994,
+            "D": 3,
+            "None": 3
+          }
+        },
+        "B": {
+          "records_sha256": "750e22a301e3bc4f7dcfc8dde5d17b808699902ee928c4b6f228fcea6161b7d8",
+          "records_count": 1000,
+          "diagnostic_score": 0.0,
+          "valid_references": 997,
+          "invalid_references": 3,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 0.0,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 1000
+          },
+          "reference_parsed_label_counts": {
+            "A": 994,
+            "D": 3,
+            "None": 3
+          }
+        },
+        "C": {
+          "records_sha256": "93c520aa936984b11ea2c9032b3b389dd9b88b26913df49db4caa365678a6fa8",
+          "records_count": 1000,
+          "diagnostic_score": 0.0,
+          "valid_references": 997,
+          "invalid_references": 3,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 0.0,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 1000
+          },
+          "reference_parsed_label_counts": {
+            "A": 994,
+            "D": 3,
+            "None": 3
+          }
+        },
+        "D": {
+          "records_sha256": "7323196abba0978d2b2bd302ff18623815c68ec79e13c797c447b07cf058d094",
+          "records_count": 1000,
+          "diagnostic_score": 0.003009027081243731,
+          "valid_references": 997,
+          "invalid_references": 3,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 0.003009027081243731,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 1000
+          },
+          "reference_parsed_label_counts": {
+            "A": 994,
+            "D": 3,
+            "None": 3
+          }
+        }
+      },
+      "independently_checked_existing_record_gold_first_count": 1000
+    },
+    "gpqa": {
+      "n": 448,
+      "gold_position_counts": {
+        "0": 448
+      },
+      "own_question_present": 0,
+      "baseline_results": {
+        "A": {
+          "records_sha256": "ba94784eeec06c5b62b01c4fc6067688707277953a92ba6c5ebcc47ebb335807",
+          "records_count": 448,
+          "diagnostic_score": 0.9648711943793911,
+          "valid_references": 427,
+          "invalid_references": 21,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 0.9648711943793911,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 448
+          },
+          "reference_parsed_label_counts": {
+            "A": 412,
+            "None": 21,
+            "D": 11,
+            "B": 2,
+            "C": 2
+          }
+        },
+        "B": {
+          "records_sha256": "47dd6fbc6ec0e87d67179999e70362aac24d057627b9d0f08669fd7f51a7953d",
+          "records_count": 448,
+          "diagnostic_score": 0.00468384074941452,
+          "valid_references": 427,
+          "invalid_references": 21,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 0.00468384074941452,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 448
+          },
+          "reference_parsed_label_counts": {
+            "A": 412,
+            "None": 21,
+            "D": 11,
+            "B": 2,
+            "C": 2
+          }
+        },
+        "C": {
+          "records_sha256": "87c459534ef4c4abec17f40df8d2de90a35472ea51e5207be03cedd1a4305728",
+          "records_count": 448,
+          "diagnostic_score": 0.00468384074941452,
+          "valid_references": 427,
+          "invalid_references": 21,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 0.00468384074941452,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 448
+          },
+          "reference_parsed_label_counts": {
+            "A": 412,
+            "None": 21,
+            "D": 11,
+            "B": 2,
+            "C": 2
+          }
+        },
+        "D": {
+          "records_sha256": "8dbc07d2545da3f161f2d6f7c1f314e08d4f7b1a8ffb43449f362c8a82274cd5",
+          "records_count": 448,
+          "diagnostic_score": 0.02576112412177986,
+          "valid_references": 427,
+          "invalid_references": 21,
+          "ordinary_metric": 0.0,
+          "contract_metric": 0.0,
+          "report_selection_score": 0.02576112412177986,
+          "report_selection_source": "dataflow_eval:accuracy",
+          "prediction_type_counts": {
+            "float": 448
+          },
+          "reference_parsed_label_counts": {
+            "A": 412,
+            "None": 21,
+            "D": 11,
+            "B": 2,
+            "C": 2
+          }
+        }
+      },
+      "independently_checked_existing_record_gold_first_count": 448
+    }
+  }
+}
