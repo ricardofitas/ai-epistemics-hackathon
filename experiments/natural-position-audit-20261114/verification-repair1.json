@@ -1,0 +1,22 @@
+{
+  "run_id": 43645621491,
+  "artifact_id": 14134126317,
+  "artifact_sha256": "9389da696c473f37354b365d49f0ff8aca88cb418df4a1fccbfd36b7a9f678dd",
+  "status": "EXECUTION_SUCCEEDED_PREDICTION_REJECTED_INCOMPLETE_PARSER_CONFIG_REPAIR",
+  "recounts": {
+    "A": {
+      "actual_correct": 3562,
+      "expected_correct": 905,
+      "valid": 3562,
+      "question_present": 3562,
+      "report_score": 1.0
+    },
+    "B": {
+      "actual_correct": 0,
+      "expected_correct": 882,
+      "valid": 3562,
+      "question_present": 3562,
+      "report_score": 0.0
+    }
+  }
+}

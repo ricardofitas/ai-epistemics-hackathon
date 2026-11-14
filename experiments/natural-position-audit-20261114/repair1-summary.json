@@ -1,0 +1,364 @@
+{
+  "one_eval_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "source_provenance": {
+    "repo": "ofir408/CupCase",
+    "revision": "157a85b1a0fa6d0e25e5209a1cdaf41cf1ff8753",
+    "split": "test",
+    "files": [
+      {
+        "path": "data/test-00000-of-00001.parquet",
+        "sha256": "928f961590534394f36b2cb62e2c79993ed6bce454b575c4ddf12aca1a173123",
+        "bytes": 8424692,
+        "declared_lfs_sha256": "928f961590534394f36b2cb62e2c79993ed6bce454b575c4ddf12aca1a173123"
+      }
+    ]
+  },
+  "repaired_cupcase": {
+    "source_rows": 3562,
+    "source_jsonl_sha256": "d6528742f8c9a243538cfe0c711b347ce5e56ddef3a6a86911fd1e97f8b15a68",
+    "gold_position_counts": {
+      "3": 891,
+      "1": 882,
+      "2": 884,
+      "0": 905
+    },
+    "baselines": {
+      "A": {
+        "native_stats": {
+          "total_samples": 3562,
+          "valid_samples": 3562,
+          "accuracy": 1.0,
+          "bench_name_or_prefix": "step",
+          "type": "key3_q_choices_a",
+          "metric": "choice_accuracy_parser",
+          "score": 1.0,
+          "valid_predictions": 3562,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "rescored_rows": 3562,
+          "rescored_by": "one_eval.choice_letter_parser",
+          "role": "diagnostic",
+          "display_as_primary": false,
+          "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+        },
+        "report_score": 1.0,
+        "report_source": "dataflow_eval:accuracy",
+        "ordinary_metric_score": 0.0,
+        "diagnostic_removed_report_score": 0.0,
+        "diagnostic_removed_report_source": "dataflow_eval:missing",
+        "own_question_present": 3562,
+        "rows": 3562,
+        "correct_rows": 3562,
+        "valid_rows": 3562,
+        "result_sha256": "4215b91b3b7506ad839a7125e81ffbc45ce1def5646c4a8ac1d4b0b692e53bb1"
+      },
+      "B": {
+        "native_stats": {
+          "total_samples": 3562,
+          "valid_samples": 3562,
+          "accuracy": 0.0,
+          "bench_name_or_prefix": "step",
+          "type": "key3_q_choices_a",
+          "metric": "choice_accuracy_parser",
+          "score": 0.0,
+          "valid_predictions": 3562,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "rescored_rows": 3562,
+          "rescored_by": "one_eval.choice_letter_parser",
+          "role": "diagnostic",
+          "display_as_primary": false,
+          "note": "DataFlow score is diagnostic only; primary score is computed by metric stage."
+        },
+        "report_score": 0.0,
+        "report_source": "dataflow_eval:accuracy",
+        "ordinary_metric_score": 0.0,
+        "diagnostic_removed_report_score": 0.0,
+        "diagnostic_removed_report_source": "dataflow_eval:missing",
+        "own_question_present": 3562,
+        "rows": 3562,
+        "correct_rows": 0,
+        "valid_rows": 3562,
+        "result_sha256": "2f45427fed74e43156c51557420829797b0b788590ad1d54e2461d84344474ac"
+      }
+    }
+  },
+  "dataflow": {
+    "pypi_version": "1.0.10",
+    "wheel": "open_dataflow-1.0.10-py3-none-any.whl",
+    "wheel_sha256": "75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "prompt_source": "dataflow/prompts/core_text.py",
+    "prompt_sha256": "5df1bf04fceea685ebf28bf4c398303cda49e46af8d87e769db0d04ca1c5600a",
+    "generator_source": "dataflow/operators/core_text/generate/bench_answer_generator.py",
+    "generator_sha256": "9b3b29c44c60d71510f88b0f19e964339806fc29bd0fd91ff16c97072219e09a"
+  },
+  "added_source_sha256": {
+    "dataflow/utils/reasoning/AnswerExtraction.py": "a133193bf1fdcab1dd594974b7e411737e5a16e20076c0ffe7e10ff04354b8c4",
+    "dataflow/utils/storage.py": "9497e91a1b9b63f354ecfc36adf5b600e0ac5b173eb9ca1bd3da52368bc3b58d",
+    "dataflow/operators/core_text/eval/unified_bench_dataset_evaluator.py": "a06f70fac52f9e5287b70aa908852468aa0b945be79f4445cf91566a04878c7f"
+  },
+  "original_gallery_config": {
+    "bench_name": "cupcase",
+    "bench_table_exist": true,
+    "bench_source_url": "https://huggingface.co/datasets/ofir408/CupCase",
+    "bench_dataflow_eval_type": "key3_q_choices_a",
+    "bench_prompt_template": null,
+    "bench_keys": [
+      "clean_case_presentation",
+      "correct_diagnosis",
+      "distractor1",
+      "distractor2",
+      "distractor3"
+    ],
+    "meta": {
+      "bench_name": "cupcase",
+      "source": "bench_item_list",
+      "aliases": [
+        "cupcase",
+        "CUPCase"
+      ],
+      "category": "Domain-Specific",
+      "tags": [
+        "domain-specific"
+      ],
+      "description": "CUPCase is based on 3,563 real-world clinical case reports formulated into diagnoses in open-ended textual format and as multiple-choice options with distractors.",
+      "hf_meta": {
+        "bench_name": "cupcase",
+        "hf_repo": "ofir408/CupCase",
+        "card_text": "CUPCase is based on 3,563 real-world clinical case reports formulated into diagnoses in open-ended textual format and as multiple-choice options with distractors.",
+        "tags": [
+          "domain-specific"
+        ],
+        "exists_on_hf": true
+      },
+      "structure": {
+        "repo_id": "ofir408/CupCase",
+        "revision": null,
+        "subsets": [
+          {
+            "subset": "default",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          }
+        ],
+        "ok": true,
+        "error": null
+      },
+      "download_config": {
+        "config": "default",
+        "split": "test",
+        "reason": "\u6570\u636e\u96c6\u5305\u542b\u4e00\u4e2a\u540d\u4e3a default \u7684\u914d\u7f6e\u548c\u4e00\u4e2a\u540d\u4e3a test \u7684 split\uff0c\u76f4\u63a5\u9009\u62e9 test \u8fdb\u884c\u8bc4\u6d4b\u3002"
+      },
+      "key_mapping": {
+        "input_question_key": "clean_case_presentation",
+        "input_choices_key": [
+          "correct_diagnosis",
+          "distractor1",
+          "distractor2",
+          "distractor3"
+        ],
+        "input_label_key": "correct_diagnosis"
+      },
+      "key_mapping_reason": "\u6570\u636e\u96c6\u4e2d\u6709\u4e00\u4e2a\u95ee\u9898\u63cf\u8ff0 ('clean_case_presentation') \u548c\u591a\u4e2a\u9009\u9879 ('correct_diagnosis', 'distractor1', 'distractor2', 'distractor3')\uff0c\u5176\u4e2d 'correct_diagnosis' \u662f\u6b63\u786e\u7b54\u6848\u3002\u8fd9\u7b26\u5408\u9009\u62e9\u9898\u5355\u6b63\u786e\u7c7b\u578b\u7684\u7279\u5f81\u3002",
+      "description_zh": "\u4e34\u5e8a\u75c5\u4f8b\u8bca\u65ad\u95ee\u7b54",
+      "radar_dimensions": [
+        "knowledge"
+      ],
+      "evaluation": {
+        "score_source": "metric_stage",
+        "official_metric": "accuracy",
+        "primary_metric": "choice_accuracy",
+        "denominator": "total",
+        "prediction_mode": "generation",
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "correct_diagnosis",
+            "distractor1",
+            "distractor2",
+            "distractor3"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        }
+      },
+      "prompt": {
+        "source": "gallery",
+        "template_id": "cupcase_contract_v1",
+        "system_prompt": "",
+        "user_template": "{clean_case_presentation}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "few_shot": {
+          "enabled": false,
+          "num_shots": 0,
+          "source_split": null
+        },
+        "generation": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "max_tokens": 1024,
+          "stop": []
+        }
+      },
+      "readiness": {
+        "status": "contract_inferred",
+        "smoke_passed": false,
+        "golden_cases": null,
+        "known_limitations": [
+          "No direct lm-eval YAML match was found; contract fields are inferred from the requested bench list."
+        ]
+      }
+    }
+  },
+  "repaired_gallery_config": {
+    "bench_name": "cupcase",
+    "bench_table_exist": true,
+    "bench_source_url": "https://huggingface.co/datasets/ofir408/CupCase",
+    "bench_dataflow_eval_type": "key3_q_choices_a",
+    "bench_prompt_template": null,
+    "bench_keys": [
+      "clean_case_presentation",
+      "correct_diagnosis",
+      "distractor1",
+      "distractor2",
+      "distractor3"
+    ],
+    "meta": {
+      "bench_name": "cupcase",
+      "source": "bench_item_list",
+      "aliases": [
+        "cupcase",
+        "CUPCase"
+      ],
+      "category": "Domain-Specific",
+      "tags": [
+        "domain-specific"
+      ],
+      "description": "CUPCase is based on 3,563 real-world clinical case reports formulated into diagnoses in open-ended textual format and as multiple-choice options with distractors.",
+      "hf_meta": {
+        "bench_name": "cupcase",
+        "hf_repo": "ofir408/CupCase",
+        "card_text": "CUPCase is based on 3,563 real-world clinical case reports formulated into diagnoses in open-ended textual format and as multiple-choice options with distractors.",
+        "tags": [
+          "domain-specific"
+        ],
+        "exists_on_hf": true
+      },
+      "structure": {
+        "repo_id": "ofir408/CupCase",
+        "revision": null,
+        "subsets": [
+          {
+            "subset": "default",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          }
+        ],
+        "ok": true,
+        "error": null
+      },
+      "download_config": {
+        "config": "default",
+        "split": "test",
+        "reason": "\u6570\u636e\u96c6\u5305\u542b\u4e00\u4e2a\u540d\u4e3a default \u7684\u914d\u7f6e\u548c\u4e00\u4e2a\u540d\u4e3a test \u7684 split\uff0c\u76f4\u63a5\u9009\u62e9 test \u8fdb\u884c\u8bc4\u6d4b\u3002"
+      },
+      "key_mapping": {
+        "input_question_key": "clean_case_presentation",
+        "input_choices_key": "neutral_choices",
+        "input_label_key": "correct_diagnosis"
+      },
+      "key_mapping_reason": "\u6570\u636e\u96c6\u4e2d\u6709\u4e00\u4e2a\u95ee\u9898\u63cf\u8ff0 ('clean_case_presentation') \u548c\u591a\u4e2a\u9009\u9879 ('correct_diagnosis', 'distractor1', 'distractor2', 'distractor3')\uff0c\u5176\u4e2d 'correct_diagnosis' \u662f\u6b63\u786e\u7b54\u6848\u3002\u8fd9\u7b26\u5408\u9009\u62e9\u9898\u5355\u6b63\u786e\u7c7b\u578b\u7684\u7279\u5f81\u3002",
+      "description_zh": "\u4e34\u5e8a\u75c5\u4f8b\u8bca\u65ad\u95ee\u7b54",
+      "radar_dimensions": [
+        "knowledge"
+      ],
+      "evaluation": {
+        "score_source": "metric_stage",
+        "official_metric": "accuracy",
+        "primary_metric": "choice_accuracy",
+        "denominator": "total",
+        "prediction_mode": "generation",
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "correct_diagnosis",
+            "distractor1",
+            "distractor2",
+            "distractor3"
+          ],
+          "choices_key": "neutral_choices"
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        }
+      },
+      "prompt": {
+        "source": "gallery",
+        "template_id": "cupcase_source_preserving_repair_20261114",
+        "system_prompt": "",
+        "user_template": "{question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "few_shot": {
+          "enabled": false,
+          "num_shots": 0,
+          "source_split": null
+        },
+        "generation": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "max_tokens": 1024,
+          "stop": []
+        }
+      },
+      "readiness": {
+        "status": "contract_inferred",
+        "smoke_passed": false,
+        "golden_cases": null,
+        "known_limitations": [
+          "No direct lm-eval YAML match was found; contract fields are inferred from the requested bench list."
+        ]
+      }
+    }
+  },
+  "new_model_calls": 0,
+  "boundary": "Original public run_eval and native classes, separately labelled source-preserving option-order/question-placeholder repair; constant serving cache. No installed CLI or LLM-generated report."
+}

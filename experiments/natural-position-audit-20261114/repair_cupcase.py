@@ -27,6 +27,10 @@ def main():
     frame["neutral_choices"] = permutations
     config["meta"]["key_mapping"]["input_choices_key"] = "neutral_choices"
     config["meta"]["evaluation"]["parser"]["choices_key"] = "neutral_choices"
+    # Both declared answer encodings must use the displayed order. The first
+    # attempted repair left this gold-first field list in the parser config;
+    # resolve_choice_texts prioritizes it and still calls every source gold A.
+    config["meta"]["evaluation"]["parser"].pop("choice_text_fields", None)
     previous_template = config["meta"]["prompt"]["user_template"]
     assert previous_template.count("{clean_case_presentation}") == 1
     config["meta"]["prompt"]["user_template"] = previous_template.replace("{clean_case_presentation}", "{question}")
