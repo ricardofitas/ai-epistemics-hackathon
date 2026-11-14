@@ -1,11 +1,12 @@
 {
   "date": "2026-11-14",
   "analysis_specification": "Frozen 2026-11-13 NEXT_EXPERIMENT plus executable analysis implementation",
-  "outcome_access": "Analysis code written before downloading any output from run 43533000838",
+  "outcome_access": "Primary analysis implementation frozen at commit 2d4d400644114110745bb93e2232c6fef231ab79 before downloading the first capture checkpoint. Later explicit enumeration of the preplanned secondary order comparisons followed inspection of checkpoint transport/completion metadata. No response answer or accuracy summary had been examined before that addition.",
   "primary_comparisons": 4,
   "paired_bootstrap": "10000 group resamples within each stratum, seed 20261113",
   "combined_panel": "Secondary description with fixed 30/20 weights; no prevalence inference",
   "original_scorer_scope": "Pinned unmodified One-Eval filtering and scoring methods loaded with the same documented import scaffold as prior independently replayed source audit",
   "unknowns": "Incomplete or no unique requested answer tag preserved in worst/best sensitivity bounds; all planned requests included",
-  "provider_new_calls_planned": 200
+  "provider_new_calls_planned": 200,
+  "secondary_order_comparisons": "Enumerate model versus constant-B and model versus model for each condition and stratum. Keep ties explicit. A strict reversal requires opposed strict orderings."
 }

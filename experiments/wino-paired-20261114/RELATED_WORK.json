@@ -4,8 +4,14 @@
   "sources": [
     {
       "title": "Lessons from the Trenches on Reproducible Evaluation of Language Models",
-      "url": "https://arxiv.org/abs/2405.14782",
-      "scope": "Existing evaluation reproducibility guidance and lm-eval framework. Broad prompt sensitivity and reproducibility are established topics."
+      "url": "https://arxiv.org/html/2405.14782v3",
+      "scope": "Existing evaluation reproducibility guidance and lm-eval framework. Broad prompt sensitivity and reproducibility are established topics.",
+      "verified_revision": "arXiv v3, 31 May 2026",
+      "sections_reviewed": [
+        "3 Evaluation Details are Lost in Communication",
+        "4 Evaluations are Not Just Numbers",
+        "Appendix D Best Practices Checklist"
+      ]
     },
     {
       "title": "Troubleshooting reproducibility, Hugging Face Evaluation Guidebook",
@@ -18,5 +24,6 @@
       "scope": "Related scorer-specific metamorphic judge testing. Consulted the indexed author abstract; direct page access failed. Detailed methods comparison still pending."
     }
   ],
-  "proposed_scope": "Specific source-to-prompt information loss and reference corruption, exact finite-corpus consequences, deterministic controls plus paired real-model intervention and a healthy second framework. Novelty remains provisional until a closer method comparison."
+  "proposed_scope": "Specific source-to-prompt information loss and reference corruption, exact finite-corpus consequences, deterministic controls plus paired real-model intervention and a healthy second framework. Novelty remains provisional until a closer method comparison.",
+  "implication": "The existence of evaluation implementation sensitivity is already established. The study must demonstrate particular violated source contracts, attributable effects and an effective intervention. The finite-corpus prompt-collision calculation alone is not asserted as a novel theorem."
 }

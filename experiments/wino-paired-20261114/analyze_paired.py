@@ -85,6 +85,34 @@ def run_scorer(frame, original_contract, reference_key, Runner, BenchInfo):
         return Runner(max_workers=2).run_bench_with_contract(bench, original_contract)['primary_metric_result']
 
 
+def ordering(first, second):
+    if abs(first - second) < 1e-12:
+        return 'tie'
+    return 'first' if first > second else 'second'
+
+
+def compare_orderings(score_replays, models):
+    comparisons = []
+    for stratum in [*STRATA, 'all_frozen_panel']:
+        for condition in CONDITIONS:
+            entries = [r for r in score_replays if r['stratum'] == stratum and r['condition'] == condition]
+            for model in models:
+                selected = {r['predictor']:r for r in entries if r['model'] == model}
+                first, second = selected['model'], selected['always_B']
+                before = ordering(first['shipped']['score'], second['shipped']['score'])
+                after = ordering(first['source_reference']['score'], second['source_reference']['score'])
+                comparisons.append(dict(stratum=stratum, condition=condition, first=model, second='always_B',
+                                         shipped_preference=before, source_reference_preference=after,
+                                         strict_order_reversal={before, after} == {'first', 'second'}))
+            first, second = [next(r for r in entries if r['model'] == model and r['predictor'] == 'model') for model in models]
+            before = ordering(first['shipped']['score'], second['shipped']['score'])
+            after = ordering(first['source_reference']['score'], second['source_reference']['score'])
+            comparisons.append(dict(stratum=stratum, condition=condition, first=models[0], second=models[1],
+                                     shipped_preference=before, source_reference_preference=after,
+                                     strict_order_reversal={before, after} == {'first', 'second'}))
+    return comparisons
+
+
 def main():
     capture = ROOT / 'capture'
     cases = {row['source_row']: row for row in lines(ROOT / 'fresh_panel.jsonl.gz')}
@@ -181,6 +209,7 @@ def main():
                   selection='Frozen diagnostic strata, enriched for native input collisions, source labels balanced. Overall values use the 30/20 panel mix.',
                   condition_scores=condition_scores, paired_scores=paired_scores, native_collision_group_responses=collisions,
                   raw_output_reference_replays=score_replays,
+                  finite_panel_order_comparisons=compare_orderings(score_replays, models),
                   uncertainty='Paired cluster bootstrap within each frozen stratum. Intervals are percentile intervals for each comparison; no simultaneous coverage or population prevalence inference is claimed. Unknown-as-zero and sensitivity bounds are reported together.')
     (ROOT / 'ROW_ANALYSIS.json').write_text(json.dumps(rows, indent=2) + '\n')
     (ROOT / 'RESULTS.json').write_text(json.dumps(result, indent=2) + '\n')
