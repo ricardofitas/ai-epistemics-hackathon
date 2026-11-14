@@ -1,0 +1,37 @@
+{
+  "engineering_commit": "07324c1e1a2b2878e8ad0a71c6abf58762117bfc",
+  "branch": "ricardo/unified-contract-entrypoint-20261114",
+  "entrypoint": "experiments/contract-checker-20261114/check_contract.py:run_source_bound_evaluation",
+  "implementation_sha256": "5b0004b1960a8c187106bef26a4c62aa0fad0abf5007084fac54dad849ba6dfa",
+  "result_archive": {
+    "library_file_id": "libfile_fde3_f-7b537ba56a5481918f38ba8066630a6b_198492b795908191b811098f9e84ee4a",
+    "version": 0,
+    "bytes": 1952771,
+    "sha256": "bc570c6092297a5460c0acca1f21add009b6ad44c6f97377bfdaff7068bc995e"
+  },
+  "checkpoint": {
+    "library_file_id": "libfile_fde3_f-addcdc7b706c8191af0975cf80313ef9_198492b795908191b811098f9e84ee4a",
+    "version": 31
+  },
+  "manuscript_unchanged": {
+    "revision": "1.7",
+    "pdf_version": 7,
+    "source_zip_version": 7,
+    "claims": 20,
+    "main_pages": 8,
+    "total_pages": 18
+  },
+  "checks": {
+    "independent_cases": 123,
+    "legacy_compatibility": 15,
+    "unit_fix_regressions": 14,
+    "actual_source_questions": 2,
+    "archived_wire_requests": 4,
+    "fresh_capsule_reproduction": "PASS"
+  },
+  "new_provider_calls": 0,
+  "new_installed_metric_calls": 0,
+  "optional_installed_adapter": "PROVIDED_NOT_EXECUTED",
+  "independent_comparator": "STOP_UNSUPPORTED_REGISTEREDEVALSCOPE_CASESENSITIVE_CONTRACT; no replay/no EvalScopebugclaim",
+  "coordination": "External3200slotcampaign and new directTabMWParchive/224judgmentfollowup preserved from freshcheckpoint30. Do not duplicate/cancel/resume campaigns. Engineeringnewcode doesnotclaimnew scientific benchmark accuracy."
+}
