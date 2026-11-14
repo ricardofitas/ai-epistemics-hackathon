@@ -23,6 +23,8 @@ def main():
     requests = [json.loads(line) for line in requests_bytes.splitlines()]
     protocol = json.loads((ROOT / 'EXECUTION_PROTOCOL.json').read_text())
     assert sha(requests_bytes) == protocol['manifest_uncompressed_sha256']
+    assert sha((ROOT / 'fresh_panel.jsonl.gz').read_bytes()) == protocol['cases_compressed_sha256']
+    assert (ROOT / 'fresh_panel.jsonl.gz').read_bytes() == (capture / 'fresh_panel.jsonl.gz').read_bytes()
     assert (capture / 'manifest.jsonl').read_bytes() == requests_bytes
     records_list = [json.loads(line) for line in (capture / 'responses.jsonl').read_text().splitlines()]
     records = {r['trial_id']: r for r in records_list}
@@ -35,6 +37,9 @@ def main():
         record = records[tid]
         assert record['attempt_count'] == 1
         assert record['request_payload'] == request['request_payload']
+        assert record['requested_model'] == request['request_payload']['model']
+        if record.get('returned_model') is not None:
+            assert record['returned_model'] == record['requested_model']
         artifact = json.loads((capture / 'api_artifacts' / (tid + '.json')).read_text())
         assert artifact == record
         assert sha(canonical(request['request_payload'])) == record['request_sha256']

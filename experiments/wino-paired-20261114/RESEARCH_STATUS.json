@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-14",
+  "stage": "PAIRED_MODEL_TRIAL_COMPLETE",
+  "provider": "Adaption",
+  "new_model_requests": 200,
+  "http_200": 200,
+  "complete_responses": 194,
+  "incomplete_max_output_tokens": 6,
+  "new_unique_source_questions": 50,
+  "native_prompt_groups": 35,
+  "qwen_prompt_gain_known_case_pp": 42,
+  "qwen_prompt_gain_unknown_sensitivity_pp": [
+    36,
+    48
+  ],
+  "gemma_observed_valid_answer_counts": {
+    "native": 4,
+    "corrected": 50
+  },
+  "gemma_prompt_gain_unknown_sensitivity_pp": [
+    -10,
+    82
+  ],
+  "model_vs_constantB_reference_reversal": "Both models on the same 50 repaired-prompt outputs score below constant-B with shipped references and above it with source-correct references. Comparisons share the source questions.",
+  "external_published_score_impact_verified": false,
+  "evalscope_same_fault_replicated": false,
+  "priority": "Continue One-Eval as the Epistemics candidate. Controlled causal consequence has advanced; external impact above GAMMAF remains unestablished.",
+  "next_evidence": "An identifiable independently used run with version, effective configuration, native prompt, raw responses and reported conclusion.",
+  "native_software_scope": "Pinned One-Eval defaults and formatter methods, diagnostic WinoGrande validation override. Repair includes field binding and brace formatting."
+}

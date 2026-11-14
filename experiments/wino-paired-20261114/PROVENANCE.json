@@ -1,0 +1,25 @@
+{
+  "new_model_execution": {
+    "protocol_commit": "843e3a77f9b6ee2af96b06d6088f08f9c8557d22",
+    "execution_commit": "93f8ca4dc2fc7f7826dfbc82d6a36698419f0a00",
+    "branch": "ricardo/wino-paired-20261114",
+    "analysis_commit": "2d4d400644114110745bb93e2232c6fef231ab79",
+    "run_id": 43533000838,
+    "secondary_analysis_commit": "90778b25cc12b83bb2ee16dbeea0dabc30018a2b"
+  },
+  "prior_frozen_panel_commit": "ec1d2b01799b32553b616da0b80120ded97ad57c",
+  "prior_library_panel": "libfile_5e4bf51822d08191a3c3f4995948bbe3",
+  "source_audit_library_file": "libfile_c7f1d74116248191ba0a1c6d0c0e79b1",
+  "healthy_evalscope_library_file": "libfile_b02b93d19548819196828b7c31a83eb4",
+  "python_analysis": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "pandas": "2.2.3",
+  "numpy": "2.3.5",
+  "original_scorer_scope": "Unmodified native parser, registry and MetricRunner methods, original BenchInfo AST, isolated logger, original preprocessing methods. Same method scaffold as prior supported Python3.11 verification; current analysis runtime is separately recorded.",
+  "final_artifact": {
+    "run_id": 43533000838,
+    "artifact_id": 14089282880,
+    "sha256": "9bc9a715cc60d92b09fbab96e5cc8b8816468ad751b5eccca21d6c647924c9da",
+    "bytes": 4328772,
+    "status": "workflow success"
+  }
+}
