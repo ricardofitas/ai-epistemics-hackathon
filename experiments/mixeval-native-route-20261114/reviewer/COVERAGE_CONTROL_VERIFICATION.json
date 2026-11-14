@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "name": "missing_output",
+      "passed": true,
+      "status": "INCOMPLETE",
+      "error": "CoverageError:missing_or_extra_output_id",
+      "typed_rule_mean": null,
+      "local_generation_batches": 0,
+      "new_model_calls": 0
+    },
+    {
+      "name": "duplicate_source",
+      "passed": true,
+      "status": "INCOMPLETE",
+      "error": "CoverageError:duplicate_source_id",
+      "typed_rule_mean": null,
+      "local_generation_batches": 0,
+      "new_model_calls": 0
+    },
+    {
+      "name": "duplicate_output",
+      "passed": true,
+      "status": "INCOMPLETE",
+      "error": "CoverageError:duplicate_output_id",
+      "typed_rule_mean": null,
+      "local_generation_batches": 0,
+      "new_model_calls": 0
+    },
+    {
+      "name": "altered_expected_source_hash",
+      "passed": true,
+      "status": "INCOMPLETE",
+      "error": "CoverageError:source_hash_or_reference_drift:free_form:1169",
+      "typed_rule_mean": null,
+      "local_generation_batches": 0,
+      "new_model_calls": 0
+    },
+    {
+      "name": "changed_source_reference",
+      "passed": true,
+      "status": "INCOMPLETE",
+      "error": "CoverageError:source_hash_or_reference_drift:multiple_choice:1776",
+      "typed_rule_mean": null,
+      "local_generation_batches": 0,
+      "new_model_calls": 0
+    },
+    {
+      "name": "changed_source_context",
+      "passed": true,
+      "status": "INCOMPLETE",
+      "error": "CoverageError:source_hash_or_reference_drift:free_form:1169",
+      "typed_rule_mean": null,
+      "local_generation_batches": 0,
+      "new_model_calls": 0
+    },
+    {
+      "name": "unsupported_source_type",
+      "passed": true,
+      "status": "INCOMPLETE",
+      "error": "CoverageError:unsupported_problem_type",
+      "typed_rule_mean": null,
+      "local_generation_batches": 0,
+      "new_model_calls": 0
+    },
+    {
+      "name": "changed_response_bytes",
+      "passed": true,
+      "status": "INCOMPLETE",
+      "error": "CoverageError:response_bytes_or_association_drift:free_form:1169",
+      "typed_rule_mean": null,
+      "local_generation_batches": 0,
+      "new_model_calls": 0
+    },
+    {
+      "name": "wrong_output_source_association",
+      "passed": true,
+      "status": "INCOMPLETE",
+      "error": "CoverageError:output_source_association_drift:multiple_choice:1776",
+      "typed_rule_mean": null,
+      "local_generation_batches": 0,
+      "new_model_calls": 0
+    },
+    {
+      "name": "preexisting_generated_answer",
+      "passed": true,
+      "status": "INCOMPLETE",
+      "error": "CoverageError:preexisting_generated_ans_would_skip_generation",
+      "typed_rule_mean": null,
+      "local_generation_batches": 0,
+      "new_model_calls": 0
+    }
+  ],
+  "source_cohorts_independent": false,
+  "source_rows_new": 0,
+  "provider_model_calls": 0,
+  "scope": "Ten malformed source/output association guard probes on existing frozen cohorts. These are pre-native validation guards; actual request/scoring orchestration is checked separately on the49positive integration cases."
+}

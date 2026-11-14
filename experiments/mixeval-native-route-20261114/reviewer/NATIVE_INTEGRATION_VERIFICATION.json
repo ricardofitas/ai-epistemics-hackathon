@@ -1,0 +1,136 @@
+{
+  "status": "PASS_WITH_PROVENANCE_ERRATUM",
+  "reviewer": "separate scoring_review agent",
+  "frozen_protocol_commit": "0e2616f099b5f5defb395f3d545b3736c23b063a",
+  "frozen_files_verified": 27,
+  "source_rows_reconciled": 49,
+  "request_prompts_reconstructed": 49,
+  "response_bytes_reconciled": 49,
+  "official_rule_scores_independently_reexecuted": 49,
+  "local_serving_batches": 2,
+  "new_provider_model_calls": 0,
+  "native_entrypoint_reruns_by_reviewer": 0,
+  "native_primary_metric_stage_executed": false,
+  "installed_distribution": false,
+  "dependency_shim_invocations_reported": 0,
+  "coverage_controls_passed": 10,
+  "native_id_type_coercions_preserving_case_association": 49,
+  "source_hash_capture_key_collisions": 49,
+  "derived_path_resolutions": [
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/one_eval/toolkits/dataflow_eval_tool.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/one_eval/toolkits/dataflow_eval_tool.py",
+      "original_path_available": true,
+      "sha256": "640884f634a3009784a8698d4f4fd05a0485f991dad395b3c31fd630c6cf427b"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/one_eval/core/state.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/one_eval/core/state.py",
+      "original_path_available": true,
+      "sha256": "af00f96608ba1c1176e056fb8d1ad34902232dd759571c2ecc9afc67b30604ce"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/one_eval/logger.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/one_eval/logger.py",
+      "original_path_available": true,
+      "sha256": "b551cfce20c02a35534652fe33d311e1c806e302b9fffc7b83567fa095861958"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/operators/core_text/generate/bench_answer_generator.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/operators/core_text/generate/bench_answer_generator.py",
+      "original_path_available": true,
+      "sha256": "9b3b29c44c60d71510f88b0f19e964339806fc29bd0fd91ff16c97072219e09a"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/operators/core_text/eval/unified_bench_dataset_evaluator.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/operators/core_text/eval/unified_bench_dataset_evaluator.py",
+      "original_path_available": true,
+      "sha256": "a06f70fac52f9e5287b70aa908852468aa0b945be79f4445cf91566a04878c7f"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/utils/storage.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/utils/storage.py",
+      "original_path_available": true,
+      "sha256": "9497e91a1b9b63f354ecfc36adf5b600e0ac5b173eb9ca1bd3da52368bc3b58d"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/utils/registry.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/utils/registry.py",
+      "original_path_available": true,
+      "sha256": "a7280fad9663479dd37894752aa5686258c549c44f605bf3d9452a2047448f2b"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/core/__init__.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/core/__init__.py",
+      "original_path_available": true,
+      "sha256": "94cf94774e5375c11a36eb3b54ae92c690a6936c518d0db0e04939b98eb68780"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/core/prompt.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/core/prompt.py",
+      "original_path_available": true,
+      "sha256": "ad23e8f178a4b75d662dd85035e4835fdb74bea2ac75507ccd68510b0a0d064f"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/prompts/core_text.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/prompts/core_text.py",
+      "original_path_available": true,
+      "sha256": "5df1bf04fceea685ebf28bf4c398303cda49e46af8d87e769db0d04ca1c5600a"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/prompts/model_evaluation/general.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/prompts/model_evaluation/general.py",
+      "original_path_available": true,
+      "sha256": "05a38f7556fa1b8de0c5bc678b66c653ad664855d268c14c38560f03ec0f6c22"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/utils/reasoning/AnswerExtraction.py",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/vendor/dataflow/utils/reasoning/AnswerExtraction.py",
+      "original_path_available": true,
+      "sha256": "a133193bf1fdcab1dd594974b7e411737e5a16e20076c0ffe7e10ff04354b8c4"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/results/free_form/native/mixeval_free_form_1794667956_steps/step_step2.jsonl",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/results/free_form/native/mixeval_free_form_1794667956_steps/step_step2.jsonl",
+      "resolution": "Strict local native result directory lookup, not the old absolute artifact path"
+    },
+    {
+      "original_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/results/multiple_choice/native/mixeval_multiple_choice_1794667957_steps/step_step2.jsonl",
+      "resolved_local_path": "/workspace/scratch/d51e1eb9ae08/mixeval-native-route-20261114/integration/results/multiple_choice/native/mixeval_multiple_choice_1794667957_steps/step_step2.jsonl",
+      "resolution": "Strict local native result directory lookup, not the old absolute artifact path"
+    }
+  ],
+  "native_system_prompt_verified_from_constructor_default": "You are a helpful assistant specialized in generating answers to questions.",
+  "retained_verifier_development_assumption": "Initial review assumed an empty system prompt. Integration correctly retains the pinned native generator default, unlike the separate paired real-generation payloads. Assertion corrected from exact constructor source; no scientific artifacts changed.",
+  "panels": [
+    {
+      "split": "free_form",
+      "rows": 17,
+      "correct": 13.0,
+      "native_total_samples": 17,
+      "native_valid_samples": 17,
+      "independent_score_mean": 0.7647058823529411,
+      "random_fallback_draws": [],
+      "legacy_native_metric_label": "any_math_verify",
+      "actual_scoring_mode": "official_mixeval_rule_not_default_model_judge"
+    },
+    {
+      "split": "multiple_choice",
+      "rows": 32,
+      "correct": 20.0,
+      "native_total_samples": 32,
+      "native_valid_samples": 32,
+      "independent_score_mean": 0.625,
+      "random_fallback_draws": [
+        "A",
+        "A",
+        "C",
+        "B",
+        "B"
+      ],
+      "legacy_native_metric_label": "parse_choice_acc",
+      "actual_scoring_mode": "official_mixeval_rule_not_default_model_judge"
+    }
+  ],
+  "scope": "Saved full-module native orchestration artifacts and exact source/requests/responses/storage/statistics reconciled; official rule scorer independently re-executed. Local captured-output provider and explicit package/dependency facades. Neither full installed distribution nor new model/transport execution."
+}

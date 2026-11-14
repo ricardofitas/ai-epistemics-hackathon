@@ -1,0 +1,17 @@
+--- native_runner.py
++++ native_runner.py
+@@ -239,8 +239,12 @@
+                 df.at[idx, self.output_eval_score_key] = result["score"]
+                 df.at[idx, self.output_eval_pred_key] = response
+                 df.at[idx, self.output_eval_error_key] = ""
+-                score_captures.append({"case_id": key, "source_sha256": expected_sources[key],
+-                                       "response_sha256": expected_responses[key], **result})
++                score_detail = dict(result)
++                scorer_source_sha256 = score_detail.pop("source_sha256")
++                score_captures.append({"case_id": key,
++                                       "source_record_sha256": expected_sources[key],
++                                       "scorer_source_sha256": scorer_source_sha256,
++                                       "response_sha256": expected_responses[key], **score_detail})
+                 seen.append(key)
+             if seen != ids:
+                 raise CoverageError("evaluator_row_order_or_coverage_drift")

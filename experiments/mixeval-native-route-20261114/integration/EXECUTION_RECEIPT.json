@@ -1,0 +1,29 @@
+{
+  "protocol_commit": "0e2616f099b5f5defb395f3d545b3736c23b063a",
+  "manifest_sha256": "110d81687a8a9b0a0cf730a54eebf0810f26b3eb0be37f4bb81ab6ba4bd50f66",
+  "start": "2026-11-14T14:52:35.769290+00:00",
+  "groups": [
+    {
+      "group": "free_form",
+      "returncode": 0,
+      "status": "PASS",
+      "error": null,
+      "source_rows": 17,
+      "scored_rows": 17,
+      "typed_rule_mean": 0.7647058823529411,
+      "generation_calls": 1
+    },
+    {
+      "group": "multiple_choice",
+      "returncode": 0,
+      "status": "PASS",
+      "error": null,
+      "source_rows": 32,
+      "scored_rows": 32,
+      "typed_rule_mean": 0.625,
+      "generation_calls": 1
+    }
+  ],
+  "new_model_calls": 0,
+  "end": "2026-11-14T14:52:38.218791+00:00"
+}
