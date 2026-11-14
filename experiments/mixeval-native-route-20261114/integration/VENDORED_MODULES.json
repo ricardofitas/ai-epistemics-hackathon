@@ -1,0 +1,77 @@
+{
+  "dataflow/core/__init__.py": {
+    "sha256": "94cf94774e5375c11a36eb3b54ae92c690a6936c518d0db0e04939b98eb68780",
+    "origin": "open-dataflow1.0.10 wheel75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "source_path": "research-causal-external-20261114/source-audit/default_contract_locked_support_v2_20261113/locked_support/dataflow/core/__init__.py"
+  },
+  "dataflow/core/operator.py": {
+    "sha256": "28478a43ad6fd51b2089e2bf5bd26840d2c6bc4eac1b841beea7a3289c4686e3",
+    "origin": "open-dataflow1.0.10 wheel75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "source_path": "research-causal-external-20261114/source-audit/default_contract_locked_support_v2_20261113/locked_support/dataflow/core/operator.py"
+  },
+  "dataflow/core/prompt.py": {
+    "sha256": "ad23e8f178a4b75d662dd85035e4835fdb74bea2ac75507ccd68510b0a0d064f",
+    "origin": "open-dataflow1.0.10 wheel75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "source_path": "research-causal-external-20261114/source-audit/default_contract_locked_support_v2_20261113/locked_support/dataflow/core/prompt.py"
+  },
+  "dataflow/core/llm_serving.py": {
+    "sha256": "62e825255f38561653b2d02b720fa03cfc406556688c7d8c397eefcd3d725f3f",
+    "origin": "open-dataflow1.0.10 wheel75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "source_path": "research-causal-external-20261114/source-audit/default_contract_locked_support_v2_20261113/locked_support/dataflow/core/llm_serving.py"
+  },
+  "dataflow/core/wrapper.py": {
+    "sha256": "fe66c815aba17ed0832f6e6fb9086b2dea79526ae9f456b4cb5691043b180644",
+    "origin": "open-dataflow1.0.10 wheel75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "source_path": "research-causal-external-20261114/source-audit/default_contract_locked_support_v2_20261113/locked_support/dataflow/core/wrapper.py"
+  },
+  "dataflow/utils/storage.py": {
+    "sha256": "9497e91a1b9b63f354ecfc36adf5b600e0ac5b173eb9ca1bd3da52368bc3b58d",
+    "origin": "open-dataflow1.0.10 wheel75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "source_path": "research-causal-external-20261114/source-audit/default_contract_locked_support_v2_20261113/locked_support/dataflow/utils/storage.py"
+  },
+  "dataflow/utils/registry.py": {
+    "sha256": "a7280fad9663479dd37894752aa5686258c549c44f605bf3d9452a2047448f2b",
+    "origin": "open-dataflow1.0.10 wheel75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "source_path": "research-causal-external-20261114/source-audit/default_contract_locked_support_v2_20261113/locked_support/dataflow/utils/registry.py"
+  },
+  "dataflow/utils/reasoning/AnswerExtraction.py": {
+    "sha256": "a133193bf1fdcab1dd594974b7e411737e5a16e20076c0ffe7e10ff04354b8c4",
+    "origin": "open-dataflow1.0.10 wheel75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "source_path": "research-causal-external-20261114/source-audit/default_contract_locked_support_v2_20261113/locked_support/dataflow/utils/reasoning/AnswerExtraction.py"
+  },
+  "dataflow/prompts/core_text.py": {
+    "sha256": "5df1bf04fceea685ebf28bf4c398303cda49e46af8d87e769db0d04ca1c5600a",
+    "origin": "open-dataflow1.0.10 wheel75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "source_path": "research-causal-external-20261114/source-audit/default_contract_locked_support_v2_20261113/locked_support/dataflow/prompts/core_text.py"
+  },
+  "dataflow/prompts/model_evaluation/general.py": {
+    "sha256": "05a38f7556fa1b8de0c5bc678b66c653ad664855d268c14c38560f03ec0f6c22",
+    "origin": "open-dataflow1.0.10 wheel75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+    "source_path": "research-causal-external-20261114/source-audit/default_contract_locked_support_v2_20261113/locked_support/dataflow/prompts/model_evaluation/general.py"
+  },
+  "dataflow/operators/core_text/generate/bench_answer_generator.py": {
+    "sha256": "9b3b29c44c60d71510f88b0f19e964339806fc29bd0fd91ff16c97072219e09a",
+    "source_path": "synthesis-v13-20261114/mixeval/upstream/bench_answer_generator.py",
+    "origin": "Captured open-dataflow1.0.10 module"
+  },
+  "dataflow/operators/core_text/eval/unified_bench_dataset_evaluator.py": {
+    "sha256": "a06f70fac52f9e5287b70aa908852468aa0b945be79f4445cf91566a04878c7f",
+    "source_path": "research-causal-external-20261114/source-audit/default_contract_source_capture_20261113/capture/dataflow_wheel__dataflow__operators__core_text__eval__unified_bench_dataset_evaluator.py",
+    "origin": "Captured open-dataflow1.0.10 module"
+  },
+  "one_eval/toolkits/dataflow_eval_tool.py": {
+    "sha256": "640884f634a3009784a8698d4f4fd05a0485f991dad395b3c31fd630c6cf427b",
+    "source_path": "synthesis-v13-20261114/mixeval/upstream/dataflow_eval_tool.py",
+    "origin": "One-Eval8aba20ad17ee2c7d2391162ac03ffaebcbb17506"
+  },
+  "one_eval/core/state.py": {
+    "sha256": "af00f96608ba1c1176e056fb8d1ad34902232dd759571c2ecc9afc67b30604ce",
+    "origin": "One-Eval8aba20ad17ee2c7d2391162ac03ffaebcbb17506 Git raw",
+    "git_blob": "17e93830cc3ca20090e46da9b3b43500ff08d764"
+  },
+  "one_eval/logger.py": {
+    "sha256": "b551cfce20c02a35534652fe33d311e1c806e302b9fffc7b83567fa095861958",
+    "origin": "One-Eval8aba20ad17ee2c7d2391162ac03ffaebcbb17506 Git raw",
+    "git_blob": "a8a5d9a51998cd832bf5d9dd266de7cedc19c5b6"
+  }
+}

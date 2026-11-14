@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "stage": "mixeval_full_module_native_route_integration",
+  "status": "FIXED_BEFORE_NEW_INTEGRATION_RESULTS",
+  "date": "2026-11-14",
+  "base_reconciled_commit": "cbfc1530d3cef3657fb8c3888b97a0c2d3e0adce",
+  "hypothesis": "An explicit source-typed official-rule adapter and complete input/output coverage checks can carry previously captured matched responses through unchanged imported One-Eval run_eval, native generator.run/evaluator.run and native FileStorage, without silently losing IDs, references or rows.",
+  "scientific_scope": "Integration transfer of known49published outputs; not a new model run, generalization study, default-judge MixEval score or proof of a full installed distribution.",
+  "selection": "Use ALL49records in priorpublic-replay/CAPTURES.jsonl.gz joined by(split,source_index) to input/SELECTED.jsonl.gz, preserving prior captured ordering.17free-form and32choice. No new sample, no200/2400rerun, no response regeneration.",
+  "inputs": "INPUTS.json; inputs/free_form.json; inputs/multiple_choice.json",
+  "source_pinning": "VENDORED_MODULES.json records exact full native module hashes. One-Eval8aba20ad17ee2c7d2391162ac03ffaebcbb17506, captured open-dataflow1.0.10wheel75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790. Official rule and constructors7c52b41929d461df7733573528bdfb08774b0c53.",
+  "implementation": "native_import.py, native_runner.py, support/scoring_adapter.py and vendored full modules. Freeze all input/code hashes before executing either group.",
+  "entrypoints_unchanged": [
+    "DataFlowEvalTool.run_eval",
+    "BenchAnswerGenerator.run",
+    "UnifiedBenchDatasetEvaluator.run",
+    "FileStorage"
+  ],
+  "native_import": "Complete native files loaded through ordinary Python importlib package modules; no AST extraction of native methods. Explicit package export facades avoid unrelated optional package initializer imports.",
+  "shim_boundaries": [
+    "dataflow root/logger/utils logger facade backed by stdliblogging; success maps toinfo",
+    "torch and torch.nn.functional import-only namespaces, no tensor ops",
+    "transformers AutoModel/Tokenizer unavailable sentinel constructors",
+    "math_verify parse/verify raising sentinels",
+    "word2number,tqdm,rich console/table raising sentinels",
+    "langgraph.add_messages and langchainBaseMessage annotation-only sentinel imports",
+    "dataflow.serving API/vLLM raising sentinel classes",
+    "ClickHouseConnectionPool raising sentinel for unused storage database path"
+  ],
+  "interventions": [
+    "Provider _init_llm_serving assigns local captured-output serving. Request batch must equal frozen source-bound official prompts; response ID/sourcehash/responsebytes are checked before and after.",
+    "Prompt resolver returns a source-bound DIYPrompt subclass which validates incoming canonical question/context/choice order and builds official original-source prompt. Native edge-whitespace option normalization is checked while original bytes are restored in official prompt.",
+    "Evaluator _eval_qa_multi/_eval_mc_single call verified official rule adapter; evaluator.run, storage and statistics remain native.",
+    "Incompatible native choice post-rescore is explicitly bypassed. Native return remains diagnostic; One-Eval primary metric stage is NOT executed."
+  ],
+  "coverage_policy": "Missing/extra/duplicate source or response IDs, source hash/reference/type drift, mismatched source/output association, missing/nontext response or unexpected unsupported source must return INCOMPLETE with typed_rule_mean=null. Never emit numeric aggregate over partial coverage.",
+  "RNG": "Fresh random.Random(42) per task-family group, consumed in frozen source order, with every official random-choice fallback retained and logged. Empty text is an observed output, not missing coverage.",
+  "outcomes": [
+    "Full import origins and exact native entrypoint filenames",
+    "Serving request hashes, count and response association",
+    "49row-level official-rule scores/parser outcomes, including any counterexamples/random fallbacks",
+    "Native diagnostic total_samples/valid_samples against complete row coverage",
+    "Status and errors for malformed coverage controls, with no numeric aggregate",
+    "All dependency shim invocations; any invocation of forbidden optional dependency makes integrationINCOMPLETE"
+  ],
+  "criteria": "PASS requires complete17and32rows, exact source/output bytes/IDs/official requests, native denominators equal nominal group size, zero optional-dependency shim calls. No assertion of100%accuracy or alias-oracle success.",
+  "coverage_controls": "Parent/reviewer may execute small fixed malformed input/output mapping controls against validate_coverage/run_group, with exact variants recorded before outcomes. They are new integration guard probes, not another model/scientific panel.",
+  "execution_gate": "Do not execute group runner until parent records frozenprotocol/implementation commit receipt. Import-only feasibility probes have executed and passed; they used no source/output scoring.",
+  "limits": [
+    "Current and primary interpreters have noinstalledOneEval/DataFlow/torch/transformers; package shim integration is explicit and bounded.",
+    "Official rule helper adapter still uses exact AST extraction for rule functions, not native pipeline methods.",
+    "No tokenization/model/remote transport/provider authenticity is tested.",
+    "Captured outputs were generated historically for matched public source tasks, not newly generated for repaired requests.",
+    "Native DataFlow run_eval returns diagnostic scores; original primary metric runner and externally affected conclusions remain separate."
+  ]
+}

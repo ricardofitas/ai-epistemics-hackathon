@@ -1,0 +1,378 @@
+{
+  "records": [
+    {
+      "benchmark_name": "DROP",
+      "context": "The Population of Bermuda in 1727 included 4,470 whites (910 men; 1,261 boys; 1,168 women; 1,131 girls) and 3,877 coloured (787 men; 1,158 boys; 945 women; 987 girls). By 1871 the permanent population (not including the thousands of sailors and soldiers stationed in the colony) included 4,725 whites (2,118 males; 2,607 females) and 7,376 coloured (3,284 males and 4,112 females).",
+      "id": "1169",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "In 1727 were there fewer girls or boys?",
+      "target": [
+        "girls",
+        "girls"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "The Conference of Ambassadors drew the first demarcation line on June 18. The line, drawn about 5 km  west of the Warsaw - Saint Petersburg Railway, was based on the military situation on the ground rather than ethnic composition. Neither Poles nor Lithuanians were content with the line. The Polish Ministry of Foreign Affairs rejected the line as it would require the Polish forces to retreat up to 35 km . The Lithuanians protested leaving Vilnius and Hrodna under Polish control. As German volunteers were departing from Lithuania and Lithuanian forces were preoccupied with battles against the Soviets in northern Lithuania, Poland mounted an offensive on 100 km  wide front moving 20-30 km  deeper into the Lithuanian territory. On July 18, Ferdinand Foch proposed the second demarcation line, known as the Foch Line. It was approved by the Entente on July 26. The Lithuanians were informed about the new line only on August 3. Two major modifications favorable to the Poles were made: the Suwałki Region was assigned to Poland and the entire line was moved about 7 km  west. Again, both Poles and Lithuanians protested the line as it would require them to withdraw their armies from the Vilnius and Suwałki Regions respectively. German administration, which had not yet retreated from the Suwałki Region, also opposed the Foch Line. The new line did not immediately halt the hostilities. After a couple of Polish attacks on July 29 and August 2, the front stabilized.",
+      "id": "212",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What happened first, the Conference of Ambassadors or the Foch Line proposal?",
+      "target": [
+        "The Conference of Ambassadors",
+        "Conference of Ambassadors",
+        "Conference of Ambassadors"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "Among Richmond residents, 64.56% residents speak English, 23.13% speak Spanish, 2.11% speak Tagalog language, 1.75% speak Chinese, 1.20% speak Hmong-Mien languages, 1.12% speak Laotian language, 0.72% speak Punjabi language, 0.54% speak Cantonese language, 0.51% speak French, 0.5% speak Vietnamese language, 3.49% speak other languages, none of which represents more than half of one percent of the population.",
+      "id": "1504",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "How many percent did not speak Laotian?",
+      "target": [
+        "98.88",
+        "98.88"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "Of Saratoga Countys population in 2010, 6.3% were between ages of 5 and 9 years, 6.7% between 10 and 14 years, 6.5% between 15 and 19 years, 5.5% between 20 and 24 years, 5.5% between 25 and 29 years, 5.8% between 30 and 34 years, 6.6% between 35 and 39 years, 7.9% between 40 and 44 years, 8.5% between 45 and 49 years, 8.0% between 50 and 54 years, 7.0% between 55 and 59 years, 6.4% between 60 and 64 years, and 13.7% of age 65 years and over. 22.7% of the countys population was under age 18. The median age was 40.9 years.",
+      "id": "571",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "What were the two smallest age ranges listed?",
+      "target": [
+        "20 and 24",
+        "25 and 29",
+        "between 20 and 24 years",
+        "between 25 and 29 years"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "In the 2006 Krystal Square Off, Kobayashis mark of 97 hamburgers was 30 better than his winning total in 2005 and 28 better than the World Record he set in 2004. At a speed-eating contest in Hong Kong on August 13, 2005, Kobayashi consumed 83 vegetarian jiaozi dumplings in 8 minutes. The next day, he ate 100 baozi in 12 minutes. Kobayashi also won the 2005 Alka-Seltzer US Open of Competitive Eating, a three-hour IFOCE elimination tournament on ESPN, as well as the Glutton Bowl, a two-hour IFOCE eating special that aired on the Fox Network in 2002. However, on Foxs 2003 show Man vs. Beast, Kobayashi lost in an eating competition against a 1089-pound (494 kg) Kodiak bear, when he ate 31 bunless hot dogs in 2 minutes and 36 seconds to the bears 50. In a 2014 interview, Kobayashi claims to have beaten the bear in the rehearsal. (In October 2012, Kobayashi broke the record held by the bear at the Texas state fair.)",
+      "id": "218",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Which IFOCE tournaments did Kobayashi win?",
+      "target": [
+        "2005 Alka-Seltzer US Open",
+        "Glutton Bowl",
+        "2005 Alka-Seltzer US Open",
+        "Glutton Bowl"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "By 2012, the USMC reported fleetwide readiness rate had risen to 68 percent; however, the DODs Inspector General later found 167 of 200 reports had \"improperly recorded\" information. Captain Richard Ulsh blamed these errors on incompetence and said that they were \"not malicious\" or deliberate. The required mission capable rate was 82%, but the average was 53% from June 2007 to May 2010. In 2010, Naval Air Systems Command aimed for an 85% reliability rate by 2018. From 2009 to 2014, readiness rates rose 25 percent to the \"high 80s\", while operating cost had dropped 20 percent to $9,520 through a rigorous maintenance improvement program that focused on diagnosing problems before failures occur. , although the V-22 requires higher maintenance and has lower availability (62%) than traditional helicopters, it also has a lower incidence rate. The average cost per flight hour is , whereas the Sikorsky CH-53E Super Stallion cost about $20,000 per flight hour in 2007. V-22 Total cost of ownership was $83,000 per hour in 2013.",
+      "id": "1252",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "How many years was the time span where was the average mission capable rate 53%",
+      "target": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "In the spring of 2000, Walkertons system typically drew most of its water from one well at a time, alternating unevenly between wells 5, 6, and 7. Well 7 was turned off between March 10 and May 2, ran alone from May 2 through May 9 before turning off again, and was then used again between May 15 and May 19. From May 9 to May 13, Well 5 provided the bulk of Walkertons water, supplemented from May 10–13 by Well 6. Though Well 7 ran without chlorination between May 3 and May 9, expert evaluation of well 7s pumping schedule and lack of physical vulnerabilities to contamination concluded that it was highly unlikely to have been involved in the outbreak. Well 6, which records indicate was out of service beginning May 13, was similarly determined to have been unlikely to have been the source of contamination based on its location and characteristics.",
+      "id": "1488",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "How many days did well 5 provide most of the water?",
+      "target": [
+        "3",
+        "4"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "The Kingdom of Hungary , also known as the Regency, existed from 1920 to 1946 as a de factonote 1 country under Regent Miklós Horthy. Horthy officially represented the Hungarian monarchy of Charles IV, Apostolic King of Hungary. Attempts by Charles IV to return to the throne were prevented by threats of war from neighbouring countries and by the lack of support from Horthy. The country has been regarded by some historians to have been a client state of Germany from 1938 to 1944. The Kingdom of Hungary under Horthy was an Axis Power during most of World War II.  In 1944, after Horthy's government negotiated secretly with the Allies, and considered to leave the war as well, Hungary was occupied by Nazi Germany and Horthy was deposed. The Arrow Cross Party's leader Ferenc Szálasi established a new Nazi-backed government, effectively turning Hungary into a German-occupied puppet state. After World War II, Hungary fell within the Soviet Union's sphere of interest. In 1946, the Second Hungarian Republic was established under Soviet influence. In 1949, the communist Hungarian People's Republic was founded.",
+      "id": "753",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "How many years do they think it was a client state of Germany?",
+      "target": [
+        "6",
+        "6"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "As of May, 2010, the California Secretary of State reports that San Benito County has 34,562 eligible voters. Of those 24,736 (71.57%) are registered voters.  Of those, 11,959 (48.35%) are registered Democratic, 7,477 (30.23%) are registered Republican, 565 (2.28%)are registered American Independent, and 116 (0.47%) are Green Party.  The two incorporated municipalities of Hollister and San Juan Bautista have Democratic majorities on their voter rolls, whereas the unincorporated areas of San Benito County have a small Republican plurality in voter registration.",
+      "id": "1597",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "How many eligible voters were not registered to vote as of May 2010?",
+      "target": [
+        "9826",
+        "9826"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "Knopf was founded in 1915 by Alfred A. Knopf Sr. along with Blanche Knopf, on a $5,000 advance from his father, Samuel Knopf. The first office was located in New York's Candler Building. The publishing house was officially incorporated in 1918, with Alfred Knopf as president, Blanche Knopf as vice-president, and Samuel Knopf as treasurer. From the start, Knopf focused on European translations and high-brow works of literature. Among their initial publications were French author Émile Augier's Four Plays, Russian writer Nikolai Gogol's Taras Bulba, Polish novelist Stanisław Przybyszewski's novel Homo Sapiens, and French writer Guy de Maupassant's Yvette, a novelette, and Ten Other Stories. During World War I these books were cheap to obtain and helped establish Knopf as an American firm publishing European works. Their first bestseller was a new edition of Green Mansions, a novel by W. H. Hudson which went through nine printings by 1919 and sold over 20,000 copies. Their first original American novel, The Three Black Pennys by Joseph Hergesheimer, was published in 1917.",
+      "id": "1435",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Who funded Knopf to be founded?",
+      "target": [
+        "Samuel Knopf",
+        "Samuel Knopf"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "The Front refused to officially disclose the number of members that it had. Thurlow suggested that \"the most reliable estimates\" were those produced by the anti-fascist investigatory magazine Searchlight (magazine). Following its establishment, the NF claimed to have 4000 members in 1968, and in February 1974 a branch chairman claimed that it had 20,000 members. Fielding suggested that it probably had about 21,000 members in early 1975, of whom 6,000 to 8,000 were \"paper members\" who had not renewed their membership subscriptions but not officially terminated their membership. Searchlight claimed that from its origins with 4,000 members in 1968, the party reached a peak membership of 17,500 in 1972, which had declined to 10,000 in 1979, to 3,148 in 1984, and to 1,000 in January 1985. An estimate of party membership in 1989 put adherents of the Flag Group at about 3,000 and of the Strasserite faction at about 600. Thurlow noted that even at its peak in the 1970s, the Fronts membership was still only half the size of that of the BUF during its 1930s heyday.",
+      "id": "1579",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "How many more members was the NF claimed to have in 1974 compared to 1968?",
+      "target": [
+        "16000",
+        "16000"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "Over the next year, however, the Polish forces were subject to attrition, as the Sejm again refused to raise taxes and pay the army, resulting in mass desertions of unpaid soldiery. The Polish problems were further aggravated by the incompetent leadership of hetman Michał Kazimierz Pac, who obstructed Sobieski's leadership, while the Ottomans continued to receive reinforcements. Nonetheless in 1674 the Commonwealth resumed the offensive, taking advantage of a new Muscovy-Ottoman conflict that year, and the Polish-Ottoman war remained undecided.:275 Sobieski's force of 6,000 defeated 20,000 Turks and Tatars under Ibrahim Shyshman in the battle of Lwow in August 1675.:653  Even after the Battle of Trembowla, the Sejm still refused his pleas for more funds and a larger army.:653 In 1676, after Sobieski's 16,000 withstood the two-week siege of Żurawno, by 100,000 men under Ibrahim Pasha, a new peace treaty was signed, the Treaty of Żurawno.:655  The peace treaty partially reversing those from Buczacz: the Ottomans kept approximately two thirds of the territories they gained in 1672, and the Commonwealth no longer was obliged to pay any kind of tribute to the Empire; a large number of Polish prisoners were released by the Ottomans.",
+      "id": "979",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Why were soldiers deserting the Sejm?",
+      "target": [
+        "refused to raise taxes",
+        "the Sejm again refused to raise taxes and pay the army"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "Bangkok is one of the worlds top tourist destinations. Of 162 cities worldwide, MasterCard ranked Bangkok as the top destination city by international visitor arrivals in its Global Destination Cities Index 2018, ahead of London, with just over 20 million overnight visitors in 2017. This was a repeat of its 2017 ranking (for 2016). Euromonitor International ranked Bangkok fourth in its Top City Destinations Ranking for 2016. Bangkok was also named \"Worlds Best City\" by Travel + Leisure magazines survey of its readers for four consecutive years, from 2010 to 2013. As the main gateway through which visitors arrive in Thailand, Bangkok is visited by the majority of international tourists to the country. Domestic tourism is also prominent. The Department of Tourism recorded 26,861,095 Thai and 11,361,808 foreign visitors to Bangkok in 2010. Lodgings were made by 15,031,244 guests, who occupied 49.9 percent of the citys 86,687 hotel rooms. Bangkok also topped the list as the worlds most popular tourist destinations in 2017 rankings.",
+      "id": "148",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Which had the highest amount of tourists in Bangkok 2010 according to the Department of Tourism: Thai or foreign visitors?",
+      "target": [
+        "Thai",
+        "Thai"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "In 993, Khitans under General Xiao Sunning invaded Korea, but retreated after truce negotiations with minister Seo Hui of Goryeo, establishing friendly relations between the two nations. In 1004, the Liao dynasty repulsed Song China. Subsequently, as part of peace negotiations, Song China to paid tribute to the Liao emperor. However, the tension between Goryeo and Liao created another war. In 1009, General Gang Jo of Goryeo led a coup against King Mokjong, killing the king and establishing military rule. In 1010, the alliance was broken and Liao attacked Korea for General Gang's treason. Also, Khitans claimed six garrison settlements east of the Yalu River, which Goryeo claimed as its territory in truce negotiations during 993. After suffering numerous and heavy casualties against the Goryeo army, the Khitans managed to defeat Gangjo, who had begun to underestimate them. Despite this defeat, the Goryeo king managed to retain his claim on the six garrison settlements. The Khitans retreated from the peninsula, with no great prize for the war, but they did not give up their hope of gaining the six garrison settlements and making Goryeo pay tribute. However, beginning in the summer of 1018, the Khitans constructed a bridge across the Yalu River.",
+      "id": "423",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "How many times was Korea attacked?",
+      "target": [
+        "3",
+        "2"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "In January 1918, Romanian forces established control over Bessarabia as the Russian Army abandoned the province. Although a treaty was signed by the Romanian and Bolshevik Russian governments following talks between 5 and 9 March 1918 on the withdrawal of Romanian forces from Bessarabia within two months, on 27 March 1918 Romania formally attached Bessarabia to its territory, based on a resolution passed by the local assembly of that territory on its unification with Romania. Romania officially made peace with the Central Powers by signing the Treaty of Bucharest on 7 May 1918. Under the treaty, Romania was obliged to end the war with the Central Powers and make small territorial concessions to Austria-Hungary, ceding control of some passes in the Carpathian Mountains, and to grant oil concessions to Germany. In exchange, the Central Powers recognised the sovereignty of Romania over Bessarabia. The treaty was renounced in October 1918 by the Alexandru Marghiloman government, and Romania nominally re-entered the war on 10 November 1918. The next day, the Treaty of Bucharest was nullified by the terms of the Armistice of Compiègne. Total Romanian deaths from 1914 to 1918, military and civilian, within contemporary borders, were estimated at 748,000.",
+      "id": "919",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Who abandoned Bressarabia?",
+      "target": [
+        "the Russian Army",
+        "Romanian forces"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": "In terms of race and ethnicity, Springfield is 51.8% White American, 22.3% African American or African American, 0.6% American Indian and Alaska Native, 2.4% Asian (1.2% Vietnamese, 0.3% Chinese, 0.2% Indian, 0.1% Cambodian, 0.1% Filipino, 0.1% Korean, 0.1% Pakistani, 0.1% Laotian), 0.1% Native Hawaiian and Other Pacific Islander, 18.0% from Some Other Race, and 4.7% from Two or More Races (1.5% White and Black or African American; 1.0% White and Some Other Race). Hispanic and Latino Americans and Latinos of any race made up 38.8% of the population (33.2% Puerto Rican, 1.7% Dominican, 1.0% Mexican, 0.5% Guatemalan, 0.3% Cuban, 0.2% Colombian, 0.2% Spanish, 0.2% Salvadoran, 0.1% Peruvian, 0.1% Ecuadorian, 0.1% Panamanian, 0.1% Costa Rican, 0.1% Honduran). Non-Hispanic Whites were 36.7% of the population in 2010, down from 84.1% in 1970.",
+      "id": "1363",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Which two ethnicities make up the largest percentages of the Hispanic and Latino Americans and Latinos of any race category?",
+      "target": [
+        "Puerto Rican",
+        "Dominican",
+        "Puerto Rican",
+        "Dominican"
+      ]
+    },
+    {
+      "benchmark_name": "DROP",
+      "context": " Hoping to snap a two-game losing streak, the Falcons went home for a Week 9 duel with the Washington Redskins.  Atlanta would take flight in the first quarter as quarterback Matt Ryan completed a 2-yard touchdown pass to tight end Tony Gonzalez, followed by cornerback Tye Hill returning an interception 62 yards for a touchdown.  The Redskins would answer in the second quarter as kicker Shaun Suisham nailed a 48-yard field goal, yet the Falcons kept their attack on as running back Michael Turner got a 30-yard touchdown run, followed by kicker Jason Elam booting a 33-yard field goal. Washington began to rally in the third quarter with a 1-yard touchdown run from running back Ladell Betts.  The Redskins would come closer in the fourth quarter as quarterback Jason Campbell hooked up with tight end Todd Yoder on a 3-yard touchdown pass, yet Atlanta closed out the game with Turner's 58-yard touchdown run.",
+      "id": "1943",
+      "options": [
+        "None"
+      ],
+      "problem_type": "free-form",
+      "prompt": "Which team does Jason Elam play for?",
+      "target": [
+        "Falcons",
+        "The Redskins",
+        "the Falcons",
+        "Falcons"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "case_id": "free_form:1169",
+      "source_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+      "response": "In 1727, there were more girls than boys.\n\nThere were 1,168 women and 1,131 girls, for a total of 2,299 girls, while there were 910 men and 1,261 boys, for a total of 2,171 boys."
+    },
+    {
+      "case_id": "free_form:212",
+      "source_sha256": "05384554ac2a496bcd8930886bee076f88b0b1b47c873561496159afcea1785d",
+      "response": "The Conference of Ambassadors drew the first demarcation line on June 18."
+    },
+    {
+      "case_id": "free_form:1504",
+      "source_sha256": "054a102ce3a7f879ff21c7f178311197450d60739a61cc7615abcd9b19a7d81c",
+      "response": "98.88% (100% - 1.12%) did not speak Laotian."
+    },
+    {
+      "case_id": "free_form:571",
+      "source_sha256": "061cc0b7c0aaa6c0232434f68d0a63d376eff7705ae0407a5bdb662f29790807",
+      "response": "The two smallest age ranges listed are 5-9 years and 10-14 years."
+    },
+    {
+      "case_id": "free_form:218",
+      "source_sha256": "07875b16ce3a89156525f5dabe83fada2b3ebdf3584b78cd843e941f64b834a4",
+      "response": "Kobayashi won the 2005 Alka-Seltzer US Open of Competitive Eating and the Glutton Bowl."
+    },
+    {
+      "case_id": "free_form:1252",
+      "source_sha256": "07cca6660186504bcee5cd080239a04e8fefa96c7dd75cc6d6335e24f8b35345",
+      "response": "The average mission capable rate was 53% from June 2007 to May 2010, for a time span of **3 years**."
+    },
+    {
+      "case_id": "free_form:1488",
+      "source_sha256": "088bb1ba99fe58bc7e3fa2883ca94e968315e06415cd8ad6e254803a8f5db436",
+      "response": "Well 5 provided most of the water for **5 days**, from May 9 to May 13."
+    },
+    {
+      "case_id": "free_form:753",
+      "source_sha256": "089e2ab9ff775f6a24e8d990c9597867c2395df7b1e50dcf7033cc459af58a74",
+      "response": "The Kingdom of Hungary was considered a client state of Germany from **1938 to 1944**."
+    },
+    {
+      "case_id": "free_form:1597",
+      "source_sha256": "0969cb9f8213e65c20420d54cf53a28a055a08fd5b92ba34f529f2ca5a4bce6b",
+      "response": "The number of eligible voters not registered to vote is:\n34,562 - 24,736 = **9,826 voters**."
+    },
+    {
+      "case_id": "free_form:1435",
+      "source_sha256": "09b7ef4668133acb6642403047af0315952cb8903e326b63193a07e34d4b63cd",
+      "response": "Knopf was founded with a $5,000 advance from Alfred Knopf's father, Samuel Knopf."
+    },
+    {
+      "case_id": "free_form:1579",
+      "source_sha256": "0a1d2ed143418bf2d83123f0cf5226485ef14f9deb7c5bbb7adad9c76bfa2a70",
+      "response": "The NF claimed to have 20,000 members in 1974, while it claimed to have 4,000 members in 1968. Therefore, the NF claimed to have 16,000 more members in 1974 compared to 1968."
+    },
+    {
+      "case_id": "free_form:979",
+      "source_sha256": "0a4c9f4764ccd36053fb93586276bafe442f417c5cc746f865aacf0d8a36d13b",
+      "response": "Soldiers were deserting the Sejm because they were unpaid and the government refused to raise taxes to pay the army."
+    },
+    {
+      "case_id": "free_form:148",
+      "source_sha256": "0ac9a1a322b3a6d3e61dba881f426821fa6d1550026b7e6a017592a1b3804d35",
+      "response": "The Department of Tourism recorded 26,861,095 **Thai** visitors to Bangkok in 2010."
+    },
+    {
+      "case_id": "free_form:423",
+      "source_sha256": "0ae615bf3dc380c3428657c9fff9354d12c8254cdaff45f64b51a7011838500e",
+      "response": "Korea was attacked twice, in 993 and 1010."
+    },
+    {
+      "case_id": "free_form:919",
+      "source_sha256": "0c8df764b2e9aedf28cc3014b51f200dbcd4d6637d61af4941f27ccb102d3b2c",
+      "response": "The Russian Army abandoned Bessarabia in January 1918."
+    },
+    {
+      "case_id": "free_form:1363",
+      "source_sha256": "0da07087b6d2b541943262fb16d9b286e6263960eaf1098ea28936cfce240386",
+      "response": "The two ethnicities that make up the largest percentages of the Hispanic and Latino Americans and Latinos of any race category are Puerto Rican (33.2%) and Dominican (1.7%)."
+    },
+    {
+      "case_id": "free_form:1943",
+      "source_sha256": "0e4ecfca311d5b81921f0595d1b7e0665e9dce13680f8fc6bf0f19a861aa90bf",
+      "response": "The Falcons.\n\nThe provided text states that \"kicker Jason Elam booted a 33-yard field goal\". This indicates that Jason Elam plays for the Falcons."
+    }
+  ],
+  "expected_sources": {
+    "free_form:1169": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+    "free_form:212": "05384554ac2a496bcd8930886bee076f88b0b1b47c873561496159afcea1785d",
+    "free_form:1504": "054a102ce3a7f879ff21c7f178311197450d60739a61cc7615abcd9b19a7d81c",
+    "free_form:571": "061cc0b7c0aaa6c0232434f68d0a63d376eff7705ae0407a5bdb662f29790807",
+    "free_form:218": "07875b16ce3a89156525f5dabe83fada2b3ebdf3584b78cd843e941f64b834a4",
+    "free_form:1252": "07cca6660186504bcee5cd080239a04e8fefa96c7dd75cc6d6335e24f8b35345",
+    "free_form:1488": "088bb1ba99fe58bc7e3fa2883ca94e968315e06415cd8ad6e254803a8f5db436",
+    "free_form:753": "089e2ab9ff775f6a24e8d990c9597867c2395df7b1e50dcf7033cc459af58a74",
+    "free_form:1597": "0969cb9f8213e65c20420d54cf53a28a055a08fd5b92ba34f529f2ca5a4bce6b",
+    "free_form:1435": "09b7ef4668133acb6642403047af0315952cb8903e326b63193a07e34d4b63cd",
+    "free_form:1579": "0a1d2ed143418bf2d83123f0cf5226485ef14f9deb7c5bbb7adad9c76bfa2a70",
+    "free_form:979": "0a4c9f4764ccd36053fb93586276bafe442f417c5cc746f865aacf0d8a36d13b",
+    "free_form:148": "0ac9a1a322b3a6d3e61dba881f426821fa6d1550026b7e6a017592a1b3804d35",
+    "free_form:423": "0ae615bf3dc380c3428657c9fff9354d12c8254cdaff45f64b51a7011838500e",
+    "free_form:919": "0c8df764b2e9aedf28cc3014b51f200dbcd4d6637d61af4941f27ccb102d3b2c",
+    "free_form:1363": "0da07087b6d2b541943262fb16d9b286e6263960eaf1098ea28936cfce240386",
+    "free_form:1943": "0e4ecfca311d5b81921f0595d1b7e0665e9dce13680f8fc6bf0f19a861aa90bf"
+  },
+  "expected_responses": {
+    "free_form:1169": "3997dffbc8a1ed31b47c60741245df4345fbd7a6ecbfce312e6a25711aef02bb",
+    "free_form:212": "481ff5af98eace1ae5fb693dab7f64f57ab37ff0de0fd602efdbdd5e496208fe",
+    "free_form:1504": "195d475e213bd5f652c00f7a8730ad78d05e05bedb83b17e6fd3cfec77f88369",
+    "free_form:571": "4843a729b843f1cfafbe693d5f29c2821b92b831f06ccd06ca4828fde221f0f0",
+    "free_form:218": "2e915a4b990ad4b8247d3a4d8cc13d500bdd2d063a0540c090e9b68f18492c21",
+    "free_form:1252": "be05fed1dd4da988526d329a01bcb00bdbeae586ae7850caedc365599a12b3ed",
+    "free_form:1488": "0b2083ced06b30f0c9c0c8717472ed0359bc2bd7f9a2dfbed3eff9167cb6aa3e",
+    "free_form:753": "7ad4fe7b67798894a3828e1cce7bc8a62ad53128aef80f689c3ca411e91dac02",
+    "free_form:1597": "1b948f4734dc5ca81044f9c56b8607461f488ee79ca99697b49ca3fe7a1ca5cb",
+    "free_form:1435": "90b51a72d9a2c3a00012f3994b98db106df9bc1fca32184c60c688d4cdb8c8c0",
+    "free_form:1579": "7dba9fb9ebd620466c0004b5a7a03986abbede39856169f24eb00756031551a9",
+    "free_form:979": "b58f68e64a62429196730c664f5c44910320b76db9db6c5f517089a2d031d59c",
+    "free_form:148": "8302f64afe5b867bcdf9e2d4a9893bc24c177eaeb8dc1926533f155b91a16f6a",
+    "free_form:423": "2f4530c27df7d1dff4d8c06fba54bc11c650644b9815dff0bc26f55823b81121",
+    "free_form:919": "35dcfff5e66ccad892bd36707d91a1139888c26599625ba6f870552cbd0d7c6e",
+    "free_form:1363": "ef4ca41198a3d9bf97a0d1281bda25ada1ff59e7e399938f70e5d32d3271a81b",
+    "free_form:1943": "fd2d730851d19288081613cf17a9d88ee6f46674cd68b139d51bfe203bd709dd"
+  },
+  "seed": 42,
+  "scope": "Existing49published responses matched in prior audit, reused for full-module integration only"
+}

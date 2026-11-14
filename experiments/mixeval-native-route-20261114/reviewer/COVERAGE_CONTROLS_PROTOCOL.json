@@ -1,0 +1,69 @@
+{
+  "status": "FIXED_BEFORE_CONTROL_OR_GROUP_RESULTS",
+  "stage": "Independent malformed source/output association controls",
+  "controls": [
+    {
+      "name": "missing_output",
+      "group": "free_form",
+      "expected_error_prefix": "missing_or_extra_output_id"
+    },
+    {
+      "name": "duplicate_source",
+      "group": "free_form",
+      "expected_error_prefix": "duplicate_source_id"
+    },
+    {
+      "name": "duplicate_output",
+      "group": "multiple_choice",
+      "expected_error_prefix": "duplicate_output_id"
+    },
+    {
+      "name": "altered_expected_source_hash",
+      "group": "free_form",
+      "expected_error_prefix": "source_hash_or_reference_drift:"
+    },
+    {
+      "name": "changed_source_reference",
+      "group": "multiple_choice",
+      "expected_error_prefix": "source_hash_or_reference_drift:"
+    },
+    {
+      "name": "changed_source_context",
+      "group": "free_form",
+      "expected_error_prefix": "source_hash_or_reference_drift:"
+    },
+    {
+      "name": "unsupported_source_type",
+      "group": "free_form",
+      "expected_error_prefix": "unsupported_problem_type"
+    },
+    {
+      "name": "changed_response_bytes",
+      "group": "free_form",
+      "expected_error_prefix": "response_bytes_or_association_drift:"
+    },
+    {
+      "name": "wrong_output_source_association",
+      "group": "multiple_choice",
+      "expected_error_prefix": "output_source_association_drift:"
+    },
+    {
+      "name": "preexisting_generated_answer",
+      "group": "free_form",
+      "expected_error_prefix": "preexisting_generated_ans_would_skip_generation"
+    }
+  ],
+  "frozen_files": {
+    "reviewer/run_coverage_controls.py": "9d8855c6891ec95e63fd2b2ef1a77a52492579b7ba045b86c9baaa71f030a416",
+    "integration/native_runner.py": "5788e22fb9ae326ad886f2a7de55913d7d6bfacb5afbebe27fb8b23093c441db",
+    "integration/native_import.py": "5bb79ddcaf798eb7811ad5a68061dd2dfadd892ac0e7d76c18d7e8156366739d",
+    "integration/PROTOCOL.json": "a07fda54cff81202a6c0a733af32727db58201756fc5e6aa1c621cf03025196a",
+    "integration/FROZEN_IMPLEMENTATION.json": "a2f3fae52fd6086c119a8da3b4847c544d9060b62899bc8cb4c54f2bacfc41af",
+    "integration/inputs/free_form.json": "29c4fecfd70c72a36e5525edd270bef4c0130f79cb5b19f834736edb22c91c01",
+    "integration/inputs/multiple_choice.json": "f2167d0cbdd233c88be0a740c3fb67f7b7ada2324d53b7a4670b6b93db40e7a4"
+  },
+  "expected": "All10mustreturnINCOMPLETE, typed_rule_meannull, zero localgenerationbatches and zero modelcalls. Cases stayfixed onfailure.",
+  "scope": "Pre-nativecoverageguards, not new model observations or49case group reruns. Changedcontext/reference controls intentionally retainoriginalexpectedsourcehash to test immutable-source drift.",
+  "execution_gate": "Do not execute untilparentcommits priorintegrationprotocol/runner andthiscontrolprotocol+runner.",
+  "pre_execution_revision_note": "Integration owner updated INCOMPLETE bookkeeping before any49group/control execution to retain actual servingcalls/shims/partialcaptures onpost-provider errors. Control hash bindings refreshed beforeparentcommit."
+}

@@ -1,0 +1,118 @@
+{
+  "status": "FROZEN_BEFORE_INTEGRATION_GROUP_EXECUTION",
+  "created_at": "2026-11-14T14:51:01.613341+00:00",
+  "files": {
+    "ENVIRONMENT.json": {
+      "bytes": 637,
+      "sha256": "c4a565b1bae9f886f979ff3c0d5b979b47e5b43ea9993a1f8dc81e36e469709f"
+    },
+    "INPUTS.json": {
+      "bytes": 2089,
+      "sha256": "81f3b1e9a5c72c7cbd0fe94f0528453a1dea4422c2517fb7e18058a92b838d40"
+    },
+    "PROTOCOL.json": {
+      "bytes": 5723,
+      "sha256": "a07fda54cff81202a6c0a733af32727db58201756fc5e6aa1c621cf03025196a"
+    },
+    "VENDORED_MODULES.json": {
+      "bytes": 5388,
+      "sha256": "1715ba8f0d80fbe0064963a016ce1afdd548e2fc008c7ac1fbb520143ab40312"
+    },
+    "inputs/free_form.json": {
+      "bytes": 29225,
+      "sha256": "29c4fecfd70c72a36e5525edd270bef4c0130f79cb5b19f834736edb22c91c01"
+    },
+    "inputs/multiple_choice.json": {
+      "bytes": 47799,
+      "sha256": "f2167d0cbdd233c88be0a740c3fb67f7b7ada2324d53b7a4670b6b93db40e7a4"
+    },
+    "native_import.py": {
+      "bytes": 4742,
+      "sha256": "5bb79ddcaf798eb7811ad5a68061dd2dfadd892ac0e7d76c18d7e8156366739d"
+    },
+    "native_runner.py": {
+      "bytes": 15899,
+      "sha256": "5788e22fb9ae326ad886f2a7de55913d7d6bfacb5afbebe27fb8b23093c441db"
+    },
+    "support/official/LICENSE_PROVENANCE.json": {
+      "bytes": 1476,
+      "sha256": "64fef6675a6b2113a68276bf99367a1003d9fbeea1f61944cceeef9591bd71df"
+    },
+    "support/official/mix_eval/prompts/evaluation_prompts.py": {
+      "bytes": 8473,
+      "sha256": "7f7f5433576a05a5ee522923d7f53f77e8227ecac12dfdfd9b9163008153232b"
+    },
+    "support/official/mix_eval/utils/metric_utils.py": {
+      "bytes": 14268,
+      "sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a"
+    },
+    "support/scoring_adapter.py": {
+      "bytes": 7028,
+      "sha256": "c0e2bc7183c5716de0b55aefa7b0507dfddb7cbe4ebaffc3f84fd8c041033000"
+    },
+    "vendor/dataflow/core/__init__.py": {
+      "bytes": 463,
+      "sha256": "94cf94774e5375c11a36eb3b54ae92c690a6936c518d0db0e04939b98eb68780"
+    },
+    "vendor/dataflow/core/llm_serving.py": {
+      "bytes": 1085,
+      "sha256": "62e825255f38561653b2d02b720fa03cfc406556688c7d8c397eefcd3d725f3f"
+    },
+    "vendor/dataflow/core/operator.py": {
+      "bytes": 874,
+      "sha256": "28478a43ad6fd51b2089e2bf5bd26840d2c6bc4eac1b841beea7a3289c4686e3"
+    },
+    "vendor/dataflow/core/prompt.py": {
+      "bytes": 3912,
+      "sha256": "ad23e8f178a4b75d662dd85035e4835fdb74bea2ac75507ccd68510b0a0d064f"
+    },
+    "vendor/dataflow/core/wrapper.py": {
+      "bytes": 279,
+      "sha256": "fe66c815aba17ed0832f6e6fb9086b2dea79526ae9f456b4cb5691043b180644"
+    },
+    "vendor/dataflow/operators/core_text/eval/unified_bench_dataset_evaluator.py": {
+      "bytes": 61785,
+      "sha256": "a06f70fac52f9e5287b70aa908852468aa0b945be79f4445cf91566a04878c7f"
+    },
+    "vendor/dataflow/operators/core_text/generate/bench_answer_generator.py": {
+      "bytes": 14786,
+      "sha256": "9b3b29c44c60d71510f88b0f19e964339806fc29bd0fd91ff16c97072219e09a"
+    },
+    "vendor/dataflow/prompts/core_text.py": {
+      "bytes": 1315,
+      "sha256": "5df1bf04fceea685ebf28bf4c398303cda49e46af8d87e769db0d04ca1c5600a"
+    },
+    "vendor/dataflow/prompts/model_evaluation/general.py": {
+      "bytes": 4910,
+      "sha256": "05a38f7556fa1b8de0c5bc678b66c653ad664855d268c14c38560f03ec0f6c22"
+    },
+    "vendor/dataflow/utils/reasoning/AnswerExtraction.py": {
+      "bytes": 8303,
+      "sha256": "a133193bf1fdcab1dd594974b7e411737e5a16e20076c0ffe7e10ff04354b8c4"
+    },
+    "vendor/dataflow/utils/registry.py": {
+      "bytes": 13382,
+      "sha256": "a7280fad9663479dd37894752aa5686258c549c44f605bf3d9452a2047448f2b"
+    },
+    "vendor/dataflow/utils/storage.py": {
+      "bytes": 52516,
+      "sha256": "9497e91a1b9b63f354ecfc36adf5b600e0ac5b173eb9ca1bd3da52368bc3b58d"
+    },
+    "vendor/one_eval/core/state.py": {
+      "bytes": 5332,
+      "sha256": "af00f96608ba1c1176e056fb8d1ad34902232dd759571c2ecc9afc67b30604ce"
+    },
+    "vendor/one_eval/logger.py": {
+      "bytes": 4962,
+      "sha256": "b551cfce20c02a35534652fe33d311e1c806e302b9fffc7b83567fa095861958"
+    },
+    "vendor/one_eval/toolkits/dataflow_eval_tool.py": {
+      "bytes": 59582,
+      "sha256": "640884f634a3009784a8698d4f4fd05a0485f991dad395b3c31fd630c6cf427b"
+    }
+  },
+  "manifest_sha256": "110d81687a8a9b0a0cf730a54eebf0810f26b3eb0be37f4bb81ab6ba4bd50f66",
+  "new_group_results_exist": false,
+  "prior_probes": "Full native module import only, no case generation/scoring",
+  "preexecution_revision": "Static review retained localserving/partialscore/shim evidence onincompleteexecution; noresultsobserved."
+}

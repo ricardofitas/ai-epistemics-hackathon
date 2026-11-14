@@ -1,0 +1,730 @@
+{
+  "records": [
+    {
+      "benchmark_name": "HellaSwag",
+      "context": "[header] How to report fraud in canada [title] Gather as much information as possible. [step] Organize and preserve any evidence you have of the fraudulent activity, including emails, receipts, screen captures, or phone records. If possible, try to print digital files, but keep the digital file on your computer or device.",
+      "id": "1776",
+      "options": [
+        "[substeps] Make sure you thoroughly research the fraudulent activity in the or your computer and document it closely. If you find out that someone has been involved, you may need to submit a report to the canadian security administration.",
+        "If necessary, you may also want to distribute copies or files to all major credit reporting agencies. [substeps] Purchase or post copies of any receipts or other supporting documentation to any credit reporting agencies, such as financial statements, paid bills, or receipts from friends, family, or credit card purchases.",
+        "[substeps] If you can't hire a lawyer, particularly if the fraud involves financial problems, try to hire a financial advisor. Not only can this save you substantial amounts of time, but the legal cost of hiring a financial advisor can impact the fees associated with filing your report.",
+        "[substeps] Focus on evidence you can easily acquire yourself, such as from your own records or accounts. Don't put yourself in potential danger by provoking the fraudster or attempting to play detective."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What happens next?",
+      "target": [
+        3
+      ]
+    },
+    {
+      "benchmark_name": "HellaSwag",
+      "context": "[header] How to be a vendor at a convention [title] Come prepared. [step] This means three things : [substeps] Have something attractive to draw people to your table. This could be a clever/shocking/attractive sign, a large picture, or big, bold text.",
+      "id": "181",
+      "options": [
+        "Simple and solid is your guide to attracting people as they arrive. Try not to draw them in with items new you've collected or items with extra or super attractions because they will always think they're the only one that's special.",
+        "If anyone has heard of these things, get it in the local newspaper and ask around. Pre-packaged food should be elbow-deep in the mix.",
+        "Posters and tri-fold pieces of poster board are very common. This is actually the least important part of coming prepared-but it really does help! Know what you're going to say ahead of time.",
+        "You could also have an interesting and well-detailed pic. Be sure to have it on your table and that you follow appropriate etiquette."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What happens next?",
+      "target": [
+        2
+      ]
+    },
+    {
+      "benchmark_name": "BoolQ",
+      "context": "California is a U.S. state in the Pacific Region of the United States. With 39.5 million residents, California is the most populous state in the United States and the third largest by area. The state capital is Sacramento. The Greater Los Angeles Area and the San Francisco Bay Area are the nation's second- and fifth-most populous urban regions, with 18.7 million and 8.8 million residents respectively. Los Angeles is California's most populous city, and the country's second-most populous, after New York City. California also has the nation's most populous county, Los Angeles County; its largest county by area, San Bernardino County; and its fifth most densely populated county, San Francisco.",
+      "id": "868",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "is california still part of the united states",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "AGIEval",
+      "context": "Safety accidents in China's coal industry occur frequently, often resulting in serious casualties.The deep and fundamental reasons for this phenomenon are? the safety measures are not in place, the production of safety equipment is backward, the production in violation of laws and regulations is seriously violated, and some local leading cadres and staff have seriously neglected their duties.",
+      "id": "394",
+      "options": [
+        "(A)Government officials participated in the shares and formed a community of interests with the mine owners, resulting in problems such as inadequate security measures.",
+        "(B)Enterprises or miners have less investment in safe production, which can increase profits, leading to problems such as illegal production.",
+        "(C)In pursuit of local GDP growth, local governments and their law enforcement agencies have caused problems such as weak inspections on production safety.",
+        "(D)Although the miner's family depends on the miner to feed him, he hopes he will return home safely."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "Which of the following options poses the weakest question to the point of view in the question?",
+      "target": [
+        3
+      ]
+    },
+    {
+      "benchmark_name": "BoolQ",
+      "context": "On 19 May 1999, LanChile (known as LAN and from 2016 as LATAM Chile) became a member-elect, the alliance's first representative from Latin America. LanChile's two subsidiaries, LAN Express and LAN Perú, would also join the alliance. Irish carrier Aer Lingus was formally elected on board and confirmed as the ninth member of the alliance on 2 December 1999. As LanChile and Aer Lingus joined on 1 June 2000, Canadian Airlines left the alliance, following the airline's purchase by Air Canada, a member of the rival Star Alliance.",
+      "id": "1254",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "is air canada part of one world alliance",
+      "target": [
+        0
+      ]
+    },
+    {
+      "benchmark_name": "PIQA",
+      "context": "to make it easier to push the reset button of the garbage disposable machine which is located underneath the machine",
+      "id": "1490",
+      "options": [
+        "place a wall mirror on the floor of the cabinet",
+        "hold a hand mirror under the garbage disposable machine"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "Which solution is correct?",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "CommonsenseQA",
+      "context": "landing",
+      "id": "1624",
+      "options": [
+        "apartment building",
+        "disembark",
+        "stairwell",
+        "deplane",
+        "airport"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "As he looked out the window, he knew the landing was happening soon, and it made him nervous, but where would he be soon?",
+      "target": [
+        4
+      ]
+    },
+    {
+      "benchmark_name": "HellaSwag",
+      "context": "[header] How to draft a warranty [title] Format your document. [step] You want people to be able to read your warranty, so make sure the font size isn't too small. Generally, anything below 10 point type is hard for people to read.",
+      "id": "831",
+      "options": [
+        "Instead, use 12 point type or larger. [substeps] Your document should be \" justified \" on the left-hand margin only.",
+        "[substeps] You should also use a font size that's readable to see what you are writing without looking thick. In a show business context, you might want to use a slant font like arial.",
+        "[substeps] How the document is formatted is up to you. Almost any paper document needs to be formatted, provided it works for you.",
+        "[substeps] Set the font size as wide as the document can accommodate. If you can, use a traditional font style like times new roman or arial."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What happens next?",
+      "target": [
+        0
+      ]
+    },
+    {
+      "benchmark_name": "BoolQ",
+      "context": "Angel food cake, or angel cake, is a type of sponge cake made with egg whites, flour, and sugar. A whipping agent, such as cream of tartar, is commonly added. It differs from other cakes because it uses no butter. Its structure comes from whipped egg whites known as a protein foam. Angel food cake originated in the United States and first became popular in the late 19th century. It gained its unique reputation along with its name due to its light and fluffy texture, said to resemble the ``food of the angels''.",
+      "id": "1620",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "does angel food cake have eggs in it",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "BoolQ",
+      "context": "Private companies such as Celestis, Inc., Elysium Space, Ascending Memories,, Orbital Memorialsand Horizon Ascending Limited., offer space burial services.",
+      "id": "346",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "can i get my ashes shot into space",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "BoolQ",
+      "context": "Most EMS providers operate on the principle of informed consent; that is, patients must know exactly what it is they are refusing, and what the possible consequences might be, in order to make a proper decision. This precludes parties who are intoxicated or otherwise incapable of making an informed decision, such as the mentally incompetent. Otherwise, agencies could release someone who was not able to understand what refusing might mean to their health.",
+      "id": "1297",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "can paramedics make you go to the hospital",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "BoolQ",
+      "context": "In the United States House of Representatives, the District is represented by a delegate, who is not allowed to vote on the House floor but can vote on procedural matters and in congressional committees. D.C. residents have no representation in the United States Senate. The Twenty-third Amendment to the United States Constitution, adopted in 1961, entitles the District to the same number of electoral votes as that of the least populous state in the election of the President and Vice President of the United States.",
+      "id": "1277",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "can you vote for president in washington dc",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "HellaSwag",
+      "context": "[header] How to boycott autism speaks [title] Consider your mental health. [step] If you have disabilities such as anxiety, depression, ptsd, or other mental health conditions, reading about as may trigger a downward spiral. If you are prone to this, proceed with caution.",
+      "id": "1262",
+      "options": [
+        "[substeps] Autistic people with self-esteem issues should especially be mindful. Reading what autism speaks has to say may worsen your self-image.",
+        "Read stories or articles on the autism speaks website and read for relief from disease. Avoiding the internet can be a good start to budgeting money for home clothes.",
+        "Even if you can't see, sound in depth about your needs and symptoms. [substeps] Make sure any adult can see what the real problem is so that it doesn't become more severe.",
+        "Try to unfollow autism speaks books and read nonfiction books that showcase that topic, whether you are autistic or not. Don't worry: many successful writers have found friends who actively listen to their own thoughts."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What happens next?",
+      "target": [
+        0
+      ]
+    },
+    {
+      "benchmark_name": "HellaSwag",
+      "context": "[header] How to become an electrician in maine [title] Participate in a pre-apprenticeship in high school. [step] Maine offers a pre-apprenticeship program for students in 11th and 12th grade. The program requires students to log 1 , 000 hours of on-the-job electrician training by working part-time during the school year, and part-time or full-time during the summer.",
+      "id": "1874",
+      "options": [
+        "Although the program is relatively easy, it can be challenging. To become an electrician in maine, you will want to take your ged or related courses to college level where you'll get an equivalent degree in electrical engineering.",
+        "[title] Get certified as a electrician in maine. [step] The required courses can be found online using the skills skills calculator or the maine electrician association's website.",
+        "Upon completion of the pre-apprenticeship program, graduates may enter an electrician apprenticeship program. Pre-apprenticeship hours count towards the hours required for the electrician apprenticeship in maine.",
+        "[substeps] Some operators require a bachelor's degree in carpentry or plumbing or an advanced degree in electrical engineering. These classes can also help you hone your electrical skills."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What happens next?",
+      "target": [
+        2
+      ]
+    },
+    {
+      "benchmark_name": "SIQA",
+      "context": "Jan decided to quit their job to get a better job as a banker.",
+      "id": "915",
+      "options": [
+        "enjoy having a better job",
+        "think of them well",
+        "want them to succeed"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What will happen to Others?",
+      "target": [
+        2
+      ]
+    },
+    {
+      "benchmark_name": "BoolQ",
+      "context": "But, the hospital used for most other exterior and a few interior shots is not in Seattle; these scenes are shot at the VA Sepulveda Ambulatory Care Center in North Hills, California, and occasional shots from an interior walkway above the lobby show dry California mountains in the distance. The exterior of Meredith Grey's house, also known as the Intern House, is real. In the show, the address of Grey's home is 613 Harper Lane, but this is not an actual address. The physical house is located at 303 W. Comstock St., on Queen Anne Hill, Seattle, Washington. Most scenes are taped at Prospect Studios in Los Feliz, just east of Hollywood, where the Grey's Anatomy set occupies six sound stages. Some outside scenes are shot at the Warren G. Magnuson Park in Seattle. Several props used are working medical equipment, including the MRI machine.",
+      "id": "1550",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "is grey's anatomy filmed at a real hospital",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "CommonsenseQA",
+      "context": "animal",
+      "id": "966",
+      "options": [
+        "sand trap",
+        "live long",
+        "leave home",
+        "feel pain",
+        "eating"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What is the animal trying to accomplish?",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "AGIEval",
+      "context": "Exactly five movies are showing at the repertory theater this evening: a horror film, a mystery, a romance, a sci-fi film, and a western. Each movie is shown exactly once, on one of the theater's three screens: screens 1, 2, and 3. Screens 1 and 2 show two movies each, one beginning at 7 P.M. and the other at 9 P.M.; screen 3 shows exactly one movie, at 8 P.M. The following conditions apply to this evening's schedule: The western begins at some time before the horror film does. The sci-fi film is not shown on screen 3. The romance is not shown on screen 2. The horror film and the mystery are shown on different screens.",
+      "id": "1909",
+      "options": [
+        "(A)The western begins at 7 P.M.",
+        "(B)The sci-fi film begins at 9 P.M.",
+        "(C)The mystery begins at 8 P.M.",
+        "(D)The romance begins at 9 P.M.",
+        "(E)The horror film begins at 8 P.M."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "If the sci-fi film and the romance are to be shown on the same screen, then which one of the following must be true of this evening's schedule?",
+      "target": [
+        0
+      ]
+    },
+    {
+      "benchmark_name": "AGIEval",
+      "context": "David Warsh's book describes a great contradiction inherent in economic theory since 1776, when Adam Smith published The Wealth of Nations. Warsh calls it the struggle between the Pin Factory and the Invisible Hand. Using the example of a pin factory, Smith emphasized the huge increases in efficiency that could be achieved through increased size. The pin factory's employees, by specializing on narrow tasks, produce far more than they could if each worked independently. Also, Smith was the first to recognize how a market economy can harness self-interest to the common good, leading each individual as though \"by an invisible hand to promote an end which was no part of his intention.\" For example, businesses sell products that people want, at reasonable prices, not because the business owners inherently want to please people but because doing so enables them to make money in a competitive marketplace. These two concepts, however, are opposed to each other. The parable of the pin factory says that there are increasing returns to scale—the bigger the pin factory, the more specialized its workers can be, and therefore the more pins the factory can produce per worker. But increasing returns create a natural tendency toward monopoly, because a large business can achieve larger scale and hence lower costs than a small business. So given increasing returns, bigger firms tend to drive smaller firms out of business, until each industry is dominated by just a few players. But for the invisible hand to work properly, there must be many competitors in each industry, so that nobody can exert monopoly power. Therefore, the idea that free markets always get it right depends on the assumption that returns to scale are diminishing, not increasing. For almost two centuries, the assumption of diminishing returns dominated economic theory, with the Pin Factory de-emphasized. Why? As Warsh explains, it wasn't about ideology; it was about following the line of least mathematical resistance. Economics has always had scientific aspirations; economists have always sought the rigor and clarity that comes from representing their ideas using numbers and equations. And the economics of diminishing returns lend themselves readily to elegant formalism, while those of increasing returns-the Pin Factory- are notoriously hard to represent mathematically. Many economists tried repeatedly to bring the Pin Factory into the mainstream of economic thought to reflect the fact that increasing returns obviously characterized many enterprises, such as railroads. Yet they repeatedly failed because they could not state their ideas rigorously enough. Only since the late 1970s has this \"underground river\" -a term used to describe the role of increasing returns in economic thought-surfaced into the mainstream of economic thought. By then, economists had finally found ways to describe the Pin Factory with the rigor needed to make it respectable.",
+      "id": "356",
+      "options": [
+        "(A)resolve an ambiguity inherent in the metaphor of the Invisible Hand",
+        "(B)illustrate the difficulty of stating the concept of the Pin Factory with mathematical rigor",
+        "(C)call attention to the increasing prevalence of industries that have characteristics of the Pin Factory",
+        "(D)point to an industry that illustrates the shortcomings of economists' emphasis on the Invisible Hand",
+        "(E)present an example of the high levels of competition achieved in transportation industries"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "The reference to railroads (line 51) serves to",
+      "target": [
+        3
+      ]
+    },
+    {
+      "benchmark_name": "PIQA",
+      "context": "To use greenhouse space effectively.",
+      "id": "872",
+      "options": [
+        "Put raised beds towards the edges of the greenhouse and leave room for adding hydroponics later.",
+        "Put raised beds covering the entire floor of the greenhouse and worry about room for adding hydroponics later."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "Which solution is correct?",
+      "target": [
+        0
+      ]
+    },
+    {
+      "benchmark_name": "BoolQ",
+      "context": "A 24-hour run is a form of ultramarathon, in which a competitor runs as far as they can in 24 hours. They are typically held on 1- to 2-mile loops or occasionally 400-meter tracks.",
+      "id": "205",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "is it possible to run for 24 hours",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "HellaSwag",
+      "context": "[header] How to influence government as the 99 percent [title] Become a valuable source of information. [step] Focus on one issue that you have expertise in and personal experience with. Stay dedicated to the issue while continuously building your knowledge about it.",
+      "id": "1991",
+      "options": [
+        "[substeps] Once you have worked with an expert on the issue, make an effort to memorize anything they say about it. [title] Research the issue out on the internet, but don't rely on your own judgment.",
+        "[title] Understand what causes your opposition to government action. [step] At first glance, it may be small.",
+        "[substeps] Talk to professionals and experts, research your issue, read news about your issue, intern in the field, talk to other citizens that are passionate about the it and join other organizations based on your issue. [title] Understand the details of both sides so that your argument will be stronger and more credible.",
+        "Only restate and link your knowledge in a letter or email to enhance your use of that knowledge. [substeps] If they refuse to give you exposure to anything on the topic, be afraid to hold back your knowledge for a further 5 years."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What happens next?",
+      "target": [
+        2
+      ]
+    },
+    {
+      "benchmark_name": "HellaSwag",
+      "context": "[header] How to use wtfast [title] Go to wtfast website. [step] On your favorite browser, enter this address on the url bar on a new tab :. Hit enter on your keyboard and you will be taken to the software download page.",
+      "id": "1471",
+      "options": [
+        "You will be directed to the download screen by the page-builder software master allowing you to install a custom version of wtfast. [substeps] If you've been unable to download wtfast yet, you may want to consider trying more advanced upgrades like.",
+        "Browse through them to pick the one that best suits your needs. [substeps] You may need to scroll up or down to reach it, so watch out for viruses and spyware before attempting to download wtfast.",
+        "[title] Choose which version you want to download. [step] You can download a 30-day limited trial version if you want to try it out first.",
+        "You can find it on the right side of the screen : [substeps] Google chrome [title] Enable wtfast's file downloads. [step] Find the download button on the right side, and under the \" download a specific file \" heading is an icon that resembles a start-line."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What happens next?",
+      "target": [
+        2
+      ]
+    },
+    {
+      "benchmark_name": "CommonsenseQA",
+      "context": "learning about world",
+      "id": "800",
+      "options": [
+        "enlightenment",
+        "open mind",
+        "confusion",
+        "smartness",
+        "anger"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "If you want to learn about the world and understand the real reasons behind cultural norms and mores, you have achieved a sense of what?",
+      "target": [
+        0
+      ]
+    },
+    {
+      "benchmark_name": "HellaSwag",
+      "context": "[header] How to send an international fax [title] Find a fax machine with international capability. [step] Not all fax machines or public fax kiosks can send documents abroad. When you see a fax machine with international sending options, look at the prices to be sure that you're comfortable paying the international rate, which can be a lot more than a local rate for faxes.",
+      "id": "1790",
+      "options": [
+        "Visit a specialized fax machine in some countries, such as hong kong, if you don't know how to select one. [substeps] You can also make your own, which offers fax services with international settings.",
+        "[title] Figure out the country code for the destination country. [step] Each country has its own code composed of several digits.",
+        "[substeps] Look to see whether there are any free fax machines around in your region. The average fax machines cost around $250, although it can range from $200 or over $200 international.",
+        "[substeps] Public fax machines come in many different capabilities, which can be quite helpful for software packages. Where you purchase faxes is a matter of personal preference, but international-quality machines can be an excellent option for internet users."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What happens next?",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "HellaSwag",
+      "context": "Once the gates are down they are on the move riding through the course. Group after group starts racing and moving along really fast. the peddle",
+      "id": "1817",
+      "options": [
+        "as fast as they can trying to stay ahead of one another.",
+        "the momentum getting in the start.",
+        "is part of the wrong side of the barn.",
+        "elegantly through the course."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What happens next?",
+      "target": [
+        0
+      ]
+    },
+    {
+      "benchmark_name": "BoolQ",
+      "context": "The storyline was softly rebooted with a main narrative led by an adult Henry Mills, set several years after last season's events. In February 2018, it was announced the seventh season would serve as the final season of the series; the season and series concluded on May 18, 2018.",
+      "id": "635",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "is this the last year for once upon a time",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "HellaSwag",
+      "context": "[header] How to keep your brain in top shape [title] Go outside your comfort zone. [step] Your brain is like a muscle and requires challenges and novelty in order to more fully develop. Once you determine that a certain area of study or mental activity is outside your comfort zone, push yourself to attempt it anyway.",
+      "id": "1304",
+      "options": [
+        "If not, you'll add experiences you wouldn't be able to expect. [substeps] For example, taking up running has been shown to increase brain apids levels.",
+        "A good rule is that comfort is not good for your brain. Aim for unsteadiness and uncertainty in learning.",
+        "[substeps] For instance, instead of learning to stand upright, you could drop on the ground and kneel down with your legs bent. You could wait for a teacher to be around, say, \" you really did so well on that big test today, paul.",
+        "[substeps] Working outside will always allow your brain more opportunities to develop. Start with small chunks of time outside of your office, around lunch or bar, or somewhere you know you'll get a good workout."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What happens next?",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "CommonsenseQA",
+      "context": "police officer",
+      "id": "763",
+      "options": [
+        "direct traffic",
+        "city",
+        "beat",
+        "street",
+        "park"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "What area does a police officer patrol?",
+      "target": [
+        2
+      ]
+    },
+    {
+      "benchmark_name": "PIQA",
+      "context": "penny",
+      "id": "565",
+      "options": [
+        "can replace a stove ",
+        "can test the conductivity of a stove "
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "Which solution is correct?",
+      "target": [
+        1
+      ]
+    },
+    {
+      "benchmark_name": "AGIEval",
+      "context": "Miss Grace Spivey arrived in Threestep, Georgia, in August 1938. She stepped off the train wearing a pair of thick-soled boots suitable for hiking, a navyblue dress, and a little white tam that rode the wavesof her red hair at a gravity-defying angle. August was a hellish month to step off the train in Georgia, although it was nothing, she said, compared to the 119 degrees that greeted her when she arrived one time in Timbuktu, which, she assured us, was a real 10 place in Africa. I believe her remark irritated some of the people gathered to welcome her on the burned grass alongside the tracks. When folks are sweating through their shorts, they don't like to hear that this is nothing compared to someplace else. Irritated or15 not, the majority of those present were inclined to see the arrival of the new schoolteacher in a positive light. Hard times were still upon us in 1938, but, like my momma said, \"We weren't no poorer than we'd ever been,\" and the citizens of Threestep were in the 20 mood for a little excitement.Miss Spivey looked like just the right person to give it to them. She was, by almost anyone's standards, a woman of the world. She'd gone to boarding schools since she was six years old; she'd 25 studied French in Paris and drama in London; and during what she called a \"fruitful intermission\" in her formal education, she had traveled extensively in the Near East and Africa with a friend of her grandmother's, one Janet Miller, who was a medical30 doctor from Nashville, Tennessee. After her travels with Dr. Miller, Miss Spivey continued her education by attending Barnard College in New York City. She told us all that at school the first day. When my little brother Ralphord asked what did she study at35 Barnyard College, Miss Spivey explained that Barnard, which she wrote on the blackboard, was the sister school of Columbia University, of which, she expected, we all had heard.It was there, she told us, in the midst of trying to 40 find her true mission in life, that she wandered one afternoon into a lecture by the famous John Dewey, who was talking about his famous book, Democracy and Education. Professor Dewey was in his seventies by then, Miss Spivey said, but he still liked to chat45 with students after a lecture-especially female students, she added-sometimes over coffee, and see in their eyes the fire his words could kindle. It was after this lecture and subsequent coffee that Miss Spivey had marched to the Teacher's College and 50 signed up, all aflame. Two years later, she told a cheery blue-suited woman from the $\\mathrm{WPA}^{1}$ that she wanted to bring democracy and education to the poorest, darkest, most remote and forgotten corner of America.55 They sent her to Threestep, Georgia.Miss Spivey paused there for questions, avoiding my brother Ralphord's eye.What we really wanted to know about-all twenty-six of us across seven grade levels in the one 60 room-was the pearly white button hanging on a string in front of the blackboard behind the teacher's desk up front. That button on a string was something new. When Mavis Davis (the only bona fide seventh grader, at age thirteen) asked what it was for, Miss65 Spivey gave the string a tug, and to our astonishment, the whole world-or at least a wrinkled map of it-unfolded before our eyes. Her predecessor, Miss Chandler, had never once made use of that map, which was older than our fathers, and until that70 moment, not a one of us knew it was there.Miss Spivey showed us on the map how she and Dr. Janet Miller had sailed across the Atlantic Ocean and past the Rock of Gibraltar into theMediterranean Sea. Using the end of a ruler, she75 gently tapped such places as Morocco and Tunis and Algiers to mark their route along the top of Africa. They spent twenty hours on the train to Baghdad, she said, swathed in veils against the sand that crept in every crack and crevice.80 \"And can you guess what we saw from the train?\" Miss Spivey asked. We could not. \"Camels!\" she said. \"We saw a whole caravan of camels.\" She looked around the room, waiting for us to be amazed and delighted at the thought.85 We all hung there for a minute, thinking hard, until Mavis Davis spoke up.\"She means like the three kings rode to Bethlehem,\" Mavis said, and she folded her hands smugly on her seventh-grade desk in the back of the 90 room.Miss Spivey made a mistake right then. Instead of beaming upon Mavis the kind of congratulatory smile that old Miss Chandler would have bestowed on her for having enlightened the rest of us, Miss95 Spivey simply said, \"That's right.\"1 The Works Progress Administration (WPA) was a government agency that hired people for public and cultural development projects and services.",
+      "id": "1755",
+      "options": [
+        "(A)suggest that Miss Spivey has an exaggerated view of what information should be considered common knowledge.",
+        "(B)establish a friendly dynamic between the charming schoolchildren and their indulgent and doting new instructor.",
+        "(C)introduce Ralphord as a precocious young student and Miss Spivey as a dismissive and disinterested teacher.",
+        "(D)demonstrate that the children want to amuse Miss Spivey with their questions."
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "The interaction between Miss Spivey and Ralphord serves mainly to",
+      "target": [
+        0
+      ]
+    },
+    {
+      "benchmark_name": "CommonsenseQA",
+      "context": "buying products",
+      "id": "331",
+      "options": [
+        "debt",
+        "economic boom",
+        "being able to use",
+        "disagreements",
+        "trading"
+      ],
+      "problem_type": "multiple-choice",
+      "prompt": "When are people buying products more?",
+      "target": [
+        1
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "case_id": "multiple_choice:1776",
+      "source_sha256": "003225dd6ea51e2b49201703311bc8db1c488eb0d4815fafd53bbbc6826586c2",
+      "response": "**B**\n\nIf necessary, you may also want to distribute copies or files to all major credit reporting agencies."
+    },
+    {
+      "case_id": "multiple_choice:181",
+      "source_sha256": "00ca5a03187505311a703a21b190ddfe03656d90ceead3a873c4da17a9f48437",
+      "response": "A"
+    },
+    {
+      "case_id": "multiple_choice:868",
+      "source_sha256": "00f01bcd721e6cd8b020565b7a9322c4a9dad7aa31f6cf8cd009b419a06f6689",
+      "response": "B.\n\nThe text provided states that California is still part of the United States."
+    },
+    {
+      "case_id": "multiple_choice:394",
+      "source_sha256": "0154ee68c91c175f197631972bb6d93c56e9329e7f43bc883f087de7e28b2487",
+      "response": "**D**\n\nThe option D poses the weakest question to the point of view in the question because it focuses on an individual miner's personal hope and family dependency, rather than addressing the systemic issues and safety measures that contribute to the safety accidents in China's coal industry."
+    },
+    {
+      "case_id": "multiple_choice:1254",
+      "source_sha256": "0165de6da72687ffae1029f310f9608f92225e1daad855108ca15970ccbfefab",
+      "response": "A."
+    },
+    {
+      "case_id": "multiple_choice:1490",
+      "source_sha256": "018a3949accca40477b3d4cffd2cc1d9104672c81fb27a9874344754818255cc",
+      "response": "B"
+    },
+    {
+      "case_id": "multiple_choice:1624",
+      "source_sha256": "027d7cd33a67c60d990da92377a8d3e6d5f2934c508ee87438d6fd79c2ce8008",
+      "response": "D"
+    },
+    {
+      "case_id": "multiple_choice:831",
+      "source_sha256": "02973c2d5609055942f0a4d8d6a6baf82241164a9dce5cd21afc97e9aeb54015",
+      "response": "A."
+    },
+    {
+      "case_id": "multiple_choice:1620",
+      "source_sha256": "029ccea2c1b462f18846f2ec58139562be51c094b357ede1910afdba27f2ba2b",
+      "response": "**B**"
+    },
+    {
+      "case_id": "multiple_choice:346",
+      "source_sha256": "02bf783122ebfeddad99db6bc768252c8f14df9a94df60ee433269cc2517dd23",
+      "response": "B"
+    },
+    {
+      "case_id": "multiple_choice:1297",
+      "source_sha256": "02d61ada076afce962a36ca120a9acd4f58c4ed2d1700874c6e7ed148088dcb5",
+      "response": "B"
+    },
+    {
+      "case_id": "multiple_choice:1277",
+      "source_sha256": "02fc651d9a3b343d91f61cc57f4e68e1d87445fa1387c0eff9941d7a79db596f",
+      "response": "B"
+    },
+    {
+      "case_id": "multiple_choice:1262",
+      "source_sha256": "033a4aff5e0cc86fdc09d9fa37aa7884b524cc19a4690b92495514bc91eb6c25",
+      "response": "A"
+    },
+    {
+      "case_id": "multiple_choice:1874",
+      "source_sha256": "03b772a5d9b087ccbda055a8f44aabefc4c1d950301338f5c771d37db3bfc697",
+      "response": "**C**"
+    },
+    {
+      "case_id": "multiple_choice:915",
+      "source_sha256": "048b683319876e426c151b4b355dc981908c51b8955ee945cc813519f193ad28",
+      "response": "C.\n\nThe sentence expresses that Jan's decision to quit their job is for a better opportunity, implying that Jan wishes others well in their own job pursuits."
+    },
+    {
+      "case_id": "multiple_choice:1550",
+      "source_sha256": "04b8673eb6eb801aa544b00a5cb418aa1ac87c46ae8546bef8aba237702a382d",
+      "response": "B"
+    },
+    {
+      "case_id": "multiple_choice:966",
+      "source_sha256": "0508defdfec289ffed2ebda679f31688375509feddb90cb7365876e83fc31f70",
+      "response": "E"
+    },
+    {
+      "case_id": "multiple_choice:1909",
+      "source_sha256": "052a089f93b4b4e4101fefb4bc6904e71d092ab9fd2af81bab71535c3546ee89",
+      "response": "B\n\nThe sci-fi film is not shown on screen 3 and the romance is not shown on screen 2. If the sci-fi film and the romance are to be shown on the same screen, then the sci-fi film must begin at 9 P.M."
+    },
+    {
+      "case_id": "multiple_choice:356",
+      "source_sha256": "05fdbe531b0d4d7eff52213ccf75d43e4049533fab02a237768101adf54e59c0",
+      "response": "B"
+    },
+    {
+      "case_id": "multiple_choice:872",
+      "source_sha256": "0696edf38ed989f44ff7a6cc648e9f35350a89f94b3345e14562f6cb2f03ec5d",
+      "response": "A."
+    },
+    {
+      "case_id": "multiple_choice:205",
+      "source_sha256": "07a25d79062402e9a4117191064a6e1ca47d6f92bf3892b65a4392062bb6436a",
+      "response": "B"
+    },
+    {
+      "case_id": "multiple_choice:1991",
+      "source_sha256": "085a065dc3950b5c54f87d8d9bcdf7af052315b0ec134e2bab2e6329d7ea1c2e",
+      "response": "**C.**\n\nUnderstand the details of both sides so that your argument will be stronger and more credible."
+    },
+    {
+      "case_id": "multiple_choice:1471",
+      "source_sha256": "085f1a2bb0f7959e26a4b7fd61535bd6ffcbb1c7e08d84d83eedab648af0e54a",
+      "response": "C"
+    },
+    {
+      "case_id": "multiple_choice:800",
+      "source_sha256": "08662c986e7796d0a6fe5a750c1925cf85ae8bcf51e93b66ef68699adea916c6",
+      "response": "B"
+    },
+    {
+      "case_id": "multiple_choice:1790",
+      "source_sha256": "08d3686642d85de2b81457a1e34ba671b9ab414f02f6d5154b7c6d9457dec2aa",
+      "response": "B"
+    },
+    {
+      "case_id": "multiple_choice:1817",
+      "source_sha256": "09b964148064fa3716bb328e95869f8172559cf5f381a39bdde4cd745b4d8529",
+      "response": "**A.**\n\nThe passage describes the horses starting to race, so the next action would be for them to accelerate and try to stay ahead of each other."
+    },
+    {
+      "case_id": "multiple_choice:635",
+      "source_sha256": "0a4875fb5dbcf704cb8097cd60e24bec220f4b936a0ee0c29dd6cfd24e713f17",
+      "response": "B"
+    },
+    {
+      "case_id": "multiple_choice:1304",
+      "source_sha256": "0a78707a66f4b9e22594aafe8fdbd079da970f5f6cdca9a050a94ac15f5368fe",
+      "response": "A"
+    },
+    {
+      "case_id": "multiple_choice:763",
+      "source_sha256": "0b70ba7ac3d060a8ffe9d3e9168ee7104d05ac35655a2ac100b3a38fac2a4d23",
+      "response": "**C.**\n\nA beat is a defined geographical area that a police officer is assigned to patrol and is responsible for."
+    },
+    {
+      "case_id": "multiple_choice:565",
+      "source_sha256": "0b926bf5ed39a8635ba203544e4b54df749d4eff74a70ea7c796285ac23df352",
+      "response": "B"
+    },
+    {
+      "case_id": "multiple_choice:1755",
+      "source_sha256": "0bba4e068a3acf7663e1cb0aad66c3be986def6a515095fcdef03f7dd90e4308",
+      "response": "A."
+    },
+    {
+      "case_id": "multiple_choice:331",
+      "source_sha256": "0bc89433bfee58d94487091c2081b66e862e5f27b252c529c6d5ed4f51e632a7",
+      "response": "B"
+    }
+  ],
+  "expected_sources": {
+    "multiple_choice:1776": "003225dd6ea51e2b49201703311bc8db1c488eb0d4815fafd53bbbc6826586c2",
+    "multiple_choice:181": "00ca5a03187505311a703a21b190ddfe03656d90ceead3a873c4da17a9f48437",
+    "multiple_choice:868": "00f01bcd721e6cd8b020565b7a9322c4a9dad7aa31f6cf8cd009b419a06f6689",
+    "multiple_choice:394": "0154ee68c91c175f197631972bb6d93c56e9329e7f43bc883f087de7e28b2487",
+    "multiple_choice:1254": "0165de6da72687ffae1029f310f9608f92225e1daad855108ca15970ccbfefab",
+    "multiple_choice:1490": "018a3949accca40477b3d4cffd2cc1d9104672c81fb27a9874344754818255cc",
+    "multiple_choice:1624": "027d7cd33a67c60d990da92377a8d3e6d5f2934c508ee87438d6fd79c2ce8008",
+    "multiple_choice:831": "02973c2d5609055942f0a4d8d6a6baf82241164a9dce5cd21afc97e9aeb54015",
+    "multiple_choice:1620": "029ccea2c1b462f18846f2ec58139562be51c094b357ede1910afdba27f2ba2b",
+    "multiple_choice:346": "02bf783122ebfeddad99db6bc768252c8f14df9a94df60ee433269cc2517dd23",
+    "multiple_choice:1297": "02d61ada076afce962a36ca120a9acd4f58c4ed2d1700874c6e7ed148088dcb5",
+    "multiple_choice:1277": "02fc651d9a3b343d91f61cc57f4e68e1d87445fa1387c0eff9941d7a79db596f",
+    "multiple_choice:1262": "033a4aff5e0cc86fdc09d9fa37aa7884b524cc19a4690b92495514bc91eb6c25",
+    "multiple_choice:1874": "03b772a5d9b087ccbda055a8f44aabefc4c1d950301338f5c771d37db3bfc697",
+    "multiple_choice:915": "048b683319876e426c151b4b355dc981908c51b8955ee945cc813519f193ad28",
+    "multiple_choice:1550": "04b8673eb6eb801aa544b00a5cb418aa1ac87c46ae8546bef8aba237702a382d",
+    "multiple_choice:966": "0508defdfec289ffed2ebda679f31688375509feddb90cb7365876e83fc31f70",
+    "multiple_choice:1909": "052a089f93b4b4e4101fefb4bc6904e71d092ab9fd2af81bab71535c3546ee89",
+    "multiple_choice:356": "05fdbe531b0d4d7eff52213ccf75d43e4049533fab02a237768101adf54e59c0",
+    "multiple_choice:872": "0696edf38ed989f44ff7a6cc648e9f35350a89f94b3345e14562f6cb2f03ec5d",
+    "multiple_choice:205": "07a25d79062402e9a4117191064a6e1ca47d6f92bf3892b65a4392062bb6436a",
+    "multiple_choice:1991": "085a065dc3950b5c54f87d8d9bcdf7af052315b0ec134e2bab2e6329d7ea1c2e",
+    "multiple_choice:1471": "085f1a2bb0f7959e26a4b7fd61535bd6ffcbb1c7e08d84d83eedab648af0e54a",
+    "multiple_choice:800": "08662c986e7796d0a6fe5a750c1925cf85ae8bcf51e93b66ef68699adea916c6",
+    "multiple_choice:1790": "08d3686642d85de2b81457a1e34ba671b9ab414f02f6d5154b7c6d9457dec2aa",
+    "multiple_choice:1817": "09b964148064fa3716bb328e95869f8172559cf5f381a39bdde4cd745b4d8529",
+    "multiple_choice:635": "0a4875fb5dbcf704cb8097cd60e24bec220f4b936a0ee0c29dd6cfd24e713f17",
+    "multiple_choice:1304": "0a78707a66f4b9e22594aafe8fdbd079da970f5f6cdca9a050a94ac15f5368fe",
+    "multiple_choice:763": "0b70ba7ac3d060a8ffe9d3e9168ee7104d05ac35655a2ac100b3a38fac2a4d23",
+    "multiple_choice:565": "0b926bf5ed39a8635ba203544e4b54df749d4eff74a70ea7c796285ac23df352",
+    "multiple_choice:1755": "0bba4e068a3acf7663e1cb0aad66c3be986def6a515095fcdef03f7dd90e4308",
+    "multiple_choice:331": "0bc89433bfee58d94487091c2081b66e862e5f27b252c529c6d5ed4f51e632a7"
+  },
+  "expected_responses": {
+    "multiple_choice:1776": "4445ea02ae37fc91ee3f022560bd5e344f8947799451b7d27b64faf59b6315c8",
+    "multiple_choice:181": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+    "multiple_choice:868": "460c46cd0f5473b7c20d1c3e6ec793f8af6888eafbd357fa96db12f64a339f99",
+    "multiple_choice:394": "f9b98b177def75ed959dab873ccc02ae1f78af23fa1109ade0ee9f3cd2afc2a3",
+    "multiple_choice:1254": "e53657178cb6855ac4b2029197a64b0ce6af712b69433254ae18be74d224f991",
+    "multiple_choice:1490": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+    "multiple_choice:1624": "3f39d5c348e5b79d06e842c114e6cc571583bbf44e4b0ebfda1a01ec05745d43",
+    "multiple_choice:831": "e53657178cb6855ac4b2029197a64b0ce6af712b69433254ae18be74d224f991",
+    "multiple_choice:1620": "bf55d2357ec897c3ed801bba08e9c9c310edb25e5b246b547206bc0c6d2b3567",
+    "multiple_choice:346": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+    "multiple_choice:1297": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+    "multiple_choice:1277": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+    "multiple_choice:1262": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+    "multiple_choice:1874": "40552ec1c4df470ccf94d9046e7f26b0acc529871b6f1d502fd959ecd01f0d86",
+    "multiple_choice:915": "665ed10d7f1b78be73ec619ff4e9e081f5eb3d12eaffc57cf140b1aadf5c3125",
+    "multiple_choice:1550": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+    "multiple_choice:966": "a9f51566bd6705f7ea6ad54bb9deb449f795582d6529a0e22207b8981233ec58",
+    "multiple_choice:1909": "3458c2061bb7f0f7f359d3a5975a31e5f19bf1c168629707049aa86959292a51",
+    "multiple_choice:356": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+    "multiple_choice:872": "e53657178cb6855ac4b2029197a64b0ce6af712b69433254ae18be74d224f991",
+    "multiple_choice:205": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+    "multiple_choice:1991": "578d713cef56f1819c5d290f140ee6e57261d790282c654024151b20ed039bc6",
+    "multiple_choice:1471": "6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d",
+    "multiple_choice:800": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+    "multiple_choice:1790": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+    "multiple_choice:1817": "dbdce8aa274a8301e0f764eeedc801fd04f037179035a238330c74c43fbce486",
+    "multiple_choice:635": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+    "multiple_choice:1304": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+    "multiple_choice:763": "e50d982d08581426c54f53ca70de7fedaeb259d09e3b345d208c258f4e5cf1dc",
+    "multiple_choice:565": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+    "multiple_choice:1755": "e53657178cb6855ac4b2029197a64b0ce6af712b69433254ae18be74d224f991",
+    "multiple_choice:331": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c"
+  },
+  "seed": 42,
+  "scope": "Existing49published responses matched in prior audit, reused for full-module integration only"
+}
