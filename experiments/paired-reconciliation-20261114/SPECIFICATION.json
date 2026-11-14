@@ -1,0 +1,17 @@
+{
+  "analysis": "Post-hoc paired trial reconciliation and score factorization",
+  "created_at": "2026-11-14T04:57:54.350Z",
+  "input_library_id": "libfile_2f29df619b388191a07e8e4904ae1e60",
+  "base_commit": "e7fdffc48b7de75addaff807f29c5ac4bb033c5b",
+  "scope": "Independent reanalysis of existing200 requests; no new inference. Prior published archive summaries, including four aggregate native-score cells, were inspected before this specification. Do not present as preregistered discovery.",
+  "factors": "Captured native versus corrected prompt outputs crossed with shipped versus source-correct references. Use same native heuristic parser for both reference routes. Report strict complete-single-answer evidence separately.",
+  "decomposition": "For each model and stratum, report four finite-panel cells; label effect at each prompt, prompt effect at each reference, interaction=(fixedprompt_source-fixedprompt_shipped)-(nativeprompt_source-nativeprompt_shipped), and jointscore effect. Verify both algebraic path sums.",
+  "unknown_policy": "Primary source-correct gain uses all50 per model and exact original regex; retain missing/incomplete/no-unique-tag as unknown and give worst/best paired gain. Do not equate heuristic score changes with valid-answer accuracy.",
+  "resources": "Verify raw capture request identities/stream hashes using existing independent capture checker, count each200 request once including six incomplete, sum raw usage once with Decimal. Currency and global project spend remain unknown unless explicitly evidenced.",
+  "limits": [
+    "Joint prompt repair changes question binding and brace formatting; no design cell isolates these components.",
+    "Diagnostic50 questions in35 groups, same prompts reused across2models; no deployment prevalence.",
+    "Interaction is algebraic fixed-response description, not an independent mechanistic causal estimate."
+  ],
+  "provider_calls_this_analysis": 0
+}
