@@ -1,5 +1,8 @@
 """Render the structured private research manuscript using ReportLab."""
 import json,html
+import sys
+from functools import partial
+from reportlab.pdfgen.canvas import Canvas
 from pathlib import Path
 from reportlab.platypus import SimpleDocTemplate,Paragraph,Table,TableStyle,PageBreak,Spacer
 from reportlab.lib.styles import ParagraphStyle
@@ -13,7 +16,7 @@ pdfmetrics.registerFont(TTFont("Sans","/usr/share/fonts/truetype/liberation/Libe
 pdfmetrics.registerFont(TTFont("SansBold","/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"))
 P=Path(__file__).resolve().parent
 pages=json.loads((P/'manuscript.json').read_text())
-OUTPUT=P/'Epistemics_Contract_Audit_Working_Draft_20261114.pdf'
+OUTPUT = Path(sys.argv[1]) if len(sys.argv) > 1 else P / 'Epistemics_Contract_Audit_Working_Draft_20261114.pdf'
 styles={
 'p':ParagraphStyle('body',fontName='BodySerif',fontSize=10.2,leading=13.2,spaceAfter=6),
 'heading':ParagraphStyle('head',fontName='SansBold',fontSize=11.4,leading=14,spaceBefore=7,spaceAfter=5,textColor=colors.HexColor('#17324D')),
@@ -27,7 +30,7 @@ def safe(text):return html.escape(text).replace('&lt;br/&gt;','<br/>')
 def foot(canvas,doc):
  canvas.setStrokeColor(colors.HexColor('#D6DFE8'));canvas.line(58,42,537,42)
  canvas.setFillColor(colors.HexColor('#607286'));canvas.setFont('Sans',7.5)
- canvas.drawString(58,29,'Private working manuscript | Evidence synthesis v1.2 | 14 November 2026')
+ canvas.drawString(58,29,'Private working manuscript | Evidence synthesis v1.3 | 14 November 2026')
  canvas.drawRightString(537,29,str(doc.page))
 story=[]
 for i,page in enumerate(pages):
@@ -43,6 +46,6 @@ for i,page in enumerate(pages):
    story.extend([Spacer(1,4),t,Spacer(1,9)])
   else:story.append(Paragraph(safe(block['text']),styles[kind]))
 doc=SimpleDocTemplate(str(OUTPUT),pagesize=A4,leftMargin=58,rightMargin=58,topMargin=45,bottomMargin=55,title='When Evaluation Pipelines Change the Task',author='Private working draft',pageCompression=1)
-doc.build(story,onFirstPage=foot,onLaterPages=foot)
+doc.build(story,onFirstPage=foot,onLaterPages=foot,canvasmaker=partial(Canvas,initialFontName='BodySerif'))
 print(OUTPUT)
 

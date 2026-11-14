@@ -1,0 +1,16 @@
+{
+  "revision": "1.3",
+  "source_commit": "a845436eefcb83b5f71701492969c4852cc3a5e0",
+  "new_experiments": 0,
+  "new_model_requests": 0,
+  "claim_count": 12,
+  "structured_pages": 10,
+  "layout_choice": "Seven main-text pages followed by references, source-family-transfer appendix and evidence ledger.",
+  "new_sections": [
+    "Shared causes and MMMLU prediction",
+    "MixEval task-kind loss and retained audit alerts",
+    "Installed native source/request gate"
+  ],
+  "source_gate_limit": "Local counting sink; no model/tokenizer/remote transport verification",
+  "mixeval_repair_limit": "Generation repair only; scoring/parser alignment remains open"
+}

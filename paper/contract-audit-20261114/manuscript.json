@@ -1,11 +1,11 @@
 [
   {
     "title": "When Evaluation Pipelines Change the Task",
-    "subtitle": "Source-grounded contract audits and controlled score effects",
+    "subtitle": "Source-grounded audits of task kind, requests and scoring references",
     "blocks": [
       {
         "kind": "meta",
-        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.2"
+        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.3"
       },
       {
         "kind": "heading",
@@ -13,7 +13,7 @@
       },
       {
         "kind": "p",
-        "text": "Evaluation software can change the task before a model answers and can change the meaning of the reference after the answer is produced. We audit these two interfaces in a pinned One-Eval revision using official source records, native preprocessing and scoring methods, deterministic controls, and an existing paired trial of two hosted models. A prospectively selected four-contract extension identified malformed ARC-Challenge and OpenBookQA task construction. A later diagnostic expansion confirmed the mechanisms throughout their captured test splits. In a 50-question WinoGrande panel, Qwen's source-correct accuracy gain under joint question/format repair is 42 percentage points under the observed scoring convention and remains between 36 and 48 points under conservative treatment of unknown answers. Gemma's corresponding sensitivity interval includes zero. Re-scoring identical corrected-prompt outputs with source-aligned references changes assigned scores by 40 and 42 points respectively. An experimental pre-inference checker detects selected source-contract failures, while controlled diagnostics expose the limits of trusting adapter metadata. A frozen 100-record Social IQa transfer extends selected checker mechanisms beyond documented development sources. Healthy controls in EvalScope and bounded native-method and installed task-path tests of LM Evaluation Harness delimit the scope. These findings establish specific implementation faults and controlled consequences; affected independent deployments and broad fault prevalence remain unverified."
+        "text": "Evaluation software can change task kind, remove required information and alter scoring references while producing executable requests. We audit these interfaces in a pinned One-Eval revision using official records, native methods, controlled interventions and an existing two-model trial. A prospective four-contract extension found malformed ARC-Challenge and OpenBookQA construction, followed by complete captured-split confirmation. In a 50-question WinoGrande panel, Qwen's source-correct gain under joint question and format repair remains between 36 and 48 percentage points under conservative treatment of unknown answers. Re-scoring identical repaired-prompt outputs changes assigned scores by 40 and 42 points for the two models. Causal ablations isolate shared source-symbol and option-decoding faults. A subsequent prediction is confirmed on 100 French MMMLU records. A distinct MixEval test finds that 100 selected free-form questions receive multiple-choice instructions and an artificial None option despite field presence and agreement between inferred route and parser. Question binding alone preserves this task-kind failure. A typed generation repair restores free-text requests while leaving incompatible scoring metadata unresolved. Source-bound checks, healthy evaluator controls and a bounded installed native gate delimit the implemented intervention. Retained audit-adapter errors and overlapping source questions constrain generalization. The results establish attributable task-preservation failures and controlled consequences. Affected independently reported conclusions and broad fault prevalence remain unresolved."
       },
       {
         "kind": "heading",
@@ -25,7 +25,7 @@
       },
       {
         "kind": "p",
-        "text": "The contribution is an attributable case study with executable checks. It combines natural source-contract faults, a prospective extension within one framework, complete captured-split follow-up, a paired real-model consequence analysis, and explicit negative controls. The checker is an intervention and an object of audit, rather than an assumption of correctness. The work does not claim a new general theorem, the first observation of evaluation sensitivity, or universal checker reliability."
+        "text": "The contribution is an attributable case study with executable checks. It combines natural source-contract faults, prospective configuration predictions, shared-cause interventions, a paired real-model consequence analysis and explicit controls. The checker is also subjected to audit. The empirical contribution concerns these pinned failures, their consequences and the measured boundary of an implemented intervention, within established evaluation-engineering methods."
       },
       {
         "kind": "heading",
@@ -33,7 +33,7 @@
       },
       {
         "kind": "p",
-        "text": "Let a source record contain a question q, an ordered option set O and gold position g. A transformation produces request carrier W and reference r. The audit checks question dependence, preservation of the intended option content, alignment of r with the official answer, and consistency between adapter metadata and W. In generation, W can be one prompt; in likelihood evaluation, W can be a set of context/continuation pairs. The same abstract invariant therefore needs a protocol-specific representation."
+        "text": "Represent the official task by its kind k, question q, optional context, ordered choices O where applicable and reference semantics G. A transformation produces an effective request W and scoring reference r. The audit checks preservation of task kind, question and declared-context dependence, intended choices, official answer semantics and agreement with the actual request. Free-form G can contain accepted answer texts. Likelihood requests can be context/continuation bundles. Each protocol therefore needs an appropriate source-to-request representation."
       }
     ]
   },
@@ -46,7 +46,7 @@
       },
       {
         "kind": "p",
-        "text": "One-Eval is pinned to revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506 with open-dataflow 1.0.10. Native methods are retained under the documented import scaffolds; official records and effective request texts are captured with hashes. The stages below have different evidential roles and overlapping source questions. Their row counts must not be summed into a number of independent observations."
+        "text": "One-Eval is pinned to revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506 with open-dataflow 1.0.10. Native methods are retained under the documented import scaffolds; official records and effective request texts are captured with hashes. The stages below have different evidential roles and overlapping source questions. Their row counts must not be summed into a number of independent observations. Shared-cause and task-kind studies are detailed in Sections 7-8."
       },
       {
         "kind": "table",
@@ -273,11 +273,11 @@
       },
       {
         "kind": "p",
-        "text": "LM Evaluation Harness was pinned to revision d6de81643928d653435c431bae19945d41d32520. The exact native task-to-text, task-to-choice, task-to-target and request-construction methods, native Instance object, task YAML and template functions ran under an explicit AST dependency scaffold. A frozen salted-hash rule selected 100 ARC-Challenge and 100 OpenBookQA records from the already captured corpora."
+        "text": "LM Evaluation Harness is pinned to revision d6de81643928d653435c431bae19945d41d32520. Exact native methods ran under the documented AST scaffold. A frozen rule selected 100 ARC-Challenge and 100 OpenBookQA records from already captured corpora."
       },
       {
         "kind": "p",
-        "text": "All 200 natural cases preserved the source question, option order and gold index and generated 801 per-option likelihood request objects. Another 200 trailing-spacing controls passed. Options occur as continuations rather than necessarily as a list in the common context. The audit therefore checked the actual context/continuation bundle, not a generation-style prompt template."
+        "text": "All 200 cases preserve question, option order and gold index, producing 801 per-option likelihood objects. Another 200 spacing controls pass. The audit checks the context/continuation bundle through which options are delivered."
       },
       {
         "kind": "table",
@@ -310,20 +310,224 @@
       },
       {
         "kind": "p",
-        "text": "The 600 controls remove or replace a non-gold continuation, or remove the question from actual contexts, while retaining old adapter metadata. They cross the wrapper's documented trust assumption and are not natural engine bugs. The final instrumented driver made 400 actual local counting-function invocations for accepted cases and zero for rejected carriers. An earlier decision-only pass is retained with its instrumentation correction. No model endpoint was called."
+        "text": "The 600 constructed carriers remove or replace a continuation, or omit the question, while retaining old metadata. The actual-request check rejects all 600. The instrumented local driver invokes its counting function for 400 accepted cases and zero rejected cases. The earlier decision-only pass and instrumentation correction are retained."
       },
       {
         "kind": "p",
-        "text": "A subsequent installed-package smoke test used the unmodified native ConfigurableTask, local JSON dataset loading, build_all_requests zero-shot context path and process_results. The same 200 records produced 801 requests, identical to the projection. All 400 constructed likelihood fixtures gave expected acc and acc_norm outcomes: source-gold-positive fixtures passed and non-gold-positive fixtures failed. Six installed native module files matched the pinned checkout byte-for-byte. Model inference, tokenization, non-zero-shot rendering and remote dataset acquisition remain outside this integration scope."
+        "text": "An installed-package check then used native ConfigurableTask, local loading, build_all_requests and process_results. The same 200 records produce matching 801 requests and expected outcomes for 400 constructed likelihood fixtures. Six native module hashes match the pinned checkout. A later installed source/request gate tests 1,600 conditions over these reused records. It passes 400 preserved controls, rejects 1,000 constructed alterations and blocks 200 missing-source cases. Only the 400 accepted snapshots reach the local counting sink unchanged. This measured boundary ends before model, tokenizer or remote transport execution."
       }
     ]
   },
   {
-    "title": "Source-family transfer and its limits",
+    "title": "Shared causes and a new contract prediction",
     "blocks": [
       {
         "kind": "heading",
-        "text": "7. Frozen-checker transfer to Social IQa"
+        "text": "7. Shared input-construction causes"
+      },
+      {
+        "kind": "p",
+        "text": "A fixed post-discovery diagnosis uses 633 previously captured records across seven panels and six conditions, giving 3,798 condition records. The original preprocessing, prompt resolver and locked generator/formatter method bodies run with a local recording sink. Isolated changes bind source symbols, decode parallel option lists or complete the LAB-Bench answer set."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Panel",
+          "Selected native failure",
+          "Isolated intervention"
+        ],
+        "rows": [
+          [
+            "WinoGrande",
+            "Question ignored in 100/100",
+            "Source-symbol binding restores 100/100"
+          ],
+          [
+            "SciQ",
+            "Declared support ignored in 90/90 nonempty contexts",
+            "Source-symbol binding restores 90/90"
+          ],
+          [
+            "ARC-Challenge",
+            "Choice sequence altered in 100/100",
+            "Parallel-list decoding restores 100/100"
+          ],
+          [
+            "OpenBookQA",
+            "Question ignored and choices altered in 100/100",
+            "Both shared repairs required"
+          ],
+          [
+            "LAB-Bench",
+            "Correct option absent in 33/33",
+            "Shared repairs leave the omission present. Source-specific completion restores 33/33"
+          ],
+          [
+            "MedMCQA / MMLU",
+            "100 controls per panel preserve question and options",
+            "Measured properties preserved in every condition"
+          ]
+        ],
+        "widths": [
+          93,
+          155,
+          231
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "The generator supplies canonical question and context variables. Templates can instead name source fields such as sentence, question_stem or support. Binding these symbols restores their dependencies. Separately, the dictionary normalizer serializes parallel label/text lists as two aggregate choices. A structure-specific decoder restores individual options. LAB-Bench demonstrates the limit of these shared fixes because its source mapping omits ideal from the option set."
+      },
+      {
+        "kind": "heading",
+        "text": "A prospectively recorded MMMLU prediction"
+      },
+      {
+        "kind": "p",
+        "text": "Before source-row acquisition, the fixed binding hypothesis predicted loss of the capitalized Question field in the default MMMLU FR_FR contract. From the pinned official 14,042-row CSV, 100 records were selected by canonical-JSON SHA256 order. Native question dependence is 0/100 and rises to 100/100 after the fixed binding intervention. Ordered options and the official correct option remain preserved in all 100 cases. Direct source/capture reconciliation confirms each exact prompt substitution."
+      },
+      {
+        "kind": "p",
+        "text": "This is transfer of a known mechanism to a new native configuration. MMMLU translates MMLU, so semantic questions may overlap earlier English data. The complete global exposure census remains open. These recordings use the data-only AST scaffold and local sink."
+      }
+    ]
+  },
+  {
+    "title": "Task-kind loss despite internally consistent metadata",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "8. MixEval at a heterogeneous split boundary"
+      },
+      {
+        "kind": "p",
+        "text": "The gallery selects MixEval/free_form but configures a multiple-choice route and choice-letter parser. Its contract is explicitly marked inferred with smoke_passed=false. A fixed protocol precedes acquisition of the official two 2,000-row splits. Stable SHA256 order selects 100 free-form and 100 choice records. Six conditions produce 600 records. The official custom-evaluation guide distinguishes their prompt and reference semantics [10]."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Selected condition",
+          "Question bound",
+          "Fields present",
+          "Route/parser agree",
+          "Source task kind preserved"
+        ],
+        "rows": [
+          [
+            "Free-form, native",
+            "0/100",
+            "100/100",
+            "100/100",
+            "0/100"
+          ],
+          [
+            "Free-form, binding only",
+            "100/100",
+            "100/100",
+            "100/100",
+            "0/100"
+          ],
+          [
+            "Free-form, typed generation repair",
+            "100/100",
+            "100/100",
+            "0/100",
+            "100/100"
+          ],
+          [
+            "Choice, binding control after review",
+            "100/100",
+            "100/100",
+            "100/100",
+            "100/100"
+          ]
+        ],
+        "widths": [
+          139,
+          70,
+          70,
+          87,
+          113
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "All 100 selected free-form rows contain the configured prompt/options/target fields. The native route delivers an artificial A. None option and requests a choice letter. Restoring question binding preserves that task-family error. The typed generation intervention removes the artificial option and restores free-text requests in all 100 cases. The source-kind comparison exposes a failure that field presence and inferred-metadata agreement accept."
+      },
+      {
+        "kind": "heading",
+        "text": "Repair scope and counterexamples"
+      },
+      {
+        "kind": "p",
+        "text": "The typed intervention changes generation while retaining original scoring metadata. Route/parser agreement therefore fails after the source-kind repair. Accepted free-form reference lists remain intact. Completing the MixEval evaluator requires aligned scoring and parsing. The measured outcomes concern request semantics, with model accuracy and official MixEval scores still open."
+      },
+      {
+        "kind": "p",
+        "text": "The initial audit expected the guide's example label single-choice, whereas the actual choice rows use multiple-choice. This causes 100 initial source-row type alerts, appearing in 300 conditions. A separate post-outcome review accepts both labels when options and integer targets are valid. All 100 rows pass that reviewed rule. One of these rows also has option-edge whitespace. Exact preservation is 99/100 and order-preserving strip-normalized preservation is 100/100. The two alert sets overlap. Initial captures and metrics remain preserved."
+      },
+      {
+        "kind": "p",
+        "text": "Choice bind_and_type repeats bind_only by design. Source records, conditions and alert appearances are reported separately. MixEval is a benchmark mixture with possible semantic overlap with earlier project data. Verification reconciles frozen selection, source hashes and request captures. The scope is native method replay through the local sink."
+      }
+    ]
+  },
+  {
+    "title": "Positioning, limits and research readiness",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "9. Relation to existing work"
+      },
+      {
+        "kind": "p",
+        "text": "Reproducibility and implementation sensitivity are established concerns [1,2]. This study follows the official source semantics through task kind, request construction and reference interpretation. The collision calculation and individual invariants provide diagnostic tools within that established methodological setting."
+      },
+      {
+        "kind": "p",
+        "text": "EvalEng [7, section 7.1] recommends semantic compatibility constraints, oracle-independent scoring verification and metamorphic or differential tests. SANE [3] automates scorer-specific recipes and separates recipe alignment, realized perturbation and relation applicability. JRH [8, abstract inspected] generates judge-reliability suites. Our empirical focus is the attributable failures, controlled consequences, shared causes and configuration predictions described here. A direct comparative implementation study remains open."
+      },
+      {
+        "kind": "heading",
+        "text": "10. Supported conclusions and external evidence"
+      },
+      {
+        "kind": "p",
+        "text": "The audited transformations can change the task kind, discard question information or corrupt scoring references. Qwen retains a positive repair effect under conservative unknown-answer treatment, and fixed-output replays isolate reference effects. Shared-cause interventions and the MMMLU prediction extend the explanation across configurations. MixEval shows that field presence and agreement among inferred settings can coexist with source-task loss. Its generation repair leaves the scoring gap visible."
+      },
+      {
+        "kind": "p",
+        "text": "Public evidence currently reaches gallery reuse, a related LoopAI component-execution log and copies of the audited component in two contributor forks. The log concerns general_text_eval and GSM8K. The inspected original paper's 100-request experiment ends before model evaluation. Validation of an affected independent conclusion still requires matching executable revision, effective configuration and request/output evidence. A 29-fork inventory and three pinned-tree inspections delimit the additional search. Public artifact coverage cannot establish private deployment frequency."
+      },
+      {
+        "kind": "heading",
+        "text": "Limitations and next scientific test"
+      },
+      {
+        "kind": "p",
+        "text": "The paired diagnostic sample is enriched and contains incomplete or non-evaluable responses. Native heuristic parsing differs from the strict primary rule. Adapter reviews followed outcomes and are retained separately. Shared-cause studies reuse known cases. MMMLU translations and the MixEval mixture can overlap prior semantic questions. The installed gate is bounded by its trusted source and local counting sink. Source-family transfer and constructed controls support correspondingly bounded claims."
+      },
+      {
+        "kind": "p",
+        "text": "The immediate implementation gap is alignment of MixEval generation, reference semantics and scoring through the ordinary execution path. A further scientific test should evaluate an unresolved mechanism under a fixed protocol. The manuscript is prepared for internal review, with global novelty assessment, independent review, external affected conclusions and venue/author preparation remaining open."
+      }
+    ]
+  },
+  {
+    "title": "References and primary implementation sources",
+    "blocks": [
+      {
+        "kind": "small",
+        "text": "[1] Biderman et al. Lessons from the Trenches on Reproducible Evaluation of Language Models. arXiv:2405.14782, v3 (2026 revision). https://arxiv.org/abs/2405.14782v3<br/>[2] Hugging Face. Evaluation Guidebook: Troubleshooting reproducibility. Consulted 14 Nov 2026. github.com/huggingface/evaluation-guidebook<br/>[3] Ludwick and Hsiao. SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges. arXiv:2610.28886v2 (23 Oct 2026). https://arxiv.org/html/2610.28886v2<br/>[4] OpenDCAI/One-Eval, revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506.<br/>[5] EleutherAI/lm-evaluation-harness, revision d6de81643928d653435c431bae19945d41d32520.<br/>[6] Official source record captures, native implementation snapshots, protocols and analysis manifests identified in the accompanying evidence package.<br/>[7] Zhao et al. Towards Evaluation Engineering: An Empirical Study of ML Evaluation Harnesses in the Wild. arXiv:2605.24213v1. https://arxiv.org/html/2605.24213v1<br/>[8] Dev et al. Judge Reliability Harness. arXiv:2603.05399v1. https://arxiv.org/abs/2603.05399v1 (abstract-only comparison).<br/>[9] Social IQa official source and frozen transfer protocol: source revision and exact archive/checker hashes in SOURCE_ARCHIVES.json and evidence/social_protocol.json.<br/>[10] MixEval official custom-evaluation guide, revision 7c52b41929d461df7733573528bdfb08774b0c53. github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/docs/how_to_use_your_own_eval_code.md<br/>[11] OpenAI MMMLU official dataset, revision 325a01dc3e173cac1578df94120499aaca2e2504. huggingface.co/datasets/openai/MMMLU/tree/325a01dc3e173cac1578df94120499aaca2e2504<br/>[12] Shared-cause, native-gate and MixEval protocols, captures and verification in the accompanying version-pinned source archives."
+      }
+    ]
+  },
+  {
+    "title": "Appendix A. Source-family transfer",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "A.1 Frozen-checker transfer to Social IQa"
       },
       {
         "kind": "p",
@@ -405,60 +609,11 @@
     ]
   },
   {
-    "title": "Positioning, limits and research readiness",
-    "blocks": [
-      {
-        "kind": "heading",
-        "text": "8. Relation to existing work"
-      },
-      {
-        "kind": "p",
-        "text": "Reproducibility and implementation sensitivity are established concerns [1,2]. This study focuses on missing question dependence, altered options and reference misalignment. The collision calculation and individual invariants are not claimed as new theory."
-      },
-      {
-        "kind": "p",
-        "text": "Semantic compatibility checks, oracle-independent scoring verification, metamorphic/differential testing and version-pinned fail-fast checks are already recommended by EvalEng [7, section 7.1]. SANE [3, v2 sections 3-4] automates scorer-specific recipes and separates recipe alignment, realized perturbation and relation applicability. JRH [8, abstract inspected] generates judge-reliability suites and studies perturbation sensitivity. We claim no general novelty for these principles. Our empirical focus is the pinned source-to-request/reference chain, attributable implementation defects, bounded intervention and controlled consequences. This comparison does not establish feature absence in prior tools or replace a direct implementation study."
-      },
-      {
-        "kind": "heading",
-        "text": "9. What the current evidence supports"
-      },
-      {
-        "kind": "p",
-        "text": "Pinned task transformations violate official semantics and materially change assigned scores in the diagnostic panel. Qwen retains a positive repair consequence under conservative unknown-answer sensitivity; fixed-output replays isolate reference effects. Healthy controls and audit-tool diagnostics delimit these findings."
-      },
-      {
-        "kind": "p",
-        "text": "External impact is a separate open claim. Prior public searches identified use of the One-Eval gallery, but no independently used evaluation with matching effective configuration, raw requests, raw outputs and an affected reported conclusion has been verified. A gallery consumer is not evidence of an affected deployment. This working manuscript therefore makes no claim of deployment frequency, widespread invalid leaderboards, a model-ranking reversal in an independently published evaluation, or superiority to another research project."
-      },
-      {
-        "kind": "heading",
-        "text": "Limitations and next decision"
-      },
-      {
-        "kind": "p",
-        "text": "The diagnostic sample is deliberately enriched, model responses can be incomplete or non-evaluable, and native heuristic parsing differs from the strict primary rule. Full-split counts refer to captured bytes and the pinned software, not current installations. One adapter was corrected after outcomes, and exact-method execution uses dependency scaffolds whose scope is documented. Synthetic conditions reuse source units and are not independent natural faults. Model-backed evaluation, non-zero-shot rendering and a globally blind source-exposure census remain open. Social IQa adds bounded source-family transfer, not independent evidence about natural failure prevalence."
-      },
-      {
-        "kind": "p",
-        "text": "The next scientific decision concerns trusted source-to-request integration on native evaluation routes or a concrete external exposure lead. A targeted primary-method comparison and a scoped Social IQa transfer are now complete. A direct comparative implementation study remains open. Repeating the diagnostic panels would not resolve these gaps. This private draft supports internal review; external submission still requires author agreement, venue preparation and justified claims."
-      },
-      {
-        "kind": "heading",
-        "text": "References and primary implementation sources"
-      },
-      {
-        "kind": "small",
-        "text": "[1] Biderman et al. Lessons from the Trenches on Reproducible Evaluation of Language Models. arXiv:2405.14782, v3 (2026 revision). https://arxiv.org/abs/2405.14782v3<br/>[2] Hugging Face. Evaluation Guidebook: Troubleshooting reproducibility. Consulted 14 Nov 2026. github.com/huggingface/evaluation-guidebook<br/>[3] Ludwick and Hsiao. SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges. arXiv:2610.28886v2 (23 Oct 2026). https://arxiv.org/html/2610.28886v2<br/>[4] OpenDCAI/One-Eval, revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506.<br/>[5] EleutherAI/lm-evaluation-harness, revision d6de81643928d653435c431bae19945d41d32520.<br/>[6] Official source record captures, native implementation snapshots, protocols and analysis manifests identified in the accompanying evidence package.<br/>[7] Zhao et al. Towards Evaluation Engineering: An Empirical Study of ML Evaluation Harnesses in the Wild. arXiv:2605.24213v1. https://arxiv.org/html/2605.24213v1<br/>[8] Dev et al. Judge Reliability Harness. arXiv:2603.05399v1. https://arxiv.org/abs/2603.05399v1 (abstract-only comparison).<br/>[9] Social IQa official source and frozen transfer protocol: source revision and exact archive/checker hashes in SOURCE_ARCHIVES.json and evidence/social_protocol.json."
-      }
-    ]
-  },
-  {
-    "title": "Appendix: claim-to-evidence map",
+    "title": "Appendix B. Claim-to-evidence map",
     "blocks": [
       {
         "kind": "p",
-        "text": "The accompanying package contains machine-readable claims, compact source snapshots, a source-archive manifest and an executable consistency check. Claim identifiers below also appear in claim_evidence.csv. Each source snapshot retains its exact byte hash; the original archives remain the authoritative reproduction inputs."
+        "text": "The package includes twelve machine-readable claims, compact source snapshots and exact archive identities. Source records and repeated conditions have distinct denominators."
       },
       {
         "kind": "table",
@@ -501,17 +656,32 @@
           [
             "C7",
             "Tool diagnostics: 2,200 development variants; Social IQa transfer: 100 source rows, 600 variants, v2 outcomes 200 PASS / 300 FAIL / 100 INCOMPLETE.",
-            "Known mechanisms; bounded source exposure; custom adapter, not new native evaluator faults."
+            "Known mechanisms with bounded exposure and a custom adapter"
           ],
           [
             "C8",
-            "Harness: 200 natural cases, 801 option requests; installed-package task path matches, with 400 constructed scoring fixtures.",
-            "Reused data; model backend and tokenizer untested."
+            "Harness uses 200 cases and 801 requests. Native gate tests 1,600 conditions with 400 PASS, 1,000 FAIL and 200 INCOMPLETE.",
+            "Reused source records and a local counting-sink boundary"
           ],
           [
             "C9",
-            "External affected published conclusion remains unverified.",
-            "Search coverage does not prove absence of affected users."
+            "Public component use and code copies identified. An affected independent conclusion remains unresolved.",
+            "Bounded public search coverage"
+          ],
+          [
+            "C10",
+            "Shared-cause diagnosis uses 633 reused records and 3,798 conditions. LAB-Bench requires source-specific completion.",
+            "Post-discovery causal diagnosis of known mechanisms"
+          ],
+          [
+            "C11",
+            "MMMLU prediction uses 100 records. Native question dependence 0/100 becomes 100/100 after repair.",
+            "New native configuration with translated-MMLU overlap"
+          ],
+          [
+            "C12",
+            "MixEval uses 200 source records and 600 conditions. All 100 free-form native requests have the wrong task family.",
+            "Partial generation repair and retained overlapping adapter alerts"
           ]
         ],
         "widths": [
@@ -526,23 +696,15 @@
       },
       {
         "kind": "p",
-        "text": "Run python verify_claims.py inside the extracted synthesis package. It checks the linked source fields, disjoint-stage arithmetic, the per-model bounds and reference deltas, source snapshot hashes, and the exact numbers used in the tables. This is a consistency check for the synthesis; it is not a fresh rerun of inference or a substitute for the independent capture and native-method checks bundled with the original stages."
+        "text": "Run verify_claims.py to reconcile twelve claims with the bundled source snapshots and their hashes. Use the original study archives for source selection, request captures and runtime verification. The synthesis check adds no experimental observations."
       },
       {
         "kind": "heading",
-        "text": "Reproduction provenance"
-      },
-      {
-        "kind": "small",
-        "text": "Core One-Eval checker: SHA-256 d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e.<br/>Experimental source-bound wrapper: SHA-256 ced1e14f65213bc64f124a82f52f8c3a6d98b6b068026e8a0b486e8ad15228cf.<br/>EvalScope healthy-control code capture: revision 59bb367bd8565f347266a48ac1230af0b5131b97.<br/>Paired trial: execution repository ricardofitas/swarm-adaption-hackathon; run 43533000838. Four-contract acquisition/audit: run 43541759934. Research protocols and results are maintained separately in ricardofitas/ai-epistemics-hackathon."
-      },
-      {
-        "kind": "heading",
-        "text": "Status of this document"
+        "text": "Status of this revision"
       },
       {
         "kind": "p",
-        "text": "Private evidence synthesis, version 1.2. This revision incorporates the previously completed Social IQa transfer and primary-method comparison; no new experiments, model requests or source-sample expansion were performed while preparing it. Numerical support is verified against captured artifacts. Global novelty clearance, complete model-backed engine integration and independently affected external conclusions remain unresolved. The work remains private and active."
+        "text": "Version 1.3 integrates previously completed causal, MMMLU, MixEval and installed-gate results. This synthesis adds zero experiments and zero model requests. Scientific scope and outstanding scoring and external-impact gaps are retained."
       }
     ]
   }

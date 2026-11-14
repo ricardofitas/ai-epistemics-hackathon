@@ -1,0 +1,48 @@
+{
+  "status": "completed",
+  "source_units": 200,
+  "native_option_requests": 801,
+  "condition_records": 1600,
+  "statuses": {
+    "PASS": 400,
+    "FAIL": 1000,
+    "INCOMPLETE": 200
+  },
+  "conditions": {
+    "healthy": {
+      "PASS": 200
+    },
+    "benign_context_spacing": {
+      "PASS": 200
+    },
+    "drop_continuation": {
+      "FAIL": 200
+    },
+    "replace_continuation": {
+      "FAIL": 200
+    },
+    "omit_question": {
+      "FAIL": 200
+    },
+    "wrong_reference": {
+      "FAIL": 200
+    },
+    "substitute_document": {
+      "FAIL": 200
+    },
+    "missing_trusted_source": {
+      "INCOMPLETE": 200
+    }
+  },
+  "counting_sink_invocations": 400,
+  "dispatched_option_requests": 1602,
+  "provider_model_calls": 0,
+  "errors": [],
+  "scope": "Installed native request/source/reference gate integration with local counting sink",
+  "limits": [
+    "All sources and fault mechanisms previously observed; integration evidence, not independent validation or fault prevalence.",
+    "Snapshot binding ends at local counting sink. No model/backend/tokenizer/remote provider transport or likelihood scoring execution.",
+    "Trusted source archive is an explicit trust anchor; hostile source corruption or arbitrary adversarial software is not covered.",
+    "Native task loading/request construction reused solely to exercise new gate path, not to re-count prior healthy outcomes."
+  ]
+}

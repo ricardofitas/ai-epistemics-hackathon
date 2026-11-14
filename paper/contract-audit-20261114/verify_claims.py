@@ -1,5 +1,5 @@
 """Check source hashes and quantitative manuscript claims without rerunning inference."""
-import json,hashlib,math
+import json,hashlib,math,csv
 from pathlib import Path
 P=Path(__file__).resolve().parent
 def read(n):return json.loads((P/'evidence'/n).read_text())
@@ -45,9 +45,83 @@ assert sum(r['counting_function_invocations']['v2'] for r in social['conditions'
 assert protocol['frozen_checker_sha256']=='d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e'
 assert protocol['frozen_wrapper_sha256']=='ced1e14f65213bc64f124a82f52f8c3a6d98b6b068026e8a0b486e8ad15228cf'
 assert len(read('primary_literature.json')['sources'])==3
-pages=json.loads((P/'manuscript.json').read_text());assert len(pages)==7
-assert len(json.loads((P/'claims.json').read_text()))==9
-result=dict(status='PASS',claims_checked=9,additional_mechanism_checks=8,new_model_requests=0,scope='Synthesis consistency check against source snapshots; not new experimental evidence')
+gate = read('native_gate.json')
+gate_verification = read('native_gate_verification.json')
+assert gate['source_units'] == 200 and gate['condition_records'] == 1600
+assert gate['statuses'] == {'PASS': 400, 'FAIL': 1000, 'INCOMPLETE': 200}
+assert gate['counting_sink_invocations'] == 400 and gate['provider_model_calls'] == 0
+assert gate_verification['accepted_request_snapshots_identical_at_sink'] == 400
+assert gate_verification['failed_or_incomplete_sink_calls'] == 0
+root = read('causal_root.json')
+root_verification = read('causal_verification.json')
+assert root['source_rows_reused'] == 633 and root['condition_records'] == 3798
+assert root['provider_model_requests'] == 0 and root['errors'] == []
+panels = root['panels']
+assert panels['winogrande']['native']['question_bound'] == 0
+assert panels['winogrande']['bind_source_symbols']['question_bound'] == 100
+assert panels['sciq']['native']['declared_nonempty_context'] == 90
+assert panels['sciq']['native']['declared_context_bound'] == 0
+assert panels['sciq']['bind_source_symbols']['declared_context_bound'] == 90
+for benchmark in ('arc-challenge', 'openbookqa'):
+    assert panels[benchmark]['native']['choices_preserved'] == 0
+    assert panels[benchmark]['decode_parallel_choices']['choices_preserved'] == 100
+assert panels['openbookqa']['decode_parallel_choices']['question_bound'] == 0
+assert panels['openbookqa']['both_shared_repairs']['question_bound'] == 100
+lab = panels['lab-bench-language-agent-biology-benchmark']
+assert lab['both_shared_repairs']['gold_present'] == 0
+assert lab['lab_complete_options']['gold_present'] == 33
+for benchmark in ('medmcqa', 'mmlu'):
+    for condition in panels[benchmark].values():
+        assert condition['question_bound'] == condition['choices_preserved'] == 100
+assert root_verification['status'] == 'PASS'
+transfer = read('mmmlu_transfer.json')
+assert transfer['source_rows'] == 14042 and transfer['selected_rows'] == 100
+assert transfer['panels']['native']['question_bound'] == 0
+assert transfer['panels']['bind_source_symbols']['question_bound'] == 100
+assert all(panel['choices_preserved'] == panel['gold_present'] == 100 for panel in transfer['panels'].values())
+assert transfer['provider_model_requests'] == 0 and transfer['errors'] == []
+mix = read('mixeval_summary.json')
+review = read('mixeval_review.json')
+mix_verification = read('mixeval_verification.json')
+assert mix['source_rows_selected'] == 200 and mix['condition_records'] == 600
+assert mix['provider_model_calls'] == 0 and mix['errors'] == []
+for condition in ('native', 'bind_only'):
+    row = mix['panels']['free_form:' + condition]
+    assert row['field_presence_check'] == row['metadata_route_parser_consistent'] == 100
+    assert row['source_type_preserved'] == 0 and row['MC_instruction'] == 100
+repair = mix['panels']['free_form:bind_and_type']
+assert repair['source_type_preserved'] == repair['question_bound'] == 100
+assert repair['MC_instruction'] == repair['metadata_route_parser_consistent'] == 0
+assert mix_verification['freeform_native_artificial_None_options'] == 100
+assert mix_verification['MC_initial_exact_option_matches'] == 99
+assert mix_verification['MC_reviewed_option_matches'] == 100
+assert review['original_results_retained'] is True
+assert review['type_dialect']['source_rows'] == 100
+assert review['type_dialect']['condition_appearances'] == 300
+assert review['option_whitespace']['source_rows'] == 1
+assert review['freeform_result_unchanged'] is True
+assert read('external_update.json')['independently_affected_run_verified'] is False
+assert len(read('fork_inventory.json')['forks']) == 29
+copies = read('external_update.json')['fork_followup']['inspected']
+assert len(copies) == 3 and sum(item['matching_current_native_tool'] for item in copies) == 2
+pages = json.loads((P / 'manuscript.json').read_text())
+claims = json.loads((P / 'claims.json').read_text())
+assert len(pages) == 10 and len(claims) == 12
+assert 150 <= len(pages[0]['blocks'][2]['text'].split()) <= 250
+assert [row[0] for row in pages[-1]['blocks'][1]['rows']] == [claim['id'] for claim in claims]
+for claim in claims:
+    assert all((P / 'evidence' / name).is_file() for name in claim['evidence'].split(';'))
+with (P / 'claim_evidence.csv').open(newline='') as stream:
+    ledger = list(csv.DictReader(stream))
+assert len(ledger) == len(claims)
+for row, claim in zip(ledger, claims):
+    assert row == dict(claim_id=claim['id'], section=claim['section'],
+                       numerical_or_status_claim=claim['claim'],
+                       evidence_files=claim['evidence'], qualification=claim['qualification'])
+result = dict(status='PASS', claims_checked=12, working_draft_version='1.3',
+              integrated_mechanisms=['native source gate', 'shared input causes', 'MMMLU prediction', 'MixEval task kind'],
+              new_model_requests=0, new_experiments=0,
+              scope='Synthesis consistency check against source snapshots')
 (P/'CLAIM_VERIFICATION.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result))
 

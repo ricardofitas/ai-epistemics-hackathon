@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "source_units": 200,
+  "condition_records": 1600,
+  "statuses": {
+    "PASS": 400,
+    "FAIL": 1000,
+    "INCOMPLETE": 200
+  },
+  "counting_sink_invocations": 400,
+  "failed_or_incomplete_sink_calls": 0,
+  "accepted_request_snapshots_identical_at_sink": 400,
+  "accepted_option_requests": 1602,
+  "installed_native_module_hashes_verified": 6,
+  "provider_model_requests": 0,
+  "scope": "Offline source/capture/gate reconciliation. No model/backend/tokenizer transport verified."
+}

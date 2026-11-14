@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "source_repository": "openai/MMMLU",
+  "source_revision": "325a01dc3e173cac1578df94120499aaca2e2504",
+  "config": "FR_FR",
+  "split": "test",
+  "source_file": "test/mmlu_FR-FR.csv",
+  "source_rows": 14042,
+  "selected_rows": 100,
+  "source_rows_evaluable": 100,
+  "condition_records": 200,
+  "source_file_sha256": "9e306e122e61513f2f0cdfae7eaceaaebac86e5bfa1ddbe63ec4e8562729ca50",
+  "provider_model_requests": 0,
+  "errors": [],
+  "panels": {
+    "native": {
+      "rows": 100,
+      "recording_sink_batch_calls": 1,
+      "question_bound": 0,
+      "declared_nonempty_context": 0,
+      "declared_context_bound": 0,
+      "choices_preserved": 100,
+      "gold_present": 100
+    },
+    "bind_source_symbols": {
+      "rows": 100,
+      "recording_sink_batch_calls": 1,
+      "question_bound": 100,
+      "declared_nonempty_context": 0,
+      "declared_context_bound": 0,
+      "choices_preserved": 100,
+      "gold_present": 100
+    }
+  },
+  "scope": "Original native preprocessing/resolver/generator methods under the same frozen data-only AST scaffold and recording sink; zero model requests. This tests a new configuration prediction, not a new failure family or population prevalence.",
+  "prior_exposure": "Gallery metadata and root-code failure mechanisms inspected. No MMMLU source rows inspected in this turn or documented natural checker panels. Complete project-wide row exposure census unavailable. This is a prospectively recorded new native contract case; no claim of global blind independence."
+}

@@ -5,6 +5,9 @@ C3,2,400 prospective rows;2 initial adapter false alerts,prospective.json,Post-o
 C4,2,27346 additional rows;27746 total captured source rows;ARC1172;OpenBookQA500,splits.json;split_checks.json,Post-discovery extension; source sample counts not prevalence
 C5,3,200 requests;194 complete;Qwen+36..48pp;Gemma-10..82pp,capture.json;factorization.json,50 diagnostic questions in35 dependency groups
 C6,4,"Same repaired outputs reference effects:Gemma42pp,Qwen40pp",factorization.json,Native heuristic parser fixed-output score; posthoc interaction
-C7,"5,7",2200 development variants from200units; SocialIQa100source/600variants;v2 PASS200 FAIL300 INCOMPLETE100,mutations.json;social_summary.json;social_verification.json;social_protocol.json,Known mechanisms; source-family holdout from documented development; custom adapter; global blindness unverified
-C8,6,"Harness200 cases,801 requests, plus installed-task integration and400 constructed scoring fixtures",harness.json;native_integration.json,"Native installed task path, same observed data; no model/tokenizer"
-C9,9,External affected run not verified,external.json,Search evidence does not establish absence
+C7,"5,A.1",2200 development variants from200units; SocialIQa100source/600variants;v2 PASS200 FAIL300 INCOMPLETE100,mutations.json;social_summary.json;social_verification.json;social_protocol.json,Known mechanisms; source-family holdout from documented development; custom adapter; global blindness unverified
+C8,6,Harness200cases/801requests; native source gate1600conditions with400PASS/1000FAIL/200INCOMPLETE,harness.json;native_integration.json;native_gate.json;native_gate_verification.json,Reused source records and local counting-sink boundary
+C9,10,Public component use and code distribution identified; affected independent conclusion unresolved,external.json;external_update.json;fork_inventory.json,Bounded public-source search
+C10,7,633 reused records and3798 intervention conditions; shared causes and LAB-Bench boundary,causal_root.json;causal_verification.json,Post-discovery diagnosis of known mechanisms
+C11,7,MMMLU100 source records; native question dependence0 and repaired100,mmmlu_transfer.json;causal_verification.json,New native configuration; translated MMLU semantic overlap possible
+C12,8,MixEval200 source rows/600conditions;100 native free-form task-kind failures; partial generation repair and retained adapter alerts,mixeval_summary.json;mixeval_review.json;mixeval_verification.json;mixeval_protocol.json,Source mixture; known binding fault; no scoring-stage or model accuracy claim

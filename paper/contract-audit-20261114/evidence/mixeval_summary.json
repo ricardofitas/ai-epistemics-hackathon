@@ -1,0 +1,76 @@
+{
+  "status": "completed",
+  "source_rows_selected": 200,
+  "condition_records": 600,
+  "panels": {
+    "free_form:native": {
+      "rows": 100,
+      "recording_sink_calls": 1,
+      "field_presence_check": 100,
+      "metadata_route_parser_consistent": 100,
+      "source_type_preserved": 0,
+      "question_bound": 0,
+      "choices_preserved": 0,
+      "source_targets_valid": 100,
+      "MC_instruction": 100
+    },
+    "free_form:bind_only": {
+      "rows": 100,
+      "recording_sink_calls": 1,
+      "field_presence_check": 100,
+      "metadata_route_parser_consistent": 100,
+      "source_type_preserved": 0,
+      "question_bound": 100,
+      "choices_preserved": 0,
+      "source_targets_valid": 100,
+      "MC_instruction": 100
+    },
+    "free_form:bind_and_type": {
+      "rows": 100,
+      "recording_sink_calls": 1,
+      "field_presence_check": 100,
+      "metadata_route_parser_consistent": 0,
+      "source_type_preserved": 100,
+      "question_bound": 100,
+      "choices_preserved": 0,
+      "source_targets_valid": 100,
+      "MC_instruction": 0
+    },
+    "multiple_choice:native": {
+      "rows": 100,
+      "recording_sink_calls": 1,
+      "field_presence_check": 100,
+      "metadata_route_parser_consistent": 100,
+      "source_type_preserved": 0,
+      "question_bound": 0,
+      "choices_preserved": 99,
+      "source_targets_valid": 100,
+      "MC_instruction": 100
+    },
+    "multiple_choice:bind_only": {
+      "rows": 100,
+      "recording_sink_calls": 1,
+      "field_presence_check": 100,
+      "metadata_route_parser_consistent": 100,
+      "source_type_preserved": 0,
+      "question_bound": 100,
+      "choices_preserved": 99,
+      "source_targets_valid": 100,
+      "MC_instruction": 100
+    },
+    "multiple_choice:bind_and_type": {
+      "rows": 100,
+      "recording_sink_calls": 1,
+      "field_presence_check": 100,
+      "metadata_route_parser_consistent": 100,
+      "source_type_preserved": 0,
+      "question_bound": 100,
+      "choices_preserved": 99,
+      "source_targets_valid": 100,
+      "MC_instruction": 100
+    }
+  },
+  "errors": [],
+  "provider_model_calls": 0,
+  "scope": "Exact native data-only methods under AST dependency scaffold and local recording sink; not native installed engine, models, tokenizer, official grading or external impact."
+}

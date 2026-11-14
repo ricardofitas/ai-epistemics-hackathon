@@ -43,7 +43,7 @@
   },
   {
     "id": "C7",
-    "section": "5,7",
+    "section": "5,A.1",
     "claim": "2200 development variants from200units; SocialIQa100source/600variants;v2 PASS200 FAIL300 INCOMPLETE100",
     "evidence": "mutations.json;social_summary.json;social_verification.json;social_protocol.json",
     "qualification": "Known mechanisms; source-family holdout from documented development; custom adapter; global blindness unverified"
@@ -51,15 +51,36 @@
   {
     "id": "C8",
     "section": "6",
-    "claim": "Harness200 cases,801 requests, plus installed-task integration and400 constructed scoring fixtures",
-    "evidence": "harness.json;native_integration.json",
-    "qualification": "Native installed task path, same observed data; no model/tokenizer"
+    "claim": "Harness200cases/801requests; native source gate1600conditions with400PASS/1000FAIL/200INCOMPLETE",
+    "evidence": "harness.json;native_integration.json;native_gate.json;native_gate_verification.json",
+    "qualification": "Reused source records and local counting-sink boundary"
   },
   {
     "id": "C9",
-    "section": "9",
-    "claim": "External affected run not verified",
-    "evidence": "external.json",
-    "qualification": "Search evidence does not establish absence"
+    "section": "10",
+    "claim": "Public component use and code distribution identified; affected independent conclusion unresolved",
+    "evidence": "external.json;external_update.json;fork_inventory.json",
+    "qualification": "Bounded public-source search"
+  },
+  {
+    "id": "C10",
+    "section": "7",
+    "claim": "633 reused records and3798 intervention conditions; shared causes and LAB-Bench boundary",
+    "evidence": "causal_root.json;causal_verification.json",
+    "qualification": "Post-discovery diagnosis of known mechanisms"
+  },
+  {
+    "id": "C11",
+    "section": "7",
+    "claim": "MMMLU100 source records; native question dependence0 and repaired100",
+    "evidence": "mmmlu_transfer.json;causal_verification.json",
+    "qualification": "New native configuration; translated MMLU semantic overlap possible"
+  },
+  {
+    "id": "C12",
+    "section": "8",
+    "claim": "MixEval200 source rows/600conditions;100 native free-form task-kind failures; partial generation repair and retained adapter alerts",
+    "evidence": "mixeval_summary.json;mixeval_review.json;mixeval_verification.json;mixeval_protocol.json",
+    "qualification": "Source mixture; known binding fault; no scoring-stage or model accuracy claim"
   }
 ]
