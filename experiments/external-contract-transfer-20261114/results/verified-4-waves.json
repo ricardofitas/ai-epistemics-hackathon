@@ -1,0 +1,204 @@
+{
+  "finished_waves": 4,
+  "source_questions": 100,
+  "planned": 1600,
+  "started_unique": 1600,
+  "attempts": 1623,
+  "eligible": 1548,
+  "explicit_429": 23,
+  "reported_cost": 1.5082729077680002,
+  "status": {
+    "completed": 1548,
+    "incomplete": 52
+  },
+  "datasets": {
+    "squad": {
+      "choice_carrier": [
+        53.0,
+        64.5
+      ],
+      "interaction": [
+        60.0,
+        73.0
+      ],
+      "cases": 50,
+      "scores": {
+        "choice_clear": {
+          "n": 200,
+          "correct": 162,
+          "unknown": 1,
+          "dummy": 0
+        },
+        "choice_none": {
+          "n": 200,
+          "correct": 34,
+          "unknown": 22,
+          "dummy": 144
+        }
+      }
+    },
+    "tabmwp": {
+      "choice_carrier": [
+        65.5,
+        77.5
+      ],
+      "interaction": [
+        67.0,
+        80.0
+      ],
+      "cases": 50,
+      "scores": {
+        "choice_clear": {
+          "n": 200,
+          "correct": 192,
+          "unknown": 2,
+          "dummy": 0
+        },
+        "choice_none": {
+          "n": 200,
+          "correct": 39,
+          "unknown": 22,
+          "dummy": 137
+        }
+      }
+    }
+  },
+  "per_model": {
+    "gemma-4-31b-it": {
+      "squad": {
+        "choice_carrier": {
+          "n": 50,
+          "lower_pp": 80.0,
+          "upper_pp": 86.0,
+          "complete_pairs_or_sets": 48,
+          "complete_only_pp": 85.417
+        },
+        "interaction": {
+          "n": 50,
+          "lower_pp": 84.0,
+          "upper_pp": 94.0,
+          "complete_pairs_or_sets": 48,
+          "complete_only_pp": 91.667
+        }
+      },
+      "tabmwp": {
+        "choice_carrier": {
+          "n": 50,
+          "lower_pp": 86.0,
+          "upper_pp": 94.0,
+          "complete_pairs_or_sets": 47,
+          "complete_only_pp": 93.617
+        },
+        "interaction": {
+          "n": 50,
+          "lower_pp": 88.0,
+          "upper_pp": 98.0,
+          "complete_pairs_or_sets": 47,
+          "complete_only_pp": 95.745
+        }
+      }
+    },
+    "qwen3.8-27b": {
+      "squad": {
+        "choice_carrier": {
+          "n": 50,
+          "lower_pp": 50.0,
+          "upper_pp": 56.0,
+          "complete_pairs_or_sets": 47,
+          "complete_only_pp": 55.319
+        },
+        "interaction": {
+          "n": 50,
+          "lower_pp": 62.0,
+          "upper_pp": 70.0,
+          "complete_pairs_or_sets": 46,
+          "complete_only_pp": 67.391
+        }
+      },
+      "tabmwp": {
+        "choice_carrier": {
+          "n": 50,
+          "lower_pp": 76.0,
+          "upper_pp": 88.0,
+          "complete_pairs_or_sets": 44,
+          "complete_only_pp": 88.636
+        },
+        "interaction": {
+          "n": 50,
+          "lower_pp": 82.0,
+          "upper_pp": 94.0,
+          "complete_pairs_or_sets": 44,
+          "complete_only_pp": 93.182
+        }
+      }
+    },
+    "deepseek-v4-flash": {
+      "squad": {
+        "choice_carrier": {
+          "n": 50,
+          "lower_pp": 38.0,
+          "upper_pp": 54.0,
+          "complete_pairs_or_sets": 42,
+          "complete_only_pp": 45.238
+        },
+        "interaction": {
+          "n": 50,
+          "lower_pp": 50.0,
+          "upper_pp": 66.0,
+          "complete_pairs_or_sets": 42,
+          "complete_only_pp": 54.762
+        }
+      },
+      "tabmwp": {
+        "choice_carrier": {
+          "n": 50,
+          "lower_pp": 62.0,
+          "upper_pp": 68.0,
+          "complete_pairs_or_sets": 47,
+          "complete_only_pp": 65.957
+        },
+        "interaction": {
+          "n": 50,
+          "lower_pp": 60.0,
+          "upper_pp": 66.0,
+          "complete_pairs_or_sets": 47,
+          "complete_only_pp": 65.957
+        }
+      }
+    },
+    "glm-5.2": {
+      "squad": {
+        "choice_carrier": {
+          "n": 50,
+          "lower_pp": 44.0,
+          "upper_pp": 62.0,
+          "complete_pairs_or_sets": 41,
+          "complete_only_pp": 53.659
+        },
+        "interaction": {
+          "n": 50,
+          "lower_pp": 44.0,
+          "upper_pp": 62.0,
+          "complete_pairs_or_sets": 41,
+          "complete_only_pp": 53.659
+        }
+      },
+      "tabmwp": {
+        "choice_carrier": {
+          "n": 50,
+          "lower_pp": 38.0,
+          "upper_pp": 60.0,
+          "complete_pairs_or_sets": 39,
+          "complete_only_pp": 48.718
+        },
+        "interaction": {
+          "n": 50,
+          "lower_pp": 38.0,
+          "upper_pp": 62.0,
+          "complete_pairs_or_sets": 38,
+          "complete_only_pp": 44.737
+        }
+      }
+    }
+  }
+}
