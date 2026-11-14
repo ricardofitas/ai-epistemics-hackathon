@@ -25,3 +25,9 @@ A reproducible script, machine-readable results, claim-to-source mapping and a f
 
 ## Amendment before headline-output acquisition
 The frozen public repository inventory also contains four GPT-3 test files and one PromptPG test file, all named seed_2. Their contents have not been inspected in this follow-up. Audit those archived files as a separate targeted extension: authenticate each Git blob; inspect whether it is a cache or scored result; replay the authors' own GPT-3 extraction and grading before applying the same prespecified zero-tie/exact-option policies to the extracted final answer. A single released seed cannot reproduce or invalidate a three-trial average. Keep seed-level consequences, headline aggregate coverage and missing runs explicit. No model generation or judge calls.
+
+## Exploratory full-context stress test (after primary results)
+The primary base comparison remains unidentified under residual semantic labels; 684 of its 971 residual TAPEX outputs are numeric/currency strings. To address the missing-context concern directly, add a secondary generous context decoder without replacing the frozen primary endpoint. Before inspecting its outcome, restrict decoding to (a) a unique offered table-row label associated with exactly the numeric value returned, in a two-column source table, and (b) an enough-money question whose two requested items match source rows uniquely and whose returned numeric amount equals their exact decimal total. Report these as context-based interpretations, not human labels or independently validated semantic gold. Do not label other residuals wrong or infer yes merely because an arbitrary amount is below the budget. Keep all original policies and unknowns. This extension is retrospective and post-outcome, not a preregistered test.
+
+
+

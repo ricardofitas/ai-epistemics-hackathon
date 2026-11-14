@@ -1,0 +1,143 @@
+{
+  "revision": "869bae8ffb8288ccc3102293b3090ec2aa17f618",
+  "files": [
+    {
+      "path": "data/tabmwp/problems_test.json",
+      "bytes": 8520863,
+      "git_blob_sha": "eb3a92279b57aa84ce7bb7d3051c7b9749a1aadc",
+      "sha256": "c47607dad36477725087cb4e5317fe1e89a69dfed404eca430673bda36fda45c"
+    },
+    {
+      "path": "results/t5/exp1_pretrained_unifiedqa_small.json",
+      "bytes": 1482581,
+      "git_blob_sha": "d95d6f55da3843a770ed1fe84e9817cfebae7bdc",
+      "sha256": "a081b7e039f816075e5ad6cebb3c4cbf3ecb73a9a6854ff12d11cb0daf87330d"
+    },
+    {
+      "path": "results/t5/exp2_pretrained_unifiedqa_base.json",
+      "bytes": 1504293,
+      "git_blob_sha": "2113ffad819ec2c53f0894a96280e3ec781d9f5d",
+      "sha256": "f3e954095261897fbac79947c5392e0bffafe30ebe63fa1451ecbae2c1d9a23e"
+    },
+    {
+      "path": "results/t5/exp3_pretrained_unifiedqa_large.json",
+      "bytes": 1508287,
+      "git_blob_sha": "a8a04538137bc63887205642f47606af4b041b3b",
+      "sha256": "9512d0eff22f47c60204e227d5bb391727dd918d54c3a22cd20aacbf6f485ef1"
+    },
+    {
+      "path": "results/t5/exp4_small.json",
+      "bytes": 1415997,
+      "git_blob_sha": "c16c3a055d5dbd325c347a594526c9ea6472d764",
+      "sha256": "6b94f9aa3a409faa1089527f16a87c80e86dfe37e16881929559896e82e26b80"
+    },
+    {
+      "path": "results/t5/exp5_base.json",
+      "bytes": 1419151,
+      "git_blob_sha": "fc8b5507d2e2513324d28790219a09063b655219",
+      "sha256": "3aa2157f4b6f618e97a2b9ab367c7bd0dac212bd25687eabb9a5f461a7e2e9ea"
+    },
+    {
+      "path": "results/t5/exp6_large.json",
+      "bytes": 1416462,
+      "git_blob_sha": "e72ea3a330f1e197569ede959e5b86bb0f50034b",
+      "sha256": "8cf61a9563b1e9af877c61937d8b4c75f755b18a781b84750d5c1d95ee7cd0de"
+    },
+    {
+      "path": "results/tapex/exp1_tapex-base.json",
+      "bytes": 1422288,
+      "git_blob_sha": "3694564327915c2b9af1db175ddb0dbe775d6ada",
+      "sha256": "f22657e2a0eb2316dc148aa30aa71e89943275aed6e278165dd29b55283123fc"
+    },
+    {
+      "path": "results/tapex/exp2_tapex-base.json",
+      "bytes": 1418043,
+      "git_blob_sha": "7d51ced0999c62538e6dce56ec128260b35bc10c",
+      "sha256": "a23496671427e2afa6e0c849cb9db9154be53e2ee759697c2cba051c866a3673"
+    },
+    {
+      "path": "results/tapex/exp3_tapex-large.json",
+      "bytes": 1420520,
+      "git_blob_sha": "f9686ccb9e4447ffe54ad74c01e29b19044ed1f5",
+      "sha256": "065716b8ed67d344b85cf49ea3b459bc6521e72e98825cfc6406ebd601504f72"
+    },
+    {
+      "path": "results/tapex/exp4_tapex-large.json",
+      "bytes": 1414656,
+      "git_blob_sha": "778ed8880279499b1936c98c541f5cb2f4db99d0",
+      "sha256": "3d615edc332cbc5b9913fac2034b1f739e0e45792f7b536ee9ed89b4f0ab1171"
+    },
+    {
+      "path": "results/gpt3/exp1_test_TQ-A_0_seed_2.json",
+      "bytes": 2309344,
+      "git_blob_sha": "5bda2ffa12a3a1764434c21c55719bc199ff613d",
+      "sha256": "5e911f3275fb8fd63f46de83a75526f1061c46ed3361c90a7f5ed2c5401599f6"
+    },
+    {
+      "path": "results/gpt3/exp2_test_TQ-A_0_seed_2.json",
+      "bytes": 1523917,
+      "git_blob_sha": "6f3f6822150f900c7fcdd838fde4c21b2481e06f",
+      "sha256": "e460ca066e02969826b5727fc32d97d1f1079cb4c18f96048fe1e5ef3c712e03"
+    },
+    {
+      "path": "results/gpt3/exp3_test_TQ-A_2_seed_2.json",
+      "bytes": 1525879,
+      "git_blob_sha": "887b0f35260bcb69e5b91cdfbb201ebcda0f35bf",
+      "sha256": "8c6d3124fe2c79db187c049337e63b7039923bb9c673f9c6eac9a76060345a07"
+    },
+    {
+      "path": "results/gpt3/exp4_test_TQ-SA_2_seed_2.json",
+      "bytes": 2847917,
+      "git_blob_sha": "7ddd7b4affe59ffab9bc823f2f77f8cd1afeaad9",
+      "sha256": "880e513f5cfdc166b160004f8b990a70a41b0eb9e804bf0da30650cc746a9c47"
+    },
+    {
+      "path": "results/gpt3_rl/exp1_test_TQ-SA_2_seed_2.json",
+      "bytes": 29011372,
+      "git_blob_sha": "76058cfd1cf77480f61ee2019ec15bd06a81a1bb",
+      "sha256": "a8cc3d65114f4fc9e904a3efdeba7c1312ee6135c4beb6b37b66fc740672c905"
+    },
+    {
+      "path": "run_gpt3/run_gpt3.py",
+      "bytes": 9063,
+      "git_blob_sha": "c03de70e7a5ebc6dea3763ac055243a9537aabc5",
+      "sha256": "ef41103ed02419ff34a4dc5284abd2b743a0412dc061a0ed33a902e1a4edb6d0"
+    },
+    {
+      "path": "run_gpt3/run_gpt3_step.py",
+      "bytes": 8903,
+      "git_blob_sha": "b580553e405d5cb53bc40d7117034354b973c5ae",
+      "sha256": "9bd4ca7f9c4858b014af82e2ea79098b5b187ff74769b27ac80ccfba735df559"
+    },
+    {
+      "path": "run_gpt3/utilities.py",
+      "bytes": 3206,
+      "git_blob_sha": "d4c19340488013e02788ac67d57c4bc869ac7aa9",
+      "sha256": "81184ef5c6685a15c15f7d6a3982699f103eb55bfbdb77e1cd74a234ce64e730"
+    },
+    {
+      "path": "run_gpt3_rl/run_gpt3.py",
+      "bytes": 10958,
+      "git_blob_sha": "c4948808f6a7d505c0c2dc9018ca8f66aa2c39b2",
+      "sha256": "4668f44e95cf82fa9971987c7ce26b9753fb149db9cedec98d405d3aa06dfb3f"
+    },
+    {
+      "path": "run_gpt3_rl/utilities.py",
+      "bytes": 4001,
+      "git_blob_sha": "4bfbffb23b97fcb7b5a35035129c16f27c72bcf7",
+      "sha256": "4b0e1040581f603a298ee9df8eba0aff37b2650323e17b4c844549563343fac9"
+    },
+    {
+      "path": "run_t5/eval.py",
+      "bytes": 4892,
+      "git_blob_sha": "7dafd40f9becb17122761ba31d361991c855e074",
+      "sha256": "9e279114c0cdf0c6ca23fcf39aad6e833bb79fe3f6ab506a9145b621c34a257e"
+    },
+    {
+      "path": "run_tapex/eval.py",
+      "bytes": 5024,
+      "git_blob_sha": "55b2775003558ab80e05b0c49f9d5481f3e12fe0",
+      "sha256": "a20964f749ce3fad504ad274fc2e954489475b13401c2fe2c90ba79386e5d876"
+    }
+  ]
+}

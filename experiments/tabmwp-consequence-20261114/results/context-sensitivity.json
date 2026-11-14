@@ -1,0 +1,18 @@
+{
+  "scope": "Exploratory secondary context interpretation; source-aware arithmetic, no human or model adjudication. Frozen primary scores unchanged.",
+  "summary": {
+    "results/tapex/exp1_tapex-base.json": {
+      "resolved": 291,
+      "correct": 88,
+      "unique_table_value_to_offered_row": 291
+    },
+    "results/t5/exp2_pretrained_unifiedqa_base.json": {}
+  },
+  "correct_if_other_residuals_zero": {
+    "results/tapex/exp1_tapex-base.json": 942.0,
+    "results/t5/exp2_pretrained_unifiedqa_base.json": 1094.0
+  },
+  "difference": -152.0,
+  "human_labels": 0,
+  "model_calls": 0
+}

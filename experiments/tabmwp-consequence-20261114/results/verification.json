@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "arithmetic_and_source_checks": 327,
+  "source_files": 23,
+  "context_witnesses_checked": 291,
+  "context_interpretations_matching_gold": 88,
+  "scope": "Separate arithmetic/witness reconciliation by the same assistant. No independent human certification.",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+}

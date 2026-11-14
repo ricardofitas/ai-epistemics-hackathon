@@ -1,0 +1,148 @@
+{
+  "results/gpt3/exp1_test_TQ-A_0_seed_2.json": {
+    "status": "STOP_UNSUPPORTED_PARSER_ATTRIBUTION",
+    "counts": {
+      "stored_flag_checks": 7686,
+      "deterministic_prediction_checks": 7686,
+      "prediction_mismatches": 6,
+      "flag_mismatches": 5
+    },
+    "correct": 4428,
+    "n": 7686,
+    "accuracy": 57.61124121779859,
+    "metadata_seed": 1,
+    "witnesses": [
+      {
+        "id": "4546",
+        "raw": "(A) the bromine mixture.",
+        "stored_prediction": "the bromine mixture",
+        "replay_prediction": "bromine mixture",
+        "gold": "bromine mixture",
+        "stored_correct": false,
+        "replay_correct": true,
+        "choices": [
+          "bromine mixture",
+          "acetone mixture"
+        ]
+      },
+      {
+        "id": "7414",
+        "raw": "(A) the bromine mixture.",
+        "stored_prediction": "the bromine mixture",
+        "replay_prediction": "bromine mixture",
+        "gold": "bromine mixture",
+        "stored_correct": false,
+        "replay_correct": true,
+        "choices": [
+          "bromine mixture",
+          "acetone mixture"
+        ]
+      },
+      {
+        "id": "10607",
+        "raw": "(A) Whitney has enough money to buy a wooden block and a green marble.",
+        "stored_prediction": "Whitney has enough money to buy a wooden block and a green marble",
+        "replay_prediction": "yes",
+        "gold": "yes",
+        "stored_correct": false,
+        "replay_correct": true,
+        "choices": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "id": "11559",
+        "raw": "(A) the bromine mixture.",
+        "stored_prediction": "the bromine mixture",
+        "replay_prediction": "bromine mixture",
+        "gold": "bromine mixture",
+        "stored_correct": false,
+        "replay_correct": true,
+        "choices": [
+          "bromine mixture",
+          "acetone mixture"
+        ]
+      },
+      {
+        "id": "31576",
+        "raw": "(A) Henderson Co.",
+        "stored_prediction": "Henderson Co",
+        "replay_prediction": "Henderson Co.",
+        "gold": "Northside Cycles",
+        "stored_correct": false,
+        "replay_correct": false,
+        "choices": [
+          "Henderson Co.",
+          "Critical Insight Consulting",
+          "Northside Cycles",
+          "Reardon Corporation"
+        ]
+      },
+      {
+        "id": "34707",
+        "raw": "(A) the bromine mixture.",
+        "stored_prediction": "the bromine mixture",
+        "replay_prediction": "bromine mixture",
+        "gold": "bromine mixture",
+        "stored_correct": false,
+        "replay_correct": true,
+        "choices": [
+          "bromine mixture",
+          "acetone mixture"
+        ]
+      }
+    ]
+  },
+  "results/gpt3/exp2_test_TQ-A_0_seed_2.json": {
+    "status": "PASS",
+    "counts": {
+      "stored_flag_checks": 7686,
+      "deterministic_prediction_checks": 7686
+    },
+    "correct": 4378,
+    "n": 7686,
+    "accuracy": 56.96070778037991,
+    "metadata_seed": 2,
+    "witnesses": []
+  },
+  "results/gpt3/exp3_test_TQ-A_2_seed_2.json": {
+    "status": "PASS",
+    "counts": {
+      "stored_flag_checks": 7686,
+      "deterministic_prediction_checks": 7679,
+      "stochastic_fallbacks": 7
+    },
+    "correct": 4381,
+    "n": 7686,
+    "accuracy": 56.999739786625035,
+    "metadata_seed": 2,
+    "witnesses": []
+  },
+  "results/gpt3/exp4_test_TQ-SA_2_seed_2.json": {
+    "status": "PASS",
+    "counts": {
+      "stored_flag_checks": 7686,
+      "deterministic_prediction_checks": 7643,
+      "stochastic_fallbacks": 43
+    },
+    "correct": 4882,
+    "n": 7686,
+    "accuracy": 63.51808482956024,
+    "metadata_seed": 2,
+    "witnesses": []
+  },
+  "results/gpt3_rl/exp1_test_TQ-SA_2_seed_2.json": {
+    "status": "PASS",
+    "counts": {
+      "stored_flag_checks": 7686,
+      "deterministic_prediction_checks": 7626,
+      "stochastic_fallbacks": 60
+    },
+    "correct": 5397,
+    "n": 7686,
+    "accuracy": 70.21857923497268,
+    "metadata_seed": 2,
+    "witnesses": []
+  }
+}

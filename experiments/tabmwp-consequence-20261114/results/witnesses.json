@@ -1,0 +1,763 @@
+[
+  {
+    "id": "25",
+    "question": "Some friends discussed the sizes of their coin collections. Who has the most coins?",
+    "table": "Name | Number of coins\nErica | 646\nHunter | 663\nDamon | 643\nLarry | 634",
+    "options": [
+      "Erica",
+      "Hunter",
+      "Damon",
+      "Larry"
+    ],
+    "raw_output": "erica",
+    "original_prediction": "Erica",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "56",
+    "question": "Look at the following schedule. When does the snowboarding event begin?",
+    "table": "Event | Begin | End\nspeed skating | 11:20 A.M. | 4:55 P.M.\ncross-country skiing | 4:35 P.M. | 6:35 P.M.\ndownhill skiing | 5:40 P.M. | 6:50 P.M.\nluge | 6:05 P.M. | 8:15 P.M.\nsnowboarding | 7:25 P.M. | 9:30 P.M.",
+    "options": [
+      "7:25 P.M.",
+      "4:35 P.M.",
+      "11:20 A.M.",
+      "5:40 P.M."
+    ],
+    "raw_output": "6:05 p.m.",
+    "original_prediction": "7:25 P.M.",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "85",
+    "question": "Look at the following schedule. Gina just missed the 10.45 A.M. bus at downtown. How long does she have to wait until the next bus?",
+    "table": "downtown | 10:30 A.M. | 10:45 A.M. | 11:00 A.M.\nhotel | 11:15 A.M. | 11:30 A.M. | 11:45 A.M.\nsoftball field | 12:15 P.M. | 12:30 P.M. | 12:45 P.M.\ntrain station | 1:00 P.M. | 1:15 P.M. | 1:30 P.M.",
+    "options": [
+      "1 hour",
+      "15 minutes",
+      "45 minutes",
+      "30 minutes"
+    ],
+    "raw_output": "11:15 a.m.",
+    "original_prediction": "1 hour",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "102",
+    "question": "Lorenzo has $13.50. Does he have enough to buy a toy guitar and a set of juggling balls?",
+    "table": "toy boat | $5.54\ntoy guitar | $8.23\nset of juggling balls | $5.01\ntrivia game | $8.18\njigsaw puzzle | $5.30\ntoy dinosaur | $3.00",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "$5.01",
+    "original_prediction": "yes",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "128",
+    "question": "An amusement park manager looked up the number of ride tickets sold in the past 4 days. On which day did the amusement park sell the most tickets?",
+    "table": "Day | Number of tickets\nTuesday | 491\nWednesday | 459\nThursday | 445\nFriday | 495",
+    "options": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "raw_output": "tuesday",
+    "original_prediction": "Tuesday",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "207",
+    "question": "Joey has $2.00. Does he have enough to buy a bottle of soy sauce and a jar of salsa?",
+    "table": "jar of tomato sauce | $0.71\nbottle of hot sauce | $0.81\nbottle of mustard | $0.95\nbottle of ketchup | $0.79\nbottle of soy sauce | $0.87\njar of salsa | $0.98",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "$0.87",
+    "original_prediction": "yes",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "246",
+    "question": "Roxanne has $32.50. Does she have enough to buy a CD and a blender?",
+    "table": "blender | $14.02\nCD | $18.35\ncomputer mouse | $10.65\nCD player | $21.84\nDVD player | $53.57\nradio | $15.42",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "$18.35",
+    "original_prediction": "yes",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "365",
+    "question": "Look at this table. Is this relation a function?",
+    "table": "x | y\n12 | 7\n20 | 16\n12 | 14\n11 | 19",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "12",
+    "original_prediction": "yes",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "394",
+    "question": "A concession stand worker at the movie theater looked up how many bags of popcorn were sold in the past 4 days. On which day did the movie theater sell the fewest bags of popcorn?",
+    "table": "Day | Number of bags of popcorn\nTuesday | 881\nWednesday | 836\nThursday | 863\nFriday | 869",
+    "options": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "raw_output": "869",
+    "original_prediction": "Tuesday",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "396",
+    "question": "Sam has $27.00. Does he have enough to buy a dog calendar and a math book?",
+    "table": "math book | $16.84\ndog calendar | $11.22\ndictionary | $10.10\natlas | $49.12",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "$11.22",
+    "original_prediction": "yes",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "412",
+    "question": "A video store clerk looked up the number of movies checked out each day. On which day were the most movies checked out?",
+    "table": "Day | Number of movies\nWednesday | 61\nThursday | 62\nFriday | 68\nSaturday | 64",
+    "options": [
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "raw_output": "64",
+    "original_prediction": "Wednesday",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "416",
+    "question": "Vijay has $9.00. Does he have enough to buy a book about music and a book about hiking?",
+    "table": "book about hiking | $9.00\nbook about outer space | $2.00\nbook about animals | $5.00\nbook about music | $2.00",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "$9.00",
+    "original_prediction": "yes",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "432",
+    "question": "Xavier has $1,416.00. Does he have enough to buy a Jamaican vacation package and a European vacation package?",
+    "table": "European vacation package | $514.00\nAustralian vacation package | $503.00\nHawaiian vacation package | $569.00\nCaribbean vacation package | $576.00\nJamaican vacation package | $875.00",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "hawaiian vacation package",
+    "original_prediction": "yes",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "442",
+    "question": "Dominic has $8. Does he have enough to buy a dog leash and a bag of cat treats?",
+    "table": "box of dog biscuits | $3\ndog bowl | $3\nbag of birdseed | $8\ndog leash | $5\nbag of cat treats | $4",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "bag of birdseed",
+    "original_prediction": "yes",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "518",
+    "question": "Debbie has $1.50. Does she have enough to buy a package of dental floss and a barrette?",
+    "table": "tube of toothpaste | $0.92\nsewing kit | $0.91\nbarrette | $0.58\nlip balm | $0.91\npackage of dental floss | $0.78",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "barrette",
+    "original_prediction": "yes",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "529",
+    "question": "Jordan has two dogs, Sprinkles and Champ. He is concerned because Sprinkles keeps eating Champ's food. Jordan asks their vet how much each dog's weight has changed since their last visit. Which dog's weight has changed the most?",
+    "table": "Dog | Weight change (oz.)\nSprinkles | 5\nChamp | -6",
+    "options": [
+      "Sprinkles",
+      "Champ"
+    ],
+    "raw_output": "champ",
+    "original_prediction": "Sprinkles",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "559",
+    "question": "Look at this table. Is this relation a function?",
+    "table": "x | y\n6 | 2\n6 | 19\n2 | 11",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "6",
+    "original_prediction": "yes",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "568",
+    "question": "Look at the following schedule. How long does it take to get from Kite Coast to Starfish Point?",
+    "table": "Rocky Cliffs | 7:45 A.M. | 8:30 A.M. | 8:45 A.M. | 9:15 A.M.\nKite Coast | 9:30 A.M. | 10:15 A.M. | 10:30 A.M. | 11:00 A.M.\nThe Boardwalk | 11:15 A.M. | 12:00 P.M. | 12:15 P.M. | 12:45 P.M.\nOcean City | 12:45 P.M. | 1:30 P.M. | 1:45 P.M. | 2:15 P.M.\nStarfish Point | 1:45 P.M. | 2:30 P.M. | 2:45 P.M. | 3:15 P.M.",
+    "options": [
+      "1 hour and 30 minutes",
+      "4 hours",
+      "2 hours",
+      "4 hours and 15 minutes"
+    ],
+    "raw_output": "2:45 p.m.",
+    "original_prediction": "1 hour and 30 minutes",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "585",
+    "question": "Stacy looked at the dates of the digital photos on her computer to find out how many she had taken in the past 4 days. On which day did Stacy take the fewest photographs?",
+    "table": "Day | Number of photographs\nWednesday | 41\nThursday | 49\nFriday | 47\nSaturday | 46",
+    "options": [
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "raw_output": "46",
+    "original_prediction": "Wednesday",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "620",
+    "question": "Emma has $1.72. Does she have enough to buy a hair tie and a comb?",
+    "table": "bar of soap | $0.98\ncomb | $0.75\nnail file | $0.51\nhair tie | $0.94\nbottle of hand lotion | $0.93",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "nail file",
+    "original_prediction": "yes",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "711",
+    "question": "Look at the following schedule. When does the juggler's performance begin?",
+    "table": "Performer | Begin | End\nthe jugglers | 5:45 P.M. | 6:20 P.M.\nthe acrobats | 6:35 P.M. | 7:00 P.M.\nthe tightrope walkers | 7:05 P.M. | 7:30 P.M.\nthe strongman | 7:35 P.M. | 8:10 P.M.\nthe ringmaster | 8:25 P.M. | 8:40 P.M.\nthe clowns | 8:50 P.M. | 9:05 P.M.",
+    "options": [
+      "7:35 P.M.",
+      "5:45 P.M.",
+      "6:20 P.M.",
+      "8:25 P.M."
+    ],
+    "raw_output": "7:05 p.m.",
+    "original_prediction": "7:35 P.M.",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "871",
+    "question": "The city library monitored the number of books checked out each day. On which day were the fewest books checked out?",
+    "table": "Day | Number of books\nThursday | 735\nFriday | 773\nSaturday | 757\nSunday | 753",
+    "options": [
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "raw_output": "753",
+    "original_prediction": "Thursday",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "947",
+    "question": "An economist tracked the amount of per-capita aid sent from the U.S. to various countries during the 1900s. In 1975, which country received more aid per capita, Libya or Sri Lanka?",
+    "table": "Country | 1965 | 1975\nLibya | $4 | $2\nAfghanistan | $5 | $5\nPakistan | $9 | $9\nSri Lanka | $1 | $11",
+    "options": [
+      "Sri Lanka",
+      "Libya"
+    ],
+    "raw_output": "sri lanka",
+    "original_prediction": "Sri Lanka",
+    "original_correct": true,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "972",
+    "question": "Look at the following schedule. Which class begins at 3.20 P.M.?",
+    "table": "Class | Begin | End\nIntroduction to Typing | 8:05 A.M. | 9:10 A.M.\nAdvanced Typing | 9:15 A.M. | 10:25 A.M.\nComputer Finance | 10:30 A.M. | 11:00 A.M.\nWord Processing | 11:10 A.M. | 11:50 A.M.\nComputer Science | 11:55 A.M. | 12:25 P.M.\nComputer Graphics | 12:40 P.M. | 1:45 P.M.\nBeginning Programming | 1:55 P.M. | 3:15 P.M.\nWeb Page Design | 3:20 P.M. | 4:25 P.M.",
+    "options": [
+      "Word Processing class",
+      "Computer Finance class",
+      "Web Page Design class",
+      "Computer Graphics class"
+    ],
+    "raw_output": "computer graphics",
+    "original_prediction": "Word Processing class",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "978",
+    "question": "Look at the following schedule. Jonathan just missed the 9.15 A.M. bus at the city hall. How long does he have to wait until the next bus?",
+    "table": "downtown | 8:15 A.M. | 9:00 A.M. | 9:15 A.M. | 10:00 A.M.\ncity hall | 9:15 A.M. | 10:00 A.M. | 10:15 A.M. | 11:00 A.M.\nuniversity campus | 10:15 A.M. | 11:00 A.M. | 11:15 A.M. | 12:00 P.M.\nthe riverfront | 11:00 A.M. | 11:45 A.M. | 12:00 P.M. | 12:45 P.M.\nold building | 11:45 A.M. | 12:30 P.M. | 12:45 P.M. | 1:30 P.M.\nshopping district | 12:30 P.M. | 1:15 P.M. | 1:30 P.M. | 2:15 P.M.\nart museum | 1:15 P.M. | 2:00 P.M. | 2:15 P.M. | 3:00 P.M.",
+    "options": [
+      "45 minutes",
+      "1 hour",
+      "30 minutes",
+      "15 minutes"
+    ],
+    "raw_output": "10:15 a.m.",
+    "original_prediction": "45 minutes",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1028",
+    "question": "Look at the following schedule. When does the advanced ballet class end?",
+    "table": "Class | Begin | End\nsalsa dance | 8:20 A.M. | 9:35 A.M.\nwestern dance | 9:50 A.M. | 11:00 A.M.\nballroom dance | 11:15 A.M. | 11:45 A.M.\nswing dance | 12:00 P.M. | 1:20 P.M.\njazz dance | 1:25 P.M. | 2:45 P.M.\nmodern dance | 3:00 P.M. | 4:15 P.M.\nbeginning ballet | 4:20 P.M. | 4:55 P.M.\nadvanced ballet | 5:05 P.M. | 6:45 P.M.",
+    "options": [
+      "11:45 A.M.",
+      "4:55 P.M.",
+      "2:45 P.M.",
+      "6:45 P.M."
+    ],
+    "raw_output": "5:05 p.m.",
+    "original_prediction": "11:45 A.M.",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1068",
+    "question": "Ben went on a camping trip and logged the number of miles he hiked each day. On which day did Ben hike the most miles?",
+    "table": "Day | Number of miles\nThursday | 12\nFriday | 14\nSaturday | 17\nSunday | 19",
+    "options": [
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "raw_output": "saturday",
+    "original_prediction": "Thursday",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "1105",
+    "question": "Look at the following schedule. Estelle is at Westminster at 10.45 A.M. How soon can she get to Princeton?",
+    "table": "Springtown | 4:15 A.M. | 6:30 A.M. | 6:00 P.M.\nAllenville | 5:15 A.M. | 7:30 A.M. | 7:00 P.M.\nWestminster | 7:00 A.M. | 9:15 A.M. | 8:45 P.M.\nPrinceton | 8:45 A.M. | 11:00 A.M. | 10:30 P.M.",
+    "options": [
+      "8:45 P.M.",
+      "7:00 P.M.",
+      "10:30 P.M.",
+      "6:00 P.M."
+    ],
+    "raw_output": "11:00 a.m.",
+    "original_prediction": "8:45 P.M.",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1130",
+    "question": "Look at the following schedule. Sasha just missed the 8.30 P.M. train at Chickenville. How long does she have to wait until the next train?",
+    "table": "Chickenville | 4:45 A.M. | 8:30 P.M. | 11:30 P.M.\nHappy Cow Farm | 5:45 A.M. | 6:30 A.M. | 9:30 P.M.\nGecko Paradise | 6:30 A.M. | 7:15 A.M. | 11:45 P.M.\nSnowy Mountain | 7:30 A.M. | 8:15 A.M. | 10:15 P.M.",
+    "options": [
+      "45 minutes",
+      "30 minutes",
+      "15 minutes",
+      "3 hours"
+    ],
+    "raw_output": "6:30 a.m.",
+    "original_prediction": "45 minutes",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1137",
+    "question": "Some friends compared the sizes of their stuffed animal collections. Who has the fewest stuffed animals?",
+    "table": "Name | Number of stuffed animals\nCeline | 259\nKimi | 292\nHunter | 229\nAllie | 252",
+    "options": [
+      "Celine",
+      "Kimi",
+      "Hunter",
+      "Allie"
+    ],
+    "raw_output": "252",
+    "original_prediction": "Celine",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1187",
+    "question": "A food industry researcher compiled the revenues of several pizzerias. Which restaurant made the least from cheese pizza sales?",
+    "table": "Restaurant | Cheese pizzas | Pepperoni pizzas\nPizzeria Italiano | $6 | $19\nNew York Slice | $10 | $8\nArnold's Pizzeria | $10 | $9",
+    "options": [
+      "New York Slice",
+      "Pizzeria Italiano",
+      "Arnold's Pizzeria"
+    ],
+    "raw_output": "pizzeria italiano",
+    "original_prediction": "New York Slice",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "1217",
+    "question": "Shane has $16.00. Does he have enough to buy a navy blue bath mat and a pillow?",
+    "table": "pillow | $6.89\ngreen kitchen towel | $2.44\nbeach towel | $9.18\nnavy blue bath mat | $9.59\nred pillowcase | $2.08\nwhite washcloth | $1.11",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "$6.89",
+    "original_prediction": "yes",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1237",
+    "question": "The local high school found out how many members each club had. Which club has the fewest members?",
+    "table": "Club | Number of members\nFrench club | 186\nmath club | 181\nJapanese club | 168\nSpanish club | 116",
+    "options": [
+      "French club",
+      "math club",
+      "Japanese club",
+      "Spanish club"
+    ],
+    "raw_output": "116",
+    "original_prediction": "French club",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1243",
+    "question": "In science class, Betty is learning about places with extreme temperatures. She learns that the highest temperature ever recorded was in Death Valley, California. She also learns that the lowest temperature ever recorded was in Vostok Station, Antarctica. The record-setting temperatures of the two locations are shown in the table. Which location's temperature was further from zero?",
+    "table": "Location | Temperature (\u00b0F)\nDeath Valley | 134\nVostok Station | -128",
+    "options": [
+      "Death Valley",
+      "Vostok Station"
+    ],
+    "raw_output": "vostok station",
+    "original_prediction": "Death Valley",
+    "original_correct": true,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "1247",
+    "question": "Some friends played a trivia game and recorded their scores. Who had the highest score?",
+    "table": "Name | Score\nTamir | 81\nDillon | 82\nLuna | 87\nWayne | 86",
+    "options": [
+      "Tamir",
+      "Dillon",
+      "Luna",
+      "Wayne"
+    ],
+    "raw_output": "luna",
+    "original_prediction": "Tamir",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "1272",
+    "question": "Some friends compared the sizes of their sticker collections. Who has the most stickers?",
+    "table": "Name | Number of stickers\nMadelyn | 764\nIvan | 779\nBridget | 746\nGina | 767",
+    "options": [
+      "Madelyn",
+      "Ivan",
+      "Bridget",
+      "Gina"
+    ],
+    "raw_output": "madelyn",
+    "original_prediction": "Madelyn",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "1318",
+    "question": "A farm equipment company kept a record of the number of tractors made each month. In which month did the company make the most tractors?",
+    "table": "Month | Number of tractors\nDecember | 885\nJanuary | 859\nFebruary | 895\nMarch | 898",
+    "options": [
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "raw_output": "march",
+    "original_prediction": "December",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "1340",
+    "question": "Laura jotted down how many minutes she spent practicing golf in the past 4 days. On which day did Laura practice the least?",
+    "table": "Day | Minutes\nThursday | 68\nFriday | 62\nSaturday | 67\nSunday | 64",
+    "options": [
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "raw_output": "62",
+    "original_prediction": "Thursday",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1393",
+    "question": "Liam has two dogs, Sprinkles and Champ. He is concerned because Sprinkles keeps eating Champ's food. Liam asks their vet how much each dog's weight has changed since their last visit. Which dog's weight has changed the most?",
+    "table": "Dog | Weight change (oz.)\nSprinkles | 5\nChamp | -6",
+    "options": [
+      "Sprinkles",
+      "Champ"
+    ],
+    "raw_output": "champ",
+    "original_prediction": "Sprinkles",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "1404",
+    "question": "Some friends played a trivia game and recorded their scores. Who had the highest score?",
+    "table": "Name | Score\nChristine | 985\nMarie | 995\nKaty | 958\nJasper | 989",
+    "options": [
+      "Christine",
+      "Marie",
+      "Katy",
+      "Jasper"
+    ],
+    "raw_output": "marie",
+    "original_prediction": "Christine",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "1434",
+    "question": "Dominic has $72.00. Does he have enough to buy a play ticket and a soccer ticket?",
+    "table": "play ticket | $24.00\ncomedy show ticket | $49.00\nboat show ticket | $23.00\nsoccer ticket | $50.00",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "$50.00",
+    "original_prediction": "yes",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1443",
+    "question": "Lara has $116.00. Does she have enough to buy a stuffed animal and a model railroad set?",
+    "table": "toy guitar | $17.00\nmodel railroad set | $98.00\nvideo game | $38.00\nstuffed animal | $13.00\nboard game | $17.00",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "$98.00",
+    "original_prediction": "yes",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1461",
+    "question": "Look at the following schedule. When does the Lions versus Blue Jays game begin?",
+    "table": "Game | Begin | End\nFire versus Blizzard | 8:55 A.M. | 10:25 A.M.\nCardinals versus Cobras | 9:30 A.M. | 11:00 A.M.\nLions versus Blue Jays | 10:40 A.M. | 12:10 P.M.\nTigers versus Wolves | 11:25 A.M. | 12:55 P.M.\nThunder versus Eagles | 12:40 P.M. | 2:10 P.M.",
+    "options": [
+      "10:40 A.M.",
+      "11:25 A.M.",
+      "8:55 A.M.",
+      "9:30 A.M."
+    ],
+    "raw_output": "12:10 p.m.",
+    "original_prediction": "10:40 A.M.",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1489",
+    "question": "Sophie kept a log of how many pages she read each month. In which month did Sophie read the most pages?",
+    "table": "Month | Number of pages\nJanuary | 221\nFebruary | 252\nMarch | 251\nApril | 215",
+    "options": [
+      "January",
+      "February",
+      "March",
+      "April"
+    ],
+    "raw_output": "march",
+    "original_prediction": "January",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "1529",
+    "question": "The staff of a newspaper examined the number of copies sold over the past 4 days. On which day were the fewest copies sold?",
+    "table": "Day | Number of newspapers\nTuesday | 337\nWednesday | 375\nThursday | 357\nFriday | 353",
+    "options": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "raw_output": "375",
+    "original_prediction": "Tuesday",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1597",
+    "question": "Lucia's Candies has been studying how much chocolate people have been eating in different countries. Which country consumed the least chocolate per capita in 2002?",
+    "table": "Country | 2002 | 2005\nBelgium | 8 | 11\nSwitzerland | 11 | 10\nAustralia | 4 | 5\nGermany | 10 | 11\nAustria | 8 | 9",
+    "options": [
+      "Switzerland",
+      "Belgium",
+      "Austria",
+      "Australia"
+    ],
+    "raw_output": "10",
+    "original_prediction": "Switzerland",
+    "original_correct": false,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1655",
+    "question": "The players on a quiz show received the following scores. Who had the highest score?",
+    "table": "Name | Score\nBelle | 953\nMaureen | 993\nCassie | 951\nKira | 938",
+    "options": [
+      "Belle",
+      "Maureen",
+      "Cassie",
+      "Kira"
+    ],
+    "raw_output": "maureen",
+    "original_prediction": "Belle",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "1708",
+    "question": "A fan carefully recorded the number of goals and misses made by different soccer players. Which player had the fewest misses?",
+    "table": "Player | Misses | Goals\nStriker | 13 | 15\nRight midfielder | 5 | 9\nRight forward | 12 | 12\nCenter midfielder | 1 | 11",
+    "options": [
+      "center midfielder",
+      "striker",
+      "right forward",
+      "right midfielder"
+    ],
+    "raw_output": "12",
+    "original_prediction": "center midfielder",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  },
+  {
+    "id": "1731",
+    "question": "A farm equipment company kept a record of the number of tractors made each month. In which month did the company make the fewest tractors?",
+    "table": "Month | Number of tractors\nJuly | 939\nAugust | 932\nSeptember | 992\nOctober | 923",
+    "options": [
+      "July",
+      "August",
+      "September",
+      "October"
+    ],
+    "raw_output": "august",
+    "original_prediction": "July",
+    "original_correct": false,
+    "unique_explicit": true,
+    "residual": false
+  },
+  {
+    "id": "1750",
+    "question": "Look at this table. Is this relation a function?",
+    "table": "x | y\n13 | 9\n7 | 0\n17 | 6\n18 | 7",
+    "options": [
+      "yes",
+      "no"
+    ],
+    "raw_output": "13",
+    "original_prediction": "yes",
+    "original_correct": true,
+    "unique_explicit": false,
+    "residual": true
+  }
+]

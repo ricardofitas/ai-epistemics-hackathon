@@ -1,0 +1,738 @@
+{
+  "status": "PASS",
+  "source_revision": "869bae8ffb8288ccc3102293b3090ec2aa17f618",
+  "source_questions": 7686,
+  "released_archives": 14,
+  "authenticated_files": [
+    {
+      "path": "data/tabmwp/problems_test.json",
+      "git_blob_sha": "eb3a92279b57aa84ce7bb7d3051c7b9749a1aadc",
+      "bytes": 8520863
+    },
+    {
+      "path": "results/t5/exp1_pretrained_unifiedqa_small.json",
+      "git_blob_sha": "d95d6f55da3843a770ed1fe84e9817cfebae7bdc",
+      "bytes": 1482581
+    },
+    {
+      "path": "results/t5/exp2_pretrained_unifiedqa_base.json",
+      "git_blob_sha": "2113ffad819ec2c53f0894a96280e3ec781d9f5d",
+      "bytes": 1504293
+    },
+    {
+      "path": "results/t5/exp3_pretrained_unifiedqa_large.json",
+      "git_blob_sha": "a8a04538137bc63887205642f47606af4b041b3b",
+      "bytes": 1508287
+    },
+    {
+      "path": "results/t5/exp4_small.json",
+      "git_blob_sha": "c16c3a055d5dbd325c347a594526c9ea6472d764",
+      "bytes": 1415997
+    },
+    {
+      "path": "results/t5/exp5_base.json",
+      "git_blob_sha": "fc8b5507d2e2513324d28790219a09063b655219",
+      "bytes": 1419151
+    },
+    {
+      "path": "results/t5/exp6_large.json",
+      "git_blob_sha": "e72ea3a330f1e197569ede959e5b86bb0f50034b",
+      "bytes": 1416462
+    },
+    {
+      "path": "results/tapex/exp1_tapex-base.json",
+      "git_blob_sha": "3694564327915c2b9af1db175ddb0dbe775d6ada",
+      "bytes": 1422288
+    },
+    {
+      "path": "results/tapex/exp2_tapex-base.json",
+      "git_blob_sha": "7d51ced0999c62538e6dce56ec128260b35bc10c",
+      "bytes": 1418043
+    },
+    {
+      "path": "results/tapex/exp3_tapex-large.json",
+      "git_blob_sha": "f9686ccb9e4447ffe54ad74c01e29b19044ed1f5",
+      "bytes": 1420520
+    },
+    {
+      "path": "results/tapex/exp4_tapex-large.json",
+      "git_blob_sha": "778ed8880279499b1936c98c541f5cb2f4db99d0",
+      "bytes": 1414656
+    },
+    {
+      "path": "results/gpt3/exp1_test_TQ-A_0_seed_2.json",
+      "git_blob_sha": "5bda2ffa12a3a1764434c21c55719bc199ff613d",
+      "bytes": 2309344
+    },
+    {
+      "path": "results/gpt3/exp2_test_TQ-A_0_seed_2.json",
+      "git_blob_sha": "6f3f6822150f900c7fcdd838fde4c21b2481e06f",
+      "bytes": 1523917
+    },
+    {
+      "path": "results/gpt3/exp3_test_TQ-A_2_seed_2.json",
+      "git_blob_sha": "887b0f35260bcb69e5b91cdfbb201ebcda0f35bf",
+      "bytes": 1525879
+    },
+    {
+      "path": "results/gpt3/exp4_test_TQ-SA_2_seed_2.json",
+      "git_blob_sha": "7ddd7b4affe59ffab9bc823f2f77f8cd1afeaad9",
+      "bytes": 2847917
+    },
+    {
+      "path": "results/gpt3_rl/exp1_test_TQ-SA_2_seed_2.json",
+      "git_blob_sha": "76058cfd1cf77480f61ee2019ec15bd06a81a1bb",
+      "bytes": 29011372
+    },
+    {
+      "path": "run_gpt3/run_gpt3.py",
+      "git_blob_sha": "c03de70e7a5ebc6dea3763ac055243a9537aabc5",
+      "bytes": 9063
+    },
+    {
+      "path": "run_gpt3/run_gpt3_step.py",
+      "git_blob_sha": "b580553e405d5cb53bc40d7117034354b973c5ae",
+      "bytes": 8903
+    },
+    {
+      "path": "run_gpt3/utilities.py",
+      "git_blob_sha": "d4c19340488013e02788ac67d57c4bc869ac7aa9",
+      "bytes": 3206
+    },
+    {
+      "path": "run_gpt3_rl/run_gpt3.py",
+      "git_blob_sha": "c4948808f6a7d505c0c2dc9018ca8f66aa2c39b2",
+      "bytes": 10958
+    },
+    {
+      "path": "run_gpt3_rl/utilities.py",
+      "git_blob_sha": "4bfbffb23b97fcb7b5a35035129c16f27c72bcf7",
+      "bytes": 4001
+    },
+    {
+      "path": "run_t5/eval.py",
+      "git_blob_sha": "7dafd40f9becb17122761ba31d361991c855e074",
+      "bytes": 4892
+    },
+    {
+      "path": "run_tapex/eval.py",
+      "git_blob_sha": "55b2775003558ab80e05b0c49f9d5481f3e12fe0",
+      "bytes": 5024
+    }
+  ],
+  "verification": {
+    "original_flag_checks": 107604,
+    "deterministic_prediction_checks": 107494,
+    "baseline_independent_choice_checks": 19920,
+    "stochastic_fallback_count": 110
+  },
+  "scores": {
+    "results/gpt3/exp2_test_TQ-A_0_seed_2.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 2,
+        "choice_rows": 1992,
+        "residual": 2,
+        "residual_original_credits": 1,
+        "residual_other_text": 2
+      },
+      "correct": {
+        "original": 4378.0,
+        "explicit_only": 4378.0,
+        "residual_zero": 4377.0,
+        "residual_uniform": 4378.0,
+        "residual_lexicographic": 4378.0
+      },
+      "percent": {
+        "original": 56.96070778037991,
+        "explicit_only": 56.96070778037991,
+        "residual_zero": 56.94769711163154,
+        "residual_uniform": 56.96070778037991,
+        "residual_lexicographic": 56.96070778037991
+      },
+      "residual_unknown_bounds": [
+        4377,
+        4379
+      ],
+      "reported_args_seed": 2,
+      "archive_accuracy": 56.96070778037991
+    },
+    "results/gpt3/exp3_test_TQ-A_2_seed_2.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 51,
+        "choice_rows": 1992,
+        "residual": 51,
+        "residual_original_credits": 23,
+        "residual_other_text": 51
+      },
+      "correct": {
+        "original": 4381.0,
+        "explicit_only": 4381.0,
+        "residual_zero": 4358.0,
+        "residual_uniform": 4382.75,
+        "residual_lexicographic": 4384.0
+      },
+      "percent": {
+        "original": 56.999739786625035,
+        "explicit_only": 56.999739786625035,
+        "residual_zero": 56.700494405412435,
+        "residual_uniform": 57.02250845693469,
+        "residual_lexicographic": 57.03877179287015
+      },
+      "residual_unknown_bounds": [
+        4358,
+        4409
+      ],
+      "reported_args_seed": 2,
+      "archive_accuracy": 56.999739786625035
+    },
+    "results/gpt3/exp4_test_TQ-SA_2_seed_2.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 402,
+        "choice_rows": 1992,
+        "residual": 402,
+        "residual_original_credits": 184,
+        "residual_other_text": 402
+      },
+      "correct": {
+        "original": 4882.0,
+        "explicit_only": 4882.0,
+        "residual_zero": 4698.0,
+        "residual_uniform": 4888.833333333333,
+        "residual_lexicographic": 4893.0
+      },
+      "percent": {
+        "original": 63.51808482956024,
+        "explicit_only": 63.51808482956024,
+        "residual_zero": 61.124121779859486,
+        "residual_uniform": 63.60699106600746,
+        "residual_lexicographic": 63.66120218579235
+      },
+      "residual_unknown_bounds": [
+        4698,
+        5100
+      ],
+      "reported_args_seed": 2,
+      "archive_accuracy": 63.51808482956024
+    },
+    "results/gpt3_rl/exp1_test_TQ-SA_2_seed_2.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 14,
+        "choice_rows": 1992,
+        "residual": 14,
+        "residual_original_credits": 3,
+        "residual_other_text": 14
+      },
+      "correct": {
+        "original": 5397.0,
+        "explicit_only": 5397.0,
+        "residual_zero": 5394.0,
+        "residual_uniform": 5399.5,
+        "residual_lexicographic": 5402.0
+      },
+      "percent": {
+        "original": 70.21857923497268,
+        "explicit_only": 70.21857923497268,
+        "residual_zero": 70.17954722872756,
+        "residual_uniform": 70.2511059068436,
+        "residual_lexicographic": 70.28363257871455
+      },
+      "residual_unknown_bounds": [
+        5394,
+        5408
+      ],
+      "reported_args_seed": 2,
+      "archive_accuracy": 70.21857923497268
+    },
+    "results/t5/exp1_pretrained_unifiedqa_small.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 57,
+        "choice_rows": 1992,
+        "unique_explicit": 27,
+        "explicit_flag_changes": 11,
+        "residual": 30,
+        "residual_original_credits": 12,
+        "residual_other_text": 30
+      },
+      "correct": {
+        "original": 936.0,
+        "explicit_only": 935.0,
+        "residual_zero": 923.0,
+        "residual_uniform": 932.9166666666666,
+        "residual_lexicographic": 930.0
+      },
+      "percent": {
+        "original": 12.177985948477751,
+        "explicit_only": 12.164975279729378,
+        "residual_zero": 12.008847254748893,
+        "residual_uniform": 12.137869719836932,
+        "residual_lexicographic": 12.09992193598751
+      },
+      "residual_unknown_bounds": [
+        923,
+        953
+      ],
+      "reported_args_seed": null,
+      "archive_accuracy": 12.177985948477751
+    },
+    "results/t5/exp2_pretrained_unifiedqa_base.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 99,
+        "choice_rows": 1992,
+        "unique_explicit": 18,
+        "explicit_flag_changes": 8,
+        "residual": 81,
+        "residual_original_credits": 25,
+        "residual_other_text": 78,
+        "residual_numeric_or_currency": 3
+      },
+      "correct": {
+        "original": 1119.0,
+        "explicit_only": 1119.0,
+        "residual_zero": 1094.0,
+        "residual_uniform": 1119.0,
+        "residual_lexicographic": 1119.0
+      },
+      "percent": {
+        "original": 14.558938329430132,
+        "explicit_only": 14.558938329430132,
+        "residual_zero": 14.23367161072079,
+        "residual_uniform": 14.558938329430132,
+        "residual_lexicographic": 14.558938329430132
+      },
+      "residual_unknown_bounds": [
+        1094,
+        1175
+      ],
+      "reported_args_seed": null,
+      "archive_accuracy": 14.558938329430132
+    },
+    "results/t5/exp3_pretrained_unifiedqa_large.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 6,
+        "choice_rows": 1992,
+        "residual": 6,
+        "residual_original_credits": 2,
+        "residual_other_text": 6
+      },
+      "correct": {
+        "original": 1227.0,
+        "explicit_only": 1227.0,
+        "residual_zero": 1225.0,
+        "residual_uniform": 1226.75,
+        "residual_lexicographic": 1226.0
+      },
+      "percent": {
+        "original": 15.964090554254488,
+        "explicit_only": 15.964090554254488,
+        "residual_zero": 15.938069216757741,
+        "residual_uniform": 15.960837887067395,
+        "residual_lexicographic": 15.951079885506115
+      },
+      "residual_unknown_bounds": [
+        1225,
+        1231
+      ],
+      "reported_args_seed": null,
+      "archive_accuracy": 15.96409055425449
+    },
+    "results/t5/exp4_small.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 3,
+        "choice_rows": 1992,
+        "residual": 3,
+        "residual_original_credits": 0,
+        "residual_other_text": 3
+      },
+      "correct": {
+        "original": 2290.0,
+        "explicit_only": 2290.0,
+        "residual_zero": 2290.0,
+        "residual_uniform": 2290.75,
+        "residual_lexicographic": 2290.0
+      },
+      "percent": {
+        "original": 29.794431433775696,
+        "explicit_only": 29.794431433775696,
+        "residual_zero": 29.794431433775696,
+        "residual_uniform": 29.804189435336976,
+        "residual_lexicographic": 29.794431433775696
+      },
+      "residual_unknown_bounds": [
+        2290,
+        2293
+      ],
+      "reported_args_seed": null,
+      "archive_accuracy": 29.7944314337757
+    },
+    "results/t5/exp5_base.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 2,
+        "choice_rows": 1992,
+        "residual": 2,
+        "residual_original_credits": 0,
+        "residual_other_text": 2
+      },
+      "correct": {
+        "original": 3345.0,
+        "explicit_only": 3345.0,
+        "residual_zero": 3345.0,
+        "residual_uniform": 3345.5,
+        "residual_lexicographic": 3345.0
+      },
+      "percent": {
+        "original": 43.52068696330991,
+        "explicit_only": 43.52068696330991,
+        "residual_zero": 43.52068696330991,
+        "residual_uniform": 43.5271922976841,
+        "residual_lexicographic": 43.52068696330991
+      },
+      "residual_unknown_bounds": [
+        3345,
+        3347
+      ],
+      "reported_args_seed": null,
+      "archive_accuracy": 43.52068696330991
+    },
+    "results/t5/exp6_large.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 2,
+        "choice_rows": 1992,
+        "residual": 2,
+        "residual_original_credits": 1,
+        "residual_other_text": 2
+      },
+      "correct": {
+        "original": 4408.0,
+        "explicit_only": 4408.0,
+        "residual_zero": 4407.0,
+        "residual_uniform": 4407.5,
+        "residual_lexicographic": 4407.0
+      },
+      "percent": {
+        "original": 57.35102784283112,
+        "explicit_only": 57.35102784283112,
+        "residual_zero": 57.33801717408275,
+        "residual_uniform": 57.34452250845693,
+        "residual_lexicographic": 57.33801717408275
+      },
+      "residual_unknown_bounds": [
+        4407,
+        4409
+      ],
+      "reported_args_seed": null,
+      "archive_accuracy": 57.35102784283113
+    },
+    "results/tapex/exp1_tapex-base.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 1238,
+        "choice_rows": 1992,
+        "unique_explicit": 267,
+        "explicit_flag_changes": 135,
+        "residual": 971,
+        "residual_original_credits": 350,
+        "residual_other_text": 287,
+        "residual_numeric_or_currency": 684
+      },
+      "correct": {
+        "original": 1209.0,
+        "explicit_only": 1204.0,
+        "residual_zero": 854.0,
+        "residual_uniform": 1209.3333333333333,
+        "residual_lexicographic": 1199.0
+      },
+      "percent": {
+        "original": 15.729898516783763,
+        "explicit_only": 15.664845173041895,
+        "residual_zero": 11.11111111111111,
+        "residual_uniform": 15.734235406366553,
+        "residual_lexicographic": 15.599791829300026
+      },
+      "residual_unknown_bounds": [
+        854,
+        1825
+      ],
+      "reported_args_seed": null,
+      "archive_accuracy": 15.729898516783763
+    },
+    "results/tapex/exp2_tapex-base.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 37,
+        "choice_rows": 1992,
+        "unique_explicit": 7,
+        "explicit_flag_changes": 6,
+        "residual": 30,
+        "residual_original_credits": 8,
+        "residual_other_text": 30
+      },
+      "correct": {
+        "original": 3710.0,
+        "explicit_only": 3716.0,
+        "residual_zero": 3708.0,
+        "residual_uniform": 3717.25,
+        "residual_lexicographic": 3714.0
+      },
+      "percent": {
+        "original": 48.2695810564663,
+        "explicit_only": 48.347645068956545,
+        "residual_zero": 48.24355971896956,
+        "residual_uniform": 48.36390840489201,
+        "residual_lexicographic": 48.321623731459795
+      },
+      "residual_unknown_bounds": [
+        3708,
+        3738
+      ],
+      "reported_args_seed": null,
+      "archive_accuracy": 48.26958105646631
+    },
+    "results/tapex/exp3_tapex-large.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 703,
+        "choice_rows": 1992,
+        "unique_explicit": 573,
+        "explicit_flag_changes": 397,
+        "residual": 130,
+        "residual_original_credits": 36,
+        "residual_other_text": 111,
+        "residual_numeric_or_currency": 19
+      },
+      "correct": {
+        "original": 1429.0,
+        "explicit_only": 1666.0,
+        "residual_zero": 1630.0,
+        "residual_uniform": 1664.3333333333333,
+        "residual_lexicographic": 1654.0
+      },
+      "percent": {
+        "original": 18.59224564142597,
+        "explicit_only": 21.67577413479053,
+        "residual_zero": 21.207390059849075,
+        "residual_uniform": 21.65408968687657,
+        "residual_lexicographic": 21.519646109810044
+      },
+      "residual_unknown_bounds": [
+        1630,
+        1760
+      ],
+      "reported_args_seed": null,
+      "archive_accuracy": 18.59224564142597
+    },
+    "results/tapex/exp4_tapex-large.json": {
+      "n": 7686,
+      "counts": {
+        "zero_fallback": 25,
+        "choice_rows": 1992,
+        "residual": 21,
+        "residual_original_credits": 4,
+        "residual_other_text": 21,
+        "unique_explicit": 4,
+        "explicit_flag_changes": 0
+      },
+      "correct": {
+        "original": 4498.0,
+        "explicit_only": 4498.0,
+        "residual_zero": 4494.0,
+        "residual_uniform": 4500.083333333333,
+        "residual_lexicographic": 4501.0
+      },
+      "percent": {
+        "original": 58.52198803018475,
+        "explicit_only": 58.52198803018475,
+        "residual_zero": 58.46994535519126,
+        "residual_uniform": 58.54909359007719,
+        "residual_lexicographic": 58.56102003642987
+      },
+      "residual_unknown_bounds": [
+        4494,
+        4515
+      ],
+      "reported_args_seed": null,
+      "archive_accuracy": 58.521988030184744
+    }
+  },
+  "pairs": {
+    "primary_base": {
+      "a": "results/tapex/exp1_tapex-base.json",
+      "b": "results/t5/exp2_pretrained_unifiedqa_base.json",
+      "n": 7686,
+      "differences": {
+        "original": 90,
+        "explicit_only": 85,
+        "residual_zero": -240,
+        "residual_uniform": 90.33333333333333,
+        "residual_lexicographic": 80
+      },
+      "difference_bounds_residual_unknown": [
+        -320,
+        730
+      ],
+      "shared_normalized_residual_groups": 1,
+      "net_residual_correct_to_tie_from_zero": 240,
+      "net_residual_correct_to_make_a_better": 241,
+      "order_under_scoped_residual_uncertainty": "unidentified",
+      "boundary_scope": "Only residual zero-similarity outputs treated as unknown; all other historical grading fixed. Not full semantic gold.",
+      "common_permutations_256": {
+        "min": 45,
+        "max": 140,
+        "mean": 90.08203125,
+        "a_better": 256,
+        "ties": 0,
+        "b_better": 0,
+        "scope": "Monte Carlo scoring sensitivity on fixed outputs. Not new model experiments or a benchmark confidence interval."
+      }
+    },
+    "large_control": {
+      "a": "results/tapex/exp3_tapex-large.json",
+      "b": "results/t5/exp3_pretrained_unifiedqa_large.json",
+      "n": 7686,
+      "differences": {
+        "original": 202,
+        "explicit_only": 439,
+        "residual_zero": 405,
+        "residual_uniform": 437.5833333333333,
+        "residual_lexicographic": 428
+      },
+      "difference_bounds_residual_unknown": [
+        399,
+        535
+      ],
+      "shared_normalized_residual_groups": 0,
+      "net_residual_correct_to_tie_from_zero": -405,
+      "net_residual_correct_to_make_a_better": -404,
+      "order_under_scoped_residual_uncertainty": "a",
+      "boundary_scope": "Only residual zero-similarity outputs treated as unknown; all other historical grading fixed. Not full semantic gold.",
+      "common_permutations_256": {
+        "min": 423,
+        "max": 457,
+        "mean": 437.46484375,
+        "a_better": 256,
+        "ties": 0,
+        "b_better": 0,
+        "scope": "Monte Carlo scoring sensitivity on fixed outputs. Not new model experiments or a benchmark confidence interval."
+      }
+    },
+    "released_headline_seed": {
+      "a": "results/gpt3_rl/exp1_test_TQ-SA_2_seed_2.json",
+      "b": "results/gpt3/exp4_test_TQ-SA_2_seed_2.json",
+      "n": 7686,
+      "differences": {
+        "original": 515,
+        "explicit_only": 515,
+        "residual_zero": 696,
+        "residual_uniform": 510.6666666666667,
+        "residual_lexicographic": 509
+      },
+      "difference_bounds_residual_unknown": [
+        295,
+        709
+      ],
+      "shared_normalized_residual_groups": 1,
+      "net_residual_correct_to_tie_from_zero": -696,
+      "net_residual_correct_to_make_a_better": -695,
+      "order_under_scoped_residual_uncertainty": "a",
+      "boundary_scope": "Only residual zero-similarity outputs treated as unknown; all other historical grading fixed. Not full semantic gold.",
+      "exploratory_zero_plus_invalid_letter_unknown_bounds": [
+        247,
+        764
+      ],
+      "common_permutations_256": {
+        "min": 481,
+        "max": 541,
+        "mean": 510.38671875,
+        "a_better": 256,
+        "ties": 0,
+        "b_better": 0,
+        "scope": "Monte Carlo scoring sensitivity on fixed outputs. Not new model experiments or a benchmark confidence interval."
+      }
+    },
+    "tapex_size": {
+      "a": "results/tapex/exp3_tapex-large.json",
+      "b": "results/tapex/exp1_tapex-base.json",
+      "n": 7686,
+      "differences": {
+        "original": 220,
+        "explicit_only": 462,
+        "residual_zero": 776,
+        "residual_uniform": 455.0,
+        "residual_lexicographic": 455
+      },
+      "difference_bounds_residual_unknown": [
+        -168,
+        879
+      ],
+      "shared_normalized_residual_groups": 27,
+      "net_residual_correct_to_tie_from_zero": -776,
+      "net_residual_correct_to_make_a_better": -775,
+      "order_under_scoped_residual_uncertainty": "unidentified",
+      "boundary_scope": "Only residual zero-similarity outputs treated as unknown; all other historical grading fixed. Not full semantic gold.",
+      "common_permutations_256": {
+        "min": 408,
+        "max": 500,
+        "mean": 454.9453125,
+        "a_better": 256,
+        "ties": 0,
+        "b_better": 0,
+        "scope": "Monte Carlo scoring sensitivity on fixed outputs. Not new model experiments or a benchmark confidence interval."
+      }
+    },
+    "unifiedqa_size": {
+      "a": "results/t5/exp3_pretrained_unifiedqa_large.json",
+      "b": "results/t5/exp2_pretrained_unifiedqa_base.json",
+      "n": 7686,
+      "differences": {
+        "original": 108,
+        "explicit_only": 108,
+        "residual_zero": 131,
+        "residual_uniform": 107.75,
+        "residual_lexicographic": 107
+      },
+      "difference_bounds_residual_unknown": [
+        50,
+        137
+      ],
+      "shared_normalized_residual_groups": 0,
+      "net_residual_correct_to_tie_from_zero": -131,
+      "net_residual_correct_to_make_a_better": -130,
+      "order_under_scoped_residual_uncertainty": "a",
+      "boundary_scope": "Only residual zero-similarity outputs treated as unknown; all other historical grading fixed. Not full semantic gold.",
+      "common_permutations_256": {
+        "min": 96,
+        "max": 118,
+        "mean": 107.5625,
+        "a_better": 256,
+        "ties": 0,
+        "b_better": 0,
+        "scope": "Monte Carlo scoring sensitivity on fixed outputs. Not new model experiments or a benchmark confidence interval."
+      }
+    }
+  },
+  "unsupported_archives": {
+    "results/gpt3/exp1_test_TQ-A_0_seed_2.json": {
+      "status": "STOP_UNSUPPORTED_PARSER_ATTRIBUTION",
+      "counts": {
+        "stored_flag_checks": 7686,
+        "deterministic_prediction_checks": 7686,
+        "prediction_mismatches": 6,
+        "flag_mismatches": 5
+      }
+    }
+  },
+  "headline_scope": "One released seed-2 PromptPG/few-shot-CoT pair, not three-run headline average. Zero-shot-CoT filename seed_2 has args.seed=1 and six extraction mismatches; stopped, not silently rescored.",
+  "judge_calls": 0,
+  "model_calls": 0,
+  "human_labels": 0,
+  "semantic_boundary": "Intervals vary only unresolved zero-fallback outputs and preserve all other historical labels. Partial source audit, not comprehensive semantic correction."
+}
