@@ -1,0 +1,22 @@
+{
+  "searched_on": "2026-11-14",
+  "purpose": "Prior work screening while the frozen model calls execute",
+  "sources": [
+    {
+      "title": "Lessons from the Trenches on Reproducible Evaluation of Language Models",
+      "url": "https://arxiv.org/abs/2405.14782",
+      "scope": "Existing evaluation reproducibility guidance and lm-eval framework. Broad prompt sensitivity and reproducibility are established topics."
+    },
+    {
+      "title": "Troubleshooting reproducibility, Hugging Face Evaluation Guidebook",
+      "url": "https://github.com/huggingface/evaluation-guidebook/blob/main/contents/troubleshooting/troubleshooting-reproducibility.md",
+      "scope": "Documents code, prompt, normalization, generation and metric differences that alter evaluation outcomes."
+    },
+    {
+      "title": "SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges",
+      "url": "https://arxiv.org/abs/2610.28886",
+      "scope": "Related scorer-specific metamorphic judge testing. Consulted the indexed author abstract; direct page access failed. Detailed methods comparison still pending."
+    }
+  ],
+  "proposed_scope": "Specific source-to-prompt information loss and reference corruption, exact finite-corpus consequences, deterministic controls plus paired real-model intervention and a healthy second framework. Novelty remains provisional until a closer method comparison."
+}
