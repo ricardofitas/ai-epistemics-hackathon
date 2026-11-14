@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "aggregate": {
+    "planned": 3200,
+    "started_unique": 3200,
+    "attempts": 3236,
+    "eligible": 3086,
+    "status": {
+      "completed": 3086,
+      "incomplete": 94,
+      "missing_terminal": 11,
+      "http_504": 9
+    },
+    "explicit_429": 36,
+    "unstarted": 0,
+    "terminal_objects_verified": 3180,
+    "input_tokens": 673638,
+    "output_tokens": 1411211
+  },
+  "same24": {
+    "source_count": 24,
+    "planned": 384,
+    "recorded": 384,
+    "eligible": 370,
+    "unknown": 14,
+    "source_indices": [
+      151,
+      153,
+      155,
+      157,
+      159,
+      161,
+      163,
+      165,
+      167,
+      169,
+      171,
+      173,
+      175,
+      177,
+      179,
+      181,
+      183,
+      185,
+      187,
+      189,
+      191,
+      193,
+      197,
+      199
+    ],
+    "by_model_condition": {
+      "gemma-4-31b-it": {
+        "free_clear": {
+          "planned": 24,
+          "correct": 23,
+          "dummy": 0,
+          "unknown": 0
+        },
+        "free_none": {
+          "planned": 24,
+          "correct": 22,
+          "dummy": 1,
+          "unknown": 0
+        },
+        "choice_clear": {
+          "planned": 24,
+          "correct": 24,
+          "dummy": 0,
+          "unknown": 0
+        },
+        "choice_none": {
+          "planned": 24,
+          "correct": 1,
+          "dummy": 23,
+          "unknown": 0
+        }
+      },
+      "qwen3.8-27b": {
+        "free_clear": {
+          "planned": 24,
+          "correct": 23,
+          "dummy": 0,
+          "unknown": 0
+        },
+        "free_none": {
+          "planned": 24,
+          "correct": 22,
+          "dummy": 1,
+          "unknown": 0
+        },
+        "choice_clear": {
+          "planned": 24,
+          "correct": 23,
+          "dummy": 0,
+          "unknown": 0
+        },
+        "choice_none": {
+          "planned": 24,
+          "correct": 2,
+          "dummy": 22,
+          "unknown": 0
+        }
+      },
+      "deepseek-v4-flash": {
+        "free_clear": {
+          "planned": 24,
+          "correct": 18,
+          "dummy": 0,
+          "unknown": 0
+        },
+        "free_none": {
+          "planned": 24,
+          "correct": 18,
+          "dummy": 1,
+          "unknown": 0
+        },
+        "choice_clear": {
+          "planned": 24,
+          "correct": 23,
+          "dummy": 0,
+          "unknown": 0
+        },
+        "choice_none": {
+          "planned": 24,
+          "correct": 4,
+          "dummy": 16,
+          "unknown": 4
+        }
+      },
+      "glm-5.2": {
+        "free_clear": {
+          "planned": 24,
+          "correct": 24,
+          "dummy": 0,
+          "unknown": 0
+        },
+        "free_none": {
+          "planned": 24,
+          "correct": 23,
+          "dummy": 0,
+          "unknown": 0
+        },
+        "choice_clear": {
+          "planned": 24,
+          "correct": 24,
+          "dummy": 0,
+          "unknown": 0
+        },
+        "choice_none": {
+          "planned": 24,
+          "correct": 6,
+          "dummy": 8,
+          "unknown": 10
+        }
+      }
+    }
+  },
+  "checks": 109326,
+  "failures": []
+}

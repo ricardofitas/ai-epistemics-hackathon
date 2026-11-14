@@ -159,5 +159,26 @@
     "claim": "192terminals178complete14incomplete;oraclecorrectarm primary1/96 versus posthoc96/96;falsearm primary0/82complete;posthoc45false/30correctbare/7unscored/14incomplete",
     "evidence": "numeric_independent.json;numeric_option_aware.json",
     "qualification": "Designed24sourcequestions repeated4models;congruentoraclecontrol;posthocdecoder separatefromfixedbare-numberprimary;parentfourarmcomparison pending"
+  },
+  {
+    "id": "C24",
+    "section": "10,M.1",
+    "claim": "3200distinctrequests3236attempts3180terminals3086complete94incomplete11missing9HTTP504;100SQuAD100TabMWP;meanchoicecarrierloss50..63/67.5..79.25pp;interaction57.75..73/68..81.25pp",
+    "evidence": "external_primary_summary.json;external_primary_verified.json;external_primary_provenance.json",
+    "qualification": "Frozen custom4model4armdiagnostic;sourcequestion/articleunits;114unknowns;finite-panelboundsnotCIs;nofaultprevalence/universalcapabilityclaim"
+  },
+  {
+    "id": "C25",
+    "section": "10,M.2",
+    "claim": "SQuADfree_clearwinnerGLM;choice_noneadmissibleQwenDeepSeekGLM;conditionalcleanTabMWPregret4..6/18..20/0..2pp",
+    "evidence": "external_primary_summary.json;external_sampling_intervals.json",
+    "qualification": "Prospectivedecisiontestonfixedmodelset;winneroverlapdoesnotforcechangedpolicy;resamplingexploratoryanddistinctfromunknownbounds"
+  },
+  {
+    "id": "C26",
+    "section": "N",
+    "claim": "SAME24sources384parentcells370complete14unknown;choice_clear94/96correct;choice_none13correct69dummy14unknown",
+    "evidence": "external_independent_closeout.json;numeric_independent.json;numeric_option_aware.json",
+    "qualification": "Prespecified24future-sourcecontrolselectionafterinterimresults;pairedsourceIDs notnewindependentcohort;joint6armrandomizationnotclaimed;primaryandposthocdecoder keptdistinct;human64pending"
   }
 ]

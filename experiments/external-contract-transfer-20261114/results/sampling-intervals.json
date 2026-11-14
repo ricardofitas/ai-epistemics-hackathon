@@ -1,0 +1,109 @@
+{
+  "method": "Exploratory 5000-resample descriptive percentile envelope. Cluster SQuAD by article and resample TabMWP questions. Bound each unavailable per-source response in each resample. Pointwise, conditional on source selection, no multiplicity or universe-wide coverage claim.",
+  "scores": {
+    "gemma-4-31b-it": {
+      "squad": {
+        "questions": 100,
+        "clusters": 25,
+        "choice_carrier_outer_percentiles_pp": [
+          71.88,
+          90.0
+        ],
+        "interaction_outer_percentiles_pp": [
+          75.9,
+          97.96
+        ]
+      },
+      "tabmwp": {
+        "questions": 100,
+        "clusters": 100,
+        "choice_carrier_outer_percentiles_pp": [
+          84.0,
+          99.0
+        ],
+        "interaction_outer_percentiles_pp": [
+          84.0,
+          101.0
+        ]
+      }
+    },
+    "qwen3.8-27b": {
+      "squad": {
+        "questions": 100,
+        "clusters": 25,
+        "choice_carrier_outer_percentiles_pp": [
+          32.97,
+          66.34
+        ],
+        "interaction_outer_percentiles_pp": [
+          42.17,
+          86.46
+        ]
+      },
+      "tabmwp": {
+        "questions": 100,
+        "clusters": 100,
+        "choice_carrier_outer_percentiles_pp": [
+          72.0,
+          94.0
+        ],
+        "interaction_outer_percentiles_pp": [
+          75.0,
+          100.02
+        ]
+      }
+    },
+    "deepseek-v4-flash": {
+      "squad": {
+        "questions": 100,
+        "clusters": 25,
+        "choice_carrier_outer_percentiles_pp": [
+          28.09,
+          67.62
+        ],
+        "interaction_outer_percentiles_pp": [
+          37.38,
+          80.7
+        ]
+      },
+      "tabmwp": {
+        "questions": 100,
+        "clusters": 100,
+        "choice_carrier_outer_percentiles_pp": [
+          51.0,
+          79.0
+        ],
+        "interaction_outer_percentiles_pp": [
+          49.0,
+          83.0
+        ]
+      }
+    },
+    "glm-5.2": {
+      "squad": {
+        "questions": 100,
+        "clusters": 25,
+        "choice_carrier_outer_percentiles_pp": [
+          24.17,
+          63.86
+        ],
+        "interaction_outer_percentiles_pp": [
+          22.64,
+          70.91
+        ]
+      },
+      "tabmwp": {
+        "questions": 100,
+        "clusters": 100,
+        "choice_carrier_outer_percentiles_pp": [
+          27.0,
+          73.0
+        ],
+        "interaction_outer_percentiles_pp": [
+          23.0,
+          76.0
+        ]
+      }
+    }
+  }
+}

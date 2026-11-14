@@ -223,9 +223,25 @@ assert no['pooled']['correct']['source_accurate']==96 and no['pooled']['wrong'][
 assert no['pooled']['wrong']['other_text']==7 and no['pooled']['wrong']['unknown']==14
 assert json.loads((P/'PRIOR_C1_C22.json').read_text())==json.loads((P/'claims.json').read_text())[:22]
 
+ep=read('external_primary_summary.json');ei=read('external_independent_closeout.json')
+assert ei['passed'] and ei['failures']==[]
+assert ep['planned']==ep['started_unique']==3200 and ep['eligible']==3086 and ep['terminal_objects_verified']==3180
+assert ep['status']=={'completed':3086,'incomplete':94,'missing_terminal':11,'http_504':9}
+assert ep['decision_transfer']==ei['decision_transfer']
+assert ep['decision_transfer']['free_clear']['admissible_winners']==['glm-5.2']
+assert ep['decision_transfer']['choice_none']['admissible_winners']==['qwen3.8-27b','deepseek-v4-flash','glm-5.2']
+for ds,bounds in [('squad',[50,63]),('tabmwp',[67.5,79.25])]:
+ vals=[ep['models'][m][ds]['contrasts']['choice_carrier'] for m in ep['models']]
+ assert [sum(x[k] for x in vals)/4 for k in ['lower_pp','upper_pp']]==bounds
+assert ei['same24']['planned']==ei['same24']['recorded']==384 and ei['same24']['eligible']==370 and ei['same24']['unknown']==14
+assert sum(d['choice_clear']['correct'] for d in ei['same24']['by_model_condition'].values())==94
+assert sum(d['choice_none']['correct'] for d in ei['same24']['by_model_condition'].values())==13
+assert sum(d['choice_none']['dummy'] for d in ei['same24']['by_model_condition'].values())==69
+assert json.loads((P/'PRIOR_C1_C23.json').read_text())==json.loads((P/'claims.json').read_text())[:23]
+
 pages = json.loads((P / 'manuscript.json').read_text())
 claims = json.loads((P / 'claims.json').read_text())
-assert len(pages) == 21 and len(claims) == 23
+assert len(pages) == 24 and len(claims) == 26
 assert 150 <= len(pages[0]['blocks'][2]['text'].split()) <= 250
 assert [row[0] for row in pages[12]['blocks'][1]['rows']] == [claim['id'] for claim in claims[:16]]
 for claim in claims:
@@ -237,7 +253,7 @@ for row, claim in zip(ledger, claims):
     assert row == dict(claim_id=claim['id'], section=claim['section'],
                        numerical_or_status_claim=claim['claim'],
                        evidence_files=claim['evidence'], qualification=claim['qualification'])
-result = dict(status='PASS', claims_checked=23, working_draft_version='1.9',
+result = dict(status='PASS', claims_checked=26, working_draft_version='2.0',
               integrated_mechanisms=['native source gate', 'shared input causes', 'MMMLU prediction', 'MixEval task kind'],
               verifier_model_requests=0, new_experiments_during_synthesis=0,
               scope='Synthesis consistency check against source snapshots')

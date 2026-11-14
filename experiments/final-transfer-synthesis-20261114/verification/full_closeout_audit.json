@@ -1,0 +1,1645 @@
+{
+  "aggregate": {
+    "attempts": 3236,
+    "eligible": 3086,
+    "explicit_429": 36,
+    "input_tokens": 673638,
+    "output_tokens": 1411211,
+    "planned": 3200,
+    "started_unique": 3200,
+    "status": {
+      "completed": 3086,
+      "http_504": 9,
+      "incomplete": 94,
+      "missing_terminal": 11
+    },
+    "terminal_objects_verified": 3180,
+    "unstarted": 0
+  },
+  "archives": [
+    {
+      "sha256": "4333df9025086dfc29ebf711f0bf34d5a195943f81e8b21253481ed9244a6ae5",
+      "wave": 1
+    },
+    {
+      "sha256": "eaebc0adf933eb8611121f2866e28744b380f5b6576f133de62729e79db4569c",
+      "wave": 2
+    },
+    {
+      "sha256": "4b1a5fc8a3088aa4b4eb6978b4af3e453f555014eb3f0054970936708c2d0c13",
+      "wave": 3
+    },
+    {
+      "sha256": "7813394e4550d91ff22fa93f6b85e37f643318ba5d422e03c900eeb4d98bd9ef",
+      "wave": 4
+    },
+    {
+      "sha256": "d2f81dd87853f93d3ed727d51bd3cede6097e5496e4482824ff56ce434d97136",
+      "wave": 5
+    },
+    {
+      "sha256": "1110f6fd7d1abe16101d7598fe7bdd047bd9e1193827031d16ee2334f40046ac",
+      "wave": 6
+    },
+    {
+      "sha256": "580e02a9bd3a3a985b6af8082265d5dde3ad9e355239b32b63ddb404246606de",
+      "wave": 7
+    },
+    {
+      "sha256": "7cf67ed0faa5d80aa81e079cb5c1ad001f9ca142e33bda16f1cf267021d55ff4",
+      "wave": 8
+    }
+  ],
+  "cap_comparison": {
+    "deepseek-v4-flash:4096": {
+      "complete": 387,
+      "max_output_tokens": 13,
+      "received": 400
+    },
+    "deepseek-v4-flash:6144": {
+      "complete": 387,
+      "max_output_tokens": 13,
+      "received": 400
+    },
+    "gemma-4-31b-it:4096": {
+      "complete": 397,
+      "max_output_tokens": 3,
+      "received": 400
+    },
+    "gemma-4-31b-it:6144": {
+      "complete": 392,
+      "max_output_tokens": 8,
+      "received": 400
+    },
+    "glm-5.2:4096": {
+      "complete": 370,
+      "max_output_tokens": 24,
+      "received": 396
+    },
+    "glm-5.2:6144": {
+      "complete": 374,
+      "max_output_tokens": 12,
+      "received": 395
+    },
+    "qwen3.8-27b:4096": {
+      "complete": 382,
+      "max_output_tokens": 18,
+      "received": 400
+    },
+    "qwen3.8-27b:6144": {
+      "complete": 397,
+      "max_output_tokens": 3,
+      "received": 400
+    }
+  },
+  "checks": {
+    "admissible_winners_and_conditional_regret": 1,
+    "all_primary_scores_dummy_counts_and_source_paired_bounds": 1,
+    "all_slots_started_and_recorded": 1,
+    "allowed_recorded_nonterminal_transport": 56,
+    "attempt_arm": 3236,
+    "attempt_case": 3236,
+    "attempt_has_intent": 3236,
+    "attempt_model": 3236,
+    "attempt_planned_key": 3236,
+    "attempt_request_sha": 3236,
+    "cap_table_HTTP200_received_definition": 1,
+    "conservative_progress_charge": 16,
+    "contiguous_attempts": 3200,
+    "frozen_case_identity": 1,
+    "frozen_manifest_identity": 1,
+    "full_reservation_reconstruction": 3236,
+    "global_terminal_attempt_bijection": 1,
+    "independent_eligibility": 3236,
+    "initial_dispatch_order": 16,
+    "intent_attempt_bijection": 16,
+    "intent_attempt_number": 3236,
+    "intent_planned_key": 3236,
+    "intent_request_hash": 3236,
+    "maximum_three_attempts": 3200,
+    "no_fabricated_nonterminal_outcome": 56,
+    "no_terminal_no_derived_data": 56,
+    "original_14_overstrict_failures_preserved": 1,
+    "original_summary_attempts": 1,
+    "original_summary_eligible": 1,
+    "original_summary_explicit_429": 1,
+    "original_summary_input_tokens": 1,
+    "original_summary_output_tokens": 1,
+    "original_summary_planned": 1,
+    "original_summary_started_unique": 1,
+    "original_summary_status": 1,
+    "original_summary_terminal_objects_verified": 1,
+    "original_summary_unstarted": 1,
+    "original_usage": 3180,
+    "original_wave_zip_digest": 8,
+    "original_zip_extracted_bytes": 3260,
+    "output_cap": 3180,
+    "output_hash": 3180,
+    "rate_card_rounded_seven_decimals": 1,
+    "reported_cost": 1,
+    "retry_after_cooldown": 36,
+    "retry_only_429": 36,
+    "same24_all_numeric_source_model_arm_keys": 1,
+    "same24_all_parent_slots": 1,
+    "same24_numeric_source_indices": 1,
+    "section_credit_ceiling": 16,
+    "source_coverage": 1,
+    "terminal_canonical_bytes": 3180,
+    "terminal_hash": 3180,
+    "terminal_id": 3180,
+    "terminal_incomplete_details": 3180,
+    "terminal_model": 3180,
+    "terminal_output_text": 3180,
+    "terminal_parameter_max_output_tokens": 3180,
+    "terminal_parameter_store": 3180,
+    "terminal_parameter_temperature": 3180,
+    "terminal_parameter_tool_choice": 3180,
+    "terminal_parameter_tools": 3180,
+    "terminal_requested_model": 3180,
+    "terminal_status": 3180,
+    "unique_3200_slots": 1,
+    "unique_attempt": 3236,
+    "unique_intent": 3236,
+    "unique_response_id": 3180,
+    "unknown_transport_never_retried": 20,
+    "usage_token_sum": 3180,
+    "verified8_pooled_scores_and_bounds": 1
+  },
+  "decision_transfer": {
+    "choice_none": {
+      "admissible_winners": [
+        "qwen3.8-27b",
+        "deepseek-v4-flash",
+        "glm-5.2"
+      ],
+      "target_clean_regret_pp": {
+        "deepseek-v4-flash": [
+          18,
+          20
+        ],
+        "glm-5.2": [
+          0,
+          2
+        ],
+        "qwen3.8-27b": [
+          4,
+          6
+        ]
+      }
+    },
+    "free_clear": {
+      "admissible_winners": [
+        "glm-5.2"
+      ],
+      "target_clean_regret_pp": {
+        "glm-5.2": [
+          0,
+          2
+        ]
+      }
+    }
+  },
+  "failures": [],
+  "independent_validator_sha256": "69aceebe848e8576beeab1623ecb22bdbb1c08513a85f4501a27b55433cc7695",
+  "limitations": [
+    "No new API calls or network operations; no production scoring/design imports.",
+    "Raw SSE bytes absent; recorded stream_sha cannot be independently rehashed.",
+    "Frozen source identity and all request identities checked; upstream corpus sampling not rerun.",
+    "Original 14 overstrict checker failures preserved. All 94 incomplete, 11 missing-terminal, and 9 HTTP504 outcomes remain unknown; no fabricated terminals.",
+    "Cap comparison received means HTTP200 attempts, including 11 missing-terminal streams.",
+    "Numeric secondary adjudication not repeated. SAME24ID retains fixed factual endpoint; label-only A remains nonnumeric."
+  ],
+  "models": {
+    "deepseek-v4-flash": {
+      "squad": {
+        "contrasts": {
+          "choice_carrier": {
+            "complete_only_pp": 51.807,
+            "complete_pairs_or_sets": 83,
+            "lower_pp": 40.0,
+            "n": 100,
+            "upper_pp": 57.0
+          },
+          "free_carrier": {
+            "complete_only_pp": -11.0,
+            "complete_pairs_or_sets": 100,
+            "lower_pp": -11.0,
+            "n": 100,
+            "upper_pp": -11.0
+          },
+          "interaction": {
+            "complete_only_pp": 61.446,
+            "complete_pairs_or_sets": 83,
+            "lower_pp": 51.0,
+            "n": 100,
+            "upper_pp": 68.0
+          }
+        },
+        "scores": {
+          "choice_clear": {
+            "correct": 72,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          },
+          "choice_none": {
+            "correct": 15,
+            "dummy": 64,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 17
+          },
+          "free_clear": {
+            "correct": 53,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          },
+          "free_none": {
+            "correct": 64,
+            "dummy": 1,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          }
+        }
+      },
+      "tabmwp": {
+        "contrasts": {
+          "choice_carrier": {
+            "complete_only_pp": 68.132,
+            "complete_pairs_or_sets": 91,
+            "lower_pp": 61.0,
+            "n": 100,
+            "upper_pp": 70.0
+          },
+          "free_carrier": {
+            "complete_only_pp": -1.0,
+            "complete_pairs_or_sets": 100,
+            "lower_pp": -1.0,
+            "n": 100,
+            "upper_pp": -1.0
+          },
+          "interaction": {
+            "complete_only_pp": 70.33,
+            "complete_pairs_or_sets": 91,
+            "lower_pp": 62.0,
+            "n": 100,
+            "upper_pp": 71.0
+          }
+        },
+        "scores": {
+          "choice_clear": {
+            "correct": 94,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          },
+          "choice_none": {
+            "correct": 24,
+            "dummy": 65,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 9
+          },
+          "free_clear": {
+            "correct": 79,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          },
+          "free_none": {
+            "correct": 80,
+            "dummy": 1,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          }
+        }
+      }
+    },
+    "gemma-4-31b-it": {
+      "squad": {
+        "contrasts": {
+          "choice_carrier": {
+            "complete_only_pp": 83.505,
+            "complete_pairs_or_sets": 97,
+            "lower_pp": 80.0,
+            "n": 100,
+            "upper_pp": 84.0
+          },
+          "free_carrier": {
+            "complete_only_pp": -7.071,
+            "complete_pairs_or_sets": 99,
+            "lower_pp": -8.0,
+            "n": 100,
+            "upper_pp": -6.0
+          },
+          "interaction": {
+            "complete_only_pp": 90.722,
+            "complete_pairs_or_sets": 97,
+            "lower_pp": 86.0,
+            "n": 100,
+            "upper_pp": 92.0
+          }
+        },
+        "scores": {
+          "choice_clear": {
+            "correct": 83,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 2
+          },
+          "choice_none": {
+            "correct": 1,
+            "dummy": 97,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 2
+          },
+          "free_clear": {
+            "correct": 70,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 1
+          },
+          "free_none": {
+            "correct": 77,
+            "dummy": 1,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 1
+          }
+        }
+      },
+      "tabmwp": {
+        "contrasts": {
+          "choice_carrier": {
+            "complete_only_pp": 94.845,
+            "complete_pairs_or_sets": 97,
+            "lower_pp": 91.0,
+            "n": 100,
+            "upper_pp": 95.0
+          },
+          "free_carrier": {
+            "complete_only_pp": 0.0,
+            "complete_pairs_or_sets": 99,
+            "lower_pp": -1.0,
+            "n": 100,
+            "upper_pp": 0.0
+          },
+          "interaction": {
+            "complete_only_pp": 94.845,
+            "complete_pairs_or_sets": 97,
+            "lower_pp": 91.0,
+            "n": 100,
+            "upper_pp": 96.0
+          }
+        },
+        "scores": {
+          "choice_clear": {
+            "correct": 98,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 2
+          },
+          "choice_none": {
+            "correct": 5,
+            "dummy": 93,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 2
+          },
+          "free_clear": {
+            "correct": 97,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 1
+          },
+          "free_none": {
+            "correct": 98,
+            "dummy": 1,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          }
+        }
+      }
+    },
+    "glm-5.2": {
+      "squad": {
+        "contrasts": {
+          "choice_carrier": {
+            "complete_only_pp": 49.383,
+            "complete_pairs_or_sets": 81,
+            "lower_pp": 36.0,
+            "n": 100,
+            "upper_pp": 55.0
+          },
+          "free_carrier": {
+            "complete_only_pp": -3.125,
+            "complete_pairs_or_sets": 96,
+            "lower_pp": -6.0,
+            "n": 100,
+            "upper_pp": -1.0
+          },
+          "interaction": {
+            "complete_only_pp": 51.899,
+            "complete_pairs_or_sets": 79,
+            "lower_pp": 37.0,
+            "n": 100,
+            "upper_pp": 61.0
+          }
+        },
+        "scores": {
+          "choice_clear": {
+            "correct": 79,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          },
+          "choice_none": {
+            "correct": 24,
+            "dummy": 57,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 19
+          },
+          "free_clear": {
+            "correct": 72,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 4
+          },
+          "free_none": {
+            "correct": 77,
+            "dummy": 1,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 1
+          }
+        }
+      },
+      "tabmwp": {
+        "contrasts": {
+          "choice_carrier": {
+            "complete_only_pp": 51.351,
+            "complete_pairs_or_sets": 74,
+            "lower_pp": 37.0,
+            "n": 100,
+            "upper_pp": 64.0
+          },
+          "free_carrier": {
+            "complete_only_pp": 1.031,
+            "complete_pairs_or_sets": 97,
+            "lower_pp": -2.0,
+            "n": 100,
+            "upper_pp": 3.0
+          },
+          "interaction": {
+            "complete_only_pp": 50.0,
+            "complete_pairs_or_sets": 72,
+            "lower_pp": 34.0,
+            "n": 100,
+            "upper_pp": 66.0
+          }
+        },
+        "scores": {
+          "choice_clear": {
+            "correct": 99,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 1
+          },
+          "choice_none": {
+            "correct": 36,
+            "dummy": 38,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 26
+          },
+          "free_clear": {
+            "correct": 96,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 3
+          },
+          "free_none": {
+            "correct": 96,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 2
+          }
+        }
+      }
+    },
+    "qwen3.8-27b": {
+      "squad": {
+        "contrasts": {
+          "choice_carrier": {
+            "complete_only_pp": 54.545,
+            "complete_pairs_or_sets": 88,
+            "lower_pp": 44.0,
+            "n": 100,
+            "upper_pp": 56.0
+          },
+          "free_carrier": {
+            "complete_only_pp": -13.265,
+            "complete_pairs_or_sets": 98,
+            "lower_pp": -15.0,
+            "n": 100,
+            "upper_pp": -13.0
+          },
+          "interaction": {
+            "complete_only_pp": 68.605,
+            "complete_pairs_or_sets": 86,
+            "lower_pp": 57.0,
+            "n": 100,
+            "upper_pp": 71.0
+          }
+        },
+        "scores": {
+          "choice_clear": {
+            "correct": 77,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          },
+          "choice_none": {
+            "correct": 21,
+            "dummy": 66,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 12
+          },
+          "free_clear": {
+            "correct": 57,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          },
+          "free_none": {
+            "correct": 70,
+            "dummy": 2,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 2
+          }
+        }
+      },
+      "tabmwp": {
+        "contrasts": {
+          "choice_carrier": {
+            "complete_only_pp": 88.172,
+            "complete_pairs_or_sets": 93,
+            "lower_pp": 81.0,
+            "n": 100,
+            "upper_pp": 88.0
+          },
+          "free_carrier": {
+            "complete_only_pp": -4.0,
+            "complete_pairs_or_sets": 100,
+            "lower_pp": -4.0,
+            "n": 100,
+            "upper_pp": -4.0
+          },
+          "interaction": {
+            "complete_only_pp": 91.398,
+            "complete_pairs_or_sets": 93,
+            "lower_pp": 85.0,
+            "n": 100,
+            "upper_pp": 92.0
+          }
+        },
+        "scores": {
+          "choice_clear": {
+            "correct": 97,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          },
+          "choice_none": {
+            "correct": 9,
+            "dummy": 84,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 7
+          },
+          "free_clear": {
+            "correct": 93,
+            "dummy": 0,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          },
+          "free_none": {
+            "correct": 97,
+            "dummy": 1,
+            "fallback": 0,
+            "n": 100,
+            "unknown": 0
+          }
+        }
+      }
+    }
+  },
+  "original_sixwave_failure_report_sha256": "be76b5094de747c3be16c6ac366527c98d716855e93c165b69208a12c2bb57ee",
+  "passed": true,
+  "pooled": {
+    "squad": {
+      "cases": 100,
+      "choice_carrier": [
+        50.0,
+        63.0
+      ],
+      "interaction": [
+        57.75,
+        73.0
+      ],
+      "scores": {
+        "choice_clear": {
+          "correct": 311,
+          "dummy": 0,
+          "n": 400,
+          "unknown": 2
+        },
+        "choice_none": {
+          "correct": 61,
+          "dummy": 284,
+          "n": 400,
+          "unknown": 50
+        }
+      }
+    },
+    "tabmwp": {
+      "cases": 100,
+      "choice_carrier": [
+        67.5,
+        79.25
+      ],
+      "interaction": [
+        68.0,
+        81.25
+      ],
+      "scores": {
+        "choice_clear": {
+          "correct": 388,
+          "dummy": 0,
+          "n": 400,
+          "unknown": 3
+        },
+        "choice_none": {
+          "correct": 74,
+          "dummy": 280,
+          "n": 400,
+          "unknown": 44
+        }
+      }
+    }
+  },
+  "provider_cost_decimal": "2.8084156544160001053966",
+  "rate_card_decimal": "2.870182884",
+  "same24": {
+    "by_model_condition": {
+      "deepseek-v4-flash": {
+        "choice_clear": {
+          "correct": 23,
+          "dummy": 0,
+          "planned": 24,
+          "unknown": 0
+        },
+        "choice_none": {
+          "correct": 4,
+          "dummy": 16,
+          "planned": 24,
+          "unknown": 4
+        },
+        "free_clear": {
+          "correct": 18,
+          "dummy": 0,
+          "planned": 24,
+          "unknown": 0
+        },
+        "free_none": {
+          "correct": 18,
+          "dummy": 1,
+          "planned": 24,
+          "unknown": 0
+        }
+      },
+      "gemma-4-31b-it": {
+        "choice_clear": {
+          "correct": 24,
+          "dummy": 0,
+          "planned": 24,
+          "unknown": 0
+        },
+        "choice_none": {
+          "correct": 1,
+          "dummy": 23,
+          "planned": 24,
+          "unknown": 0
+        },
+        "free_clear": {
+          "correct": 23,
+          "dummy": 0,
+          "planned": 24,
+          "unknown": 0
+        },
+        "free_none": {
+          "correct": 22,
+          "dummy": 1,
+          "planned": 24,
+          "unknown": 0
+        }
+      },
+      "glm-5.2": {
+        "choice_clear": {
+          "correct": 24,
+          "dummy": 0,
+          "planned": 24,
+          "unknown": 0
+        },
+        "choice_none": {
+          "correct": 6,
+          "dummy": 8,
+          "planned": 24,
+          "unknown": 10
+        },
+        "free_clear": {
+          "correct": 24,
+          "dummy": 0,
+          "planned": 24,
+          "unknown": 0
+        },
+        "free_none": {
+          "correct": 23,
+          "dummy": 0,
+          "planned": 24,
+          "unknown": 0
+        }
+      },
+      "qwen3.8-27b": {
+        "choice_clear": {
+          "correct": 23,
+          "dummy": 0,
+          "planned": 24,
+          "unknown": 0
+        },
+        "choice_none": {
+          "correct": 2,
+          "dummy": 22,
+          "planned": 24,
+          "unknown": 0
+        },
+        "free_clear": {
+          "correct": 23,
+          "dummy": 0,
+          "planned": 24,
+          "unknown": 0
+        },
+        "free_none": {
+          "correct": 22,
+          "dummy": 1,
+          "planned": 24,
+          "unknown": 0
+        }
+      }
+    },
+    "eligible": 370,
+    "planned": 384,
+    "recorded": 384,
+    "source_count": 24,
+    "source_indices": [
+      151,
+      153,
+      155,
+      157,
+      159,
+      161,
+      163,
+      165,
+      167,
+      169,
+      171,
+      173,
+      175,
+      177,
+      179,
+      181,
+      183,
+      185,
+      187,
+      189,
+      191,
+      193,
+      197,
+      199
+    ],
+    "unknown": 14
+  },
+  "sections": [
+    {
+      "conservative_charge": "0.34105401900000000661",
+      "rate_card": "0.330841418",
+      "section": "s0-back",
+      "transport_unknowns": []
+    },
+    {
+      "conservative_charge": "0.05809948800000000461",
+      "rate_card": "0.058099488",
+      "section": "s0-front",
+      "transport_unknowns": []
+    },
+    {
+      "conservative_charge": "0.32187589300000000595",
+      "rate_card": "0.303121126",
+      "section": "s1-back",
+      "transport_unknowns": []
+    },
+    {
+      "conservative_charge": "0.058539294000000001336",
+      "rate_card": "0.058539294",
+      "section": "s1-front",
+      "transport_unknowns": []
+    },
+    {
+      "conservative_charge": "0.329980220000000007112",
+      "rate_card": "0.281521728",
+      "section": "s2-back",
+      "transport_unknowns": []
+    },
+    {
+      "conservative_charge": "0.09345705100000000104",
+      "rate_card": "0.085038326",
+      "section": "s2-front",
+      "transport_unknowns": []
+    },
+    {
+      "conservative_charge": "0.35682769200000000657",
+      "rate_card": "0.337782818",
+      "section": "s3-back",
+      "transport_unknowns": []
+    },
+    {
+      "conservative_charge": "0.08519949400000000151",
+      "rate_card": "0.085199494",
+      "section": "s3-front",
+      "transport_unknowns": []
+    },
+    {
+      "conservative_charge": "0.333716503000000008230",
+      "rate_card": "0.285332300",
+      "section": "s4-back",
+      "transport_unknowns": []
+    },
+    {
+      "conservative_charge": "0.08064339600000000445",
+      "rate_card": "0.080643396",
+      "section": "s4-front",
+      "transport_unknowns": []
+    },
+    {
+      "conservative_charge": "0.551287958000000032158",
+      "rate_card": "0.205612558",
+      "section": "s5-back",
+      "transport_unknowns": [
+        {
+          "attempt": 1,
+          "http": 200,
+          "key": "squad-5732b6b5328d981900602022-m3-a3",
+          "status": "missing_terminal"
+        },
+        {
+          "attempt": 1,
+          "http": 504,
+          "key": "tabmwp-19949-m3-a3",
+          "status": "http_504"
+        },
+        {
+          "attempt": 1,
+          "http": 504,
+          "key": "tabmwp-19949-m3-a2",
+          "status": "http_504"
+        },
+        {
+          "attempt": 1,
+          "http": 504,
+          "key": "tabmwp-25670-m3-a0",
+          "status": "http_504"
+        },
+        {
+          "attempt": 1,
+          "http": 504,
+          "key": "tabmwp-25670-m3-a1",
+          "status": "http_504"
+        },
+        {
+          "attempt": 1,
+          "http": 200,
+          "key": "tabmwp-21323-m3-a3",
+          "status": "missing_terminal"
+        },
+        {
+          "attempt": 1,
+          "http": 504,
+          "key": "tabmwp-34713-m3-a0",
+          "status": "http_504"
+        },
+        {
+          "attempt": 1,
+          "http": 504,
+          "key": "tabmwp-34713-m3-a1",
+          "status": "http_504"
+        },
+        {
+          "attempt": 1,
+          "http": 504,
+          "key": "squad-572768d9708984140094dd16-m3-a0",
+          "status": "http_504"
+        },
+        {
+          "attempt": 1,
+          "http": 504,
+          "key": "squad-572768d9708984140094dd16-m3-a1",
+          "status": "http_504"
+        },
+        {
+          "attempt": 1,
+          "http": 200,
+          "key": "tabmwp-25670-m3-a3",
+          "status": "missing_terminal"
+        },
+        {
+          "attempt": 1,
+          "http": 200,
+          "key": "squad-56e76d6537bdd419002c3f94-m3-a3",
+          "status": "missing_terminal"
+        }
+      ]
+    },
+    {
+      "conservative_charge": "0.10390627900000000232",
+      "rate_card": "0.048321980",
+      "section": "s5-front",
+      "transport_unknowns": [
+        {
+          "attempt": 1,
+          "http": 200,
+          "key": "squad-570d26efb3d812140066d490-m3-a0",
+          "status": "missing_terminal"
+        },
+        {
+          "attempt": 1,
+          "http": 200,
+          "key": "squad-572683e6f1498d1400e8e250-m3-a3",
+          "status": "missing_terminal"
+        }
+      ]
+    },
+    {
+      "conservative_charge": "0.34933464600000001133",
+      "rate_card": "0.258902416",
+      "section": "s6-back",
+      "transport_unknowns": [
+        {
+          "attempt": 1,
+          "http": 200,
+          "key": "tabmwp-20767-m3-a3",
+          "status": "missing_terminal"
+        },
+        {
+          "attempt": 1,
+          "http": 200,
+          "key": "squad-57277632f1498d1400e8f8c4-m3-a3",
+          "status": "missing_terminal"
+        },
+        {
+          "attempt": 1,
+          "http": 200,
+          "key": "tabmwp-3984-m3-a3",
+          "status": "missing_terminal"
+        }
+      ]
+    },
+    {
+      "conservative_charge": "0.129606538000000004682",
+      "rate_card": "0.050088538",
+      "section": "s6-front",
+      "transport_unknowns": [
+        {
+          "attempt": 1,
+          "http": 504,
+          "key": "squad-5729f3831d0469140077967b-m3-a0",
+          "status": "http_504"
+        },
+        {
+          "attempt": 1,
+          "http": 200,
+          "key": "squad-5729f3831d0469140077967b-m3-a3",
+          "status": "missing_terminal"
+        },
+        {
+          "attempt": 1,
+          "http": 200,
+          "key": "tabmwp-25721-m3-a3",
+          "status": "missing_terminal"
+        }
+      ]
+    },
+    {
+      "conservative_charge": "0.41264010000000000714",
+      "rate_card": "0.342362240",
+      "section": "s7-back",
+      "transport_unknowns": []
+    },
+    {
+      "conservative_charge": "0.05877576400000000054",
+      "rate_card": "0.058775764",
+      "section": "s7-front",
+      "transport_unknowns": []
+    }
+  ],
+  "transport_observations": [
+    {
+      "event": "response.completed",
+      "key": "tabmwp-18331-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-572698d7dd62a815002e8a9c-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57269d745951b619008f77da-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57269d745951b619008f77da-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5725fb8138643c19005acf41-m0-a2",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5725fb8138643c19005acf41-m0-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5726f1ec708984140094d6ab-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-34427-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-56e77c6737bdd419002c401f-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-29430-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5706149552bb891400689880-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-5932-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-12428-m3-a0",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5727cebc2ca10214002d96f3-m1-a1",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5726660d5951b619008f71b5-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-18621-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-27450-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5726d993f1498d1400e8ed19-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5726d993f1498d1400e8ed19-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-35514-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-56bec8243aeaaa14008c942f-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-19297-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-572926d23f37b31900478083-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57293e983f37b3190047818d-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57293e983f37b3190047818d-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-17489-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-572929d56aef051400154b0c-m0-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-572929d56aef051400154b0c-m0-a0",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-572929d56aef051400154b0c-m0-a1",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-56beb6533aeaaa14008c9290-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57332442d058e614000b5720-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-56e75f5500c9c71400d7703e-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-9065-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-17097-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-12840-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-12840-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57112686b654c5140001fbd3-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-23441-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-23441-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-38099-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-16259-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57269c06708984140094cba2-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-25051-m0-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-31395-m0-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-31395-m0-a0",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-31395-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-31395-m0-a2",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-571142b3a58dae1900cd6d5c-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-17562-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-11663-m0-a2",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-11663-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57277944f1498d1400e8f90a-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-572fc49d04bcaa1900d76ccf-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-572fc49d04bcaa1900d76ccf-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-4676-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-3956-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-572f6c85947a6a140053c942-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-31403-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-572669a9dd62a815002e8417-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-572669a9dd62a815002e8417-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57284142ff5b5019007da00e-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-5525-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5729edd56aef051400155115-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5729edd56aef051400155115-m3-a0",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5732b6b5328d981900602022-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57114aceb654c5140001fc48-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-572768d9708984140094dd16-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-24930-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5729f60caf94a219006aa6f2-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-570d26efb3d812140066d490-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5706094b52bb8914006897e2-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5737804dc3c5551400e51f13-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-3984-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57275a505951b619008f88a1-m1-a1",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57275a505951b619008f88a1-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-37059-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-19073-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5730069004bcaa1900d77031-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-968-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-20890-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5727565ef1498d1400e8f674-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-21259-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-23399-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-5739-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-570d2417fed7b91900d45c3e-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-27974-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57377aac1c45671900574479-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57274eca5951b619008f87ff-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5727500f708984140094dc01-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-13285-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57287c2bff5b5019007da26d-m1-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-57287c2bff5b5019007da26d-m2-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "tabmwp-21432-m3-a3",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    },
+    {
+      "event": "response.completed",
+      "key": "squad-5728659f4b864d190016498d-m0-a2",
+      "kind": "event_status_pair",
+      "status": "incomplete"
+    }
+  ]
+}

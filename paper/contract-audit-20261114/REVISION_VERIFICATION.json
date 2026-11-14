@@ -17,20 +17,22 @@
   "post_outcome_ranking_and_prediction_view_explicit": true,
   "source_and_numeric_checks": "PASS",
   "visual_bounds_fonts": "PASS",
-  "revision": "1.8",
-  "claim_count": 22,
-  "structured_pages": 20,
-  "preserved_claim_ids": "C1-C20",
+  "revision": "2.0",
+  "claim_count": 26,
+  "structured_pages": 24,
+  "preserved_claim_ids": "C1-C23",
   "new_claim_ids": [
-    "C21",
-    "C22"
+    "C24",
+    "C25",
+    "C26"
   ],
   "new_experiments_during_synthesis": 0,
   "new_provider_calls": 0,
   "new_judge_calls": 0,
   "external_scope": "Historical published TabMWP baseline scoring-policy sensitivity; no OneEval deployment attribution",
-  "ongoing_experiments_not_completed": [
-    43624040280,
-    43627868135
-  ]
+  "ongoing_experiments_not_completed": [],
+  "human_labels": 0,
+  "full_primary_verification": "PASS",
+  "same24_linkage": "PASS384slots370eligible14unknown",
+  "prior_C1_C23_preserved": true
 }

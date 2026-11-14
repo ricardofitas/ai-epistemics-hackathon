@@ -450,5 +450,30 @@
     "source_run": 43627868135,
     "source_revision": "f9adda7c4ba23ad4003ebe2fdd5a1bc862433256",
     "scope": "Frozenprimary andposthoc interpretation distinguished"
+  },
+  "external_primary_summary.json": {
+    "sha256": "e568c348c14110c331d86a7e83940d6c68a93aeb05f80f7a6acb947483dbd26a",
+    "source_revision": "ee04dcb55d547275f46fc3c0a8e5486ee24ecfe8",
+    "source_run": 43624040280
+  },
+  "external_primary_verified.json": {
+    "sha256": "780c6d85b33b3f7ba090de0840acd692807ebcc00bb9946be7a796bd16af675b",
+    "source_revision": "ee04dcb55d547275f46fc3c0a8e5486ee24ecfe8",
+    "source_run": 43624040280
+  },
+  "external_primary_provenance.json": {
+    "sha256": "f6a435cc75b1326363c9148960f4abef6dc04c6ef0baf9cfa10a7cc465d2ecc1",
+    "source_revision": "ee04dcb55d547275f46fc3c0a8e5486ee24ecfe8",
+    "source_run": 43624040280
+  },
+  "external_sampling_intervals.json": {
+    "sha256": "7d8307dbd719ee4b866d005eaf45daeec3db66d2b3869f9bbc40edf8d810469a",
+    "source_revision": "ee04dcb55d547275f46fc3c0a8e5486ee24ecfe8",
+    "source_run": 43624040280
+  },
+  "external_independent_closeout.json": {
+    "sha256": "3362932500357c791676ae7eceb8d49097733aa696bfd01ac4d85f926265b27d",
+    "source_run": 43624040280,
+    "scope": "Independent final8wave replay without producer imports;includesSAME24ID linkage"
   }
 }

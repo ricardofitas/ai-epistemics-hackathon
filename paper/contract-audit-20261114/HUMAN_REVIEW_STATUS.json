@@ -1,0 +1,22 @@
+{
+  "status": "AWAITING_HUMAN_LABELS",
+  "cases": 64,
+  "original_cases_preserved": 40,
+  "additional_historical_discrepancies": 12,
+  "additional_numeric_controls": 12,
+  "selection": "Original 40 retained with their identifiers. Supplemental 24 diagnostic examples selected after observing results; no prevalence estimate from their pooled labels.",
+  "reader_file": "Revisao_humana_64_casos.xlsx",
+  "library_file_id": "libfile_fde3_f-aa4200430e548191aa143e0e0fb4c544_198492b795908191b811098f9e84ee4a",
+  "reader_url": "https://chatgpt.com/library?file_id=libfile_fde3_f-aa4200430e548191aa143e0e0fb4c544_198492b795908191b811098f9e84ee4a&account_id=personal",
+  "protocol_commit": "3db521c1831ecd4bb1dd4afa4b44f532d0430405",
+  "source_path": "experiments/human-review-64-20261114",
+  "human_labels_received": 0,
+  "reader_instructions": "Select the displayed option explicitly conveyed, otherwise INDETERMINADA; optionally transcribe a different explicit result. Each reader uses a separate copy before examining prior annotations or official solutions.",
+  "ricardo_role": "Author annotation with known study hypothesis; an independent second reader can quantify inter-reader agreement.",
+  "next_steps": [
+    "Receive and validate the filled workbook against frozen IDs and source text.",
+    "Measure controls and panel-specific agreement with extraction rules and existing model-judge labels, preserving uncertainty and author/independent roles.",
+    "Recompute full-table deterministic scoring sensitivities and ranking bounds using independently defensible rules; the 64-case sample alone does not yield human-corrected scores for all archived questions.",
+    "Integrate verified consequences and limitations into the current private manuscript."
+  ]
+}

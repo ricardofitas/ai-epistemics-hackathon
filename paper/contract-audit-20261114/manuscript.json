@@ -5,7 +5,7 @@
     "blocks": [
       {
         "kind": "meta",
-        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.9"
+        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v2.0"
       },
       {
         "kind": "heading",
@@ -13,7 +13,7 @@
       },
       {
         "kind": "p",
-        "text": "Evaluation software can change task kind, discard required information and alter scoring references while returning numeric scores. We audit a pinned One-Eval revision using official records, native methods, controlled interventions and real-model responses. A prospective extension identifies malformed ARC-Challenge and OpenBookQA construction. In a 50-question WinoGrande panel, Qwen's source-correct gain under joint question and format repair remains 36-48 percentage points under conservative unknown-answer treatment. Identical repaired-prompt outputs receive scores differing by 40 and 42 points under alternative references. Causal ablations isolate shared source-symbol and option-decoding faults, followed by a prediction on 100 French MMMLU records. MixEval exhibits a distinct task-kind mismatch; original list references yield numeric zero with no scored samples. Fixed-output replays and 80- and 160-call diagnostics separate assigned score, factual final answer and rationale content. The crossed diagnostic identifies an instruction-by-placeholder interaction rather than a uniform free-form benefit. Separately, replay of ten published TabMWP baselines reproduces 76,860 archived flags. Recognizing unambiguous options changes 557 flags on 432 questions without changing rank order. Subsequent abstention on residual zero-similarity ties reverses two baseline comparisons. Blinded model readers provide controlled interpretive evidence, while independent human labels remain absent. Historical scoring-policy sensitivity, prospective prompt interventions and source-contract engineering are distinct evidence. Source overlap, missing responses and endpoint choice limit generalization."
+        "text": "Evaluation pipelines can change task kind, discard source information and alter scoring references while returning numeric scores. We trace such failures in a pinned One-Eval revision, isolate shared causes and test configuration predictions with official records. WinoGrande provides a paired generation consequence; MixEval exposes task-kind and reference-coverage failures. Pilot and crossed interventions distinguish assigned score, factual final answer and rationale content. A prospective custom factorial then fixes 100 SQuAD and 100 numerical TabMWP questions, four model families and four instruction/carrier conditions before collection. Among 3,200 requests, 3,086 complete. Adding the sole option A. None under a choice instruction lowers mean source-scored accuracy by 50-63 percentage points on SQuAD and 67.5-79.25 on TabMWP under unknown-answer bounds. The set of admissible SQuAD winners expands, admitting choices with higher clean-TabMWP regret while retaining the clean-condition winner. Separate numerical controls reveal a frozen endpoint mismatch and post hoc false-option endorsements. Separately, replay of ten published TabMWP baselines reproduces 76,860 flags. Explicit option recognition changes 557 flags on 432 questions without ranking reversals; residual-zero abstention then reverses two baseline comparisons. These are distinct prompt interventions, measurement checks and historical scoring-policy sensitivities. Established prior work, selected sources, missing responses and absent human labels constrain novelty and generalization."
       },
       {
         "kind": "heading",
@@ -569,44 +569,44 @@
     ]
   },
   {
-    "title": "Paired follow-up, positioning and limitations",
+    "title": "Prospective transfer, decisions and limitations",
     "blocks": [
       {
         "kind": "heading",
-        "text": "10. Paired real-generation follow-up"
+        "text": "10. External-source prospective factorial (C24-C25)"
       },
       {
         "kind": "p",
-        "text": "The exploratory pilot uses 20 existing free-form records (16 TriviaQA, three DROP, one BBH). Both conditions bind the same question/context. Binding-only retains the choice instruction; typed generation uses the official free-form constructor. Two models receive 80 single-attempt requests, scored with the same optional rule evaluator. There are 69 complete and 11 capped responses; capped cases remain unknown."
+        "text": "Earlier 80- and 160-call MixEval diagnostics remain in Appendices C and F-G. A subsequent frozen protocol selects 100 SQuAD and 100 numerical TabMWP questions, excluding normalized question matches to the prior project pool. Four model families answer four conditions crossing free/choice instruction with absent/present A. None. Question, context, temperature and output cap are paired within source. Of 3,200 requests, 3,086 complete; all 114 other outcomes remain unknown (Appendix M)."
       },
       {
         "kind": "table",
         "headers": [
-          "Model",
-          "Complete pairs / 20",
-          "Typed-minus-binding score bounds"
+          "Source, 100 questions each",
+          "Choice: carrier accuracy drop",
+          "Instruction-by-carrier interaction"
         ],
         "rows": [
           [
-            "Gemma",
-            "14 / 20",
-            "-5 to +25 percentage points"
+            "SQuAD",
+            "50 to 63 pp",
+            "57.75 to 73 pp"
           ],
           [
-            "Qwen",
-            "15 / 20",
-            "+50 to +75 percentage points"
+            "TabMWP",
+            "67.5 to 79.25 pp",
+            "68 to 81.25 pp"
           ]
         ],
         "widths": [
-          100,
-          140,
-          239
+          155,
+          162,
+          162
         ]
       },
       {
         "kind": "p",
-        "text": "These are fixed-panel unknown-response bounds, not population confidence intervals. Changed wording, exposed sources, fixed order and heuristic scoring constrain interpretation. Masked assistant review separates factual final answers from endorsed rationale content (Appendix E), preserving the original RULE results."
+        "text": "These are equal-weight four-model averages of fixed-panel unknown-answer bounds, not confidence intervals. Clean free response on SQuAD admits only GLM as winner; choice plus A. None admits Qwen, DeepSeek and GLM. Conditional clean-TabMWP regret is 4-6, 18-20 and 0-2 points respectively. Because winner sets overlap, the experiment does not force a different model choice. Appendix N links the numerical controls to the same 24 source questions without new generation."
       },
       {
         "kind": "heading",
@@ -614,35 +614,19 @@
       },
       {
         "kind": "p",
-        "text": "Reproducibility and implementation sensitivity are established concerns [1,2]. Upstream One-Eval PR #63 already describes extraction/scoring corrections and changes headline reports to the primary metric [14]. The present study traces official source semantics through task kind, request construction and reference interpretation, with measured consequences for the pinned transformations."
-      },
-      {
-        "kind": "p",
-        "text": "EvalEng [7] recommends semantic constraints and independent scoring checks; SANE [3] tests scorer-specific relations; JRH [8, abstract inspected] builds judge-reliability suites. Molfese et al. [17] already compare extraction with human judgments, study format/reasoning trade-offs and reasoning/final-answer conflicts, and test task-solving by extractors. Our contribution is pinned failure attribution, interventions, configuration predictions and historical replay within these established methods. A comparative implementation study remains open."
+        "text": "Implementation sensitivity is established [1,2]. One-Eval PR #63 predates this audit and reports extraction/scoring and primary-metric corrections [14]. EvalEng [7] recommends semantic compatibility and independent scoring checks; SANE [3] tests scorer-specific relations; JRH [8, abstract inspected] builds judge-reliability suites. Molfese et al. [17] already study human-referenced extraction, format/reasoning trade-offs, rationale/final conflicts and task-solving extractors. Our contribution is pinned failure attribution, interventions, configuration predictions and quantified consequences within these established methods."
       },
       {
         "kind": "heading",
-        "text": "12. Supported conclusions and external evidence"
+        "text": "12. Supported conclusions and evidence boundaries"
       },
       {
         "kind": "p",
-        "text": "Audited transformations change task kind, discard information, corrupt references or exclude every case while returning a numeric score. Causal interventions and MMMLU extend the explanation across configurations. WinoGrande supplies a paired generation consequence; MixEval fixed-output studies isolate reference and measurement failures."
+        "text": "Natural One-Eval failures, designed prompt interventions and historical scoring-policy changes have different evidential roles. The factorial tests transfer of an instruction-by-invalid-carrier effect, not benchmark fault prevalence or universal capability loss. The historical replay separately changes two published baseline orderings under explicit recognition plus residual abstention (J); recognition alone changes no ordering. GPT-3/PromptPG headline results and independent One-Eval deployment attribution remain untested."
       },
       {
         "kind": "p",
-        "text": "An independent archive replay reproduces all ten released UnifiedQA/TAPEX baselines in Lu et al. [16], on 7,686 shared questions. Exact unambiguous option recognition changes 557 flags but no ordering. Recognizing those options, then abstaining on remaining zero-similarity ties, reverses two comparisons: pretrained TAPEX base versus pretrained UnifiedQA small and base (Appendix J). These are post-replay policy sensitivities on real published outputs, not prompt interventions or tests of headline GPT-3/PromptPG results. Separate blinded model readings retain uncertainty (Appendix K)."
-      },
-      {
-        "kind": "heading",
-        "text": "Limitations and next scientific test"
-      },
-      {
-        "kind": "p",
-        "text": "Source cohorts overlap, cache matching is incomplete and post-outcome adapter reviews remain separate. The paired pilot is small, source-exposed and fixed-order. Optional rule scores differ from default model judging. Native orchestration and installed gate claims end at their declared source, provider and dependency boundaries."
-      },
-      {
-        "kind": "p",
-        "text": "The crossed diagnostic isolates an instruction-by-placeholder interaction (Appendices F-G); its exploratory RULE ranking survives missing-output and caveat sensitivity (H). An installed native path reaches a real provider and metric on two sources (I). The TabMWP archive establishes a separate published-baseline consequence under explicit scoring-policy changes (J). Human interpretation, official MixEval model judging and independent One-Eval deployment attribution remain open. The larger external-source generation campaign is not closed in this revision; its full eight-wave conclusion is not claimed here. A designed numeric-option control separately exposes a response-format mismatch in the fixed endpoint (Appendix L); its same-ID parent comparison remains pending."
+        "text": "The frozen numerical endpoint rejects 95/96 correct selections when the answer is shown; its post hoc option-aware interpretation is separate (L-N). Rule scores and assistant readings do not establish default model-judge or human validity. Sources may have appeared in training. Selected topics, custom prompts, repeated questions and missing outputs limit extrapolation. A 64-case human workbook preserves the original 40 cases plus 24 post-outcome diagnostics; no human labels exist. Author annotation and this sample alone cannot yield a human-corrected full-benchmark score."
       }
     ]
   },
@@ -651,7 +635,7 @@
     "blocks": [
       {
         "kind": "small",
-        "text": "[1] Biderman et al. Lessons from the Trenches on Reproducible Evaluation of Language Models. arXiv:2405.14782, v3 (2026 revision). https://arxiv.org/abs/2405.14782v3<br/>[2] Hugging Face. Evaluation Guidebook: Troubleshooting reproducibility. Consulted 14 Nov 2026. github.com/huggingface/evaluation-guidebook<br/>[3] Ludwick and Hsiao. SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges. arXiv:2610.28886v2 (23 Oct 2026). https://arxiv.org/html/2610.28886v2<br/>[4] OpenDCAI/One-Eval, revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506.<br/>[5] EleutherAI/lm-evaluation-harness, revision d6de81643928d653435c431bae19945d41d32520.<br/>[6] Official source record captures, native implementation snapshots, protocols and analysis manifests identified in the accompanying evidence package.<br/>[7] Zhao et al. Towards Evaluation Engineering: An Empirical Study of ML Evaluation Harnesses in the Wild. arXiv:2605.24213v1. https://arxiv.org/html/2605.24213v1<br/>[8] Dev et al. Judge Reliability Harness. arXiv:2603.05399v1. https://arxiv.org/abs/2603.05399v1 (abstract-only comparison).<br/>[9] Social IQa official source and frozen transfer protocol: source revision and exact archive/checker hashes in SOURCE_ARCHIVES.json and evidence/social_protocol.json.<br/>[10] MixEval official custom-evaluation guide, revision 7c52b41929d461df7733573528bdfb08774b0c53. github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/docs/how_to_use_your_own_eval_code.md<br/>[11] OpenAI MMMLU official dataset, revision 325a01dc3e173cac1578df94120499aaca2e2504. huggingface.co/datasets/openai/MMMLU/tree/325a01dc3e173cac1578df94120499aaca2e2504<br/>[12] Shared-cause, native-gate and MixEval protocols, captures and verification in the accompanying version-pinned source archives. <br/>[13] JinjieNi/MixEval optional rule and model scoring implementations, revision 7c52b41929d461df7733573528bdfb08774b0c53, mix_eval/utils/metric_utils.py and mix_eval/compute_metrics.py. Exact source/module hashes and fixed-output protocols accompany this manuscript.<br/>[14] OpenDCAI/One-Eval PR #63, merged 1 July 2026, merge revision 9addc1ecd29a30d4e4187f4dfd55142958d641ea. https://github.com/OpenDCAI/One-Eval/pull/63<br/>[15] OpenDCAI DataFlow paper, arXiv:2512.16676v1, section 7.1 and Table 2. https://arxiv.org/html/2512.16676v1. Inspected repository revision 84863d868fa91bd6169001af33b25e127bce709d. Evaluation-path attribution remains unresolved.<br/>[16] Lu et al. Dynamic Prompt Learning via Policy Gradient for Semi-structured Mathematical Reasoning. ICLR 2023, Table 3. https://arxiv.org/abs/2209.14610 . Released PromptPG source and ten baseline outputs: lupantech/PromptPG revision 869bae8ffb8288ccc3102293b3090ec2aa17f618. Historical and qualified replays: research commits 8b2acfd76a33f638f5f577bf1633726639032530 and 74f2aaf31f0f64c61f8d9efff29e995f43c04a59. Blind-reader protocol 54f68b0a102f2ed7721a72725daa6297c6ba2859; report 1d39e5fbab209159f09b8b1573d89f78e47c8f8e.<br/>[17] Molfese et al. Right Answer, Wrong Score: Uncovering the Inconsistencies of LLM Evaluation in Multiple-Choice Question Answering. Findings ACL 2025, pp.18477-18494. DOI:10.18653/v1/2025.findings-acl.950. https://aclanthology.org/2025.findings-acl.950/ (full primary method inspected: sections3-6 and AppendixA).<br/>[18] Zheng et al. Chain-of-Thought Reasoning in Tabular Language Models. Findings EMNLP 2023, pp.11006-11019, section4.1. DOI:10.18653/v1/2023.findings-emnlp.734. https://aclanthology.org/2023.findings-emnlp.734/ . Reports official TabMWP scoring; no downstream output reanalysis claimed."
+        "text": "[1] Biderman et al. Lessons from the Trenches on Reproducible Evaluation of Language Models. arXiv:2405.14782, v3 (2026 revision). https://arxiv.org/abs/2405.14782v3<br/>[2] Hugging Face. Evaluation Guidebook: Troubleshooting reproducibility. Consulted 14 Nov 2026. github.com/huggingface/evaluation-guidebook<br/>[3] Ludwick and Hsiao. SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges. arXiv:2610.28886v2 (23 Oct 2026). https://arxiv.org/html/2610.28886v2<br/>[4] OpenDCAI/One-Eval, revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506.<br/>[5] EleutherAI/lm-evaluation-harness, revision d6de81643928d653435c431bae19945d41d32520.<br/>[6] Official source record captures, native implementation snapshots, protocols and analysis manifests identified in the accompanying evidence package.<br/>[7] Zhao et al. Towards Evaluation Engineering: An Empirical Study of ML Evaluation Harnesses in the Wild. arXiv:2605.24213v1. https://arxiv.org/html/2605.24213v1<br/>[8] Dev et al. Judge Reliability Harness. arXiv:2603.05399v1. https://arxiv.org/abs/2603.05399v1 (abstract-only comparison).<br/>[9] Social IQa official source and frozen transfer protocol: source revision and exact archive/checker hashes in SOURCE_ARCHIVES.json and evidence/social_protocol.json.<br/>[10] MixEval official custom-evaluation guide, revision 7c52b41929d461df7733573528bdfb08774b0c53. github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/docs/how_to_use_your_own_eval_code.md<br/>[11] OpenAI MMMLU official dataset, revision 325a01dc3e173cac1578df94120499aaca2e2504. huggingface.co/datasets/openai/MMMLU/tree/325a01dc3e173cac1578df94120499aaca2e2504<br/>[12] Shared-cause, native-gate and MixEval protocols, captures and verification in the accompanying version-pinned source archives. <br/>[13] JinjieNi/MixEval optional rule and model scoring implementations, revision 7c52b41929d461df7733573528bdfb08774b0c53, mix_eval/utils/metric_utils.py and mix_eval/compute_metrics.py. Exact source/module hashes and fixed-output protocols accompany this manuscript.<br/>[14] OpenDCAI/One-Eval PR #63, merged 1 July 2026, merge revision 9addc1ecd29a30d4e4187f4dfd55142958d641ea. https://github.com/OpenDCAI/One-Eval/pull/63<br/>[15] OpenDCAI DataFlow paper, arXiv:2512.16676v1, section 7.1 and Table 2. https://arxiv.org/html/2512.16676v1. Inspected repository revision 84863d868fa91bd6169001af33b25e127bce709d. Evaluation-path attribution remains unresolved.<br/>[16] Lu et al. Dynamic Prompt Learning via Policy Gradient for Semi-structured Mathematical Reasoning. ICLR 2023, Table 3. https://arxiv.org/abs/2209.14610 . Released PromptPG source and ten baseline outputs: lupantech/PromptPG revision 869bae8ffb8288ccc3102293b3090ec2aa17f618. Historical and qualified replays: research commits 8b2acfd76a33f638f5f577bf1633726639032530 and 74f2aaf31f0f64c61f8d9efff29e995f43c04a59. Blind-reader protocol 54f68b0a102f2ed7721a72725daa6297c6ba2859; report 1d39e5fbab209159f09b8b1573d89f78e47c8f8e.<br/>[17] Molfese et al. Right Answer, Wrong Score: Uncovering the Inconsistencies of LLM Evaluation in Multiple-Choice Question Answering. Findings ACL 2025, pp.18477-18494. DOI:10.18653/v1/2025.findings-acl.950. https://aclanthology.org/2025.findings-acl.950/ (full primary method inspected: sections3-6 and AppendixA).<br/>[18] Zheng et al. Chain-of-Thought Reasoning in Tabular Language Models. Findings EMNLP 2023, pp.11006-11019, section4.1. DOI:10.18653/v1/2023.findings-emnlp.734. https://aclanthology.org/2023.findings-emnlp.734/ . Reports official TabMWP scoring; no downstream output reanalysis claimed.<br/>[19] SQuAD official development source: rajpurkar/SQuAD-explorer revision240e165ab706d95bd4323653bb92421f446208cf; TabMWP official test1k: lupantech/PromptPG revision869bae8ffb8288ccc3102293b3090ec2aa17f618. Source pins, selection, protocol and final result: research revisionee04dcb55d547275f46fc3c0a8e5486ee24ecfe8, experiments/external-contract-transfer-20261114. Consolidated human protocol: revision3db521c1831ecd4bb1dd4afa4b44f532d0430405, experiments/human-review-64-20261114; no human labels."
       }
     ]
   },
@@ -1570,7 +1554,7 @@
       },
       {
         "kind": "p",
-        "text": "Archive replay: research run 43625179457; qualified option replay 43626394923. Blinded-reader run 43626108168, protocol commit 54f68b0a102f2ed7721a72725daa6297c6ba2859; result report 1d39e5fbab209159f09b8b1573d89f78e47c8f8e. Exact aggregate snapshots and hashes are in EVIDENCE_SOURCES.json. The separate 3,200-slot external-source generation campaign and 192-slot numerical-option follow-up retain their own manifests, attempts and uncertainty; neither planned total is represented as completed in this revision."
+        "text": "Archive replay: research run 43625179457; qualified option replay 43626394923. Blinded-reader run 43626108168, protocol commit 54f68b0a102f2ed7721a72725daa6297c6ba2859; result report 1d39e5fbab209159f09b8b1573d89f78e47c8f8e. Exact aggregate snapshots and hashes are in EVIDENCE_SOURCES.json. The separate 3,200-request factorial and 192-request numerical follow-up are closed (M-N). A consolidated 64-case human packet preserves the original 40 cases and adds 12 historical and 12 numerical diagnostics selected after results. Each reader uses a separate copy. Ricardo is an informed author annotator; an independent reader permits agreement assessment. No human classifications have been received."
       }
     ]
   },
@@ -1644,11 +1628,219 @@
       },
       {
         "kind": "p",
-        "text": "The positive control demonstrates that the fixed bare-number endpoint can reject correct responses in the requested choice format. False-option endorsement also occurs, but it is a different construct from explicitly outputting the wrong bare number. Historical TabMWP archive rescoring (J), blinded model reading (K), and this researcher-designed intervention have distinct sources and endpoints. Molfese et al. [17] is prior art for extraction and format effects. The original four parent conditions for these same 24 IDs are already requested; their paired comparison is not claimed complete until original parent artifacts arrive."
+        "text": "The positive control demonstrates that the fixed bare-number endpoint can reject correct responses in the requested choice format. False-option endorsement also occurs, but it is a different construct from explicitly outputting the wrong bare number. Historical TabMWP archive rescoring (J), blinded model reading (K), and this researcher-designed intervention have distinct sources and endpoints. Molfese et al. [17] is prior art for extraction and format effects. The original four parent conditions for these same 24 IDs are linked in Appendix N. The C23 ledger retains its historical v1.9 pending-link qualifier; the current closure is recorded separately by C26."
       },
       {
         "kind": "small",
         "text": "Protocol/execution85ef43089b098d9a8c24c3f055aeb20020d7f939; research protocol744452df3973aa35bcd562c922813c51cbf1c7ba; post-capture decoder/reportf9adda7c4ba23ad4003ebe2fdd5a1bc862433256; run43627868135. Raw terminals, frozen scoring and derived interpretation remain separate."
+      }
+    ]
+  },
+  {
+    "title": "Appendix M. Complete external-source factorial",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "M.1. Frozen design and actual capture boundary (C24)"
+      },
+      {
+        "kind": "p",
+        "text": "Protocol/implementation 708db81a40d3ad05809067a8553308f73e4d0805 precedes launch 1f96cdbf58c4e4d8b7b3c9530a2ffa637390c2c6. Hash selection fixes 100 SQuAD development questions and 100 numerical free-text TabMWP test1k questions from pinned official sources [19]. Normalized questions exclude the earlier 200-record MixEval project pool. This is a project holdout, not global semantic or model-training blindness. There are 25 represented SQuAD article clusters. Each question is repeated across four fixed model families and four custom conditions; these are 200 questions, not 3,200 independent observations."
+      },
+      {
+        "kind": "p",
+        "text": "Eight original archives cover all 3,200 distinct slots and 3,236 attempts. Thirty-six extra attempts follow explicit HTTP429 refusals. There are 3,180 authenticated terminals: 3,086 complete and 94 incomplete. Eleven requests lack a terminal event and nine return HTTP504. All 114 non-scored outcomes stay unknown. No ambiguous or non-429 request is repeated. The earlier wave checker assumption that all absent terminals must be HTTP429 fails on legitimate transport unknowns; original failure reports are retained and a separate audit checks their ineligibility and reservation."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Model",
+          "SQuAD choice-carrier drop, pp",
+          "TabMWP choice-carrier drop, pp"
+        ],
+        "rows": [
+          [
+            "gemma-4-31b-it",
+            "80.0 to 84.0",
+            "91.0 to 95.0"
+          ],
+          [
+            "qwen3.8-27b",
+            "44.0 to 56.0",
+            "81.0 to 88.0"
+          ],
+          [
+            "deepseek-v4-flash",
+            "40.0 to 57.0",
+            "61.0 to 70.0"
+          ],
+          [
+            "glm-5.2",
+            "36.0 to 55.0",
+            "37.0 to 64.0"
+          ]
+        ],
+        "widths": [
+          153,
+          163,
+          163
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "Choice-carrier drop compares choice without the carrier with choice plus A. None. Interaction subtracts the corresponding free-response difference: (choice_clear - choice_none) - (free_clear - free_none). Averaging equally over four models gives SQuAD drop 50-63 pp and TabMWP 67.5-79.25 pp; interaction is 57.75-73 and 68-81.25 pp respectively. These are extrema over unavailable response scores on the fixed source panel. They are not sampling confidence intervals."
+      },
+      {
+        "kind": "p",
+        "text": "Dummy answers occur in 284/400 SQuAD and 280/400 TabMWP choice-carrier cells, repeating 100 questions across four models. The supplied option and instructions deliberately produce task-invalid prompts. The trial tests a controlled conditional response mechanism, not the natural prevalence of the One-Eval defects, unseen model capability or ordinary full-benchmark performance."
+      }
+    ]
+  },
+  {
+    "title": "Appendix M. Decisions and uncertainty, continued",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "M.2. Preregistered selection-transfer test (C25)"
+      },
+      {
+        "kind": "p",
+        "text": "On SQuAD, retain any model whose upper accuracy reaches the highest guaranteed accuracy. Clean free response admits only GLM. Choice plus A. None admits Qwen, DeepSeek and GLM. On the separate clean TabMWP source panel, regret is the gap from choosing each candidate to the best of the four fixed models, bounded over unknown answers."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "SQuAD selection condition",
+          "Admissible model",
+          "Clean TabMWP regret"
+        ],
+        "rows": [
+          [
+            "Free response, no carrier",
+            "GLM",
+            "0 to 2 pp"
+          ],
+          [
+            "Choice plus A. None",
+            "Qwen",
+            "4 to 6 pp"
+          ],
+          [
+            "Choice plus A. None",
+            "DeepSeek",
+            "18 to 20 pp"
+          ],
+          [
+            "Choice plus A. None",
+            "GLM",
+            "0 to 2 pp"
+          ]
+        ],
+        "widths": [
+          182,
+          140,
+          157
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "The winner sets overlap at GLM. Thus a potentially worse choice becomes compatible with the misleading-condition measurements, but the experiment does not establish a forced policy switch or realized downstream harm. This is a prospective fixed-model decision test on separate source panels. It is not the historical Table3 ranking sensitivity and not universal selection regret."
+      },
+      {
+        "kind": "heading",
+        "text": "M.3. Missingness, sampling and resources"
+      },
+      {
+        "kind": "p",
+        "text": "Frozen endpoints use exact final-answer semantics: SQuAD normalized aliases and exact rational numerical equality, with fixed tag extraction and last-line fallback. Exploratory SQuAD token-F1 rescoring gives four-model mean loss 61.83-74.83 pp. Separate exploratory 5,000-resample pointwise percentile envelopes cluster SQuAD by article and TabMWP by question. Per-model envelopes are conditional on source selection; no four-model mean confidence interval, multiplicity or universe-wide coverage is claimed. These intervals do not replace finite-panel unknown-answer bounds."
+      },
+      {
+        "kind": "p",
+        "text": "Known main usage is 673,638 input and 1,411,211 output tokens, reported cost 2.808415654416 units and uncached rate-card estimate 2.8701829 credits. Eligible throughput is 1,393.68 replies/hour. Missing transport usage may be unknown; invoice, balance and currency conversion are unverified. Across the main study, 224-reader study and 192-control study there are 3,616 distinct requests, 3,487 complete responses and reported cost sum 3.413513413896 units. These are three studies, not one independent cohort."
+      },
+      {
+        "kind": "p",
+        "text": "Frozen source and request hashes, original wave archives, terminal/attempt associations, unknowns, code and independent final verification are retained. The primary original workflow and offline replay agree. No further provider or judge requests are made during synthesis. Human review remains a separate pending stage under the 64-case protocol [19]."
+      }
+    ]
+  },
+  {
+    "title": "Appendix N. Numerical controls on the same source IDs",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "N.1. Complete parent linkage without new generation (C26)"
+      },
+      {
+        "kind": "p",
+        "text": "The fixed 24 numerical-control source indices are matched by source identity and request manifest to all four original parent arms. All 384 parent cells are recorded: 370 complete and 14 unknown. The 14 unknowns occur only in choice plus A. None (DeepSeek four, GLM ten). Neither incomplete nor explanatory responses are replaced, and no new generation is requested. Each row below uses the same 24 source questions."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Model",
+          "Free, absent",
+          "Free, None",
+          "Choice, absent",
+          "Choice, None"
+        ],
+        "rows": [
+          [
+            "gemma-4-31b-it",
+            "23/0/0",
+            "22/1/0",
+            "24/0/0",
+            "1/23/0"
+          ],
+          [
+            "qwen3.8-27b",
+            "23/0/0",
+            "22/1/0",
+            "23/0/0",
+            "2/22/0"
+          ],
+          [
+            "deepseek-v4-flash",
+            "18/0/0",
+            "18/1/0",
+            "23/0/0",
+            "4/16/4"
+          ],
+          [
+            "glm-5.2",
+            "24/0/0",
+            "23/0/0",
+            "24/0/0",
+            "6/8/10"
+          ]
+        ],
+        "widths": [
+          151,
+          82,
+          82,
+          82,
+          82
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "Cells are source-correct / dummy selection / capture-unknown under the frozen final-number endpoint, each over 24 planned questions. Incorrect non-dummy completions make up any remainder. These are 24 shared questions repeated across four models and four conditions. The source-correct choice-without-carrier counts total 94/96; choice plus A. None gives 13/96 source-correct, 69/96 dummy selections and 14/96 unknown. The 14 parent unknowns and the 14 numerical-control incompletes are different requests; equal totals do not imply the same missing cases."
+      },
+      {
+        "kind": "p",
+        "text": "The same questions in the separate numerical-option follow-up yield 1/96 correct under the frozen bare-number oracle-control endpoint versus 96/96 under the deterministic post hoc option-aware decoder. With a false number, the primary readout remains zero explicit wrong bare numbers among 82 complete responses; the post hoc decoder identifies 45/96 false-option endorsements, 30 correct bare numbers, seven unscored explanations and 14 incomplete replies. The parent and control counts measure related but distinct response-and-scoring behaviors. They must not be pooled as independent questions or silently substituted for each other."
+      },
+      {
+        "kind": "p",
+        "text": "Source matching closes the factual-ID linkage gap. It does not make all six arms a jointly randomized trial: the two numerical arms were specified after interim parent results, selected from future source indices and generated in a separate sequence. Original gold was available to analysts; training exposure and provider-time effects are not excluded. The numerical control tests endpoint recognition and conditional response behavior, not hidden mathematical capability or fault prevalence."
+      },
+      {
+        "kind": "heading",
+        "text": "N.2. Human evidence remains unobserved"
+      },
+      {
+        "kind": "p",
+        "text": "The current 64-case workbook protocol preserves the original 40 IDs, adds 12 historical gain/loss diagnostics and 12 numerical controls after results, and keeps all classification fields empty. Await actual labels and validate IDs, text and menus with the pinned import_labels.py. Each reader supplies a separate copy; Ricardo is an informed author annotator. Analyze panels and controls separately, retain doubts, and distinguish explicit option correction from residual-zero abstention. The 64-case panel cannot yield a human-corrected score for all 7,686 archived questions."
       }
     ]
   }
