@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "source_rows": 200,
+  "condition_records": 600,
+  "full_selected_coverage": true,
+  "freeform_native_task_type_failures": 100,
+  "freeform_native_artificial_None_options": 100,
+  "freeform_bind_only_task_type_failures": 100,
+  "freeform_typed_generation_repairs": 100,
+  "MC_reviewed_type_controls": 100,
+  "MC_initial_exact_option_matches": 99,
+  "MC_reviewed_option_matches": 100,
+  "retained_type_dialect_audit_false_alerts": 100,
+  "retained_whitespace_audit_alerts": 1,
+  "provider_calls": 0,
+  "scope": "Source/capture/hash/selection reconciliation by same executor; no independent human review, no model/native-install/scoring execution."
+}

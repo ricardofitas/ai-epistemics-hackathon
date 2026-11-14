@@ -1,0 +1,22 @@
+{
+  "status": "POST_OUTCOME_ADAPTER_REVIEW",
+  "original_results_retained": true,
+  "scientific_native_runs_repeated": false,
+  "type_dialect": {
+    "initial_expected": "single-choice",
+    "observed": "multiple-choice",
+    "source_rows": 100,
+    "condition_appearances": 300,
+    "reviewed_rule": "Treat single-choice and multiple-choice as choice-family labels only when options are a list with at least2strings and every target is a legal integer index; this sample has exactly1target perrow.",
+    "reviewed_genuine_task_type_failures_on_MC": 0
+  },
+  "option_whitespace": {
+    "source_rows": 1,
+    "condition_appearances": 3,
+    "initial_exact_order_matches_per100": 99,
+    "reviewed_normalized_order_matches_per100": 100,
+    "rule": "str.strip on each entire option, with order/length/content otherwise identical; no rematching or sample change."
+  },
+  "freeform_result_unchanged": true,
+  "qualification": "Post-outcome review does not replace initial prospective metrics or claim unseen adapter validation."
+}

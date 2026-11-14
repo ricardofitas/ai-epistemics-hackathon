@@ -1,0 +1,27 @@
+{
+  "as_of": "2026-11-14",
+  "repository": "OpenDCAI/Dataflow-LoopAI",
+  "pinned_revision": "30d078f36bb95508088f0ea229cbd804105b41f9",
+  "tree": "b11de10d10ef90747fa5b04c0d1b9547276b5d73",
+  "tree_truncated": false,
+  "followup_hypothesis": "Follow report and benchmark-pipeline artifact paths adjacent to the concrete public DataFlowEvalTool log for missing effective run/configuration or conclusion.",
+  "inspected": [
+    {
+      "path": "loopai/agents/Obtainer/datamixer/assets/curating-dataflow-pipeline-skills/example/complete-math-reasoning-sft-skill/examples/gsm8k-reasoning-v1/case_report.md",
+      "blob": "3816bda1a1065b0c04bdb6589b1d10823d3b0a20",
+      "finding": "Explicitly synthetic example rows/invalid example URL; not authentic official benchmark run or production review.",
+      "disposition": "Not evidence of an affected evaluation."
+    },
+    {
+      "path": "loopai/agents/Obtainer/datamixer/assets/generating-dataflow-pipeline/examples/text_benchmark_eval_pipelines.md",
+      "blob": "98d11660a4428e9f33d87e6d157c9ee3584d1e97",
+      "finding": "Conceptual semantic evaluation pipeline guidance; no original per-case results or linked model conclusion.",
+      "disposition": "Not an original affected run artifact."
+    }
+  ],
+  "prior_log_evidence": "Preserved in previous causal/MMMLU archive: component execution on general_text_eval/gsm8k; remains partial.",
+  "external_affected_conclusion_verified": false,
+  "new_model_calls": 0,
+  "outbound_communications": 0,
+  "limit": "Bounded pinned-tree report follow-up only. No absence claim. Do not repeat these two artifacts without a new lead."
+}
