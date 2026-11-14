@@ -1,0 +1,60 @@
+{
+  "source_run": "https://github.com/ricardofitas/swarm-adaption-hackathon/actions/runs/43624040280",
+  "source_commit": "1f96cdbf58c4e4d8b7b3c9530a2ffa637390c2c6",
+  "protocol_commit": "708db81a40d3ad05809067a8553308f73e4d0805",
+  "workflow_conclusion": "success",
+  "archive_digest_verification": "all eight independently hash-verified and extracted; the full locally regenerated JSON matched the original Actions aggregate structurally",
+  "waves": [
+    [
+      "contract-transfer-wave-1-43624040280",
+      14125598381,
+      "sha256:4333df9025086dfc29ebf711f0bf34d5a195943f81e8b21253481ed9244a6ae5"
+    ],
+    [
+      "contract-transfer-wave-2-43624040280",
+      14127010749,
+      "sha256:eaebc0adf933eb8611121f2866e28744b380f5b6576f133de62729e79db4569c"
+    ],
+    [
+      "contract-transfer-wave-3-43624040280",
+      14126044366,
+      "sha256:4b1a5fc8a3088aa4b4eb6978b4af3e453f555014eb3f0054970936708c2d0c13"
+    ],
+    [
+      "contract-transfer-wave-4-43624040280",
+      14128130927,
+      "sha256:7813394e4550d91ff22fa93f6b85e37f643318ba5d422e03c900eeb4d98bd9ef"
+    ],
+    [
+      "contract-transfer-wave-5-43624040280",
+      14128391231,
+      "sha256:d2f81dd87853f93d3ed727d51bd3cede6097e5496e4482824ff56ce434d97136"
+    ],
+    [
+      "contract-transfer-wave-6-43624040280",
+      14128238960,
+      "sha256:1110f6fd7d1abe16101d7598fe7bdd047bd9e1193827031d16ee2334f40046ac"
+    ],
+    [
+      "contract-transfer-wave-7-43624040280",
+      14129351943,
+      "sha256:580e02a9bd3a3a985b6af8082265d5dde3ad9e355239b32b63ddb404246606de"
+    ],
+    [
+      "contract-transfer-wave-8-43624040280",
+      14129244226,
+      "sha256:7cf67ed0faa5d80aa81e079cb5c1ad001f9ca142e33bda16f1cf267021d55ff4"
+    ]
+  ],
+  "summary_artifact": "sha256:af883e90ddb40ac607f45e7b10c02bd9e91047832f66d80270f1f8c30f8bf08c",
+  "other_runs": {
+    "blind": {
+      "id": 43626108168,
+      "sha256": "sha256:58dcd49286b39e731b5a7cdbd39b295686593c25a492d18991fb53ca6b58d8b7"
+    },
+    "numeric_controls": {
+      "id": 43627868135,
+      "sha256": "sha256:0d91eca29afd3e06e6878996b6842111ed39e103f35e6bf979c0cfbf4dd8545f"
+    }
+  }
+}

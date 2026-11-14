@@ -1,0 +1,27 @@
+{
+  "questions": 100,
+  "source": "Rajpurkar et al., 2016, section 6.1: maximum token F1 over human references.",
+  "definition": "Exploratory F1 change, choice_clear minus choice_none. Unknowns bounded over [0,1].",
+  "by_model": {
+    "gemma-4-31b-it": [
+      89.002,
+      93.002
+    ],
+    "qwen3.8-27b": [
+      57.612,
+      69.612
+    ],
+    "deepseek-v4-flash": [
+      51.88,
+      68.88
+    ],
+    "glm-5.2": [
+      48.81,
+      67.81
+    ]
+  },
+  "equal_weight_across_four": [
+    61.826,
+    74.826
+  ]
+}
