@@ -1,0 +1,573 @@
+{
+  "stage": "Post-outcome engineering repair on preserved captures",
+  "new_provider_calls": 0,
+  "rows": [
+    {
+      "source_index": 200,
+      "condition": "native_gallery",
+      "response_id": "chatcmpl-bf176af4-f5b0-41df-a7c0-5664bc4c88e7",
+      "source_sha256": "05ffdf0514950787a180a2568505a9b4867b87c392a9fc0da1a1ea8e4e6d304b",
+      "request_sha256": "4d79bd4cd4e40e762288783fcc607953e96bb71341079e829e144bea0b8dac4e",
+      "raw_body_sha256": "dac05eedac3ede450349b849694a530962eadd0e00eb317e2f42f87e79459333",
+      "provider_final_content_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "original_generated_ans_sha256": "cc2e75a92029cd9c138c8d28c25e54c8aa8d839396b7265f20cd41248de7b2cb",
+      "prediction_key": "generated_ans",
+      "original_metric_result": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/200_native_gallery/native/mixeval_1794677270_steps/step_step2.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "choice_accuracy",
+          "official_metric": "accuracy",
+          "score": 0.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": 0,
+          "valid_predictions": 1,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 1,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        "primary_metric_details": [
+          null
+        ],
+        "primary_metric_artifacts": {
+          "pred_choices": [
+            "A"
+          ],
+          "ref_choices": [
+            null
+          ],
+          "parse_results": [
+            {
+              "pred": {
+                "raw": "<think>We need answer user's request. User says:\nContext:\n{None}\n\nQuestion:\n{{prompt}}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.\n\nWe need produce final answer likely <answer>A</answer>? Need infer. The prompt is malformed: Context None, Question {{prompt}}, options {A. None}. It asks select best option. Since only option A None, answer A. Need final only? They require final answer as <answer>CHOICE</answer>. So output <answer>A</answer>. Ensure no extra.\n</think>\n<answer>\n\n<answer>A</answer></answer>",
+                "normalized": "A",
+                "ok": true,
+                "error": null,
+                "evidence": "<answer>A</answer>",
+                "strategy": "tagged_answer"
+              },
+              "ref": {
+                "raw": [
+                  "Rt Hon Anthony Blair MP",
+                  "Tony blair",
+                  "The Tony Blair Sports Foundation",
+                  "Antony blair",
+                  "Tonie Blair",
+                  "Tony Balir",
+                  "Rt. Hon Tony Blair",
+                  "Blairian",
+                  "Tory Blair",
+                  "Tony Blairs",
+                  "Anthony C. L. Blair",
+                  "Anthony Charles Blair",
+                  "Tony Blaire",
+                  "Tony Blair Sports Foundation",
+                  "Antony Blair",
+                  "Anthony Charles Lynton %22Tony%22 Blair",
+                  "Family of Tony Blair",
+                  "Tonyblair",
+                  "Tony Blear",
+                  "Anthony (Tony) Blair",
+                  "Tony Blair's Private life",
+                  "Tony Blair PM",
+                  "Tony Bliar",
+                  "Tony Blaer",
+                  "Herr Blair",
+                  "President Blair",
+                  "Anthony Charles Lynton Blair",
+                  "Tony Blair's private life",
+                  "Education, education and education",
+                  "Rt. Hon. Anthony Charles Lynton Blair",
+                  "Toney Blair",
+                  "Education, education, education",
+                  "Tony Blari",
+                  "Blair doctrine",
+                  "Tony Blair",
+                  "Prime Minister Tony Blair",
+                  "Tony Blare"
+                ],
+                "normalized": null,
+                "ok": false,
+                "error": "parse_failed",
+                "evidence": null,
+                "strategy": null
+              }
+            }
+          ]
+        }
+      },
+      "rescored_metric_result": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-offline-rescore-20261114/results/200_native_gallery/records.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "choice_accuracy",
+          "official_metric": "accuracy",
+          "score": 0.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": 0,
+          "valid_predictions": 1,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 1,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        "primary_metric_details": [
+          null
+        ],
+        "primary_metric_artifacts": {
+          "pred_choices": [
+            "A"
+          ],
+          "ref_choices": [
+            null
+          ],
+          "parse_results": [
+            {
+              "pred": {
+                "raw": "<think>We need answer user's request. User says:\nContext:\n{None}\n\nQuestion:\n{{prompt}}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.\n\nWe need produce final answer likely <answer>A</answer>? Need infer. The prompt is malformed: Context None, Question {{prompt}}, options {A. None}. It asks select best option. Since only option A None, answer A. Need final only? They require final answer as <answer>CHOICE</answer>. So output <answer>A</answer>. Ensure no extra.\n</think>\n<answer>\n\n<answer>A</answer></answer>",
+                "normalized": "A",
+                "ok": true,
+                "error": null,
+                "evidence": "<answer>A</answer>",
+                "strategy": "tagged_answer"
+              },
+              "ref": {
+                "raw": [
+                  "Rt Hon Anthony Blair MP",
+                  "Tony blair",
+                  "The Tony Blair Sports Foundation",
+                  "Antony blair",
+                  "Tonie Blair",
+                  "Tony Balir",
+                  "Rt. Hon Tony Blair",
+                  "Blairian",
+                  "Tory Blair",
+                  "Tony Blairs",
+                  "Anthony C. L. Blair",
+                  "Anthony Charles Blair",
+                  "Tony Blaire",
+                  "Tony Blair Sports Foundation",
+                  "Antony Blair",
+                  "Anthony Charles Lynton %22Tony%22 Blair",
+                  "Family of Tony Blair",
+                  "Tonyblair",
+                  "Tony Blear",
+                  "Anthony (Tony) Blair",
+                  "Tony Blair's Private life",
+                  "Tony Blair PM",
+                  "Tony Bliar",
+                  "Tony Blaer",
+                  "Herr Blair",
+                  "President Blair",
+                  "Anthony Charles Lynton Blair",
+                  "Tony Blair's private life",
+                  "Education, education and education",
+                  "Rt. Hon. Anthony Charles Lynton Blair",
+                  "Toney Blair",
+                  "Education, education, education",
+                  "Tony Blari",
+                  "Blair doctrine",
+                  "Tony Blair",
+                  "Prime Minister Tony Blair",
+                  "Tony Blare"
+                ],
+                "normalized": null,
+                "ok": false,
+                "error": "parse_failed",
+                "evidence": null,
+                "strategy": null
+              }
+            }
+          ]
+        }
+      },
+      "source_reference_unchanged": true,
+      "original_generated_ans_unchanged": true
+    },
+    {
+      "source_index": 200,
+      "condition": "source_typed",
+      "response_id": "chatcmpl-038e4097-f9c5-47f4-93e4-9647c5a12a25",
+      "source_sha256": "05ffdf0514950787a180a2568505a9b4867b87c392a9fc0da1a1ea8e4e6d304b",
+      "request_sha256": "fd778a1813ff85dd82640021bc2d6aea69195b86032c3eb9486bfb26a84e1cf3",
+      "raw_body_sha256": "a7a32e06d7feda15c121f5bd5ea76747e3432cdc43512aa91ebaa54ffbb5af29",
+      "provider_final_content_sha256": "d66ce1486c546ce6e0b64b1717f5f461a0375ae6b0b2a740fe6dd8cbdf8c1bd8",
+      "original_generated_ans_sha256": "6def9e2ff6ad123aa6c7aff70a52e94d3fe6868fb2a0c3139eb603b7a1c3addb",
+      "prediction_key": "provider_final_content",
+      "original_metric_result": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/200_source_typed/native/mixeval_1794677284_steps/step_step2.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "exact_match",
+          "official_metric": "diagnostic_exact_match",
+          "score": 0.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": null,
+          "valid_predictions": null,
+          "parse_failed": null,
+          "empty_output": null,
+          "invalid_references": null,
+          "parser": null,
+          "failure_policy": {},
+          "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+        },
+        "primary_metric_details": [
+          0.0
+        ],
+        "primary_metric_artifacts": {}
+      },
+      "rescored_metric_result": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-offline-rescore-20261114/results/200_source_typed/records.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "exact_match",
+          "official_metric": "diagnostic_exact_match",
+          "score": 1.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": null,
+          "valid_predictions": null,
+          "parse_failed": null,
+          "empty_output": null,
+          "invalid_references": null,
+          "parser": null,
+          "failure_policy": {},
+          "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+        },
+        "primary_metric_details": [
+          1.0
+        ],
+        "primary_metric_artifacts": {}
+      },
+      "source_reference_unchanged": true,
+      "original_generated_ans_unchanged": true
+    },
+    {
+      "source_index": 40,
+      "condition": "native_gallery",
+      "response_id": "chatcmpl-a9297680-9848-405e-819a-e5db0ceb5d1c",
+      "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+      "request_sha256": "4d79bd4cd4e40e762288783fcc607953e96bb71341079e829e144bea0b8dac4e",
+      "raw_body_sha256": "d63ece669f9cffdc5a5918eed6b1863ef921cb6b7e12f8f9e22ef935bf67ed4d",
+      "provider_final_content_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+      "original_generated_ans_sha256": "5ec9445c867639c6090677030733093cf46551c545f63b0240e71493dae1bfe0",
+      "prediction_key": "generated_ans",
+      "original_metric_result": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/40_native_gallery/native/mixeval_1794677240_steps/step_step2.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "choice_accuracy",
+          "official_metric": "accuracy",
+          "score": 0.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": 0,
+          "valid_predictions": 1,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 1,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        "primary_metric_details": [
+          null
+        ],
+        "primary_metric_artifacts": {
+          "pred_choices": [
+            "A"
+          ],
+          "ref_choices": [
+            null
+          ],
+          "parse_results": [
+            {
+              "pred": {
+                "raw": "<think>We need answer user's prompt. User says:\nContext:\n{None}\n\nQuestion:\n{{prompt}}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.\n\nThis seems malformed. There is no actual question, just placeholder {{prompt}} and option A. None. Need select best option. Likely answer A. Need final <answer>A</answer>. But must be careful. The instruction: Select the best option and give final answer as <answer>CHOICE</answer>. Options: {A. None}. So only option A. None. We should output <answer>A</answer>. Need maybe no extra. Ensure final.\n</think>\n<answer>\n\n<answer>A</answer></answer>",
+                "normalized": "A",
+                "ok": true,
+                "error": null,
+                "evidence": "<answer>A</answer>",
+                "strategy": "tagged_answer"
+              },
+              "ref": {
+                "raw": [
+                  "Male dancers",
+                  "💃",
+                  "Dance writers",
+                  "Dancing",
+                  "Dance",
+                  "Dance awards",
+                  "Dancers",
+                  "Dance rhythm",
+                  "Dance magazines",
+                  "DanCe",
+                  "Dances",
+                  "Dancer",
+                  "DANCE",
+                  "Danse",
+                  "Dance organizations",
+                  "Dance by country",
+                  "Male dancer",
+                  "Western dance",
+                  "Dance show"
+                ],
+                "normalized": null,
+                "ok": false,
+                "error": "parse_failed",
+                "evidence": null,
+                "strategy": null
+              }
+            }
+          ]
+        }
+      },
+      "rescored_metric_result": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-offline-rescore-20261114/results/40_native_gallery/records.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "choice_accuracy",
+          "official_metric": "accuracy",
+          "score": 0.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": 0,
+          "valid_predictions": 1,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 1,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        "primary_metric_details": [
+          null
+        ],
+        "primary_metric_artifacts": {
+          "pred_choices": [
+            "A"
+          ],
+          "ref_choices": [
+            null
+          ],
+          "parse_results": [
+            {
+              "pred": {
+                "raw": "<think>We need answer user's prompt. User says:\nContext:\n{None}\n\nQuestion:\n{{prompt}}\n{A. None}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.\n\nThis seems malformed. There is no actual question, just placeholder {{prompt}} and option A. None. Need select best option. Likely answer A. Need final <answer>A</answer>. But must be careful. The instruction: Select the best option and give final answer as <answer>CHOICE</answer>. Options: {A. None}. So only option A. None. We should output <answer>A</answer>. Need maybe no extra. Ensure final.\n</think>\n<answer>\n\n<answer>A</answer></answer>",
+                "normalized": "A",
+                "ok": true,
+                "error": null,
+                "evidence": "<answer>A</answer>",
+                "strategy": "tagged_answer"
+              },
+              "ref": {
+                "raw": [
+                  "Male dancers",
+                  "💃",
+                  "Dance writers",
+                  "Dancing",
+                  "Dance",
+                  "Dance awards",
+                  "Dancers",
+                  "Dance rhythm",
+                  "Dance magazines",
+                  "DanCe",
+                  "Dances",
+                  "Dancer",
+                  "DANCE",
+                  "Danse",
+                  "Dance organizations",
+                  "Dance by country",
+                  "Male dancer",
+                  "Western dance",
+                  "Dance show"
+                ],
+                "normalized": null,
+                "ok": false,
+                "error": "parse_failed",
+                "evidence": null,
+                "strategy": null
+              }
+            }
+          ]
+        }
+      },
+      "source_reference_unchanged": true,
+      "original_generated_ans_unchanged": true
+    },
+    {
+      "source_index": 40,
+      "condition": "source_typed",
+      "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+      "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+      "request_sha256": "200cbaf164a9498496f44b6d192ad04c85fe2899024cb520076581a8318d149c",
+      "raw_body_sha256": "0c98bcdf83f9a9b00de0f09fa03cda6d05a0e772ff69437aa295bd3136a456dd",
+      "provider_final_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+      "original_generated_ans_sha256": "3ad68f46f7242d68a0098589c5604080befc0dfbc295e7d7a09266215beccb38",
+      "prediction_key": "provider_final_content",
+      "original_metric_result": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-live-20261114/results/real/40_source_typed/native/mixeval_1794677255_steps/step_step2.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "exact_match",
+          "official_metric": "diagnostic_exact_match",
+          "score": 0.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": null,
+          "valid_predictions": null,
+          "parse_failed": null,
+          "empty_output": null,
+          "invalid_references": null,
+          "parser": null,
+          "failure_policy": {},
+          "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+        },
+        "primary_metric_details": [
+          0.0
+        ],
+        "primary_metric_artifacts": {}
+      },
+      "rescored_metric_result": {
+        "num_samples": 1,
+        "alignment": {
+          "mode": "records",
+          "path": "/home/runner/work/swarm-adaption-hackathon/swarm-adaption-hackathon/experiments/oneeval-native-offline-rescore-20261114/results/40_source_typed/records.jsonl"
+        },
+        "primary_metric_result": {
+          "metric": "exact_match",
+          "official_metric": "diagnostic_exact_match",
+          "score": 1.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 1,
+          "scored_samples": null,
+          "valid_predictions": null,
+          "parse_failed": null,
+          "empty_output": null,
+          "invalid_references": null,
+          "parser": null,
+          "failure_policy": {},
+          "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+        },
+        "primary_metric_details": [
+          1.0
+        ],
+        "primary_metric_artifacts": {}
+      },
+      "source_reference_unchanged": true,
+      "original_generated_ans_unchanged": true
+    }
+  ],
+  "status": "PASS",
+  "native_module_origins": {
+    "one_eval.metrics.runner": {
+      "path": "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/one_eval/metrics/runner.py",
+      "sha256": "d599a3665c2594fc1bce9b9c3cf664d704fd0cfcff57146961abeb4ac359b706"
+    },
+    "one_eval.metrics.common.general": {
+      "path": "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/one_eval/metrics/common/general.py",
+      "sha256": "dd7104eee19c829f3ddb5dd1faec0b97a230b253ab41b615d20b6799699d06a7"
+    }
+  }
+}

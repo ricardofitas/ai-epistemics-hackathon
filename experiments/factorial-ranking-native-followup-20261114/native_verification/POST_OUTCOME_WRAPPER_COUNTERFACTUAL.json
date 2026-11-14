@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "stage": "Post-outcome same-output wrapper counterfactual",
+  "as_of": "2026-11-14T17:30:43.533067+00:00",
+  "run_id": 43620987144,
+  "execution_launch_commit": "a29c0a038e9295323fefdddcd412efd01b526995",
+  "primary_native_scores_unchanged": true,
+  "scope": "Two already exposed integration source cases, one model, raw final message and delivered client text from the same two source-typed API responses. Exact original pinned native normalization and EM function ASTs executed offline with no calls. Changing the scoring input isolates the client wrapper effect on this fixed-output diagnostic; no repaired real pipeline, independent source cohort or new accuracy estimate is established.",
+  "method_source": {
+    "revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+    "general_module_sha256": "dd7104eee19c829f3ddb5dd1faec0b97a230b253ab41b615d20b6799699d06a7",
+    "extractor_module_sha256": "4577cd7ccca4e180afcf5fc7a10b5f454eada2ebbaf6741efef69dc179af1d90",
+    "functions": [
+      "normalize_text",
+      "compute_exact_match"
+    ],
+    "native_serving_sha256": "92e0188aaef8d622435e09c9b0ce5946c50cb5c5b311ab24bbb5bb43e400653f",
+    "function_sources": {
+      "normalize_text": {
+        "source": "def normalize_text(x: Any) -> str:\n    \"\"\"\n    Standard text normalization for metrics:\n    1. Lowercase\n    2. Remove punctuation\n    3. Remove articles (a, an, the)\n    4. Fix whitespace\n    \"\"\"\n    if x is None:\n        return \"\"\n    \n    def remove_articles(text):\n        return re.sub(r\"\\b(a|an|the)\\b\", \" \", text)\n\n    def white_space_fix(text):\n        return \" \".join(text.split())\n\n    def remove_punc(text):\n        exclude = set(\"!\\\"#$%&'()*+,-./:;<=>?@[\\\\]^_`{|}~\")\n        return \"\".join(ch for ch in text if ch not in exclude)\n\n    def lower(text):\n        return text.lower()\n\n    s = str(x)\n    \n    # --- CoT Extraction for Text Generation Metrics ---\n    # If explicit answer marker exists, use it.\n    if \"####\" in s:\n        s = s.split(\"####\")[-1]\n    elif \"\\\\boxed{\" in s:\n        boxed_matches = re.findall(r\"\\\\boxed\\{([^}]+)\\}\", s)\n        if boxed_matches:\n            s = boxed_matches[-1]\n    elif len(s) > 50:\n        # 3. Common CoT patterns: \"The answer is X\", \"Answer: X\"\n        # Improved regex: capture until punctuation or end of line, not just one word\n        m = re.search(r\"(?:answer|result)\\s+is\\s+:?\\s*([^!.?\\n]+)\", s, re.IGNORECASE)\n        if m:\n            s = m.group(1).strip()\n\n    return white_space_fix(remove_articles(remove_punc(lower(s))))",
+        "sha256": "425117d9d2b3dbd506bad646745083a29ededc17f62d25e24e73393d270adc45"
+      },
+      "compute_exact_match": {
+        "source": "def compute_exact_match(preds: List[Any], refs: List[Any], **kwargs) -> Dict[str, Any]:\n    \"\"\"归一化完全匹配，多参考答案命中其一即算对。\n\n    kwargs:\n        strict: True 则大小写敏感、不归一化 (默认 False)\n        use_containment: True 则参考答案被预测文本包含也算对 (默认 False)\n    \"\"\"\n    strict = kwargs.get(\"strict\", False)\n    use_containment = kwargs.get(\"use_containment\", False)\n    scores = []\n\n    for p, r in zip(preds, refs):\n        r_list = r if isinstance(r, list) else [r]\n        p_norm = str(p) if strict else normalize_text(p).lower()\n\n        match = 0.0\n        for gold in r_list:\n            g_norm = str(gold) if strict else normalize_text(gold).lower()\n            if p_norm == g_norm:\n                match = 1.0\n                break\n            if use_containment and not strict and AnswerExtractor.text_contains_match(p, gold):\n                match = 1.0\n                break\n        scores.append(match)\n\n    return {\"score\": sum(scores) / len(scores) if scores else 0.0, \"details\": scores}",
+        "sha256": "798d8c9947f0e7c4a93734c2b6d3b6669b7f4830c47b0d9c8810e9f977f6505a"
+      }
+    }
+  },
+  "rows": [
+    {
+      "source_index": 200,
+      "condition": "source_typed",
+      "response_id": "chatcmpl-038e4097-f9c5-47f4-93e4-9647c5a12a25",
+      "raw_content": "\n\nTony Blair",
+      "raw_content_sha256": "d66ce1486c546ce6e0b64b1717f5f461a0375ae6b0b2a740fe6dd8cbdf8c1bd8",
+      "delivered_text_sha256": "6def9e2ff6ad123aa6c7aff70a52e94d3fe6868fb2a0c3139eb603b7a1c3addb",
+      "source_sha256": "05ffdf0514950787a180a2568505a9b4867b87c392a9fc0da1a1ea8e4e6d304b",
+      "reasoning_content_present": true,
+      "native_client_rule": "format_response concatenates reasoning_content and factual content into <think>...</think> followed by <answer>...</answer>",
+      "retained_native_delivered_text_score": 0.0,
+      "post_outcome_raw_content_counterfactual_score": 1.0,
+      "matched_source_aliases": [
+        "Tony blair",
+        "Tony Blair"
+      ],
+      "source_references_changed": false
+    },
+    {
+      "source_index": 40,
+      "condition": "source_typed",
+      "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+      "raw_content": "\n\nDance",
+      "raw_content_sha256": "60993747b194cb42132b0f50cc423fa3014f3709c5f16a30bd7ae5790425d56d",
+      "delivered_text_sha256": "3ad68f46f7242d68a0098589c5604080befc0dfbc295e7d7a09266215beccb38",
+      "source_sha256": "0636d90afc424880c765e9732fba7405f91edcf667bb17d2b22c6134dbeff5c7",
+      "reasoning_content_present": true,
+      "native_client_rule": "format_response concatenates reasoning_content and factual content into <think>...</think> followed by <answer>...</answer>",
+      "retained_native_delivered_text_score": 0.0,
+      "post_outcome_raw_content_counterfactual_score": 1.0,
+      "matched_source_aliases": [
+        "Dance",
+        "DanCe",
+        "DANCE"
+      ],
+      "source_references_changed": false
+    }
+  ],
+  "new_model_or_judge_calls": 0
+}

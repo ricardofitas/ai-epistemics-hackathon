@@ -111,5 +111,21 @@
     "files": 24,
     "version": 0,
     "scope": "Actualfactorial160callresultandprespecified152assistantreview;rawZIPpreserved,allpriorstudiesretained"
+  },
+  {
+    "repository": "ricardofitas/ai-epistemics-hackathon",
+    "commit": "f13493bed033859737813358e1c100e7279de4c1",
+    "branch": "ricardo/factorial-ranking-native-followup-20261114",
+    "path": "experiments/factorial-ranking-native-followup-20261114",
+    "scope": "Exploratory originalRULE ranking robustness and bounded external primary-provenance followup; zero new model/judge calls"
+  },
+  {
+    "repository": "ricardofitas/swarm-adaption-hackathon",
+    "fixture_run": 43620236269,
+    "actual_provider_run": 43620987144,
+    "actual_launch_commit": "a29c0a038e9295323fefdddcd412efd01b526995",
+    "zero_call_rescore_run": 43621794887,
+    "rescore_launch_commit": "dec3c4f0aeb2bd3d3350bbfe18aa3e390e7fc6ce",
+    "scope": "Installed native dependency/API/primary-metric integration on two exposed sources; original artifacts and post-outcome prediction-view repair retained"
   }
 ]

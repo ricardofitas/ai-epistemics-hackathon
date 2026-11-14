@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-14T17:15:12.940187+00:00",
+  "stage": "Installed One-Eval native source/request/reference/primary-metric integration",
+  "one_eval_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "dataflow_wheel_sha256": "75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+  "python": "3.11",
+  "source_revision": "66a05ec3821a2b5089ed1e32a5d65ab6ecdbf906",
+  "source_selection": "Lowest two numeric source_index values from the already frozen factorial20, before new native outputs. No replacement. Already exposed questions and no independent source-panel claim.",
+  "source_indices": [
+    40,
+    200
+  ],
+  "conditions": [
+    "native_gallery",
+    "source_typed"
+  ],
+  "condition_scope": "Native gallery exact source configuration versus explicit source task repair: question binding, free-formroute, options removal in request, plain factual output convention and native normalized exact_match. Joint integration repair, not component ablation. Source aliases unchanged.",
+  "fixture_preflight": "All4native slots use local HTTP chat-completion fixtures with deterministic answers. No provider credential available in workflow. Full original module imports and unchanged run_eval/generator/evaluator/native MetricRunner. HTTP observation/cap guard only. Fixture scores are synthetic implementation evidence.",
+  "real_phase": "Conditional maximum4HTTPPOSTs,1source+condition per child process, sameQwen model, exact native serving/client. Requires root coordination after installed fixture verified.",
+  "model": "qwen3.8-27b",
+  "provider_url": "https://api.prod.adaptionlabs.ai/api/v1/chat/completions",
+  "maximum_provider_calls": 4,
+  "maximum_calls_per_source_condition": 1,
+  "max_output_tokens_per_call": 4096,
+  "maximum_output_tokens_total": 16384,
+  "concurrency": 1,
+  "minimum_start_interval_seconds": 5,
+  "child_wall_timeout_seconds": 120,
+  "http_retries": 0,
+  "native_max_retries": 1,
+  "additional_judge_calls": 0,
+  "endpoint_primary_documentation": "https://docs.adaptionlabs.ai/tools/opencode/",
+  "endpoint_documentation_evidence": "Primary guide says hosted models can be called by a chat-completions runtime; stack calls require Responses. Actual native endpoint compatibility remains tested only by the authorized bounded real phase.",
+  "incomplete_policy": "Preserve all4plannedslots, everyHTTPtrace, errors, truncation and unattempted slots. Native raw score retained as diagnostic. finish_reason=length or HTTP/API error is unknown; readable partial text cannot upgrade it. Numeric0with0eligible references is UNSCORABLE.",
+  "outcomes": [
+    "Actual ordinary site-packages module origins and source hashes",
+    "HTTP native request bytes,payload,model,one-attempt/120wall caps; no credentials retained",
+    "Native generated row and source/reference propagation",
+    "Native primary total_samples,scored_samples,invalid_references,denominator and parser artifacts",
+    "Real completion status and usage if returned"
+  ],
+  "limits": [
+    "Fixed2source integration demonstration; no population inference",
+    "The repaired native exact_match metric is an integration diagnostic, not official MixEval modeljudge",
+    "Dependencies resolved under original declared distributions plus explicit CPU constraints; full resolution receipt captured",
+    "The observation wrapper guards/captures HTTPAdapter.send without rewriting native messages or responses"
+  ],
+  "frozen_files": {
+    "install_probe.py": "851fba97038aef6cf609a5257772e4c231c4e976e6105689e532819a596b493b",
+    "gallery_mixeval.json": "187c84dd41fcfad0de4c2994782eee011a7bc0e88046a22fe258d4d2dcaf1847",
+    "native-installed-preflight-20261114.yml": "af8f9ada396952eaa694f516028597e2e78d742a889c6fe857712dd09c4b2e67",
+    "constraints.txt": "6e3ad21733aace3bc0098ec9757caad6a52d99af58b8ce4a1e4182b29c7b55ef",
+    "native_probe.py": "1156256ea01ed79838179aaafde7f62e795f9c5b7b287d463377c8d459c4bcda",
+    "selected2.json": "adf2bf8a0e56a5a9b34be106821631b68d11398690630a1756774d617b849161"
+  }
+}

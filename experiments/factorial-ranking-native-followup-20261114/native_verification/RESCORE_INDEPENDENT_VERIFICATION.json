@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "rescore_run_id": 43621794887,
+  "original_run_id": 43620987144,
+  "rescore_archive_sha256": "63c982408b442dd5771f52a63cdfa492d5446c0e652eab7471d0b4ac0d0b49db",
+  "source_archive_sha256": "d898dfd28a0d20708b2731a7fbd899d42aadddb5d0a1b2d1617a7c73c3eb47c8",
+  "protocol_sha256": "8b1b6c5473138490083b3c2390b4555352bcbee9e3aa9e3ef53f68367c2ef000",
+  "protocol_commit": "433db326114f242cd3600b50cb328c67f075a64c",
+  "original_and_rescore_archive_members_preserved": 71,
+  "source_rows": 2,
+  "preserved_response_slots": 4,
+  "new_provider_calls": 0,
+  "new_judge_calls": 0,
+  "installed_metric_origins_unchanged": 2,
+  "slots": [
+    {
+      "source_index": 200,
+      "condition": "native_gallery",
+      "response_id": "chatcmpl-bf176af4-f5b0-41df-a7c0-5664bc4c88e7",
+      "prediction_key": "generated_ans",
+      "source_and_all_original_columns_unchanged": true,
+      "original_native_score": 0.0,
+      "rescored_native_score": 0.0,
+      "native_scored_samples": 0,
+      "interpretation": "UNSCORABLE_REFERENCE"
+    },
+    {
+      "source_index": 200,
+      "condition": "source_typed",
+      "response_id": "chatcmpl-038e4097-f9c5-47f4-93e4-9647c5a12a25",
+      "prediction_key": "provider_final_content",
+      "source_and_all_original_columns_unchanged": true,
+      "original_native_score": 0.0,
+      "rescored_native_score": 1.0,
+      "native_scored_samples": null,
+      "interpretation": "KNOWN_EXACT_MATCH_ONE"
+    },
+    {
+      "source_index": 40,
+      "condition": "native_gallery",
+      "response_id": "chatcmpl-a9297680-9848-405e-819a-e5db0ceb5d1c",
+      "prediction_key": "generated_ans",
+      "source_and_all_original_columns_unchanged": true,
+      "original_native_score": 0.0,
+      "rescored_native_score": 0.0,
+      "native_scored_samples": 0,
+      "interpretation": "UNSCORABLE_REFERENCE"
+    },
+    {
+      "source_index": 40,
+      "condition": "source_typed",
+      "response_id": "chatcmpl-89fe7021-9de8-43b7-b21f-e14e2a00b81b",
+      "prediction_key": "provider_final_content",
+      "source_and_all_original_columns_unchanged": true,
+      "original_native_score": 0.0,
+      "rescored_native_score": 1.0,
+      "native_scored_samples": null,
+      "interpretation": "KNOWN_EXACT_MATCH_ONE"
+    }
+  ],
+  "errors": [],
+  "scope": "Independent reconciliation of retained engineering replay artifacts against original live captures. Expected effects were known before this replay. No independent source sample, model generation or provider dispatch occurred in the rescore workflow. Native metrics and original columns remain preserved."
+}

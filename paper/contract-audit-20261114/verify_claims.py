@@ -160,9 +160,47 @@ fg=fs['models']['gemma-4-31b-it'];fq=fs['models']['qwen3.8-27b']
 assert fg['axes']['final']['counts']['choice__A.None']['correct']==1 and fg['axes']['content']['counts']['choice__A.None']['correct']==16
 assert len(fg['rule_credit_with_incorrect_final'])==7 and len(fg['correct_content_with_incorrect_final'])==15
 assert fq['axes']['final']['contrasts']['carrier_absent_minus_present_at_choice']=={'lower':.75,'upper':.95}
+ranking = read('ranking_sensitivity.json')
+assert ranking['status'] == 'PASS' and ranking['joint_assignments_enumerated'] == 256
+assert ranking['eligible_scores'] == 152 and ranking['unknown_scores'] == 8
+assert ranking['exploratory_reversal']['strict_reversal_for_every_assignment'] is True
+assert ranking['exploratory_reversal']['relative_qwen_gain_percentage_point_bounds'] == [35, 60]
+exclusions = ranking['secondary_caveat_exclusion_sensitivity']
+assert len(exclusions) == 7
+assert all(row['strict_reversal_for_all_256_original_unknown_assignments'] for row in exclusions.values())
+assert read('ranking_verification.json')['status'] == 'PASS'
+assert read('external_followup.json')['status'] == 'NO_LINKED_AFFECTED_EXTERNAL_CONCLUSION_VERIFIED'
+installed = read('installed_fixture_review.json')['initial_actual_fixture_verification']
+assert installed['status'] == 'PASS_WITH_ID_TYPE_ERRATUM'
+assert installed['ordinary_native_runs'] == installed['local_http_fixture_attempts'] == 4
+assert installed['new_provider_calls'] == 0 and installed['original_results_changed'] is False
+assert installed['all_archive_files_preserved_byte_identical'] == 45
+assert installed['altered_id_prompt_target_and_leading_zero_rejection_controls'] == 16
+assert sum(row['endpoint'] == 'UNSCORABLE_REFERENCE' for row in installed['slots']) == 2
+assert sum(row['endpoint'] == 'FIXTURE_KNOWN_EXACT_MATCH_ONE' for row in installed['slots']) == 2
+assert all(row['source_other_columns_exact'] and row['site_packages_origins'] == 7 for row in installed['slots'])
+assert read('installed_receipt.json')['status'] == 'PASS'
+live = read('installed_live_verification.json')
+assert live['status'] == 'PASS' and live['observed_http_attempts'] == live['new_provider_calls'] == 4
+assert live['verified_output_tokens'] == 804 and all(row['capture_eligible'] for row in live['slots'])
+assert sum(row['outcome'] == 'UNSCORABLE_REFERENCE' for row in live['slots']) == 2
+assert [row['native_primary']['score'] for row in live['slots'] if row['condition'] == 'source_typed'] == [0.0, 0.0]
+assert read('installed_live_receipt.json')['input_tokens'] == 444
+rescore = read('installed_rescore_summary.json')
+assert rescore['status'] == 'PASS' and rescore['new_provider_calls'] == 0 and len(rescore['rows']) == 4
+assert read('installed_rescore_verification.json')['status'] == 'PASS'
+for row in rescore['rows']:
+    assert row['source_reference_unchanged'] and row['original_generated_ans_unchanged']
+    metric = row['rescored_metric_result']['primary_metric_result']
+    if row['condition'] == 'source_typed':
+        assert row['prediction_key'] == 'provider_final_content'
+        assert metric['score'] == 1.0 and row['rescored_metric_result']['primary_metric_details'] == [1.0]
+        assert row['original_metric_result']['primary_metric_result']['score'] == 0.0
+    else:
+        assert metric['scored_samples'] == 0 and metric['invalid_references'] == 1
 pages = json.loads((P / 'manuscript.json').read_text())
 claims = json.loads((P / 'claims.json').read_text())
-assert len(pages) == 16 and len(claims) == 18
+assert len(pages) == 18 and len(claims) == 20
 assert 150 <= len(pages[0]['blocks'][2]['text'].split()) <= 250
 assert [row[0] for row in pages[12]['blocks'][1]['rows']] == [claim['id'] for claim in claims[:16]]
 for claim in claims:
@@ -174,7 +212,7 @@ for row, claim in zip(ledger, claims):
     assert row == dict(claim_id=claim['id'], section=claim['section'],
                        numerical_or_status_claim=claim['claim'],
                        evidence_files=claim['evidence'], qualification=claim['qualification'])
-result = dict(status='PASS', claims_checked=18, working_draft_version='1.6',
+result = dict(status='PASS', claims_checked=20, working_draft_version='1.7',
               integrated_mechanisms=['native source gate', 'shared input causes', 'MMMLU prediction', 'MixEval task kind'],
               verifier_model_requests=0, new_experiments_during_synthesis=0,
               scope='Synthesis consistency check against source snapshots')

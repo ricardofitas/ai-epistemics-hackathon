@@ -1,0 +1,78 @@
+{
+  "created_at_utc": "2026-11-14T17:14:03.839552+00:00",
+  "stage": "Post-outcome exploratory ranking sensitivity, no source/output generation or semantic annotation",
+  "repository": "ricardofitas/swarm-adaption-hackathon",
+  "run_id": 43615821403,
+  "artifact_id": 14122334278,
+  "generation_checkout_commit": "3faed45df0d53d97f0a47c3517719864a8d23007",
+  "primary_verifier_committed_before_output_inspection": "4981202b99ef90384011f40972f0d6627977bc2e",
+  "ranking_analysis_commit_before_outputs": false,
+  "new_model_or_judge_calls": 0,
+  "files": [
+    {
+      "path": "factorial_actual/mixeval-factorial-43615821403.zip",
+      "bytes": 3453852,
+      "sha256": "7f464eba93330fb19742b850aa4349eeb1804a8b45eaf4664e375b2af2ee8d6d"
+    },
+    {
+      "path": "factorial_actual/extracted/PROTOCOL.json",
+      "bytes": 7592,
+      "sha256": "b148003b2fb83cb4977a873851409f0068e70307b1ecab624073d7c59feb6e15"
+    },
+    {
+      "path": "factorial_actual/extracted/LAUNCH.json",
+      "bytes": 581,
+      "sha256": "383840dd50e6eb775fba1de0384508b4d4254602610de534cbd36e69d5c5b2fb"
+    },
+    {
+      "path": "factorial_actual/extracted/SECONDARY_ADJUDICATION_PROTOCOL.json",
+      "bytes": 5468,
+      "sha256": "bc67f73677de0856ce69f441e92c03c5a65a035cd71d317e5681cc1fd9b2dcf3"
+    },
+    {
+      "path": "factorial_actual/extracted/STATIC_SOURCE_CAVEATS.json",
+      "bytes": 1438,
+      "sha256": "1041585863f98e4e5e44e26884c802445a8d3c504d0f9d0069d8b0fef52c375c"
+    },
+    {
+      "path": "factorial_actual/extracted/ARTIFACT_INDEX.json",
+      "bytes": 50709,
+      "sha256": "d9d11a95968bee7e934a0f30daf3c26a8ebbf27ea05b67c02632e7f109ff8125"
+    },
+    {
+      "path": "factorial_final_verification/verify.py",
+      "bytes": 18650,
+      "sha256": "b49d2eb17620bd8a499a1de3128882c4b327c9961fb9208d12749dc483a70e55"
+    },
+    {
+      "path": "ranking_analysis/PRIMARY_VERIFICATION.json",
+      "bytes": 3635,
+      "sha256": "22d3f20ff8ae007265747be8dbee3331f8fcbbdea6723430567ced4a141c230a"
+    },
+    {
+      "path": "ranking_analysis/INDEPENDENT_SCORES.json",
+      "bytes": 46947,
+      "sha256": "a5b04afb0852dfe155ae42de841c5da13d1f0e4bd47d961fa7176ca9dd875cfd"
+    },
+    {
+      "path": "ranking_analysis/analyze_ranking.py",
+      "bytes": 14172,
+      "sha256": "1407e420e1f9c6b5dec1d38d587a4e07fbe8f99c547e202be38e8c73d199b33d"
+    },
+    {
+      "path": "ranking_analysis/verify_ranking.py",
+      "bytes": 4335,
+      "sha256": "2477a1e238ca53902b0e051475f724a1a3986ae371e54181a72e8bb97c74dd45"
+    },
+    {
+      "path": "ranking_analysis/RANKING_SENSITIVITY.json",
+      "bytes": 18355,
+      "sha256": "1dca7ca0bc5939985e6ed69baf0c33e0984ef1d922c00bd483dc585cc0d4b3ee"
+    },
+    {
+      "path": "ranking_analysis/RANKING_VERIFICATION.json",
+      "bytes": 341,
+      "sha256": "e31ec7d53e6de1094ed49480fb7078df096a88bb68043077dd2602b920982f9c"
+    }
+  ]
+}

@@ -336,5 +336,83 @@
     "member": "PRIMARY_INTERPRETATION_REVIEW.json",
     "sha256": "d9a60d61083891c65a87a6b8944c29602108a0e2f640025c6f1c31a45bf1ab18",
     "parent_member_sha256": "d9a60d61083891c65a87a6b8944c29602108a0e2f640025c6f1c31a45bf1ab18"
+  },
+  "ranking_sensitivity.json": {
+    "source": "Direct followup evidence copied unchanged from verified local analysis",
+    "sha256": "1dca7ca0bc5939985e6ed69baf0c33e0984ef1d922c00bd483dc585cc0d4b3ee",
+    "repository": "ricardofitas/ai-epistemics-hackathon",
+    "commit": "f13493bed033859737813358e1c100e7279de4c1",
+    "path": "experiments/factorial-ranking-native-followup-20261114/ranking_analysis/RANKING_SENSITIVITY.json"
+  },
+  "ranking_verification.json": {
+    "source": "Direct followup evidence copied unchanged from verified local analysis",
+    "sha256": "e31ec7d53e6de1094ed49480fb7078df096a88bb68043077dd2602b920982f9c",
+    "repository": "ricardofitas/ai-epistemics-hackathon",
+    "commit": "f13493bed033859737813358e1c100e7279de4c1",
+    "path": "experiments/factorial-ranking-native-followup-20261114/ranking_analysis/RANKING_VERIFICATION.json"
+  },
+  "ranking_input_provenance.json": {
+    "source": "Direct followup evidence copied unchanged from verified local analysis",
+    "sha256": "c1a39c81d618c55a626f7e891981f75d01230041e35a9e1ff4bfe281ceb989ce",
+    "repository": "ricardofitas/ai-epistemics-hackathon",
+    "commit": "f13493bed033859737813358e1c100e7279de4c1",
+    "path": "experiments/factorial-ranking-native-followup-20261114/ranking_analysis/INPUT_PROVENANCE.json"
+  },
+  "external_followup.json": {
+    "source": "Direct followup evidence copied unchanged from verified local analysis",
+    "sha256": "d46befa4ed451566318bda291af7efc655ca02df4e452e5a6b31ec051b24bbab",
+    "repository": "ricardofitas/ai-epistemics-hackathon",
+    "commit": "f13493bed033859737813358e1c100e7279de4c1",
+    "path": "experiments/factorial-ranking-native-followup-20261114/external_followup/EXTERNAL_FOLLOWUP.json"
+  },
+  "installed_receipt.json": {
+    "source": "Installed native fixture run43620236269; original artifact and subsequent independent review retained",
+    "member": "native_validation/zero_initial/extracted/INSTALL_RECEIPT.json",
+    "sha256": "c3a8ae5bbb162d58c54d3029b25f4aab5ca12f25269a5fa26de4b5853f3a3e1f"
+  },
+  "installed_fixture_review.json": {
+    "source": "Installed native fixture run43620236269; original artifact and subsequent independent review retained",
+    "member": "native_validation/INDEPENDENT_REVIEW.json",
+    "sha256": "d9e42293f92c34bcdd225fe7a16a4bce2d6e6abfbdd8780faf10d65be512cc08"
+  },
+  "installed_fixture_protocol.json": {
+    "source": "Installed native fixture run43620236269; original artifact and subsequent independent review retained",
+    "member": "native_validation/zero_initial/extracted/PROTOCOL.json",
+    "sha256": "d1db2156799373570be820f79d8792782666262642abf955dbb59c638642dec5"
+  },
+  "installed_live_verification.json": {
+    "source": "Actual native provider run43620987144, original frozen protocol and retained-artifact independent verification",
+    "member": "native_validation/real_actual/INDEPENDENT_VERIFICATION.json",
+    "sha256": "ed59a04305c0d205871238a44e5a5a4250b78d32394cc15483dd61e2836f4d44"
+  },
+  "installed_live_receipt.json": {
+    "source": "Actual native provider run43620987144, original frozen protocol and retained-artifact independent verification",
+    "member": "native_validation/real_actual/ACTUAL_RUN_RECEIPT.json",
+    "sha256": "2d307e1c0f4a54bded6e1178b231e460d527d9faee363baddab6beb2fb39795b"
+  },
+  "installed_live_protocol.json": {
+    "source": "Actual native provider run43620987144, original frozen protocol and retained-artifact independent verification",
+    "member": "native_validation/real_actual/extracted/PROTOCOL.json",
+    "sha256": "f71f0e21f5f014de0707ff3790b7e2e3c14e4cdb84781cfd9052e1c749622864"
+  },
+  "installed_rescore_summary.json": {
+    "source": "Post-outcome native MetricRunner rescore run43621794887, same four provider captures and zero new provider calls",
+    "member": "native_validation/rescore_actual/extracted/RESCORE_SUMMARY.json",
+    "sha256": "d4e39b5d6f3c077897d0414c734859d840abcd0e489342ba388d24b0142271ba"
+  },
+  "installed_rescore_verification.json": {
+    "source": "Post-outcome native MetricRunner rescore run43621794887, same four provider captures and zero new provider calls",
+    "member": "native_validation/RESCORE_INDEPENDENT_VERIFICATION.json",
+    "sha256": "1a3efc0c0a6307ff7ac0b70afcf637860c12f8e6c4b8d6053f60761e8594333e"
+  },
+  "installed_rescore_receipt.json": {
+    "source": "Post-outcome native MetricRunner rescore run43621794887, same four provider captures and zero new provider calls",
+    "member": "native_validation/rescore_actual/ACTUAL_RUN_RECEIPT.json",
+    "sha256": "5096176ab5dc283a67a2c609aaeb6fc8a09dd647e2a5dfb939458add006b796b"
+  },
+  "installed_rescore_protocol.json": {
+    "source": "Post-outcome native MetricRunner rescore run43621794887, same four provider captures and zero new provider calls",
+    "member": "native_validation/rescore_actual/extracted/PROTOCOL.json",
+    "sha256": "8b1b6c5473138490083b3c2390b4555352bcbee9e3aa9e3ef53f68367c2ef000"
   }
 }

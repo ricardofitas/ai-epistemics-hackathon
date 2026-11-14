@@ -1,0 +1,155 @@
+{
+  "status": "VALIDATION_WITH_ID_TYPE_ERRATUM",
+  "original_workflow_conclusion": "failure",
+  "run_id": 43620236269,
+  "artifact_id": 14123752594,
+  "artifact_sha256": "40daaed0a78e59a451785df9391589295f5acae80d68e0d8756826b66fc00359",
+  "ordinary_native_entrypoints_completed": 4,
+  "native_primary_metric_calls_completed": 4,
+  "local_fixture_http_calls": 4,
+  "new_provider_calls": 0,
+  "raw_results_preserved": true,
+  "rows": [
+    {
+      "source_index": 200,
+      "condition": "native_gallery",
+      "original_status": "INCOMPLETE",
+      "derived_entrypoint_validation": "PASS_WITH_ID_TYPE_ERRATUM",
+      "source_id": "200",
+      "source_id_type": "str",
+      "delivered_id": 200,
+      "delivered_id_type": "int",
+      "all_other_source_columns_equal": true,
+      "primary_metric_result": {
+        "metric": "choice_accuracy",
+        "official_metric": "accuracy",
+        "score": 0.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1,
+        "scored_samples": 0,
+        "valid_predictions": 1,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 1,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choices_key": "options"
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      }
+    },
+    {
+      "source_index": 200,
+      "condition": "source_typed",
+      "original_status": "INCOMPLETE",
+      "derived_entrypoint_validation": "PASS_WITH_ID_TYPE_ERRATUM",
+      "source_id": "200",
+      "source_id_type": "str",
+      "delivered_id": 200,
+      "delivered_id_type": "int",
+      "all_other_source_columns_equal": true,
+      "primary_metric_result": {
+        "metric": "exact_match",
+        "official_metric": "diagnostic_exact_match",
+        "score": 1.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1,
+        "scored_samples": null,
+        "valid_predictions": null,
+        "parse_failed": null,
+        "empty_output": null,
+        "invalid_references": null,
+        "parser": null,
+        "failure_policy": {},
+        "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+      }
+    },
+    {
+      "source_index": 40,
+      "condition": "native_gallery",
+      "original_status": "INCOMPLETE",
+      "derived_entrypoint_validation": "PASS_WITH_ID_TYPE_ERRATUM",
+      "source_id": "40",
+      "source_id_type": "str",
+      "delivered_id": 40,
+      "delivered_id_type": "int",
+      "all_other_source_columns_equal": true,
+      "primary_metric_result": {
+        "metric": "choice_accuracy",
+        "official_metric": "accuracy",
+        "score": 0.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1,
+        "scored_samples": 0,
+        "valid_predictions": 1,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 1,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choices_key": "options"
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      }
+    },
+    {
+      "source_index": 40,
+      "condition": "source_typed",
+      "original_status": "INCOMPLETE",
+      "derived_entrypoint_validation": "PASS_WITH_ID_TYPE_ERRATUM",
+      "source_id": "40",
+      "source_id_type": "str",
+      "delivered_id": 40,
+      "delivered_id_type": "int",
+      "all_other_source_columns_equal": true,
+      "primary_metric_result": {
+        "metric": "exact_match",
+        "official_metric": "diagnostic_exact_match",
+        "score": 1.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 1,
+        "scored_samples": null,
+        "valid_predictions": null,
+        "parse_failed": null,
+        "empty_output": null,
+        "invalid_references": null,
+        "parser": null,
+        "failure_policy": {},
+        "official_compatibility": "Native normalized exact_match is an integration diagnostic; official MixEval judge is unexecuted"
+      }
+    }
+  ],
+  "interpretation": "The failed workflow retained completed native pipeline and primary metric evidence. The audit guard rejected reversible numeric ID dtype conversion after metric execution. This derived reconciliation preserves the failed workflow and qualifies the exact comparison accepted. Fixture score1 is synthetic implementation evidence."
+}

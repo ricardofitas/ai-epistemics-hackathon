@@ -1,23 +1,20 @@
 {
   "status": "PASS",
-  "version": "1.5",
-  "page_count": 14,
-  "main_text_pages": 8,
-  "claims_checked": 16,
-  "original_15_claim_checks": "PASS unchanged quantities",
-  "semantic_new_claim_check": "PASS",
-  "original_rule_results_retained": true,
-  "source_hash_check": "PASS allbundledsnapshots",
-  "layout_and_used_embedded_fonts": "PASS",
-  "new_model_api_calls": 0,
-  "new_judge_api_calls": 0,
-  "review_type": "Retrospective two-assistant masked adjudication, nothuman/defaultjudge",
-  "changed_main_pages": [
-    8
+  "working_draft_version": "1.7",
+  "baseline_version": "1.6",
+  "baseline_library_pdf_version": 6,
+  "baseline_library_source_zip_version": 6,
+  "prior_claims_C1_C18_exactly_preserved": true,
+  "added_claims": [
+    "C19",
+    "C20"
   ],
-  "changed_appendix_pages": [
-    12,
-    13,
-    14
-  ]
+  "main_pages": 8,
+  "total_pages": 18,
+  "claims": 20,
+  "new_calls_during_synthesis": 0,
+  "underlying_actual_provider_integration_calls": 4,
+  "post_outcome_ranking_and_prediction_view_explicit": true,
+  "source_and_numeric_checks": "PASS",
+  "visual_bounds_fonts": "PASS"
 }

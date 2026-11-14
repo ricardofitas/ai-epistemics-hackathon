@@ -1,0 +1,26 @@
+{
+  "status": "PASS_INDEPENDENTLY_VERIFIED",
+  "run_id": 43621794887,
+  "job_id": 132528895772,
+  "repository": "ricardofitas/swarm-adaption-hackathon",
+  "protocol_commit": "433db326114f242cd3600b50cb328c67f075a64c",
+  "protocol_sha256": "8b1b6c5473138490083b3c2390b4555352bcbee9e3aa9e3ef53f68367c2ef000",
+  "launch_commit": "dec3c4f0aeb2bd3d3350bbfe18aa3e390e7fc6ce",
+  "artifact_id": 14123944122,
+  "artifact_sha256": "63c982408b442dd5771f52a63cdfa492d5446c0e652eab7471d0b4ac0d0b49db",
+  "artifact_bytes": 903148,
+  "artifact_members": 20,
+  "new_provider_calls": 0,
+  "original_generation_calls_reused": 4,
+  "ordinary_native_metric_rows": 4,
+  "typed_primary_scores": [
+    1.0,
+    1.0
+  ],
+  "stock_reference_eligible": [
+    0,
+    0
+  ],
+  "scope": "Post-outcome engineering repair of declared native prediction column on the same four captured outputs. Known expected values; source references and original generated_ans/native scores preserved.",
+  "independent_verification": "native_validation/RESCORE_INDEPENDENT_VERIFICATION.json"
+}

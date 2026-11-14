@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "repository": "ricardofitas/swarm-adaption-hackathon",
+  "branch": "ricardo/oneeval-native-live-20261114",
+  "run_id": 43620987144,
+  "job_id": 132526395641,
+  "attempt": 1,
+  "protocol_commit": "c31c0619ec0fb7a70332be33a43f43e6dda2ca4f",
+  "protocol_sha256": "f71f0e21f5f014de0707ff3790b7e2e3c14e4cdb84781cfd9052e1c749622864",
+  "launch_commit": "a29c0a038e9295323fefdddcd412efd01b526995",
+  "independent_verifier_commit": "0cb3b9451df49636a3911aee042744372c67f003",
+  "artifact_id": 14124236646,
+  "artifact_bytes": 939156,
+  "artifact_sha256": "d898dfd28a0d20708b2731a7fbd899d42aadddb5d0a1b2d1617a7c73c3eb47c8",
+  "actual_http_posts": 4,
+  "complete_capture": 4,
+  "unknown_capture": 0,
+  "judge_calls": 0,
+  "model": "qwen3.8-27b",
+  "input_tokens": 444,
+  "output_tokens": 804,
+  "minimum_start_interval_seconds": 14.585973852999985,
+  "stock_gallery_rows": 2,
+  "stock_gallery_reference_eligible": 0,
+  "repaired_rows": 2,
+  "repaired_dataflow_diagnostic": [
+    1,
+    1
+  ],
+  "repaired_native_primary_em": [
+    0,
+    0
+  ],
+  "new_independent_source_questions": 0,
+  "boundary": "Two already exposed source questions. Joint source task repair and native metric integration diagnostic. Complete installed pipeline/native provider/native primary metric executed without dependency facades or scorer replacement. Original HTTP client response formatter preserved."
+}

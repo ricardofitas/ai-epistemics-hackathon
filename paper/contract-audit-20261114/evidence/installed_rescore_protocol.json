@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "stage": "Post-outcome engineering repair of native prediction view",
+  "created_at": "2026-11-14T17:33:22.867975+00:00",
+  "timing": "Actual four native outputs and independent raw-final counterfactual inspected before this engineering protocol. Expected outcomes known. Freeze before running installed native MetricRunner rescore.",
+  "original_run_id": 43620987144,
+  "original_execution_commit": "a29c0a038e9295323fefdddcd412efd01b526995",
+  "original_artifact_id": 14124236646,
+  "original_artifact_sha256": "d898dfd28a0d20708b2731a7fbd899d42aadddb5d0a1b2d1617a7c73c3eb47c8",
+  "source_indices": [
+    40,
+    200
+  ],
+  "fixed_slots": 4,
+  "source_selection": "All four original actual native rows, same exposed two questions and native_gallery/source_typed conditions; no omissions or replacements.",
+  "transformation": "Append provider_final_content as verbatim raw chat choices[0].message.content after exact rawbody SHA, response ID, model, finish_reason, source hash and source/delivered row validation. Preserve generated_ans and target columns unchanged.",
+  "prediction_view": "Original gallery keeps pred_key generated_ans and original choice metric. Source_typed changes only metric input pred_key to provider_final_content; its unchanged native exact_match and full accepted-alias list remain original. No reference-driven extraction or scorer modification.",
+  "outcomes": [
+    "Installed original native MetricRunner and general metric module origins/hashes",
+    "All4rawsource/request/response/rawbody hashes retained",
+    "Both original gallery rows retain primary numeric0/scored_samples0/invalid_reference1",
+    "Two typed fixed rows use raw-final column and native exact_match produces1.0 detail[1.0]",
+    "Original wrapper-based exact_match0 retained for direct comparison"
+  ],
+  "dependency_policy": "Same authentic One-Eval revision, DataFlow wheel and250frozen resolveddependencyconstraints used in actualrun. Complete pipinstall andpipcheck; nofacades.",
+  "maximum_provider_calls": 0,
+  "maximum_judge_calls": 0,
+  "credential_policy": "No model-provider credential available to any workflow step; only public source acquisition and package installation networking.",
+  "unknown_policy": "Any source/rawbody/ID/terminal/column mismatch aborts validation and preserves failure. No partial answer upgrade or source substitution.",
+  "frozen_files": {
+    "offline_rescore.py": "a385b0257f4cbe9f4f06df527c8085660d46d627c9f37c38984e5f3502f78d73",
+    "install_probe.py": "ff1f8a56b1b93b219ba36281fc7cdc80d95821efb634dc8cb4d8a83e2700a826",
+    "constraints.txt": "e0b660e1cb0b78a1a690d2376353f050584842146b716db14730c3e84cc80256",
+    "RESCORE_INPUTS.json": "0042527f975efefb813c5dd636fd269a5128c479f408526ff507003fb5c74cd2",
+    "oneeval-native-offline-rescore-20261114.yml": "15805f4b38e55bfee1f2dc73b168c58f42e1af1d3ed3e952400e64d1e0596e70"
+  }
+}

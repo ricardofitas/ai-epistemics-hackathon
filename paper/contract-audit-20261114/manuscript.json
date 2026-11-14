@@ -5,7 +5,7 @@
     "blocks": [
       {
         "kind": "meta",
-        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.6"
+        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.7"
       },
       {
         "kind": "heading",
@@ -614,7 +614,7 @@
       },
       {
         "kind": "p",
-        "text": "Reproducibility and implementation sensitivity are established concerns [1,2]. This study follows the official source semantics through task kind, request construction and reference interpretation. The collision calculation and individual invariants provide diagnostic tools within that established methodological setting."
+        "text": "Reproducibility and implementation sensitivity are established concerns [1,2]. Upstream One-Eval PR #63 already describes extraction/scoring corrections and changes headline reports to the primary metric [14]. The present study traces official source semantics through task kind, request construction and reference interpretation, with measured consequences for the pinned transformations."
       },
       {
         "kind": "p",
@@ -630,7 +630,7 @@
       },
       {
         "kind": "p",
-        "text": "Public evidence reaches upstream demos with scores/conclusions, a LoopAI execution log and copied components. No matched executable revision/request/output trace establishes an independently affected conclusion. The inspected original 100-request paper study ends before model evaluation. Bounded searches do not establish deployment frequency."
+        "text": "Public evidence includes upstream demos, a LoopAI execution log and copied components. A new DataFlow paper lead reports ARC-C and WinoGrande results [15], but its inspected provenance leaves the evaluation path and per-question attribution unresolved. An independently affected conclusion remains unresolved, and bounded searches cannot estimate deployment frequency."
       },
       {
         "kind": "heading",
@@ -642,7 +642,7 @@
       },
       {
         "kind": "p",
-        "text": "A separate crossed diagnostic isolates an instruction-by-placeholder interaction (Appendices F-G); it does not support a uniform free-form benefit. Complete installed-provider execution and affected independent external conclusions remain open."
+        "text": "The crossed diagnostic identifies an instruction-by-placeholder interaction (Appendices F-G). An exploratory RULE ranking reversal survives incomplete-output assignments and source-caveat exclusions (Appendix H). The installed pipeline also reaches the real provider and native metric on two sources (Appendix I), where prediction representation needs explicit alignment. Official model judging and affected external conclusions remain open."
       }
     ]
   },
@@ -651,7 +651,7 @@
     "blocks": [
       {
         "kind": "small",
-        "text": "[1] Biderman et al. Lessons from the Trenches on Reproducible Evaluation of Language Models. arXiv:2405.14782, v3 (2026 revision). https://arxiv.org/abs/2405.14782v3<br/>[2] Hugging Face. Evaluation Guidebook: Troubleshooting reproducibility. Consulted 14 Nov 2026. github.com/huggingface/evaluation-guidebook<br/>[3] Ludwick and Hsiao. SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges. arXiv:2610.28886v2 (23 Oct 2026). https://arxiv.org/html/2610.28886v2<br/>[4] OpenDCAI/One-Eval, revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506.<br/>[5] EleutherAI/lm-evaluation-harness, revision d6de81643928d653435c431bae19945d41d32520.<br/>[6] Official source record captures, native implementation snapshots, protocols and analysis manifests identified in the accompanying evidence package.<br/>[7] Zhao et al. Towards Evaluation Engineering: An Empirical Study of ML Evaluation Harnesses in the Wild. arXiv:2605.24213v1. https://arxiv.org/html/2605.24213v1<br/>[8] Dev et al. Judge Reliability Harness. arXiv:2603.05399v1. https://arxiv.org/abs/2603.05399v1 (abstract-only comparison).<br/>[9] Social IQa official source and frozen transfer protocol: source revision and exact archive/checker hashes in SOURCE_ARCHIVES.json and evidence/social_protocol.json.<br/>[10] MixEval official custom-evaluation guide, revision 7c52b41929d461df7733573528bdfb08774b0c53. github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/docs/how_to_use_your_own_eval_code.md<br/>[11] OpenAI MMMLU official dataset, revision 325a01dc3e173cac1578df94120499aaca2e2504. huggingface.co/datasets/openai/MMMLU/tree/325a01dc3e173cac1578df94120499aaca2e2504<br/>[12] Shared-cause, native-gate and MixEval protocols, captures and verification in the accompanying version-pinned source archives. <br/>[13] JinjieNi/MixEval optional rule and model scoring implementations, revision 7c52b41929d461df7733573528bdfb08774b0c53, mix_eval/utils/metric_utils.py and mix_eval/compute_metrics.py. Exact source/module hashes and fixed-output protocols accompany this manuscript."
+        "text": "[1] Biderman et al. Lessons from the Trenches on Reproducible Evaluation of Language Models. arXiv:2405.14782, v3 (2026 revision). https://arxiv.org/abs/2405.14782v3<br/>[2] Hugging Face. Evaluation Guidebook: Troubleshooting reproducibility. Consulted 14 Nov 2026. github.com/huggingface/evaluation-guidebook<br/>[3] Ludwick and Hsiao. SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges. arXiv:2610.28886v2 (23 Oct 2026). https://arxiv.org/html/2610.28886v2<br/>[4] OpenDCAI/One-Eval, revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506.<br/>[5] EleutherAI/lm-evaluation-harness, revision d6de81643928d653435c431bae19945d41d32520.<br/>[6] Official source record captures, native implementation snapshots, protocols and analysis manifests identified in the accompanying evidence package.<br/>[7] Zhao et al. Towards Evaluation Engineering: An Empirical Study of ML Evaluation Harnesses in the Wild. arXiv:2605.24213v1. https://arxiv.org/html/2605.24213v1<br/>[8] Dev et al. Judge Reliability Harness. arXiv:2603.05399v1. https://arxiv.org/abs/2603.05399v1 (abstract-only comparison).<br/>[9] Social IQa official source and frozen transfer protocol: source revision and exact archive/checker hashes in SOURCE_ARCHIVES.json and evidence/social_protocol.json.<br/>[10] MixEval official custom-evaluation guide, revision 7c52b41929d461df7733573528bdfb08774b0c53. github.com/JinjieNi/MixEval/blob/7c52b41929d461df7733573528bdfb08774b0c53/docs/how_to_use_your_own_eval_code.md<br/>[11] OpenAI MMMLU official dataset, revision 325a01dc3e173cac1578df94120499aaca2e2504. huggingface.co/datasets/openai/MMMLU/tree/325a01dc3e173cac1578df94120499aaca2e2504<br/>[12] Shared-cause, native-gate and MixEval protocols, captures and verification in the accompanying version-pinned source archives. <br/>[13] JinjieNi/MixEval optional rule and model scoring implementations, revision 7c52b41929d461df7733573528bdfb08774b0c53, mix_eval/utils/metric_utils.py and mix_eval/compute_metrics.py. Exact source/module hashes and fixed-output protocols accompany this manuscript.<br/>[14] OpenDCAI/One-Eval PR #63, merged 1 July 2026, merge revision 9addc1ecd29a30d4e4187f4dfd55142958d641ea. https://github.com/OpenDCAI/One-Eval/pull/63<br/>[15] OpenDCAI DataFlow paper, arXiv:2512.16676v1, section 7.1 and Table 2. https://arxiv.org/html/2512.16676v1. Inspected repository revision 84863d868fa91bd6169001af33b25e127bce709d. Evaluation-path attribution remains unresolved."
       }
     ]
   },
@@ -906,7 +906,7 @@
     "blocks": [
       {
         "kind": "p",
-        "text": "Eighteen claims retain exact evidence. C1-C16 are mapped below; C17-C18 appear in Appendices F-G. Reused sources and new responses remain separate units."
+        "text": "Twenty claims retain exact evidence. C1-C16 are mapped below, C17-C18 appear in Appendices F-G, C19 in Appendix H and C20 in Appendix I. Reused sources and new responses remain separate units."
       },
       {
         "kind": "table",
@@ -1009,7 +1009,7 @@
       },
       {
         "kind": "p",
-        "text": "Run verify_claims.py to reconcile eighteen claims with the bundled source snapshots and hashes. Original study archives retain selection, request captures and runtime verification. Synthesis checks add no observations."
+        "text": "Run verify_claims.py to reconcile twenty claims with the bundled source snapshots and hashes. Original study archives retain selection, request captures and runtime verification. The ranking derivative enumerates missing-outcome assignments on existing responses. The installed study preserves its original failure and derived identifier-type erratum."
       }
     ]
   },
@@ -1248,6 +1248,193 @@
       {
         "kind": "p",
         "text": "The primary endpoint remains unchanged. These are same-family assistant judgments, not human gold labels or the default MixEval judge; agreement does not imply statistically independent errors. Source gold is not independently fact-checked, and output style can reveal condition. The fixed panel is exposed, custom wording is used and counterbalancing is deterministic. The interaction identifies a conditional response-and-measurement mechanism for these tested transformations, not universal capability loss, hidden knowledge or external deployment impact."
+      }
+    ]
+  },
+  {
+    "title": "Appendix H. Exploratory ranking sensitivity",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "H.1. A ranking consequence under the original RULE endpoint (C19)"
+      },
+      {
+        "kind": "p",
+        "text": "This ranking comparison was selected after the aggregate factorial results were visible. It uses the original optional official RULE score and the same 20 source questions repeated across both models and four conditions. The 152 complete scores are fixed. Each of the eight incomplete scores is assigned both binary possibilities, producing 256 joint assignments."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Diagnostic condition",
+          "Qwen minus Gemma (pp)"
+        ],
+        "rows": [
+          [
+            "Choice instruction with appended A.None",
+            "-40 to -30"
+          ],
+          [
+            "Free-form instruction with carrier absent",
+            "+5 to +20"
+          ],
+          [
+            "Relative shift between those conditions",
+            "+35 to +60"
+          ]
+        ],
+        "widths": [
+          324,
+          155
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "Every assignment preserves a strict reversal of the assigned ranking. The paired source certificate has eight sources contributing nine known net accepted responses, nine sources contributing zero, and three sources with uncertain contributions. Their combined shift ranges from seven to twelve net responses among the 20 sources. These are fixed-panel missing-outcome bounds."
+      },
+      {
+        "kind": "heading",
+        "text": "H.2. Sensitivity to source caveats"
+      },
+      {
+        "kind": "p",
+        "text": "Three source caveats were recorded before generation. Source 860 asks for an office-holder without a date or jurisdiction, source 571 requests two age ranges with list-valued references, and source 281 already contains intrinsic Yes/No options. Seven secondary calculations exclude every nonempty subset of those three sources. The original 20-source primary result is retained."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Secondary retained panel",
+          "Choice + A.None gap",
+          "Free-form / absent gap",
+          "Relative shift"
+        ],
+        "rows": [
+          [
+            "All 20 sources",
+            "-40 to -30 pp",
+            "+5 to +20 pp",
+            "+35 to +60 pp"
+          ],
+          [
+            "17 sources after all three exclusions",
+            "-41.176 to -35.294 pp",
+            "+5.882 to +11.765 pp",
+            "+41.176 to +52.941 pp"
+          ]
+        ],
+        "widths": [
+          145,
+          115,
+          112,
+          107
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "All seven exclusion panels retain the strict reversal. Exhaustive enumeration and a separate signed-coefficient calculation agree in 55 numerical checks. Both implementations were produced within the same assistant analysis. The exclusions are post-outcome robustness calculations and add no new questions or model responses."
+      },
+      {
+        "kind": "heading",
+        "text": "H.3. Measurement scope"
+      },
+      {
+        "kind": "p",
+        "text": "The result describes a ranking assigned by a whole-text rule evaluator under custom diagnostic prompts. The secondary factual-final and endorsed-content endpoints in Appendix G remain distinct. An accepted alias in a rationale can earn RULE credit even when the final response is symbolic. Inference therefore remains limited to the assigned RULE ranking on these captured responses. Factual-final ranking, population performance and external deployment impact require their own evidence."
+      }
+    ]
+  },
+  {
+    "title": "Appendix I. Installed native pipeline boundary",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "I.1. Authentic dependencies and original entrypoints (C20)"
+      },
+      {
+        "kind": "p",
+        "text": "One-Eval revision 8aba20ad and open-dataflow 1.0.10 were installed on Python 3.11 with the original declared dependencies, explicit CPU constraints and a successful dependency consistency check. Four cells cross two previously exposed source questions (indices 40 and 200) with the native gallery and a source-typed configuration. Original run_eval, generator, evaluator, HTTP client and MetricRunner execute through ordinary installed imports. Seven module origins per cell match pinned native source bytes."
+      },
+      {
+        "kind": "p",
+        "text": "Run 43620236269 performs four local HTTP fixtures carrying deterministic known answers and makes zero provider calls. Both native-gallery cells exclude their reference, with scored_samples 0 and invalid_references 1. Their numeric zero is classified UNSCORABLE. Both source-typed cells return native exact_match 1.0 on the synthetic known answers. Original accepted-answer lists remain intact. The raw exact_match result leaves scored_samples null, so any derived eligible count must be labeled separately."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Installed fixture condition",
+          "Cells",
+          "Native metric interpretation"
+        ],
+        "rows": [
+          [
+            "Native gallery",
+            "2",
+            "Reference excluded in each cell; UNSCORABLE"
+          ],
+          [
+            "Source-typed repair",
+            "2",
+            "Known fixture answer receives exact_match 1.0"
+          ]
+        ],
+        "widths": [
+          172,
+          47,
+          260
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "I.2. Preserved identifier-type audit failure"
+      },
+      {
+        "kind": "p",
+        "text": "The original workflow finishes with failure after all four native metric executions. Its strict audit rejects pandas converting identifier strings \"40\" and \"200\" to integers. All 45 original archive files and failed result labels are preserved. A derived verification accepts only exact canonical string roundtrip for these two identifiers and checks every other source column unchanged. It passes all four existing rows and 16 altered-ID, prompt, target and leading-zero rejection controls. The derived status is PASS_WITH_ID_TYPE_ERRATUM. The fixture HTTP start interval is at least 8.869 seconds."
+      },
+      {
+        "kind": "heading",
+        "text": "I.3. Actual provider dispatch and measurement alignment"
+      },
+      {
+        "kind": "p",
+        "text": "A separate protocol c31c0619 precedes actual provider run 43620987144, launch a29c0a03. Four unique Qwen requests return HTTP 200 with finish_reason stop and no capture unknowns. They use 444 input and 804 output tokens, with a minimum actual start interval of 14.586 seconds. Both gallery cells remain UNSCORABLE. Both source-typed responses contain an accepted literal final answer in provider message.content. The original client renders reasoning and final content into generated_ans. Our selected normalized exact_match diagnostic gives that rendered text 0.0 in both typed cells."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Actual provider captures / scoring view",
+          "Rows",
+          "Native result"
+        ],
+        "rows": [
+          [
+            "Original gallery / generated_ans",
+            "2",
+            "No eligible references; UNSCORABLE"
+          ],
+          [
+            "Source-typed / rendered generated_ans",
+            "2",
+            "exact_match 0.0 in both rows"
+          ],
+          [
+            "Same source-typed captures / message.content",
+            "Same 2",
+            "exact_match 1.0 in both rows"
+          ]
+        ],
+        "widths": [
+          260,
+          54,
+          165
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "A post-outcome engineering rescore copies the immutable API message.content verbatim into a declared provider_final_content column and selects it only for the typed exact_match calculation. Run 43621794887 invokes the original installed MetricRunner on the four preserved rows with zero new provider calls. Both typed scores become 1.0 and both original-gallery rows stay UNSCORABLE. Independent checks bind every source, request, body, response ID and original metric, preserve all previous row fields, and authenticate both native metric modules. Original actual scores remain available."
+      },
+      {
+        "kind": "p",
+        "text": "The source-typed repair jointly changes binding, task route, options, output convention and metric selection. The rendering mismatch arises in our selected exact_match diagnostic. The content-view test is post-outcome engineering validation on two exposed questions. Official MixEval model judging and independent external impact remain separate evidential boundaries."
       }
     ]
   }

@@ -30,7 +30,7 @@ def safe(text):return html.escape(text).replace('&lt;br/&gt;','<br/>')
 def foot(canvas,doc):
  canvas.setStrokeColor(colors.HexColor('#D6DFE8'));canvas.line(58,42,537,42)
  canvas.setFillColor(colors.HexColor('#607286'));canvas.setFont('Sans',7.5)
- canvas.drawString(58,29,'Private working manuscript | Evidence synthesis v1.6 | 14 November 2026')
+ canvas.drawString(58,29,'Private working manuscript | Evidence synthesis v1.7 | 14 November 2026')
  canvas.drawRightString(537,29,str(doc.page))
 story=[]
 for i,page in enumerate(pages):

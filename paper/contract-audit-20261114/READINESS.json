@@ -1,13 +1,13 @@
 {
   "status": "PRIVATE_WORKING_DRAFT_READY_FOR_INTERNAL_REVIEW",
-  "pages": 16,
-  "claims": 18,
+  "pages": 18,
+  "claims": 20,
   "numerical_consistency": "PASS",
   "visual_review": "PASS",
   "not_ready_for_external_submission": [
     "Global novelty clearance and direct comparative implementation study remain open.",
     "Repeated source content and incomplete/ambiguouspubliccachematching limitgeneralization.",
-    "Full installeddistribution/provider/tokenizer/native-primarymetric integration untested; nativeorchestration usesexplicitdependencyfacades and replacedprovider/scoring.",
+    "The native API route is verified on two exposed source questions. Local model/tokenizer integration and the official MixEval default model judge retain separate unverified boundaries.",
     "Defaultofficialmodeljudge and independentlyaffectedexternalconclusion unverified.",
     "Authoragreement/venuepresentation pending.",
     "Small source-exposed fixed-order pilot; retrospective assistant adjudication is not human/default-judge validation; final-answer/content constructs remain separate.",
@@ -15,11 +15,11 @@
   ],
   "strongest_supported_claim": "Pinned source-to-request, task-kind and source-to-reference defects with controlled empirical consequences and bounded causal/transfer interventions.",
   "next_actions": [
-    "Select a new evidential gap after interpreting factorial interaction; do not repeat160responses or152reviews.",
-    "Close ordinary installed-provider/nativeprimarymetric boundary under recorded resources.",
-    "Pursue affected external conclusion only from a genuinely new primary trace."
+    "Choose further validation for an unresolved evidential gap after interpreting the interaction and measurement boundary.",
+    "Validate checker transfer or independent factual annotation with fixed criteria and preserved nulls.",
+    "Follow a new primary external trace when it supplies executable revision, requests, outputs and a reported consequence."
   ],
-  "working_draft_version": "1.6",
+  "working_draft_version": "1.7",
   "native_task_path_integration": "PASS200cases/801requests/400constructed scoring fixtures; models and tokenizers excluded",
   "integrated_updates": [
     "Installed native source/request gate",
@@ -30,7 +30,11 @@
     "49existingpublicresponse replay with incomplete matching",
     "Bounded fullmodule nativeorchestration and identity/coveragecontrols",
     "Source-placeholder and denominator clarification; rawhashcollision erratum retained",
-    "Masked assistant adjudication of final answers and endorsed factual content on69existingcompleteoutputs"
+    "Masked assistant adjudication of final answers and endorsed factual content on69existingcompleteoutputs",
+    "Prespecified 160-call factorial and 152-response assistant secondary review retained from v1.6",
+    "Exploratory 256-assignment RULE ranking sensitivity and seven caveat exclusion panels",
+    "Primary upstream PR63 recognition of scoring/reporting corrections and bounded DataFlow external-result lead",
+    "Installed native API and MetricRunner execution on four real captures, original scores preserved, explicit fixed-output content-view alignment"
   ],
   "main_text_pages": 8,
   "native_orchestration": "PASS_WITH_PROVENANCE_ERRATUM;49reusedresponses,10coveragecontrols,fullnativefileswithdeclaredinterventions",
@@ -39,5 +43,38 @@
   "latest_pilot_complete_responses": 69,
   "latest_pilot_unknown_responses": 11,
   "latest_pilot_verification": "PASS independent80request/source/terminal/ledger/common-score/bounds reconciliation",
-  "semantic_review": "PASS68/69agreementperaxis;17content/finaldiscordances;newAPIcalls0"
+  "semantic_review": "PASS68/69agreementperaxis;17content/finaldiscordances;newAPIcalls0",
+  "factorial_trial": {
+    "requests": 160,
+    "completed": 152,
+    "unknown": 8,
+    "primary": "original optional official RULE",
+    "secondary": "two same-family assistant reviewers",
+    "source_cases_per_model": 20
+  },
+  "ranking_derivative": {
+    "status": "PASS",
+    "scope": "Exploratory post-outcome fixed-panel RULE ranking",
+    "joint_unknown_assignments": 256,
+    "caveat_exclusion_panels": 7,
+    "new_calls": 0
+  },
+  "native_installed_integration": {
+    "fixture_runs": 4,
+    "actual_provider_requests": 4,
+    "complete_actual_captures": 4,
+    "unknown_actual_captures": 0,
+    "original_gallery_reference_eligible": 0,
+    "original_typed_exact_match": [
+      0,
+      0
+    ],
+    "same_capture_content_view_exact_match": [
+      1,
+      1
+    ],
+    "fixed_output_rescore_new_provider_calls": 0,
+    "scope": "Original installed API client and native MetricRunner; our diagnostic exact_match; two exposed source questions",
+    "fixture_error": "Original strict ID-type audit failure retained; derived verification passes canonical roundtrip and16faultcontrols"
+  }
 }

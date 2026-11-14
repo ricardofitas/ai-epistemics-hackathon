@@ -1,0 +1,318 @@
+{
+  "schema": 1,
+  "date": "2026-11-14",
+  "scope": "Targeted follow-up of one external model-result lead and upstream issue/release provenance; no new model calls or outbound communication.",
+  "prior_audit": "a845436eef:experiments/causal-external-audit-20261114/EXTERNAL_IMPACT_UPDATE.json",
+  "status": "NO_LINKED_AFFECTED_EXTERNAL_CONCLUSION_VERIFIED",
+  "new_primary_leads": [
+    {
+      "name": "Upstream scoring/report correction",
+      "url": "https://github.com/OpenDCAI/One-Eval/pull/63",
+      "author": "houhyh",
+      "merged_at": "2026-07-01T11:47:40Z",
+      "head_commit": "8c0aa457eacda591667983e2f7573ed64c4dae9a",
+      "merge_commit": "9addc1ecd29a30d4e4187f4dfd55142958d641ea",
+      "observed": "The author describes fixes to extraction/scoring and shifts headline reports to primary metric. The inspected diff implements native parser/contract scoring and diagnostic-role reporting.",
+      "interpretation": "Prior primary recognition of scoring/reporting defects and contract-based scoring must be acknowledged. This does not demonstrate prior discovery or repair of our exact source-to-request and list-reference defects.",
+      "run_artifacts": "No linked raw request/response/affected model conclusion in the inspected PR description and review comments."
+    },
+    {
+      "name": "DataFlow downstream paper benchmark table",
+      "repo": "OpenDCAI/DataFlow",
+      "commit": "84863d868fa91bd6169001af33b25e127bce709d",
+      "readme_blob": "2c63ea52c2d821e26d019eaf383f9faac2aec6c8",
+      "paper_url": "https://arxiv.org/html/2512.16676v1",
+      "inspected_sections": [
+        "7",
+        "7.1.1",
+        "7.1.2",
+        "Table2"
+      ],
+      "observed": "The paper and README report ARC-C and WinoGrande scores for four pretraining-data methods. Table2 gives DataFlow-30B average35.69 versus35.26 Random and35.57 FineWeb-Edu. Training descriptions identify Megatron-DeepSpeed for the pretraining comparison.",
+      "missing": [
+        "Evaluation implementation and executable revision for that table",
+        "Per-question requests/responses and source association",
+        "A demonstrated path through affected One-Eval/DataFlow generator code"
+      ],
+      "disposition": "New concrete reported-conclusion lead, with benchmark overlap. Provenance is insufficient to attribute its numbers to the identified defects."
+    },
+    {
+      "name": "LoopAI complete pinned repository tree",
+      "repo": "OpenDCAI/Dataflow-LoopAI",
+      "commit": "30d078f36bb95508088f0ea229cbd804105b41f9",
+      "tree_entries": 1067,
+      "truncated": false,
+      "observed": "The path search found the already known examples/scripts/one_eval.log. No path named for MixEval/WinoGrande/OpenBookQA/MMMLU/arc_challenge or eval_results in the pinned tree. Direct one_eval imports and older copied metric source exist.",
+      "qualification": "Path-name census only; not an exhaustive semantic-content audit. Component imports or copied metrics do not establish use in an affected conclusion."
+    }
+  ],
+  "candidate_dispositions": [
+    {
+      "repo": "nobeldhar/NeuroPrefetcher",
+      "blob": "5643b6f4480fc35696e890f7321a26f80a110c00",
+      "path": "quality_study/run_one_eval.sh",
+      "observation": "Calls engine/lm_eval_a100.py with ARC-Challenge/HellaSwag. The string one_eval is its script filename.",
+      "direct_one_eval_import": false
+    },
+    {
+      "repo": "Svardfox/Draft-KV",
+      "blob": "79bf8ccdce3bea1d8f12b258b081ec4a72b28371",
+      "path": "script/draft_kv/run_stage3_eval_all.sh",
+      "observation": "Custom Draft-KV Stage3 script and locally adapted datasets. No explicit OpenDCAI One-Eval project link in the inspected script.",
+      "direct_one_eval_import": false
+    },
+    {
+      "repo": "EricA1019/ozone",
+      "blob": "9732e33b243f79dbb9e465321640ce478b4c3e12",
+      "path": "contrib/evals/scripts/presets.py",
+      "observation": "Own preset definitions identify lm-eval task names and llama-cpp loglikelihood path.",
+      "direct_one_eval_import": false
+    },
+    {
+      "repo": "huayinl/model_efficiency_evolution",
+      "blob": "774adc8ee944edaacfecf7c4ade3bb1cd7d1afea",
+      "path": "data/cleaned_dataset.csv",
+      "observation": "Repository metadata table includes project names, without per-question evaluation traces."
+    }
+  ],
+  "queries": [
+    {
+      "query": "\"DataFlowEvalTool\" \"mixeval\" -repo:OpenDCAI/One-Eval",
+      "total_count": 0,
+      "items": []
+    },
+    {
+      "query": "\"one_eval\" \"arc_challenge\" -repo:OpenDCAI/One-Eval",
+      "total_count": 6,
+      "items": [
+        {
+          "repository": "nobeldhar/NeuroPrefetcher",
+          "path": "quality_study/run_one_eval.sh",
+          "git_blob": "5643b6f4480fc35696e890f7321a26f80a110c00"
+        },
+        {
+          "repository": "ianarawjo/evalstats",
+          "path": "simulations/collect_inspect_benchmarks.py",
+          "git_blob": "51bd0cfb881a199312e96ef17444d7678659832f"
+        },
+        {
+          "repository": "EricA1019/ozone",
+          "path": "docs/plans/eval-suite-system.md",
+          "git_blob": "8a67ee6c751fd324e4c9ae2c40c531b609b9c41c"
+        },
+        {
+          "repository": "EricA1019/ozone",
+          "path": "contrib/evals/scripts/presets.py",
+          "git_blob": "9732e33b243f79dbb9e465321640ce478b4c3e12"
+        },
+        {
+          "repository": "EricA1019/ozone",
+          "path": "src/eval.rs",
+          "git_blob": "03ec9ec7c02c93a85b8491d6e7d6129592535c0c"
+        },
+        {
+          "repository": "EricA1019/ozone",
+          "path": "contrib/evals/scripts/generate_leaderboard.py",
+          "git_blob": "51d5f385f988e7f0d3b2db61b55e3df5b46bacb9"
+        }
+      ]
+    },
+    {
+      "query": "\"one_eval\" \"openbookqa\" -repo:OpenDCAI/One-Eval",
+      "total_count": 1,
+      "items": [
+        {
+          "repository": "Svardfox/Draft-KV",
+          "path": "script/draft_kv/run_stage3_eval_all.sh",
+          "git_blob": "79bf8ccdce3bea1d8f12b258b081ec4a72b28371"
+        }
+      ]
+    },
+    {
+      "query": "\"from one_eval\" -repo:OpenDCAI/One-Eval",
+      "total_count": 21,
+      "items": [
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/utils/deal_json.py",
+          "git_blob": "8f1f662868ed4372900203c83e1bd033245ab667"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/utils/validators.py",
+          "git_blob": "f2d4803a52e48dfdf64a7a79bfa8c34aa1b2c972"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/metrics/dispatcher.py",
+          "git_blob": "9abd4d3f451f33a43d89a5aa91cd2a1400d79a04"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/metrics/common/math_verify.py",
+          "git_blob": "41a4f34e984e5d8543f1f3bf2f8d75a37515a2f3"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/metric_registry.py",
+          "git_blob": "cefdf15ae9b55bf8836b9e76f18c36bc305fd501"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/metrics/common/code.py",
+          "git_blob": "8f0db1c866e24c4c8ad1cf268f020070479a64d6"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/metrics/runner.py",
+          "git_blob": "5a247acbaa37ce6f6655b4ed3ef10f055827d6e5"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/nodes/metric_score_node.py",
+          "git_blob": "6167d1ed8bd717c553bfbc333eec24b63c04508f"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Judger/utils/eval_general_text.py",
+          "git_blob": "f720d793ecacd3b8784d6b39d6141482a43d23b2"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/metrics/common/analysis.py",
+          "git_blob": "981e66bfb44cd9a0f00653e25321fac960b85425"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/metrics/common/general.py",
+          "git_blob": "e4966d2972f76653bd1d071d78eba7344ad5cbe0"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/utils/prompts.py",
+          "git_blob": "ff756b67a445ef798f3d3cdfe90b817bdbc72610"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/metrics/prompt_generator.py",
+          "git_blob": "53a0b67ab99b08f6fb9427d9797e14eaec56dd67"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/utils/bench_registry.py",
+          "git_blob": "19f6d6c2b2d8591b506a8895acb655d13669793c"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/metrics/common/text_gen.py",
+          "git_blob": "8ab53bc240d889e2faebdd70dddfc90c3eddf9bf"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/metrics/common/classification.py",
+          "git_blob": "fa0d7cd2d15890e94880adb55f998a7de4253625"
+        },
+        {
+          "repository": "OpenDCAI/Dataflow-LoopAI",
+          "path": "loopai/skills/Analyzer/eval_metrics/serving/custom_llm_caller.py",
+          "git_blob": "0625b00d05d711da55e15bde5fdde4bfe92307a0"
+        },
+        {
+          "repository": "leemiracle/work4ai",
+          "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/explain/12-known-bugs.md",
+          "git_blob": "d4efddb87780861f936c34021c60b9729619926a"
+        },
+        {
+          "repository": "leemiracle/work4ai",
+          "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/wiki_full.md",
+          "git_blob": "39da28503c60560f48d885df6fef1d7596c87ef4"
+        },
+        {
+          "repository": "leemiracle/work4ai",
+          "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/4.2-built-in-metric-implementations.md",
+          "git_blob": "5d4dece9828bf82e64358f4d6a44f3f340fc5272"
+        },
+        {
+          "repository": "svendvn/AdmixtureBayes",
+          "path": "admixturebayes/call_AdmixtureBayes.py",
+          "git_blob": "a8184ba448e1c489228087b2c6954e91c8fc84af"
+        }
+      ]
+    },
+    {
+      "query": "\"One-Eval\" \"mixeval\" -repo:OpenDCAI/One-Eval",
+      "total_count": 1,
+      "items": [
+        {
+          "repository": "huayinl/model_efficiency_evolution",
+          "path": "data/cleaned_dataset.csv",
+          "git_blob": "774adc8ee944edaacfecf7c4ade3bb1cd7d1afea"
+        }
+      ]
+    },
+    {
+      "query": "\"DataFlowEvalTool\" \"winogrande\" -repo:OpenDCAI/One-Eval",
+      "total_count": 0,
+      "items": []
+    },
+    {
+      "query": "\"25.51\" \"50.67\" repo:OpenDCAI/DataFlow",
+      "total_count": 2,
+      "items": [
+        {
+          "repository": "OpenDCAI/DataFlow",
+          "path": "README.md",
+          "git_blob": "2c63ea52c2d821e26d019eaf383f9faac2aec6c8"
+        },
+        {
+          "repository": "OpenDCAI/DataFlow",
+          "path": "README-zh.md",
+          "git_blob": "b50cb213dc71af7a897402ea21c70aacbe361b66"
+        }
+      ]
+    },
+    {
+      "query": "\"winogrande\" repo:OpenDCAI/DataFlow",
+      "total_count": 2,
+      "items": [
+        {
+          "repository": "OpenDCAI/DataFlow",
+          "path": "README.md",
+          "git_blob": "2c63ea52c2d821e26d019eaf383f9faac2aec6c8"
+        },
+        {
+          "repository": "OpenDCAI/DataFlow",
+          "path": "README-zh.md",
+          "git_blob": "b50cb213dc71af7a897402ea21c70aacbe361b66"
+        }
+      ]
+    },
+    {
+      "query": "\"lm_eval\" repo:OpenDCAI/DataFlow",
+      "total_count": 0,
+      "items": []
+    }
+  ],
+  "github_releases": {
+    "repo": "OpenDCAI/One-Eval",
+    "inspected": [
+      {
+        "tag": "v0.1.0",
+        "name": "One Eval v0.1.0-beta.1",
+        "assets": []
+      }
+    ]
+  },
+  "issue_demo": {
+    "url": "https://github.com/OpenDCAI/One-Eval/issues/29",
+    "comments_inspected": 5,
+    "result": "Demo image and community links; metadata/text inspected, images not examined. No textual source-bound score trace."
+  },
+  "limits": [
+    "Indexed GitHub search and selected public artifacts only.",
+    "Shared organizations, dataset names and publication numbers do not identify the executed evaluator.",
+    "No missing-evidence claim about private/local runs."
+  ],
+  "next_action": "Keep external-impact claim unresolved. This follow-up's most concrete lead is DataFlow paper Table2; advancing requires original evaluation configuration/code and per-question predictions. Full native real-provider reproduction remains independently actionable."
+}
+

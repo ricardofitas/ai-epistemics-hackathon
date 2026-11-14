@@ -124,5 +124,19 @@
     "claim": "152dual-reviewed;152agreementeachaxis;Gemma choice+carrier RULE8/final1/content16,15content-finaldiscordances,7RULEcredits;secondarychoicecarrier-effectfinalGemma80..85pp,Qwen75..95pp",
     "evidence": "factorial_secondary_summary.json;factorial_secondary_verification.json;factorial_secondary_protocol.json;factorial_source_caveats.json",
     "qualification": "Prespecified secondary assistant judgment,partialmasking/samefamily;8captureunknowns+2completeuncertainties;not human/defaultjudge/internalcapability"
+  },
+  {
+    "id": "C19",
+    "section": "Appendix H",
+    "claim": "Exploratory RULE ranking reverses for all 256 assignments of the eight unknown scores. Qwen minus Gemma changes from -40 to -30 pp to +5 to +20 pp. All seven source-caveat exclusion panels retain the reversal.",
+    "evidence": "ranking_sensitivity.json;ranking_verification.json;ranking_input_provenance.json",
+    "qualification": "Post-outcome ranking and exclusion sensitivity on the same 20 paired sources, using the optional RULE endpoint. Two arithmetic implementations were produced by the same assistant."
+  },
+  {
+    "id": "C20",
+    "section": "Appendix I",
+    "claim": "Four deterministic fixture cells and four actual single-attempt provider requests execute the authentic installed native pipeline. Both actual gallery references are excluded. Both typed generated_ans exact_match scores are originally zero. Fixed-output native rescoring of the literal provider content gives 1.0 in both typed rows, with zero new provider calls. The original identifier-type fixture audit failure and derived erratum are preserved.",
+    "evidence": "installed_receipt.json;installed_fixture_review.json;installed_fixture_protocol.json;installed_live_verification.json;installed_live_receipt.json;installed_live_protocol.json;installed_rescore_summary.json;installed_rescore_verification.json;installed_rescore_protocol.json;installed_rescore_receipt.json",
+    "qualification": "Two exposed source questions. Fixture, actual captures and fixed-output rescores have distinct units. Native exact_match is our integration diagnostic. Original raw metrics and the fixture identifier-type audit failure remain preserved. The prediction-view repair is post-outcome engineering validation."
   }
 ]

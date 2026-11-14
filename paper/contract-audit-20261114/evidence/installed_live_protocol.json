@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-14T17:15:12.940187+00:00",
+  "stage": "Installed One-Eval ordinary native client with maximum4newproviderrequests",
+  "one_eval_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "dataflow_wheel_sha256": "75dd8e03fd96875472c11bd9fdf8af30e66d76a6b2d59b6b426d998db25e8790",
+  "python": "3.11",
+  "source_revision": "66a05ec3821a2b5089ed1e32a5d65ab6ecdbf906",
+  "source_selection": "Lowest two numeric source_index values from the already frozen factorial20, before new native outputs. No replacement. Already exposed questions and no independent source-panel claim.",
+  "source_indices": [
+    40,
+    200
+  ],
+  "conditions": [
+    "native_gallery",
+    "source_typed"
+  ],
+  "condition_scope": "OriginalMixEvalgallery versus explicitjointsource-typed integrationrepair: canonicalquestionbinding, key2_q_ma route, noappendedoptions inrequest, plainfactualanswer convention, native normalized exact_match. Sourcealiases andotherrecordfields unchanged; actualsourceIDdtypecoercion preservedandstrroundtripvalidated.",
+  "fixture_preflight": "Existingrun43620236269 retained4completednativepipeline/nativeprimarymetric calls. Full252packageinstallpipcheck passed. Workflowfailure preserved. Both execution/independent derivedverification PASS_WITH_ID_TYPE_ERRATUM for pandasnumericIDstrroundtrip only; no fixture rerun.",
+  "real_phase": "Authorized byroot afterindependentfixtureverification. Maximum4singleattempt nativeHTTPPOSTs. No re-execution/resume; catalogueGET before any generation. Same4fixedsourcecondition slots and original installednativeentrypoints.",
+  "model": "qwen3.8-27b",
+  "provider_url": "https://api.prod.adaptionlabs.ai/api/v1/chat/completions",
+  "maximum_provider_calls": 4,
+  "maximum_calls_per_source_condition": 1,
+  "max_output_tokens_per_call": 4096,
+  "maximum_output_tokens_total": 16384,
+  "concurrency": 1,
+  "minimum_start_interval_seconds": 5,
+  "child_wall_timeout_seconds": 120,
+  "http_retries": 0,
+  "native_max_retries": 1,
+  "additional_judge_calls": 0,
+  "endpoint_primary_documentation": "https://docs.adaptionlabs.ai/tools/opencode/",
+  "endpoint_documentation_evidence": "Primary guide says hosted models can be called by a chat-completions runtime; stack calls require Responses. Actual native endpoint compatibility remains tested only by the authorized bounded real phase.",
+  "incomplete_policy": "Preserve all4plannedslots, everyHTTPtrace, errors, truncation and unattempted slots. Native raw score retained as diagnostic. finish_reason=length or HTTP/API error is unknown; readable partial text cannot upgrade it. Numeric0with0eligible references is UNSCORABLE.",
+  "outcomes": [
+    "Actual ordinary site-packages module origins and source hashes",
+    "HTTP native request bytes,payload,model,one-attempt/120wall caps; no credentials retained",
+    "Native generated row and source/reference propagation",
+    "Native primary total_samples,scored_samples,invalid_references,denominator and parser artifacts",
+    "Real completion status and usage if returned"
+  ],
+  "limits": [
+    "Fixed2source integration demonstration; no population inference",
+    "The repaired native exact_match metric is an integration diagnostic, not official MixEval modeljudge",
+    "Dependencies resolved under original declared distributions plus explicit CPU constraints; full resolution receipt captured",
+    "The observation wrapper guards/captures HTTPAdapter.send without rewriting native messages or responses"
+  ],
+  "frozen_files": {
+    "native_probe.py": "6586ffa3591bdadb2cecc08faf284610e17a4b579c20b3bd1618906fff56aefd",
+    "install_probe.py": "83072266c756e5ea102a7ab1385cd632382d989257663977df68adfc2a43809f",
+    "finalize.py": "12c9b16aa5b3cb385ba5054933e90ceaa0c9538528eca8bd2165e55ec711d945",
+    "constraints.txt": "e0b660e1cb0b78a1a690d2376353f050584842146b716db14730c3e84cc80256",
+    "selected2.json": "adf2bf8a0e56a5a9b34be106821631b68d11398690630a1756774d617b849161",
+    "gallery_mixeval.json": "187c84dd41fcfad0de4c2994782eee011a7bc0e88046a22fe258d4d2dcaf1847",
+    "PROVIDER_DOCUMENTATION.json": "67e068b45090fbedcafd11e3ee69cae954479607bc94d4bfb19acbb589e8a190",
+    "oneeval-native-live-20261114.yml": "d700e52ca2e6975c1ccb4e09ed580caf03836c8a293033322044a8fb94262488"
+  },
+  "execution_branch": "ricardo/oneeval-native-live-20261114",
+  "primary_metric_interpretation": "UnchangedMetricRunner runs ordinary registerednative metrics. Nativechoice invalid source references yieldnumeric0scored_samples0 andUNSCORABLE. Nativeexact_match returnsnumericscoreandperrowdetails withscored_samplesNone preserved; derivedeligiblecountdeclaredfromnumericdetails. Originalrawmetrics retained evenontruncation; eligible_native_scoreNone for unknowncapture/invalidreference.",
+  "terminal_policy": "RequireHTTP200, responseid/nonemptystripcontent, exactreturnedmodel, finish_reasonstop, noAPIerror andvalidusage forknowncapture. finish_reasonlength, empty, unsupportedresponse,missingusage, failed or unattempted remainunknown; readablepartialtextcannotupgrade. Nativeclientreasoning_content wrapping is original behavior, so retainrawchatmessageanddeliveredtext.",
+  "stop_policy": "Stopremainingfixedslots afterunexpectedHTTPstatus, returnedmodelmismatch, invalidusage, outputbudgetviolation or failednativepipelinechild. RemainingrowsrecordedUNATTEMPTEDUNKNOWN. No retry/resume. Incomplete/lengthresponse alone canproceednextfixedslotiftransportandusagevalid.",
+  "cadence": "HTTPAdapter observationwrapper reads/writesactualstartmonotonicleder beforetransportandwaits>=5sec afterpreviousactualstart, cap4uniquesourceconditionposts. Parentadditionallywaits5secAFTERchildtermination. Recordandverifyactualintervals.",
+  "id_normalization": "RawsourceIDstringanddeliverednumericIDrecordedwithtypes. Acceptonlystr(sourceid)==str(deliveredid); any leadingzero/valuechange fails; allotheroriginalsourcecolumns exact.",
+  "dependency_policy": "Reuse all250previouslyresolveddependencyversions asconstraints, originalfull declared OneEval/DataFlowrequirements installednormally plusCPUtorch. Sourceandwheelpinnedidentically. Initialresolverreceiptandfreeze retainedseparately.",
+  "fixture_reconciliation_sha256": "8b8021f69c7a94d9433d3620ad8528b3317b6dcf86f8750b37030138372b21ac"
+}
