@@ -1,0 +1,26 @@
+{
+  "run_id": 43615821403,
+  "run_attempt": 1,
+  "launch_commit": "3faed45df0d53d97f0a47c3517719864a8d23007",
+  "protocol_commit": "ddedfcd6c2f2633b6e1460f8591ce5ed261959d7",
+  "independent_verifier_commit": "4981202b99ef90384011f40972f0d6627977bc2e",
+  "independent_verifier_repository": "ricardofitas/swarm-adaption-hackathon",
+  "artifact_id": 14122334278,
+  "artifact_bytes": 3453852,
+  "artifact_sha256": "7f464eba93330fb19742b850aa4349eeb1804a8b45eaf4664e375b2af2ee8d6d",
+  "source_launch_package": {
+    "library_file_id": "libfile_fde3_f-6813901a3d208191a66f96a67245be4b_198492b795908191b811098f9e84ee4a",
+    "version": 0,
+    "sha256": "930477505de06107b64b5e39a8223c481d663a8247ec03cab4d5851773d355bb"
+  },
+  "protocol_sha256": "b148003b2fb83cb4977a873851409f0068e70307b1ecab624073d7c59feb6e15",
+  "manifest_sha256": "7ab4c169492f9bfa2cff12e838e9972eb219d2067feea1c1ec3ee5b1ec608e43",
+  "verifier_sha256": "b49d2eb17620bd8a499a1de3128882c4b327c9961fb9208d12749dc483a70e55",
+  "operational_notes": [
+    "First verifierGitlookup used researchrepoandreturned404; corrected to executionrepo with exactGitbytes matching package.",
+    "Original pinned rule AST emits existing invalid-escape SyntaxWarnings underPython3.12; verificationPASS, original code unchanged."
+  ],
+  "new_generation_requests_dispatched_by_this_worker": 0,
+  "assistant_annotation_reviewers": 2,
+  "assistant_integrity_verifier": 1
+}

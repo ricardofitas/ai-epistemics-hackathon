@@ -110,5 +110,19 @@
     "claim": "69maskedresponses;68/69agreement peraxis;17content/finaldiscordances;9Gemmarulecreditswithoutcorrectfinal;Gemmafinal40..75pp/content-35..0pp;Qwenfinal55..80pp/content45..70pp",
     "evidence": "semantic_review_summary.json;semantic_review_verification.json;semantic_review_protocol.json",
     "qualification": "Retrospective two-assistant adjudication of exposed outputs; construct-specific labels,11captureunknowns plus1adjudicationuncertainty; no human/defaultjudge or population claim"
+  },
+  {
+    "id": "C17",
+    "section": "Appendix F",
+    "claim": "160attempts,152complete,8unknown;RULEcarrier-removalunderchoiceGemma+40pp,Qwen+70..90pp;interactionGemma-45pp,Qwen-95..-55pp",
+    "evidence": "factorial_primary_summary.json;factorial_primary_verification.json;factorial_primary_protocol.json",
+    "qualification": "Prespecified custom2x2diagnostic;20paired exposedquestions/model;unknownsensitivitybounds,notpopulationCI"
+  },
+  {
+    "id": "C18",
+    "section": "Appendix G",
+    "claim": "152dual-reviewed;152agreementeachaxis;Gemma choice+carrier RULE8/final1/content16,15content-finaldiscordances,7RULEcredits;secondarychoicecarrier-effectfinalGemma80..85pp,Qwen75..95pp",
+    "evidence": "factorial_secondary_summary.json;factorial_secondary_verification.json;factorial_secondary_protocol.json;factorial_source_caveats.json",
+    "qualification": "Prespecified secondary assistant judgment,partialmasking/samefamily;8captureunknowns+2completeuncertainties;not human/defaultjudge/internalcapability"
   }
 ]

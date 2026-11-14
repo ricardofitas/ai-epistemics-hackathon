@@ -1,87 +1,26 @@
 {
-  "version": "1.5",
-  "main_text_pages": 8,
-  "page_count": 14,
-  "pages": [
-    {
-      "page": 1,
-      "words": 478,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 2,
-      "words": 417,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 3,
-      "words": 449,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 4,
-      "words": 441,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 5,
-      "words": 331,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 6,
-      "words": 357,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 7,
-      "words": 428,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 8,
-      "words": 457,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 9,
-      "words": 193,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 10,
-      "words": 405,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 11,
-      "words": 386,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 12,
-      "words": 436,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 13,
-      "words": 442,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 14,
-      "words": 401,
-      "out_of_bounds_characters": 0
-    }
+  "status": "PASS",
+  "pages": 16,
+  "main_pages": 8,
+  "claims": 18,
+  "bounds_issues": [],
+  "visual_review_pages": [
+    1,
+    8,
+    15,
+    16
   ],
-  "bounds": "PASS",
-  "used_fonts_embedded": true,
-  "used_fonts": [
-    "LiberationSans",
-    "LiberationSans-Bold",
-    "LiberationSerif"
+  "unchanged_prior_text_pages_except_footer": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12
   ],
-  "unused_resource_font": "Helvetica resource is unembedded but not used in any text span",
-  "visual_review": "PASS: all14pages contact sheet plusfullchanged8,12,13,14 inspected; nooverfloworclipping",
-  "independent_claim_verification": "PASS16claims"
+  "pdf_preupload_sha256": "6b16874ea3b4c2b2363142807546274f52619c8a243dde7dd56daf2862e6e714"
 }

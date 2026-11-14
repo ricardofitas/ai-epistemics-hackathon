@@ -1,0 +1,25 @@
+{
+  "status": "SOURCE_INSPECTION_BEFORE_NEW_OUTPUTS",
+  "cases": [
+    {
+      "source_index": 860,
+      "question": "Who holds the post of Defence Secretary?",
+      "frozen_target": "Michael Fallon",
+      "caveat": "Time and jurisdiction are implicit in the historical frozen benchmark. Do not validate this as a present-day fact or infer a current factual capability result. Secondary review can mark genuinely unresolved temporal interpretation uncertain."
+    },
+    {
+      "source_index": 571,
+      "question": "What were the two smallest age ranges listed?",
+      "frozen_targets": ["20 and 24", "25 and 29", "between 20 and 24 years", "between 25 and 29 years"],
+      "caveat": "List may encode separate requested spans and alternate forms. A whole-text any-alias rule is distinct from a full multi-part answer criterion. Secondary reviewers must inspect source context and require both requested ranges or preserve uncertainty. No source or primary scoring mutation."
+    },
+    {
+      "source_index": 281,
+      "source_family": "BBH causation",
+      "caveat": "The source prompt already contains Yes/No options. The carrier-absent factor removes only the appended bogus Options/A.None block, not source-embedded options. The crossed intervention remains byte-local, but do not call all absent-carrier prompts option-free."
+    }
+  ],
+  "source_cases_removed": 0,
+  "source_changes": 0,
+  "outcome_observation": false
+}

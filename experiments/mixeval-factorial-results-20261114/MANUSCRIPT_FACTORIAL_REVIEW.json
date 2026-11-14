@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "scope": "Independent text/numeric/source-integrity audit of manuscript v1.6 C17/C18, Appendices F/G, abstract/conclusion, and verifier. No manuscript edits or visual rerender.",
+  "baseline": {
+    "zip": "run1657/paper_inputs/Epistemics_Manuscript_v1_e_evidencia_20261114.zip",
+    "zip_sha256": "aa57451ec91236ac23f48bbce42c99ae1e42742bd1a303495a20fff6b829917d",
+    "revision": "1.5",
+    "claims": 16,
+    "C1_C16_unchanged": true
+  },
+  "structure": {
+    "main_text_pages": 8,
+    "structured_pages": 16,
+    "claims": 18,
+    "abstract_word_count": 230
+  },
+  "evidence_identity": {
+    "factorial_primary_summary.json": {
+      "original_path": "actual/analysis/ANALYSIS_SUMMARY.json",
+      "sha256": "634826fbbdf61839aeff407c85ec502ab6d226051c16cc876c257370f14a4277",
+      "exact_original_bytes": true
+    },
+    "factorial_primary_verification.json": {
+      "original_path": "FINAL_VERIFICATION.json",
+      "sha256": "22d3f20ff8ae007265747be8dbee3331f8fcbbdea6723430567ced4a141c230a",
+      "exact_original_bytes": true
+    },
+    "factorial_primary_protocol.json": {
+      "original_path": "actual/ANALYSIS_PROTOCOL.json",
+      "sha256": "279a6b4809dad70b15c5b6b671d021e239cdf63fc2347a80c804d388e3a75167",
+      "exact_original_bytes": true
+    },
+    "factorial_secondary_summary.json": {
+      "original_path": "work/SECONDARY_SUMMARY.json",
+      "sha256": "c4772b512974349185ee85c67428b01e6011327f101c2b0dbcac869b73948d8a",
+      "exact_original_bytes": true
+    },
+    "factorial_secondary_verification.json": {
+      "original_path": "SECONDARY_VERIFICATION.json",
+      "sha256": "fe32475c5d108c8875871bfca233936198a99e1a9fde58b1433ffddbdb679128",
+      "exact_original_bytes": true
+    },
+    "factorial_secondary_protocol.json": {
+      "original_path": "actual/SECONDARY_ADJUDICATION_PROTOCOL.json",
+      "sha256": "bc67f73677de0856ce69f441e92c03c5a65a035cd71d317e5681cc1fd9b2dcf3",
+      "exact_original_bytes": true
+    },
+    "factorial_source_caveats.json": {
+      "original_path": "actual/STATIC_SOURCE_CAVEATS.json",
+      "sha256": "1041585863f98e4e5e44e26884c802445a8d3c504d0f9d0069d8b0fef52c375c",
+      "exact_original_bytes": true
+    },
+    "factorial_interpretation_review.json": {
+      "original_path": "PRIMARY_INTERPRETATION_REVIEW.json",
+      "sha256": "d9a60d61083891c65a87a6b8944c29602108a0e2f640025c6f1c31a45bf1ab18",
+      "exact_original_bytes": true
+    }
+  },
+  "C17": {
+    "status": "PASS",
+    "planned_attempts": 160,
+    "complete": 152,
+    "incomplete_unknown": 8,
+    "all_terminal_event_names_response_completed": 160,
+    "N_per_model": 20,
+    "carrier_removal_under_choice": {
+      "gemma-4-31b-it": [
+        0.4,
+        0.4
+      ],
+      "qwen3.8-27b": [
+        0.7,
+        0.9
+      ]
+    },
+    "interaction": {
+      "gemma-4-31b-it": [
+        -0.45,
+        -0.45
+      ],
+      "qwen3.8-27b": [
+        -0.95,
+        -0.55
+      ]
+    },
+    "all_five_primary_table_contrasts_match": true,
+    "all_four_primary_count_rows_match": true,
+    "tokens_and_cost_match": true,
+    "capture_status_warning_preserved": true,
+    "fixed_panel_not_population_CI_preserved": true
+  },
+  "C18": {
+    "status": "PASS",
+    "reviewed_each": 152,
+    "agreement": {
+      "final_label": 152,
+      "content_label": 152,
+      "tag_format": 152
+    },
+    "eight_capture_unknowns_plus_two_complete_uncertainties_preserved": true,
+    "gemma_choice_carrier": {
+      "RULE_correct": 8,
+      "final_correct": 1,
+      "content_correct": 16,
+      "content_correct_final_incorrect": 15,
+      "RULE_credit_final_incorrect": 7
+    },
+    "qwen_choice_carrier": {
+      "final_correct": 0,
+      "content_correct": 0,
+      "complete_incorrect": 18,
+      "capture_unknown": 2
+    },
+    "all_secondary_FG_contrasts_match": true,
+    "tag_format_claim_matches": true,
+    "source_571_multipart_and_281_intrinsic_options_preserved": true,
+    "same_family_mask_leakage_and_agreement_limits_preserved": true,
+    "primary_not_replaced": true,
+    "seven_RULE_credits_not_mislabeled_factual_false_positives": true
+  },
+  "abstract_conclusion_review": {
+    "status": "PASS",
+    "conditional_interaction_explicit": true,
+    "generic_free_form_benefit_rejected": true,
+    "no_general_capability_claim": true,
+    "no_population_confidence_interval_claim": true,
+    "generalization_boundaries_preserved": true,
+    "statement": "Abstract and page-8 limitation/conclusion identify a conditional instruction-by-placeholder interaction. Appendix G limits this to visible response/measurement effects and does not infer hidden knowledge, universal capability loss or external deployment impact."
+  },
+  "verify_claims_review": {
+    "status": "PASS",
+    "isolated_copy_execution_exit_code": 0,
+    "reported_claims_checked": 18,
+    "reported_version": "1.6",
+    "original_files_unchanged": true,
+    "no_new_model_or_judge_calls": true,
+    "scope_note": "verify_claims.py checks source-snapshot hashes, selected summary quantities and ledger consistency; it does not independently rescore the raw generations or explicitly assert every new table entry. This audit checked every F/G numerical entry against the independently verified originals; SECONDARY_VERIFICATION.json separately recomputes all five primary/secondary contrasts and validates source/output identities."
+  },
+  "nonblocking_notes": [
+    "Authenticated execution is read as Git/artifact provenance in the concrete paragraph; neither this audit nor source hashes independently authenticate provider internals.",
+    "All agreement claims concern assistant labels, with source exposure and correlated-error limits explicitly retained."
+  ],
+  "edits_made": false,
+  "new_API_calls": 0,
+  "visual_review_performed": false,
+  "input_sha256": {
+    "paper/manuscript.json": "7d9cc3fea396fec9753828a0d2d209ca52f1aaea763b2daf1ae187f792cfffdd",
+    "paper/claims.json": "a8648a3f8423981ae35e09d2352175a04d25011b3823ab346f93490819c4da6b",
+    "paper/verify_claims.py": "92ce3d8efbd3c2170f3d4a32a968040b9579a9e1a0eb10f1e20d9eaa9d77f858",
+    "paper/EVIDENCE_SOURCES.json": "47262fd1759798e49af062beae8ec54d260ae0bc99db8eea5e08d7f1bebcce78",
+    "paper/claim_evidence.csv": "bd32ed7e151664f990a85536b12b9800bc42e11bd468803de92b2e90cd581886",
+    "paper/REVISION_1_6.json": "694894d75facfd408c7d261bba7c7c1f1642c1a608adca1a88f29bb976c6edca",
+    "FINAL_VERIFICATION.json": "22d3f20ff8ae007265747be8dbee3331f8fcbbdea6723430567ced4a141c230a",
+    "SECONDARY_VERIFICATION.json": "fe32475c5d108c8875871bfca233936198a99e1a9fde58b1433ffddbdb679128",
+    "PRIMARY_INTERPRETATION_REVIEW.json": "d9a60d61083891c65a87a6b8944c29602108a0e2f640025c6f1c31a45bf1ab18"
+  }
+}

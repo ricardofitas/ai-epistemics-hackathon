@@ -288,5 +288,53 @@
     "member": "semantic_review/PROTOCOL.json",
     "sha256": "0d60c49b5bccb8cb0452a0cdab383378fc393e3cbde37cb61bab22264487304a",
     "qualification": "Retrospective masked assistant adjudication, separately labelled from frozen rule scores"
+  },
+  "factorial_primary_summary.json": {
+    "source_archive": "Epistemics_factorial_resultados_e_adjudicacao_20261114.zip",
+    "member": "actual/analysis/ANALYSIS_SUMMARY.json",
+    "sha256": "634826fbbdf61839aeff407c85ec502ab6d226051c16cc876c257370f14a4277",
+    "parent_member_sha256": "634826fbbdf61839aeff407c85ec502ab6d226051c16cc876c257370f14a4277"
+  },
+  "factorial_primary_verification.json": {
+    "source_archive": "Epistemics_factorial_resultados_e_adjudicacao_20261114.zip",
+    "member": "FINAL_VERIFICATION.json",
+    "sha256": "22d3f20ff8ae007265747be8dbee3331f8fcbbdea6723430567ced4a141c230a",
+    "parent_member_sha256": "22d3f20ff8ae007265747be8dbee3331f8fcbbdea6723430567ced4a141c230a"
+  },
+  "factorial_primary_protocol.json": {
+    "source_archive": "Epistemics_factorial_resultados_e_adjudicacao_20261114.zip",
+    "member": "actual/ANALYSIS_PROTOCOL.json",
+    "sha256": "279a6b4809dad70b15c5b6b671d021e239cdf63fc2347a80c804d388e3a75167",
+    "parent_member_sha256": "279a6b4809dad70b15c5b6b671d021e239cdf63fc2347a80c804d388e3a75167"
+  },
+  "factorial_secondary_protocol.json": {
+    "source_archive": "Epistemics_factorial_resultados_e_adjudicacao_20261114.zip",
+    "member": "work/SECONDARY_ADJUDICATION_PROTOCOL.json",
+    "sha256": "bc67f73677de0856ce69f441e92c03c5a65a035cd71d317e5681cc1fd9b2dcf3",
+    "parent_member_sha256": "bc67f73677de0856ce69f441e92c03c5a65a035cd71d317e5681cc1fd9b2dcf3"
+  },
+  "factorial_secondary_summary.json": {
+    "source_archive": "Epistemics_factorial_resultados_e_adjudicacao_20261114.zip",
+    "member": "work/SECONDARY_SUMMARY.json",
+    "sha256": "c4772b512974349185ee85c67428b01e6011327f101c2b0dbcac869b73948d8a",
+    "parent_member_sha256": "c4772b512974349185ee85c67428b01e6011327f101c2b0dbcac869b73948d8a"
+  },
+  "factorial_secondary_verification.json": {
+    "source_archive": "Epistemics_factorial_resultados_e_adjudicacao_20261114.zip",
+    "member": "SECONDARY_VERIFICATION.json",
+    "sha256": "fe32475c5d108c8875871bfca233936198a99e1a9fde58b1433ffddbdb679128",
+    "parent_member_sha256": "fe32475c5d108c8875871bfca233936198a99e1a9fde58b1433ffddbdb679128"
+  },
+  "factorial_source_caveats.json": {
+    "source_archive": "Epistemics_factorial_resultados_e_adjudicacao_20261114.zip",
+    "member": "work/STATIC_SOURCE_CAVEATS.json",
+    "sha256": "1041585863f98e4e5e44e26884c802445a8d3c504d0f9d0069d8b0fef52c375c",
+    "parent_member_sha256": "1041585863f98e4e5e44e26884c802445a8d3c504d0f9d0069d8b0fef52c375c"
+  },
+  "factorial_interpretation_review.json": {
+    "source_archive": "Epistemics_factorial_resultados_e_adjudicacao_20261114.zip",
+    "member": "PRIMARY_INTERPRETATION_REVIEW.json",
+    "sha256": "d9a60d61083891c65a87a6b8944c29602108a0e2f640025c6f1c31a45bf1ab18",
+    "parent_member_sha256": "d9a60d61083891c65a87a6b8944c29602108a0e2f640025c6f1c31a45bf1ab18"
   }
 }

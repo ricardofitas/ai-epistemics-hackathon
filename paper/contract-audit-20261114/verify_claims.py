@@ -148,11 +148,23 @@ assert len(sg['rule_credit_without_correct_final'])==9 and len(sq['correct_final
 assert read('semantic_review_verification.json')['status']=='PASS'
 assert read('semantic_review_protocol.json')['version']==1
 
+fp=read('factorial_primary_summary.json');fv=read('factorial_primary_verification.json');fs=read('factorial_secondary_summary.json')
+assert fp['planned_requests']==fp['recorded_artifacts']==fv['attempt_started']==fv['attempt_recorded']==160
+assert fp['completed_scored']==fv['completed_scored']==152 and fp['unknown']==fv['unknown']==8 and fv['status']=='PASS'
+assert fv['input_tokens']==27768 and fv['output_tokens']==79481 and fv['analysis_comparison']=='PASS'
+assert fp['factorial']['models']['gemma-4-31b-it']['contrasts']['carrier_absent_minus_present_at_choice']['lower']==.4
+assert fp['factorial']['models']['qwen3.8-27b']['contrasts']['carrier_absent_minus_present_at_choice']=={'lower':.7,'upper':.9,'units':'score points on0..1 scale; interaction can range-2..2'}
+assert read('factorial_secondary_verification.json')['status']=='PASS'
+assert fs['reviewed']==152 and fs['capture_unknowns']==8 and fs['agreement']=={'final_label':152,'content_label':152,'tag_format':152}
+fg=fs['models']['gemma-4-31b-it'];fq=fs['models']['qwen3.8-27b']
+assert fg['axes']['final']['counts']['choice__A.None']['correct']==1 and fg['axes']['content']['counts']['choice__A.None']['correct']==16
+assert len(fg['rule_credit_with_incorrect_final'])==7 and len(fg['correct_content_with_incorrect_final'])==15
+assert fq['axes']['final']['contrasts']['carrier_absent_minus_present_at_choice']=={'lower':.75,'upper':.95}
 pages = json.loads((P / 'manuscript.json').read_text())
 claims = json.loads((P / 'claims.json').read_text())
-assert len(pages) == 14 and len(claims) == 16
+assert len(pages) == 16 and len(claims) == 18
 assert 150 <= len(pages[0]['blocks'][2]['text'].split()) <= 250
-assert [row[0] for row in pages[-2]['blocks'][1]['rows']] == [claim['id'] for claim in claims]
+assert [row[0] for row in pages[12]['blocks'][1]['rows']] == [claim['id'] for claim in claims[:16]]
 for claim in claims:
     assert all((P / 'evidence' / name).is_file() for name in claim['evidence'].split(';'))
 with (P / 'claim_evidence.csv').open(newline='') as stream:
@@ -162,7 +174,7 @@ for row, claim in zip(ledger, claims):
     assert row == dict(claim_id=claim['id'], section=claim['section'],
                        numerical_or_status_claim=claim['claim'],
                        evidence_files=claim['evidence'], qualification=claim['qualification'])
-result = dict(status='PASS', claims_checked=16, working_draft_version='1.5',
+result = dict(status='PASS', claims_checked=18, working_draft_version='1.6',
               integrated_mechanisms=['native source gate', 'shared input causes', 'MMMLU prediction', 'MixEval task kind'],
               verifier_model_requests=0, new_experiments_during_synthesis=0,
               scope='Synthesis consistency check against source snapshots')

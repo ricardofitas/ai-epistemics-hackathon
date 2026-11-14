@@ -1,0 +1,1522 @@
+[
+  {
+    "opaque_id": "0456374b7e1a6e2a5661ea523cdeecc6cae826e944add2b929f342bf00015d2f",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Yes",
+    "content_excerpt": "Yes",
+    "reason": "Yes answers the source causation question; the source already includes Yes/No options.",
+    "source_ambiguity_note": "The source question itself contains Yes/No options; no A-to-Yes mapping is used."
+  },
+  {
+    "opaque_id": "08ca103765548b9c9b035c79c1ea54606421c4bb86e93553a23e3532b3bcb955",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Tony Blair",
+    "content_excerpt": "Tony Blair",
+    "reason": "Tony Blair identifies the person requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "0d3dad3c5d587b7a3fa6d8fe3fb1900bca6f90322dd0f8d1d339960affc73c4a",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. The historical frozen target is Michael Fallon; jurisdiction and date are unspecified.",
+    "source_ambiguity_note": "The frozen historical target is Michael Fallon, but no jurisdiction or date is provided. No present-day officeholder facts were inferred or externally checked."
+  },
+  {
+    "opaque_id": "0f5b6920d8fe15de634062b96c3bdf5ce8e44e7838f81aff8215b97fabdcf622",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "98.88%",
+    "content_excerpt": "98.88%",
+    "reason": "98.88% is 100% minus the context's 1.12% Laotian-speaking share.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "10afcb052698372ac5acb77f354444f688872efa5153d3438fc291be88b45154",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "a book",
+    "content_excerpt": "a book",
+    "reason": "A book, including its specific edition, is the entity identified by an ISBN.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "117d9962bc8fce05c41d8f337052122a44b1b77e831d511c724361f56d323468",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "goat",
+    "content_excerpt": "goat",
+    "reason": "Goat is the creature requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "1259a0fa32fad6716ae673a5f2c065239d606e1ecd63bfbd906227cf31810a9b",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "dance",
+    "content_excerpt": "dance",
+    "reason": "Dance is the requested activity.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "13b289836e222971054018c06c06fcc971fe8966a6c8948fc52e707d9cc769cb",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Tony Blair",
+    "content_excerpt": "Tony Blair",
+    "reason": "Tony Blair identifies the person requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "14343aa75331e66cbae08ef630a776b3a32c38e842cac36e5a027be5fc404d72",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Calgary Stampede",
+    "content_excerpt": "Calgary Stampede",
+    "reason": "Calgary Stampede is the described event.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "154936562086dead645be6e0abd09c6336c9e61414ca3f7acfbb55c2722791c6",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "Since June 18 occurs before July 18, the Conference of Ambassadors happened first.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. The Conference of Ambassadors is first: June 18 precedes the Foch proposal on July 18.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "15f9b5ce501331fac906a0bafe598f4070f87159cffd24b8e1925e0ff6560c2d",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Fairy rings are made of fungi (mushrooms).",
+    "content_excerpt": "Fairy rings are made of fungi (mushrooms).",
+    "reason": "Mushrooms/fungi supplies the substance of the fairy rings; the description identifies the requested fungal ring.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "16d879cb57239a46b264e8de7e756907bff7ea238d074b25d6a9db7fc0c01d64",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "hyperbole",
+    "content_excerpt": "hyperbole",
+    "reason": "Hyperbole is the requested figure of speech.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "17cf6ad7de9c2923cb63f4382b7c68a643f010d3a5dcb53b5d8ee25b0a20e34a",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A book (or a specific edition of a book)",
+    "content_excerpt": "A book (or a specific edition of a book)",
+    "reason": "A book, including its specific edition, is the entity identified by an ISBN.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "18480dbb5aabbae0adc519241b90f6aafbd9f0a4775fcd1dff39a2943f4c0763",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "This event is the **Calgary Stampede**.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. Calgary Stampede is the described event.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "185313ee628635f4f40f75a16c76bf96394d564fdae1816b468fe5b73006c6e8",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Cyanide is the compound requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "19b72c70f9928a0cb255f6c84e1e47002e5308a09969462ed11f6b71a9e62551",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Dance",
+    "content_excerpt": "Dance",
+    "reason": "Dance is the requested activity.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "19ee2364230928c788ce29efafbfb5f62e1ecab485058904bd04b1dba3656ceb",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "the Order of Australia",
+    "content_excerpt": "the Order of Australia",
+    "reason": "Order of Australia matches the context's final membership statement.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "1a011b6df54b83910980c0ce77181d4d1319d6b8d57181f12b4c12f6a874d77a",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "hyperbole",
+    "content_excerpt": "hyperbole",
+    "reason": "Hyperbole is the requested figure of speech.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "1a37d3d9322523b504b9834d8462147d4d42183eef90f2c76078d00b36b4c031",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Yes",
+    "content_excerpt": "Yes",
+    "reason": "Yes answers the source causation question; the source already includes Yes/No options.",
+    "source_ambiguity_note": "The source question itself contains Yes/No options; no A-to-Yes mapping is used."
+  },
+  {
+    "opaque_id": "1d4b7446bd1ab8ba2162eba4c7ce859c9096f2a8702d152241ad662147d5f271",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "Candy Man",
+    "content_excerpt": "Candy Man",
+    "reason": "The final and endorsed factual answer differ from the frozen source answer. Trombones is the source bingo call, including the form 76 Trombones.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "1e19ffe72a83e740fc775737e74e769673d3cf61382e1c81b046ef45ce6c3326",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "98.88%",
+    "content_excerpt": "98.88%",
+    "reason": "98.88% is 100% minus the context's 1.12% Laotian-speaking share.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "1e7014edaa4672dddec42c2b0c7a16da9d52331c1609de4e7e2406b858eb4c13",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "cyanide",
+    "content_excerpt": "cyanide",
+    "reason": "Cyanide is the compound requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "203646b705e0e24d2805dacdb695338fba53db8db9fafc66a862ca92df10fde7",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Tony Blair",
+    "content_excerpt": "Tony Blair",
+    "reason": "Tony Blair identifies the person requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "207b59edb763b255810fbe76cf312f3178a46fb7a3a6d2c1c82bd8b8cdefc620",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Calgary Stampede",
+    "content_excerpt": "Calgary Stampede",
+    "reason": "Calgary Stampede is the described event.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "213f0e510200c770de6b9f52c356dee2bb6a0878f00bc9bf036bbc0e90c3348d",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Massachusetts",
+    "content_excerpt": "Massachusetts",
+    "reason": "Massachusetts is the requested first U.S. state.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "21cb90a43f5bbd3380568bfa605bbec45e1deb589eab4698ce914bc0b4daafb3",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "20–24 and 25–29",
+    "content_excerpt": "20–24 and 25–29",
+    "reason": "Both 20–24 and 25–29 are supplied, matching the two groups tied at the lowest 5.5% share.",
+    "source_ambiguity_note": "Interpreted using population shares in context; both tied minimum groups (20–24 and 25–29) are required, rather than any one alias."
+  },
+  {
+    "opaque_id": "286832122aa727150b0ddefec000e05d982d34302a9a8171c83c2cbea378fcad",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "goat",
+    "content_excerpt": "goat",
+    "reason": "Goat is the creature requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "29528d06033f05ec48b73af4d72ad4b50f01cd71eac53622b4c1403e0844a0a1",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "The Order of Australia",
+    "content_excerpt": "The Order of Australia",
+    "reason": "Order of Australia matches the context's final membership statement.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "2a28e4169152557ac58fa47b6fea68a3f937f17dd86f8f4e3523b97880caf8be",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Peter",
+    "content_excerpt": "Peter",
+    "reason": "Peter names the requested disciple.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "2cc72d553cfefaeec214db87fa70097eb905928e24c2ef5188cfb17e7c8bd6c8",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Calgary Stampede",
+    "content_excerpt": "Calgary Stampede",
+    "reason": "Calgary Stampede is the described event.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "2f21fee97d2504c5944108b792827e67aa253b5ec8feafe8b232bd3678059d47",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Cyanide",
+    "content_excerpt": "Cyanide",
+    "reason": "Cyanide is the compound requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "2fbe7ca1a8b61eecaaea02921de5e5e7592516376b5ee266c1fdf7d00cb7e161",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "cyanide",
+    "content_excerpt": "cyanide",
+    "reason": "Cyanide is the compound requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "3043ebab5401d136c90ccd9848c58487683fb3e64ea3cce224e3ef492d1eae4b",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Massachusetts",
+    "content_excerpt": "Massachusetts",
+    "reason": "Massachusetts is the requested first U.S. state.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "315c456cb0b65334a515aceb7c851c5f800c363a96c62cd5b90f9f091caca22f",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Tony Blair",
+    "content_excerpt": "Tony Blair",
+    "reason": "Tony Blair identifies the person requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "352845de09c8a45ab4b7b08d08bfcba8cb5f8a403744d24cf05927c67893af69",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "98.88%",
+    "content_excerpt": "98.88%",
+    "reason": "98.88% is 100% minus the context's 1.12% Laotian-speaking share.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "367801225beb3b7abb11176ff7eeae45582ec240f118d342602493b812522333",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "cyanide",
+    "content_excerpt": "cyanide",
+    "reason": "Cyanide is the compound requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "38fe5a1e33d946dabb860431aee12fefeb1af9498b34bfe808392cf7952f2a31",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Mushrooms/fungi supplies the substance of the fairy rings; the description identifies the requested fungal ring.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "3956cf2ddc8dcdd7865a90347da0a3b5c88a7bed23ddb159fe32d254638d847a",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. A book, including its specific edition, is the entity identified by an ISBN.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "39ab37b8cd3baa8a42799034a84f9c3e2cf48ca0a796e20c6fdebe82d309e660",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "The Conference of Ambassadors happened first, drawing the first demarcation line on June 18, before Ferdinand Foch proposed the Foch Line on July 18.",
+    "content_excerpt": "The Conference of Ambassadors happened first, drawing the first demarcation line on June 18, before Ferdinand Foch proposed the Foch Line on July 18.",
+    "reason": "The Conference of Ambassadors is first: June 18 precedes the Foch proposal on July 18.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "39b7133a2ce75f963afec2b6071dba89875f22cb00e24c149f9e052e21f1ded4",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Conference of Ambassadors",
+    "content_excerpt": "Conference of Ambassadors",
+    "reason": "The Conference of Ambassadors is first: June 18 precedes the Foch proposal on July 18.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "39cb9d180a0afd85feddf0f7bb81b0095ecb055bf2431eb6cc1eac8c5fb35028",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Order of Australia",
+    "content_excerpt": "Order of Australia",
+    "reason": "Order of Australia matches the context's final membership statement.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "3ab1be69514587cade74a429b748b7f9867c1b3788c04e3b10c8c7910cb75cf6",
+    "final_label": "uncertain",
+    "content_label": "uncertain",
+    "tag_format": "compliant",
+    "final_excerpt": "Insufficient information provided",
+    "content_excerpt": "Since no context was provided and the post of Defence Secretary varies by country (e.g., United Kingdom, India, United States), it is impossible to determine which specific individual is being referred to without a specified jurisdiction. However, as no options were provided to choose from, a definitive answer cannot be selected.\n\nIf this is a general knowledge question regarding a specific country, please provide the options or the country of interest.\n\n<answer>Insufficient information provided</answer>",
+    "reason": "The response expressly abstains because jurisdiction/context are missing. Whether that abstention is appropriate cannot be determined from this time- and jurisdiction-implicit source; no officeholder is supplied.",
+    "source_ambiguity_note": "The frozen historical target is Michael Fallon, but no jurisdiction or date is provided. No present-day officeholder facts were inferred or externally checked."
+  },
+  {
+    "opaque_id": "3af9335fa3fd982ddf9d79928d46fde20878201eb9e00b833e7561c4452e2891",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A. None",
+    "content_excerpt": "A. None",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Goat is the creature requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "3b6ce08ceabcb3b2d12a997e4b8678dd0e41a0910dcc08c56bb3d30cfb7ea5af",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Mushrooms (fungi)",
+    "content_excerpt": "Mushrooms (fungi)",
+    "reason": "Mushrooms/fungi supplies the substance of the fairy rings; the description identifies the requested fungal ring.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "3b96e98a69fa283fa94d55e93ced029880ead33f63e1152d671e9c44ef619c4f",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "The Calgary Stampede",
+    "content_excerpt": "The Calgary Stampede",
+    "reason": "Calgary Stampede is the described event.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "3d3717165971a12d8068549750ccadb38916389078065e4416b935098e30ea59",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. The historical frozen target is Michael Fallon; jurisdiction and date are unspecified.",
+    "source_ambiguity_note": "The frozen historical target is Michael Fallon, but no jurisdiction or date is provided. No present-day officeholder facts were inferred or externally checked."
+  },
+  {
+    "opaque_id": "3fc2978aef049c058f1ca5bdfeab2b96d8d2886ca9d46c7bd47ee0a4f84cc061",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "a tuning fork",
+    "content_excerpt": "a tuning fork",
+    "reason": "Tuning fork is the requested diagram shape.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "404a4c95c3c840369a943721b36d3e7f1e02e24ee2f6bfac93f61e9960f84155",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A book",
+    "content_excerpt": "A book",
+    "reason": "A book, including its specific edition, is the entity identified by an ISBN.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "413c2f7510a5dd700047d3b47f5d9f70d93f6f7fffdffda54ec76fd143327bf9",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "the Order of Australia",
+    "content_excerpt": "the Order of Australia",
+    "reason": "Order of Australia matches the context's final membership statement.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "422ec4ad85a380950c069e89515367886ff88493fb685726678c6ab792b44047",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Order of Australia matches the context's final membership statement.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "43642ee595fb50ec8cb82518cb614ad11d6cc13914a747510a77033b553c0be2",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "This is the definition of a **hyperbole**.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. Hyperbole is the requested figure of speech.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "43f9e410b9e8afe3edcf4243f221ba45b800ea66cc807760016ae8c77a37a7dc",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. 8 days is the elapsed difference from July 18 to July 26 in the context.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "456e531c9ee7486c497f73a6a812ed048c1aec15f41a839d8f8bda5c9e835016",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Peter names the requested disciple.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "47a2edb36c506bb36ac409443ea1c663531dcb76262d631612348e78f2b10e87",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "tuning fork",
+    "content_excerpt": "tuning fork",
+    "reason": "Tuning fork is the requested diagram shape.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "4870584d122b933624f21d80c738a6d8af749a4dab2d7e29096df1b98c434eaf",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "8",
+    "content_excerpt": "8",
+    "reason": "8 days is the elapsed difference from July 18 to July 26 in the context.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "48ba9b8eb1a48c4555fcd96b8a68f099723af7954630694e607bdc562c3de424",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Fairy rings are made of mushrooms, formed by the circular growth of fungal mycelium underground.",
+    "content_excerpt": "Fairy rings are made of mushrooms, formed by the circular growth of fungal mycelium underground.",
+    "reason": "Mushrooms/fungi supplies the substance of the fairy rings; the description identifies the requested fungal ring.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "4941c955209c381e643ae5ba158419f23858528907d96e54939174bdf24571ab",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "Knees Up, Mother Brown",
+    "content_excerpt": "Knees Up, Mother Brown",
+    "reason": "The final and endorsed factual answer differ from the frozen source answer. Trombones is the source bingo call, including the form 76 Trombones.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "4f0d0b922f67ab1dba601fc50d1eca3c5c2ec8bdc885d7bd0a9392aa11436922",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "The lowest percentage listed is 5.5%, which applies to both the 20-24 and 25-29 age ranges.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. Both 20–24 and 25–29 are supplied, matching the two groups tied at the lowest 5.5% share.",
+    "source_ambiguity_note": "Interpreted using population shares in context; both tied minimum groups (20–24 and 25–29) are required, rather than any one alias."
+  },
+  {
+    "opaque_id": "4fefb86b0b5d2bbca2c52fe278cd466c1eb88ac9fd61c0591d6edf520e533310",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "hyperbole",
+    "content_excerpt": "hyperbole",
+    "reason": "Hyperbole is the requested figure of speech.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "5195517c08e3c16752d70a2be042b89caf47b0494fd7e83f65dfcd3c3f49a766",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "20 to 24 years and 25 to 29 years",
+    "content_excerpt": "20 to 24 years and 25 to 29 years",
+    "reason": "Both 20–24 and 25–29 are supplied, matching the two groups tied at the lowest 5.5% share.",
+    "source_ambiguity_note": "Interpreted using population shares in context; both tied minimum groups (20–24 and 25–29) are required, rather than any one alias."
+  },
+  {
+    "opaque_id": "51aac652bb27ef93c0a9f1782b87d191847d4f94a4ad0b8e4c7c2e54ca9ce203",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "The Conference of Ambassadors happened first.",
+    "content_excerpt": "The Conference of Ambassadors happened first.",
+    "reason": "The Conference of Ambassadors is first: June 18 precedes the Foch proposal on July 18.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "54537692b1736062ecaa8ce2f3c6bb181d376a2dc74eff5165aeaeb92d8b6afd",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "Expedia",
+    "content_excerpt": "Expedia",
+    "reason": "The final and endorsed factual answer differ from the frozen source answer. Travelocity is the agency named by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "5501a9e0444c0e1938f90567e9e20a8afe8266691b648c05e87e91a5c7f125c1",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Dance",
+    "content_excerpt": "Dance",
+    "reason": "Dance is the requested activity.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "58deffa31c61ccf763ed4ec5e8d8da274bdaa327098c06b4a9e7b802dbc22440",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "goat",
+    "content_excerpt": "goat",
+    "reason": "Goat is the creature requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "5addcc6c307020e05298d318c5868823c42b3646db18ff0b9c03959c4d06eb56",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Dance",
+    "content_excerpt": "Dance",
+    "reason": "Dance is the requested activity.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "5ffeb50b6b6e00a02669af3f4dce67d1ee005c673e180bb92256fde6e3b8ddde",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Tuning fork is the requested diagram shape.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "629987a979d591dfb3b744895361a383b59cf43dfa1d580e057a95579a3cf149",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "Priceline",
+    "content_excerpt": "Priceline",
+    "reason": "The final and endorsed factual answer differ from the frozen source answer. Travelocity is the agency named by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "63731b7338fc4fdd7c3d8ee23ba657b08d129fbb76297f10449c5a620b63bb5f",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "Orbitz",
+    "content_excerpt": "Orbitz",
+    "reason": "The final and endorsed factual answer differ from the frozen source answer. Travelocity is the agency named by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "6a83a879b28e37350fac278a6c40fecf71bce56f23b1222fc132943905f96631",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Travelocity is the agency named by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "6b560a4e0bd80b3f6d7672996f64e343749b1d57f746590bf60a3eb6886893a0",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Tony Blair",
+    "content_excerpt": "Tony Blair",
+    "reason": "Tony Blair identifies the person requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "7406a4a090a77d8247f4576970ca81751ebff5bd0394f59919cbee68e71beefc",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A. None",
+    "content_excerpt": "However, based on the data provided in the context, the calculated answer is 98.88%.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. 98.88% is 100% minus the context's 1.12% Laotian-speaking share.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "74da871e6408f0e8fdfa541cee1231a359fb0c08b8390e3d0ad73a62c8e60785",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Dance",
+    "content_excerpt": "Dance",
+    "reason": "Dance is the requested activity.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "75b4f4a472c909c52bd4343ce88d7ccf3cbaa81e1dbed9acb87d42e20607c422",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "stag",
+    "content_excerpt": "stag",
+    "reason": "The final and endorsed factual answer differ from the frozen source answer. Goat is the creature requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "78841adac9d1ebcf46cdaf407529b055e949476824a2fbaab6c5456868c939ae",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "Therefore, it refers to being like or related to a goat (specifically, smelling like a goat).",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. Goat is the creature requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "7a2ac1fd06e2937910f002a9eed82f6aefa560a6299ecc1ec83a04a0bebbb758",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A. None",
+    "content_excerpt": "A. None",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Massachusetts is the requested first U.S. state.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "7a7a9a1e3a1c6c2a9ae57d82d59d5c58db058350e32d1efb43dcfdda1f74cf8b",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "76 Trombones",
+    "content_excerpt": "76 Trombones",
+    "reason": "Trombones is the source bingo call, including the form 76 Trombones.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "7c9cb49f28d00de30c6310f38e1589db6255433eccdd6a140b2d3f83cbc2c2a3",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "the Order of Australia",
+    "content_excerpt": "the Order of Australia",
+    "reason": "Order of Australia matches the context's final membership statement.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "7d8815ca2607f398660bf7b4b6e2235727db6cf7213f09cdd6c9be420c98f446",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Yes",
+    "content_excerpt": "Yes",
+    "reason": "Yes answers the source causation question; the source already includes Yes/No options.",
+    "source_ambiguity_note": "The source question itself contains Yes/No options; no A-to-Yes mapping is used."
+  },
+  {
+    "opaque_id": "8098bdf1566f3373db8e9bbeb4fd46afef85f31ebaa88b36a1958d5214aa351c",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Peter (Simon Peter) tried to walk on water.",
+    "content_excerpt": "Peter (Simon Peter) tried to walk on water.",
+    "reason": "Peter names the requested disciple.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "823eb7000ffaa0c3e72edc376abe0b743e71fa7aa944fd0683c1dbe7af2a31af",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Peter",
+    "content_excerpt": "Peter",
+    "reason": "Peter names the requested disciple.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "8581614410e6471bdc4da1c5e475c6d6df7b1bd00286b01aa12a24d242710aa2",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "98.88%",
+    "content_excerpt": "98.88%",
+    "reason": "98.88% is 100% minus the context's 1.12% Laotian-speaking share.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "8a8ef37529adcc889e7c5f4d63a10335ecdda64a222a4e7d26467ee6b393f385",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Fairy rings are made of mushrooms—rings of fungal fruiting bodies produced by an underground mycelial network.",
+    "content_excerpt": "Fairy rings are made of mushrooms—rings of fungal fruiting bodies produced by an underground mycelial network.",
+    "reason": "Mushrooms/fungi supplies the substance of the fairy rings; the description identifies the requested fungal ring.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "8a91cf287ccb6f447c90eac2ab77b180e86c7cbd0bfdac59293a20fd918427dc",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "The Hubble sequence, which classifies galaxies into ellipticals, spirals, and lenticulars, is famously represented by a diagram shaped like a **tuning fork**.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. Tuning fork is the requested diagram shape.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "8e47b19e3ac366199574dc62d23c1058b97ddec662d0257bc1e0558efe2f931b",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "The Conference of Ambassadors",
+    "content_excerpt": "The Conference of Ambassadors",
+    "reason": "The Conference of Ambassadors is first: June 18 precedes the Foch proposal on July 18.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "8ebec10d2c991c1da60d3c1c43fa164fcde2a290376ecf94439deffacdc341ab",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Peter",
+    "content_excerpt": "Peter",
+    "reason": "Peter names the requested disciple.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "8eea73246aa8797d46b5cc14919e13e38038e27335de60b78a6b31c3e89e5de1",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "tuning fork",
+    "content_excerpt": "tuning fork",
+    "reason": "Tuning fork is the requested diagram shape.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "8f08d199dcd14ec8e3623be95b025bb541eb529c1070163729bb7bb0a95cdb83",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Calgary Stampede",
+    "content_excerpt": "Calgary Stampede",
+    "reason": "Calgary Stampede is the described event.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "931754a982fa73eb8fe58fba8bbee486805a44fa7ab0479c843e663a79076f49",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "Benesh Notation is a system of dance notation used to record choreography, specifically for ballet and contemporary dance.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. Dance is the requested activity.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "9393a767a4c550974a5799a5a19521048055e4004a81de70af137733a2c67b57",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Massachusetts",
+    "content_excerpt": "Massachusetts",
+    "reason": "Massachusetts is the requested first U.S. state.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "9523e0ef0f8bfe2a96996419fe8fa16d59f86f6faead9fbaf65c185043765570",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "8",
+    "content_excerpt": "8",
+    "reason": "8 days is the elapsed difference from July 18 to July 26 in the context.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "97ad2618ddd0e5f09abf652715b4216205914dd2b6a1709e819d7b6d9a3b397d",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Tony Blair identifies the person requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "998f9eccdbe0a1101156f49a2b1e5a55d105f670370209f8618873d80d8f9114",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Trombones is the source bingo call, including the form 76 Trombones.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "9d37362249da76c2f6830e0122df286c9567add817d9caf1156f10ecd6bd06b0",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "The Conference of Ambassadors",
+    "content_excerpt": "The Conference of Ambassadors",
+    "reason": "The Conference of Ambassadors is first: June 18 precedes the Foch proposal on July 18.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "9ecfddf467bdfe09e8362d5809ad89673378d0d5404fd0006e1d7d9131c1228e",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "20 to 24 years and 25 to 29 years",
+    "content_excerpt": "20 to 24 years and 25 to 29 years",
+    "reason": "Both 20–24 and 25–29 are supplied, matching the two groups tied at the lowest 5.5% share.",
+    "source_ambiguity_note": "Interpreted using population shares in context; both tied minimum groups (20–24 and 25–29) are required, rather than any one alias."
+  },
+  {
+    "opaque_id": "a42fd3b4cbca738f8fb35fe40624108c84195eefa77c56bf2cffe22f64cf223e",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "Expedia",
+    "content_excerpt": "Expedia",
+    "reason": "The final and endorsed factual answer differ from the frozen source answer. Travelocity is the agency named by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "a431c502c0137ccc20ea243073b7018e339a26e77a0a29e1c62bd866adf5f246",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Tony Blair",
+    "content_excerpt": "Tony Blair",
+    "reason": "Tony Blair identifies the person requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "a52746222652bf70b9b552f30ed8ababb73bc12c507daabb95125dae24cb3a9a",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Order of Australia",
+    "content_excerpt": "Order of Australia",
+    "reason": "Order of Australia matches the context's final membership statement.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "a5c9e29dcfde1ce848a118aebf62a6510994d21722c3b08076e9b409dc40b48f",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "a tuning fork",
+    "content_excerpt": "a tuning fork",
+    "reason": "Tuning fork is the requested diagram shape.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "a7e77a48fc2e8332eb11564caf86e93e6417f95f7a6b0d1ae8118c0659c21b38",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "8 days",
+    "content_excerpt": "8 days",
+    "reason": "8 days is the elapsed difference from July 18 to July 26 in the context.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "a90b9de2ba37d6b2065ee2832fc140ec8e4d396dfa824f3e49e2945c03179022",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Peter",
+    "content_excerpt": "Peter",
+    "reason": "Peter names the requested disciple.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "a992e609de295f96a750fe3733324cc4ca9613f008b9f9e41a9f5f3f7d2d73c7",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "In June 2017, Professor Ricklefs was made a member of the Order of Australia.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. Order of Australia matches the context's final membership statement.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "aa2553b71f5e141f68a9bb1fff0142b45c91f58d542dae29115c0378be04ea26",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A book",
+    "content_excerpt": "A book",
+    "reason": "A book, including its specific edition, is the entity identified by an ISBN.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "ab4c8770401f76a0511a1a65fc4c0b8839ab31ddf47aa19ba9cb2c1d2f3b1f92",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Massachusetts",
+    "content_excerpt": "Massachusetts",
+    "reason": "Massachusetts is the requested first U.S. state.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "ad2d92704030a9a566f80c8103b42136e242fba55b6e542af431ce4664ce2b22",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Massachusetts",
+    "content_excerpt": "Massachusetts",
+    "reason": "Massachusetts is the requested first U.S. state.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "af32d74b787775c9665b107b22d2aadb58dd12e8aa7c185c7e6558ab1d98fe42",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "8",
+    "content_excerpt": "8",
+    "reason": "8 days is the elapsed difference from July 18 to July 26 in the context.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "b069fb8ef93dbbd640ba2118b913dcc0edf40c187e83411a01a3b03ffbf4ed5d",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Cyanide",
+    "content_excerpt": "Cyanide",
+    "reason": "Cyanide is the compound requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "b20ba8aed0731dd380b04134b93d8568ebbae90da96681e0066bcdbafc420dec",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "20 to 24 years and 25 to 29 years",
+    "content_excerpt": "20 to 24 years and 25 to 29 years",
+    "reason": "Both 20–24 and 25–29 are supplied, matching the two groups tied at the lowest 5.5% share.",
+    "source_ambiguity_note": "Interpreted using population shares in context; both tied minimum groups (20–24 and 25–29) are required, rather than any one alias."
+  },
+  {
+    "opaque_id": "b2ad5e51d5f856e635f1524bf6217b5e6868e850bafd4c8fe19cab86c3eec512",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "None",
+    "content_excerpt": "None",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. The historical frozen target is Michael Fallon; jurisdiction and date are unspecified.",
+    "source_ambiguity_note": "The frozen historical target is Michael Fallon, but no jurisdiction or date is provided. No present-day officeholder facts were inferred or externally checked."
+  },
+  {
+    "opaque_id": "b4d65ef12fac460157e1450de1cf873225e6dacb2daee1112b068051cdb235a8",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "98.88%",
+    "content_excerpt": "98.88%",
+    "reason": "98.88% is 100% minus the context's 1.12% Laotian-speaking share.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "b5de6a1b6502f02028247b7dc9dd0895179ca19313e4e6eae0980b1e1ed95e2f",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "Historically, Massachusetts was the first state to do so (the ruling took effect in May 2004).",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. Massachusetts is the requested first U.S. state.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "ba6f29769c40d783d960fd5f28a4b33f7e74f85eae7eeeb22ac12e1d36c54420",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "cyanide",
+    "content_excerpt": "cyanide",
+    "reason": "Cyanide is the compound requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "bad328e361c4128a330bc9eaef913558a75fce142afce94638c5b1363a26b718",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "Candy Man",
+    "content_excerpt": "Candy Man",
+    "reason": "The final and endorsed factual answer differ from the frozen source answer. Trombones is the source bingo call, including the form 76 Trombones.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "bbb8f53d9f4cb45447410ac7b22f02dc6b19907b2829496764a899d0200ef1d4",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Dance",
+    "content_excerpt": "Dance",
+    "reason": "Dance is the requested activity.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "be548892dcc5a953bb1a494a8b55fda660ab9c46e7406b7d35e1aaa0725a4654",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "fungi",
+    "content_excerpt": "fungi",
+    "reason": "Mushrooms/fungi supplies the substance of the fairy rings; the description identifies the requested fungal ring.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "bfb9ca4b9ce7a6a0e9949eefecb27c771db00d2be77e04640e5272c34fef730b",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "mushrooms",
+    "content_excerpt": "mushrooms",
+    "reason": "Mushrooms/fungi supplies the substance of the fairy rings; the description identifies the requested fungal ring.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "bffaaa8f9be24d01f25610153cd9a8a033fed804031ee513d22312aeb79bfdf7",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Peter",
+    "content_excerpt": "Peter",
+    "reason": "Peter names the requested disciple.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "c2f92231f293564f7a94feb177d052117b5729a80a0763bc00281d9d7f813e47",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. The Conference of Ambassadors is first: June 18 precedes the Foch proposal on July 18.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "c44ef930195682b27647f5f87f0be599ffe31cd0616060f678118466982682ed",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A. None",
+    "content_excerpt": "A. None",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. The historical frozen target is Michael Fallon; jurisdiction and date are unspecified.",
+    "source_ambiguity_note": "The frozen historical target is Michael Fallon, but no jurisdiction or date is provided. No present-day officeholder facts were inferred or externally checked."
+  },
+  {
+    "opaque_id": "c465222962c74f4cf710b6aab1ab38a16be9369b33edef3c4eb56fa3f4159754",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "hyperbole",
+    "content_excerpt": "hyperbole",
+    "reason": "Hyperbole is the requested figure of speech.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "c5a86e4c72f8e26ff4585853e08203c2f2e9502d38c74f76c79bbd19281849f1",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A. None",
+    "content_excerpt": "A. None",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Hyperbole is the requested figure of speech.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "c5e7526093a4734c6d9e044e6d60e176297852248576fa0c05a683870f648f84",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Calgary Stampede",
+    "content_excerpt": "Calgary Stampede",
+    "reason": "Calgary Stampede is the described event.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "c70d0f93a2f81268c5f12eae202b2464021a9f1f4284cbb714260838b3bdd6f3",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "The Conference of Ambassadors",
+    "content_excerpt": "The Conference of Ambassadors",
+    "reason": "The Conference of Ambassadors is first: June 18 precedes the Foch proposal on July 18.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "c9cd0a18e7f2309325c207e28e2c0e6693e05e69c33c16f36172650ee034b2a0",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "book",
+    "content_excerpt": "book",
+    "reason": "A book, including its specific edition, is the entity identified by an ISBN.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "cc2f91c10269f73a5bab083f26f7940e542682e6463ac08e1197cd8bc6bdcc6d",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A. None",
+    "content_excerpt": "A. None",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Calgary Stampede is the described event.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "ce8223a6c48aafe0940979516bf36dc250fb58e072f41d202c7589f7cafd8839",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Both 20–24 and 25–29 are supplied, matching the two groups tied at the lowest 5.5% share.",
+    "source_ambiguity_note": "Interpreted using population shares in context; both tied minimum groups (20–24 and 25–29) are required, rather than any one alias."
+  },
+  {
+    "opaque_id": "cec897a46a51dc64a42684ab7e6df4637406ef8cc13a8bb4d3c480bff2ad1c5a",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A. None",
+    "content_excerpt": "A. None",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Dance is the requested activity.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "d0045c4bfcee11430f7ef4a10d8522e8d0a388c04fdfd403f27127cfde15146e",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "tuning fork",
+    "content_excerpt": "tuning fork",
+    "reason": "Tuning fork is the requested diagram shape.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "d40fd138b4261e8e2eed1a2c69935122d79c294ae4226187e2008fa13f3b0005",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "hyperbole",
+    "content_excerpt": "hyperbole",
+    "reason": "Hyperbole is the requested figure of speech.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "d5daaf2c3a40d72a355a0540d41345bb0c89c40923e3fc87721c5ceec383f6e5",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A book",
+    "content_excerpt": "A book",
+    "reason": "A book, including its specific edition, is the entity identified by an ISBN.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "d68c79d78c57e8ae2f622f1c562a7e04b310b24e81ae59e31d3c2fdf94973d13",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Goat",
+    "content_excerpt": "Goat",
+    "reason": "Goat is the creature requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "d807306276d6879653213a58108ae635d1c360f263d953985adf36b801e7b524",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "Based on general knowledge (as no context was provided), an ISBN is a unique numeric commercial book identifier.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. A book, including its specific edition, is the entity identified by an ISBN.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "d80bbf8b0e33ef7fe389cf7c3b18155c9a3717763ae5cf8921e98ab96aa76560",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A. None",
+    "content_excerpt": "A. None",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Mushrooms/fungi supplies the substance of the fairy rings; the description identifies the requested fungal ring.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "d9c08e25726cfbf8f4754b9fa7b2ef9491d84a7ed2ae04b3e68f9cbcbf0f6ada",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "Based on historical records, George Galloway made these controversial remarks regarding Tony Blair.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. Tony Blair identifies the person requested by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "d9dd407d72afe59492b5f0fa2d741d335609656374ffb95f882996ed1bc82545",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "tuning fork",
+    "content_excerpt": "tuning fork",
+    "reason": "Tuning fork is the requested diagram shape.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "db5b368eccd80d4ae06b0f503468af56ce614ddce470e3c5390d55affbb206e0",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "The biblical account in the Gospel of Matthew (Matthew 14:22-33) describes Peter attempting to walk on the water toward Jesus.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. Peter names the requested disciple.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "dbd624ed6048e1d6c2a51da116925038206dbd9047b26ce90e029c37f2d69292",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "20 to 24 years and 25 to 29 years",
+    "content_excerpt": "20 to 24 years and 25 to 29 years",
+    "reason": "Both 20–24 and 25–29 are supplied, matching the two groups tied at the lowest 5.5% share.",
+    "source_ambiguity_note": "Interpreted using population shares in context; both tied minimum groups (20–24 and 25–29) are required, rather than any one alias."
+  },
+  {
+    "opaque_id": "dc46b11f8c9e5cfa18d3bd7aab465e57183ca4dd98330f76a7d574e6599c6658",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "8 days",
+    "content_excerpt": "8 days",
+    "reason": "8 days is the elapsed difference from July 18 to July 26 in the context.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "dd75189d1897a9333345917be1f6efab475136d30af28497f971b698261f2774",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Massachusetts",
+    "content_excerpt": "Massachusetts",
+    "reason": "Massachusetts is the requested first U.S. state.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "e20acaee4284b296ce33c09b862b5a8c551f8d6f6f4902d8c9b915a88a6a9234",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Yes",
+    "content_excerpt": "Yes",
+    "reason": "Yes answers the source causation question; the source already includes Yes/No options.",
+    "source_ambiguity_note": "The source question itself contains Yes/No options; no A-to-Yes mapping is used."
+  },
+  {
+    "opaque_id": "e2634d9c543302e9a505409a6fe596ea8d45baf93632fa035a5f2d7b881a93a7",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "Expedia",
+    "content_excerpt": "Expedia",
+    "reason": "The final and endorsed factual answer differ from the frozen source answer. Travelocity is the agency named by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "e39f0566f4e7049360b32758049a211a35092ca5310c08c41151499e5d7108eb",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "goat",
+    "content_excerpt": "goat",
+    "reason": "Goat is the creature requested by the frozen source. The opening stag/deer claim conflicts, but the response explicitly resolves the strict meaning as goat and commits to goat in its final tag.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "ebdb9c02b040d60f51c0d637a4b6d495d0be8bf3fd1fc064498576880b6638a6",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Travelocity",
+    "content_excerpt": "Travelocity",
+    "reason": "Travelocity is the agency named by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "eeed646d746aec0e2d45fb716d75ae9c0d0bc0c0ee45a61f1219909d0c526d8b",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. Travelocity is the agency named by the frozen source.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "f1fe5e8826214087c63162f279dc8d7c50b497240796a684e8cc6a321d2f22f8",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "8 days",
+    "content_excerpt": "8 days",
+    "reason": "8 days is the elapsed difference from July 18 to July 26 in the context.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "f2d7785214d4a4dbc257caf728db2110d6829d3105a5a58bfa37c9a96d103f5a",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "Knees and Elbows",
+    "content_excerpt": "Knees and Elbows",
+    "reason": "The final and endorsed factual answer differ from the frozen source answer. Trombones is the source bingo call, including the form 76 Trombones.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "f6e07c0c37ed76ebcf4989499964ea6584c101466e3e1cbe0da90f946fff0c0f",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "98.88%",
+    "content_excerpt": "98.88%",
+    "reason": "98.88% is 100% minus the context's 1.12% Laotian-speaking share.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "f92207c861c1b7cd9a971a14863aeb29c6d0ffba4c40a84f4f47018b78236b4f",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "Hyperbole",
+    "content_excerpt": "Hyperbole",
+    "reason": "Hyperbole is the requested figure of speech.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "f9d953c14678ca165c12fec8a182e40c615a7576a578bb9da33bd26aa82ed87a",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "But strictly speaking, 8 days passed.",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. 8 days is the elapsed difference from July 18 to July 26 in the context.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "fb0c8a19c439d153d8ed9a0350d72c63b780e5c961c9ddd9e5ab6e58c3d39288",
+    "final_label": "uncertain",
+    "content_label": "uncertain",
+    "tag_format": "compliant",
+    "final_excerpt": "The provided context does not contain information to answer this question.",
+    "content_excerpt": "As the provided context does not specify a country or a specific individual, and the post of Defence Secretary exists in multiple nations (such as the UK and India), it is not possible to provide a single factual answer without further clarification.\n\n<answer>The provided context does not contain information to answer this question.</answer>",
+    "reason": "The response expressly abstains because jurisdiction/context are missing. Whether that abstention is appropriate cannot be determined from this time- and jurisdiction-implicit source; no officeholder is supplied.",
+    "source_ambiguity_note": "The frozen historical target is Michael Fallon, but no jurisdiction or date is provided. No present-day officeholder facts were inferred or externally checked."
+  },
+  {
+    "opaque_id": "fc60379ee0dabefe1dd77591eb70b74d7ad65846d3442c42e5e723bef344a024",
+    "final_label": "correct",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "20-24 years and 25-29 years",
+    "content_excerpt": "20-24 years and 25-29 years",
+    "reason": "Both 20–24 and 25–29 are supplied, matching the two groups tied at the lowest 5.5% share.",
+    "source_ambiguity_note": "Interpreted using population shares in context; both tied minimum groups (20–24 and 25–29) are required, rather than any one alias."
+  },
+  {
+    "opaque_id": "fd4cce320f4d427021ce3c8700fded506d8950193679708e1cd9db49f892819d",
+    "final_label": "incorrect",
+    "content_label": "incorrect",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "A",
+    "reason": "The final answer is only an unsupported choice/None rather than the required factual answer; no endorsed complete source answer appears elsewhere. 98.88% is 100% minus the context's 1.12% Laotian-speaking share.",
+    "source_ambiguity_note": ""
+  },
+  {
+    "opaque_id": "fe474e71e04a7f0e8f37747352dfa583d04abd87c3345ad3d4cd77ba8129aeb5",
+    "final_label": "incorrect",
+    "content_label": "correct",
+    "tag_format": "compliant",
+    "final_excerpt": "A",
+    "content_excerpt": "The correct chemical answer is Cyanide, but since it is not an option, the only available choice is \"None\".",
+    "reason": "The final A/None does not convey the factual source answer. The earlier quoted statement explicitly endorses the required answer. Cyanide is the compound requested by the frozen source.",
+    "source_ambiguity_note": ""
+  }
+]

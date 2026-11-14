@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "script": "verify_factorial.py",
+      "exit_code": 0
+    },
+    {
+      "script": "work/prepare_secondary.py",
+      "exit_code": 0
+    },
+    {
+      "script": "work/aggregate_secondary.py",
+      "exit_code": 0
+    },
+    {
+      "script": "verify_secondary.py",
+      "exit_code": 0
+    }
+  ],
+  "new_model_calls": 0,
+  "scope": "Same-executor fresh extractedpackage reproduction, not independent semantic adjudication."
+}

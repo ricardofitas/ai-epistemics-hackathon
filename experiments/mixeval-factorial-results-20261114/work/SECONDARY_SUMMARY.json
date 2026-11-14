@@ -1,0 +1,288 @@
+{
+  "status": "complete_assistant_secondary",
+  "planned": 160,
+  "source_questions": 20,
+  "reviewed": 152,
+  "capture_unknowns": 8,
+  "agreement": {
+    "final_label": 152,
+    "content_label": 152,
+    "tag_format": 152
+  },
+  "disagreements": [],
+  "models": {
+    "gemma-4-31b-it": {
+      "source_cases": 20,
+      "axes": {
+        "final": {
+          "counts": {
+            "free_form__absent": {
+              "planned": 20,
+              "correct": 17,
+              "incorrect": 2,
+              "unknown": 1
+            },
+            "free_form__A.None": {
+              "planned": 20,
+              "correct": 17,
+              "incorrect": 3,
+              "unknown": 0
+            },
+            "choice__absent": {
+              "planned": 20,
+              "correct": 17,
+              "incorrect": 2,
+              "unknown": 1
+            },
+            "choice__A.None": {
+              "planned": 20,
+              "correct": 1,
+              "incorrect": 19,
+              "unknown": 0
+            }
+          },
+          "contrasts": {
+            "instruction_freeform_minus_choice_at_absent": {
+              "lower": -0.05,
+              "upper": 0.05
+            },
+            "instruction_freeform_minus_choice_at_present": {
+              "lower": 0.8,
+              "upper": 0.8
+            },
+            "carrier_absent_minus_present_at_freeform": {
+              "lower": 0.0,
+              "upper": 0.05
+            },
+            "carrier_absent_minus_present_at_choice": {
+              "lower": 0.8,
+              "upper": 0.85
+            },
+            "interaction_instruction_gain_absent_minus_present": {
+              "lower": -0.85,
+              "upper": -0.75
+            }
+          }
+        },
+        "content": {
+          "counts": {
+            "free_form__absent": {
+              "planned": 20,
+              "correct": 17,
+              "incorrect": 2,
+              "unknown": 1
+            },
+            "free_form__A.None": {
+              "planned": 20,
+              "correct": 17,
+              "incorrect": 3,
+              "unknown": 0
+            },
+            "choice__absent": {
+              "planned": 20,
+              "correct": 17,
+              "incorrect": 2,
+              "unknown": 1
+            },
+            "choice__A.None": {
+              "planned": 20,
+              "correct": 16,
+              "incorrect": 4,
+              "unknown": 0
+            }
+          },
+          "contrasts": {
+            "instruction_freeform_minus_choice_at_absent": {
+              "lower": -0.05,
+              "upper": 0.05
+            },
+            "instruction_freeform_minus_choice_at_present": {
+              "lower": 0.05,
+              "upper": 0.05
+            },
+            "carrier_absent_minus_present_at_freeform": {
+              "lower": 0.0,
+              "upper": 0.05
+            },
+            "carrier_absent_minus_present_at_choice": {
+              "lower": 0.05,
+              "upper": 0.1
+            },
+            "interaction_instruction_gain_absent_minus_present": {
+              "lower": -0.1,
+              "upper": 0.0
+            }
+          }
+        }
+      },
+      "tag_format_counts": {
+        "free_form__absent": {
+          "compliant": 20
+        },
+        "free_form__A.None": {
+          "compliant": 20
+        },
+        "choice__absent": {
+          "compliant": 20
+        },
+        "choice__A.None": {
+          "compliant": 20
+        }
+      },
+      "rule_credit_with_incorrect_final": [
+        "MXA-01-3-0",
+        "MXA-03-3-0",
+        "MXA-05-3-0",
+        "MXA-06-3-0",
+        "MXA-13-3-0",
+        "MXA-18-3-0",
+        "MXA-19-3-0"
+      ],
+      "correct_content_with_incorrect_final": [
+        "MXA-01-3-0",
+        "MXA-03-3-0",
+        "MXA-05-3-0",
+        "MXA-06-3-0",
+        "MXA-08-3-0",
+        "MXA-09-3-0",
+        "MXA-10-3-0",
+        "MXA-11-3-0",
+        "MXA-13-3-0",
+        "MXA-14-3-0",
+        "MXA-15-3-0",
+        "MXA-16-3-0",
+        "MXA-17-3-0",
+        "MXA-18-3-0",
+        "MXA-19-3-0"
+      ]
+    },
+    "qwen3.8-27b": {
+      "source_cases": 20,
+      "axes": {
+        "final": {
+          "counts": {
+            "free_form__absent": {
+              "planned": 20,
+              "correct": 16,
+              "incorrect": 1,
+              "unknown": 3
+            },
+            "free_form__A.None": {
+              "planned": 20,
+              "correct": 16,
+              "incorrect": 3,
+              "unknown": 1
+            },
+            "choice__absent": {
+              "planned": 20,
+              "correct": 17,
+              "incorrect": 1,
+              "unknown": 2
+            },
+            "choice__A.None": {
+              "planned": 20,
+              "correct": 0,
+              "incorrect": 18,
+              "unknown": 2
+            }
+          },
+          "contrasts": {
+            "instruction_freeform_minus_choice_at_absent": {
+              "lower": -0.15,
+              "upper": 0.1
+            },
+            "instruction_freeform_minus_choice_at_present": {
+              "lower": 0.7,
+              "upper": 0.85
+            },
+            "carrier_absent_minus_present_at_freeform": {
+              "lower": -0.05,
+              "upper": 0.15
+            },
+            "carrier_absent_minus_present_at_choice": {
+              "lower": 0.75,
+              "upper": 0.95
+            },
+            "interaction_instruction_gain_absent_minus_present": {
+              "lower": -1.0,
+              "upper": -0.6
+            }
+          }
+        },
+        "content": {
+          "counts": {
+            "free_form__absent": {
+              "planned": 20,
+              "correct": 16,
+              "incorrect": 1,
+              "unknown": 3
+            },
+            "free_form__A.None": {
+              "planned": 20,
+              "correct": 16,
+              "incorrect": 3,
+              "unknown": 1
+            },
+            "choice__absent": {
+              "planned": 20,
+              "correct": 17,
+              "incorrect": 1,
+              "unknown": 2
+            },
+            "choice__A.None": {
+              "planned": 20,
+              "correct": 0,
+              "incorrect": 18,
+              "unknown": 2
+            }
+          },
+          "contrasts": {
+            "instruction_freeform_minus_choice_at_absent": {
+              "lower": -0.15,
+              "upper": 0.1
+            },
+            "instruction_freeform_minus_choice_at_present": {
+              "lower": 0.7,
+              "upper": 0.85
+            },
+            "carrier_absent_minus_present_at_freeform": {
+              "lower": -0.05,
+              "upper": 0.15
+            },
+            "carrier_absent_minus_present_at_choice": {
+              "lower": 0.75,
+              "upper": 0.95
+            },
+            "interaction_instruction_gain_absent_minus_present": {
+              "lower": -1.0,
+              "upper": -0.6
+            }
+          }
+        }
+      },
+      "tag_format_counts": {
+        "free_form__absent": {
+          "compliant": 17,
+          "unknown": 3
+        },
+        "free_form__A.None": {
+          "compliant": 19,
+          "unknown": 1
+        },
+        "choice__absent": {
+          "compliant": 18,
+          "unknown": 2
+        },
+        "choice__A.None": {
+          "compliant": 18,
+          "unknown": 2
+        }
+      },
+      "rule_credit_with_incorrect_final": [],
+      "correct_content_with_incorrect_final": []
+    }
+  },
+  "new_model_api_calls": 0,
+  "new_judge_api_calls": 0,
+  "scope": "Prespecified secondary assistant adjudication; originalRULEendpointunchanged. Same20sourcecases/model; unknown sensitivity bounds not confidence intervals, human validation or globalcapability."
+}

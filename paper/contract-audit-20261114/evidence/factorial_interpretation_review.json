@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "review_type": "Independent interpretation of fixed-panel factorial contrasts; offline source/quote/arithmetic audit reported separately in SECONDARY_VERIFICATION.json",
+  "source_cases_per_model": 20,
+  "planned": 160,
+  "completed_scored": 152,
+  "capture_unknown": 8,
+  "capture_status_interpretation": {
+    "terminal_event_names": {
+      "response.completed": 160
+    },
+    "response_statuses": {
+      "completed": 152,
+      "incomplete": 8
+    },
+    "conclusion": "Terminal SSE event naming does not establish complete response eligibility. Eight response.status=incomplete captures remain unknown despite all 160 terminal event names being response.completed."
+  },
+  "primary_endpoint": "Pinned optional official MixEval RULE score; not official default model judging, final-answer semantic correctness, or general model accuracy.",
+  "primary_contrasts": {
+    "gemma-4-31b-it": {
+      "instruction_freeform_minus_choice_at_absent": {
+        "lower": -0.1,
+        "upper": -0.1
+      },
+      "instruction_freeform_minus_choice_at_present": {
+        "lower": 0.35,
+        "upper": 0.35
+      },
+      "carrier_absent_minus_present_at_freeform": {
+        "lower": -0.05,
+        "upper": -0.05
+      },
+      "carrier_absent_minus_present_at_choice": {
+        "lower": 0.4,
+        "upper": 0.4
+      },
+      "interaction_instruction_gain_absent_minus_present": {
+        "lower": -0.45,
+        "upper": -0.45
+      }
+    },
+    "qwen3.8-27b": {
+      "instruction_freeform_minus_choice_at_absent": {
+        "lower": -0.15,
+        "upper": 0.1
+      },
+      "instruction_freeform_minus_choice_at_present": {
+        "lower": 0.65,
+        "upper": 0.8
+      },
+      "carrier_absent_minus_present_at_freeform": {
+        "lower": -0.05,
+        "upper": 0.15
+      },
+      "carrier_absent_minus_present_at_choice": {
+        "lower": 0.7,
+        "upper": 0.9
+      },
+      "interaction_instruction_gain_absent_minus_present": {
+        "lower": -0.95,
+        "upper": -0.55
+      }
+    }
+  },
+  "primary_supported_claims": [
+    "Within this fixed panel, removal of A.None under the choice instruction increases RULE score by 0.40 for Gemma and by 0.70 to 0.90 for Qwen under every assignment of the eight unknown scores.",
+    "With A.None present, free-form minus choice RULE score is 0.35 for Gemma and 0.65 to 0.80 for Qwen.",
+    "The prespecified difference of instruction effects (absent minus present) is negative: -0.45 for Gemma and -0.95 to -0.55 for Qwen. This is a strong conditional instruction-by-carrier pattern in the tested outputs.",
+    "Carrier removal under free-form has effect -0.05 for Gemma and -0.05 to 0.15 for Qwen. These data do not support a uniform harmful carrier effect independent of instruction.",
+    "Without the appended carrier, free-form minus choice is -0.10 for Gemma and -0.15 to 0.10 for Qwen. These data do not support a generic free-form-instruction benefit."
+  ],
+  "secondary_distinctions": {
+    "gemma_choice_A_None": {
+      "primary_rule_correct": 8,
+      "secondary_final_correct": 1,
+      "secondary_content_correct": 16,
+      "planned": 20,
+      "content_correct_but_final_incorrect": 15,
+      "primary_rule_credit_but_final_incorrect": 7,
+      "interpretation": "Gemma often states the factual answer in rationale and then commits to A. RULE credit, factual final answer and endorsed content measure different constructs."
+    },
+    "qwen_choice_A_None": {
+      "primary_rule_correct": 0,
+      "secondary_final_correct": 0,
+      "secondary_content_correct": 0,
+      "incorrect_complete": 18,
+      "capture_unknown": 2,
+      "planned": 20,
+      "interpretation": "Qwen complete outputs in this condition contain no endorsed correct source answer according to both assistant reviewers; preserve the two incomplete outputs as unknown."
+    },
+    "agreement": {
+      "final_label": 152,
+      "content_label": 152,
+      "tag_format": 152
+    },
+    "complete_uncertain_cases": [
+      "MXA-07-0-0",
+      "MXA-07-2-0"
+    ],
+    "complete_uncertainty_reason": "Source 860 has no date or jurisdiction; two Gemma outputs ask for clarification. Both reviewers preserve uncertainty rather than substituting present-day officeholder facts.",
+    "gemma_secondary_interactions": {
+      "final": {
+        "lower": -0.85,
+        "upper": -0.75
+      },
+      "content": {
+        "lower": -0.1,
+        "upper": 0.0
+      }
+    },
+    "qwen_secondary_interactions": {
+      "final": {
+        "lower": -1.0,
+        "upper": -0.6
+      },
+      "content": {
+        "lower": -1.0,
+        "upper": -0.6
+      }
+    }
+  },
+  "limitations": [
+    "All contrasts use 20 fixed paired source questions per model. The 160 requests are not 160 independent questions.",
+    "Bounds range unknown correctness over 0..1 with denominator 20. They are fixed-panel sensitivity bounds, not sampling confidence intervals or p-values.",
+    "Panel selected from an already audited source pool; disjointness from earlier generation questions does not make source data globally blind or a fresh benchmark sample.",
+    "Custom choice/free-form and appended A.None interventions do not identify arbitrary instruction wording, independent tag-format effects or native upstream benchmark behavior.",
+    "Deterministic counterbalancing is not randomization. Findings describe captured outputs under this execution, with potential time/order/provider effects and no repeated-run variability estimate.",
+    "Frozen historical targets and noisy aliases are not external current-world fact validation. Source 571 needs both requested age ranges; source 281 already embeds Yes/No choices even when the appended carrier is absent.",
+    "Secondary annotations are assistant reviews with possible format leakage and prior source exposure. Agreement does not establish human validation or empirically prove reviewer independence.",
+    "Secondary judgments are reported separately and do not repair, replace or relabel the primary RULE endpoint.",
+    "No general model capability, population prevalence, benchmark accuracy, or model ranking claim follows from these effects."
+  ],
+  "new_model_or_judge_api_calls": 0,
+  "input_sha256": {
+    "FINAL_VERIFICATION.json": "22d3f20ff8ae007265747be8dbee3331f8fcbbdea6723430567ced4a141c230a",
+    "actual/analysis/ANALYSIS_SUMMARY.json": "634826fbbdf61839aeff407c85ec502ab6d226051c16cc876c257370f14a4277",
+    "actual/ANALYSIS_PROTOCOL.json": "279a6b4809dad70b15c5b6b671d021e239cdf63fc2347a80c804d388e3a75167",
+    "actual/SECONDARY_ADJUDICATION_PROTOCOL.json": "bc67f73677de0856ce69f441e92c03c5a65a035cd71d317e5681cc1fd9b2dcf3",
+    "actual/DESIGN_PROTOCOL.json": "50cb29c351e73db09868652bf011bb06d0686b31e41ed0fa7ad1f42dc7c0463a",
+    "actual/STATIC_SOURCE_CAVEATS.json": "1041585863f98e4e5e44e26884c802445a8d3c504d0f9d0069d8b0fef52c375c",
+    "work/SECONDARY_SUMMARY.json": "c4772b512974349185ee85c67428b01e6011327f101c2b0dbcac869b73948d8a"
+  }
+}

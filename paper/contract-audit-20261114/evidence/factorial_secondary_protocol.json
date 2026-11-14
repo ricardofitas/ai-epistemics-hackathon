@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "stage": "Prospectively fixed secondary assistant adjudication for the 160-request custom factorial diagnostic",
+  "timing": "Frozen after source questions, aliases and previous-study aggregate effects were inspected, but before any new factorial response exists or is read. Not a globally blind source cohort.",
+  "primary_analysis": "The pinned official optional RULE score is the prespecified primary endpoint. This secondary annotation does not replace, repair or relabel that original score.",
+  "eligibility": "Only new complete HTTP200 nonempty responses with validated exact source/request/output identity and no transport/API/stream error enter the masked packet. All planned160slots remain in analysis; incomplete, failed, missing or unattempted outputs stay unknown. Never upgrade an incomplete output from readable partial text.",
+  "masking": "Create opaque identifiers using SHA256(factorial-secondary-v1:trial_id), sort by the opaque identifier, and omit model, instruction factor, carrier factor, request wording and primary score. Supply exact frozen source question/context, accepted answer representations and captured complete response text. Preserve the sealed key separately until independent judgments are complete. Response formatting can still suggest condition.",
+  "reviewers": "Two assistant reviewers independently read every eligible response. They are not human annotators or the official default model judge. Report each review, agreement and consensus. Correct/incorrect consensus requires identical determinate judgments; disagreement or either uncertain becomes unknown. Do not force agreement after unmasking.",
+  "axes": {
+    "final_answer": {
+      "correct": "The explicitly committed final answer conveys the required source answer or an unambiguous equivalent. An answer tag containing a factual answer is eligible; an untagged explicit final factual sentence can be semantically correct while separately failing requested tag format. For a multi-part question, all requested parts must be supplied, using source context to disambiguate list-valued references.",
+      "incorrect": "The final commitment is wrong relative to the frozen source question/context, omits a required requested part, is an unsupported choice tag or None in place of the actual free-form answer, or explicitly endorses a contradictory fact. A rationale with the correct fact followed by only A/None has an incorrect factual final answer.",
+      "uncertain": "Final commitment, source reference semantics, temporal scope, entity equivalence or full multi-part answer cannot be determined reliably from the frozen question/context and accepted answers. Do not guess a fact from a tag or silently repair the source."
+    },
+    "endorsed_content": {
+      "correct": "The response explicitly endorses the required source answer anywhere, even if its final answer is a non-informative choice tag. Require all parts for multi-part source questions. Distinguish an endorsed statement from a repeated question, quoted example, rejected candidate, incidental substring or unrelated entity.",
+      "incorrect": "No endorsed correct answer to the source question is present, or only a known wrong/incomplete factual answer is endorsed. A merely related true fact does not answer the source question.",
+      "uncertain": "Correctness, completeness or endorsement cannot be grounded sufficiently in the supplied source evidence."
+    },
+    "tag_format": {
+      "compliant": "Exactly one final nonempty <answer>...</answer> pair is present, with no second competing answer tag or subsequent contradictory final commitment.",
+      "noncompliant": "No such pair, empty tag, multiple competing tags or an incompatible trailing final commitment.",
+      "note": "Tag-format compliance is descriptive and does not establish factual correctness. A bare A in a tag can be compliant and factually incorrect. Source-embedded Yes/No options remain source content; do not automatically map A to Yes."
+    }
+  },
+  "fields": ["opaque_id", "final_label", "content_label", "tag_format", "final_excerpt", "content_excerpt", "reason", "source_ambiguity_note"],
+  "grounding": "Every correct label requires a verbatim excerpt from the response and a short explanation relative to the frozen source semantics. Never count a loose accepted-alias substring when it refers to the wrong entity, is negated, or answers only one required part. Source temporal ambiguity remains visible; historical source gold is not current-world fact validation.",
+  "analysis": "For each model, retain20sourcequestions crossed with4conditions. Produce final/content counts and the same paired instruction contrasts, carrier contrasts and difference-of-differences interaction as the primary factorial analysis. Each unknown correctness ranges0..1 and contributes bounds according to coefficient sign. Report scores, final answer and endorsed content as distinct constructs. These are fixed-panel sensitivity bounds, not confidence intervals or model-capability estimates.",
+  "limits": "New responses on an already audited source pool; custom template; mixed source task forms; deterministic counterbalance rather than randomized inference; assistant annotation and possible mask leakage; noisy/temporally ambiguous source references. Outcome-dependent exclusions, prompt substitutions and silent retries are forbidden.",
+  "new_model_calls": 0,
+  "new_judge_api_calls": 0
+}

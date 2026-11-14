@@ -5,7 +5,7 @@
     "blocks": [
       {
         "kind": "meta",
-        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.5"
+        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.6"
       },
       {
         "kind": "heading",
@@ -13,7 +13,7 @@
       },
       {
         "kind": "p",
-        "text": "Evaluation software can change task kind, remove required information and alter scoring references while returning numeric scores. We audit a pinned One-Eval revision using official records, native methods, controlled interventions and an existing two-model trial. A prospective four-contract extension found malformed ARC-Challenge and OpenBookQA construction, followed by captured-split confirmation. In a 50-question WinoGrande panel, Qwen's source-correct gain under joint question and format repair remains between 36 and 48 percentage points under conservative unknown-answer treatment. Re-scoring identical repaired-prompt outputs changes assigned scores by 40 and 42 points for the two models. Causal ablations isolate shared source-symbol and option-decoding faults, followed by a confirmed prediction on 100 French MMMLU records. MixEval reveals a distinct task-kind mismatch despite field presence and internally consistent inferred settings. Source placeholders are displayed as answer choices. Controlled scorer replays on 200 reused records reject all original list references yet return numeric zero. A separate fixed-output study matches 49 public responses and confirms reference exclusion; typed optional official rule scoring preserves interpretable outcomes and its own counterexamples. These replays isolate scorer behavior. A subsequent 20-question paired pilot makes 80 new generation calls under a common scorer. Qwen's score gain remains 50-75 percentage points under conservative incomplete-answer bounds; Gemma's -5 to +25 interval remains inconclusive. Source-bound checks, retained audit errors and bounded native-path tests delimit the intervention. Overlapping source content, incomplete cache coverage and unresolved affected external conclusions constrain generalization."
+        "text": "Evaluation software can change task kind, remove required information and alter scoring references while returning numeric scores. We audit a pinned One-Eval revision using official records, native methods, controlled interventions and an existing two-model trial. A prospective four-contract extension found malformed ARC-Challenge and OpenBookQA construction, followed by captured-split confirmation. In a 50-question WinoGrande panel, Qwen's source-correct gain under joint question and format repair remains between 36 and 48 percentage points under conservative unknown-answer treatment. Re-scoring identical repaired-prompt outputs changes assigned scores by 40 and 42 points for the two models. Causal ablations isolate shared source-symbol and option-decoding faults, followed by a confirmed prediction on 100 French MMMLU records. MixEval reveals a distinct task-kind mismatch despite field presence and internally consistent inferred settings. Source placeholders are displayed as answer choices. Controlled scorer replays on 200 reused records reject all original list references yet return numeric zero. A separate fixed-output study matches 49 public responses and confirms reference exclusion; typed optional official rule scoring preserves interpretable outcomes and its own counterexamples. These replays isolate scorer behavior. A subsequent 20-question paired pilot makes 80 new generation calls under a common scorer. Qwen's score gain remains 50-75 percentage points under conservative incomplete-answer bounds; Gemma's -5 to +25 interval remains inconclusive. A further 160-call crossed diagnostic finds an instruction-by-placeholder interaction, not a uniform free-form benefit. Source overlap, assistant adjudication and unresolved external impact constrain generalization."
       },
       {
         "kind": "heading",
@@ -642,7 +642,7 @@
       },
       {
         "kind": "p",
-        "text": "Bounded full-module orchestration carries the same 49 public responses with replaced provider/prompt/scoring boundaries and inert dependency facades (Appendix B). Complete installed-provider execution, global novelty assessment and default judge agreement remain open."
+        "text": "A separate crossed diagnostic isolates an instruction-by-placeholder interaction (Appendices F-G); it does not support a uniform free-form benefit. Complete installed-provider execution and affected independent external conclusions remain open."
       }
     ]
   },
@@ -906,7 +906,7 @@
     "blocks": [
       {
         "kind": "p",
-        "text": "The package includes sixteen machine-readable claims with exact source snapshots and archive identities. Reused sources and new generation responses retain separate units."
+        "text": "Eighteen claims retain exact evidence. C1-C16 are mapped below; C17-C18 appear in Appendices F-G. Reused sources and new responses remain separate units."
       },
       {
         "kind": "table",
@@ -1009,7 +1009,7 @@
       },
       {
         "kind": "p",
-        "text": "Run verify_claims.py to reconcile sixteen claims with the bundled source snapshots and hashes. Original study archives retain selection, request captures and runtime verification. Synthesis checks add no observations."
+        "text": "Run verify_claims.py to reconcile eighteen claims with the bundled source snapshots and hashes. Original study archives retain selection, request captures and runtime verification. Synthesis checks add no observations."
       }
     ]
   },
@@ -1075,7 +1075,179 @@
       },
       {
         "kind": "p",
-        "text": "All bounds pair the same 20 questions per model, assigning each unknown correctness in [0,1]. They are finite-panel sensitivity bounds, not confidence intervals. Source/request identities, packet/key bijection, grounded excerpts and independent aggregate reconstruction pass. No new model or judge API calls are made. The review does not establish hidden capability loss or population superiority; a prospective instruction-by-carrier ablation on new questions is the next causal test."
+        "text": "All bounds pair the same 20 questions per model, assigning each unknown correctness in [0,1]. They are finite-panel sensitivity bounds, not confidence intervals. Source/request identities, packet/key bijection, grounded excerpts and independent aggregate reconstruction pass. No new model or judge API calls are made. The review does not establish hidden capability loss or population superiority; the resulting instruction-by-carrier diagnostic on a disjoint question panel is reported in Appendices F-G. The source pool was previously audited."
+      }
+    ]
+  },
+  {
+    "title": "Appendix F. Crossed instruction and carrier",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "F.1. Fixed design and authenticated execution (C17)"
+      },
+      {
+        "kind": "p",
+        "text": "Twenty source questions are crossed with two models, free-form versus choice instructions, and an appended A.None carrier present versus absent. Source question/context and answer-tag requirements are fixed within each source. The absent condition removes only the appended carrier; one BBH source retains its intrinsic Yes/No options. Questions are exact-text disjoint from the previous generation panel but drawn from a previously audited pool. This is a custom diagnostic, not a native official benchmark run or globally blind transfer."
+      },
+      {
+        "kind": "p",
+        "text": "Protocol/implementation ddedfcd6 and launch 3faed45d precede all responses. Run 43615821403, attempt 1, records 160 unique attempts: 152 complete and 8 incomplete. All 160 terminal events are named response.completed, but the eight incomplete response statuses remain unknown. The pre-inspection independent verifier (4981202b) matches exact Git bytes and passes source/request/output/journal/model/ledger/usage/cap checks and independent enumeration of all five contrasts."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Condition",
+          "Gemma correct / unknown",
+          "Qwen correct / unknown"
+        ],
+        "rows": [
+          [
+            "Free-form / absent",
+            "14 / 0",
+            "15 / 3"
+          ],
+          [
+            "Free-form / A.None",
+            "15 / 0",
+            "15 / 1"
+          ],
+          [
+            "Choice / absent",
+            "16 / 0",
+            "16 / 2"
+          ],
+          [
+            "Choice / A.None",
+            "8 / 0",
+            "0 / 2"
+          ]
+        ],
+        "widths": [
+          159,
+          160,
+          160
+        ]
+      },
+      {
+        "kind": "small",
+        "text": "Every condition retains 20 planned source questions per model. Correct counts are the frozen optional official RULE assignments, not semantic adjudication or default model-judge scores."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Prespecified primary contrast",
+          "Gemma (pp)",
+          "Qwen bounds (pp)"
+        ],
+        "rows": [
+          [
+            "Free-form minus choice, absent",
+            "-10",
+            "-15 to +10"
+          ],
+          [
+            "Free-form minus choice, present",
+            "+35",
+            "+65 to +80"
+          ],
+          [
+            "Absent minus present, free-form",
+            "-5",
+            "-5 to +15"
+          ],
+          [
+            "Absent minus present, choice",
+            "+40",
+            "+70 to +90"
+          ],
+          [
+            "Interaction: instruction gain absent minus present",
+            "-45",
+            "-95 to -55"
+          ]
+        ],
+        "widths": [
+          289,
+          80,
+          110
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "Carrier removal improves assigned score under choice instructions, but not consistently under free-form instructions. The negative interaction is supported under every assignment of missing outcomes within this fixed panel; a generic free-form-instruction advantage is not. These deterministic sensitivity bounds use 20 paired questions per model, not 160 independent questions or population confidence intervals."
+      },
+      {
+        "kind": "small",
+        "text": "No retry or resume. Usage: 27,768 input and 79,481 output tokens; reported cost 0.094558622000000007143 units, currency unverified. Per-request output cap 4,096; eight incomplete captures remain unknown. No new calls were made during result collection or adjudication."
+      }
+    ]
+  },
+  {
+    "title": "Appendix G. Secondary factorial adjudication",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "G.1. Prespecified masked review and distinct endpoints (C18)"
+      },
+      {
+        "kind": "p",
+        "text": "The secondary rubric was frozen before factorial responses existed. Two assistant reviewers inspect all 152 eligible texts in SHA256opaque-ID order, with model, instruction, carrier, request and primary score hidden. They receive the frozen source question/context and accepted answers. The final-answer axis requires the factual final commitment; endorsed content can occur anywhere. Correct labels require verbatim evidence. A third agent independently verifies identities, quotes, consensus arithmetic and all five contrasts without importing the production analyzers."
+      },
+      {
+        "kind": "p",
+        "text": "Reviewers agree 152/152 on each axis and tag format. All 152 complete responses have compliant answer tags, which does not establish factual correctness. Eight incomplete captures remain unknown. Two additional complete Gemma responses ask for clarification on the undated Defence Secretary question and stay uncertain. Multipart age ranges and source-intrinsic Yes/No options were explicitly identified before generation; the rubric requires all requested parts without mutating original RULE scoring."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Secondary contrast: absent minus present",
+          "Gemma final",
+          "Gemma content",
+          "Qwen final / content"
+        ],
+        "rows": [
+          [
+            "Under free-form instructions",
+            "0 to +5 pp",
+            "0 to +5 pp",
+            "-5 to +15 pp"
+          ],
+          [
+            "Under choice instructions",
+            "+80 to +85 pp",
+            "+5 to +10 pp",
+            "+75 to +95 pp"
+          ],
+          [
+            "Interaction (instruction gain absent minus present)",
+            "-85 to -75 pp",
+            "-10 to 0 pp",
+            "-100 to -60 pp"
+          ]
+        ],
+        "widths": [
+          189,
+          90,
+          90,
+          110
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "G.2. Communication failure and rule credit are distinguishable"
+      },
+      {
+        "kind": "p",
+        "text": "For Gemma under choice plus A.None, the primary rule credits 8/20; the assistant final-answer axis accepts 1/20, while endorsed content accepts 16/20. Fifteen outputs contain the required fact but commit to a non-informative final answer; seven of those receive RULE credit. This distinguishes whole-text credit, final communication and visible factual content. Those seven are not demonstrated factual false positives. For Qwen in the same condition, neither final nor content is accepted among 18 complete responses, with 2 incomplete remaining unknown."
+      },
+      {
+        "kind": "heading",
+        "text": "G.3. Scientific boundary"
+      },
+      {
+        "kind": "p",
+        "text": "The primary endpoint remains unchanged. These are same-family assistant judgments, not human gold labels or the default MixEval judge; agreement does not imply statistically independent errors. Source gold is not independently fact-checked, and output style can reveal condition. The fixed panel is exposed, custom wording is used and counterbalancing is deterministic. The interaction identifies a conditional response-and-measurement mechanism for these tested transformations, not universal capability loss, hidden knowledge or external deployment impact."
       }
     ]
   }
