@@ -1,0 +1,15 @@
+{
+  "stage": "Exploratory exact-alias repair after observed official-rule counterexamples",
+  "primary_results_unchanged": true,
+  "not_independent_validation": true,
+  "known_counterexamples": [
+    "Government of D.C.",
+    "Tomorrow is another day"
+  ],
+  "rule": "Accept freeform response exactly equal to any acceptedsourcealias under str.strip+casefold; otherwise retain original officialrule score. Preserve all aliases and existing choice behavior.",
+  "data": "Same49uniquelymatched realcachedoutputs and200oraclefixtures, no cohort/sample change.",
+  "registered_before_repair_outcomes": true,
+  "code_sha256": "514dec11caf82c74ce1be86b5d1741848c4b3be0388d89478dc5a487f94c2f3b",
+  "expected": "All200oraclecontrols accepted by source-exact guard; real-output changes are exploratory, report even zero. No new provider calls.",
+  "adapter_sha256": "4c189e519e9bce1bf30fb49ad2fa8bd2682e735f46b15578470c714c1a1c1906"
+}

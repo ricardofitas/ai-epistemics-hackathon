@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "ordinary_unmodified_import": true,
+  "panels": {
+    "free_form": {
+      "score": 0.0,
+      "total_samples": 17,
+      "scored_samples": 0,
+      "invalid_references": 17,
+      "denominator": "total"
+    },
+    "multiple_choice": {
+      "score": 0.0,
+      "total_samples": 32,
+      "scored_samples": 0,
+      "invalid_references": 32,
+      "denominator": "total"
+    }
+  },
+  "meaning": "Native primary metric reports numeric0with zero scored samples. This is not evidence of0model accuracy."
+}
