@@ -1,0 +1,27 @@
+{
+  "scientific_commit": "7c78ec451f301a7e4b024bac9d823849cf360db7",
+  "protocol_commit": "fe6c1952e913391cd424825d8e703cc85d1375c7",
+  "artifact": {
+    "library_file_id": "libfile_fde3_f-6d62afec68848191bce2af8e0df16881_198492b795908191b811098f9e84ee4a",
+    "file_id": "file_00000000f20881f59d2abc1db604c99f",
+    "version": 0,
+    "filename": "Epistemics_MixEval_pontuacao_denominadores_e_controlos_20261114.zip",
+    "bytes": 5152666,
+    "sha256": "47759f61f70cd2786588af856bdd574cc87cf07944a82ffca695725c9f022bd0",
+    "status": "succeeded",
+    "local_metadata_applied": true
+  },
+  "canonical_checkpoint": {
+    "library_file_id": "libfile_fde3_f-addcdc7b706c8191af0975cf80313ef9_198492b795908191b811098f9e84ee4a",
+    "version": 13,
+    "status": "succeeded"
+  },
+  "private": true,
+  "model_calls": 0,
+  "source_rows_reused": 200,
+  "condition_records": 2400,
+  "independent_verification": "PASS",
+  "adapter_verification": "PASS800captures/19malformed cases",
+  "portable_package_verification": "PASS fresh extracted directory, native replay verifier and adapter verifier",
+  "manuscript": "v1.3 unchanged, integration pending"
+}
