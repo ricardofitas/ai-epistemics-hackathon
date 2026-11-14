@@ -1,0 +1,46 @@
+{
+  "factorial": {
+    "repository": "ricardofitas/swarm-adaption-hackathon",
+    "branch": "ricardo/mixeval-factorial-20261114",
+    "protocol_commit": "ddedfcd6c2f2633b6e1460f8591ce5ed261959d7",
+    "launch_commit": "3faed45df0d53d97f0a47c3517719864a8d23007",
+    "verifier_commit": "4981202b99ef90384011f40972f0d6627977bc2e",
+    "run_id": 43615821403,
+    "job_id": 132510534516,
+    "run_attempt": 1,
+    "status": "in_progress",
+    "known_completed_calls": null,
+    "planned_maximum": 160,
+    "max_output_per_call": 4096,
+    "capture_wall_limit_seconds": 2700,
+    "latest_observation": "Preflight success; Capture crossed generations once in_progress. No totalverified until finalartifact."
+  },
+  "team": {
+    "repository": "ricardofitas/ai-epistemics-hackathon",
+    "branch": "ricardo/gammaf-full-reproduction-20261114",
+    "protocol_commit": "76bbc7001c39612d2a6aecde7bf2c88b0edda427",
+    "launch_commit": "80b5546034be2f854f637575b52016f5066c9262",
+    "run_id": 43616684768,
+    "run_attempt": 1,
+    "status": "completed",
+    "conclusion": "success",
+    "artifact_id": 14121733610,
+    "artifact_sha256": "9dd29ff3b8283fee0a5949075b5d322fb68a9a54b32801f9f76c05a99caea224",
+    "raw_files": 28,
+    "raw_bytes": 111232152,
+    "tests_passed": 38,
+    "comparison_checks_passed": 27,
+    "model_calls": 0,
+    "judge_calls": 0,
+    "earlier_preexecution_runs": [
+      {
+        "run_id": 43615909285,
+        "reason": "YAMLplain-scalar colon rejected; zerojobs"
+      },
+      {
+        "run_id": 43616175169,
+        "reason": "Originalsnapshot extraLF hash mismatch; zerorawsource attempts"
+      }
+    ]
+  }
+}

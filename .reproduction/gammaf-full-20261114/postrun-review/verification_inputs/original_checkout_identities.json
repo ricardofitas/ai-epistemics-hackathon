@@ -1,0 +1,67 @@
+{
+  "swarmlab-gammaf/gammaf_handoff/gamma_sources.json": {
+    "bytes": 6540,
+    "git_blob": "081b733bff3f795184f49b8c8509f08a5976cbbf",
+    "sha256": "a3e8798cd9d56892e0c8934d135794aecdc40f3ca67b3b5c0515f4a2101989b8"
+  },
+  "artifacts/results.json": {
+    "bytes": 57440,
+    "git_blob": "dbbf85a738cbe001489eb3db98fa5eff9250a26d",
+    "sha256": "6958435cde90120eb007499aea9ac9a5e5aa505d68065ec3e0dc3e0b6294e7ef"
+  },
+  "gammaf_epistemic/__init__.py": {
+    "bytes": 1922,
+    "git_blob": "b016148d9be891e55aeb648a332b59f11b87da98",
+    "sha256": "4079b32358fadd5a5122ea1f3c224072261abddd85be5262f1c82d2d97ccf82a"
+  },
+  "gammaf_epistemic/data.py": {
+    "bytes": 17002,
+    "git_blob": "65968953e1676d5df26ef60f632a79fd0b8e19a7",
+    "sha256": "39622b14bf7aeca0c07a0a21694dc42eadd555297c3700d613957c58bb00c664"
+  },
+  "gammaf_epistemic/gammaf_clean.py": {
+    "bytes": 21006,
+    "git_blob": "c0b4a8c70a927cf05c285ffdad5341a714c7e156",
+    "sha256": "43d565dd3cdb9c246b7d60f1e72f4aa42cf783cd1d0ea8a73cd4726b005a060a"
+  },
+  "gammaf_epistemic/audit_proofs.py": {
+    "bytes": 20304,
+    "git_blob": "5b93b76aa1f80c6f9bc6c2c46c7eb51c11572a15",
+    "sha256": "b4fc7f54dbc7647230457735fa686e67efa1f53381b4dbd2a8f2148d1b474c33"
+  },
+  "gammaf_epistemic/epistemic_guard.py": {
+    "bytes": 21649,
+    "git_blob": "15b8fb3f345fd8389f31bfc361d8b48553c5b5ba",
+    "sha256": "5c72c6819967714f4d108777762040492a39f45d44e4fe5ccc0113b2249eafd4"
+  },
+  "gammaf_epistemic/stats_eval.py": {
+    "bytes": 5090,
+    "git_blob": "33ae2c02752fc89b44a944dd13af0833711339da",
+    "sha256": "816af3b066d3f5203b9a8f2a02ef6f7b871fb033f4dfd465576448c912e3461b"
+  },
+  "scripts/run_hackathon_experiments.py": {
+    "bytes": 41563,
+    "git_blob": "3332a591f4c6de04704295131709f6eb9bf6861f",
+    "sha256": "83e204c86a226e983bb3340485e1e9a47e41dd00b5fdfbb918b0041300ffabd6"
+  },
+  "tests/conftest.py": {
+    "bytes": 1944,
+    "git_blob": "17f62d0b49f398a2fa713b0cb338dadd60f9e0fe",
+    "sha256": "ba5cc12616acdc1fda844e0d8adb0750a723038d4a6d026a5d1fa3396ae89cfc"
+  },
+  "tests/test_audit_proofs.py": {
+    "bytes": 4249,
+    "git_blob": "c846b5b75b1ccb605b635ec282c37e2c81ecebbe",
+    "sha256": "83a6b325701866a07c85d84a0863961c7a095639b47625bf4d817311fe15667a"
+  },
+  "tests/test_gammaf_clean.py": {
+    "bytes": 6738,
+    "git_blob": "5df2db636f8e2c3cfed71999a6486afddd38f913",
+    "sha256": "e10748c324ff4d1695929857c6d93124bf5132cbd944d74b635593b6516aa972"
+  },
+  "tests/test_epistemic_guard.py": {
+    "bytes": 5124,
+    "git_blob": "3607421ff2c2e5718f70cae8fc9be3729d9b1781",
+    "sha256": "6410bea175c507eaffb6fe1bb2ab715f071cf5ef1bb16d47c2c5d78383f0a6a1"
+  }
+}

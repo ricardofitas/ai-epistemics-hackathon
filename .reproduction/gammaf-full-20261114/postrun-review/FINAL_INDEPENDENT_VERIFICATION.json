@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-11-14T16:43:23.591790+00:00",
+  "run_id": 43616684768,
+  "execution_sha": "80b5546034be2f854f637575b52016f5066c9262",
+  "run_provenance_independently_retrieved": true,
+  "artifact_sha256": "9dd29ff3b8283fee0a5949075b5d322fb68a9a54b32801f9f76c05a99caea224",
+  "artifact_files_exactly_match_extraction": 22,
+  "original_git_identities_verified": 13,
+  "source_manifest_authenticated": true,
+  "raw_source_receipts_match_all28pinned_paths_sizes_blobs": true,
+  "raw_files": 28,
+  "raw_bytes": 111232152,
+  "junit_testcases": 38,
+  "junit_failures": 0,
+  "junit_errors": 0,
+  "junit_skipped": 0,
+  "independently_recomputed_comparison_checks": 27,
+  "all_27_pass": true,
+  "terminal_discrepancies": {
+    "detector_debates": 9600,
+    "disagreements": 227,
+    "false_credits": 156,
+    "missed_credits": 71,
+    "control_debates": 1600,
+    "control_disagreements": 0
+  },
+  "guard_verdict": {
+    "beats_all_six_strictly": false,
+    "best_pooled_baseline": "XG-Guard",
+    "best_pooled_baseline_percent": 86.328125,
+    "guard_hard_pooled_percent": 85.29947916666667,
+    "guard_soft_pooled_percent": 85.52083333333333,
+    "oracle_insider_percent": 85.78125,
+    "significant_improvements_hard": [
+      "DOMINANT",
+      "PREM"
+    ],
+    "significant_improvements_soft": [
+      "BlindGuard",
+      "DOMINANT",
+      "PREM"
+    ],
+    "weakly_dominates_within_strata": true
+  },
+  "shadow_corrected": {
+    "detector_contaminated_debates": 217,
+    "control_contaminated_debates": 323,
+    "contaminated_debates": 540,
+    "detector_rate_percent": 3.932584269662921,
+    "control_rate_percent": 24.086502609992543,
+    "contamination_rate_percent": 7.872867764980318,
+    "mean_events_per_contaminated_debate": 3.5037037037037035,
+    "detector_mean_events_per_contaminated_debate": 2.576036866359447
+  },
+  "figures_present_despite_no_figures_flag": [
+    "reproduced/fig_leaderboard.png"
+  ],
+  "earlier_failures": "Workflow YAML/preflight setup failures occurred before source downloads/model use. They are engineering attempts, not model experiments or scientific results. Original source SHA pins were normalized text snapshots, corrected to authentic Gitblob identities; derivative patch EOF context corrected without semantic AST changes.",
+  "scope": "Independent artifact/receipt/aggregation verification without rerunning analysis or downloading raw sources. Sourcebyte authentication occurred in pinned GitHub runner; rawcache absent from uploaded artifact. Archived conversations, offline guard reaggregation, task-stratified retrospective holdout; no prospective/live superiority or message-causal claim.",
+  "new_model_calls": 0,
+  "new_judge_calls": 0
+}
