@@ -1,0 +1,223 @@
+{
+  "posthoc": true,
+  "factorizations": [
+    {
+      "model": "gemma-4-31b-it",
+      "stratum": "all_frozen_panel",
+      "cells": {
+        "native_prompt": {
+          "rows": 50,
+          "shipped_score": 0.06,
+          "source_score": 0.18,
+          "strict_source_correct": 3,
+          "strict_unknown": 46
+        },
+        "corrected_prompt": {
+          "rows": 50,
+          "shipped_score": 0.46,
+          "source_score": 0.88,
+          "strict_source_correct": 44,
+          "strict_unknown": 0
+        }
+      },
+      "prompt_effect_with_shipped_refs": 0.4,
+      "prompt_effect_with_source_refs": 0.7,
+      "reference_effect_on_native_outputs": 0.12,
+      "reference_effect_on_corrected_outputs": 0.42,
+      "interaction": 0.3,
+      "joint_assigned_score_effect": 0.8200000000000001
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "stratum": "contradictory_pair",
+      "cells": {
+        "native_prompt": {
+          "rows": 30,
+          "shipped_score": 0.0,
+          "source_score": 0.1,
+          "strict_source_correct": 0,
+          "strict_unknown": 30
+        },
+        "corrected_prompt": {
+          "rows": 30,
+          "shipped_score": 0.43333333333333335,
+          "source_score": 0.8666666666666667,
+          "strict_source_correct": 26,
+          "strict_unknown": 0
+        }
+      },
+      "prompt_effect_with_shipped_refs": 0.43333333333333335,
+      "prompt_effect_with_source_refs": 0.7666666666666667,
+      "reference_effect_on_native_outputs": 0.1,
+      "reference_effect_on_corrected_outputs": 0.43333333333333335,
+      "interaction": 0.33333333333333337,
+      "joint_assigned_score_effect": 0.8666666666666667
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "stratum": "singleton_control",
+      "cells": {
+        "native_prompt": {
+          "rows": 20,
+          "shipped_score": 0.15,
+          "source_score": 0.3,
+          "strict_source_correct": 3,
+          "strict_unknown": 16
+        },
+        "corrected_prompt": {
+          "rows": 20,
+          "shipped_score": 0.5,
+          "source_score": 0.9,
+          "strict_source_correct": 18,
+          "strict_unknown": 0
+        }
+      },
+      "prompt_effect_with_shipped_refs": 0.35,
+      "prompt_effect_with_source_refs": 0.6000000000000001,
+      "reference_effect_on_native_outputs": 0.15,
+      "reference_effect_on_corrected_outputs": 0.4,
+      "interaction": 0.25,
+      "joint_assigned_score_effect": 0.75
+    },
+    {
+      "model": "qwen3.8-27b",
+      "stratum": "all_frozen_panel",
+      "cells": {
+        "native_prompt": {
+          "rows": 50,
+          "shipped_score": 0.0,
+          "source_score": 0.46,
+          "strict_source_correct": 23,
+          "strict_unknown": 3
+        },
+        "corrected_prompt": {
+          "rows": 50,
+          "shipped_score": 0.48,
+          "source_score": 0.88,
+          "strict_source_correct": 44,
+          "strict_unknown": 3
+        }
+      },
+      "prompt_effect_with_shipped_refs": 0.48,
+      "prompt_effect_with_source_refs": 0.42,
+      "reference_effect_on_native_outputs": 0.46,
+      "reference_effect_on_corrected_outputs": 0.4,
+      "interaction": -0.06,
+      "joint_assigned_score_effect": 0.88
+    },
+    {
+      "model": "qwen3.8-27b",
+      "stratum": "contradictory_pair",
+      "cells": {
+        "native_prompt": {
+          "rows": 30,
+          "shipped_score": 0.0,
+          "source_score": 0.4666666666666667,
+          "strict_source_correct": 14,
+          "strict_unknown": 1
+        },
+        "corrected_prompt": {
+          "rows": 30,
+          "shipped_score": 0.4666666666666667,
+          "source_score": 0.8333333333333334,
+          "strict_source_correct": 25,
+          "strict_unknown": 2
+        }
+      },
+      "prompt_effect_with_shipped_refs": 0.4666666666666667,
+      "prompt_effect_with_source_refs": 0.3666666666666667,
+      "reference_effect_on_native_outputs": 0.4666666666666667,
+      "reference_effect_on_corrected_outputs": 0.3666666666666667,
+      "interaction": -0.09999999999999998,
+      "joint_assigned_score_effect": 0.8333333333333334
+    },
+    {
+      "model": "qwen3.8-27b",
+      "stratum": "singleton_control",
+      "cells": {
+        "native_prompt": {
+          "rows": 20,
+          "shipped_score": 0.0,
+          "source_score": 0.45,
+          "strict_source_correct": 9,
+          "strict_unknown": 2
+        },
+        "corrected_prompt": {
+          "rows": 20,
+          "shipped_score": 0.5,
+          "source_score": 0.95,
+          "strict_source_correct": 19,
+          "strict_unknown": 1
+        }
+      },
+      "prompt_effect_with_shipped_refs": 0.5,
+      "prompt_effect_with_source_refs": 0.49999999999999994,
+      "reference_effect_on_native_outputs": 0.45,
+      "reference_effect_on_corrected_outputs": 0.44999999999999996,
+      "interaction": -5.551115123125783e-17,
+      "joint_assigned_score_effect": 0.95
+    }
+  ],
+  "strict_source_gains": [
+    {
+      "model": "gemma-4-31b-it",
+      "stratum": "all_frozen_panel",
+      "pairs": 50,
+      "unknown_zero_gain": 0.82,
+      "unknown_sensitivity": [
+        -0.1,
+        0.82
+      ]
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "stratum": "contradictory_pair",
+      "pairs": 30,
+      "unknown_zero_gain": 0.8666666666666667,
+      "unknown_sensitivity": [
+        -0.13333333333333333,
+        0.8666666666666667
+      ]
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "stratum": "singleton_control",
+      "pairs": 20,
+      "unknown_zero_gain": 0.75,
+      "unknown_sensitivity": [
+        -0.05,
+        0.75
+      ]
+    },
+    {
+      "model": "qwen3.8-27b",
+      "stratum": "all_frozen_panel",
+      "pairs": 50,
+      "unknown_zero_gain": 0.42,
+      "unknown_sensitivity": [
+        0.36,
+        0.48
+      ]
+    },
+    {
+      "model": "qwen3.8-27b",
+      "stratum": "contradictory_pair",
+      "pairs": 30,
+      "unknown_zero_gain": 0.36666666666666664,
+      "unknown_sensitivity": [
+        0.3333333333333333,
+        0.43333333333333335
+      ]
+    },
+    {
+      "model": "qwen3.8-27b",
+      "stratum": "singleton_control",
+      "pairs": 20,
+      "unknown_zero_gain": 0.5,
+      "unknown_sensitivity": [
+        0.4,
+        0.55
+      ]
+    }
+  ]
+}
