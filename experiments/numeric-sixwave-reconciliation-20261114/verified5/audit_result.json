@@ -1,0 +1,584 @@
+{
+  "scope": "Wave3 only: 400 of 3200 planned slots; case indexes 50..74 (25 sources), partial panel. No whole-study inference.",
+  "execution_commit": "e853332434abc73d162ccf38eda2534b72c21cf0",
+  "zip_sha256": "d2f81dd87853f93d3ed727d51bd3cede6097e5496e4482824ff56ce434d97136",
+  "cases_sha256": "490f7779fe21937c5bdeafbf967e7ff97a40b5ba69fde0f073cdbcd374e95c78",
+  "source_datasets": {
+    "squad": 13,
+    "tabmwp": 12
+  },
+  "slots_by_model": {
+    "deepseek-v4-flash": 100,
+    "glm-5.2": 100,
+    "gemma-4-31b-it": 100,
+    "qwen3.8-27b": 100
+  },
+  "slots_by_arm": {
+    "choice_clear": 100,
+    "choice_none": 100,
+    "free_clear": 100,
+    "free_none": 100
+  },
+  "sections": {
+    "s4-front": {
+      "planned": 64,
+      "started_unique": 64,
+      "attempts": 64,
+      "eligible": 62,
+      "status": {
+        "completed": 62,
+        "incomplete": 2
+      },
+      "explicit_429": 0,
+      "unstarted": 0,
+      "input_tokens": 18800,
+      "output_tokens": 28802,
+      "reported_cost": 0.07860048670400001,
+      "reported_cost_decimal": "0.078600486704000004607",
+      "rate_calculated_cost_decimal": "0.080643396",
+      "conservative_charge_decimal": "0.08064339600000000445",
+      "elapsed_s": 188.53,
+      "schedule_transitions": 3
+    },
+    "s4-back": {
+      "planned": 336,
+      "started_unique": 336,
+      "attempts": 341,
+      "eligible": 326,
+      "status": {
+        "completed": 326,
+        "incomplete": 10
+      },
+      "explicit_429": 5,
+      "unstarted": 0,
+      "input_tokens": 69568,
+      "output_tokens": 137302,
+      "reported_cost": 0.279017946848,
+      "reported_cost_decimal": "0.279017946848000011596",
+      "rate_calculated_cost_decimal": "0.285332300",
+      "conservative_charge_decimal": "0.333716503000000005030",
+      "elapsed_s": 734.71,
+      "schedule_transitions": 17
+    }
+  },
+  "total": {
+    "planned": 400,
+    "attempts": 405,
+    "unique_started": 400,
+    "terminal_files": 400,
+    "completed": 388,
+    "incomplete": 12,
+    "final_errors": 0,
+    "http429_attempts": 5,
+    "input_tokens": 88368,
+    "output_tokens": 166104,
+    "reported_cost_decimal": "0.357618433552000016203",
+    "conservative_charge_decimal": "0.414359899000000009480"
+  },
+  "incomplete_by_model": {
+    "qwen3.8-27b": 4,
+    "glm-5.2": 4,
+    "deepseek-v4-flash": 4
+  },
+  "incomplete_by_arm": {
+    "choice_none": 11,
+    "free_clear": 1
+  },
+  "scores": [
+    {
+      "model": "deepseek-v4-flash",
+      "dataset": "squad",
+      "arm": "choice_clear",
+      "n": 13,
+      "correct": 9,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "dataset": "squad",
+      "arm": "choice_none",
+      "n": 13,
+      "correct": 1,
+      "unknown": 2,
+      "dummy": 9,
+      "fallback": 0
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "dataset": "squad",
+      "arm": "free_clear",
+      "n": 13,
+      "correct": 7,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "dataset": "squad",
+      "arm": "free_none",
+      "n": 13,
+      "correct": 8,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "dataset": "tabmwp",
+      "arm": "choice_clear",
+      "n": 12,
+      "correct": 11,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "dataset": "tabmwp",
+      "arm": "choice_none",
+      "n": 12,
+      "correct": 4,
+      "unknown": 2,
+      "dummy": 6,
+      "fallback": 0
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "dataset": "tabmwp",
+      "arm": "free_clear",
+      "n": 12,
+      "correct": 11,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "dataset": "tabmwp",
+      "arm": "free_none",
+      "n": 12,
+      "correct": 11,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "dataset": "squad",
+      "arm": "choice_clear",
+      "n": 13,
+      "correct": 11,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "dataset": "squad",
+      "arm": "choice_none",
+      "n": 13,
+      "correct": 0,
+      "unknown": 0,
+      "dummy": 13,
+      "fallback": 0
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "dataset": "squad",
+      "arm": "free_clear",
+      "n": 13,
+      "correct": 9,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "dataset": "squad",
+      "arm": "free_none",
+      "n": 13,
+      "correct": 12,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "dataset": "tabmwp",
+      "arm": "choice_clear",
+      "n": 12,
+      "correct": 12,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "dataset": "tabmwp",
+      "arm": "choice_none",
+      "n": 12,
+      "correct": 0,
+      "unknown": 0,
+      "dummy": 12,
+      "fallback": 0
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "dataset": "tabmwp",
+      "arm": "free_clear",
+      "n": 12,
+      "correct": 12,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "dataset": "tabmwp",
+      "arm": "free_none",
+      "n": 12,
+      "correct": 12,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "glm-5.2",
+      "dataset": "squad",
+      "arm": "choice_clear",
+      "n": 13,
+      "correct": 10,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "glm-5.2",
+      "dataset": "squad",
+      "arm": "choice_none",
+      "n": 13,
+      "correct": 2,
+      "unknown": 2,
+      "dummy": 9,
+      "fallback": 0
+    },
+    {
+      "model": "glm-5.2",
+      "dataset": "squad",
+      "arm": "free_clear",
+      "n": 13,
+      "correct": 8,
+      "unknown": 1,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "glm-5.2",
+      "dataset": "squad",
+      "arm": "free_none",
+      "n": 13,
+      "correct": 10,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "glm-5.2",
+      "dataset": "tabmwp",
+      "arm": "choice_clear",
+      "n": 12,
+      "correct": 12,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "glm-5.2",
+      "dataset": "tabmwp",
+      "arm": "choice_none",
+      "n": 12,
+      "correct": 6,
+      "unknown": 1,
+      "dummy": 5,
+      "fallback": 0
+    },
+    {
+      "model": "glm-5.2",
+      "dataset": "tabmwp",
+      "arm": "free_clear",
+      "n": 12,
+      "correct": 12,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "glm-5.2",
+      "dataset": "tabmwp",
+      "arm": "free_none",
+      "n": 12,
+      "correct": 12,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "qwen3.8-27b",
+      "dataset": "squad",
+      "arm": "choice_clear",
+      "n": 13,
+      "correct": 9,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "qwen3.8-27b",
+      "dataset": "squad",
+      "arm": "choice_none",
+      "n": 13,
+      "correct": 2,
+      "unknown": 3,
+      "dummy": 8,
+      "fallback": 0
+    },
+    {
+      "model": "qwen3.8-27b",
+      "dataset": "squad",
+      "arm": "free_clear",
+      "n": 13,
+      "correct": 8,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "qwen3.8-27b",
+      "dataset": "squad",
+      "arm": "free_none",
+      "n": 13,
+      "correct": 9,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "qwen3.8-27b",
+      "dataset": "tabmwp",
+      "arm": "choice_clear",
+      "n": 12,
+      "correct": 12,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "qwen3.8-27b",
+      "dataset": "tabmwp",
+      "arm": "choice_none",
+      "n": 12,
+      "correct": 0,
+      "unknown": 1,
+      "dummy": 11,
+      "fallback": 0
+    },
+    {
+      "model": "qwen3.8-27b",
+      "dataset": "tabmwp",
+      "arm": "free_clear",
+      "n": 12,
+      "correct": 11,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    },
+    {
+      "model": "qwen3.8-27b",
+      "dataset": "tabmwp",
+      "arm": "free_none",
+      "n": 12,
+      "correct": 12,
+      "unknown": 0,
+      "dummy": 0,
+      "fallback": 0
+    }
+  ],
+  "checks": {
+    "frozen_case_count": 1,
+    "planned_unique_slots": 1,
+    "unique_intent_identity": 2,
+    "unique_attempt_identity": 2,
+    "intent_attempt_bijection": 2,
+    "first_dispatch_schedule_order": 2,
+    "contiguous_attempt_numbers": 400,
+    "maximum_three_attempts": 400,
+    "attempt_within_section": 405,
+    "attempt_case": 405,
+    "attempt_model": 405,
+    "attempt_arm": 405,
+    "attempt_request_sha": 405,
+    "intent_request_sha": 405,
+    "reservation_reconstruction": 405,
+    "attempt_time_order": 405,
+    "terminal_canonical_bytes": 400,
+    "terminal_byte_sha": 400,
+    "terminal_text_reconstruction": 400,
+    "output_text_sha": 400,
+    "terminal_model": 400,
+    "terminal_id": 400,
+    "terminal_status": 400,
+    "terminal_incomplete_details": 400,
+    "returned_requested_model": 400,
+    "unique_response_id": 400,
+    "terminal_parameter_max_output_tokens": 400,
+    "terminal_parameter_temperature": 400,
+    "terminal_parameter_store": 400,
+    "terminal_parameter_tool_choice": 400,
+    "terminal_parameter_tools": 400,
+    "terminal_usage_match": 400,
+    "usage_total_sum": 400,
+    "output_within_assigned_cap": 400,
+    "terminal_http200": 400,
+    "recognized_terminal_event": 400,
+    "eligibility_reconstruction": 400,
+    "incomplete_reason": 12,
+    "terminal_file_attempt_bijection": 2,
+    "initial_schedule": 2,
+    "schedule_monotone": 18,
+    "schedule_transition_rule": 18,
+    "schedule_429_transition_count": 2,
+    "summary_planned": 2,
+    "summary_started_unique": 2,
+    "summary_attempts": 2,
+    "summary_eligible": 2,
+    "summary_status": 2,
+    "summary_explicit_429": 2,
+    "summary_unstarted": 2,
+    "summary_input_tokens": 2,
+    "summary_output_tokens": 2,
+    "summary_reported_cost": 2,
+    "progress_planned": 2,
+    "progress_attempts": 2,
+    "progress_completed": 2,
+    "progress_unique_started": 2,
+    "progress_tokens": 2,
+    "no_stop": 2,
+    "progress_conservative_cost": 2,
+    "within_credit_ceiling": 2,
+    "numeric_gold_parse": 188,
+    "section_score_crosscheck": 64,
+    "retry_only_explicit_429": 5,
+    "retry_after_prior_end": 5,
+    "missing_terminal_only_http429": 5,
+    "recorded_429_cooldown": 5,
+    "complete_400_slot_coverage": 1,
+    "zip_identity": 1
+  },
+  "failures": [],
+  "observations": [
+    {
+      "kind": "event_status_mismatch",
+      "key": "squad-5729edd56aef051400155115-m1-a3",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    },
+    {
+      "kind": "event_status_mismatch",
+      "key": "squad-5729edd56aef051400155115-m3-a0",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    },
+    {
+      "kind": "event_status_mismatch",
+      "key": "squad-572fc49d04bcaa1900d76ccf-m1-a3",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    },
+    {
+      "kind": "event_status_mismatch",
+      "key": "squad-572fc49d04bcaa1900d76ccf-m3-a3",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    },
+    {
+      "kind": "event_status_mismatch",
+      "key": "tabmwp-4676-m3-a3",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    },
+    {
+      "kind": "event_status_mismatch",
+      "key": "tabmwp-3956-m1-a3",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    },
+    {
+      "kind": "event_status_mismatch",
+      "key": "squad-572f6c85947a6a140053c942-m3-a3",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    },
+    {
+      "kind": "event_status_mismatch",
+      "key": "tabmwp-31403-m2-a3",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    },
+    {
+      "kind": "event_status_mismatch",
+      "key": "squad-572669a9dd62a815002e8417-m1-a3",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    },
+    {
+      "kind": "event_status_mismatch",
+      "key": "squad-572669a9dd62a815002e8417-m2-a3",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    },
+    {
+      "kind": "event_status_mismatch",
+      "key": "squad-57284142ff5b5019007da00e-m2-a3",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    },
+    {
+      "kind": "event_status_mismatch",
+      "key": "tabmwp-5525-m2-a3",
+      "attempt": 1,
+      "event": "response.completed",
+      "status": "incomplete",
+      "eligible": false
+    }
+  ],
+  "limitations": [
+    "Source corpus selection/pinned upstream blobs not rederived; audit uses freshly fetched frozen cases.json.",
+    "Terminal bytes retained, but raw SSE stream bytes not present, so stream_sha is syntactically recorded rather than independently rehashed.",
+    "No provider recontact, human semantic validation, or full-study claims."
+  ]
+}

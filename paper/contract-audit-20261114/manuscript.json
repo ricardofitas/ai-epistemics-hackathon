@@ -5,7 +5,7 @@
     "blocks": [
       {
         "kind": "meta",
-        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.8"
+        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.9"
       },
       {
         "kind": "heading",
@@ -642,7 +642,7 @@
       },
       {
         "kind": "p",
-        "text": "The crossed diagnostic isolates an instruction-by-placeholder interaction (Appendices F-G); its exploratory RULE ranking survives missing-output and caveat sensitivity (H). An installed native path reaches a real provider and metric on two sources (I). The TabMWP archive establishes a separate published-baseline consequence under explicit scoring-policy changes (J). Human interpretation, official MixEval model judging and independent One-Eval deployment attribution remain open. The larger external-source generation campaign is not closed in this revision; its full eight-wave conclusion is not claimed here."
+        "text": "The crossed diagnostic isolates an instruction-by-placeholder interaction (Appendices F-G); its exploratory RULE ranking survives missing-output and caveat sensitivity (H). An installed native path reaches a real provider and metric on two sources (I). The TabMWP archive establishes a separate published-baseline consequence under explicit scoring-policy changes (J). Human interpretation, official MixEval model judging and independent One-Eval deployment attribution remain open. The larger external-source generation campaign is not closed in this revision; its full eight-wave conclusion is not claimed here. A designed numeric-option control separately exposes a response-format mismatch in the fixed endpoint (Appendix L); its same-ID parent comparison remains pending."
       }
     ]
   },
@@ -1571,6 +1571,84 @@
       {
         "kind": "p",
         "text": "Archive replay: research run 43625179457; qualified option replay 43626394923. Blinded-reader run 43626108168, protocol commit 54f68b0a102f2ed7721a72725daa6297c6ba2859; result report 1d39e5fbab209159f09b8b1573d89f78e47c8f8e. Exact aggregate snapshots and hashes are in EVIDENCE_SOURCES.json. The separate 3,200-slot external-source generation campaign and 192-slot numerical-option follow-up retain their own manifests, attempts and uncertainty; neither planned total is represented as completed in this revision."
+      }
+    ]
+  },
+  {
+    "title": "Appendix L. Designed numerical-option controls",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "L.1. Frozen endpoint and positive-control failure (C 23)"
+      },
+      {
+        "kind": "p",
+        "text": "After the first 50 parent questions, a separate protocol fixes 24 hash-selected TabMWP numerical items from future parent indices 150-199. Four model families receive two new choice prompts per source: the sole option gives the source answer or that answer plus one. All question/context bytes, tags and caps match parent choice_none except the option content. This yields 192 distinct requests on 24 questions repeated across 4 models, not 192 independent questions. The congruent condition supplies the answer and is an oracle scoring control, not unaided mathematical ability."
+      },
+      {
+        "kind": "p",
+        "text": "All 192 provider terminals are authenticated; 178 complete and 14 incomplete. There are 207 attempts, including 15 explicit HTTP 429 responses retried under the fixed rule. Usage is 32,041 input and 215,045 output tokens; provider-reported cost 0.45741413348 platform credits, with currency conversion unconfirmed. No additional provider or judge requests are made for this reanalysis."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Endpoint / response category",
+          "Correct option /96",
+          "False option /96"
+        ],
+        "rows": [
+          [
+            "Frozen bare-number: displayed number",
+            "1",
+            "0 observed; 14 unknown"
+          ],
+          [
+            "Post hoc: letter A only",
+            "34",
+            "36"
+          ],
+          [
+            "Post hoc: A plus displayed number",
+            "61",
+            "9"
+          ],
+          [
+            "Bare source-correct number",
+            "1",
+            "30"
+          ],
+          [
+            "Explanatory text left unscored",
+            "0",
+            "7"
+          ],
+          [
+            "Incomplete capture",
+            "0",
+            "14"
+          ]
+        ],
+        "widths": [
+          235,
+          122,
+          122
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "The primary endpoint requires a normalized isolated numerical final answer. It accepts only 1/96 congruent replies and observes zero isolated repetitions of the false number among 82 complete wrong-option replies. On all 96 planned wrong-arm outcomes the missingness bound is 0-14/96, not evidence for the originally expected explicit-number-copying endpoint. A answer tags are not numbers and are not silently relabelled in the frozen analysis."
+      },
+      {
+        "kind": "p",
+        "text": "A distinct deterministic option-aware decoder was added after observing formats. A alone maps to the sole shown value; A plus a number is accepted only if consistent; bare numbers are independently parsed and other explanations remain unscored. It recovers 96/96 congruent correct selections. In the false arm 45/96 endorse the false option, 30 give the correct bare number, 7 remain explanatory and 14 incomplete. These are post hoc response-interpretation counts, not the primary result. The conservative range for false endorsement is 45-66/96 if all 7 unscored explanations and 14 incomplete responses are allowed either label; it is not a population confidence interval."
+      },
+      {
+        "kind": "p",
+        "text": "The positive control demonstrates that the fixed bare-number endpoint can reject correct responses in the requested choice format. False-option endorsement also occurs, but it is a different construct from explicitly outputting the wrong bare number. Historical TabMWP archive rescoring (J), blinded model reading (K), and this researcher-designed intervention have distinct sources and endpoints. Molfese et al. [17] is prior art for extraction and format effects. The original four parent conditions for these same 24 IDs are already requested; their paired comparison is not claimed complete until original parent artifacts arrive."
+      },
+      {
+        "kind": "small",
+        "text": "Protocol/execution85ef43089b098d9a8c24c3f055aeb20020d7f939; research protocol744452df3973aa35bcd562c922813c51cbf1c7ba; post-capture decoder/reportf9adda7c4ba23ad4003ebe2fdd5a1bc862433256; run43627868135. Raw terminals, frozen scoring and derived interpretation remain separate."
       }
     ]
   }

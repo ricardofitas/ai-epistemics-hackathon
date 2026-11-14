@@ -1,0 +1,308 @@
+{
+  "passed": true,
+  "capture_complete": true,
+  "source_indices": [
+    151,
+    153,
+    155,
+    157,
+    159,
+    161,
+    163,
+    165,
+    167,
+    169,
+    171,
+    173,
+    175,
+    177,
+    179,
+    181,
+    183,
+    185,
+    187,
+    189,
+    191,
+    193,
+    197,
+    199
+  ],
+  "selected_source_ids": [
+    {
+      "index": 151,
+      "id": "20890"
+    },
+    {
+      "index": 153,
+      "id": "25721"
+    },
+    {
+      "index": 155,
+      "id": "20767"
+    },
+    {
+      "index": 157,
+      "id": "11320"
+    },
+    {
+      "index": 159,
+      "id": "6595"
+    },
+    {
+      "index": 161,
+      "id": "18080"
+    },
+    {
+      "index": 163,
+      "id": "3984"
+    },
+    {
+      "index": 165,
+      "id": "19073"
+    },
+    {
+      "index": 167,
+      "id": "19321"
+    },
+    {
+      "index": 169,
+      "id": "37059"
+    },
+    {
+      "index": 171,
+      "id": "968"
+    },
+    {
+      "index": 173,
+      "id": "2183"
+    },
+    {
+      "index": 175,
+      "id": "25277"
+    },
+    {
+      "index": 177,
+      "id": "21432"
+    },
+    {
+      "index": 179,
+      "id": "21259"
+    },
+    {
+      "index": 181,
+      "id": "12961"
+    },
+    {
+      "index": 183,
+      "id": "5739"
+    },
+    {
+      "index": 185,
+      "id": "23399"
+    },
+    {
+      "index": 187,
+      "id": "37673"
+    },
+    {
+      "index": 189,
+      "id": "29437"
+    },
+    {
+      "index": 191,
+      "id": "17353"
+    },
+    {
+      "index": 193,
+      "id": "27974"
+    },
+    {
+      "index": 197,
+      "id": "25069"
+    },
+    {
+      "index": 199,
+      "id": "13285"
+    }
+  ],
+  "totals": {
+    "planned": 192,
+    "unique_started": 192,
+    "recorded_unique": 192,
+    "attempts": 207,
+    "terminal_objects": 192,
+    "http_429": 15,
+    "unattempted": 0,
+    "pending_intents": 0,
+    "eligible": 178,
+    "status": {
+      "completed": 178,
+      "incomplete": 14
+    },
+    "input_tokens": 32041,
+    "output_tokens": 215045,
+    "total_tokens": 247086,
+    "provider_cost": 0.45741413348000004,
+    "provider_cost_decimal": "0.457414133480000028581"
+  },
+  "results": {
+    "gemma-4-31b-it": {
+      "correct": {
+        "n": 24,
+        "complete": 24,
+        "unknown": 0,
+        "says_option": 0,
+        "factually_correct": 0,
+        "label_only_A": 20,
+        "explicit_None": 0,
+        "A_with_None": 0,
+        "says_option_bounds_pct": [
+          0.0,
+          0.0
+        ],
+        "factual_accuracy_bounds_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong": {
+        "n": 24,
+        "complete": 24,
+        "unknown": 0,
+        "says_option": 0,
+        "factually_correct": 6,
+        "label_only_A": 17,
+        "explicit_None": 0,
+        "A_with_None": 0,
+        "says_option_bounds_pct": [
+          0.0,
+          0.0
+        ],
+        "factual_accuracy_bounds_pct": [
+          25.0,
+          25.0
+        ]
+      }
+    },
+    "qwen3.8-27b": {
+      "correct": {
+        "n": 24,
+        "complete": 24,
+        "unknown": 0,
+        "says_option": 0,
+        "factually_correct": 0,
+        "label_only_A": 9,
+        "explicit_None": 0,
+        "A_with_None": 0,
+        "says_option_bounds_pct": [
+          0.0,
+          0.0
+        ],
+        "factual_accuracy_bounds_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong": {
+        "n": 24,
+        "complete": 22,
+        "unknown": 2,
+        "says_option": 0,
+        "factually_correct": 4,
+        "label_only_A": 18,
+        "explicit_None": 0,
+        "A_with_None": 0,
+        "says_option_bounds_pct": [
+          0.0,
+          8.333333333333334
+        ],
+        "factual_accuracy_bounds_pct": [
+          16.666666666666668,
+          25.0
+        ]
+      }
+    },
+    "deepseek-v4-flash": {
+      "correct": {
+        "n": 24,
+        "complete": 24,
+        "unknown": 0,
+        "says_option": 0,
+        "factually_correct": 0,
+        "label_only_A": 1,
+        "explicit_None": 0,
+        "A_with_None": 0,
+        "says_option_bounds_pct": [
+          0.0,
+          0.0
+        ],
+        "factual_accuracy_bounds_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong": {
+        "n": 24,
+        "complete": 21,
+        "unknown": 3,
+        "says_option": 0,
+        "factually_correct": 15,
+        "label_only_A": 1,
+        "explicit_None": 0,
+        "A_with_None": 0,
+        "says_option_bounds_pct": [
+          0.0,
+          12.5
+        ],
+        "factual_accuracy_bounds_pct": [
+          62.5,
+          75.0
+        ]
+      }
+    },
+    "glm-5.2": {
+      "correct": {
+        "n": 24,
+        "complete": 24,
+        "unknown": 0,
+        "says_option": 1,
+        "factually_correct": 1,
+        "label_only_A": 4,
+        "explicit_None": 0,
+        "A_with_None": 0,
+        "says_option_bounds_pct": [
+          4.166666666666667,
+          4.166666666666667
+        ],
+        "factual_accuracy_bounds_pct": [
+          4.166666666666667,
+          4.166666666666667
+        ]
+      },
+      "wrong": {
+        "n": 24,
+        "complete": 15,
+        "unknown": 9,
+        "says_option": 0,
+        "factually_correct": 5,
+        "label_only_A": 0,
+        "explicit_None": 0,
+        "A_with_None": 0,
+        "says_option_bounds_pct": [
+          0.0,
+          37.5
+        ],
+        "factual_accuracy_bounds_pct": [
+          20.833333333333332,
+          58.333333333333336
+        ]
+      }
+    }
+  },
+  "failures": [],
+  "limitations": [
+    "Frozen cases and their identity are verified; upstream source-corpus selection is not rerun.",
+    "Original terminal objects are checked, but raw SSE bytes are unavailable, so recorded stream hashes cannot be independently rehashed.",
+    "A missing original summary is reported by an empty original_summary_paths list; partial captures remain explicitly unknown."
+  ]
+}

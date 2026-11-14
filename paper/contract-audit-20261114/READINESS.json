@@ -1,7 +1,7 @@
 {
   "status": "PRIVATE_WORKING_DRAFT_READY_FOR_INTERNAL_REVIEW",
-  "pages": 20,
-  "claims": 22,
+  "pages": 21,
+  "claims": 23,
   "numerical_consistency": "PASS",
   "visual_review": "PASS",
   "not_ready_for_external_submission": [
@@ -18,11 +18,12 @@
   ],
   "strongest_supported_claim": "Pinned source-to-request, task-kind and source-to-reference defects with controlled empirical consequences and bounded causal/transfer interventions.",
   "next_actions": [
+    "Finish main8waves and link numericalcontrol24IDs to existing4parentarms withoutnewgeneration. Preserve primaryendpoint failure andposthoc decoding asdistinct.",
     "Choose further validation for an unresolved evidential gap after interpreting the interaction and measurement boundary.",
     "Validate checker transfer or independent factual annotation with fixed criteria and preserved nulls.",
     "Follow a new primary external trace when it supplies executable revision, requests, outputs and a reported consequence."
   ],
-  "working_draft_version": "1.8",
+  "working_draft_version": "1.9",
   "native_task_path_integration": "PASS200cases/801requests/400constructed scoring fixtures; models and tokenizers excluded",
   "integrated_updates": [
     "Installed native source/request gate",

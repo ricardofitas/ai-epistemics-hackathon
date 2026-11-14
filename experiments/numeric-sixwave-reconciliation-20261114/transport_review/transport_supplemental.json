@@ -1,0 +1,349 @@
+{
+  "conclusion": "The original assumption that only HTTP429 can lack a terminal is too strict. Six HTTP200 streams without terminal plus eight HTTP504 attempts remain ineligible unknowns; none was retried or given a fabricated terminal. Full per-attempt reservations are retained.",
+  "limitations": [
+    "No raw SSE bytes are present for independent stream rehashing.",
+    "Recorded transport labels do not establish provider-side outcomes or actual costs.",
+    "This review does not convert any missing, incomplete, or error outcome into a successful response."
+  ],
+  "original_failure_check": "missing_terminal_only_http429",
+  "original_report_failures_preserved": 14,
+  "original_report_sha256": "be76b5094de747c3be16c6ac366527c98d716855e93c165b69208a12c2bb57ee",
+  "passed": true,
+  "recorded_transport_unknowns": [
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 3801,
+      "http": 200,
+      "key": "squad-5732b6b5328d981900602022-m3-a3",
+      "reservation": "0.029658600000000004",
+      "section": "s5-back",
+      "status": "missing_terminal",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 0,
+      "http": 504,
+      "key": "tabmwp-19949-m3-a3",
+      "reservation": "0.0199012",
+      "section": "s5-back",
+      "status": "http_504",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 0,
+      "http": 504,
+      "key": "tabmwp-19949-m3-a2",
+      "reservation": "0.019876",
+      "section": "s5-back",
+      "status": "http_504",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 0,
+      "http": 504,
+      "key": "tabmwp-25670-m3-a0",
+      "reservation": "0.029079000000000004",
+      "section": "s5-back",
+      "status": "http_504",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 0,
+      "http": 504,
+      "key": "tabmwp-25670-m3-a1",
+      "reservation": "0.0291042",
+      "section": "s5-back",
+      "status": "http_504",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 3483,
+      "http": 200,
+      "key": "tabmwp-21323-m3-a3",
+      "reservation": "0.029123800000000002",
+      "section": "s5-back",
+      "status": "missing_terminal",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 0,
+      "http": 504,
+      "key": "tabmwp-34713-m3-a0",
+      "reservation": "0.019965600000000003",
+      "section": "s5-back",
+      "status": "http_504",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 0,
+      "http": 504,
+      "key": "tabmwp-34713-m3-a1",
+      "reservation": "0.019990800000000003",
+      "section": "s5-back",
+      "status": "http_504",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 0,
+      "http": 504,
+      "key": "squad-572768d9708984140094dd16-m3-a0",
+      "reservation": "0.0298392",
+      "section": "s5-back",
+      "status": "http_504",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 0,
+      "http": 504,
+      "key": "squad-572768d9708984140094dd16-m3-a1",
+      "reservation": "0.029864400000000003",
+      "section": "s5-back",
+      "status": "http_504",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 3592,
+      "http": 200,
+      "key": "tabmwp-25670-m3-a3",
+      "reservation": "0.029098600000000002",
+      "section": "s5-back",
+      "status": "missing_terminal",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 3640,
+      "http": 200,
+      "key": "squad-56e76d6537bdd419002c3f94-m3-a3",
+      "reservation": "0.030084200000000002",
+      "section": "s5-back",
+      "status": "missing_terminal",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 45,
+      "http": 200,
+      "key": "squad-570d26efb3d812140066d490-m3-a0",
+      "reservation": "0.0207202",
+      "section": "s5-front",
+      "status": "missing_terminal",
+      "wave": 6
+    },
+    {
+      "attempt": 1,
+      "eligible": false,
+      "frames": 1987,
+      "http": 200,
+      "key": "squad-572683e6f1498d1400e8e250-m3-a3",
+      "reservation": "0.0296684",
+      "section": "s5-front",
+      "status": "missing_terminal",
+      "wave": 6
+    }
+  ],
+  "scope": "Supplemental validation of recorded transport unknowns across six uploaded waves, not a replacement of the original checker.",
+  "totals": {
+    "attempts": 2430,
+    "http429_attempts": 30,
+    "status": {
+      "completed": 2316,
+      "http_504": 8,
+      "incomplete": 70,
+      "missing_terminal": 6
+    },
+    "unique_started": 2400
+  },
+  "waves": {
+    "1": {
+      "sections": {
+        "s0-back": {
+          "attempts": 341,
+          "conservative_charge_decimal": "0.34105401900000000661",
+          "non429_unknown_reserved_decimal": "0",
+          "status": {
+            "completed": 326,
+            "incomplete": 10
+          }
+        },
+        "s0-front": {
+          "attempts": 64,
+          "conservative_charge_decimal": "0.05809948800000000461",
+          "non429_unknown_reserved_decimal": "0",
+          "status": {
+            "completed": 63,
+            "incomplete": 1
+          }
+        }
+      },
+      "started": 400,
+      "status": {
+        "completed": 389,
+        "incomplete": 11
+      }
+    },
+    "2": {
+      "sections": {
+        "s1-back": {
+          "attempts": 342,
+          "conservative_charge_decimal": "0.32187589300000000595",
+          "non429_unknown_reserved_decimal": "0",
+          "status": {
+            "completed": 326,
+            "incomplete": 10
+          }
+        },
+        "s1-front": {
+          "attempts": 64,
+          "conservative_charge_decimal": "0.058539294000000001336",
+          "non429_unknown_reserved_decimal": "0",
+          "status": {
+            "completed": 62,
+            "incomplete": 2
+          }
+        }
+      },
+      "started": 400,
+      "status": {
+        "completed": 388,
+        "incomplete": 12
+      }
+    },
+    "3": {
+      "sections": {
+        "s2-back": {
+          "attempts": 341,
+          "conservative_charge_decimal": "0.329980220000000007112",
+          "non429_unknown_reserved_decimal": "0",
+          "status": {
+            "completed": 325,
+            "incomplete": 11
+          }
+        },
+        "s2-front": {
+          "attempts": 66,
+          "conservative_charge_decimal": "0.09345705100000000104",
+          "non429_unknown_reserved_decimal": "0",
+          "status": {
+            "completed": 61,
+            "incomplete": 3
+          }
+        }
+      },
+      "started": 400,
+      "status": {
+        "completed": 386,
+        "incomplete": 14
+      }
+    },
+    "4": {
+      "sections": {
+        "s3-back": {
+          "attempts": 341,
+          "conservative_charge_decimal": "0.35682769200000000657",
+          "non429_unknown_reserved_decimal": "0",
+          "status": {
+            "completed": 324,
+            "incomplete": 12
+          }
+        },
+        "s3-front": {
+          "attempts": 64,
+          "conservative_charge_decimal": "0.08519949400000000151",
+          "non429_unknown_reserved_decimal": "0",
+          "status": {
+            "completed": 61,
+            "incomplete": 3
+          }
+        }
+      },
+      "started": 400,
+      "status": {
+        "completed": 385,
+        "incomplete": 15
+      }
+    },
+    "5": {
+      "sections": {
+        "s4-back": {
+          "attempts": 341,
+          "conservative_charge_decimal": "0.333716503000000008230",
+          "non429_unknown_reserved_decimal": "0",
+          "status": {
+            "completed": 326,
+            "incomplete": 10
+          }
+        },
+        "s4-front": {
+          "attempts": 64,
+          "conservative_charge_decimal": "0.08064339600000000445",
+          "non429_unknown_reserved_decimal": "0",
+          "status": {
+            "completed": 62,
+            "incomplete": 2
+          }
+        }
+      },
+      "started": 400,
+      "status": {
+        "completed": 388,
+        "incomplete": 12
+      }
+    },
+    "6": {
+      "sections": {
+        "s5-back": {
+          "attempts": 337,
+          "conservative_charge_decimal": "0.551287958000000032158",
+          "non429_unknown_reserved_decimal": "0.315585600000000023",
+          "status": {
+            "completed": 319,
+            "http_504": 8,
+            "incomplete": 5,
+            "missing_terminal": 4
+          }
+        },
+        "s5-front": {
+          "attempts": 65,
+          "conservative_charge_decimal": "0.10390627900000000232",
+          "non429_unknown_reserved_decimal": "0.0503886",
+          "status": {
+            "completed": 61,
+            "incomplete": 1,
+            "missing_terminal": 2
+          }
+        }
+      },
+      "started": 400,
+      "status": {
+        "completed": 380,
+        "http_504": 8,
+        "incomplete": 6,
+        "missing_terminal": 6
+      }
+    }
+  }
+}

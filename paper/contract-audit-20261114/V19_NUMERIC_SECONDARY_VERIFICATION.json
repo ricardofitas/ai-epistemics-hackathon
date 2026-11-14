@@ -1,0 +1,200 @@
+{
+  "arms_per_source_model": 2,
+  "by_model": {
+    "deepseek-v4-flash": {
+      "correct": {
+        "complete": 24,
+        "displayed_option_endorsed": 24,
+        "letter": 1,
+        "letter_and_number": 23,
+        "planned": 24,
+        "source_accurate": 24
+      },
+      "wrong": {
+        "complete": 21,
+        "displayed_option_endorsed": 1,
+        "letter": 1,
+        "number": 15,
+        "other_text": 5,
+        "planned": 24,
+        "source_accurate": 15,
+        "unknown": 3
+      }
+    },
+    "gemma-4-31b-it": {
+      "correct": {
+        "complete": 24,
+        "displayed_option_endorsed": 24,
+        "letter": 20,
+        "letter_and_number": 4,
+        "planned": 24,
+        "source_accurate": 24
+      },
+      "wrong": {
+        "complete": 24,
+        "displayed_option_endorsed": 18,
+        "letter": 17,
+        "letter_and_number": 1,
+        "number": 6,
+        "planned": 24,
+        "source_accurate": 6
+      }
+    },
+    "glm-5.2": {
+      "correct": {
+        "complete": 24,
+        "displayed_option_endorsed": 24,
+        "letter": 4,
+        "letter_and_number": 19,
+        "number": 1,
+        "planned": 24,
+        "source_accurate": 24
+      },
+      "wrong": {
+        "complete": 15,
+        "displayed_option_endorsed": 8,
+        "letter_and_number": 8,
+        "number": 5,
+        "other_text": 2,
+        "planned": 24,
+        "source_accurate": 5,
+        "unknown": 9
+      }
+    },
+    "qwen3.8-27b": {
+      "correct": {
+        "complete": 24,
+        "displayed_option_endorsed": 24,
+        "letter": 9,
+        "letter_and_number": 15,
+        "planned": 24,
+        "source_accurate": 24
+      },
+      "wrong": {
+        "complete": 22,
+        "displayed_option_endorsed": 18,
+        "letter": 18,
+        "number": 4,
+        "planned": 24,
+        "source_accurate": 4,
+        "unknown": 2
+      }
+    }
+  },
+  "eligible": 178,
+  "limitations": [
+    "Post hoc option-aware sensitivity analysis, not the prespecified primary endpoint.",
+    "Seven other-text completions remain reserved without broad semantic adjudication.",
+    "Four model responses per source do not supply four independent source replications."
+  ],
+  "method": "Independent post hoc conservative option decode; no import or execution of interpret_options.py or production analyzers. Literal A maps to the unique shown value; A with value maps only when consistent; bare numeric parsed separately; other text remains unadjudicated.",
+  "models_per_source": 4,
+  "other_text": [
+    {
+      "final_text": "None of the provided options; the median is 8.",
+      "gold": "8",
+      "key": "tab-27974-2-wrong",
+      "kind": "other_text",
+      "shown": "9"
+    },
+    {
+      "final_text": "None of the provided options; the correct answer is 20.",
+      "gold": "20",
+      "key": "tab-25277-2-wrong",
+      "kind": "other_text",
+      "shown": "21"
+    },
+    {
+      "final_text": "8 (not listed in the provided options)",
+      "gold": "8",
+      "key": "tab-27974-3-wrong",
+      "kind": "other_text",
+      "shown": "9"
+    },
+    {
+      "final_text": "None of the provided options; the range is 7.",
+      "gold": "7",
+      "key": "tab-21432-2-wrong",
+      "kind": "other_text",
+      "shown": "8"
+    },
+    {
+      "final_text": "None of the options; correct amount is $1,807.80.",
+      "gold": "1,807.80",
+      "key": "tab-25721-2-wrong",
+      "kind": "other_text",
+      "shown": "9044/5"
+    },
+    {
+      "final_text": "$19.27 (not A)",
+      "gold": "19.27",
+      "key": "tab-23399-2-wrong",
+      "kind": "other_text",
+      "shown": "2027/100"
+    },
+    {
+      "final_text": "None of the provided options; the median is 7.",
+      "gold": "7",
+      "key": "tab-5739-3-wrong",
+      "kind": "other_text",
+      "shown": "8"
+    }
+  ],
+  "passed": true,
+  "planned": 192,
+  "pooled": {
+    "correct": {
+      "complete": 96,
+      "displayed_option_endorsed": 96,
+      "letter": 34,
+      "letter_and_number": 61,
+      "number": 1,
+      "planned": 96,
+      "source_accurate": 96
+    },
+    "wrong": {
+      "complete": 82,
+      "displayed_option_endorsed": 45,
+      "letter": 36,
+      "letter_and_number": 9,
+      "number": 30,
+      "other_text": 7,
+      "planned": 96,
+      "source_accurate": 30,
+      "unknown": 14
+    }
+  },
+  "primary_bare_numeric_correct": {
+    "correct": 1,
+    "wrong": 30
+  },
+  "reference_sha256": "4e8397b23d851ac953ff2302b81f79688014c5d0cefe36d027d1a6107ab3474f",
+  "source_count": 24,
+  "source_indices": [
+    151,
+    153,
+    155,
+    157,
+    159,
+    161,
+    163,
+    165,
+    167,
+    169,
+    171,
+    173,
+    175,
+    177,
+    179,
+    181,
+    183,
+    185,
+    187,
+    189,
+    191,
+    193,
+    197,
+    199
+  ],
+  "unit_of_independence": "24 source questions; 96 source-model observations per arm are repeated across four models, not 96 independent sources."
+}

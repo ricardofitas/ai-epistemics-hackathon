@@ -1,18 +1,14 @@
 {
   "status": "PASS",
-  "pages": 20,
+  "pages": 21,
   "main_pages": 8,
-  "claims": 22,
-  "changed_pages_visual_inspection": [
-    1,
+  "claims": 23,
+  "prior_C1_C22_preserved": true,
+  "changed_pages": [
     8,
-    9,
-    19,
-    20
+    21
   ],
-  "table_percentages_independently_recomputed": true,
-  "prior_C1_C20_exactly_preserved": true,
-  "margin_violations": [],
-  "pdf_sha256_preupload": "66b007c674629215c39e3671ee1488a6681086536248ee5dc13f6c92156f67d2",
-  "independent_new_claim_review": "PASS_WITH_APPLIED_PRECISION_EDITS"
+  "numeric_primary_independent": "PASS",
+  "numeric_secondary_independent": "PASS_POSTHOC",
+  "pdf_sha256_preupload": "9817ccf82f0e9ba1d31f02a5b68e1457c4384b67d5b5c296be9fbb3b6e80fa0e"
 }

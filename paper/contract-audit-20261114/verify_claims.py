@@ -214,9 +214,18 @@ assert bs['consensus']['first_credited']=={'gold_option':2,'other_option':7,'unk
 assert all(x['correct']==12 for x in bs['control_by_judge'].values()) and len(bs['control_by_judge'])==2
 assert json.loads((P/'PRIOR_C1_C20.json').read_text())==json.loads((P/'claims.json').read_text())[:20]
 
+nv=read('numeric_independent.json');no=read('numeric_option_aware.json')
+assert nv['passed'] and nv['totals']['terminal_objects']==192 and nv['totals']['eligible']==178
+assert nv['totals']['status']=={'completed':178,'incomplete':14}
+assert sum(m['correct']['factually_correct'] for m in nv['results'].values())==1
+assert sum(m['wrong']['says_option'] for m in nv['results'].values())==0
+assert no['pooled']['correct']['source_accurate']==96 and no['pooled']['wrong']['displayed_option_endorsed']==45
+assert no['pooled']['wrong']['other_text']==7 and no['pooled']['wrong']['unknown']==14
+assert json.loads((P/'PRIOR_C1_C22.json').read_text())==json.loads((P/'claims.json').read_text())[:22]
+
 pages = json.loads((P / 'manuscript.json').read_text())
 claims = json.loads((P / 'claims.json').read_text())
-assert len(pages) == 20 and len(claims) == 22
+assert len(pages) == 21 and len(claims) == 23
 assert 150 <= len(pages[0]['blocks'][2]['text'].split()) <= 250
 assert [row[0] for row in pages[12]['blocks'][1]['rows']] == [claim['id'] for claim in claims[:16]]
 for claim in claims:
@@ -228,7 +237,7 @@ for row, claim in zip(ledger, claims):
     assert row == dict(claim_id=claim['id'], section=claim['section'],
                        numerical_or_status_claim=claim['claim'],
                        evidence_files=claim['evidence'], qualification=claim['qualification'])
-result = dict(status='PASS', claims_checked=22, working_draft_version='1.8',
+result = dict(status='PASS', claims_checked=23, working_draft_version='1.9',
               integrated_mechanisms=['native source gate', 'shared input causes', 'MMMLU prediction', 'MixEval task kind'],
               verifier_model_requests=0, new_experiments_during_synthesis=0,
               scope='Synthesis consistency check against source snapshots')

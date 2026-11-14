@@ -152,5 +152,12 @@
     "claim": "224 model-reader terminals;223complete;2readers12/12controls;50credited=>40unresolved+2gold+7wrong+1unknown",
     "evidence": "tabmwp_blinded_summary.json",
     "qualification": "100stratified archive questions+12controls repeated2models;not human labels or independent population prevalence"
+  },
+  {
+    "id": "C23",
+    "section": "L",
+    "claim": "192terminals178complete14incomplete;oraclecorrectarm primary1/96 versus posthoc96/96;falsearm primary0/82complete;posthoc45false/30correctbare/7unscored/14incomplete",
+    "evidence": "numeric_independent.json;numeric_option_aware.json",
+    "qualification": "Designed24sourcequestions repeated4models;congruentoraclecontrol;posthocdecoder separatefromfixedbare-numberprimary;parentfourarmcomparison pending"
   }
 ]
