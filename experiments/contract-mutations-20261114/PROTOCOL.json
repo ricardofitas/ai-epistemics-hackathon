@@ -1,0 +1,30 @@
+{
+  "name": "Synthetic source-contract mutation sensitivity",
+  "date": "2026-11-14T03:56:04.995Z",
+  "base_commit": "ace1535710048e8a617be9901f111a6166ebd93b",
+  "input_archive_sha256": "3c9d248d83d9c4318a121f52074a6eea8de83136da7510b0ad816d5aa36e4ae2",
+  "frozen_v1_sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e",
+  "selection": "First 100 rows by original source order in each captured remaining-split SELECTED file for mmlu and mmlu-pro. 200 source units already examined in the prior extension. No outcome-based filtering.",
+  "render": "Controlled synthetic renderer uses complete official question and labelled source options. It is deliberately not a new native-framework execution. Mutation probes are remeasured by substituting a nonce question through the same renderer.",
+  "conditions": {
+    "identity": "Official full question and original options",
+    "trim_only": "Strip only option edge whitespace; gold remains index-aligned",
+    "coherent_permutation": "Rotate complete option sequence by one and align gold index",
+    "distractor_replace": "Replace first option differing from gold with a unique nonce; retain gold",
+    "distractor_drop": "Drop first option differing from gold and update label for retained gold",
+    "duplicate_gold": "Replace first option differing from gold with gold text",
+    "question_truncation": "Render first floor(n/2) question characters, minimum1, preserving positive mutation dependence",
+    "question_omission": "Omit question entirely; remeasured probe must be false",
+    "gold_removed": "Replace the actual gold option by a unique nonce, retain official correct text",
+    "wrong_reference": "Set native reference to first non-gold option label",
+    "missing_source": "Remove source question/options/index evidence while retaining a complete v1 record"
+  },
+  "v2_design": "A separate wrapper requires source question/options/gold index, full source-question substring in visible prompt, exact normalized option multiset (allow coherent permutations), source-gold agreement and all v1 checks. Original v1 bytes unchanged. This is a bounded string/content contract, not semantic correctness or cryptographic provenance.",
+  "truth": "identity/trim/permutation benign controls; replace/drop/duplicate/truncate/omission/gold_removed/wrong_reference altered-task controls; missing_source incomplete evidence. Synthetic diagnostics, no prevalence estimate or significance test.",
+  "source_units": 200,
+  "planned_conditions_per_unit": 11,
+  "provider_calls": 0,
+  "network_requests": 0,
+  "exceptions": "Keep every selected source unit and all mutation dispositions. If no differing distractor exists, mark non-applicable without replacing row.",
+  "interpretation": "V2 is developed from structural inspection and assessed on synthetic design cases, not independent held-out validation. Freeze code and protocol before execution."
+}
