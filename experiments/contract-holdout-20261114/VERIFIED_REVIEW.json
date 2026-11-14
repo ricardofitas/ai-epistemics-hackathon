@@ -1,0 +1,1323 @@
+{
+  "verified_original_panels": 4,
+  "original_records": 400,
+  "raw_source_records": 27746,
+  "first_pass": "Prospective selection and frozen checker, before review of two whitespace-only adapter alerts.",
+  "review": "Post-outcome adapter correction, with all original capture files retained and the checker byte-identical.",
+  "adapter_false_alerts_corrected": 2,
+  "normalization_details": [
+    {
+      "benchmark": "mmlu-pro",
+      "row": 19,
+      "source_index": 8600,
+      "original_gold": "$6,049 ",
+      "displayed_gold": "$6,049",
+      "original_expected_reference": null,
+      "reviewed_expected_reference": "G",
+      "normalization": "str.strip on each option; full sequence equal and positions preserved"
+    },
+    {
+      "benchmark": "mmlu-pro",
+      "row": 75,
+      "source_index": 4394,
+      "original_gold": "-20$\\text{J}$ ",
+      "displayed_gold": "-20$\\text{J}$",
+      "original_expected_reference": null,
+      "reviewed_expected_reference": "G",
+      "normalization": "str.strip on each option; full sequence equal and positions preserved"
+    }
+  ],
+  "provider_model_calls": 0,
+  "reviews": [
+    {
+      "benchmark": "arc-challenge",
+      "rows": 100,
+      "original_native_checker": {
+        "status": "FAIL",
+        "counts": {
+          "records": 100,
+          "source_gold_available": 100
+        },
+        "failures": {
+          "correct_choice_missing": 100
+        },
+        "incomplete_checks": {},
+        "examples": {
+          "correct_choice_missing": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "source_target_counts": {},
+        "attention": [],
+        "input_collisions": {
+          "visible_prompts": 0,
+          "covered_rows": 0,
+          "rows_in_conflicting_groups": 0,
+          "minimum_deterministic_errors": 0,
+          "empirical_prompt_only_accuracy_ceiling": null
+        },
+        "model_calls": 0
+      },
+      "normalization_reviewed_checker": {
+        "status": "FAIL",
+        "counts": {
+          "records": 100,
+          "source_gold_available": 100
+        },
+        "failures": {
+          "correct_choice_missing": 100
+        },
+        "incomplete_checks": {},
+        "examples": {
+          "correct_choice_missing": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "source_target_counts": {},
+        "attention": [],
+        "input_collisions": {
+          "visible_prompts": 0,
+          "covered_rows": 0,
+          "rows_in_conflicting_groups": 0,
+          "minimum_deterministic_errors": 0,
+          "empirical_prompt_only_accuracy_ceiling": null
+        },
+        "model_calls": 0
+      },
+      "sequence_preserving_trim_eligible_rows": 0,
+      "adapter_changed_rows": [],
+      "original_records_preserved": true,
+      "source_parquet_hashes_verified": true,
+      "selection_order_verified": true,
+      "corrected_source_oracle_score": 1.0,
+      "original_oracle_controls": [
+        {
+          "predictor": "official_letter_fixture",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 0.98,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "official_text_fixture",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 0.97,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 99,
+          "parse_failed": 1,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_A",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 0.23,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_B",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 0.3,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_C",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 0.24,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_D",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 0.23,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        }
+      ],
+      "immutable_checker_sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e",
+      "provider_model_calls": 0,
+      "reviewed_input": "reviewed_inputs/arc-challenge.jsonl.gz",
+      "reviewed_input_sha256": "797c8159dca0472c65b5e179128ae0cd899d655aa95421256ab0d9ded110a32c",
+      "diagnostic_backend_calls": 0
+    },
+    {
+      "benchmark": "openbookqa",
+      "rows": 100,
+      "original_native_checker": {
+        "status": "FAIL",
+        "counts": {
+          "records": 100,
+          "source_gold_available": 100
+        },
+        "failures": {
+          "question_not_bound": 100,
+          "correct_choice_missing": 100
+        },
+        "incomplete_checks": {},
+        "examples": {
+          "question_not_bound": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correct_choice_missing": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "source_target_counts": {},
+        "attention": [],
+        "input_collisions": {
+          "visible_prompts": 0,
+          "covered_rows": 0,
+          "rows_in_conflicting_groups": 0,
+          "minimum_deterministic_errors": 0,
+          "empirical_prompt_only_accuracy_ceiling": null
+        },
+        "model_calls": 0
+      },
+      "normalization_reviewed_checker": {
+        "status": "FAIL",
+        "counts": {
+          "records": 100,
+          "source_gold_available": 100
+        },
+        "failures": {
+          "question_not_bound": 100,
+          "correct_choice_missing": 100
+        },
+        "incomplete_checks": {},
+        "examples": {
+          "question_not_bound": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correct_choice_missing": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "source_target_counts": {},
+        "attention": [],
+        "input_collisions": {
+          "visible_prompts": 0,
+          "covered_rows": 0,
+          "rows_in_conflicting_groups": 0,
+          "minimum_deterministic_errors": 0,
+          "empirical_prompt_only_accuracy_ceiling": null
+        },
+        "model_calls": 0
+      },
+      "sequence_preserving_trim_eligible_rows": 0,
+      "adapter_changed_rows": [],
+      "original_records_preserved": true,
+      "source_parquet_hashes_verified": true,
+      "selection_order_verified": true,
+      "corrected_source_oracle_score": 1.0,
+      "original_oracle_controls": [
+        {
+          "predictor": "official_letter_fixture",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 1.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "official_text_fixture",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 0.99,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 99,
+          "parse_failed": 1,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_A",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 0.3,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_B",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 0.27,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_C",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 0.26,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_D",
+          "metric": "choice_accuracy",
+          "official_metric": "acc_norm",
+          "score": 0.17,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        }
+      ],
+      "immutable_checker_sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e",
+      "provider_model_calls": 0,
+      "reviewed_input": "reviewed_inputs/openbookqa.jsonl.gz",
+      "reviewed_input_sha256": "2c3c6c92c3a1575ece8efe92e9ee7354fefa948740eed73bf183418ca891127d",
+      "diagnostic_backend_calls": 0
+    },
+    {
+      "benchmark": "mmlu",
+      "rows": 100,
+      "original_native_checker": {
+        "status": "PASS",
+        "counts": {
+          "records": 100,
+          "source_gold_available": 100,
+          "source_scorable_rows": 100
+        },
+        "failures": {},
+        "incomplete_checks": {},
+        "examples": {},
+        "source_target_counts": {
+          "B": 25,
+          "C": 28,
+          "D": 25,
+          "A": 22
+        },
+        "attention": [],
+        "input_collisions": {
+          "visible_prompts": 100,
+          "covered_rows": 100,
+          "rows_in_conflicting_groups": 0,
+          "minimum_deterministic_errors": 0,
+          "empirical_prompt_only_accuracy_ceiling": 1.0
+        },
+        "model_calls": 0
+      },
+      "normalization_reviewed_checker": {
+        "status": "PASS",
+        "counts": {
+          "records": 100,
+          "source_gold_available": 100,
+          "source_scorable_rows": 100
+        },
+        "failures": {},
+        "incomplete_checks": {},
+        "examples": {},
+        "source_target_counts": {
+          "B": 25,
+          "C": 28,
+          "D": 25,
+          "A": 22
+        },
+        "attention": [],
+        "input_collisions": {
+          "visible_prompts": 100,
+          "covered_rows": 100,
+          "rows_in_conflicting_groups": 0,
+          "minimum_deterministic_errors": 0,
+          "empirical_prompt_only_accuracy_ceiling": 1.0
+        },
+        "model_calls": 0
+      },
+      "sequence_preserving_trim_eligible_rows": 100,
+      "adapter_changed_rows": [],
+      "original_records_preserved": true,
+      "source_parquet_hashes_verified": true,
+      "selection_order_verified": true,
+      "corrected_source_oracle_score": 1.0,
+      "original_oracle_controls": [
+        {
+          "predictor": "official_letter_fixture",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 1.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "official_text_fixture",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.95,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 96,
+          "parse_failed": 4,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_A",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.22,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_B",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.25,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_C",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.28,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_D",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.25,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-D",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "choices"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        }
+      ],
+      "immutable_checker_sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e",
+      "provider_model_calls": 0,
+      "reviewed_input": "reviewed_inputs/mmlu.jsonl.gz",
+      "reviewed_input_sha256": "91bbcd3941fe24932c4159ec0654d651103d2e72ea2dfcebbdea31bd022a95a7",
+      "diagnostic_backend_calls": 1
+    },
+    {
+      "benchmark": "mmlu-pro",
+      "rows": 100,
+      "original_native_checker": {
+        "status": "FAIL",
+        "counts": {
+          "records": 100,
+          "source_gold_available": 100,
+          "source_scorable_rows": 98
+        },
+        "failures": {
+          "correct_choice_missing": 2
+        },
+        "incomplete_checks": {},
+        "examples": {
+          "correct_choice_missing": [
+            "19",
+            "75"
+          ]
+        },
+        "source_target_counts": {
+          "D": 11,
+          "I": 11,
+          "A": 13,
+          "H": 7,
+          "J": 8,
+          "F": 8,
+          "C": 9,
+          "B": 12,
+          "G": 8,
+          "E": 11
+        },
+        "attention": [],
+        "input_collisions": {
+          "visible_prompts": 98,
+          "covered_rows": 98,
+          "rows_in_conflicting_groups": 0,
+          "minimum_deterministic_errors": 0,
+          "empirical_prompt_only_accuracy_ceiling": 1.0
+        },
+        "model_calls": 0
+      },
+      "normalization_reviewed_checker": {
+        "status": "PASS",
+        "counts": {
+          "records": 100,
+          "source_gold_available": 100,
+          "source_scorable_rows": 100
+        },
+        "failures": {},
+        "incomplete_checks": {},
+        "examples": {},
+        "source_target_counts": {
+          "D": 11,
+          "I": 11,
+          "A": 13,
+          "H": 7,
+          "J": 8,
+          "F": 8,
+          "C": 9,
+          "B": 12,
+          "G": 10,
+          "E": 11
+        },
+        "attention": [],
+        "input_collisions": {
+          "visible_prompts": 100,
+          "covered_rows": 100,
+          "rows_in_conflicting_groups": 0,
+          "minimum_deterministic_errors": 0,
+          "empirical_prompt_only_accuracy_ceiling": 1.0
+        },
+        "model_calls": 0
+      },
+      "sequence_preserving_trim_eligible_rows": 100,
+      "adapter_changed_rows": [
+        19,
+        75
+      ],
+      "original_records_preserved": true,
+      "source_parquet_hashes_verified": true,
+      "selection_order_verified": true,
+      "corrected_source_oracle_score": 1.0,
+      "original_oracle_controls": [
+        {
+          "predictor": "official_letter_fixture",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 1.0,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "official_text_fixture",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.95,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 98,
+          "parse_failed": 2,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_A",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.13,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_B",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.12,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_C",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.09,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_D",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.11,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_E",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.11,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_F",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.08,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_G",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.1,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_H",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.07,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_I",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.11,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        },
+        {
+          "predictor": "constant_J",
+          "metric": "choice_accuracy",
+          "official_metric": "acc",
+          "score": 0.08,
+          "score_source": "metric_stage",
+          "prediction_mode": "generation",
+          "denominator": "total",
+          "total_samples": 100,
+          "scored_samples": 100,
+          "valid_predictions": 100,
+          "parse_failed": 0,
+          "empty_output": 0,
+          "invalid_references": 0,
+          "parser": {
+            "type": "choice_letter",
+            "choices": "A-J",
+            "prefer": [
+              "tagged_answer",
+              "boxed_answer",
+              "final_answer_line",
+              "last_standalone_choice"
+            ],
+            "choices_key": "options"
+          },
+          "failure_policy": {
+            "parse_failed": "score_zero",
+            "empty_output": "score_zero",
+            "invalid_reference": "exclude"
+          },
+          "official_compatibility": null
+        }
+      ],
+      "immutable_checker_sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e",
+      "provider_model_calls": 0,
+      "reviewed_input": "reviewed_inputs/mmlu-pro.jsonl.gz",
+      "reviewed_input_sha256": "3381f6d603eed9b20ab59434b15525820b502ec965aa4ce2af2e45adca943585",
+      "diagnostic_backend_calls": 1
+    }
+  ]
+}

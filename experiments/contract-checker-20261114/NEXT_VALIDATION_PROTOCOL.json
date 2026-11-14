@@ -1,5 +1,5 @@
 {
-  "status": "prepared, not executed",
+  "status": "executed; results and documented adapter review available",
   "purpose": "Prospective extension beyond the checker calibration panel",
   "framework_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
   "benchmark_contracts": [
@@ -12,5 +12,7 @@
   "planned_rows": "First up to 100 rows per benchmark by stable SHA256 ordering of the frozen official source record; no model outcomes used. Stratified comparisons require a separate stated policy.",
   "metric": "Whether independently specified source-gold checks, native oracle and formatter probes agree with the checker. Retain all failures, unknowns and acquisition errors.",
   "framework_new_model_requests": 0,
-  "limits": "A prospective diagnostic extension within One-Eval; not field prevalence. The chosen contracts cover nested option labels, distinct question field names and ten-option answers."
+  "limits": "A prospective diagnostic extension within One-Eval; not field prevalence. The chosen contracts cover nested option labels, distinct question field names and ten-option answers.",
+  "execution_run": 43541759934,
+  "results": "experiments/contract-holdout-20261114/RESEARCH_STATUS.json"
 }

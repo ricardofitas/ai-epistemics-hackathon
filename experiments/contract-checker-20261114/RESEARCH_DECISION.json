@@ -1,6 +1,6 @@
 {
   "date": "2026-11-14",
-  "status": "REUSABLE_CHECKER_AND_SOURCE_SEARCH_COMPLETE",
+  "status": "CALIBRATION_AND_FOUR_CONTRACT_PROSPECTIVE_AUDIT_COMPLETE",
   "native_broken_configurations_detected": 7,
   "healthy_native_oneeval_control_passed": 1,
   "corrected_configurations_passed": 7,
@@ -10,7 +10,23 @@
   "new_provider_calls": 0,
   "external_configuration_consumer_identified": true,
   "affected_external_run_verified": false,
-  "independent_holdout_validation_completed": false,
+  "independent_holdout_validation_completed": true,
   "scope": "Calibration and regression on selected prior evidence. Generalization and exposure remain separate open measurements.",
-  "next_concrete_step": "Run the four frozen additional benchmark contracts, then assess the empirical paper contribution with the paired model trial. Seek original independently used run records when available."
+  "next_concrete_step": "Integrate the prospective failures, healthy controls and documented normalization limitation into the empirical research account. External affected-score evidence remains open.",
+  "prospective_validation": {
+    "benchmarks": [
+      "arc-challenge",
+      "openbookqa",
+      "mmlu",
+      "mmlu-pro"
+    ],
+    "rows": 400,
+    "new_native_faulty_configurations": [
+      "arc-challenge",
+      "openbookqa"
+    ],
+    "initial_adapter_false_alerts": 2,
+    "checker_unchanged": true,
+    "post_outcome_adapter_review": true
+  }
 }

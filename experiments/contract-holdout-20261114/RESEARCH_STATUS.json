@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-14",
+  "status": "PROSPECTIVE_FOUR_CONTRACT_AUDIT_COMPLETE",
+  "sampled_rows": 400,
+  "benchmarks": [
+    "arc-challenge",
+    "openbookqa",
+    "mmlu",
+    "mmlu-pro"
+  ],
+  "newly_verified_faulty_configurations": [
+    "arc-challenge",
+    "openbookqa"
+  ],
+  "native_controls_passing_after_adapter_review": [
+    "mmlu",
+    "mmlu-pro"
+  ],
+  "initial_adapter_false_alerts": 2,
+  "adapter_review_was_post_outcome": true,
+  "frozen_checker_unchanged": true,
+  "corrected_reference_oracle_scored_rows": 400,
+  "corrected_reference_oracle_total_rows": 400,
+  "new_provider_model_calls": 0,
+  "external_published_impact_verified": false,
+  "scope": "Prospective source-contract extension with a documented post-outcome whitespace adapter correction; not deployment prevalence.",
+  "execution_run": 43541759934,
+  "execution_commit": "ad8249103b369e6bac5de9eb43590c3cc3615838",
+  "protocol_commit": "79669812a99ceca88914c4662a3d50ee6e038c25",
+  "capture_artifact_id": 14091229651,
+  "capture_artifact_sha256": "45b5eb305790ae8f2bf5ceddc46ddabaf230d8654f4260d092443c008a7ffc2b",
+  "source_rows_captured": 27746,
+  "native_offline_replay": "passed",
+  "checker_sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e"
+}

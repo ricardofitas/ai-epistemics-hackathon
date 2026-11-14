@@ -1,0 +1,15 @@
+{
+  "raw_capture_archive_sha256": "45b5eb305790ae8f2bf5ceddc46ddabaf230d8654f4260d092443c008a7ffc2b",
+  "raw_capture_bytes": 12049837,
+  "raw_capture_artifact_id": 14091229651,
+  "source_and_verifier_protocol_commit": "79669812a99ceca88914c4662a3d50ee6e038c25",
+  "execution_commit": "ad8249103b369e6bac5de9eb43590c3cc3615838",
+  "provider_model_calls": 0,
+  "review_runtime": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "native_offline_replay": {
+    "status": "passed",
+    "identical_panels": 4,
+    "source_captures_unchanged": true
+  },
+  "post_outcome_correction": "Two MMLU-Pro gold text comparisons corrected for the native operation str.strip, only when the full option sequence and its order were preserved. Original checker and first-pass artifact files unchanged."
+}
