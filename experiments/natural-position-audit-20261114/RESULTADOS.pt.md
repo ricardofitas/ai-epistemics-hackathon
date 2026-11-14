@@ -2,7 +2,7 @@
 
 14 de novembro de 2026. Investigação privada; sem alterações ao manuscrito.
 
-**Um programa que devolve sempre `<answer>A</answer>` recebe entre 96,49% e 100% no seletor de pontuação do relatório do percurso API publicado do One-Eval, sobre 5 010 perguntas oficiais.** A configuração coloca o campo da resposta correta primeiro em todos os casos. No CUPCase e no GPQA, os textos produzidos pelo gerador nem incluem o próprio enunciado. Não foram acrescentadas opções ou perguntas artificiais.
+**Um programa que devolve sempre `<answer>A</answer>` recebe entre 96,24% e 100% no seletor de pontuação do relatório do percurso API publicado do One-Eval, sobre 4 760 perguntas das variantes predefinidas.** A configuração coloca o campo da resposta correta primeiro em todos os casos. No CUPCase e no GPQA, os textos produzidos pelo gerador nem incluem o próprio enunciado. Não foram acrescentadas opções ou perguntas artificiais.
 
 O resultado foi executado sobre o método completo original `DataFlowEvalTool.run_eval`, com `FileStorage`, `BenchAnswerGenerator`, `UnifiedBenchDatasetEvaluator`, o parser e a métrica originais, e a função original que escolhe a pontuação do relatório. A fronteira de inferência contém apenas o programa constante, instalado na cache de serving original. As classes são carregadas do código verificado, com dependências de registo, bases abstratas e logging declaradas. **Não é uma execução da CLI instalada nem um relatório gerado por um LLM; não houve chamadas a modelos reais.**
 
@@ -12,12 +12,14 @@ O resultado foi executado sobre o método completo original `DataFlowEvalTool.ru
 | --- | ---: | ---: | ---: | ---: |
 | CUPCase, test | 3 562 | 3 562/3 562 | 100,00% | 0/3 562 |
 | SciQ, test | 1 000 | 994/997 | 99,70% | 1 000/1 000 |
-| GPQA, main dos autores | 448 | 412/427 | 96,49% | 0/448 |
+| GPQA, Diamond dos autores, variante predefinida | 198 | 179/186 | 96,24% | 0/198 |
 | MMLU, all/test: controlo da ordem e enunciado | 14 042 | 3 222/14 042 | 22,95% | 14 042/14 042 |
 
-SciQ exclui três referências e GPQA exclui 21. Mantivemos esses denominadores nativos. Nos 5 010 registos afetados, a resposta correta ocupa a primeira posição; os desvios de 100% vêm da interpretação das referências pelo parser. MMLU preserva os enunciados e tem ouro distribuído pelas quatro posições. É um controlo saudável **destas propriedades**, não de todas as etapas.
+SciQ exclui três referências e GPQA Diamond exclui 12. Mantivemos esses denominadores nativos. Nas 4 760 perguntas das variantes predefinidas, a resposta correta ocupa a primeira posição; os desvios de 100% vêm da interpretação das referências pelo parser. MMLU preserva os enunciados e tem ouro distribuído pelas quatro posições. É um controlo saudável **destas propriedades**, não de todas as etapas.
 
-O programa constante B recebe 0/3 562 no CUPCase, 0/997 no SciQ e 2/427 no GPQA. A etapa `MetricRunner` devolve zero nestas execuções, incluindo MMLU. A função `_resolve_report_score` escolhe explicitamente a `accuracy` do DataFlow, embora os próprios resultados estejam marcados `role=diagnostic` e `display_as_primary=false`. Por isso, não substituímos silenciosamente a métrica zero por uma pontuação nossa: guardámos ambas e executámos o seletor original que explica a pontuação apresentada.
+O programa constante B recebe 0/3 562 no CUPCase, 0/997 no SciQ e 1/186 no GPQA Diamond. A etapa `MetricRunner` devolve zero nestas execuções, incluindo MMLU. A função `_resolve_report_score` escolhe explicitamente a `accuracy` do DataFlow, embora os próprios resultados estejam marcados `role=diagnostic` e `display_as_primary=false`. Por isso, não substituímos silenciosamente a métrica zero por uma pontuação nossa: guardámos ambas e executámos o seletor original que explica a pontuação apresentada.
+
+A primeira execução GPQA usou o corpus Main de 448 perguntas, explicitamente escolhido no protocolo inicial: A=412/427, 96,49%, 21 referências excluídas. Uma revisão separada identificou que a galeria predefine Diamond. Executámos depois os 198 casos Diamond com a configuração original inalterada; confirmámos que as suas 198 perguntas estão contidas no Main e não somámos estas duas variantes como observações independentes. O total de perguntas distintas das duas variantes e dos outros dois conjuntos é 5 010.
 
 ## Correção com as mesmas perguntas e opções
 
@@ -36,7 +38,7 @@ Esta é uma consequência natural e grande de uma configuração publicada: uma 
 
 A auditoria das respostas originais do PromptPG segue como resultado negativo para a hipótese de anular o ganho principal: na seed publicada, mantém-se a vantagem de 515/7 686 = 6,7005 pontos percentuais sobre o GPT-3 com CoT nas correções testadas. Não procurámos uma regra que invertesse essa conclusão.
 
-Este resultado é mais direto do que os ensaios construídos com uma opção «A. None». **Ainda não permite afirmar superioridade científica ao GAMMAF.** A causalidade local e a consequência na pontuação estão demonstradas; a novidade geral, a reprodução externa independente e o efeito em usos ou resultados históricos publicados continuam por estabelecer. A existência de viés de posição ou de erros de extração em geral não é uma alegação de novidade nossa.
+Este resultado é mais direto do que os ensaios construídos com uma opção «A. None». **Ainda não permite afirmar superioridade científica ao GAMMAF.** A causalidade local e a consequência na pontuação estão demonstradas, mas o mecanismo genérico já tem antecedentes diretos: a secção 6 da [issue 978 do tinker-cookbook](https://github.com/thinking-machines-lab/tinker-cookbook/issues/978), de 17/10/2026, descreve ouro primeiro e crédito total para «sempre A» no caminho de esquema textual do GPQA; usa exemplos sintéticos e não confirma a pré-condição nos dados reais. [Sun et al., 2025, secção 2.6](https://arxiv.org/html/2506.04734v1) já discutem avaliadores que colocam a resposta correta em A e efeitos da ordem das alternativas. A nossa execução sobre dados completos confirma uma ocorrência concreta no One-Eval; não estabelece novidade do mecanismo. A reprodução externa independente e o efeito em usos ou resultados históricos publicados continuam por estabelecer.
 
 ## Reprodução e fontes
 
@@ -48,6 +50,7 @@ Código, protocolos prévios, fontes e verificação estão nesta pasta. `scient
 | Método completo original e MMLU | 43645404107 | 14132959007 |
 | Primeira correção incompleta, previsão rejeitada | 43645621491 | 14134126317 |
 | Segunda correção, queda de A e resíduo do parser preservados | 43645998862 | 14133559844 |
+| Variante GPQA Diamond predefinida, fonte fechada separadamente | 43646866061 | 14134368052 |
 
 ```bash
 python3 verify_artifacts.py entrypoint-evidence.zip repair2-evidence.zip \
@@ -60,4 +63,4 @@ Fontes primárias: [configurações One-Eval](https://github.com/OpenDCAI/One-Ev
 
 A pesquisa restrita de issues e PRs One-Eval por CUPCase/SciQ/GPQA/shuffle devolveu zero correspondências; isso não prova novidade. O [PR 63](https://github.com/OpenDCAI/One-Eval/pull/63), já integrado, reconhece problemas anteriores de prompts, métricas e extração. A nossa reprodução refere-se ao código atual acima, sem atribuir automaticamente as falhas aos números históricos do artigo.
 
-Recursos novos: **zero chamadas Adaption, zero judges, zero classificações humanas e zero alterações ao manuscrito**. A revisão humana já preparada mantém o seu próprio objetivo e pode continuar em paralelo. Próximo passo: reprodução independente por uma instalação normal e validação do percurso API com respostas reais, seguida de análise do impacto e da novidade; nenhuma inversão de ranking será exigida como condição de sucesso.
+Recursos novos: **zero chamadas Adaption, zero judges, zero classificações humanas e zero alterações ao manuscrito**. A revisão humana já preparada mantém o seu próprio objetivo e pode continuar em paralelo. Próximo passo: procurar uma consequência nova no percurso real de avaliação ou numa decisão sustentada por respostas originais, reaproveitando a evidência já existente. A reprodução por uma instalação normal pode fechar a fronteira técnica. Novas chamadas a modelos só se justificam se resolverem uma lacuna concreta além do mecanismo já conhecido; nenhuma inversão de ranking será exigida como condição de sucesso.

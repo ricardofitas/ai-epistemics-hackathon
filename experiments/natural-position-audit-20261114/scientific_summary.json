@@ -1,7 +1,6 @@
 {
   "status": "NATURAL_NATIVE_API_PATH_FAILURE_VERIFIED_WITH_SOURCE_PRESERVING_CORRECTION_AND_RETAINED_RESIDUAL",
   "upstream_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
-  "unique_affected_source_rows": 5010,
   "healthy_position_control_rows": 14042,
   "new_model_calls": 0,
   "new_human_labels": 0,
@@ -42,7 +41,8 @@
       "A_report_score": 0.9648711943793911,
       "A_question_present": 0,
       "ordinary_metric_score": 0.0,
-      "report_score_source": "dataflow_eval:accuracy"
+      "report_score_source": "dataflow_eval:accuracy",
+      "variant": "Main, explicit initial protocol, not gallery default"
     },
     "mmlu": {
       "rows": 14042,
@@ -57,6 +57,19 @@
       "A_report_score": 0.22945449366187154,
       "A_question_present": 14042,
       "ordinary_metric_score": 0.0,
+      "report_score_source": "dataflow_eval:accuracy"
+    },
+    "gpqa_diamond": {
+      "variant": "Diamond, gallery default",
+      "rows": 198,
+      "A_correct": 179,
+      "A_valid": 186,
+      "A_report_score": 0.9623655913978495,
+      "A_question_present": 0,
+      "ordinary_metric_score": 0.0,
+      "gold_position_counts": {
+        "0": 198
+      },
       "report_score_source": "dataflow_eval:accuracy"
     }
   },
@@ -81,7 +94,8 @@
     "initial_native_methods": 43644200923,
     "native_full_entrypoint_and_MMLU": 43645404107,
     "partial_repair": 43645621491,
-    "aligned_repair_with_retained_residual": 43645998862
+    "aligned_repair_with_retained_residual": 43645998862,
+    "default_GPQA_Diamond": 43646866061
   },
   "artifacts": {
     "native_full": {
@@ -95,6 +109,10 @@
     "aligned_repair": {
       "id": 14133559844,
       "sha256": "66de2030edca15d53c8318b59821d2e8ef06c31f3e94f8e7cba6d2bd4b5378fe"
+    },
+    "default_GPQA_Diamond": {
+      "id": 14134368052,
+      "sha256": "d17cc99fbcb66211f0d503b4bbc77f9b9c1e9717640a4e90216356047e50a28a"
     }
   },
   "source_provenance": {
@@ -144,6 +162,14 @@
           "declared_lfs_sha256": "74a41822ce7d3def56e1682f958469c04642a5336a5ce912fa375fdb90fb25d7"
         }
       ]
+    },
+    "gpqa_diamond": {
+      "repo": "Idavidrein/gpqa",
+      "revision": "56686c06f5e19865c153de0fdb11be3890014df7",
+      "archive_git_blob": "80788cb325c4d63bbccad56c2e393b33389348fe",
+      "archive_sha256": "461ae7329f15a3e35f8184d2dac24b990f34fdf12f366ca4062d8e6638cd08dc",
+      "member": "dataset/gpqa_diamond.csv",
+      "member_sha256": "41d1213cd7a4998605a26c2798500652572007161b3a92817ba46b35befcd305"
     }
   },
   "dataflow": {
@@ -166,6 +192,24 @@
     "Current source-configuration validity failure, not proof that the authors published affected model results.",
     "Generic answer-position bias and answer-extraction failures are known; broader novelty and independent external reproduction remain open.",
     "Native metric stage is zero even on MMLU; MMLU is healthy only for question and position transport, not all stages.",
-    "Aligned repair fixes constant-A inflation and missing question; residual parser deduplication still changes 21 gold letters, and makes B=888 instead of source-correct 882."
+    "Aligned repair fixes constant-A inflation and missing question; residual parser deduplication still changes 21 gold letters, and makes B=888 instead of source-correct 882.",
+    "The initial GPQA Main448 is a separately labelled variant; the subsequent198-row Diamond run closes the gallery-default variant, with12invalidreferences and179/186constant-A credit. Diamond questions overlap Main; do not add their counts as independent cases."
+  ],
+  "default_affected_source_rows": 4760,
+  "unique_affected_source_rows_including_explicit_Main_variant": 5010,
+  "generic_mechanism_novelty": false,
+  "independent_priorart_review_commit": "152fdb10e471d96ec27348614ddaa08755678663",
+  "GPQA_Main_Diamond_question_overlap": 198,
+  "direct_prior_art": [
+    {
+      "url": "https://github.com/thinking-machines-lab/tinker-cookbook/issues/978",
+      "date": "2026-10-17",
+      "scope": "Near-exact generic correct-first constant-A code-path mechanism; their stated live-data precondition unconfirmed."
+    },
+    {
+      "url": "https://arxiv.org/html/2506.04734v1",
+      "date": "2025-06-05",
+      "scope": "Section2.6 discusses correct-A defaults and answer-order effects."
+    }
   ]
 }

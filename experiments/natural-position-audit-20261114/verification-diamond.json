@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "run_id": 43646866061,
+  "artifact_id": 14134368052,
+  "artifact_sha256": "sha256:d17cc99fbcb66211f0d503b4bbc77f9b9c1e9717640a4e90216356047e50a28a",
+  "default_variant": "gpqa_diamond/train",
+  "source_question_overlap_with_main": 198,
+  "datasets": {
+    "gpqa_diamond": {
+      "A": {
+        "rows": 198,
+        "valid": 186,
+        "correct": 179,
+        "report_score": 0.9623655913978495,
+        "own_question_present": 0,
+        "ordinary_metric_score": 0.0,
+        "result_sha256": "7daa819b277c7959ce629140cd8ff89acd61b5f8d23ce0ceb14bd77c7904b203"
+      },
+      "B": {
+        "rows": 198,
+        "valid": 186,
+        "correct": 1,
+        "report_score": 0.005376344086021506,
+        "own_question_present": 0,
+        "ordinary_metric_score": 0.0,
+        "result_sha256": "1232f95e0cf43a06011415c1f4ec080ad3c0a638e17c272a05e72ec29882cfb4"
+      }
+    }
+  },
+  "boundary": "Original complete native API-generation run_eval on author Diamond corpus matching gallery default; exact source-loaded storage/evaluator/report selector with cached constant serving. No installed CLI or real-model inference."
+}
