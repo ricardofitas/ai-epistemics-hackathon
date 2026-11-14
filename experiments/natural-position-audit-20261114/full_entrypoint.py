@@ -48,6 +48,7 @@ def execute(name, original, config, native, letters):
     original.to_json(source_path, orient="records", lines=True, force_ascii=False)
     # The native entry point itself reads this JSONL; use its materialized types below.
     expected = pd.read_json(source_path, lines=True)
+    expected.to_json(folder / "source-before-native.jsonl", orient="records", lines=True, force_ascii=False)
     mapping = config["meta"]["key_mapping"]
     gold_positions = []
     for row in expected.to_dict("records"):
@@ -68,7 +69,15 @@ def execute(name, original, config, native, letters):
         native_result = tool.run_eval(bench, model)
         records = pd.read_json(native_result["detail_path"], lines=True)
         assert len(records) == len(expected) == len(serving.prompts)
-        assert records[expected.columns].equals(expected), "The native pipeline changed source fields"
+        # pandas' repeated JSON materialization can change binary floating metadata
+        # at sub-serialization precision. Compare the canonical persisted fields,
+        # while requiring exact task-field text independently below.
+        source_canonical = expected.to_json(orient="records", lines=True, force_ascii=False)
+        output_canonical = records[expected.columns].to_json(orient="records", lines=True, force_ascii=False)
+        assert source_canonical == output_canonical, "The native pipeline changed serialized source fields"
+        task_keys = [mapping["input_question_key"], mapping["input_label_key"]]
+        task_keys += mapping["input_choices_key"] if isinstance(mapping["input_choices_key"], list) else [mapping["input_choices_key"]]
+        assert all(records[k].tolist() == expected[k].tolist() for k in task_keys), "A source task field changed"
         assert records["generated_ans"].eq(f"<answer>{letter}</answer>").all()
         prompt_rows = [dict(row=i, question_present=str(expected.iloc[i][mapping["input_question_key"]]) in text,
                             prompt_sha256=hashlib.sha256(text.encode()).hexdigest())

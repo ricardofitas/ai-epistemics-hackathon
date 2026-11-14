@@ -1,0 +1,9 @@
+# CUPCase causal repair after native entrypoint closure
+
+The complete original source-loaded DataFlowEvalTool.run_eval path succeeded in run 43645404107 on 5010 affected rows and the 14042-row MMLU all/test control. Constant A receives 3562/3562 on CUPCase with no clinical question in any captured request; the same serving program receives 3222/14042 on MMLU. Freeze this correction protocol before running the repaired native path.
+
+For all 3562 CUPCase rows, preserve the exact source case, gold diagnosis and four option strings. Add a neutral choices list obtained by shuffling those same strings with random.Random(20261114), the same seeded reference shuffle already reported in the initial experiment. Point the native choices mapping and parser at that list. Replace only the unresolved source placeholder `{clean_case_presentation}` in the gallery prompt with the generator's canonical `{question}` placeholder, preserving all remaining prompt text. No options, answers or question content may be added, removed or rewritten.
+
+Run the exact same complete native entry point, storage, generator, evaluator, rescorer, MetricRunner and report score selector with constant A and B. The previously calculated structural prediction is A=905/3562 and B=882/3562; native scoring may reject that prediction and must be recorded unchanged. This is a repaired evaluation adapter, not another original upstream score. Test that every captured request contains its own exact clinical case and every original source field remains byte-equivalent after canonical JSON serialization.
+
+This correction demonstrates the answer-position information path. A constant program cannot measure the incremental capability effect of restoring the case text; that needs real inference and must not be claimed from this experiment. No model/API calls, no human labels, no manuscript changes.
