@@ -1,0 +1,31 @@
+{
+  "experiment": "Third-evaluator native request contract transfer",
+  "created_at": "2026-11-14T06:01:40.802Z",
+  "base_research_commit": "0a736fe14dede6d6767e5f2832388a4de95fb812",
+  "engine": "EleutherAI/lm-evaluation-harness",
+  "engine_revision": "d6de81643928d653435c431bae19945d41d32520",
+  "source_scope": "Execute exact ConfigurableTask doc_to_text, doc_to_choice, doc_to_target and construct_requests methods plus native Instance under an explicit AST dependency scaffold. Native Jinja apply_template and task YAML/defaults are captured. No full harness dataset loader, fewshot driver, tokenizer, model, likelihood scoring or metric execution is claimed.",
+  "tasks": [
+    "arc_challenge",
+    "openbookqa"
+  ],
+  "source_split": "Previously captured official test splits; prior One-Eval source observations are known. New evaluator methods and their request outputs have not yet been applied to this sample.",
+  "selection": "Per source split, sort full captured source rows by SHA256 of 'harness-transfer-v1|' plus canonical UTF8 JSON(sort_keys=True,ensure_ascii=False,separators comma/colon); tie by source row index. Select first100, retain acquisition/schema exceptions without replacement.",
+  "oracle": "Independent lookup answerKey in choices.label gives gold index and choices.text gives the complete ordered alternative set. Compare native target index, choice order and complete per-option context/continuation requests. Native likelihood options occur in continuations, not necessarily in the common context.",
+  "conditions": {
+    "native": "Use doc_to_text as zero-shot context and exact construct_requests",
+    "benign_context_spacing": "Append two newlines to the context before exact request construction; source question/options preserved",
+    "drop_continuation": "Drop first non-gold request but retain original adapter record",
+    "replace_continuation": "Replace first non-gold request continuation with a unique nonce but retain original adapter record",
+    "omit_question_context": "Replace every actual request context by a nonce while retaining original adapter record"
+  },
+  "wire_guard": "Check actual request count, ordered continuation strings with native target delimiter, expected context equality and full source question containment. Detect stale choice/prompt metadata at the request boundary. Local counting backend only.",
+  "v2_scope": "Apply byte-frozen v2 to adapter record, separately report raw wire checks. The600 wire counterexamples intentionally test stale adapter metadata outside v2 trust assumptions; do not describe them as native engine bugs.",
+  "v1_sha256": "d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e",
+  "v2_sha256": "ced1e14f65213bc64f124a82f52f8c3a6d98b6b068026e8a0b486e8ad15228cf",
+  "provider_calls": 0,
+  "source_units": 200,
+  "planned_conditions": 5,
+  "changes_after_outcomes": "Do not modify frozen checker or source methods to change observed outcomes. Report limitations and failures as found.",
+  "interpretation": "Cross-evaluator transfer on reused known source records with an independently specified request oracle; not blind unseen-data generalization, new prevalence evidence, full engine execution, or external impact."
+}
