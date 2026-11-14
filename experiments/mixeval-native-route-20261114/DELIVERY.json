@@ -1,0 +1,53 @@
+{
+  "scientific_commit": "2637c3d18cc9dd5f8005f1f6385dfd6a3862c603",
+  "native_protocol_commit": "0e2616f099b5f5defb395f3d545b3736c23b063a",
+  "provider_protocol_commit": "af6a19b7a39643cc57d6dcf4fb1e7e9a1be319b6",
+  "provider_analysis_commit": "38f2b3d556e0d5376cf14dfcb7e2b10db7f85075",
+  "provider_launch_commit": "676f3b618948253a9ff4f01f400e8ab1a2971a13",
+  "provider_run_id": 43606982014,
+  "attempt": 1,
+  "new_model_requests": 80,
+  "complete": 69,
+  "incomplete": 11,
+  "study_archive": {
+    "name": "Epistemics_MixEval_integracao_e_geracao_emparelhada_20261114.zip",
+    "bytes": 4527058,
+    "sha256": "3074bdac21c06028ff134bd1570ed63d19179c5ae638b0e34849e6f479d43919",
+    "files": 284,
+    "library_file_id": "libfile_fde3_f-b558f8b1cabc81919bfe5335e161ce88_198492b795908191b811098f9e84ee4a",
+    "version": 0,
+    "save_status": "succeeded"
+  },
+  "pdf": {
+    "filename": "Epistemics_Contract_Audit_Working_Draft_20261114.pdf",
+    "library_file_id": "libfile_fde3_f-a76d9b19be288191a854f8f165586de6_198492b795908191b811098f9e84ee4a",
+    "replacement_input_version": 3,
+    "revision": "1.4",
+    "preupload_bytes": 100846,
+    "preupload_sha256": "e3e190fda49f4146bca8ded1dba8a09e5e3ba5903fb487867f37840aee28f445",
+    "save_version_receipt": "Exact successful versions recorded in delivery receipt/continuation prompt after guarded batch replacement.",
+    "version": 4,
+    "save_status": "succeeded"
+  },
+  "source_zip": {
+    "filename": "Epistemics_Manuscript_v1_e_evidencia_20261114.zip",
+    "library_file_id": "libfile_fde3_f-f50f5bc8b29c8191af8d18de82eb6222_198492b795908191b811098f9e84ee4a",
+    "replacement_input_version": 3,
+    "revision": "1.4",
+    "preupload_bytes": 223980,
+    "preupload_sha256": "748f0e301995772f015b9c13ab594be48e41f29df672dab13e38d13efd0ec3ce",
+    "save_version_receipt": "Exact successful versions recorded in delivery receipt/continuation prompt after guarded batch replacement.",
+    "version": 4,
+    "save_status": "succeeded"
+  },
+  "checkpoint": {
+    "library_file_id": "libfile_fde3_f-addcdc7b706c8191af0975cf80313ef9_198492b795908191b811098f9e84ee4a",
+    "version": 16,
+    "save_status": "succeeded"
+  },
+  "scientific_verification": "PASS independent80requestpipeline/ledger/terminal/source/commonrulebounds",
+  "native_verification": "PASS_WITH_PROVENANCE_ERRATUM;49reusedoutputs10guards",
+  "paper": "v1.4,15claims,8mainpages,13totalpages;source/numeric/visual/bounds/fonts PASS",
+  "portable_study_zip_verification": "PASS two independentverifiers in freshextracted directory; no inference",
+  "private_only": true
+}
