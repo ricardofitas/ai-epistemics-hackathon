@@ -1,0 +1,7 @@
+# External validation of response-format effects
+
+The registered study measures task-format sensitivity on SQuAD reading comprehension and TabMWP table arithmetic, with source annotations from the original authors. The private capture run is identified in RUN.json. Its eight per-wave artifacts contain every available terminal response, attempt ledger and eligibility decision. The summary artifact includes all 3,200 prespecified slots and a prospective model-selection transfer assessment.
+
+Reproduce the frozen design with `python verify_offline.py`. Extract the wave artifacts under `capture/`, retaining each `s<index>-front` or `s<index>-back` folder, then run `python aggregate.py`. For re-derivation, supply original source blobs to design.py under the names in SOURCE_PINS; `mixbase64` denotes the gzip bytes of the earlier pool despite the historical cache filename. Dependencies for capture are retained in the execution repository at the preregistration commit. Analysis uses Python's standard library.
+
+SQuAD 1.1 is by Rajpurkar, Zhang, Lopyrev and Liang, from [SQuAD Explorer](https://rajpurkar.github.io/SQuAD-explorer/); sampled questions and contexts are subject to [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). TabMWP is by Lu et al., from [PromptPG](https://github.com/lupantech/PromptPG); original license in TABMWP_LICENSE.md. Study-generated request variants combine source texts with prompts documented in PROTOCOL.md.

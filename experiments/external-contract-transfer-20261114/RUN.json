@@ -1,0 +1,19 @@
+{
+  "protocol_commit": "708db81a40d3ad05809067a8553308f73e4d0805",
+  "generation_commit": "1f96cdbf58c4e4d8b7b3c9530a2ffa637390c2c6",
+  "remote_repo": "ricardofitas/swarm-adaption-hackathon",
+  "run_id": 43624040280,
+  "url": "https://github.com/ricardofitas/swarm-adaption-hackathon/actions/runs/43624040280",
+  "status_at_registration": "workflow preflight passed; first capture step running",
+  "primary_model_calls_planned": 3200,
+  "distinct_external_sources": 200,
+  "source_counts": {
+    "SQuAD_v1_1_dev": 100,
+    "TabMWP_test1k": 100
+  },
+  "source_and_manifest_receipt": "design_receipt.json",
+  "primary_effect": "choice_clear minus choice_none, paired on each held-out question",
+  "decision": "Select using SQuAD, assess held-out decision using TabMWP clean; include every admissible winner",
+  "complementary_to": "Native One-Eval provider integration in separate run 43620987144",
+  "finances": "Dedicated funded inference credits; 27.342 platform credits at full output caps before rejected requests per published tariff and conservative input estimate. Account USD equivalence unverified."
+}
