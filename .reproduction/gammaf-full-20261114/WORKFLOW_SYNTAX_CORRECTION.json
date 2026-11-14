@@ -1,0 +1,9 @@
+{
+  "failed_run": 43615909285,
+  "jobs_executed": 0,
+  "source_download_attempts": 0,
+  "model_calls": 0,
+  "reason": "Unquoted colon in plain YAML run scalar for --only-binary=:all:",
+  "correction": "Folded run scalar; YAML parse PASS; exactcaps/science unchanged",
+  "corrected_protocol_sha256": "d18fec1a0521fcc128179272d2ba90a1c1b60eab8e7f9b1cfcb55143e45c84b3"
+}
