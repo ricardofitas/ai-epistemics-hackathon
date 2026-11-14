@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-11-14T23:58:35.116358+00:00",
+  "artifacts": [
+    {
+      "id": 14137518822,
+      "sha256": "eb18b401f553fcf9a8542c73a6ecfcfcf2c7e8004883e66ce8867cf5e72d37b9",
+      "run": 43655191625
+    },
+    {
+      "id": 14137354329,
+      "sha256": "e55450fc0d5a334794b2fe54604d9979670d164cd185b95cc583f21a7957d4a4",
+      "run": 43655344258
+    }
+  ],
+  "offline_reproduction": "PASS fresh temporary directory, no network or model calls",
+  "final_analyzer_sha256": "0e67309129fe468508d8fb6c40de5c3882b4d9afb2b019d9c961160b748c4ecb",
+  "local_extraction_note": "Initial verifier payload was opened as gzip and rejected; receipt declares tar.xz, auto-detected and hash-authenticated extraction then succeeded. Original bytes unchanged; no experiment failure inferred."
+}
