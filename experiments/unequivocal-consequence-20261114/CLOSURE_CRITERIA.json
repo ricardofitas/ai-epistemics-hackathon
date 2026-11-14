@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-14",
+  "status": "RETROSPECTIVE_VERIFICATION_CRITERIA",
+  "scope": "Existing benchmarks; no new model or judge calls and no manuscript edits",
+  "criteria": [
+    {
+      "id": "C1",
+      "requirement": "Pin original source records, references, parser, evaluator and captured outputs; verify source identities."
+    },
+    {
+      "id": "C2",
+      "requirement": "Demonstrate exactly what changed at the executable boundary; source-only/AST/fixture/ordinary imports/full entrypoint separated."
+    },
+    {
+      "id": "C3",
+      "requirement": "For measurement consequence keep generated output bytes fixed and change only the faulty interpretation; retain the original parser where possible."
+    },
+    {
+      "id": "C4",
+      "requirement": "Quantify a conclusion affected, including content-blind baseline comparisons or oracle impossibility, not merely an alert."
+    },
+    {
+      "id": "C5",
+      "requirement": "Retain incomplete outputs as unknown; check healthy controls and supported configurations; do not label displayed zero with zero valid references as model inaccuracy."
+    }
+  ],
+  "exposure": "Existing scores and candidate failures already known. This is not a new preregistered discovery.",
+  "not_required": "A ranking reversal between published headline methods is not necessary for a local causal consequence.",
+  "not_established_automatically": "Novelty, external published leaderboard impact, or superiority to GAMMAF."
+}
