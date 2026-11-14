@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-14",
+  "experiment": "Frozen paired WinoGrande prompt and reference audit",
+  "earlier_protocol_commit": "ec1d2b01799b32553b616da0b80120ded97ad57c",
+  "planned_requests": 200,
+  "manifest_uncompressed_sha256": "89d9901c13687ee38ca5bae42ac05891e127f7f42859987c8f47b1e620a8a3c4",
+  "cases_compressed_sha256": "4fbad85006b795f502eb1d646f8828b644eb8270455763420439a564109340ba",
+  "native_oneeval": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "transport_sha256": "c280811c5f685cdc5b254d5097946835428cd87de6ea58218de1e2cad537fe5e",
+  "provider_policy": {
+    "attempts_per_request": 1,
+    "concurrency": 1,
+    "minimum_start_interval_seconds": 5,
+    "socket_timeout_seconds": 120,
+    "retry": false
+  },
+  "execution_branch": "ricardo/wino-paired-20261114",
+  "notes": "The question selection, exact prompt bodies, models, order and 4096-token cap are unchanged from the prior frozen manifest. Execution settings and capture checkpoints are fixed before provider calls."
+}

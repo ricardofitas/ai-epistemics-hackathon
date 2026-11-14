@@ -1,0 +1,22 @@
+{
+  "status": "prepared, not executed",
+  "model_inference_calls": 0,
+  "planned_requests": 200,
+  "models": [
+    "gemma-4-31b-it",
+    "qwen3.8-27b"
+  ],
+  "design": "50 WinoGrande labelled validation items. 15 groups contribute two opposite-gold rows with identical native visible input. 20 singleton groups contribute 10 items per label. Exclude all rows sharing a native prompt with the earlier pilot. Sample by salted hash.",
+  "inferential_scope": "Prespecified diagnostic strata. The sample deliberately enriches collisions. Report each stratum and model separately. It cannot estimate deployment prevalence or corpus-wide accuracy loss.",
+  "intervention": "The same item and model receive the exact captured native wire and a direct source-bound rendering. Option order, requested output format and generation settings are held fixed. The repaired renderer also removes unresolved template braces. No claim that its effects isolate one individual formatting change.",
+  "primary": "Within each model and each stratum, paired difference in source-correct accuracy between rendered conditions. Identify rows by source_row, not request position. Report discordant counts, counts scoring zero, and a paired 95% bootstrap interval resampling prompt groups within stratum (10000 draws, seed 20261113).",
+  "secondary": "Replay identical captured outputs through the shipped and source-correct reference routes. Within a fixed output set, inspect model-versus-constant ordering, scoring coverage, and any change between the two models; report ties. The question-level response and score must remain linked.",
+  "missing": "Keep every planned call in the denominator. Report known-correct and best/worst bounds for incomplete or unparseable responses, including bounds on paired differences. Group bootstrap intervals are conditional on the observed scoring convention; display sensitivity bounds alongside them.",
+  "decision": "An independently attributable real evaluation with a materially changed conclusion advances the external-impact claim. This controlled panel can establish consequences and remedy under the frozen protocol. A null or ambiguous result remains in the report.",
+  "questions": 50,
+  "paired_collision_groups": 15,
+  "singleton_controls": 20,
+  "pilot_wino_rows_excluded": 12,
+  "manifest_uncompressed_sha256": "89d9901c13687ee38ca5bae42ac05891e127f7f42859987c8f47b1e620a8a3c4",
+  "cases_compressed_sha256": "4fbad85006b795f502eb1d646f8828b644eb8270455763420439a564109340ba"
+}

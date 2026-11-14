@@ -1,0 +1,76 @@
+name: Frozen WinoGrande paired Adaption trial
+on:
+  push:
+    branches: [ricardo/wino-paired-20261114]
+    paths: [experiments/wino-paired-20261114/LAUNCH.json]
+permissions:
+  contents: read
+concurrency:
+  group: wino-paired-20261114
+  cancel-in-progress: false
+jobs:
+  paired:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 95
+    defaults:
+      run:
+        working-directory: experiments/wino-paired-20261114
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: experiments/wino-paired-20261114
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.11'
+      - name: Verify the frozen 200-request manifest
+        run: python execute_paired.py preflight
+      - name: Check authenticated catalogue and exact model availability
+        env:
+          ADAPTION_API_KEY: ${{ secrets.ADAPTION_API_KEY }}
+        run: python execute_paired.py catalogue
+      - name: Execute requests 1 to 50
+        env:
+          ADAPTION_API_KEY: ${{ secrets.ADAPTION_API_KEY }}
+        run: python execute_paired.py run --start 0 --end 50
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: wino-paired-${{ github.run_id }}-checkpoint-50
+          path: experiments/wino-paired-20261114
+          retention-days: 90
+      - name: Execute requests 51 to 100
+        env:
+          ADAPTION_API_KEY: ${{ secrets.ADAPTION_API_KEY }}
+        run: python execute_paired.py run --start 50 --end 100
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: wino-paired-${{ github.run_id }}-checkpoint-100
+          path: experiments/wino-paired-20261114
+          retention-days: 90
+      - name: Execute requests 101 to 150
+        env:
+          ADAPTION_API_KEY: ${{ secrets.ADAPTION_API_KEY }}
+        run: python execute_paired.py run --start 100 --end 150
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: wino-paired-${{ github.run_id }}-checkpoint-150
+          path: experiments/wino-paired-20261114
+          retention-days: 90
+      - name: Execute requests 151 to 200
+        env:
+          ADAPTION_API_KEY: ${{ secrets.ADAPTION_API_KEY }}
+        run: python execute_paired.py run --start 150 --end 200
+      - name: Scan captured artifacts before export
+        id: final_scan
+        if: always()
+        env:
+          ADAPTION_API_KEY: ${{ secrets.ADAPTION_API_KEY }}
+        run: python execute_paired.py finalize
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always() && steps.final_scan.outputs.safe == 'true'
+        with:
+          name: wino-paired-${{ github.run_id }}-final
+          path: experiments/wino-paired-20261114
+          retention-days: 90
+          if-no-files-found: error
