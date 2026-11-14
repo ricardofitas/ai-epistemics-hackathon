@@ -1,0 +1,95 @@
+{
+  "attempts": 207,
+  "http_429": 15,
+  "maximum_reservation_including_retries": 4.851558552,
+  "planned": 192,
+  "provider_cost": 0.45741413347999976,
+  "results": {
+    "deepseek-v4-flash": {
+      "correct": {
+        "complete": 24,
+        "factually_correct": 0,
+        "n": 24,
+        "says_option": 0
+      },
+      "wrong": {
+        "complete": 21,
+        "factually_correct": 15,
+        "n": 24,
+        "says_option": 0,
+        "unknown": 3
+      }
+    },
+    "gemma-4-31b-it": {
+      "correct": {
+        "complete": 24,
+        "factually_correct": 0,
+        "n": 24,
+        "says_option": 0
+      },
+      "wrong": {
+        "complete": 24,
+        "factually_correct": 6,
+        "n": 24,
+        "says_option": 0
+      }
+    },
+    "glm-5.2": {
+      "correct": {
+        "complete": 24,
+        "factually_correct": 1,
+        "n": 24,
+        "says_option": 1
+      },
+      "wrong": {
+        "complete": 15,
+        "factually_correct": 5,
+        "n": 24,
+        "says_option": 0,
+        "unknown": 9
+      }
+    },
+    "qwen3.8-27b": {
+      "correct": {
+        "complete": 24,
+        "factually_correct": 0,
+        "n": 24,
+        "says_option": 0
+      },
+      "wrong": {
+        "complete": 22,
+        "factually_correct": 4,
+        "n": 24,
+        "says_option": 0,
+        "unknown": 2
+      }
+    }
+  },
+  "source_indices": [
+    151,
+    153,
+    155,
+    157,
+    159,
+    161,
+    163,
+    165,
+    167,
+    169,
+    171,
+    173,
+    175,
+    177,
+    179,
+    181,
+    183,
+    185,
+    187,
+    189,
+    191,
+    193,
+    197,
+    199
+  ],
+  "terminal_objects": 192
+}
