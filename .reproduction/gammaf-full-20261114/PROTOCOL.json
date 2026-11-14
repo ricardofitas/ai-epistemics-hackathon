@@ -1,0 +1,43 @@
+{
+  "study": "GAMMAF pinned public-source full offline reproduction",
+  "status": "PREPARED_NOT_LAUNCHED",
+  "base_commit": "d4419f160252adee3d639df9ea23cd1600277c32",
+  "execution_branch": "ricardo/gammaf-full-reproduction-20261114",
+  "upstream_repository": "pmateo-uc3m/GAMMAF",
+  "upstream_commit": "53be3249ebfa631d8e960c9fb1c931d526654697",
+  "source_files": 28,
+  "source_bytes": 111232152,
+  "sources_manifest_sha256": "d6392c6aa3b5aab59d8169616aeccc17d77ccbfec23086df3bb11c54a32f0984",
+  "original_results_sha256": "774fc5f7d6ad0dd2e1412a881882362db3f861774181d955b9adea0294a776b1",
+  "terminal_projection_sha256": "107aef0ac18fa1067b6a45c69d8d42caa857aa2131da14705762e82677b334bb",
+  "original_code_sha256": {
+    "gammaf_epistemic/__init__.py": "f3fd227100781fe92847472ca30dbfbbffa019c848b362f681fb7ee25ccf0ba7",
+    "gammaf_epistemic/data.py": "48e412dfdcc1e56f4813d2ef26f93e81f9ee0eabfadb81903b6041b5bbdc7a31",
+    "gammaf_epistemic/gammaf_clean.py": "29b8e31664cbd0f498c73d9e0fb4d6720d82f4d86775c5180665dbe459fd589c",
+    "gammaf_epistemic/audit_proofs.py": "fafb5f29073328c3849bdfe3d16f7b415269eb1722ae214e4d9e723e8b3be5a0",
+    "gammaf_epistemic/epistemic_guard.py": "7217286caec485e7d78baab76359a9ba0f2c605b89874d76e8c98f4610257093",
+    "gammaf_epistemic/stats_eval.py": "f7bd0d857b7549997af74bf494f8c98c6b039c67fff20a30aad69b7d90b0fc5c",
+    "scripts/run_hackathon_experiments.py": "625781452adcf124cad83d18760a9ec1d021db860c41e96422c480ded6056f5a",
+    "tests/conftest.py": "670a3f7dfda7dde1623835de85cd9f0497702000f4df55019b33abf486b4ab4d",
+    "tests/test_audit_proofs.py": "00f6748cc5309703915b8c31f2599173e1ab550e9f1b9d843acdc665cea3610a",
+    "tests/test_gammaf_clean.py": "c7f358352d145effa02ac85d67a1b15464586d534f0b0e3e240b52809904d6ad",
+    "tests/test_epistemic_guard.py": "7a18055de5f92b0d360b1a5b07b6a3e6ec69ba6aa8f13f5577e54cef43bf1511"
+  },
+  "frozen_files": {
+    "run_reproduction.py": "bf65bff2037a813f31c5d8a1c0aa7743c6a9919419b429aa1ee16c50353ecc9c",
+    "test_bootstrap.py": "ad3000575da4ba5766801bfed9a495f3344aa9aa860cd383dcef0106427f08b9",
+    "requirements.txt": "82656b4d4e52418ed296581f79ade8622999394552b2eb74c5d73f61f8cfd0e7",
+    "shadow_population_accounting.patch": "66069733a17d2337a66bfda78a4b757eab2b3b2b90c693c3ad2eafe7e8580d77"
+  },
+  "execution_deadline_seconds": 900,
+  "maximum_attempts_per_source": 1,
+  "retries": 0,
+  "redirects": false,
+  "expected_tests": 38,
+  "new_model_calls": 0,
+  "new_judge_calls": 0,
+  "scope": "Pinned raw archive authentication, full38tests and fullunchanged offline runner after isolated aggregation-only patch. No live debates or modelgeneration. Original artifacts unchanged.",
+  "comparison": "Old clean/theory/guard core metrics expected unchanged. Shadow bypopulation/cell/classification unchanged; combined rate andmean corrected. Statisticalfloat equality separate due dependencyversions.",
+  "workflow_path": ".github/workflows/gammaf-full-reproduction-20261114.yml",
+  "workflow_sha256": "05bc9a5eed26a5e0ebe44e7e4e288d81fa3eb2912569e386909abf6dddf8fa57"
+}

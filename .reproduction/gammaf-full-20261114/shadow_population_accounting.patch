@@ -1,0 +1,217 @@
+--- a/gammaf_epistemic/audit_proofs.py
++++ b/gammaf_epistemic/audit_proofs.py
+@@ -499,21 +499,26 @@
+     control = [d for d in considered if d.is_control]
+     detector_hits = sum(1 for d in detector if d.key in contaminated)
+     control_hits = sum(1 for d in control if d.key in contaminated)
+-    detector_considered = [d for d in considered if not d.is_control]
+     return {
+         "require_delivered_failure": require_failure,
+         "debates_considered": len(considered),
+         "detector_debates": len(detector),
+         "control_debates": len(control),
+-        "events": len(events),
++        "events": len(events),  # compatibility: detector events only
+         "control_events": len(control_events),
++        "total_events": len(events) + len(control_events),
++        "detector_contaminated_debates": detector_hits,
++        "control_contaminated_debates": control_hits,
+         "contaminated_debates": len(contaminated),
+         "contamination_rate_percent": 100.0
+         * len(contaminated)
+-        / max(len(detector_considered), 1),
++        / max(len(considered), 1),
+         "detector_rate_percent": 100.0 * detector_hits / max(len(detector), 1),
+         "control_rate_percent": 100.0 * control_hits / max(len(control), 1),
+-        "mean_events_per_contaminated_debate": len(events) / max(len(contaminated), 1),
++        "mean_events_per_contaminated_debate": (len(events) + len(control_events))
++        / max(len(contaminated), 1),
++        "detector_mean_events_per_contaminated_debate": len(events) / max(detector_hits, 1),
++        "control_mean_events_per_contaminated_debate": len(control_events) / max(control_hits, 1),
+         "delivered_failures": len(failures),
+         "by_task": rates(by_task),
+         "by_graph": rates(by_graph),
+--- a/scripts/run_hackathon_experiments.py
++++ b/scripts/run_hackathon_experiments.py
+@@ -530,11 +530,11 @@
+     )
+     print(
+         f"detector debates: {summary['detector_rate_percent']:.2f}% "
+-        f"({summary['contaminated_debates']} debates, {summary['events']} events); "
++        f"({summary['detector_contaminated_debates']} debates, {summary['events']} events); "
+         f"disabled controls: {summary['control_rate_percent']:.2f}%"
+     )
+     print(
+-        f"delivered failures: {summary['delivered_failures']}; mean events per "
++        f"delivered failures: {summary['delivered_failures']}; mean events per combined "
+         f"contaminated debate: {summary['mean_events_per_contaminated_debate']:.2f}"
+     )
+     latex_table(
+--- a/tests/test_audit_proofs.py
++++ b/tests/test_audit_proofs.py
+@@ -115,5 +115,7 @@
+     assert 0.0 <= summary["detector_rate_percent"] <= 100.0
+     assert summary["control_rate_percent"] >= summary["detector_rate_percent"]
+     assert summary["by_task"]["GSM8K"]["contaminated"] == 0
+-    assert summary["events"] >= summary["contaminated_debates"]
++    assert summary["events"] >= summary["detector_contaminated_debates"]
++    assert summary["control_events"] >= summary["control_contaminated_debates"]
++    assert summary["total_events"] >= summary["contaminated_debates"]
+ 
+--- /dev/null
++++ b/tests/test_shadow_population_counts.py
+@@ -0,0 +1,87 @@
++"""Regression coverage for population consistency in shadow summaries."""
++from dataclasses import replace
++from types import SimpleNamespace
++from pathlib import Path
++import sys
++
++import pytest
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from gammaf_epistemic import Debate, Round
++from gammaf_epistemic import audit_proofs as audit
++
++
++def exposure(method='BlindGuard', item=1):
++    before=('A','A','A','A','A','B','B','B','A','A')
++    after=('B','B','B','B','B','B','A','A','A','A')
++    flags=(0,)*10
++    adjacency=tuple(tuple(int(i != j) for j in range(10)) for i in range(10))
++    return Debate(dataset='MMLU', method=method, item=item, graph='chain', gold='A',
++        votes=after, flags=flags, executed_rounds=2, published=0, actual=0,
++        all_answer='B', delivered='B', rounds=(Round(0,before,flags), Round(1,after,flags)),
++        adjacency=adjacency, insiders=(5,6,7), attack_target='B')
++
++
++def test_mixed_populations_do_not_produce_200_percent():
++    detector=exposure()
++    control=replace(detector, method='no_defense_baseline')
++    s=audit.shadow_summary([detector,control])
++    n=len(audit.shadow_events(detector))
++    assert n > 0
++    assert s['detector_contaminated_debates']==1
++    assert s['control_contaminated_debates']==1
++    assert s['contaminated_debates']==2
++    assert s['detector_rate_percent']==100
++    assert s['control_rate_percent']==100
++    assert s['contamination_rate_percent']==100
++    assert s['total_events']==2*n
++    assert s['mean_events_per_contaminated_debate']==n
++    assert s['detector_mean_events_per_contaminated_debate']==n
++    assert s['control_mean_events_per_contaminated_debate']==n
++
++
++@pytest.mark.parametrize('method',['BlindGuard','no_defense_baseline'])
++def test_single_population_uses_its_own_denominator(method):
++    d=exposure(method)
++    s=audit.shadow_summary([d])
++    assert s['contamination_rate_percent']==100
++    assert s['mean_events_per_contaminated_debate']==len(audit.shadow_events(d))
++    assert s['detector_contaminated_debates']+s['control_contaminated_debates']==1
++
++
++def test_empty_population_returns_zero_rates():
++    s=audit.shadow_summary([])
++    for k in ('contamination_rate_percent','detector_rate_percent','control_rate_percent',
++              'mean_events_per_contaminated_debate','detector_mean_events_per_contaminated_debate',
++              'control_mean_events_per_contaminated_debate'):
++        assert s[k]==0
++
++
++def test_saved_population_totals_have_consistent_rates(monkeypatch):
++    # Test aggregation with the saved study's populations; this does not claim
++    # to regenerate event classifications without the public raw trajectories.
++    detector_count, control_count=5518,1341
++    d=exposure()
++    debates=[replace(d,item=i) for i in range(detector_count)]
++    debates += [replace(d,item=i,method='no_defense_baseline') for i in range(control_count)]
++    def fixed_events(debate,**kwargs):
++        i=debate.item
++        if debate.is_control:
++            count=4+int(i<41) if i<323 else 0
++        else:
++            count=2+int(i<125) if i<217 else 0
++        return [audit.ShadowEvent(debate.key, 0, 5, 1)]*count
++    monkeypatch.setattr(audit,'shadow_events',fixed_events)
++    monkeypatch.setattr(audit,'score_debate',lambda _:SimpleNamespace(g_del=False))
++    s=audit.shadow_summary(debates)
++    assert s['detector_contaminated_debates']==217
++    assert s['control_contaminated_debates']==323
++    assert s['events']==559
++    assert s['control_events']==1333
++    assert s['total_events']==1892
++    assert s['detector_rate_percent']==pytest.approx(3.932584269662921)
++    assert s['control_rate_percent']==pytest.approx(24.086502609992543)
++    assert s['contamination_rate_percent']==pytest.approx(7.872867764980318)
++    assert s['mean_events_per_contaminated_debate']==pytest.approx(1892/540)
++    assert s['detector_mean_events_per_contaminated_debate']==pytest.approx(559/217)
++    assert s['control_mean_events_per_contaminated_debate']==pytest.approx(1333/323)
+--- /dev/null
++++ b/PATCH_NOTES.txt
+@@ -0,0 +1,64 @@
++Proposed isolated correction: shadow population accounting
++
++Base: ricardofitas/ai-epistemics-hackathon, feat/gammaf-epistemic-audit,
++d4419f160252adee3d639df9ea23cd1600277c32. This directory is a proposal;
++the teammate branch and its frozen artifacts have not been modified.
++
++Scope
++
++Keep existing events as detector-only and control_events as control-only.
++Add total_events, detector_contaminated_debates and control_contaminated_debates.
++Make contamination_rate_percent use combined hits / combined considered debates.
++Make the unqualified mean use combined events / combined affected debates.
++Expose explicit detector and control means. Correct the existing printed detector
++count to use detector hits. Preserve the frozen results.json and run.log verbatim.
++
++Expected values from the saved aggregate counts (not a new trajectory replay):
++
++detectors: 217 / 5518 = 3.9325842697 percent; 559 events / 217 affected = 2.5760368664
++controls: 323 / 1341 = 24.0865026100 percent; 1333 events / 323 affected = 4.1269349845
++combined: 540 / 6859 = 7.8728677650 percent; 1892 events / 540 affected = 3.5037037037
++
++The former global field divided 540 combined hits by 5518 detector debates.
++The former mean divided 559 detector events by 540 combined hits.
++The detector/control rates and per-task/per-topology rates already had coherent
++denominators; they are unchanged. This patch does not change classifications,
++terminal labels, EpistemicGuard inference or its leaderboard.
++
++Regression validation
++
++tests/test_shadow_population_counts.py covers a real two-debate exposure witness,
++detector-only and control-only populations, empty input, and a controlled event
++provider matching the archived population totals. The last test validates summary
++aggregation, not the original event classification. Five tests passed locally.
++
++Raw fixtures required for full archive tests
++
++The committed compact gamma_debates.jsonl.gz supports terminal-only replay, which
++independently matched all 11200 labels. Default load_debates(with_trajectories=True)
++also requires the 28 pinned per-task/per-method original JSON files under:
++
++swarmlab-gammaf/gammaf_handoff/_source/experiments-Information-Sciences/
++experiment1/results/summary-exp1-scores/<TASK>/<METHOD>.json
++
++They are absent from the branch Git tree. gamma_sources.json pins public repository
++pmateo-uc3m/GAMMAF at 53be3249ebfa631d8e960c9fb1c931d526654697, exact paths,
++byte counts and Git blobs. The older handoff README documents running its run.py
++with --from-source (NumPy + public network; approximately 122 MB) to populate the
++ignored cache. The new runner should document this setup before full reproduction.
++Without those files the original suite had 19 passes and 14 setup errors for
++missing trajectories. None of those errors was counted as a passed archive test.
++
++phase_three_sweep
++
++No path or reference named phase_three_sweep occurs in the complete 695-entry
++tree at d4419f1, nor in the inspected new modules/runner. Impact on another
++commit's phase_three_sweep cannot be determined without its exact source.
++
++Reproduction of the proposed focused tests
++
++With NumPy and pytest installed, from this directory:
++python3 -m pytest -q tests/test_shadow_population_counts.py
++
++The archived fixed code/results remain under ../snapshot. The unified patch
++contains only changed files plus this note and the new regression file.
