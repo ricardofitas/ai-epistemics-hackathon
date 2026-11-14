@@ -1,0 +1,51 @@
+{
+  "stage": "Prospective task-type preservation on two MixEval splits",
+  "base_research_commit": "1e561b55f267aebb3be858d2cef3320723a4aa5e",
+  "framework_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "source_revision": "66a05ec3821a2b5089ed1e32a5d65ab6ecdbf906",
+  "source_repository": "MixEval/MixEval",
+  "universe": [
+    "MixEval/free_form",
+    "MixEval/multiple_choice"
+  ],
+  "paths": {
+    "free_form": "data/mixeval-jsonl/mixeval/free-form.jsonl",
+    "multiple_choice": "data/mixeval-jsonl/mixeval/multiple-choice.jsonl"
+  },
+  "sample": "Each full split sorted bySHA256(UTF8 canonicalJSON sort_keys=True ensure_ascii=False separators comma/colon); tie originalindex; firstmin(100,N). No substitutions.",
+  "hypothesis": "Structural-field availability does not preserve task type: the free_form split is routed through choice generation and remains instruction-incompatible after question-symbol binding alone. Matching task/output contract removes that mismatch. The multiple_choice split is a same-schema positive control after binding; allow counterexamples.",
+  "conditions": [
+    "native",
+    "bind_only",
+    "bind_and_type"
+  ],
+  "repair": "bind_only substitutes mapped {prompt} to canonical {question}. bind_and_type additionally changes free_form route to key2_q_ma, removes {choices_text}, and replaces the fixed MC instruction with Answer the question in free text. Multiple-choice config remains key3_q_choices_a; split override is explicit diagnosticcontrol.",
+  "reference_semantics": "free-form target list holds accepted text references; single-choice target list contains zero-based option index. Do not turn free-form targets into answer positions. Record unknown/ambiguous types without removing selected rows.",
+  "measures": [
+    "native preprocessing success",
+    "metadata route/parser self consistency",
+    "official problem_type versus configuredroute",
+    "native question/context nonce dependence",
+    "effective request MCinstruction",
+    "source options preservation and target availability"
+  ],
+  "predictions": {
+    "free_form_native": "type mismatch and MC instruction",
+    "free_form_bind_only": "question binding repaired but type mismatch/MC instruction retained",
+    "free_form_bind_and_type": "bound question with freeformroute and freeforminstruction",
+    "multiple_choice_bind_only": "question binding repaired and options preserved; record reference anomalies if any"
+  },
+  "unknown_policy": "Preserve exceptions, nonempty/null values, unsupported references and every selectedrow. No score or accuracy is computed; no model calls. Fix no scientific implementation after observing outcomes.",
+  "exposure": "Gallery metadata and official documents inspected before protocol; one viewer/search example may have been displayed. No full source rows acquired in this stage. Earlier project used overlapping constituent benchmarks; no claim of new independent semantic question families or globally blind exposure.",
+  "upstream_hashes": {
+    "core_prompt.py": "ad23e8f178a4b75d662dd85035e4835fdb74bea2ac75507ccd68510b0a0d064f",
+    "LICENSE_ONE_EVAL": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "dataflow_eval_tool.py": "640884f634a3009784a8698d4f4fd05a0485f991dad395b3c31fd630c6cf427b",
+    "core_text.py": "5df1bf04fceea685ebf28bf4c398303cda49e46af8d87e769db0d04ca1c5600a",
+    "LICENSE_DATAFLOW": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "bench_answer_generator.py": "9b3b29c44c60d71510f88b0f19e964339806fc29bd0fd91ff16c97072219e09a"
+  },
+  "gallery_entry_sha256": "2d19b8b5c47981e4c24ff07c2ca880f95a7e5935d65995b9b8fb982895fce50b",
+  "scope": "Exact native data-only methods under AST dependency scaffold and local recording sink; not native installed engine, models, tokenizer, official grading or external impact.",
+  "model_calls": 0
+}
