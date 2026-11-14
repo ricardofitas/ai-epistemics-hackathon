@@ -1,5 +1,7 @@
 # MixEval: final answers, non-final information and rule credit
 
+RECONCILIATION: a parallel direct stage completed the SAME69-output review while this work ran. The canonical manuscript is its v1.5/PDF-sourceZIPversion5. Preserve its more conservative Gemma final-support bounds+40..75pp, not this supplement's local+40..70pp, because one perique response remains semantically uncertain. Qwen+55..80pp and the9/15Gemma diagnostic counts agree. Read RECONCILIATION.json first. These overlapping reviews are not new independent experiments; scheduled manuscript candidate was NOT saved over the newer version.
+
 A post-generation, reference-grounded output audit of the already completed80request pilot. No generation was resumed or retried; no new provider or judge API calls were made. Two assistant agents independently annotated69complete responses under a fixed rubric committed before adjudication (eee9572f4a45bd9479ccbe6dd7d9cd0c516454c5). Eleven incomplete captures remain unknown. This is a new interpretation audit on existing responses, not a new source cohort or an independent human/default-judge evaluation.
 
 ## What changed scientifically

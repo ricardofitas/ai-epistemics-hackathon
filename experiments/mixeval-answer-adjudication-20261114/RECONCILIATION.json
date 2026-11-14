@@ -1,0 +1,62 @@
+{
+  "status": "RECONCILED_WITH_NEWER_DIRECT_STAGE",
+  "scheduled_protocol_commit": "eee9572f4a45bd9479ccbe6dd7d9cd0c516454c5",
+  "scheduled_result_commit": "bb27e0d7a3a5b3fd9c901c406a067b882c94a875",
+  "direct_scientific_commit": "31ea79d5952afdc2f523b5f548d5228aba443765",
+  "direct_branch": "ricardo/mixeval-semantic-review-20261114",
+  "direct_archive": {
+    "library_file_id": "libfile_fde3_f-d4d3daea3e9881918a78e477a362b192_198492b795908191b811098f9e84ee4a",
+    "version": 0,
+    "sha256": "28442f2b722ac120cb7602a2d06a64f22b80423e15af962d3749432af5afa89c"
+  },
+  "canonical_manuscript": {
+    "version": "1.5",
+    "pdf_library_version": 5,
+    "source_zip_library_version": 5,
+    "source_precedence": "Newer direct stage preserved; candidate scheduled manuscript NOT saved over it.",
+    "claims": 16,
+    "main_pages": 8,
+    "total_pages": 14
+  },
+  "scope_overlap": "Both independently organized assistant reviews adjudicate SAME69complete outputs and11unknowns. They are not independent model experiments or question samples. Do not add counts or claim a new discovery from agreement.",
+  "endpoint_difference": "Scheduled nonfinal-support excludes selected final span. Direct content-support includes any output. Their numbers are not interchangeable.",
+  "single_material_final_label_sensitivity": {
+    "trial_id": "MXG-09-T-G",
+    "source_index": 1705,
+    "question": "What would a person normally do with perique?",
+    "target": [
+      "Smoke It",
+      "Smoke it"
+    ],
+    "response": "A person would normally use perique as a blending tobacco, adding a small amount to a mixture of other tobaccos to provide a spicy, pungent flavor and aroma.",
+    "scheduled_labels": [
+      "INCOMPATIBLE",
+      "INCOMPATIBLE"
+    ],
+    "direct_labels": [
+      "incorrect",
+      "uncertain"
+    ],
+    "interpretation": "Reference-incompatible explicit action versus uncertain equivalence. No further semantic tie-break was performed. Preserve all four labels and retain uncertainty for canonical interpretation.",
+    "scheduled_gemma_final_bounds_pp": [
+      40,
+      70
+    ],
+    "canonical_more_conservative_gemma_final_bounds_pp": [
+      40,
+      75
+    ],
+    "canonical_qwen_final_bounds_pp": [
+      55,
+      80
+    ]
+  },
+  "common_case_counts": {
+    "Gemma_rule_credit_with_symbolic_final": 9,
+    "Gemma_nonfinal_supported_symbolic_final": 15,
+    "each_model_binding_symbolic_finals": 16
+  },
+  "save_history": "Result packagev0saved. PDF/sourceZIP replacement guards4 rejected because direct stage savedversion5; refreshed both andcheckpoint17. No stale retry or overwrite. This supplement supersedes any claim that scheduled candidate was canonical.",
+  "new_provider_calls": 0,
+  "next_action": "Preserve canonical direct queue (prepared2x2ablation andteamreview). Human/separateauthorizedadjudication could resolve perique equivalence, but no more same-family reviews should be counted as independent validation."
+}
