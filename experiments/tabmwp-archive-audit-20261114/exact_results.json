@@ -1,0 +1,120 @@
+{
+  "changed_flags": 557,
+  "files": {
+    "results/t5/exp1_pretrained_unifiedqa_small.json": {
+      "changed_to_correct": 5,
+      "changed_to_wrong": 6,
+      "exact_first_then_abstain": 923,
+      "only_exact_override": 935,
+      "original": 936,
+      "total": 7686,
+      "unique_equivalent": 27,
+      "zero_rows": 57
+    },
+    "results/t5/exp2_pretrained_unifiedqa_base.json": {
+      "changed_to_correct": 4,
+      "changed_to_wrong": 4,
+      "exact_first_then_abstain": 1094,
+      "only_exact_override": 1119,
+      "original": 1119,
+      "total": 7686,
+      "unique_equivalent": 18,
+      "zero_rows": 99
+    },
+    "results/t5/exp3_pretrained_unifiedqa_large.json": {
+      "changed_to_correct": 0,
+      "changed_to_wrong": 0,
+      "exact_first_then_abstain": 1225,
+      "only_exact_override": 1227,
+      "original": 1227,
+      "total": 7686,
+      "unique_equivalent": 0,
+      "zero_rows": 6
+    },
+    "results/t5/exp4_small.json": {
+      "changed_to_correct": 0,
+      "changed_to_wrong": 0,
+      "exact_first_then_abstain": 2290,
+      "only_exact_override": 2290,
+      "original": 2290,
+      "total": 7686,
+      "unique_equivalent": 0,
+      "zero_rows": 3
+    },
+    "results/t5/exp5_base.json": {
+      "changed_to_correct": 0,
+      "changed_to_wrong": 0,
+      "exact_first_then_abstain": 3345,
+      "only_exact_override": 3345,
+      "original": 3345,
+      "total": 7686,
+      "unique_equivalent": 0,
+      "zero_rows": 2
+    },
+    "results/t5/exp6_large.json": {
+      "changed_to_correct": 0,
+      "changed_to_wrong": 0,
+      "exact_first_then_abstain": 4407,
+      "only_exact_override": 4408,
+      "original": 4408,
+      "total": 7686,
+      "unique_equivalent": 0,
+      "zero_rows": 2
+    },
+    "results/tapex/exp1_tapex-base.json": {
+      "changed_to_correct": 65,
+      "changed_to_wrong": 70,
+      "exact_first_then_abstain": 854,
+      "only_exact_override": 1204,
+      "original": 1209,
+      "total": 7686,
+      "unique_equivalent": 267,
+      "zero_rows": 1238
+    },
+    "results/tapex/exp2_tapex-base.json": {
+      "changed_to_correct": 6,
+      "changed_to_wrong": 0,
+      "exact_first_then_abstain": 3708,
+      "only_exact_override": 3716,
+      "original": 3710,
+      "total": 7686,
+      "unique_equivalent": 7,
+      "zero_rows": 37
+    },
+    "results/tapex/exp3_tapex-large.json": {
+      "changed_to_correct": 317,
+      "changed_to_wrong": 80,
+      "exact_first_then_abstain": 1630,
+      "only_exact_override": 1666,
+      "original": 1429,
+      "total": 7686,
+      "unique_equivalent": 573,
+      "zero_rows": 703
+    },
+    "results/tapex/exp4_tapex-large.json": {
+      "changed_to_correct": 0,
+      "changed_to_wrong": 0,
+      "exact_first_then_abstain": 4494,
+      "only_exact_override": 4498,
+      "original": 4498,
+      "total": 7686,
+      "unique_equivalent": 4,
+      "zero_rows": 25
+    }
+  },
+  "scope": "post-replay, third-party raw outputs; zero similarity only",
+  "strict_inversions": {
+    "exact_first_then_abstain": [
+      [
+        "results/t5/exp1_pretrained_unifiedqa_small.json",
+        "results/tapex/exp1_tapex-base.json"
+      ],
+      [
+        "results/t5/exp2_pretrained_unifiedqa_base.json",
+        "results/tapex/exp1_tapex-base.json"
+      ]
+    ],
+    "only_exact_override": []
+  },
+  "unique_source_ids_changed": 432
+}
