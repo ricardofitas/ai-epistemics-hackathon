@@ -18,7 +18,7 @@ assert sha(support.read_bytes())==json.loads((data/'PROTOCOL.json').read_text())
 with zipfile.ZipFile(support) as z:z.extractall(WORK)
 target=WORK/'holdout'
 shutil.copytree(data,target,dirs_exist_ok=True)
-sys.path.insert(0,str(target));sys.path.insert(0,str(BASE))
+sys.path.insert(0,str(BASE));sys.path.insert(0,str(target))
 import audit_holdout as native
 from choice_adapter import align_preserved_options
 assert sha((WORK/'oneeval_contract_checker_20261114/check_contract.py').read_bytes())==protocol['frozen_checker_sha256']
@@ -50,3 +50,4 @@ for disposition in dispositions:
  (OUT/'RESULTS.json').write_text(json.dumps(reports,indent=2,ensure_ascii=False)+'\n')
  print(name,result['status'],result.get('new_rows'),result.get('reviewed_checker',{}).get('failures'),flush=True)
 (OUT/'EXECUTION.json').write_text(json.dumps(dict(completed_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),provider_model_calls=0,source_acquisition_requests=0,python=sys.version,panels=len(reports),errors=sum(x['status']!='completed' for x in reports)),indent=2)+'\n')
+

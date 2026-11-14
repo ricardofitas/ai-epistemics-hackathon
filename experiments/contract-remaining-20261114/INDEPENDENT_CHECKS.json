@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "new_rows": 27346,
+  "previous_rows_excluded": 400,
+  "model_calls": 0,
+  "checks": [
+    {
+      "benchmark": "arc-challenge",
+      "new_rows": 1072,
+      "source_rows": 1172,
+      "disjoint_selection_verified": true,
+      "source_bytes_unchanged": true,
+      "independent_counts": {
+        "gold_absent_literal": 1072,
+        "options_not_preserved_after_trim": 1072,
+        "question_text_absent": 0,
+        "reviewed_reference_mismatch": 0,
+        "repaired_source_mismatch": 0
+      },
+      "raw_status": "FAIL",
+      "reviewed_status": "FAIL",
+      "reviewed_failures": {
+        "correct_choice_missing": 1072
+      },
+      "raw_false_alert_rows_removed": 0
+    },
+    {
+      "benchmark": "openbookqa",
+      "new_rows": 400,
+      "source_rows": 500,
+      "disjoint_selection_verified": true,
+      "source_bytes_unchanged": true,
+      "independent_counts": {
+        "gold_absent_literal": 400,
+        "options_not_preserved_after_trim": 400,
+        "question_text_absent": 400,
+        "reviewed_reference_mismatch": 0,
+        "repaired_source_mismatch": 0
+      },
+      "raw_status": "FAIL",
+      "reviewed_status": "FAIL",
+      "reviewed_failures": {
+        "question_not_bound": 400,
+        "correct_choice_missing": 400
+      },
+      "raw_false_alert_rows_removed": 0
+    },
+    {
+      "benchmark": "mmlu",
+      "new_rows": 13942,
+      "source_rows": 14042,
+      "disjoint_selection_verified": true,
+      "source_bytes_unchanged": true,
+      "independent_counts": {
+        "gold_absent_literal": 34,
+        "options_not_preserved_after_trim": 0,
+        "question_text_absent": 0,
+        "reviewed_reference_mismatch": 0,
+        "repaired_source_mismatch": 0
+      },
+      "raw_status": "FAIL",
+      "reviewed_status": "PASS",
+      "reviewed_failures": {},
+      "raw_false_alert_rows_removed": 34
+    },
+    {
+      "benchmark": "mmlu-pro",
+      "new_rows": 11932,
+      "source_rows": 12032,
+      "disjoint_selection_verified": true,
+      "source_bytes_unchanged": true,
+      "independent_counts": {
+        "gold_absent_literal": 135,
+        "options_not_preserved_after_trim": 0,
+        "question_text_absent": 0,
+        "reviewed_reference_mismatch": 0,
+        "repaired_source_mismatch": 0
+      },
+      "raw_status": "FAIL",
+      "reviewed_status": "PASS",
+      "reviewed_failures": {},
+      "raw_false_alert_rows_removed": 135
+    }
+  ],
+  "limits": "Verifies source binding and measured transformations on captured data; not model performance or external impact."
+}
