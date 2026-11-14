@@ -17,6 +17,9 @@ Outputs (in ``--out``)::
     Table_FalseCredit.tex     detector FPR/TPR and false-credit calibration
     Table_Shadow.tex          pre-exclusion contamination
     Table_Leaderboard.tex     head-to-head delivered accuracy
+    Table_Rollback.tex        epistemic rollback and rehabilitation ensemble
+    Table_OracleParadox.tex   Oracle Paradox by attack-validity slice
+    Table_OracleWithin.tex    oracle vs detector within each conversation set
     Table_Stats.tex           paired bootstrap and Wilcoxon/Holm
     fig_false_credit.png      false-credit rate vs detector FPR
     fig_leaderboard.png       held-out delivered accuracy
@@ -65,14 +68,26 @@ from gammaf_epistemic import (  # noqa: E402
     slices_of,
 )
 from gammaf_epistemic.audit_proofs import (  # noqa: E402
+    decompose_oracle_paradox,
     detector_profiles,
     false_credit_curve,
     monotonicity_check,
+    ORACLE_SLICES,
+    oracle_delivery,
+    oracle_flags,
+    oracle_slice,
     shadow_summary,
     theorem_statement,
     tie_free_credit,
 )
-from gammaf_epistemic.epistemic_guard import EpistemicGuard  # noqa: E402
+from gammaf_epistemic.epistemic_guard import (  # noqa: E402
+    EnsembleParams,
+    EpistemicGuard,
+    GuardData,
+    ensemble_result,
+    rollback_delivery,
+    tune_ensemble,
+)
 from gammaf_epistemic.stats_eval import (  # noqa: E402
     holm_table,
     paired_comparison,
@@ -82,7 +97,19 @@ from gammaf_epistemic.stats_eval import (  # noqa: E402
 
 GUARD_HARD = "EpistemicGuard-Hard"
 GUARD_SOFT = "EpistemicGuard-Soft"
+GUARD_ROLLBACK = "EpistemicGuard-Rollback"
+ORACLE_ROLLBACK = "Oracle-Rollback"
+GUARD_ENSEMBLE = "EpistemicGuard-Ensemble"
 NO_DETECTOR = "No detector"
+LEADERBOARD = [
+    *DETECTORS,
+    GUARD_HARD,
+    GUARD_SOFT,
+    GUARD_ROLLBACK,
+    ORACLE_ROLLBACK,
+    GUARD_ENSEMBLE,
+    NO_DETECTOR,
+]
 
 
 # --------------------------------------------------------------------------- #
@@ -266,52 +293,76 @@ def run_clean(debates, out: Path) -> dict:
 
     audit = counterfactual_audit(debates)
     cf_rows = []
-    for task in TASKS:
-        counter = audit["by_task"].get(task, {})
-        if not counter:
-            continue
+    for name, label in (
+        ("paper1_insider", "Paper 1 insider"),
+        ("exhaustive_option_space", "Exhaustive options"),
+    ):
+        universe = audit["universes"][name]
+        for task in TASKS:
+            counter = universe["by_task"].get(task, {})
+            if not counter:
+                continue
+            cf_rows.append(
+                [
+                    label,
+                    TASK_LABELS[task],
+                    counter.get("substitutions", 0),
+                    counter.get("g_del_changes", 0),
+                    counter.get("release_flips", 0),
+                    counter.get("debates_with_release_flip", 0),
+                    counter.get("debates_with_release_flip_prior_flagged", 0),
+                    "",
+                ]
+            )
+        totals_cf = universe["totals"]
         cf_rows.append(
             [
-                TASK_LABELS[task],
-                counter.get("substitutions", 0),
-                counter.get("g_del_changes", 0),
-                counter.get("release_flips", 0),
-                counter.get("debates_with_release_flip", 0),
-                counter.get("release_flips_prior_flagged", 0),
+                label,
+                "Total",
+                totals_cf.get("substitutions", 0),
+                totals_cf.get("g_del_changes", 0),
+                totals_cf.get("release_flips", 0),
+                totals_cf.get("debates_with_release_flip", 0),
+                totals_cf.get("debates_with_release_flip_prior_flagged", 0),
+                "yes" if name == "paper1_insider" and universe["matches_paper1_reference"] else "",
             ]
         )
-    totals_cf = audit["totals"]
-    cf_rows.append(
-        [
-            "Total",
-            totals_cf.get("substitutions", 0),
-            totals_cf.get("g_del_changes", 0),
-            totals_cf.get("release_flips", 0),
-            totals_cf.get("debates_with_release_flip", 0),
-            totals_cf.get("release_flips_prior_flagged", 0),
-        ]
-    )
+        cf_rows.append(["MIDRULE", "", "", "", "", "", "", ""])
+    cf_rows.pop()
     print_table(
-        "Counterfactual substitution invariance (replace one excluded vote)",
-        ["Task", "Substitutions", "g_del changes", "g_rel flips", "Debates flipped", "Prior-flag flips"],
+        "Counterfactual substitution invariance: Paper 1 universe vs exhaustive space",
+        ["Universe", "Task", "Substitutions", "g_del changes", "g_rel flips",
+         "Debates flipped", "Prior-round flags", "Matches P1"],
         cf_rows,
     )
+    paper1 = audit["universes"]["paper1_insider"]
     print(
-        "invariance g_del(v,f) == g_del(v',f) for v_U == v'_U: "
-        f"{audit['invariance_holds']}"
+        f"Paper 1 rule reproduces 33,025 / 121 / 89: "
+        f"{paper1['matches_paper1_reference']} "
+        f"({paper1['totals'].get('substitutions')} subs, "
+        f"{paper1['totals'].get('debates_with_release_flip')} flipped debates, "
+        f"{paper1['totals'].get('debates_with_release_flip_prior_flagged')} with the "
+        "insider flagged in the immediately preceding round)"
+    )
+    print(
+        "invariance g_del(v,f) == g_del(v',f) for v_U == v'_U in both universes: "
+        f"{audit['invariance_holds']} / "
+        f"{audit['universes']['exhaustive_option_space']['invariance_holds']}"
     )
     latex_table(
         out / "Table_Counterfactual.tex",
-        "Counterfactual substitution audit. Replacing an excluded insider vote never "
-        "changes the delivered answer or its grade, but it moves the released score.",
+        "Counterfactual substitution audit under both universes. Replacing an excluded "
+        "insider vote never changes the delivered answer or its grade, but it moves the "
+        "released score. The Paper 1 restricted universe is 33,025 substitutions over "
+        "excluded insiders; the exhaustive space is 142,478 replacements over all labels.",
         "tab:counterfactual",
-        ["Task", "Substitutions", "$g_{del}$ changes", "$g_{rel}$ flips",
-         "Debates flipped", "Prior-flag flips"],
+        ["Universe", "Task", "Substitutions", "$g_{del}$ chg", "$g_{rel}$ flips",
+         "Debates", "Prior-round", "P1"],
         cf_rows,
-        note="The audit enumerates every replacement over the task option space "
-        "(a superset of the 33,025 frozen substitutions; the reference flip counts "
-        "121/89 are recorded in results.json but were not reproduced by this space).",
-        col_spec="lrrrrr",
+        note="Prior-round counts substitutions whose insider was already flagged in the "
+        "immediately preceding executed round. Both universes leave $g_{del}$ invariant; "
+        "only the released score moves.",
+        col_spec="llrrrrrl",
     )
 
     counts = slice_counts(debates)
@@ -621,8 +672,8 @@ def _oracle_insider(debates: Sequence) -> float:
     return mean_percent(values)
 
 
-def run_guard(debates, out: Path, *, tune_fraction: float, seed: int, n_boot: int) -> dict:
-    print("\n=== 4. EpistemicGuard head-to-head ===")
+def prepare_guard(debates, *, tune_fraction: float, seed: int) -> dict:
+    """Tune both guard modes once and precompute every Task 2 arm."""
     detector_debates = [d for d in debates if not d.is_control]
     controls = [d for d in debates if d.is_control]
     tune_questions, held_questions = split_questions(
@@ -650,6 +701,90 @@ def run_guard(debates, out: Path, *, tune_fraction: float, seed: int, n_boot: in
     control_correct = {d.key: score_debate(d).g_del for d in controls}
     control_released = {d.key: score_debate(d).g_release for d in controls}
 
+    # -- Task 2: rollback arms and the rehabilitation ensemble ---------- #
+    hard_flags = hard["flags"]
+    rollback_correct: dict[tuple, bool] = {}
+    oracle_rollback_correct: dict[tuple, bool] = {}
+    rolled_votes = 0
+    oracle_rolled_votes = 0
+    for i, debate in enumerate(detector_debates):
+        delivery, _, links = rollback_delivery(debate, hard_flags[i])
+        rollback_correct[debate.key] = delivery.correct
+        rolled_votes += len(links)
+        oracle_health, _, oracle_links = rollback_delivery(debate, oracle_flags(debate))
+        oracle_rollback_correct[debate.key] = oracle_health.correct
+        oracle_rolled_votes += len(oracle_links)
+    ensemble_tuning = tune_ensemble(tune, guard)
+    ens_data = GuardData(detector_debates, guard.params.gamma)
+    ens_p = ens_data.suspicion(guard.params)
+    ensemble_correct: dict[tuple, bool] = {}
+    ensemble_flags_by_key: dict[tuple, tuple[int, ...]] = {}
+    for row, debate in enumerate(detector_debates):
+        result = ensemble_result(
+            debate,
+            ens_p[row],
+            debate.flags,
+            ensemble_tuning.params,
+            stub=ens_data.stub[row],
+            bloc=ens_data.bloc[row],
+        )
+        ensemble_correct[debate.key] = result["delivery"].correct
+        ensemble_flags_by_key[debate.key] = tuple(int(f) for f in result["flags"])
+    return {
+        "seed": seed,
+        "debates": list(debates),
+        "detector_debates": detector_debates,
+        "controls": controls,
+        "tune_questions": tune_questions,
+        "held_questions": held_questions,
+        "tune": tune,
+        "held": held,
+        "guard": guard,
+        "tuning": tuning,
+        "hard": hard,
+        "soft": soft,
+        "hard_correct": hard_correct,
+        "soft_correct": soft_correct,
+        "released": released,
+        "baseline_correct": baseline_correct,
+        "baseline_released": baseline_released,
+        "control_correct": control_correct,
+        "control_released": control_released,
+        "rollback_correct": rollback_correct,
+        "oracle_rollback_correct": oracle_rollback_correct,
+        "rolled_votes": rolled_votes,
+        "oracle_rolled_votes": oracle_rolled_votes,
+        "ensemble_tuning": ensemble_tuning,
+        "ensemble_correct": ensemble_correct,
+        "ensemble_flags_by_key": ensemble_flags_by_key,
+    }
+
+
+def run_guard(prepared: dict, out: Path, *, n_boot: int) -> dict:
+    print("\n=== 4. EpistemicGuard head-to-head ===")
+    debates = prepared["debates"]
+    detector_debates = prepared["detector_debates"]
+    controls = prepared["controls"]
+    tune_questions = prepared["tune_questions"]
+    held_questions = prepared["held_questions"]
+    tune = prepared["tune"]
+    held = prepared["held"]
+    tuning = prepared["tuning"]
+    hard = prepared["hard"]
+    soft = prepared["soft"]
+    hard_correct = prepared["hard_correct"]
+    soft_correct = prepared["soft_correct"]
+    released = prepared["released"]
+    baseline_correct = prepared["baseline_correct"]
+    baseline_released = prepared["baseline_released"]
+    control_correct = prepared["control_correct"]
+    control_released = prepared["control_released"]
+    rollback_correct = prepared["rollback_correct"]
+    oracle_rollback_correct = prepared["oracle_rollback_correct"]
+    ensemble_tuning = prepared["ensemble_tuning"]
+    ensemble_correct = prepared["ensemble_correct"]
+    seed = prepared["seed"]
+
     slices = slices_of(debates)
     rows_full: list[dict] = []
     rows_held: list[dict] = []
@@ -663,7 +798,16 @@ def run_guard(debates, out: Path, *, tune_fraction: float, seed: int, n_boot: in
             _row_metrics(method, subset, baseline_correct[method],
                          baseline_released[method], held_questions, slices)
         )
-    for name, correct in ((GUARD_HARD, hard_correct), (GUARD_SOFT, soft_correct)):
+    extra_arms = {
+        GUARD_ROLLBACK: rollback_correct,
+        ORACLE_ROLLBACK: oracle_rollback_correct,
+        GUARD_ENSEMBLE: ensemble_correct,
+    }
+    for name, correct in (
+        (GUARD_HARD, hard_correct),
+        (GUARD_SOFT, soft_correct),
+        *extra_arms.items(),
+    ):
         rows_full.append(
             _row_metrics(name, detector_debates, correct, released,
                          slices.all_questions, slices)
@@ -698,7 +842,7 @@ def run_guard(debates, out: Path, *, tune_fraction: float, seed: int, n_boot: in
                 f"{held_by_name[name]['self_sabotaged_percent']:.2f}",
                 f"{held_by_name[name]['csqa_tree_percent']:.2f}",
             ]
-            for name in [*DETECTORS, GUARD_HARD, GUARD_SOFT, NO_DETECTOR]
+            for name in LEADERBOARD
         ],
     )
 
@@ -707,7 +851,7 @@ def run_guard(debates, out: Path, *, tune_fraction: float, seed: int, n_boot: in
         "FC", "MC", "TrueAdv", "SelfSab", "CSQA+Tree", "MMLU+Random",
     ]
     latex_rows = []
-    for name in [*DETECTORS, GUARD_HARD, GUARD_SOFT, NO_DETECTOR]:
+    for name in LEADERBOARD:
         held_row = held_by_name[name]
         full_row = full_by_name.get(name, held_row)
         latex_rows.append(
@@ -845,6 +989,71 @@ def run_guard(debates, out: Path, *, tune_fraction: float, seed: int, n_boot: in
         col_spec="lrrrrl",
     )
 
+    # -- Task 2 leaderboard: rollback and rehabilitation ------------------ #
+    def held_stratum_delta(correct: Mapping[tuple, bool]) -> float:
+        values = []
+        for method in DETECTORS:
+            subset = [
+                d for d in detector_debates
+                if d.method == method and d.question_key in held_questions
+            ]
+            if not subset:
+                continue
+            arm = mean_percent([correct[d.key] for d in subset])
+            base = mean_percent([baseline_correct[method][d.key] for d in subset])
+            values.append(arm - base)
+        return float(np.mean(values)) if values else 0.0
+
+    ensemble_rehab = 0
+    ensemble_missed = 0
+    for debate in detector_debates:
+        ens = prepared["ensemble_flags_by_key"][debate.key]
+        for j in range(debate.n_agents):
+            if debate.flags[j] and not ens[j]:
+                ensemble_rehab += 1
+            elif not debate.flags[j] and ens[j]:
+                ensemble_missed += 1
+    rollback_rows = []
+    for name, correct, interventions in (
+        (GUARD_ROLLBACK, rollback_correct, prepared["rolled_votes"]),
+        (ORACLE_ROLLBACK, oracle_rollback_correct, prepared["oracle_rolled_votes"]),
+        (GUARD_ENSEMBLE, ensemble_correct, ensemble_rehab),
+    ):
+        rollback_rows.append(
+            [
+                name,
+                f"{full_by_name[name]['delivered_percent']:.2f}",
+                f"{held_by_name[name]['delivered_percent']:.2f}",
+                interventions,
+                f"{held_stratum_delta(correct):+.2f}",
+            ]
+        )
+    print_table(
+        "Epistemic rollback and rehabilitation (held-out, delta vs each baseline "
+        "on its own debates)",
+        ["Arm", "g_del full", "g_del held", "Interventions", "Delta pp"],
+        rollback_rows,
+    )
+    print(
+        f"ensemble thresholds: {ensemble_tuning.params.as_dict()}; tuned on "
+        f"{ensemble_tuning.split_size} debates ({ensemble_tuning.evaluated} configs), "
+        f"rehabilitated {ensemble_rehab} flags, flagged {ensemble_missed} missed agents"
+    )
+    latex_table(
+        out / "Table_Rollback.tex",
+        "Epistemic rollback and the rehabilitation ensemble. Rollback restores the "
+        "pre-contact belief of an honest voter that copied a flagged neighbour; the "
+        "ensemble first unflags benign agents, then flags missed insiders, then rolls back.",
+        "tab:rollback",
+        ["Arm", "$g_{del}$ (full)", "$g_{del}$ (held)", "Interventions", "$\\Delta$ (pp)"],
+        rollback_rows,
+        note="Interventions are rolled-back votes (rollback arms) or rehabilitated flags "
+        "(ensemble). The ensemble also flagged "
+        f"{ensemble_missed} previously unflagged agents. $\\Delta$ averages the held-out "
+        "within-stratum delta against each baseline on that baseline's own debates.",
+        col_spec="lrrrr",
+    )
+
     # -- supplementary diagnostics --------------------------------------- #
     oracle_held = _oracle_insider(held_detector)
     guard_hard_held = held_by_name[GUARD_HARD]["delivered_percent"]
@@ -894,17 +1103,20 @@ def run_guard(debates, out: Path, *, tune_fraction: float, seed: int, n_boot: in
         print(
             "VERDICT: a strict 'outperforms all six' claim is NOT supported. The guard "
             "matches or exceeds every baseline on its own debates, but ties XG-Guard "
-            "and has non-significant gains over CASPIAN and TAM. The oracle diagnostic "
-            "explains why the ceiling is low: excluding the true insiders scores below "
-            "the best released detector, so delivered accuracy rewards lucky exclusion "
-            "of honest dissenters as much as correct insider identification."
+            "and has non-significant gains over CASPIAN and TAM. The pooled oracle gap "
+            "is decomposed in Table_OracleParadox: it is mostly a composition effect, "
+            "not a set of debates the oracle loses to XG-Guard."
         )
 
     if True:
         fig, axis = plt.subplots(figsize=(6.8, 4.0))
-        names = [*DETECTORS, GUARD_HARD, GUARD_SOFT, NO_DETECTOR]
+        names = LEADERBOARD
         values = [held_by_name[name]["delivered_percent"] for name in names]
-        colors = ["#8c8c8c"] * len(DETECTORS) + ["#c44e52", "#4c72b0", "#dd8452"]
+        colors = (
+            ["#8c8c8c"] * len(DETECTORS)
+            + ["#c44e52", "#4c72b0"]
+            + ["#55a868", "#8172b3", "#937860", "#dd8452"]
+        )
         axis.barh(names, values, color=colors)
         axis.axvline(values[names.index(NO_DETECTOR)], color="black", linewidth=0.8, linestyle=":")
         axis.set_xlabel("held-out delivered accuracy (%)")
@@ -932,6 +1144,24 @@ def run_guard(debates, out: Path, *, tune_fraction: float, seed: int, n_boot: in
         "held_out": rows_held,
         "strata": strata,
         "oracle_insider_held_out_percent": oracle_held,
+        "rollback": {
+            "ensemble_params": ensemble_tuning.params.as_dict(),
+            "ensemble_tune_accuracy_percent": ensemble_tuning.tune_accuracy_percent,
+            "ensemble_tune_by_method": ensemble_tuning.by_method,
+            "ensemble_configs_evaluated": ensemble_tuning.evaluated,
+            "ensemble_rehabilitated_flags": ensemble_rehab,
+            "ensemble_missed_flags": ensemble_missed,
+            "rolled_votes_guard": prepared["rolled_votes"],
+            "rolled_votes_oracle": prepared["oracle_rolled_votes"],
+            "held_delta_pp": {
+                name: held_stratum_delta(correct)
+                for name, correct in (
+                    (GUARD_ROLLBACK, rollback_correct),
+                    (ORACLE_ROLLBACK, oracle_rollback_correct),
+                    (GUARD_ENSEMBLE, ensemble_correct),
+                )
+            },
+        },
         "guard_hard_mean_flags": hard["mean_flags"],
         "guard_soft_mean_suspicion": float(hard["p"].mean()),
         "empty_eligible": hard["empty_eligible"],
@@ -953,6 +1183,137 @@ def run_guard(debates, out: Path, *, tune_fraction: float, seed: int, n_boot: in
 
 
 # --------------------------------------------------------------------------- #
+# Experiment 1b: the Oracle Paradox
+# --------------------------------------------------------------------------- #
+def run_oracle(debates, out: Path, prepared: dict, *, figure: bool) -> dict:
+    print("\n=== 1b. Oracle Paradox decomposition ===")
+    extra = {
+        GUARD_HARD: {
+            d.key: [int(flag) for flag in prepared["hard"]["flags"][i]]
+            for i, d in enumerate(prepared["detector_debates"])
+        },
+        GUARD_ENSEMBLE: prepared["ensemble_flags_by_key"],
+    }
+    payload = decompose_oracle_paradox(debates, extra_arms=extra)
+    arms = ["Unfiltered", "Oracle", *DETECTORS, GUARD_HARD, GUARD_ENSEMBLE]
+    rows = []
+    for arm in arms:
+        rows.append(
+            [arm]
+            + [
+                f"{payload['by_slice'][name][arm]['g_del_percent']:.2f}"
+                for name in ORACLE_SLICES
+            ]
+        )
+    print_table(
+        "Delivered accuracy by attack-validity slice (Oracle vs detectors)",
+        ["Arm", "Self-sabotaged 64", "True adversarial 236", "GSM8K 100", "All"],
+        rows,
+    )
+    latex_table(
+        out / "Table_OracleParadox.tex",
+        "Oracle accuracy by attack-validity slice. The oracle trails XG-Guard only on "
+        "true-adversarial questions (81.67 vs 83.58) and leads it on self-sabotaged "
+        "ones (86.52 vs 85.55), where excluding the gold-voting insiders costs it "
+        "accuracy; the pooled deficit is compositional.",
+        "tab:oracle-paradox",
+        ["Arm", "Self-sab. 64", "True adv. 236", "GSM8K 100", "All"],
+        rows,
+        note="$g_{del}$ percentages. Baseline rows cover that baseline's own 1,600 "
+        "debates (256 / 944 / 400 per slice); the oracle, unfiltered tally and guard "
+        "arms are pooled over all 9,600, so only the within-set panel is a paired "
+        "comparison. The unfiltered row is the released tally, not a defense.",
+        col_spec="lrrrr",
+    )
+
+    within_rows = []
+    for method, cell in payload["within_stratum"].items():
+        discord = payload["discordance"][method]
+        within_rows.append(
+            [
+                method,
+                cell["debates"],
+                f"{cell['oracle_percent']:.2f}",
+                f"{cell['detector_percent']:.2f}",
+                f"{cell['delta_pp']:+.2f}",
+                discord["detector_only"],
+                discord["oracle_only"],
+            ]
+        )
+    print_table(
+        "Oracle vs each detector on that detector's own 1,600 debates",
+        ["Conversation set", "n", "Oracle %", "Detector %", "Delta pp", "Det-only", "Oracle-only"],
+        within_rows,
+    )
+    types = payload["discordance_types"]
+    print(
+        f"discordance types where a detector succeeds and the oracle fails: "
+        f"Type I {types['I']}, Type II {types['II']}, Type III {types['III']}, other {types['other']}"
+    )
+    print(
+        f"XG-Guard vs oracle 2x2: both {payload['xg_oracle_table']['both']}, "
+        f"XG-only {payload['xg_oracle_table']['xg_only']}, "
+        f"oracle-only {payload['xg_oracle_table']['oracle_only']}, "
+        f"neither {payload['xg_oracle_table']['neither']}"
+    )
+    print(payload["verdict"])
+    latex_table(
+        out / "Table_OracleWithin.tex",
+        "Within-conversation-set comparison of the true-insider oracle and each detector. "
+        "The oracle beats every baseline on that baseline's own debates except XG-Guard, "
+        "where it trails by 0.06 pp; the pooled oracle gap is therefore a composition effect.",
+        "tab:oracle-within",
+        ["Conversation set", "n", "Oracle (\\%)", "Detector (\\%)", "$\\Delta$ (pp)",
+         "Det.-only", "Oracle-only"],
+        within_rows,
+        note="Detector-only counts debates where the detector is delivered-correct and the "
+        "oracle is wrong; of these, Type I/II/III counts are "
+        f"{types['I']}/{types['II']}/{types['III']} (other {types['other']}). "
+        f"On XG-Guard's own debates the two disagree in only "
+        f"{payload['xg_oracle_table']['xg_only'] + payload['xg_oracle_table']['oracle_only']} "
+        "debates.",
+        col_spec="lrrrrrr",
+    )
+
+    if figure:
+        slices = ["SELF_SABOTAGED_64", "TRUE_ADVERSARIAL_236", "GSM8K_100"]
+        labels = ["self-sab. 64", "true adv. 236", "GSM8K 100"]
+        fig, (left, right) = plt.subplots(1, 2, figsize=(9.2, 3.8))
+        width = 0.26
+        positions = np.arange(len(slices))
+        for offset, (arm, color) in enumerate(
+            (("Unfiltered", "#999999"), ("Oracle", "#4c72b0"), ("XG-Guard", "#c44e52"))
+        ):
+            values = [payload["by_slice"][name][arm]["g_del_percent"] for name in slices]
+            left.bar(positions + (offset - 1) * width, values, width, label=arm, color=color)
+        left.set_xticks(positions, labels)
+        left.set_ylabel("delivered accuracy (%)")
+        left.set_ylim(70, 100)
+        left.set_title("Oracle vs detectors by slice")
+        left.legend(fontsize=7)
+        left.grid(axis="y", alpha=0.3)
+
+        methods = list(payload["within_stratum"])
+        deltas = [payload["within_stratum"][m]["delta_pp"] for m in methods]
+        colors = ["#c44e52" if value < 0 else "#55a868" for value in deltas]
+        right.barh(methods, deltas, color=colors)
+        right.axvline(0.0, color="black", linewidth=0.8)
+        for y, value in enumerate(deltas):
+            offset = -0.08 if value < 0 else 0.08
+            right.text(value + offset, y, f"{value:+.2f}", va="center",
+                       ha="right" if value < 0 else "left", fontsize=7)
+        right.set_xlim(min(deltas) - 0.9, max(deltas) + 0.9)
+        right.set_xlabel("oracle minus detector (pp), same debates")
+        right.set_title("Within-set: oracle is not the loser")
+        right.grid(axis="x", alpha=0.3)
+        fig.tight_layout()
+        fig.savefig(out / "fig_oracle_paradox.png", dpi=180)
+        plt.close(fig)
+
+    return payload
+
+
+# --------------------------------------------------------------------------- #
 # Entry point
 # --------------------------------------------------------------------------- #
 def main(argv: Sequence[str] | None = None) -> int:
@@ -961,7 +1322,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--out", type=Path, default=ROOT / "artifacts")
     parser.add_argument(
         "--only",
-        choices=("clean", "theory", "shadow", "guard", "all"),
+        choices=("clean", "theory", "shadow", "oracle", "guard", "all"),
         default="all",
     )
     parser.add_argument("--bootstrap", type=int, default=10_000)
@@ -1009,14 +1370,17 @@ def main(argv: Sequence[str] | None = None) -> int:
         results["theory"] = run_theory(debates, out, n_sim=n_sim, figure=figures)
     if args.only in ("shadow", "all"):
         results["shadow"] = run_shadow(debates, out, figure=figures)
-    if args.only in ("guard", "all"):
-        results["guard"] = run_guard(
-            debates,
-            out,
-            tune_fraction=args.tune_fraction,
-            seed=args.seed,
-            n_boot=n_boot,
+    prepared = None
+    if args.only in ("oracle", "guard", "all"):
+        prepared = prepare_guard(
+            debates, tune_fraction=args.tune_fraction, seed=args.seed
         )
+    if args.only in ("oracle", "all"):
+        results["oracle_paradox"] = run_oracle(
+            debates, out, prepared, figure=figures
+        )
+    if args.only in ("guard", "all"):
+        results["guard"] = run_guard(prepared, out, n_boot=n_boot)
 
     write_json(out / "results.json", results)
     print(f"\nartifacts written to {out.resolve()}")

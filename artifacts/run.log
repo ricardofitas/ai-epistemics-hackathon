@@ -30,15 +30,22 @@ CSQA      20             2.50            0.00            +2.50
 GSM8K     1              0.25            0.00            +0.25     
 phantom eliminated under executed-round accounting: True
 
-Counterfactual substitution invariance (replace one excluded vote)
-Task      Substitutions  g_del changes  g_rel flips  Debates flipped  Prior-flag flips
---------  -------------  -------------  -----------  ---------------  ----------------
-MMLU      23269          0              372          104              223             
-MMLU-Pro  66238          0              1193         164              791             
-CSQA      30876          0              679          167              394             
-GSM8K     22095          0              117          35               60              
-Total     142478         0              2361         470              1468            
-invariance g_del(v,f) == g_del(v',f) for v_U == v'_U: True
+Counterfactual substitution invariance: Paper 1 universe vs exhaustive space
+Universe            Task      Substitutions  g_del changes  g_rel flips  Debates flipped  Prior-round flags  Matches P1
+------------------  --------  -------------  -------------  -----------  ---------------  -----------------  ----------
+Paper 1 insider     MMLU      8516           0              77           32               24                           
+Paper 1 insider     MMLU-Pro  8199           0              88           37               26                           
+Paper 1 insider     CSQA      8555           0              80           45               34                           
+Paper 1 insider     GSM8K     7755           0              18           7                5                            
+Paper 1 insider     Total     33025          0              263          121              89                 yes       
+------------------  --------  -------------  -------------  -----------  ---------------  -----------------  ----------
+Exhaustive options  MMLU      23269          0              372          104              65                           
+Exhaustive options  MMLU-Pro  66238          0              1193         164              103                          
+Exhaustive options  CSQA      30876          0              679          167              110                          
+Exhaustive options  GSM8K     22095          0              117          35               24                           
+Exhaustive options  Total     142478         0              2361         470              302                          
+Paper 1 rule reproduces 33,025 / 121 / 89: True (33025 subs, 121 flipped debates, 89 with the insider flagged in the immediately preceding round)
+invariance g_del(v,f) == g_del(v',f) for v_U == v'_U in both universes: True / True
 
 Attack-target stratification
 Slice                   Questions  Debates  g_rel %  g_del %  False credit  Missed credit
@@ -80,22 +87,54 @@ topology: tree    1464     40            2.73
 detector debates: 3.93% (540 debates, 559 events); disabled controls: 24.09%
 delivered failures: 1671; mean events per contaminated debate: 1.04
 
+=== 1b. Oracle Paradox decomposition ===
+
+Delivered accuracy by attack-validity slice (Oracle vs detectors)
+Arm                      Self-sabotaged 64  True adversarial 236  GSM8K 100  All  
+-----------------------  -----------------  --------------------  ---------  -----
+Unfiltered               89.19              79.24                 94.79      84.72
+Oracle                   86.52              81.67                 94.79      85.73
+BlindGuard               87.89              79.03                 94.25      84.25
+CASPIAN                  91.80              78.50                 94.75      84.69
+DOMINANT                 88.28              72.14                 94.50      80.31
+PREM                     87.11              74.05                 95.75      81.56
+TAM                      88.67              80.51                 95.00      85.44
+XG-Guard                 85.55              83.58                 95.00      86.75
+EpistemicGuard-Hard      88.22              77.97                 94.88      83.83
+EpistemicGuard-Ensemble  88.22              77.97                 94.88      83.83
+
+Oracle vs each detector on that detector's own 1,600 debates
+Conversation set  n     Oracle %  Detector %  Delta pp  Det-only  Oracle-only
+----------------  ----  --------  ----------  --------  --------  -----------
+BlindGuard        1600  85.69     84.25       +1.44     10        33         
+CASPIAN           1600  85.38     84.69       +0.69     7         18         
+DOMINANT          1600  83.62     80.31       +3.31     7         60         
+PREM              1600  86.31     81.56       +4.75     5         81         
+TAM               1600  86.69     85.44       +1.25     16        36         
+XG-Guard          1600  86.69     86.75       -0.06     2         1          
+discordance types where a detector succeeds and the oracle fails: Type I 26, Type II 0, Type III 21, other 0
+XG-Guard vs oracle 2x2: both 1386, XG-only 2, oracle-only 1, neither 211
+The Oracle Paradox is a composition artifact: pooled over six conversation sets the oracle scores below XG-Guard, but on XG-Guard's own debates the two differ by only -0.06 pp (2 XG-only vs 1 oracle-only debates). Type I/II/III mechanisms therefore explain a handful of debates, not the headline gap.
+
 === 4. EpistemicGuard head-to-head ===
 
 Held-out delivered accuracy (80% of question IDs, tuned on 20%):
 
 Leaderboard
-Detector             n     g_del %  g_rel %  FC  TrueAdv %  SelfSab %  CSQA+Tree %
--------------------  ----  -------  -------  --  ---------  ---------  -----------
-BlindGuard           1280  84.61    85.00    17  83.94      88.59      86.25      
-CASPIAN              1280  85.08    85.00    1   83.94      91.85      83.75      
-DOMINANT             1280  80.55    80.94    28  79.38      87.50      82.50      
-PREM                 1280  81.09    84.92    52  80.11      86.96      68.75      
-TAM                  1280  85.62    86.48    20  85.04      89.13      85.00      
-XG-Guard             1280  86.33    86.48    5   86.50      85.33      88.75      
-EpistemicGuard-Hard  7680  85.30    84.80    24  84.84      88.04      84.58      
-EpistemicGuard-Soft  7680  85.52    84.80    33  85.07      88.22      85.42      
-No detector          1280  68.05    68.05    0   63.69      94.02      55.00      
+Detector                 n     g_del %  g_rel %  FC  TrueAdv %  SelfSab %  CSQA+Tree %
+-----------------------  ----  -------  -------  --  ---------  ---------  -----------
+BlindGuard               1280  84.61    85.00    17  83.94      88.59      86.25      
+CASPIAN                  1280  85.08    85.00    1   83.94      91.85      83.75      
+DOMINANT                 1280  80.55    80.94    28  79.38      87.50      82.50      
+PREM                     1280  81.09    84.92    52  80.11      86.96      68.75      
+TAM                      1280  85.62    86.48    20  85.04      89.13      85.00      
+XG-Guard                 1280  86.33    86.48    5   86.50      85.33      88.75      
+EpistemicGuard-Hard      7680  85.30    84.80    24  84.84      88.04      84.58      
+EpistemicGuard-Soft      7680  85.52    84.80    33  85.07      88.22      85.42      
+EpistemicGuard-Rollback  7680  85.68    84.80    46  85.28      88.04      84.79      
+Oracle-Rollback          7680  85.99    84.80    75  86.54      82.70      86.88      
+EpistemicGuard-Ensemble  7680  85.53    84.80    76  85.23      87.32      84.79      
+No detector              1280  68.05    68.05    0   63.69      94.02      55.00      
 
 Paired within-conversation bootstrap (10k) and Wilcoxon, Holm-corrected
 Comparison                                              Delta pp  95% CI          p       p_Holm   
@@ -113,9 +152,17 @@ EpistemicGuard-Soft vs TAM (TAM debates)                +0.86     [+0.08, +1.72]
 EpistemicGuard-Soft vs XG-Guard (XG-Guard debates)      -0.31     [-0.70, +0.00]  0.1025  0.2049   
 EpistemicGuard-Soft vs CASPIAN (CASPIAN debates)        -0.16     [-0.55, +0.23]  0.4142  0.4142   
 
+Epistemic rollback and rehabilitation (held-out, delta vs each baseline on its own debates)
+Arm                      g_del full  g_del held  Interventions  Delta pp
+-----------------------  ----------  ----------  -------------  --------
+EpistemicGuard-Rollback  85.61       85.68       1837           +1.80   
+Oracle-Rollback          85.90       85.99       2111           +2.11   
+EpistemicGuard-Ensemble  85.42       85.53       21334          +1.65   
+ensemble thresholds: {'tau_rehab': 0.55, 'tau_high': 0.85, 'top_k': 3}; tuned on 1920 debates (9 configs), rehabilitated 21334 flags, flagged 4023 missed agents
+
 Pooled held-out: hard 85.30%, soft 85.52%; best pooled baseline XG-Guard 86.33%. Pooled comparisons are unpaired (different conversation sets) and are reported only for context.
 Within each baseline's own debates, Guard-Hard delta (pp): BlindGuard +1.02; CASPIAN +0.16; DOMINANT +2.19; PREM +4.14; TAM +1.02; XG-Guard +0.00
 weakly dominates all six: True; significant improvements: ['DOMINANT', 'PREM']; oracle (true insiders excluded) 85.78%.
-VERDICT: a strict 'outperforms all six' claim is NOT supported. The guard matches or exceeds every baseline on its own debates, but ties XG-Guard and has non-significant gains over CASPIAN and TAM. The oracle diagnostic explains why the ceiling is low: excluding the true insiders scores below the best released detector, so delivered accuracy rewards lucky exclusion of honest dissenters as much as correct insider identification.
+VERDICT: a strict 'outperforms all six' claim is NOT supported. The guard matches or exceeds every baseline on its own debates, but ties XG-Guard and has non-significant gains over CASPIAN and TAM. The pooled oracle gap is decomposed in Table_OracleParadox: it is mostly a composition effect, not a set of debates the oracle loses to XG-Guard.
 
 artifacts written to C:\Users\Antonio\Desktop\dev tools\hacklaton\ai epistemics\artifacts

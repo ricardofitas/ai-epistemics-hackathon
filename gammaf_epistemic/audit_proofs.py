@@ -33,7 +33,7 @@ from .data import (
     TOPOLOGIES,
     Debate,
 )
-from .gammaf_clean import check, plurality, score_debate
+from .gammaf_clean import check, deliver, plurality, score_debate
 
 # --------------------------------------------------------------------------- #
 # False-credit model
@@ -390,10 +390,6 @@ class ShadowEvent:
         }
 
 
-def _same(a: str, b: str, dataset: str) -> bool:
-    return a == b if dataset == "GSM8K" else str(a).upper() == str(b).upper()
-
-
 def shadow_events(debate: Debate, *, require_failure: bool = True) -> list[ShadowEvent]:
     """Honest agents converted by a not-yet-flagged adjacent insider."""
     if len(debate.rounds) < 2 or debate.attack_target is None:
@@ -438,6 +434,219 @@ def shadow_events(debate: Debate, *, require_failure: bool = True) -> list[Shado
                     )
                 )
     return events
+
+
+def _same(a: str | None, b: str | None, dataset: str) -> bool:
+    if a is None or b is None:
+        return False
+    return a == b if dataset == "GSM8K" else str(a).upper() == str(b).upper()
+
+
+# --------------------------------------------------------------------------- #
+# Oracle Paradox decomposition (Task 1)
+# --------------------------------------------------------------------------- #
+ORACLE_SLICES = (
+    "SELF_SABOTAGED_64",
+    "TRUE_ADVERSARIAL_236",
+    "GSM8K_100",
+    "ALL",
+)
+
+
+def oracle_flags(debate: Debate) -> tuple[int, ...]:
+    """True-insider oracle: flag exactly the agents the archive knows are insiders."""
+    insiders = set(debate.insiders)
+    return tuple(1 if i in insiders else 0 for i in range(debate.n_agents))
+
+
+def oracle_delivery(debate: Debate):
+    return deliver(debate.votes, oracle_flags(debate), debate.gold, debate.dataset)
+
+
+def oracle_slice(debate: Debate) -> str:
+    if debate.attack_target is not None and _same(
+        debate.attack_target, debate.gold, debate.dataset
+    ):
+        return "SELF_SABOTAGED_64"
+    if debate.dataset == "GSM8K":
+        return "GSM8K_100"
+    return "TRUE_ADVERSARIAL_236"
+
+
+def _unfiltered_delivery(debate: Debate):
+    flags = tuple(0 for _ in range(debate.n_agents))
+    return deliver(debate.votes, flags, debate.gold, debate.dataset)
+
+
+def _classify_discordance(debate: Debate, flags: Sequence[int]) -> str:
+    """Type I / II / III for a case where the detector succeeds and the oracle fails."""
+    insiders = set(debate.insiders)
+    if debate.attack_target is not None and _same(
+        debate.attack_target, debate.gold, debate.dataset
+    ):
+        if any(
+            flags[i] == 0 and _same(debate.votes[i], debate.gold, debate.dataset)
+            for i in insiders
+        ):
+            return "I"
+    events = shadow_events(debate, require_failure=False)
+    poisoned = {event.honest_agent for event in events}
+    if any(flags[j] for j in poisoned):
+        return "II"
+    if any(
+        flags[j]
+        and j not in insiders
+        and j not in poisoned
+        and not _same(debate.votes[j], debate.gold, debate.dataset)
+        for j in range(debate.n_agents)
+    ):
+        return "III"
+    return "other"
+
+
+def _arm_delivery(debate: Debate, name: str, extra_flags):
+    if name == "Unfiltered":
+        return _unfiltered_delivery(debate)
+    if name == "Oracle":
+        return oracle_delivery(debate)
+    if extra_flags is not None and name in extra_flags:
+        flags = extra_flags[name]
+    else:
+        flags = debate.flags
+    return deliver(debate.votes, flags, debate.gold, debate.dataset)
+
+
+def decompose_oracle_paradox(
+    debates: Sequence[Debate],
+    *,
+    extra_arms: dict[str, dict[tuple, Sequence[int]]] | None = None,
+    methods: Sequence[str] = DETECTORS,
+) -> dict:
+    """Explain why the true-insider oracle trails the best learned detector.
+
+    Three panels are produced:
+
+    1. delivered accuracy of every arm on the three attack-validity slices;
+    2. within-stratum oracle vs detector accuracy (the paired comparison);
+    3. a Type I/II/III decomposition of every debate where a detector is
+       delivered-correct and the oracle is delivered-wrong.
+
+    The key finding is compositional: the pooled oracle number is dragged down
+    by the conversation sets it is pooled over, not by the oracle losing to
+    ``XG-Guard`` on the debates where the two can be compared.
+    """
+    detector_debates = [d for d in debates if d.method in methods]
+    arm_names = ["Unfiltered", "Oracle", *methods]
+    if extra_arms:
+        arm_names.extend(extra_arms)
+
+    by_slice: dict[str, dict[str, dict]] = {name: {} for name in ORACLE_SLICES}
+    for arm in arm_names:
+        # Baselines are evaluated on their own 1,600 debates (a baseline flag
+        # vector is only defined on its own conversation set); the oracle, the
+        # unfiltered tally and the guard arms are pooled over all 9,600.
+        if arm in methods:
+            arm_debates = [d for d in detector_debates if d.method == arm]
+            flags_for_arm = None
+        else:
+            arm_debates = detector_debates
+            flags_for_arm = extra_arms.get(arm) if extra_arms else None
+        for slice_name in ORACLE_SLICES:
+            subset = (
+                list(arm_debates)
+                if slice_name == "ALL"
+                else [d for d in arm_debates if oracle_slice(d) == slice_name]
+            )
+            delivered = 0
+            released = 0
+            for debate in subset:
+                delivery = _arm_delivery(debate, arm, flags_for_arm)
+                delivered += int(delivery.correct)
+                released += int(check(plurality(list(debate.votes)),
+                                      debate.gold, debate.dataset))
+            n = len(subset)
+            by_slice[slice_name][arm] = {
+                "debates": n,
+                "g_del_percent": 100.0 * delivered / max(n, 1),
+                "g_release_percent": 100.0 * released / max(n, 1),
+            }
+
+    within_stratum: dict[str, dict] = {}
+    for method in methods:
+        subset = [d for d in detector_debates if d.method == method]
+        oracle = sum(oracle_delivery(d).correct for d in subset)
+        detector = sum(score_debate(d).g_del for d in subset)
+        n = len(subset)
+        within_stratum[method] = {
+            "debates": n,
+            "oracle_percent": 100.0 * oracle / max(n, 1),
+            "detector_percent": 100.0 * detector / max(n, 1),
+            "delta_pp": 100.0 * (oracle - detector) / max(n, 1),
+        }
+
+    discordance: dict[str, dict] = {}
+    types: dict[str, int] = {name: 0 for name in ("I", "II", "III", "other")}
+    examples: list[dict] = []
+    for method in methods:
+        subset = [d for d in detector_debates if d.method == method]
+        cell = {"detector_only": 0, "oracle_only": 0, "types": dict(types)}
+        for debate in subset:
+            det_ok = score_debate(debate).g_del
+            oracle_ok = oracle_delivery(debate).correct
+            if det_ok and not oracle_ok:
+                cell["detector_only"] += 1
+                kind = _classify_discordance(debate, debate.flags)
+                cell["types"][kind] += 1
+                types[kind] += 1
+                if len(examples) < 12:
+                    examples.append(
+                        {
+                            "dataset": debate.dataset,
+                            "item": debate.item,
+                            "graph": debate.graph,
+                            "method": method,
+                            "type": kind,
+                            "slice": oracle_slice(debate),
+                            "flags": [int(f) for f in debate.flags],
+                        }
+                    )
+            elif oracle_ok and not det_ok:
+                cell["oracle_only"] += 1
+        cell["net_pp"] = 100.0 * (cell["oracle_only"] - cell["detector_only"]) / max(
+            len(subset), 1
+        )
+        discordance[method] = cell
+
+    xg = [d for d in detector_debates if d.method == "XG-Guard"]
+    xg_table = {"both": 0, "xg_only": 0, "oracle_only": 0, "neither": 0}
+    for debate in xg:
+        det_ok = score_debate(debate).g_del
+        oracle_ok = oracle_delivery(debate).correct
+        key = (
+            "both" if det_ok and oracle_ok
+            else "xg_only" if det_ok
+            else "oracle_only" if oracle_ok
+            else "neither"
+        )
+        xg_table[key] += 1
+
+    return {
+        "by_slice": by_slice,
+        "within_stratum": within_stratum,
+        "discordance": discordance,
+        "discordance_types": types,
+        "examples": examples,
+        "xg_oracle_table": xg_table,
+        "verdict": (
+            "The Oracle Paradox is a composition artifact: pooled over six "
+            "conversation sets the oracle scores below XG-Guard, but on XG-Guard's "
+            "own debates the two differ by only "
+            f"{within_stratum.get('XG-Guard', {}).get('delta_pp', 0.0):+.2f} pp "
+            f"({xg_table['xg_only']} XG-only vs {xg_table['oracle_only']} oracle-only "
+            "debates). Type I/II/III mechanisms therefore explain a handful of "
+            "debates, not the headline gap."
+        ),
+    }
 
 
 def shadow_summary(

@@ -1,18 +1,24 @@
 \begin{table}[htbp]
 \centering
 \small
-\caption{Counterfactual substitution audit. Replacing an excluded insider vote never changes the delivered answer or its grade, but it moves the released score.}
+\caption{Counterfactual substitution audit under both universes. Replacing an excluded insider vote never changes the delivered answer or its grade, but it moves the released score. The Paper 1 restricted universe is 33,025 substitutions over excluded insiders; the exhaustive space is 142,478 replacements over all labels.}
 \label{tab:counterfactual}
-\begin{tabular}{lrrrrr}
+\begin{tabular}{llrrrrrl}
 \toprule
-Task & Substitutions & $g_{del}$ changes & $g_{rel}$ flips & Debates flipped & Prior-flag flips \\
+Universe & Task & Substitutions & $g_{del}$ chg & $g_{rel}$ flips & Debates & Prior-round & P1 \\
 \midrule
-MMLU & 23269 & 0 & 372 & 104 & 223 \\
-MMLU-Pro & 66238 & 0 & 1193 & 164 & 791 \\
-CSQA & 30876 & 0 & 679 & 167 & 394 \\
-GSM8K & 22095 & 0 & 117 & 35 & 60 \\
-Total & 142478 & 0 & 2361 & 470 & 1468 \\
+Paper 1 insider & MMLU & 8516 & 0 & 77 & 32 & 24 &  \\
+Paper 1 insider & MMLU-Pro & 8199 & 0 & 88 & 37 & 26 &  \\
+Paper 1 insider & CSQA & 8555 & 0 & 80 & 45 & 34 &  \\
+Paper 1 insider & GSM8K & 7755 & 0 & 18 & 7 & 5 &  \\
+Paper 1 insider & Total & 33025 & 0 & 263 & 121 & 89 & yes \\
+\midrule
+Exhaustive options & MMLU & 23269 & 0 & 372 & 104 & 65 &  \\
+Exhaustive options & MMLU-Pro & 66238 & 0 & 1193 & 164 & 103 &  \\
+Exhaustive options & CSQA & 30876 & 0 & 679 & 167 & 110 &  \\
+Exhaustive options & GSM8K & 22095 & 0 & 117 & 35 & 24 &  \\
+Exhaustive options & Total & 142478 & 0 & 2361 & 470 & 302 &  \\
 \bottomrule
 \end{tabular}
-\par\smallskip\footnotesize The audit enumerates every replacement over the task option space (a superset of the 33,025 frozen substitutions; the reference flip counts 121/89 are recorded in results.json but were not reproduced by this space).
+\par\smallskip\footnotesize Prior-round counts substitutions whose insider was already flagged in the immediately preceding executed round. Both universes leave $g_{del}$ invariant; only the released score moves.
 \end{table}

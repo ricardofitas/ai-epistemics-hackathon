@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Within-conversation-set comparison of the true-insider oracle and each detector. The oracle beats every baseline on that baseline's own debates except XG-Guard, where it trails by 0.06 pp; the pooled oracle gap is therefore a composition effect.}
+\label{tab:oracle-within}
+\begin{tabular}{lrrrrrr}
+\toprule
+Conversation set & n & Oracle (\%) & Detector (\%) & $\Delta$ (pp) & Det.-only & Oracle-only \\
+\midrule
+BlindGuard & 1600 & 85.69 & 84.25 & +1.44 & 10 & 33 \\
+CASPIAN & 1600 & 85.38 & 84.69 & +0.69 & 7 & 18 \\
+DOMINANT & 1600 & 83.62 & 80.31 & +3.31 & 7 & 60 \\
+PREM & 1600 & 86.31 & 81.56 & +4.75 & 5 & 81 \\
+TAM & 1600 & 86.69 & 85.44 & +1.25 & 16 & 36 \\
+XG-Guard & 1600 & 86.69 & 86.75 & -0.06 & 2 & 1 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize Detector-only counts debates where the detector is delivered-correct and the oracle is wrong; of these, Type I/II/III counts are 26/0/21 (other 0). On XG-Guard's own debates the two disagree in only 3 debates.
+\end{table}

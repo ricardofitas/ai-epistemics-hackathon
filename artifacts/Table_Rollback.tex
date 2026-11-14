@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Epistemic rollback and the rehabilitation ensemble. Rollback restores the pre-contact belief of an honest voter that copied a flagged neighbour; the ensemble first unflags benign agents, then flags missed insiders, then rolls back.}
+\label{tab:rollback}
+\begin{tabular}{lrrrr}
+\toprule
+Arm & $g_{del}$ (full) & $g_{del}$ (held) & Interventions & $\Delta$ (pp) \\
+\midrule
+EpistemicGuard-Rollback & 85.61 & 85.68 & 1837 & +1.80 \\
+Oracle-Rollback & 85.90 & 85.99 & 2111 & +2.11 \\
+EpistemicGuard-Ensemble & 85.42 & 85.53 & 21334 & +1.65 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize Interventions are rolled-back votes (rollback arms) or rehabilitated flags (ensemble). The ensemble also flagged 4023 previously unflagged agents. $\Delta$ averages the held-out within-stratum delta against each baseline on that baseline's own debates.
+\end{table}

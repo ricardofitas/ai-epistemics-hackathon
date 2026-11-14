@@ -22,7 +22,7 @@ from typing import Sequence
 import numpy as np
 
 from .data import DETECTORS, N_AGENTS, Debate
-from .gammaf_clean import ABSTAIN, Delivery, check, plurality
+from .gammaf_clean import ABSTAIN, Delivery, check, deliver, plurality
 
 SIGNAL_NAMES = ("stubbornness", "bloc", "net")
 
@@ -544,3 +544,255 @@ class EpistemicGuard:
         p = self.suspicion(debate)
         delivery, _ = soft_delivery(debate, p, self.params)
         return delivery
+
+
+# --------------------------------------------------------------------------- #
+# Epistemic rollback: cure honest voters poisoned by an excluded neighbour
+# --------------------------------------------------------------------------- #
+@dataclass(frozen=True)
+class PoisonLink:
+    """An honest agent's terminal vote copied from a flagged neighbour."""
+
+    agent: int
+    insider: int
+    round_position: int
+    clean_vote: str
+
+
+def poison_links(
+    debate: Debate, flags: Sequence[int]
+) -> list[PoisonLink]:
+    """First vote switch of each unflagged honest agent that copied a flagged neighbour.
+
+    Uses only observable trajectories, the graph and the detector's own flags.
+    """
+    if len(debate.rounds) < 2:
+        return []
+    adjacency = adjacency_matrix(debate)
+    insiders = set(debate.insiders)
+    links: dict[int, PoisonLink] = {}
+    for position in range(1, len(debate.rounds)):
+        before = debate.rounds[position - 1].votes
+        after = debate.rounds[position].votes
+        for agent in range(debate.n_agents):
+            if agent in links or agent in insiders or flags[agent]:
+                continue
+            if after[agent] == before[agent]:
+                continue
+            for source in range(debate.n_agents):
+                if source == agent or not adjacency[source][agent] or not flags[source]:
+                    continue
+                if after[agent] == before[source] and before[source] != before[agent]:
+                    links[agent] = PoisonLink(
+                        agent=agent,
+                        insider=source,
+                        round_position=position,
+                        clean_vote=before[agent],
+                    )
+                    break
+    return [links[agent] for agent in sorted(links)]
+
+
+def rollback_votes(
+    debate: Debate, flags: Sequence[int]
+) -> tuple[tuple[str, ...], list[PoisonLink]]:
+    """Replace each poisoned terminal vote with its pre-contact belief."""
+    links = poison_links(debate, flags)
+    votes = list(debate.votes)
+    for link in links:
+        votes[link.agent] = link.clean_vote
+    return tuple(votes), links
+
+
+def rollback_delivery(
+    debate: Debate, flags: Sequence[int]
+) -> tuple[Delivery, tuple[str, ...], list[PoisonLink]]:
+    votes, links = rollback_votes(debate, flags)
+    delivery = deliver(votes, flags, debate.gold, debate.dataset)
+    return delivery, votes, links
+
+
+# --------------------------------------------------------------------------- #
+# EpistemicGuard-Ensemble: false-positive rehabilitation + rollback
+# --------------------------------------------------------------------------- #
+@dataclass(frozen=True)
+class EnsembleParams:
+    """Rehabilitation and missed-insider thresholds (tuned on the tune split)."""
+
+    tau_rehab: float = 0.40
+    tau_high: float = 0.65
+    top_k: int = DEFAULT_TOP_K
+
+    def as_dict(self) -> dict:
+        return {
+            "tau_rehab": self.tau_rehab,
+            "tau_high": self.tau_high,
+            "top_k": self.top_k,
+        }
+
+
+@dataclass
+class EnsembleTuning:
+    params: EnsembleParams
+    tune_accuracy_percent: float
+    by_method: dict[str, float]
+    split_size: int
+    evaluated: int
+
+
+def ensemble_flags(
+    debate: Debate,
+    p: np.ndarray,
+    base_flags: Sequence[int],
+    params: EnsembleParams,
+    *,
+    stub: np.ndarray | None = None,
+    bloc: np.ndarray | None = None,
+) -> np.ndarray:
+    """Rehabilitate benign flagged agents, then flag high-suspicion missed ones."""
+    if stub is None or bloc is None:
+        stub, bloc, _ = signals(debate, DEFAULT_GAMMA)
+    base = np.asarray(base_flags, dtype=bool).copy()
+    flags = base.copy()
+    flags &= ~((stub < params.tau_rehab) & (bloc < params.tau_rehab))
+    flags |= p >= params.tau_high
+    if flags.sum() > params.top_k:
+        order = np.argsort(-p, kind="stable")
+        keep = np.zeros(debate.n_agents, dtype=bool)
+        keep[order[: params.top_k]] = True
+        flags &= keep
+    if flags.all():
+        flags[int(np.argmin(p))] = False
+    return flags.astype(int)
+
+
+def ensemble_result(
+    debate: Debate,
+    p: np.ndarray,
+    base_flags: Sequence[int],
+    params: EnsembleParams,
+    *,
+    stub: np.ndarray | None = None,
+    bloc: np.ndarray | None = None,
+) -> dict:
+    flags = ensemble_flags(debate, p, base_flags, params, stub=stub, bloc=bloc)
+    delivery, votes, links = rollback_delivery(debate, flags)
+    return {
+        "flags": flags,
+        "votes": votes,
+        "delivery": delivery,
+        "links": links,
+        "rehabilitated": int(
+            sum(1 for i, flag in enumerate(base_flags) if flag and not flags[i])
+        ),
+        "missed_flagged": int(
+            sum(1 for i, flag in enumerate(base_flags) if not flag and flags[i])
+        ),
+    }
+
+
+REHAB_GRID = (0.25, 0.40, 0.55)
+HIGH_GRID = (0.55, 0.70, 0.85)
+
+
+def _equal_stratum_mean(debates: Sequence[Debate], correct: np.ndarray) -> float:
+    strata: dict[str, list[float]] = {}
+    for debate, ok in zip(debates, correct):
+        strata.setdefault(debate.method, []).append(float(ok))
+    values = [sum(v) / len(v) for v in strata.values() if v]
+    return 100.0 * sum(values) / max(len(values), 1)
+
+
+def tune_ensemble(
+    tune_debates: Sequence[Debate],
+    guard: EpistemicGuard,
+) -> EnsembleTuning:
+    """Grid-search the rehabilitation/missed-insider thresholds on the tune split."""
+    data = GuardData(tune_debates, guard.params.gamma)
+    p = data.suspicion(guard.params)
+    base = [debate.flags for debate in tune_debates]
+    best: tuple[tuple[float, float, float], EnsembleParams, np.ndarray] | None = None
+    evaluated = 0
+    for tau_rehab, tau_high in itertools.product(REHAB_GRID, HIGH_GRID):
+        params = EnsembleParams(
+            tau_rehab=tau_rehab, tau_high=tau_high, top_k=guard.params.top_k
+        )
+        correct = np.zeros(len(tune_debates), dtype=bool)
+        for row, debate in enumerate(tune_debates):
+            result = ensemble_result(
+                debate,
+                p[row],
+                base[row],
+                params,
+                stub=data.stub[row],
+                bloc=data.bloc[row],
+            )
+            correct[row] = result["delivery"].correct
+        evaluated += 1
+        score = _equal_stratum_mean(tune_debates, correct)
+        key = (score, -tau_rehab, -tau_high)
+        if best is None or key > best[0]:
+            best = (key, params, correct)
+    assert best is not None
+    _, params, correct = best
+    strata: dict[str, list[float]] = {}
+    for debate, ok in zip(tune_debates, correct):
+        strata.setdefault(debate.method, []).append(float(ok))
+    return EnsembleTuning(
+        params=params,
+        tune_accuracy_percent=100.0 * float(correct.mean()),
+        by_method={m: 100.0 * sum(v) / len(v) for m, v in strata.items()},
+        split_size=len(tune_debates),
+        evaluated=evaluated,
+    )
+
+
+def ensemble_evaluate(
+    debates: Sequence[Debate],
+    guard: EpistemicGuard,
+    params: EnsembleParams,
+) -> dict:
+    """Evaluate the ensemble arm (with rollback) per conversation set."""
+    data = GuardData(debates, guard.params.gamma)
+    p = data.suspicion(guard.params)
+    rows: list[dict] = []
+    for row, debate in enumerate(debates):
+        result = ensemble_result(
+            debate,
+            p[row],
+            debate.flags,
+            params,
+            stub=data.stub[row],
+            bloc=data.bloc[row],
+        )
+        delivery = result["delivery"]
+        rows.append(
+            {
+                "method": debate.method,
+                "correct": delivery.correct,
+                "flags": int(result["flags"].sum()),
+                "rehabilitated": result["rehabilitated"],
+                "missed_flagged": result["missed_flagged"],
+                "rolled": len(result["links"]),
+            }
+        )
+    by_method: dict[str, dict] = {}
+    for method in sorted({row["method"] for row in rows}):
+        subset = [row for row in rows if row["method"] == method]
+        by_method[method] = {
+            "debates": len(subset),
+            "accuracy_percent": 100.0 * sum(row["correct"] for row in subset) / len(subset),
+            "mean_flags": sum(row["flags"] for row in subset) / len(subset),
+            "rehabilitated": sum(row["rehabilitated"] for row in subset),
+            "missed_flagged": sum(row["missed_flagged"] for row in subset),
+            "rolled": sum(row["rolled"] for row in subset),
+        }
+    return {
+        "params": params.as_dict(),
+        "debates": len(rows),
+        "accuracy_percent": 100.0 * sum(row["correct"] for row in rows) / max(len(rows), 1),
+        "equal_stratum_percent": _equal_stratum_mean(
+            debates, np.array([row["correct"] for row in rows])
+        ),
+        "by_method": by_method,
+    }

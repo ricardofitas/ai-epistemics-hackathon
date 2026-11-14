@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Oracle accuracy by attack-validity slice. The oracle trails XG-Guard only on true-adversarial questions (81.67 vs 83.58) and leads it on self-sabotaged ones (86.52 vs 85.55), where excluding the gold-voting insiders costs it accuracy; the pooled deficit is compositional.}
+\label{tab:oracle-paradox}
+\begin{tabular}{lrrrr}
+\toprule
+Arm & Self-sab. 64 & True adv. 236 & GSM8K 100 & All \\
+\midrule
+Unfiltered & 89.19 & 79.24 & 94.79 & 84.72 \\
+Oracle & 86.52 & 81.67 & 94.79 & 85.73 \\
+BlindGuard & 87.89 & 79.03 & 94.25 & 84.25 \\
+CASPIAN & 91.80 & 78.50 & 94.75 & 84.69 \\
+DOMINANT & 88.28 & 72.14 & 94.50 & 80.31 \\
+PREM & 87.11 & 74.05 & 95.75 & 81.56 \\
+TAM & 88.67 & 80.51 & 95.00 & 85.44 \\
+XG-Guard & 85.55 & 83.58 & 95.00 & 86.75 \\
+EpistemicGuard-Hard & 88.22 & 77.97 & 94.88 & 83.83 \\
+EpistemicGuard-Ensemble & 88.22 & 77.97 & 94.88 & 83.83 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize $g_{del}$ percentages. Baseline rows cover that baseline's own 1,600 debates (256 / 944 / 400 per slice); the oracle, unfiltered tally and guard arms are pooled over all 9,600, so only the within-set panel is a paired comparison. The unfiltered row is the released tally, not a defense.
+\end{table}

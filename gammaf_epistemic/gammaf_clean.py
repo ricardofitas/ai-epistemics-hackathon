@@ -255,6 +255,10 @@ def empty_eligible_behavior(debates: Sequence[Debate]) -> dict:
 # --------------------------------------------------------------------------- #
 # Invariant 3 - counterfactual substitution invariance
 # --------------------------------------------------------------------------- #
+#: Paper 1 / handoff candidate set: only the two canonical letters (or digits).
+PAPER1_CANDIDATES: dict[bool, tuple[str, ...]] = {True: ("0", "1"), False: ("A", "B")}
+
+
 @dataclass(frozen=True)
 class Substitution:
     agent: int
@@ -288,18 +292,33 @@ def substitution_space(debate: Debate, agents: Sequence[int] | None = None) -> l
     return out
 
 
-def counterfactual_audit(
-    debates: Sequence[Debate],
-    *,
-    methods: Sequence[str] = DETECTORS,
-) -> dict:
-    """Exhaustive substitution audit over every excluded agent vote.
+def paper1_substitution_space(debate: Debate) -> list[Substitution]:
+    """The Paper 1 / handoff universe: excluded insiders only, candidates {A,B}/{0,1}.
 
-    For each replacement we recompute both scores.  ``a_del`` and ``g_del`` must
-    be unchanged by construction: the replacement touches only votes that the
-    eligibility filter discards.  The released score is free to move, which is
-    exactly the measurement bug.
+    The paper substitutes each *excluded compromised insider*
+    (``i in malicious_agent_indexes and flagged[i] == 1``) over the two canonical
+    letters (``A``/``B``) or digits (``0``/``1``).  This universe reproduces
+    33,025 substitutions, 121 flipped debates and 89 prior-flag flipped debates.
     """
+    candidates = PAPER1_CANDIDATES[debate.dataset == "GSM8K"]
+    out: list[Substitution] = []
+    for agent in debate.insiders:
+        if not debate.flags[agent]:
+            continue
+        for candidate in candidates:
+            if candidate != debate.votes[agent]:
+                out.append(Substitution(agent, debate.votes[agent], candidate))
+    return out
+
+
+def _audit_universe(
+    debates: Sequence[Debate],
+    space,
+    methods: Sequence[str],
+    *,
+    prior_mode: str = "immediate",
+) -> dict:
+    """Shared substitution audit; returns per-task counters and debate-level counts."""
     totals = collections.Counter()
     by_task: dict[str, collections.Counter] = {}
     for debate in debates:
@@ -308,22 +327,22 @@ def counterfactual_audit(
         if not debate.rounds:
             raise ValueError("counterfactual audit needs executed trajectories")
         base = score_debate(debate)
-        last_pos = len(debate.rounds) - 1
         acc = by_task.setdefault(debate.dataset, collections.Counter())
         debate_flipped = False
         debate_flipped_prior = False
-        for sub in substitution_space(debate):
+        for sub in space(debate):
             votes = list(debate.votes)
             votes[sub.agent] = sub.replacement
-            delivery = deliver(
-                votes, debate.flags, debate.gold, debate.dataset
-            )
+            delivery = deliver(votes, debate.flags, debate.gold, debate.dataset)
             _, g_release = releases(votes, debate.gold, debate.dataset)
             changed_del = delivery.answer != base.a_del or delivery.correct != base.g_del
             flipped = g_release != base.g_release
-            prior = debate.flagged_before(sub.agent, last_pos)
+            if prior_mode == "immediate":
+                prior = len(debate.rounds) >= 2 and debate.rounds[-2].flags[sub.agent] == 1
+            else:
+                prior = debate.flagged_before(sub.agent, len(debate.rounds) - 1)
             debate_flipped |= flipped
-            debate_flipped_prior |= flipped and prior
+            debate_flipped_prior |= bool(flipped and prior)
             for counter in (totals, acc):
                 counter["substitutions"] += 1
                 counter["g_del_changes"] += int(changed_del)
@@ -334,16 +353,48 @@ def counterfactual_audit(
             counter["debates_with_release_flip_prior_flagged"] += int(
                 debate_flipped_prior
             )
-    result = {
+    return {
         "by_task": {task: dict(counter) for task, counter in by_task.items()},
         "totals": dict(totals),
-        "reference": {
-            "substitutions": REFERENCE["counterfactual_substitutions"],
-            "release_flips": REFERENCE["release_flips"],
-            "release_flips_prior_flagged": REFERENCE["release_flips_prior_flagged"],
-        },
+        "invariance_holds": totals["g_del_changes"] == 0,
     }
-    result["invariance_holds"] = totals["g_del_changes"] == 0
+
+
+def counterfactual_audit(
+    debates: Sequence[Debate],
+    *,
+    methods: Sequence[str] = DETECTORS,
+) -> dict:
+    """Substitution audit over two universes.
+
+    ``paper1_insider`` is the frozen Paper 1 / handoff rule (excluded insiders,
+    candidates ``{A,B}``/``{0,1}``); ``exhaustive_option_space`` replaces every
+    excluded vote with every label in the task option space.  ``g_del`` must be
+    invariant in both because the filter discards every touched vote; the
+    released score is free to move, which is the measurement bug.
+    """
+    paper1 = _audit_universe(debates, paper1_substitution_space, methods)
+    exhaustive = _audit_universe(debates, substitution_space, methods)
+    paper1["reference"] = {
+        "substitutions": REFERENCE["counterfactual_substitutions"],
+        "debates_with_release_flip": REFERENCE["release_flips"],
+        "debates_with_release_flip_prior_flagged": REFERENCE[
+            "release_flips_prior_flagged"
+        ],
+    }
+    paper1["matches_paper1_reference"] = bool(
+        paper1["totals"].get("substitutions") == REFERENCE["counterfactual_substitutions"]
+        and paper1["totals"].get("debates_with_release_flip")
+        == REFERENCE["release_flips"]
+        and paper1["totals"].get("debates_with_release_flip_prior_flagged")
+        == REFERENCE["release_flips_prior_flagged"]
+    )
+    result = dict(exhaustive)
+    result["universes"] = {
+        "paper1_insider": paper1,
+        "exhaustive_option_space": exhaustive,
+    }
+    result["reference"] = paper1["reference"]
     return result
 
 
