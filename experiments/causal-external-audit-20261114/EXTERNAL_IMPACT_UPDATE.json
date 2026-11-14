@@ -1,0 +1,827 @@
+{
+  "as_of": "2026-11-14",
+  "status": "Targeted new primary evidence reviewed; affected external conclusion remains unresolved",
+  "prior_evidence_file": "experiments/contract-checker-20261114/EXTERNAL_EVIDENCE.json",
+  "prior_outcome": {
+    "as_of": "2026-11-14",
+    "scope": "Extension of the preceding public search. Upstream non-main branch trees, public workflow artifacts, external indexed code references and an identified downstream consumer. No outbound communications.",
+    "upstream": {
+      "repo": "OpenDCAI/One-Eval",
+      "audited_main": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "additional_branches": [
+        {
+          "key": "branch/dev",
+          "sha": "4d30d5f4e4fb20d8b816fdd2f3736e7dfa11d106",
+          "truncated": false,
+          "files": 118,
+          "candidates": []
+        },
+        {
+          "key": "branch/feat/reclassify-bench-categories",
+          "sha": "ce8291a4c047dc9b3ea8370eefeeafa11b43eef1",
+          "truncated": false,
+          "files": 161,
+          "candidates": []
+        },
+        {
+          "key": "branch/revert-18-hyh_0214_new",
+          "sha": "1457a87c17ecefac1f8e7ed77027a254a1ee16c7",
+          "truncated": false,
+          "files": 144,
+          "candidates": []
+        }
+      ],
+      "public_workflows": [
+        {
+          "run": 23002964915,
+          "name": "Copilot code review",
+          "artifacts": []
+        },
+        {
+          "run": 22946714426,
+          "name": "Copilot code review",
+          "artifacts": []
+        },
+        {
+          "run": 22851512359,
+          "name": "Copilot code review",
+          "artifacts": []
+        },
+        {
+          "run": 22821615991,
+          "name": "Copilot code review",
+          "artifacts": []
+        },
+        {
+          "run": 21395642995,
+          "name": "Copilot code review",
+          "artifacts": []
+        },
+        {
+          "run": 21036516945,
+          "name": "Copilot code review",
+          "artifacts": []
+        }
+      ],
+      "runtime_ignored_paths": {
+        "source_blob": "6957d53567dd0ad409f8e6c900e66b0eb42301cb",
+        "paths": [
+          "eval_outputs/",
+          "cache/",
+          ".local_state.json",
+          "evalspec*.yaml"
+        ]
+      }
+    },
+    "targeted_index_queries": [
+      {
+        "key": "code/\"OpenDCAI/One-Eval\" -repo:OpenDCAI/One-Eval",
+        "total": 91,
+        "files": [
+          {
+            "repo": "Arnon-hs/open-source",
+            "path": "aiml/opendcai-one-eval.md",
+            "sha": "89c4ad5e742f33c5e7434405fbea8092eae2d525"
+          },
+          {
+            "repo": "tingaicompass/AI-Compass",
+            "path": "weeklyHighlights/37.md",
+            "sha": "a1b40f460d137a1917fea0cf0e56ef8a0ae760c4"
+          },
+          {
+            "repo": "tingaicompass/AI-Compass",
+            "path": "weeklyHighlights/38.md",
+            "sha": "3d76f28ffc78d0e3843f089014e0306cb3c553ab"
+          },
+          {
+            "repo": "tingaicompass/AI-Compass",
+            "path": "2.3 LLM评估框架/2.LLM模型评估.md",
+            "sha": "656f820eb30bfd2549d7e45834e0a45aca3fbaba"
+          },
+          {
+            "repo": "OpenDCAI/Dataflow-LoopAI",
+            "path": "setup.py",
+            "sha": "ca346d4234ef651dc12db515048d64fccdcaef48"
+          },
+          {
+            "repo": "chenlanqing/Java-Programmer",
+            "path": "AI/NLP-模型架构/LLM.md",
+            "sha": "120db5820ba4f2e451676ad977db26717d654d86"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/INDEX.md",
+            "sha": "e738ce3f62f4094852180ad18ed4ab0c9f9a8c1e"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/_structure.txt",
+            "sha": "5c5e1657355f078f3722b1e420abe662c5166627"
+          },
+          {
+            "repo": "1850298154/memory_agent_hub",
+            "path": "readme.md",
+            "sha": "3c7e263e777ae99a38b744bf8d2816cae683a6a2"
+          },
+          {
+            "repo": "OrangeViolin/01fish-llm-radar",
+            "path": "README.md",
+            "sha": "1a7fadd2285853a02751f4f7a8ab5dbaf0f44f77"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/_coverage-check.md",
+            "sha": "9bddfddbf787033484c095dd4bde5396010d2f8c"
+          },
+          {
+            "repo": "danielrosehill/Awesome-AI-Evaluations-Tools",
+            "path": "README.md",
+            "sha": "a0bc1c5dd6257c7a6f13b4f83ad9c27a48666417"
+          },
+          {
+            "repo": "OrangeViolin/01fish-llm-radar",
+            "path": "SKILL.md",
+            "sha": "0289e9e47098677486baf1a4fcec374c4906662a"
+          },
+          {
+            "repo": "snowcatsmoking/SnowCatWeb",
+            "path": "src/config/projects.ts",
+            "sha": "d25f943cff42bcbc4d367a37f3534a59822caaec"
+          },
+          {
+            "repo": "xlabs-club/awesome-x-ops",
+            "path": "README.md",
+            "sha": "6337d61e9937e5c44d6d96b28f4b5334dbb84f49"
+          },
+          {
+            "repo": "snowcatsmoking/SnowCatWeb",
+            "path": "src/lib/terminalFs.ts",
+            "sha": "2e47b395a3e37cdb13fa6c51777e4a42d15def4c"
+          },
+          {
+            "repo": "xlabs-club/awesome-x-ops",
+            "path": "README.zh-CN.md",
+            "sha": "97cb77b219e8b6a28fa98b06f6cb341d73bdf325"
+          },
+          {
+            "repo": "snowcatsmoking/SnowCatWeb",
+            "path": "src/config/publications.ts",
+            "sha": "642839f723c37d706e1ef9761b2d8f31b12ed018"
+          },
+          {
+            "repo": "zwt233/zwt233.github.io",
+            "path": "_pages/projects.md",
+            "sha": "33bab529bf8f0498d5768f112be3ebb704931908"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/7-testing.md",
+            "sha": "3706dbdc8b7fb21c07ae4ebd64e5ebda489f4d98"
+          },
+          {
+            "repo": "OrangeViolin/01fish-llm-radar",
+            "path": "references/bench-gallery.md",
+            "sha": "f9980ec42e047382df2acf152938e423f0819c13"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/6.2-settings-gallery-home-pages.md",
+            "sha": "00d517ac64ba51d165f8bd271427994680e993a1"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/4-metrics-system.md",
+            "sha": "fbdf54bc490eea57c1d3ae7738b0a05eb3edd163"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/8-glossary.md",
+            "sha": "6d29ca225391b124029f254c0d7f86da52a93ddb"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/1-one-eval-overview.md",
+            "sha": "b2cf95a50a57cb04ba4046b1d99534796a668a80"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/2-backend-architecture.md",
+            "sha": "c1ad16bd9283a4e3c650a583b7a8beda9a62c9a9"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/wiki_full.md",
+            "sha": "39da28503c60560f48d885df6fef1d7596c87ef4"
+          },
+          {
+            "repo": "Luvata/arxive",
+            "path": "pages/2026-03-11-cs-cl.html",
+            "sha": "16110a2ab49029cfe4c669bd3d996196e662366b"
+          },
+          {
+            "repo": "hotaru-ritsuki/ai-daily-briefings",
+            "path": "briefings/2026-06-22.md",
+            "sha": "177f2be8a7e8c457078dec8c92d8eb97e0106f34"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/6-frontend-web-application.md",
+            "sha": "f7bd809ab8aca79c78cc2c8eb79cf6835da525fe"
+          },
+          {
+            "repo": "hotaru-ritsuki/ai-daily-briefings",
+            "path": "briefings/2026-05-27.md",
+            "sha": "b04b623c53517bb8929812f8325a1a96886145f4"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/3-evaluation-pipeline-nodes.md",
+            "sha": "348daaa38dcb29486e04bf04fe87bcd43cbd083d"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/2.2-core-state-data-models.md",
+            "sha": "1bdb4ffdd95c49c60b8b02216bce06257c297f34"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/5-benchmark-registry-gallery.md",
+            "sha": "e43ede6703963554492ffeafd3faf35c113cc97a"
+          },
+          {
+            "repo": "hotaru-ritsuki/ai-daily-briefings",
+            "path": "briefings/2026-07-01.md",
+            "sha": "c747865190a0b751ab85d60e6cd5671226762093"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/2.1-fastapi-server-rest-api.md",
+            "sha": "9c7ede97ddbc4eeda332c5bff823aae01fc3aaf2"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/5.2-huggingface-integration.md",
+            "sha": "6dbd7a34087cd1799b68d9395232558a8a992d50"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/2.4-agent-layer-llm-calling.md",
+            "sha": "fd87d8d2e74acd190d9ffef0ce447e974b26b435"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/3.4-scoring-reporting-phase.md",
+            "sha": "7ddedbc2b996953f6d48a02b941e234fdbd67216"
+          },
+          {
+            "repo": "zwt233/zwt233.github.io",
+            "path": "_pages/about.md",
+            "sha": "d0845a1e51d733f823a6967b42b17da52cc40065"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/1.1-getting-started-installation.md",
+            "sha": "ee8cb3131de9ad5f13a44f19286cd23b42f7111b"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/6.4-frontend-build-system-utilities.md",
+            "sha": "19a07c53b46bbd4c9a7d080c82b630d51d240945"
+          },
+          {
+            "repo": "LeombE/github-insight-radar",
+            "path": "reports/daily/2026-07-03-data-scientist.md",
+            "sha": "fba24bc584a780fae735519a33ba1bc57bc99295"
+          },
+          {
+            "repo": "danielrosehill/AI-Eval",
+            "path": "data/awesome-ai-evaluations-tools.md",
+            "sha": "2e41c3a237b19b3ab6e3e079e2a38ad23b74ce19"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/4.1-metric-registry-dispatcher-runner.md",
+            "sha": "6ee21f8ddcfb35a063636508811540378f1ec967"
+          },
+          {
+            "repo": "arthurspk/guiadoconhecimento",
+            "path": "ia/profissoes/qa.md",
+            "sha": "00fb3f1d87a515956dcaaa4143e6bdbd052832b5"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/4.2-built-in-metric-implementations.md",
+            "sha": "5d4dece9828bf82e64358f4d6a44f3f340fc5272"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/5.1-local-bench-gallery-benchregistry.md",
+            "sha": "e68ca034aec85e68a9108103f0fb56ddb0c9a68a"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/2.3-graph-engine-workflow-orchestration.md",
+            "sha": "de8e140446333fc4f6ed41433e9b8fb80459ecbe"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/3.3-execution-phase-dataflow-evaluation.md",
+            "sha": "094690267361f85627eeca6ebaaeacacbbe27a2e"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/1.2-nl2eval-concept-evaluation-pipeline.md",
+            "sha": "9db01ec894807303dde0c301b15bc1d45206ae19"
+          },
+          {
+            "repo": "danielrosehill/Stars-Viewer",
+            "path": "docs/c/llm.html",
+            "sha": "3bdeaf73119029e6917fd8f2c84cc2a5bc0b5280"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/6.1-eval-studio-eval.tsx-evalcomponents.tsx.md",
+            "sha": "13dee7b71db104f126af1830ad2d44010fc43780"
+          },
+          {
+            "repo": "arthurspk/guiadoconhecimento",
+            "path": "i18n/zh/ia/profissoes/qa.md",
+            "sha": "34d86f2bb70ab5f81b3d87a9f37dce80995ca431"
+          },
+          {
+            "repo": "arthurspk/guiadoconhecimento",
+            "path": "i18n/en/ia/profissoes/qa.md",
+            "sha": "0a4eb353a9c8db4b7f8f3fd435f2b592ad03f3ec"
+          },
+          {
+            "repo": "arthurspk/guiadoconhecimento",
+            "path": "i18n/it/ia/profissoes/qa.md",
+            "sha": "bca347252c6cce1990cb10d593c7f73a7678508b"
+          },
+          {
+            "repo": "arthurspk/guiadoconhecimento",
+            "path": "i18n/de/ia/profissoes/qa.md",
+            "sha": "d49c512c28c1fefcf8faabfd42caccc4a10300a1"
+          },
+          {
+            "repo": "arthurspk/guiadoconhecimento",
+            "path": "i18n/es/ia/profissoes/qa.md",
+            "sha": "bcda6052a112d56cedc971e0277f249530b71754"
+          },
+          {
+            "repo": "arthurspk/guiadoconhecimento",
+            "path": "i18n/ko/ia/profissoes/qa.md",
+            "sha": "4e29337872e54049813db151b48f616f0021ba1d"
+          },
+          {
+            "repo": "arthurspk/guiadoconhecimento",
+            "path": "i18n/fr/ia/profissoes/qa.md",
+            "sha": "f66a28d2f38600d7be0450e32118dd149b39aa14"
+          },
+          {
+            "repo": "arthurspk/guiadoconhecimento",
+            "path": "i18n/ar/ia/profissoes/qa.md",
+            "sha": "ddd7c8cdb15cd0e619ddcb8a15482b65811c99e7"
+          },
+          {
+            "repo": "arthurspk/guiadoconhecimento",
+            "path": "i18n/ja/ia/profissoes/qa.md",
+            "sha": "5e155796acd873ecc86190e300a2f9f58abad35b"
+          },
+          {
+            "repo": "arthurspk/guiadoconhecimento",
+            "path": "i18n/ru/ia/profissoes/qa.md",
+            "sha": "129f07cd1975e6519fe41b59a0e6fcb1f1ebdbba"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/6.3-report-visualization-reportcomponents.tsx.md",
+            "sha": "ebc220b1793fdf1cdc186271f542cde85d723185"
+          },
+          {
+            "repo": "2404589803/hf-daily-paper-newsletter-chinese",
+            "path": "Paper_metadata_download/2026-03-18.json",
+            "sha": "d269d32c3b625ffb26450b86e652f9c300679d33"
+          },
+          {
+            "repo": "rpj-score/dqt-validation",
+            "path": "agentic_hinaing_eval/research_basis.py",
+            "sha": "d3224d417094f998ac1e61181e4dbe78f3ee7d96"
+          },
+          {
+            "repo": "zwt233/zwt233.github.io",
+            "path": "index.html",
+            "sha": "bfb99de6c0da1f83b60481b448de05f32ee20aeb"
+          },
+          {
+            "repo": "danielrosehill/Awesome-AI-Evaluations-Tools",
+            "path": "data/repos.csv",
+            "sha": "ed8ccb714394891bb50398e546965fa5ca819711"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/3.2-preparation-phase-dataset-download-configuration.md",
+            "sha": "2f154fd2e6c61728bbe8bf7d2c050f3ab32a253e"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/3.1-discovery-phase-query-understanding-benchmark-search.md",
+            "sha": "6b18a5fc66aa20a79069eedfa5b98f75d47a7cf0"
+          },
+          {
+            "repo": "Qmeiyi/qmeiyi.github.io",
+            "path": "src/data/publications.bib",
+            "sha": "04f99f0e26b169ab0cc9ecfc67078558b0506734"
+          },
+          {
+            "repo": "AtharvaDomale/Daily-HuggingFace-AI-Papers",
+            "path": "data/weekly/2026-W11.json",
+            "sha": "723eaa389765a5fe741dcb9f2f9bd6e683130dfe"
+          },
+          {
+            "repo": "AtharvaDomale/Daily-HuggingFace-AI-Papers",
+            "path": "data/daily/2026-03-19.json",
+            "sha": "d56e9daa74d15b78208ba1c3c67df608a7a78607"
+          },
+          {
+            "repo": "CMander02/DailyAgentPapers",
+            "path": "data/2026/03/10/one-eval-an-agentic-system-for-automated-and-traceable-llm-evaluation.md",
+            "sha": "ec62f2c4010048e778aa155a97e6659c305f8b76"
+          },
+          {
+            "repo": "2404589803/hf-daily-paper-newsletter-multilingual",
+            "path": "Paper_metadata_download/2026-03-18.json",
+            "sha": "aa0d28313eae6746c391994e1bc1297dbace2ab1"
+          },
+          {
+            "repo": "sxwedo/yiya",
+            "path": "raw/articles/Datawhale/AI 数据最难搞的 Harness 工程，被北大开源了！.md",
+            "sha": "982385b9f4540ac8cc8c80eab89e40cae3293836"
+          },
+          {
+            "repo": "CMander02/DailyAgentPapers",
+            "path": "data/2026/03/10/papers.json",
+            "sha": "2e20a9abab069f8cce90662713a8b14d16d68017"
+          },
+          {
+            "repo": "LukaHobor/benchmark_explorer",
+            "path": "pipeline/data/benchmarks/opendcai_one_eval.json",
+            "sha": "7805819fe949282621083ce228e8b87677e6ee2a"
+          },
+          {
+            "repo": "danielrosehill/Stars-Viewer",
+            "path": "llm_categories.json",
+            "sha": "7299839ebb735eb4460422d3fbe69a96b3b8cdf0"
+          },
+          {
+            "repo": "donyelqt/Hinaing",
+            "path": "docs/stress-tested-eval-former-senior-software-engineer-ibm/VALIDATION_TOOL_FILLED.md",
+            "sha": "62a73a7af504ef2cd1eaef85ce8505511b1ae4c5"
+          },
+          {
+            "repo": "senna-lang/arxiv-compass",
+            "path": "data/20260312.json",
+            "sha": "23a4ab8d4d136df52fb5814c3be1d5c67a07e24d"
+          },
+          {
+            "repo": "Senmo996/hugginggface_daily_paper",
+            "path": "data/daily/2026-03-18.json",
+            "sha": "f695f88ce2f12ccef0fa20eb3e01abcfecc0626b"
+          },
+          {
+            "repo": "BargLabs/cejel",
+            "path": "calibration/llm/results/v1.5-cycle-reset.json",
+            "sha": "8cd28b6ee1eb7bb5a1f2f2eeb896ca1f6c29a042"
+          },
+          {
+            "repo": "BargLabs/cejel",
+            "path": "calibration/llm/results/v1.6-cycle-reset.json",
+            "sha": "13760fadc74aebfc7500e98871fddb0395ca5305"
+          },
+          {
+            "repo": "BargLabs/cejel",
+            "path": "calibration/llm/results/v1.7-cycle-reset.json",
+            "sha": "46f972db9da8ea9122e7993a79223bb08ebeabc6"
+          },
+          {
+            "repo": "BargLabs/cejel",
+            "path": "calibration/llm/results/v1.8-cycle-reset.json",
+            "sha": "ddd4e1ac76f87683b587f2fbee1da8798fb2c87e"
+          },
+          {
+            "repo": "BargLabs/cejel",
+            "path": "calibration/llm/results/v1.9-cycle-reset.json",
+            "sha": "d6cc88563afb06008ec3e4e5deecbdb097aba448"
+          },
+          {
+            "repo": "bact/opentaig",
+            "path": "curation/state/search_raw/llm-agent-benchmark.json",
+            "sha": "4dad89676711edbf08d8a757332ad1dfe2f19cc9"
+          },
+          {
+            "repo": "LeombE/github-insight-radar",
+            "path": "data/processed/2026-07-03-github-insight-projects.csv",
+            "sha": "9714d9e19d69ea2ef34905d820f6f95661281d61"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/7.1-workflow-integration-tests.md",
+            "sha": "0c3e91b505e51194d720c90c1b06e5abb17b7f43"
+          },
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/deepwiki/7.2-unit-tests-metrics-hf-tools-registry.md",
+            "sha": "6cbc19e7c16ce1d83624e4fb937b95d0f535d16d"
+          }
+        ]
+      },
+      {
+        "key": "code/\"one-eval-skill\" \"eval_results\" -repo:OpenDCAI/One-Eval",
+        "total": 1,
+        "files": [
+          {
+            "repo": "leemiracle/work4ai",
+            "path": "讲透宇宙/05-侦/讲透OpenDCAI/One-Eval/explain/03-metrics-system.md",
+            "sha": "3b2b8992c1597176c7b1f7e87f70027876082c73"
+          }
+        ]
+      },
+      {
+        "key": "code/\"dataflow_score\" \"sciq\" filename:eval_results.json",
+        "total": 0,
+        "files": []
+      },
+      {
+        "key": "code/\"dataflow_score\" \"winogrande\" filename:eval_results.json",
+        "total": 0,
+        "files": []
+      }
+    ],
+    "identified_downstream": {
+      "repository": "OrangeViolin/01fish-llm-radar",
+      "commit": "2a3c915665514a2b7f2ccd1068047c4d176ba841",
+      "source_blobs": [
+        {
+          "path": "SKILL.md",
+          "sha": "0289e9e47098677486baf1a4fcec374c4906662a"
+        },
+        {
+          "path": "README.md",
+          "sha": "1a7fadd2285853a02751f4f7a8ab5dbaf0f44f77"
+        },
+        {
+          "path": "references/bench-gallery.md",
+          "sha": "f9980ec42e047382df2acf152938e423f0819c13"
+        },
+        {
+          "path": "scripts/benches.py",
+          "sha": "b49028d8261d40eba2fa4644813f4723dec2ca88"
+        },
+        {
+          "path": "scripts/runner.py",
+          "sha": "b8a4f8e461480e81726c7244357a4fea035d9248"
+        },
+        {
+          "path": ".gitignore",
+          "sha": "391fb1b24bf77e6b3efaca7223158f0e5db8cc85"
+        }
+      ],
+      "head_tree_files": 16,
+      "branches": [
+        "main"
+      ],
+      "public_workflows": 0,
+      "paper_or_report_claim": "README reports a 19-model comparison and states raw per-question results remain in a local results directory.",
+      "benchmark_names": [
+        "gsm8k",
+        "math",
+        "mmlu",
+        "mmlu-pro",
+        "ceval",
+        "ifeval",
+        "humaneval"
+      ],
+      "overlap_with_audited_faulty_benchmark_families": [],
+      "execution_path": "Own loaders, prompt construction, parsers and scorer, with stated use of One-Eval benchmark configuration as a reference.",
+      "released_per_question_run_records_found": false,
+      "conclusion": "External use of configuration ideas is documented. An affected execution of the identified One-Eval code paths has not been established."
+    },
+    "other_candidates": [
+      {
+        "repo": "rpj-score/dqt-validation",
+        "path": "agentic_hinaing_eval/research_basis.py",
+        "sha": "d3224d417094f998ac1e61181e4dbe78f3ee7d96",
+        "disposition": "Citation or methodological inspiration for reporting. No evidence of the affected benchmark code path."
+      },
+      {
+        "repo": "donyelqt/Hinaing",
+        "path": "docs/stress-tested-eval-former-senior-software-engineer-ibm/VALIDATION_TOOL_FILLED.md",
+        "sha": "62a73a7af504ef2cd1eaef85ce8505511b1ae4c5",
+        "disposition": "Citation or methodological inspiration for reporting. No evidence of the affected benchmark code path."
+      },
+      {
+        "repo": "BargLabs/cejel",
+        "path": "calibration/llm/results/v1.9-cycle-reset.json",
+        "sha": "d6cc88563afb06008ec3e4e5deecbdb097aba448",
+        "disposition": "Repository name inside a calibration selection list. No One-Eval evaluation trace."
+      }
+    ],
+    "independently_affected_run_verified": false,
+    "missing_evidence": "Original effective run configuration, prompts and per-question responses linked to a reported score for an affected native path.",
+    "search_limits": "Indexed public references and inspected branches only. Runtime artifacts are explicitly ignored in upstream and downstream repositories. This search cannot estimate private/local deployment frequency.",
+    "no_new_provider_inferences": true
+  },
+  "new_primary_leads": [
+    {
+      "lead": "One-Eval primary paper",
+      "url": "https://arxiv.org/html/2603.09821v1",
+      "version": "2603.09821v1",
+      "sections": [
+        "3.2",
+        "4.2"
+      ],
+      "finding": "The reported100-request experiment ends after preparation and before model evaluation. Published99/85/84percent values measure plan/pipeline checkpoints. The inspected article does not identify an original affected model-score conclusion with matching request/response artifacts.",
+      "disposition": "Useful definition of the experimental endpoint; no confirmed affected score from this paper."
+    },
+    {
+      "lead": "Dataflow-LoopAI public runtime log",
+      "repository": "OpenDCAI/Dataflow-LoopAI",
+      "commit": "30d078f36bb95508088f0ea229cbd804105b41f9",
+      "path": "examples/scripts/one_eval.log",
+      "blob": "8f34ed16618f7c3f3a69d6e5748915cf222f47c9",
+      "finding": "Public April17–18 runtime entries reach DataFlowEvalTool generation and evaluation for general_text_eval and gsm8k. This is concrete external execution evidence for the component, beyond citation or gallery reuse.",
+      "missing": [
+        "One-Eval executable revision",
+        "An execution of one of the identified affected contracts",
+        "Per-question request/response capture and linked reported conclusion"
+      ],
+      "disposition": "External component execution confirmed; known faulty configurations and affected conclusion unresolved."
+    },
+    {
+      "lead": "One-Eval seed leaderboard reference file",
+      "repository": "OpenDCAI/One-Eval",
+      "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+      "path": "one-eval-skill/references/leaderboard_scores.json",
+      "blob": "615fe3275f174445775b25957b2c6a927829a5af",
+      "finding": "Header describes manually maintained scores from external source model cards/papers, with settings and dates. This file supplies reference scores rather than original affected One-Eval run captures.",
+      "disposition": "No matching original affected run in this artifact."
+    }
+  ],
+  "new_queries": [
+    {
+      "query": "\"_normalize_choices_value\" \"DataFlowEvalTool\" -repo:OpenDCAI/One-Eval",
+      "total": 0,
+      "scope": "GitHub indexed code"
+    },
+    {
+      "query": "\"one_eval\" \"winogrande\" -repo:OpenDCAI/One-Eval",
+      "total": 8,
+      "review": [
+        {
+          "repository": "ianarawjo/evalstats",
+          "path": "simulations/collect_inspect_benchmarks.py",
+          "indexed_blob": "51bd0cfb881a199312e96ef17444d7678659832f",
+          "fetched_blob": "51bd0cfb881a199312e96ef17444d7678659832f",
+          "indexed_blob_matches": true,
+          "framework_imports": [],
+          "explicit_project_reference": [],
+          "one_eval_uses": [
+            "def run_one_eval(",
+            "                records, eval_est_cost_usd = run_one_eval("
+          ],
+          "error": null
+        },
+        {
+          "repository": "styfeng/TinyDialogues",
+          "path": "LexiContrastiveGrd/src/llm_devo/analysis/use_lm_eval.py",
+          "indexed_blob": "31a31c9595da711701feb81628f1ba0736f552c9",
+          "fetched_blob": "31a31c9595da711701feb81628f1ba0736f552c9",
+          "indexed_blob_matches": true,
+          "framework_imports": [],
+          "explicit_project_reference": [],
+          "one_eval_uses": [
+            "    def do_one_eval(self, task_dict=None):",
+            "            results = self.do_one_eval()",
+            "                results = self.do_one_eval()"
+          ],
+          "error": null
+        },
+        {
+          "repository": "styfeng/TinyDialogues",
+          "path": "LexiContrastiveGrd/src/llm_devo/analysis/use_lm_eval_backup.py",
+          "indexed_blob": "2bc213df944f83ed256eacd50ae85fd1f155c6b9",
+          "fetched_blob": "2bc213df944f83ed256eacd50ae85fd1f155c6b9",
+          "indexed_blob_matches": true,
+          "framework_imports": [],
+          "explicit_project_reference": [],
+          "one_eval_uses": [
+            "    def do_one_eval(self, task_dict=None):",
+            "            results = self.do_one_eval()",
+            "                results = self.do_one_eval()"
+          ],
+          "error": null
+        },
+        {
+          "repository": "EvLab-MIT/LexiContrastiveGrd",
+          "path": "src/llm_devo/analysis/use_lm_eval.py",
+          "indexed_blob": "2bc213df944f83ed256eacd50ae85fd1f155c6b9",
+          "fetched_blob": "2bc213df944f83ed256eacd50ae85fd1f155c6b9",
+          "indexed_blob_matches": true,
+          "framework_imports": [],
+          "explicit_project_reference": [],
+          "one_eval_uses": [
+            "    def do_one_eval(self, task_dict=None):",
+            "            results = self.do_one_eval()",
+            "                results = self.do_one_eval()"
+          ],
+          "error": null
+        },
+        {
+          "repository": "lindazeng979/bilingual-babyLM",
+          "path": "BL_training/LexiContrastiveGrd/src/llm_devo/analysis/use_lm_eval.py",
+          "indexed_blob": "31a31c9595da711701feb81628f1ba0736f552c9",
+          "fetched_blob": "31a31c9595da711701feb81628f1ba0736f552c9",
+          "indexed_blob_matches": true,
+          "framework_imports": [],
+          "explicit_project_reference": [],
+          "one_eval_uses": [
+            "    def do_one_eval(self, task_dict=None):",
+            "            results = self.do_one_eval()",
+            "                results = self.do_one_eval()"
+          ],
+          "error": null
+        },
+        {
+          "repository": "lindazeng979/bilingual-babyLM",
+          "path": "BL_training/LexiContrastiveGrd/src/llm_devo/analysis/use_lm_eval_backup.py",
+          "indexed_blob": "2bc213df944f83ed256eacd50ae85fd1f155c6b9",
+          "fetched_blob": "2bc213df944f83ed256eacd50ae85fd1f155c6b9",
+          "indexed_blob_matches": true,
+          "framework_imports": [],
+          "explicit_project_reference": [],
+          "one_eval_uses": [
+            "    def do_one_eval(self, task_dict=None):",
+            "            results = self.do_one_eval()",
+            "                results = self.do_one_eval()"
+          ],
+          "error": null
+        },
+        {
+          "repository": "keverage-guan/gtca",
+          "path": "slurm/old/eval.slurm",
+          "indexed_blob": "5957ee87cb08e16e2cf5894eef77bd183d63ede7",
+          "fetched_blob": "5957ee87cb08e16e2cf5894eef77bd183d63ede7",
+          "indexed_blob_matches": true,
+          "framework_imports": [],
+          "explicit_project_reference": [],
+          "one_eval_uses": [
+            "        --output_predictions \"backbone_eval_preds/${task}.jsonl\""
+          ],
+          "error": null
+        },
+        {
+          "repository": "keverage-guan/gtca",
+          "path": "slurm/old/dep_eval.slurm",
+          "indexed_blob": "a9f8c49561787d5a632bc4fc6fc06ac2f6651075",
+          "fetched_blob": "a9f8c49561787d5a632bc4fc6fc06ac2f6651075",
+          "indexed_blob_matches": true,
+          "framework_imports": [],
+          "explicit_project_reference": [],
+          "one_eval_uses": [
+            "        --output_predictions \"dep_backbone_eval_preds/${task}.jsonl\" \\"
+          ],
+          "error": null
+        }
+      ],
+      "disposition": "All eight retrieved file blobs checked. Matches use generic run_one_eval/do_one_eval identifiers or output path substrings. None contains direct one_eval imports or an explicit One-Eval project reference."
+    },
+    {
+      "query": "\"OpenDCAI/One-Eval\" \"eval_outputs\" -repo:OpenDCAI/One-Eval",
+      "total": 0,
+      "scope": "GitHub indexed code"
+    }
+  ],
+  "retained_errors": [
+    {
+      "operation": "GitHub forks collection through connector fetch",
+      "result": "400 endpoint rejected; forks were not enumerated."
+    },
+    {
+      "operation": "Project homepage through web retrieval",
+      "url": "https://ericciregyz.github.io/One-Eval/",
+      "result": "Page inaccessible on this retrieval."
+    },
+    {
+      "operation": "Initial native file lookup",
+      "path": "one_eval/toolkits/tools/dataflow_eval_tool.py",
+      "result": "404. Correct tree-resolved path one_eval/toolkits/dataflow_eval_tool.py subsequently retrieved with expected blob."
+    }
+  ],
+  "independently_affected_run_verified": false,
+  "external_component_execution_verified": true,
+  "next_target": "Follow a new original report or trace for a specifically affected native contract, including effective configuration, executable revision and the delivered request/response or equivalent original artifact. The observed LoopAI log is for other task configurations.",
+  "inference_calls": 0,
+  "outbound_communications": 0,
+  "limits": "Public artifacts and bounded indexed searches only. Missing public evidence does not establish absence of affected private runs."
+}
+

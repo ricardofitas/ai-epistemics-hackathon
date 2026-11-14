@@ -1,0 +1,55 @@
+{
+  "source_rows_reused": 633,
+  "gallery_git_blob": "67e88a261cf481933df1464aef2c60502931d8f7",
+  "panels": [
+    {
+      "bench": "winogrande",
+      "rows_selected": 100,
+      "source_rows": 1267,
+      "source_compressed_sha256": "b9c077f154b273ce614693a2bd53e7ceb00cf3848eda238492926b95438c4265",
+      "prior_captured_sources": true
+    },
+    {
+      "bench": "sciq",
+      "rows_selected": 100,
+      "source_rows": 1000,
+      "source_compressed_sha256": "1fcd6304a0cddcb7110e6ec3648461d9344ae5148bac2bcd1b54d2a1ae5a7ca3",
+      "prior_captured_sources": true
+    },
+    {
+      "bench": "lab-bench-language-agent-biology-benchmark",
+      "rows_selected": 33,
+      "source_rows": 33,
+      "source_compressed_sha256": "03a56347edd589a863dd1d7b8d9a3da98db3855baba29fa0b54a66ef1bb36a87",
+      "prior_captured_sources": true
+    },
+    {
+      "bench": "arc-challenge",
+      "rows_selected": 100,
+      "source_rows": 1172,
+      "source_compressed_sha256": "f0da21279c1aa94dd6d69d0a2829b0f706b11e2386e8465a0c9c0a20ada5ad58",
+      "prior_captured_sources": true
+    },
+    {
+      "bench": "openbookqa",
+      "rows_selected": 100,
+      "source_rows": 500,
+      "source_compressed_sha256": "fa6422643e5cefd49773983742172798b6a51cdfba418df327bdf5b6503fdb1d",
+      "prior_captured_sources": true
+    },
+    {
+      "bench": "medmcqa",
+      "rows_selected": 100,
+      "source_rows": 4183,
+      "source_compressed_sha256": "fa76a9ccfcafd630cde0e9a2b48af34c7204608e45ea0f6b92f50be94fc44113",
+      "prior_captured_sources": true
+    },
+    {
+      "bench": "mmlu",
+      "rows_selected": 100,
+      "source_rows": 14042,
+      "source_compressed_sha256": "41f3a836ab16d339ea0c3fd4e728c78d7740aa05473ce08d4a764dd7c1111ce0",
+      "prior_captured_sources": true
+    }
+  ]
+}

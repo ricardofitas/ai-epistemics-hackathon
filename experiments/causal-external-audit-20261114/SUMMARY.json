@@ -1,0 +1,408 @@
+{
+  "status": "complete",
+  "scope": "Post-discovery causal diagnosis of previously captured cases. All natural fault families were known before this protocol. No independent blind validation or population prevalence estimate.",
+  "source_rows_reused": 633,
+  "condition_records": 3798,
+  "provider_model_requests": 0,
+  "errors": [],
+  "panels": {
+    "winogrande": {
+      "native": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 0,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "bind_source_symbols": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "decode_parallel_choices": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 0,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "both_shared_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "lab_complete_options": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 0,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "all_input_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      }
+    },
+    "sciq": {
+      "native": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 90,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "bind_source_symbols": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 90,
+        "declared_context_bound": 90,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "decode_parallel_choices": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 90,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "both_shared_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 90,
+        "declared_context_bound": 90,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "lab_complete_options": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 90,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "all_input_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 90,
+        "declared_context_bound": 90,
+        "choices_preserved": 100,
+        "gold_present": 100
+      }
+    },
+    "lab-bench-language-agent-biology-benchmark": {
+      "native": {
+        "rows": 33,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 33,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 0,
+        "gold_present": 0
+      },
+      "bind_source_symbols": {
+        "rows": 33,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 33,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 0,
+        "gold_present": 0
+      },
+      "decode_parallel_choices": {
+        "rows": 33,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 33,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 0,
+        "gold_present": 0
+      },
+      "both_shared_repairs": {
+        "rows": 33,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 33,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 0,
+        "gold_present": 0
+      },
+      "lab_complete_options": {
+        "rows": 33,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 33,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 33,
+        "gold_present": 33
+      },
+      "all_input_repairs": {
+        "rows": 33,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 33,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 33,
+        "gold_present": 33
+      }
+    },
+    "arc-challenge": {
+      "native": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 0,
+        "gold_present": 0
+      },
+      "bind_source_symbols": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 0,
+        "gold_present": 0
+      },
+      "decode_parallel_choices": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "both_shared_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "lab_complete_options": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 0,
+        "gold_present": 0
+      },
+      "all_input_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      }
+    },
+    "openbookqa": {
+      "native": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 0,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 0,
+        "gold_present": 0
+      },
+      "bind_source_symbols": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 0,
+        "gold_present": 0
+      },
+      "decode_parallel_choices": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 0,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "both_shared_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "lab_complete_options": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 0,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 0,
+        "gold_present": 0
+      },
+      "all_input_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      }
+    },
+    "medmcqa": {
+      "native": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "bind_source_symbols": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "decode_parallel_choices": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "both_shared_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "lab_complete_options": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "all_input_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      }
+    },
+    "mmlu": {
+      "native": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "bind_source_symbols": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "decode_parallel_choices": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "both_shared_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "lab_complete_options": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      },
+      "all_input_repairs": {
+        "rows": 100,
+        "recording_sink_batch_calls": 1,
+        "question_bound": 100,
+        "declared_nonempty_context": 0,
+        "declared_context_bound": 0,
+        "choices_preserved": 100,
+        "gold_present": 100
+      }
+    }
+  },
+  "limits": [
+    "Previously observed source units and mechanisms; no new natural failure discovery or prevalence estimate.",
+    "Data-only AST method replay with a local recording sink; model/tokenizer/network transport excluded.",
+    "Input repairs do not test or repair reference parsing, metric computation, option randomization or task-population validity.",
+    "Mapped context preservation measures the declared configuration, rather than proving that context is required for every source task."
+  ]
+}

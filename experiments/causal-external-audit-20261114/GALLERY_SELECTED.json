@@ -1,0 +1,2150 @@
+{
+  "winogrande": {
+    "bench_name": "winogrande",
+    "bench_table_exist": true,
+    "bench_source_url": "https://huggingface.co/datasets/allenai/winogrande",
+    "bench_dataflow_eval_type": "key3_q_choices_a",
+    "bench_prompt_template": null,
+    "bench_keys": [
+      "sentence",
+      "option1",
+      "option2",
+      "answer"
+    ],
+    "meta": {
+      "bench_name": "winogrande",
+      "source": "bench_item_list",
+      "aliases": [
+        "winogrande",
+        "Winogrande"
+      ],
+      "category": "Reasoning",
+      "tags": [
+        "language & reasoning",
+        "reasoning"
+      ],
+      "description": "Fill-in-a-blank tasks resolving ambiguities in pronoun references with binary options.",
+      "hf_meta": {
+        "bench_name": "winogrande",
+        "hf_repo": "allenai/winogrande",
+        "card_text": "Fill-in-a-blank tasks resolving ambiguities in pronoun references with binary options.",
+        "tags": [
+          "language & reasoning"
+        ],
+        "exists_on_hf": true
+      },
+      "structure": {
+        "repo_id": "allenai/winogrande",
+        "revision": null,
+        "subsets": [
+          {
+            "subset": "winogrande_debiased",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              },
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "winogrande_l",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              },
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "winogrande_m",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              },
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "winogrande_s",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              },
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "winogrande_xl",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              },
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "winogrande_xs",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              },
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          }
+        ],
+        "ok": true,
+        "error": null
+      },
+      "download_config": {
+        "config": "winogrande_xl",
+        "split": "test",
+        "reason": "选择 'winogrande_xl' 因为它通常是最大和最全面的版本，提供更多的数据用于评测。选择 'test' 因为它是评测任务的首选 split。"
+      },
+      "key_mapping": {
+        "input_question_key": "sentence",
+        "input_choices_key": [
+          "option1",
+          "option2"
+        ],
+        "input_label_key": "answer"
+      },
+      "key_mapping_reason": "数据集中有一个句子和两个选项，其中一个是正确答案，适合选择题：单正确类型。",
+      "description_zh": "代词指代消解",
+      "radar_dimensions": [
+        "reasoning"
+      ],
+      "evaluation": {
+        "score_source": "metric_stage",
+        "official_metric": "acc",
+        "primary_metric": "choice_accuracy",
+        "denominator": "total",
+        "prediction_mode": "generation",
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-B",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "option1",
+            "option2"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        }
+      },
+      "prompt": {
+        "source": "gallery",
+        "template_id": "winogrande_contract_v1",
+        "system_prompt": "",
+        "user_template": "{sentence}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-B",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "few_shot": {
+          "enabled": false,
+          "num_shots": 0,
+          "source_split": null
+        },
+        "generation": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "max_tokens": 2048,
+          "stop": []
+        }
+      },
+      "readiness": {
+        "status": "reference_mapped",
+        "smoke_passed": false,
+        "golden_cases": null,
+        "known_limitations": [
+          "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+        ]
+      }
+    }
+  },
+  "sciq": {
+    "bench_name": "sciq",
+    "bench_table_exist": true,
+    "bench_source_url": "https://huggingface.co/datasets/allenai/sciq",
+    "bench_dataflow_eval_type": "key3_q_choices_a",
+    "bench_prompt_template": null,
+    "bench_keys": [
+      "question",
+      "distractor3",
+      "distractor1",
+      "distractor2",
+      "correct_answer",
+      "support"
+    ],
+    "meta": {
+      "bench_name": "sciq",
+      "source": "bench_item_list",
+      "aliases": [
+        "sciq",
+        "SciQ"
+      ],
+      "category": "Knowledge & QA",
+      "tags": [
+        "knowledge",
+        "knowledge & qa"
+      ],
+      "description": "Multiple choice science exam questions.",
+      "hf_meta": {
+        "bench_name": "sciq",
+        "hf_repo": "allenai/sciq",
+        "card_text": "Multiple choice science exam questions.",
+        "tags": [
+          "knowledge"
+        ],
+        "exists_on_hf": true
+      },
+      "structure": {
+        "repo_id": "allenai/sciq",
+        "revision": null,
+        "subsets": [
+          {
+            "subset": "default",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "test",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          }
+        ],
+        "ok": true,
+        "error": null
+      },
+      "download_config": {
+        "config": "default",
+        "split": "test",
+        "reason": "选择了 default config，因为这是唯一可用的配置，也是通常的主配置。选择了 test split，因为测试集是评测的最佳选择。"
+      },
+      "key_mapping": {
+        "input_question_key": "question",
+        "input_choices_key": [
+          "correct_answer",
+          "distractor1",
+          "distractor2",
+          "distractor3"
+        ],
+        "input_label_key": "correct_answer",
+        "input_context_key": "support"
+      },
+      "key_mapping_reason": "数据集包含问题（question）和多个选择项，其中一个是正确答案（correct_answer），这符合选择题：单正确的结构。此外，还有一个可能提供额外信息的字段（support），作为上下文进行映射。",
+      "description_zh": "科学考试多选题",
+      "radar_dimensions": [
+        "knowledge",
+        "reasoning"
+      ],
+      "evaluation": {
+        "score_source": "metric_stage",
+        "official_metric": "acc_norm",
+        "primary_metric": "choice_accuracy",
+        "denominator": "total",
+        "prediction_mode": "generation",
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "correct_answer",
+            "distractor1",
+            "distractor2",
+            "distractor3"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        }
+      },
+      "prompt": {
+        "source": "gallery",
+        "template_id": "sciq_contract_v1",
+        "system_prompt": "",
+        "user_template": "Context:\n{support}\n\nQuestion:\n{question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "few_shot": {
+          "enabled": false,
+          "num_shots": 0,
+          "source_split": null
+        },
+        "generation": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "max_tokens": 1024,
+          "stop": []
+        }
+      },
+      "readiness": {
+        "status": "reference_mapped",
+        "smoke_passed": false,
+        "golden_cases": null,
+        "known_limitations": [
+          "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+        ]
+      }
+    }
+  },
+  "lab-bench-language-agent-biology-benchmark": {
+    "bench_name": "lab-bench-language-agent-biology-benchmark",
+    "bench_table_exist": true,
+    "bench_source_url": "https://huggingface.co/datasets/futurehouse/lab-bench",
+    "bench_dataflow_eval_type": "key3_q_choices_a",
+    "bench_prompt_template": null,
+    "bench_keys": [
+      "id",
+      "question",
+      "ideal",
+      "distractors",
+      "canary",
+      "source",
+      "subtask"
+    ],
+    "meta": {
+      "bench_name": "lab-bench-language-agent-biology-benchmark",
+      "source": "bench_item_list",
+      "aliases": [
+        "lab-bench-language-agent-biology-benchmark",
+        "LAB-Bench (Language Agent Biology Benchmark)",
+        "lab-bench-language-agent..."
+      ],
+      "category": "Domain-Specific",
+      "tags": [
+        "domain-specific"
+      ],
+      "description": "An evaluation dataset for AI systems intended to benchmark capabilities foundational to scientific research in biology.",
+      "hf_meta": {
+        "bench_name": "lab-bench-language-agent-biology-benchmark",
+        "hf_repo": "futurehouse/lab-bench",
+        "card_text": "An evaluation dataset for AI systems intended to benchmark capabilities foundational to scientific research in biology.",
+        "tags": [
+          "domain-specific"
+        ],
+        "exists_on_hf": true
+      },
+      "structure": {
+        "repo_id": "futurehouse/lab-bench",
+        "revision": null,
+        "subsets": [
+          {
+            "subset": "CloningScenarios",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "DbQA",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "FigQA",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "LitQA2",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "ProtocolQA",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "SeqQA",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "SuppQA",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "TableQA",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          }
+        ],
+        "ok": true,
+        "error": null
+      },
+      "download_config": {
+        "config": "CloningScenarios",
+        "split": "train",
+        "reason": "所有子集均只有 'train' 划分，因此根据默认规则选择列表中的第一个子集 'CloningScenarios'。并给出警告，因无评测划分。"
+      },
+      "key_mapping": {
+        "input_question_key": "question",
+        "input_choices_key": "distractors",
+        "input_label_key": "ideal",
+        "input_context_key": "source"
+      },
+      "key_mapping_reason": "该数据集包含一个问题字段(question)和干扰选项字段(distractors)，以及一个理想答案字段(ideal)，表明这是一个选择题类型数据集，具有单一正确答案。此外，字段(source)可以作为上下文信息，这与key3_q_choices_a类型的格式相匹配。",
+      "description_zh": "自动化科学研究基础能力",
+      "radar_dimensions": [
+        "instruction",
+        "knowledge",
+        "reasoning"
+      ],
+      "evaluation": {
+        "score_source": "metric_stage",
+        "official_metric": "accuracy",
+        "primary_metric": "choice_accuracy",
+        "denominator": "total",
+        "prediction_mode": "generation",
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choices_key": "distractors"
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        }
+      },
+      "prompt": {
+        "source": "gallery",
+        "template_id": "lab-bench-language-agent-biology-benchmark_contract_v1",
+        "system_prompt": "",
+        "user_template": "Context:\n{source}\n\nQuestion:\n{question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "few_shot": {
+          "enabled": false,
+          "num_shots": 0,
+          "source_split": null
+        },
+        "generation": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "max_tokens": 1024,
+          "stop": []
+        }
+      },
+      "readiness": {
+        "status": "contract_inferred",
+        "smoke_passed": false,
+        "golden_cases": null,
+        "known_limitations": [
+          "No direct lm-eval YAML match was found; contract fields are inferred from the requested bench list."
+        ]
+      }
+    }
+  },
+  "arc-challenge": {
+    "bench_name": "arc-challenge",
+    "bench_table_exist": true,
+    "bench_source_url": "https://huggingface.co/datasets/allenai/ai2_arc",
+    "bench_dataflow_eval_type": "key3_q_choices_a",
+    "bench_prompt_template": null,
+    "bench_keys": [
+      "id",
+      "question",
+      "choices",
+      "answerKey"
+    ],
+    "meta": {
+      "bench_name": "arc-challenge",
+      "source": "bench_item_list",
+      "aliases": [
+        "arc-challenge",
+        "ARC-Challenge",
+        "ARC-c"
+      ],
+      "category": "Reasoning",
+      "tags": [
+        "reasoning",
+        "science"
+      ],
+      "description": "ARC Challenge Set: 1172 difficult science exam questions requiring reasoning beyond simple retrieval, from the AI2 Reasoning Challenge.",
+      "hf_meta": {
+        "bench_name": "arc-challenge",
+        "hf_repo": "allenai/ai2_arc",
+        "card_text": "AI2 Reasoning Challenge - Challenge Set: hard science questions.",
+        "tags": [
+          "reasoning"
+        ],
+        "exists_on_hf": true
+      },
+      "structure": {
+        "repo_id": "allenai/ai2_arc",
+        "revision": null,
+        "subsets": [
+          {
+            "subset": "ARC-Challenge",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": 1172
+              }
+            ]
+          }
+        ],
+        "ok": true,
+        "error": null
+      },
+      "download_config": {
+        "config": "ARC-Challenge",
+        "split": "test",
+        "reason": "ARC-Challenge test split is the harder subset used for evaluation."
+      },
+      "key_mapping": {
+        "input_question_key": "question",
+        "input_choices_key": "choices",
+        "input_label_key": "answerKey"
+      },
+      "key_mapping_reason": "question is the science question, choices contains the options list, answerKey is the correct letter.",
+      "description_zh": "高难科学考试推理题",
+      "radar_dimensions": [
+        "knowledge",
+        "reasoning"
+      ],
+      "evaluation": {
+        "score_source": "metric_stage",
+        "official_metric": "acc_norm",
+        "primary_metric": "choice_accuracy",
+        "denominator": "total",
+        "prediction_mode": "generation",
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choices_key": "choices"
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        }
+      },
+      "prompt": {
+        "source": "gallery",
+        "template_id": "arc-challenge_contract_v1",
+        "system_prompt": "",
+        "user_template": "{question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "few_shot": {
+          "enabled": false,
+          "num_shots": 0,
+          "source_split": null
+        },
+        "generation": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "max_tokens": 1024,
+          "stop": []
+        }
+      },
+      "readiness": {
+        "status": "reference_mapped",
+        "smoke_passed": false,
+        "golden_cases": null,
+        "known_limitations": [
+          "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+        ]
+      }
+    }
+  },
+  "openbookqa": {
+    "bench_name": "openbookqa",
+    "bench_table_exist": true,
+    "bench_source_url": "https://huggingface.co/datasets/allenai/openbookqa",
+    "bench_dataflow_eval_type": "key3_q_choices_a",
+    "bench_prompt_template": null,
+    "bench_keys": [
+      "id",
+      "question_stem",
+      "choices",
+      "answerKey"
+    ],
+    "meta": {
+      "bench_name": "openbookqa",
+      "source": "bench_item_list",
+      "aliases": [
+        "openbookqa",
+        "OpenBookQA"
+      ],
+      "category": "Knowledge & QA",
+      "tags": [
+        "knowledge",
+        "knowledge & qa"
+      ],
+      "description": "Question answering dataset, modeled after open book exams.",
+      "hf_meta": {
+        "bench_name": "openbookqa",
+        "hf_repo": "allenai/openbookqa",
+        "card_text": "Question answering dataset, modeled after open book exams.",
+        "tags": [
+          "knowledge"
+        ],
+        "exists_on_hf": true
+      },
+      "structure": {
+        "repo_id": "allenai/openbookqa",
+        "revision": null,
+        "subsets": [
+          {
+            "subset": "additional",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "test",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "main",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "test",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          }
+        ],
+        "ok": true,
+        "error": null
+      },
+      "download_config": {
+        "config": "main",
+        "split": "test",
+        "reason": "主数据集通常使用 'main' config，并且测试评估优先使用 'test' split。"
+      },
+      "key_mapping": {
+        "input_question_key": "question_stem",
+        "input_choices_key": "choices",
+        "input_label_key": "answerKey"
+      },
+      "key_mapping_reason": "字段特征匹配选择题：单正确类型。有一个问题 (question_stem)，多个选项 (choices)，以及单个正确答案 (answerKey)。",
+      "description_zh": "开卷科学考试风格问答",
+      "radar_dimensions": [
+        "knowledge"
+      ],
+      "evaluation": {
+        "score_source": "metric_stage",
+        "official_metric": "acc_norm",
+        "primary_metric": "choice_accuracy",
+        "denominator": "total",
+        "prediction_mode": "generation",
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choices_key": "choices"
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        }
+      },
+      "prompt": {
+        "source": "gallery",
+        "template_id": "openbookqa_contract_v1",
+        "system_prompt": "",
+        "user_template": "{question_stem}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "few_shot": {
+          "enabled": false,
+          "num_shots": 0,
+          "source_split": null
+        },
+        "generation": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "max_tokens": 1024,
+          "stop": []
+        }
+      },
+      "readiness": {
+        "status": "reference_mapped",
+        "smoke_passed": false,
+        "golden_cases": null,
+        "known_limitations": [
+          "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+        ]
+      }
+    }
+  },
+  "medmcqa": {
+    "bench_name": "medmcqa",
+    "bench_table_exist": true,
+    "bench_source_url": "https://huggingface.co/datasets/openlifescienceai/medmcqa",
+    "bench_dataflow_eval_type": "key3_q_choices_a",
+    "bench_prompt_template": null,
+    "bench_keys": [
+      "id",
+      "question",
+      "opa",
+      "opb",
+      "opc",
+      "opd",
+      "cop",
+      "choice_type",
+      "exp",
+      "subject_name",
+      "topic_name"
+    ],
+    "meta": {
+      "bench_name": "medmcqa",
+      "source": "bench_item_list",
+      "aliases": [
+        "medmcqa",
+        "MedMCQA"
+      ],
+      "category": "Domain-Specific",
+      "tags": [
+        "medical",
+        "multiple-choice",
+        "domain-specific"
+      ],
+      "description": "MedMCQA: Large-scale multi-subject medical multiple-choice QA dataset with 194K questions from AIIMS and NEET PG exams covering 21 medical subjects.",
+      "hf_meta": {
+        "bench_name": "medmcqa",
+        "hf_repo": "openlifescienceai/medmcqa",
+        "card_text": "Large-scale medical multiple-choice QA from AIIMS and NEET PG exams.",
+        "tags": [
+          "medical"
+        ],
+        "exists_on_hf": true
+      },
+      "structure": {
+        "repo_id": "openlifescienceai/medmcqa",
+        "revision": null,
+        "subsets": [
+          {
+            "subset": "default",
+            "splits": [
+              {
+                "name": "validation",
+                "num_examples": 4183
+              }
+            ]
+          }
+        ],
+        "ok": true,
+        "error": null
+      },
+      "download_config": {
+        "config": "default",
+        "split": "validation",
+        "reason": "validation split is used for evaluation; test split labels are not publicly available."
+      },
+      "key_mapping": {
+        "input_question_key": "question",
+        "input_choices_key": [
+          "opa",
+          "opb",
+          "opc",
+          "opd"
+        ],
+        "input_label_key": "cop"
+      },
+      "key_mapping_reason": "question is the medical question, opa-opd are the four options, cop is the correct option index (0-3).",
+      "description_zh": "大规模医学多选考试题",
+      "radar_dimensions": [
+        "knowledge"
+      ],
+      "evaluation": {
+        "score_source": "metric_stage",
+        "official_metric": "acc",
+        "primary_metric": "choice_accuracy",
+        "denominator": "total",
+        "prediction_mode": "generation",
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "opa",
+            "opb",
+            "opc",
+            "opd"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        }
+      },
+      "prompt": {
+        "source": "gallery",
+        "template_id": "medmcqa_contract_v1",
+        "system_prompt": "",
+        "user_template": "{question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "few_shot": {
+          "enabled": false,
+          "num_shots": 0,
+          "source_split": null
+        },
+        "generation": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "max_tokens": 1024,
+          "stop": []
+        }
+      },
+      "readiness": {
+        "status": "reference_mapped",
+        "smoke_passed": false,
+        "golden_cases": null,
+        "known_limitations": [
+          "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+        ]
+      }
+    }
+  },
+  "mmlu": {
+    "bench_name": "mmlu",
+    "bench_table_exist": true,
+    "bench_source_url": "https://huggingface.co/datasets/cais/mmlu",
+    "bench_dataflow_eval_type": "key3_q_choices_a",
+    "bench_prompt_template": null,
+    "bench_keys": [
+      "question",
+      "subject",
+      "choices",
+      "answer"
+    ],
+    "meta": {
+      "radar_dimensions": [
+        "knowledge"
+      ],
+      "bench_name": "mmlu",
+      "source": "bench_item_list",
+      "aliases": [
+        "mmlu",
+        "MMLU"
+      ],
+      "category": "Knowledge & QA",
+      "tags": [
+        "knowledge",
+        "knowledge & qa"
+      ],
+      "description": "Multi-choice tasks across 57 subjects, high school to expert level.",
+      "hf_meta": {
+        "bench_name": "mmlu",
+        "hf_repo": "cais/mmlu",
+        "card_text": "Multi-choice tasks across 57 subjects, high school to expert level.",
+        "tags": [
+          "knowledge"
+        ],
+        "exists_on_hf": true
+      },
+      "structure": {
+        "repo_id": "cais/mmlu",
+        "revision": null,
+        "subsets": [
+          {
+            "subset": "abstract_algebra",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "all",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              },
+              {
+                "name": "auxiliary_train",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "anatomy",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "astronomy",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "auxiliary_train",
+            "splits": [
+              {
+                "name": "train",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "business_ethics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "clinical_knowledge",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "college_biology",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "college_chemistry",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "college_computer_science",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "college_mathematics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "college_medicine",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "college_physics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "computer_security",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "conceptual_physics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "econometrics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "electrical_engineering",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "elementary_mathematics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "formal_logic",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "global_facts",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_biology",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_chemistry",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_computer_science",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_european_history",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_geography",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_government_and_politics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_macroeconomics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_mathematics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_microeconomics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_physics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_psychology",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_statistics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_us_history",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "high_school_world_history",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "human_aging",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "human_sexuality",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "international_law",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "jurisprudence",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "logical_fallacies",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "machine_learning",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "management",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "marketing",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "medical_genetics",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "miscellaneous",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "moral_disputes",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "moral_scenarios",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "nutrition",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "philosophy",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "prehistory",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "professional_accounting",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "professional_law",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "professional_medicine",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "professional_psychology",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "public_relations",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "security_studies",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "sociology",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "us_foreign_policy",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "virology",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          },
+          {
+            "subset": "world_religions",
+            "splits": [
+              {
+                "name": "test",
+                "num_examples": null
+              },
+              {
+                "name": "validation",
+                "num_examples": null
+              },
+              {
+                "name": "dev",
+                "num_examples": null
+              }
+            ],
+            "features": null
+          }
+        ],
+        "ok": true,
+        "error": null
+      },
+      "download_config": {
+        "config": "all",
+        "split": "test",
+        "reason": "The 'all' subset contains data across multiple disciplines, making it the most comprehensive choice for evaluation. It also includes a 'test' split, which is prioritized for evaluation."
+      },
+      "key_mapping": {
+        "input_question_key": "question",
+        "input_choices_key": "choices",
+        "input_label_key": "answer"
+      },
+      "key_mapping_reason": "MMLU 数据集属于选择题：单正确类型，其中包含问题、选项和正确答案。根据字段 'question', 'choices' 和 'answer’，推断其为 LogLikelihood 选择题评测任务类型。",
+      "description_zh": "57 学科通用知识多选题",
+      "evaluation": {
+        "score_source": "metric_stage",
+        "official_metric": "acc",
+        "primary_metric": "choice_accuracy",
+        "denominator": "total",
+        "prediction_mode": "generation",
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choices_key": "choices"
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        }
+      },
+      "prompt": {
+        "source": "gallery",
+        "template_id": "mmlu_contract_v1",
+        "system_prompt": "",
+        "user_template": "{question}\n{choices_text}\nSelect the best option and give the final answer as <answer>CHOICE</answer>.",
+        "output_format": {
+          "type": "choice_letter",
+          "choices": "A-D",
+          "answer_tag": "<answer>CHOICE</answer>"
+        },
+        "few_shot": {
+          "enabled": false,
+          "num_shots": 0,
+          "source_split": null
+        },
+        "generation": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "max_tokens": 1024,
+          "stop": []
+        }
+      },
+      "readiness": {
+        "status": "reference_mapped",
+        "smoke_passed": false,
+        "golden_cases": null,
+        "known_limitations": [
+          "lm-eval YAML is stored as a reference; this contract has not been golden-case verified."
+        ]
+      }
+    }
+  }
+}

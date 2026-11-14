@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "root_source_rows_reused": 633,
+  "root_condition_records": 3798,
+  "new_native_contract_source_rows": 100,
+  "transfer_condition_records": 200,
+  "transfer_exact_predicted_prompt_substitutions": 100,
+  "verification_method": "Source/capture/hash/selection reconciliation with direct string substitution, without loading the native renderer.",
+  "limits": "Single executor reconciliation. The study uses previously known mechanisms and one new native contract. MMMLU translates MMLU, so source meaning may overlap prior English MMLU items. No global blind validation, model accuracy or external-impact validation."
+}
