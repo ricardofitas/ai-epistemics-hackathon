@@ -34,6 +34,9 @@ with zipfile.ZipFile(BASE/'OneEval_decomposicao_scores_e_consumo_20261114/input/
 if (OUT/'evidence/native_integration.json').exists():
  data=(OUT/'evidence/native_integration.json').read_bytes()
  manifest['native_integration.json']=dict(source_archive='Epistemics_LMHarness_integracao_nativa_20261114.zip',member='SUMMARY.json',sha256=hashlib.sha256(data).hexdigest())
+existing=json.loads((OUT/'EVIDENCE_SOURCES.json').read_text()) if (OUT/'EVIDENCE_SOURCES.json').exists() else {}
+for key,value in existing.items():
+ if key not in manifest and (OUT/'evidence'/key).exists():manifest[key]=value
 (OUT/'EVIDENCE_SOURCES.json').write_text(json.dumps(manifest,indent=2)+'\n')
 claims=[
 ('C1','2','21 configurations;64119 record appearances;7 failed;14 passed','calibration.json','Known-fault calibration; overlapping records'),
@@ -42,7 +45,7 @@ claims=[
 ('C4','2','27346 additional rows;27746 total captured source rows;ARC1172;OpenBookQA500','splits.json;split_checks.json','Post-discovery extension; source sample counts not prevalence'),
 ('C5','3','200 requests;194 complete;Qwen+36..48pp;Gemma-10..82pp','capture.json;factorization.json','50 diagnostic questions in35 dependency groups'),
 ('C6','4','Same repaired outputs reference effects:Gemma42pp,Qwen40pp','factorization.json','Native heuristic parser fixed-output score; posthoc interaction'),
-('C7','5','2200 synthetic variants from200 units;800 accepted altered cases in v1','mutations.json','Development diagnostics, not independent generalization'),
+('C7','5,7','2200 development variants; SocialIQa100source/600variants;v2 PASS200 FAIL300 INCOMPLETE100','mutations.json;social_summary.json;social_verification.json;social_protocol.json','Known mechanisms; bounded exposure; custom adapter; global blindness unverified'),
 ('C8','6','200 native rows;801 per-option objects;600 controlled carrier failures; installed task-path200/801/400 fixtures','harness.json;native_integration.json','Reused data; native-method projection and installed local-data task path; models/tokenizers untested'),
 ('C9','8','External affected run not verified','external.json','Search evidence does not establish absence')
 ]

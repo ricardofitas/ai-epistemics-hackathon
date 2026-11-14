@@ -43,10 +43,10 @@
   },
   {
     "id": "C7",
-    "section": "5",
-    "claim": "2200 synthetic variants from200 units;800 accepted altered cases in v1",
-    "evidence": "mutations.json",
-    "qualification": "Development diagnostics, not independent generalization"
+    "section": "5,7",
+    "claim": "2200 development variants from200units; SocialIQa100source/600variants;v2 PASS200 FAIL300 INCOMPLETE100",
+    "evidence": "mutations.json;social_summary.json;social_verification.json;social_protocol.json",
+    "qualification": "Known mechanisms; source-family holdout from documented development; custom adapter; global blindness unverified"
   },
   {
     "id": "C8",
@@ -57,7 +57,7 @@
   },
   {
     "id": "C9",
-    "section": "8",
+    "section": "9",
     "claim": "External affected run not verified",
     "evidence": "external.json",
     "qualification": "Search evidence does not establish absence"

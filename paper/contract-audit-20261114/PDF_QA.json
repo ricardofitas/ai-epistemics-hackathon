@@ -2,11 +2,11 @@
   "pages": [
     {
       "page": 1,
-      "words": 448
+      "words": 462
     },
     {
       "page": 2,
-      "words": 407
+      "words": 408
     },
     {
       "page": 3,
@@ -18,15 +18,19 @@
     },
     {
       "page": 5,
-      "words": 508
+      "words": 406
     },
     {
       "page": 6,
-      "words": 396
+      "words": 544
+    },
+    {
+      "page": 7,
+      "words": 416
     }
   ],
   "bounds_check": "PASS",
   "embedded_fonts": true,
-  "visual_review": "PASS: final six-page contact sheet and full-resolution page4 inspected after v1.1 integration update.",
-  "working_draft_version": "1.1"
+  "visual_review": "PASS: final seven-page contact sheet plus full-resolution page6 inspected; no overflow or isolated reference continuation.",
+  "working_draft_version": "1.2"
 }

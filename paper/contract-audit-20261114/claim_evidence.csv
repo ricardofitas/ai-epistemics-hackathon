@@ -5,6 +5,6 @@ C3,2,400 prospective rows;2 initial adapter false alerts,prospective.json,Post-o
 C4,2,27346 additional rows;27746 total captured source rows;ARC1172;OpenBookQA500,splits.json;split_checks.json,Post-discovery extension; source sample counts not prevalence
 C5,3,200 requests;194 complete;Qwen+36..48pp;Gemma-10..82pp,capture.json;factorization.json,50 diagnostic questions in35 dependency groups
 C6,4,"Same repaired outputs reference effects:Gemma42pp,Qwen40pp",factorization.json,Native heuristic parser fixed-output score; posthoc interaction
-C7,5,2200 synthetic variants from200 units;800 accepted altered cases in v1,mutations.json,"Development diagnostics, not independent generalization"
-C8,6,Harness200 source cases/801 requests; installed task path matches and400 constructed scoring fixtures pass,harness.json;native_integration.json,Native installed task/data/request/metric paths; model/tokenizer excluded; source data reused
-C9,8,External affected run not verified,external.json,Search evidence does not establish absence
+C7,"5,7",2200 development variants from200units; SocialIQa100source/600variants;v2 PASS200 FAIL300 INCOMPLETE100,mutations.json;social_summary.json;social_verification.json;social_protocol.json,Known mechanisms; source-family holdout from documented development; custom adapter; global blindness unverified
+C8,6,"Harness200 cases,801 requests, plus installed-task integration and400 constructed scoring fixtures",harness.json;native_integration.json,"Native installed task path, same observed data; no model/tokenizer"
+C9,9,External affected run not verified,external.json,Search evidence does not establish absence

@@ -1,0 +1,41 @@
+{
+  "retrieved_on": "2026-11-14",
+  "sources": [
+    {
+      "id": "SANE",
+      "url": "https://arxiv.org/html/2610.28886v2",
+      "version": "arXiv:2610.28886v2",
+      "date": "2026-10-23",
+      "inspected": [
+        "sections1\u20134",
+        "section6"
+      ],
+      "access": "Primary HTML retrieved; v1 route failed; v2 succeeded",
+      "full_text_available": true
+    },
+    {
+      "id": "EvalEng",
+      "url": "https://arxiv.org/html/2605.24213v1",
+      "version": "arXiv:2605.24213v1",
+      "date": "2026-05-22",
+      "inspected": [
+        "abstract",
+        "section7.1"
+      ],
+      "author_repository": "https://github.com/zhimin-z/EvalEng",
+      "repository_revision": "4c73f597df1c0575be2b82eae68a945af20f0c81",
+      "full_text_available": true
+    },
+    {
+      "id": "JRH",
+      "url": "https://arxiv.org/abs/2603.05399v1",
+      "version": "arXiv:2603.05399v1",
+      "date": "2026-03-05",
+      "inspected": [
+        "abstract"
+      ],
+      "full_text_method_review_complete": false
+    }
+  ],
+  "method": "Targeted primary-source comparison; no new experiments or model calls; source summaries limited to inspected scope."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "selected_rows": 100,
+  "verified_condition_variants": 600,
+  "unique_context_question_pairs": 100,
+  "distinct_contexts": 100,
+  "predeclared_expectation_mismatches": [],
+  "provider_calls": 0,
+  "reporting_note": "SUMMARY.independent_context_groups counts distinct exact contexts only; this does not prove statistical independence.",
+  "scope": "Independent source/order/reference/condition/gate reconciliation; not rerun model inference or global project exposure census."
+}

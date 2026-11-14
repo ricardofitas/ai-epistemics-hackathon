@@ -1,7 +1,9 @@
-Private working manuscript v1.1 and evidence synthesis.
+Private working manuscript v1.2 and evidence synthesis.
 Run python verify_claims.py to check numerical claims and source-snapshot hashes.
 Run python render_manuscript.py to recreate the PDF. Dependencies are pinned in requirements.txt; rendering uses system Liberation Serif and Sans fonts under /usr/share/fonts/truetype/liberation/.
 The machine-readable manuscript is manuscript.json. Original experiment archives are identified in SOURCE_ARCHIVES.json and EVIDENCE_SOURCES.json; compact JSON evidence snapshots are under evidence/.
 The separate Epistemics_LMHarness_integracao_nativa_20261114.zip contains the newly completed installed-package offline integration, its prior frozen inputs, protocol, scripts, request captures, scoring fixtures and verification. It reuses200 source units and executes801 native option requests plus400 constructed scoring controls. No model, tokenizer or backend was instantiated and no inference was requested. These constructed controls are not model accuracy.
 CLAIM_VERIFICATION.json checks synthesis consistency; use original experiment captures for request-stream and source-selection verification. prepare_evidence.py is a historical authoring helper requiring the original extracted source packages; it is unnecessary for verifying or rendering this self-contained draft.
 READINESS.json records unresolved scientific and submission-readiness gaps. Nothing was sent or published externally.
+
+Version1.2 integrates the saved SocialIQa transfer and primary-source comparison. New source snapshots and archive identities are included. No experiment rerun occurred during synthesis. RELATED_WORK_COMPARISON.md is retained as a historical addendum; its statement that the PDF is unchanged describes the earlier review, superseded by this integrated revision.

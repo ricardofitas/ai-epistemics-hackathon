@@ -5,7 +5,7 @@
     "blocks": [
       {
         "kind": "meta",
-        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.1"
+        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.2"
       },
       {
         "kind": "heading",
@@ -13,7 +13,7 @@
       },
       {
         "kind": "p",
-        "text": "Evaluation software can change the task before a model answers and can change the meaning of the reference after the answer is produced. We audit these two interfaces in a pinned One-Eval revision using official source records, native preprocessing and scoring methods, deterministic controls, and an existing paired trial of two hosted models. A prospectively selected four-contract extension identified malformed ARC-Challenge and OpenBookQA task construction. A later diagnostic expansion confirmed the mechanisms throughout their captured test splits. In a 50-question WinoGrande panel, Qwen's source-correct accuracy gain under joint question/format repair is 42 percentage points under the observed scoring convention and remains between 36 and 48 points under conservative treatment of unknown answers. Gemma's corresponding sensitivity interval includes zero. Re-scoring identical corrected-prompt outputs with source-aligned references changes assigned scores by 40 and 42 points respectively. An experimental pre-inference checker detects selected source-contract failures, while controlled diagnostics expose the limits of trusting adapter metadata. Healthy controls in EvalScope and bounded native-method and installed task-path tests of LM Evaluation Harness delimit the scope. These findings establish specific implementation faults and controlled consequences; affected independent deployments and broad fault prevalence remain unverified."
+        "text": "Evaluation software can change the task before a model answers and can change the meaning of the reference after the answer is produced. We audit these two interfaces in a pinned One-Eval revision using official source records, native preprocessing and scoring methods, deterministic controls, and an existing paired trial of two hosted models. A prospectively selected four-contract extension identified malformed ARC-Challenge and OpenBookQA task construction. A later diagnostic expansion confirmed the mechanisms throughout their captured test splits. In a 50-question WinoGrande panel, Qwen's source-correct accuracy gain under joint question/format repair is 42 percentage points under the observed scoring convention and remains between 36 and 48 points under conservative treatment of unknown answers. Gemma's corresponding sensitivity interval includes zero. Re-scoring identical corrected-prompt outputs with source-aligned references changes assigned scores by 40 and 42 points respectively. An experimental pre-inference checker detects selected source-contract failures, while controlled diagnostics expose the limits of trusting adapter metadata. A frozen 100-record Social IQa transfer extends selected checker mechanisms beyond documented development sources. Healthy controls in EvalScope and bounded native-method and installed task-path tests of LM Evaluation Harness delimit the scope. These findings establish specific implementation faults and controlled consequences; affected independent deployments and broad fault prevalence remain unverified."
       },
       {
         "kind": "heading",
@@ -78,7 +78,7 @@
           ],
           [
             "Tool / carrier diagnostics",
-            "200 source units per diagnostic panel",
+            "200 development; 100 Social IQa source units",
             "Repeated controlled variants"
           ]
         ],
@@ -319,27 +319,113 @@
     ]
   },
   {
+    "title": "Source-family transfer and its limits",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "7. Frozen-checker transfer to Social IQa"
+      },
+      {
+        "kind": "p",
+        "text": "The source-bound checker and a new deterministic adapter were frozen in research commit 832422aeb7429ba0dd29852c148a83514e940237 before acquiring source rows or observing outcomes. Social IQa was absent from the documented checker-development panels. PIQA was excluded as a new-source candidate because it appeared in an earlier audit protocol. The review was documentary and bounded: it did not establish a complete row-level exposure census across all earlier pilots and private executors."
+      },
+      {
+        "kind": "p",
+        "text": "The official Social IQa development archive contains 1,954 records. The loader is pinned to allenai/social_i_qa revision 8835ceb9141d7896d9d968634a9b21ae440e3ec5, and the archive checksum was verified. Each row was joined to its same-index one-based answer label. The first 100 records in stable SHA-256 order of canonical record/label JSON were selected without substitution. They contain 100 distinct context/question pairs and 100 distinct exact contexts; textual distinction alone does not establish statistical independence."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Condition",
+          "Variants",
+          "Original v1",
+          "Source-bound v2"
+        ],
+        "rows": [
+          [
+            "Preserved contract",
+            "100",
+            "100 PASS",
+            "100 PASS"
+          ],
+          [
+            "Coherent option permutation",
+            "100",
+            "100 PASS",
+            "100 PASS"
+          ],
+          [
+            "Distractor removed; gold retained",
+            "100",
+            "100 PASS",
+            "100 FAIL"
+          ],
+          [
+            "Question omitted",
+            "100",
+            "100 FAIL",
+            "100 FAIL"
+          ],
+          [
+            "Context omitted",
+            "100",
+            "100 FAIL",
+            "100 FAIL"
+          ],
+          [
+            "Source evidence absent",
+            "100",
+            "100 PASS",
+            "100 INCOMPLETE"
+          ]
+        ],
+        "widths": [
+          210,
+          55,
+          104,
+          110
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "The custom adapter renders context and question with the three source answers and an aligned reference. Question and required-context dependence are measured with nonce substitutions. The v2 wrapper accepted all 200 preserved/permutation controls, rejected all 300 constructed-fault variants, and marked all 100 missing-source cases incomplete. The v1 checker accepted the 100 gold-preserving distractor removals. Local counting functions were invoked 400 times under v1 and 200 under v2, with no invocation after a failed or incomplete gate. These are not model requests."
+      },
+      {
+        "kind": "p",
+        "text": "Independent source-selection, answer-mapping, variant and gate reconciliation passed for all 600 variants, with no acquisition or execution errors. The original source and wrapper byte hashes are unchanged. The protocol, input records, raw labels, captures, scripts and source-revision receipts remain in the transfer archive [9]."
+      },
+      {
+        "kind": "heading",
+        "text": "Interpretation"
+      },
+      {
+        "kind": "p",
+        "text": "This transfers already known mechanisms to a source family held out from documented checker development. The conditions are deliberately constructed using a custom adapter; they do not reveal a natural defect in a new evaluator, estimate real-world fault frequency, or validate unseen failure mechanisms. No model endpoint or native evaluator was executed. The result strengthens a bounded intervention claim while preserving the distinction between source-family transfer and globally blind validation."
+      }
+    ]
+  },
+  {
     "title": "Positioning, limits and research readiness",
     "blocks": [
       {
         "kind": "heading",
-        "text": "7. Relation to existing work"
+        "text": "8. Relation to existing work"
       },
       {
         "kind": "p",
-        "text": "Reproducible LM evaluation and implementation sensitivity are established concerns [1]. The Hugging Face guide distinguishes prompt, metric, normalization and runtime differences [2]. This case study narrows the analysis to source-grounded violations: missing question dependence, altered option structure and reference misalignment. It pairs these mechanisms with captured model outputs and a scoped intervention. The finite-corpus collision calculation and individual invariants are not claimed as first-of-their-kind theory."
+        "text": "Reproducibility and implementation sensitivity are established concerns [1,2]. This study focuses on missing question dependence, altered options and reference misalignment. The collision calculation and individual invariants are not claimed as new theory."
       },
       {
         "kind": "p",
-        "text": "Scorer-specific metamorphic testing is another relevant direction. SANE [3] is retained as a literature lead from its indexed author abstract; direct full-text access failed during this synthesis, so a detailed methods comparison is unresolved. The diagnostic mutations here do not establish novelty over that line of work. A comprehensive novelty review remains necessary before a venue-specific claim."
+        "text": "Semantic compatibility checks, oracle-independent scoring verification, metamorphic/differential testing and version-pinned fail-fast checks are already recommended by EvalEng [7, section 7.1]. SANE [3, v2 sections 3-4] automates scorer-specific recipes and separates recipe alignment, realized perturbation and relation applicability. JRH [8, abstract inspected] generates judge-reliability suites and studies perturbation sensitivity. We claim no general novelty for these principles. Our empirical focus is the pinned source-to-request/reference chain, attributable implementation defects, bounded intervention and controlled consequences. This comparison does not establish feature absence in prior tools or replace a direct implementation study."
       },
       {
         "kind": "heading",
-        "text": "8. What the current evidence supports"
+        "text": "9. What the current evidence supports"
       },
       {
         "kind": "p",
-        "text": "The strongest supported statement is that specific pinned task transformations violate official source semantics and can materially change assigned scores in a controlled diagnostic panel. Qwen provides a positive prompt-repair consequence under conservative unknown-answer sensitivity. Reference-only replays establish a separate fixed-output consequence. Healthy controls show that the measured faults are not automatically present in every evaluator tested, while the audit-tool diagnostics make its own trust assumptions explicit."
+        "text": "Pinned task transformations violate official semantics and materially change assigned scores in the diagnostic panel. Qwen retains a positive repair consequence under conservative unknown-answer sensitivity; fixed-output replays isolate reference effects. Healthy controls and audit-tool diagnostics delimit these findings."
       },
       {
         "kind": "p",
@@ -351,11 +437,11 @@
       },
       {
         "kind": "p",
-        "text": "The diagnostic sample is deliberately enriched, model responses can be incomplete or non-evaluable, and native heuristic parsing differs from the strict primary rule. Full-split counts refer to captured bytes and the pinned software, not current installations. One adapter was corrected after outcomes, and exact-method execution uses dependency scaffolds whose scope is documented. Synthetic conditions reuse source units and are not independent natural faults. Model-backed evaluation, non-zero-shot rendering and unseen-source checker validation remain open."
+        "text": "The diagnostic sample is deliberately enriched, model responses can be incomplete or non-evaluable, and native heuristic parsing differs from the strict primary rule. Full-split counts refer to captured bytes and the pinned software, not current installations. One adapter was corrected after outcomes, and exact-method execution uses dependency scaffolds whose scope is documented. Synthetic conditions reuse source units and are not independent natural faults. Model-backed evaluation, non-zero-shot rendering and a globally blind source-exposure census remain open. Social IQa adds bounded source-family transfer, not independent evidence about natural failure prevalence."
       },
       {
         "kind": "p",
-        "text": "The next useful work is a close primary-method comparison or a concrete external exposure lead. The installed-package task-path smoke test resolves a bounded integration gap; repeating the same diagnostic panels would not establish unseen-source generalization. The draft is ready for internal scientific review, not external submission: author approval, close related-work comparison, venue formatting and any expanded validation must be resolved first."
+        "text": "The next scientific decision concerns trusted source-to-request integration on native evaluation routes or a concrete external exposure lead. A targeted primary-method comparison and a scoped Social IQa transfer are now complete. A direct comparative implementation study remains open. Repeating the diagnostic panels would not resolve these gaps. This private draft supports internal review; external submission still requires author agreement, venue preparation and justified claims."
       },
       {
         "kind": "heading",
@@ -363,7 +449,7 @@
       },
       {
         "kind": "small",
-        "text": "[1] Biderman et al. Lessons from the Trenches on Reproducible Evaluation of Language Models. arXiv:2405.14782, v3 (2026 revision). https://arxiv.org/abs/2405.14782v3<br/>[2] Hugging Face. Evaluation Guidebook: Troubleshooting reproducibility. Consulted 14 Nov 2026. github.com/huggingface/evaluation-guidebook<br/>[3] SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges. arXiv:2610.28886. Indexed abstract only; full methods comparison pending.<br/>[4] OpenDCAI/One-Eval, revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506.<br/>[5] EleutherAI/lm-evaluation-harness, revision d6de81643928d653435c431bae19945d41d32520.<br/>[6] Official source record captures, native implementation snapshots, protocols and analysis manifests identified in the accompanying evidence package."
+        "text": "[1] Biderman et al. Lessons from the Trenches on Reproducible Evaluation of Language Models. arXiv:2405.14782, v3 (2026 revision). https://arxiv.org/abs/2405.14782v3<br/>[2] Hugging Face. Evaluation Guidebook: Troubleshooting reproducibility. Consulted 14 Nov 2026. github.com/huggingface/evaluation-guidebook<br/>[3] Ludwick and Hsiao. SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges. arXiv:2610.28886v2 (23 Oct 2026). https://arxiv.org/html/2610.28886v2<br/>[4] OpenDCAI/One-Eval, revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506.<br/>[5] EleutherAI/lm-evaluation-harness, revision d6de81643928d653435c431bae19945d41d32520.<br/>[6] Official source record captures, native implementation snapshots, protocols and analysis manifests identified in the accompanying evidence package.<br/>[7] Zhao et al. Towards Evaluation Engineering: An Empirical Study of ML Evaluation Harnesses in the Wild. arXiv:2605.24213v1. https://arxiv.org/html/2605.24213v1<br/>[8] Dev et al. Judge Reliability Harness. arXiv:2603.05399v1. https://arxiv.org/abs/2603.05399v1 (abstract-only comparison).<br/>[9] Social IQa official source and frozen transfer protocol: source revision and exact archive/checker hashes in SOURCE_ARCHIVES.json and evidence/social_protocol.json."
       }
     ]
   },
@@ -414,8 +500,8 @@
           ],
           [
             "C7",
-            "Tool diagnostics: 2,200 variants of 200 source units; v1 accepts 800 altered cases.",
-            "Synthetic development; experimental v2 not universally validated."
+            "Tool diagnostics: 2,200 development variants; Social IQa transfer: 100 source rows, 600 variants, v2 outcomes 200 PASS / 300 FAIL / 100 INCOMPLETE.",
+            "Known mechanisms; bounded source exposure; custom adapter, not new native evaluator faults."
           ],
           [
             "C8",
@@ -456,7 +542,7 @@
       },
       {
         "kind": "p",
-        "text": "Private evidence synthesis, version 1.1. No new model requests, sample expansion or public dissemination occurred while preparing it. Numerical support is verified against the captured artifacts. Literature positioning is preliminary, complete model-backed engine integration is not claimed, and external exposure is unresolved. The work remains active for internal review and targeted validation."
+        "text": "Private evidence synthesis, version 1.2. This revision incorporates the previously completed Social IQa transfer and primary-method comparison; no new experiments, model requests or source-sample expansion were performed while preparing it. Numerical support is verified against captured artifacts. Global novelty clearance, complete model-backed engine integration and independently affected external conclusions remain unresolved. The work remains private and active."
       }
     ]
   }

@@ -1,0 +1,115 @@
+{
+  "status": "completed",
+  "official_split_rows": 1954,
+  "selected_source_rows": 100,
+  "unique_context_question_pairs": 100,
+  "independent_context_groups": 100,
+  "condition_variants": 600,
+  "new_model_calls": 0,
+  "conditions": [
+    {
+      "condition": "healthy",
+      "rows": 100,
+      "statuses": {
+        "v1": {
+          "PASS": 100
+        },
+        "v2": {
+          "PASS": 100
+        }
+      },
+      "counting_function_invocations": {
+        "v1": 100,
+        "v2": 100
+      }
+    },
+    {
+      "condition": "coherent_permutation",
+      "rows": 100,
+      "statuses": {
+        "v1": {
+          "PASS": 100
+        },
+        "v2": {
+          "PASS": 100
+        }
+      },
+      "counting_function_invocations": {
+        "v1": 100,
+        "v2": 100
+      }
+    },
+    {
+      "condition": "distractor_drop",
+      "rows": 100,
+      "statuses": {
+        "v1": {
+          "PASS": 100
+        },
+        "v2": {
+          "FAIL": 100
+        }
+      },
+      "counting_function_invocations": {
+        "v1": 100,
+        "v2": 0
+      }
+    },
+    {
+      "condition": "question_omission",
+      "rows": 100,
+      "statuses": {
+        "v1": {
+          "FAIL": 100
+        },
+        "v2": {
+          "FAIL": 100
+        }
+      },
+      "counting_function_invocations": {
+        "v1": 0,
+        "v2": 0
+      }
+    },
+    {
+      "condition": "context_omission",
+      "rows": 100,
+      "statuses": {
+        "v1": {
+          "FAIL": 100
+        },
+        "v2": {
+          "FAIL": 100
+        }
+      },
+      "counting_function_invocations": {
+        "v1": 0,
+        "v2": 0
+      }
+    },
+    {
+      "condition": "missing_source",
+      "rows": 100,
+      "statuses": {
+        "v1": {
+          "PASS": 100
+        },
+        "v2": {
+          "INCOMPLETE": 100
+        }
+      },
+      "counting_function_invocations": {
+        "v1": 100,
+        "v2": 0
+      }
+    }
+  ],
+  "source_revision": "8835ceb9141d7896d9d968634a9b21ae440e3ec5",
+  "source_archive_sha256": "ee073914a0fc33265cfbcfc50ec20df9b2e07809c3f420f599138d1f394ef5c3",
+  "scope": "Held-out source-family transfer of frozen source-bound checker; custom deterministic adapter, not native evaluator audit",
+  "limits": [
+    "Bounded documentary exposure review, not a complete row-level hash census of every earlier project package or private executor. Claim is held-out from documented checker development; do not claim globally blind independent validation.",
+    "Report source rows, unique source questions, shared context groups and condition variants separately. Reused failure mechanisms; source-family holdout does not equal fault-family holdout. Healthy adapter controls are not proven natural framework behavior.",
+    "Known fault mechanisms applied to a held-out source family; custom adapter, not native evaluator fault discovery."
+  ]
+}
