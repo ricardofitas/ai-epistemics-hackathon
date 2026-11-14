@@ -1,0 +1,131 @@
+{
+  "engine_revision": "d6de81643928d653435c431bae19945d41d32520",
+  "source_units": 200,
+  "condition_records": 1000,
+  "exceptions": [],
+  "provider_model_calls": 0,
+  "scope": "Execute exact ConfigurableTask doc_to_text, doc_to_choice, doc_to_target and construct_requests methods plus native Instance under an explicit AST dependency scaffold. Native Jinja apply_template and task YAML/defaults are captured. No full harness dataset loader, fewshot driver, tokenizer, model, likelihood scoring or metric execution is claimed.",
+  "source_data_reused": true,
+  "summary": [
+    {
+      "task": "arc_challenge",
+      "condition": "native",
+      "rows": 100,
+      "v2_statuses": {
+        "PASS": 100
+      },
+      "wire_statuses": {
+        "PASS": 100
+      },
+      "constructed_backend_calls": 100
+    },
+    {
+      "task": "arc_challenge",
+      "condition": "benign_context_spacing",
+      "rows": 100,
+      "v2_statuses": {
+        "PASS": 100
+      },
+      "wire_statuses": {
+        "PASS": 100
+      },
+      "constructed_backend_calls": 100
+    },
+    {
+      "task": "arc_challenge",
+      "condition": "drop_continuation",
+      "rows": 100,
+      "v2_statuses": {
+        "PASS": 100
+      },
+      "wire_statuses": {
+        "FAIL": 100
+      },
+      "constructed_backend_calls": 0
+    },
+    {
+      "task": "arc_challenge",
+      "condition": "replace_continuation",
+      "rows": 100,
+      "v2_statuses": {
+        "PASS": 100
+      },
+      "wire_statuses": {
+        "FAIL": 100
+      },
+      "constructed_backend_calls": 0
+    },
+    {
+      "task": "arc_challenge",
+      "condition": "omit_question_context",
+      "rows": 100,
+      "v2_statuses": {
+        "PASS": 100
+      },
+      "wire_statuses": {
+        "FAIL": 100
+      },
+      "constructed_backend_calls": 0
+    },
+    {
+      "task": "openbookqa",
+      "condition": "native",
+      "rows": 100,
+      "v2_statuses": {
+        "PASS": 100
+      },
+      "wire_statuses": {
+        "PASS": 100
+      },
+      "constructed_backend_calls": 100
+    },
+    {
+      "task": "openbookqa",
+      "condition": "benign_context_spacing",
+      "rows": 100,
+      "v2_statuses": {
+        "PASS": 100
+      },
+      "wire_statuses": {
+        "PASS": 100
+      },
+      "constructed_backend_calls": 100
+    },
+    {
+      "task": "openbookqa",
+      "condition": "drop_continuation",
+      "rows": 100,
+      "v2_statuses": {
+        "PASS": 100
+      },
+      "wire_statuses": {
+        "FAIL": 100
+      },
+      "constructed_backend_calls": 0
+    },
+    {
+      "task": "openbookqa",
+      "condition": "replace_continuation",
+      "rows": 100,
+      "v2_statuses": {
+        "PASS": 100
+      },
+      "wire_statuses": {
+        "FAIL": 100
+      },
+      "constructed_backend_calls": 0
+    },
+    {
+      "task": "openbookqa",
+      "condition": "omit_question_context",
+      "rows": 100,
+      "v2_statuses": {
+        "PASS": 100
+      },
+      "wire_statuses": {
+        "FAIL": 100
+      },
+      "constructed_backend_calls": 0
+    }
+  ]
+}

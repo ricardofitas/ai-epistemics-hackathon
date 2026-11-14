@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "source_units": 200,
+  "native_condition_rows": 200,
+  "native_per_option_request_objects": 801,
+  "condition_records": 1000,
+  "counts": {
+    "native_or_benign_pass": 400,
+    "controlled_stale_metadata_rejected_at_wire": 600
+  },
+  "actual_local_backend_invocations": 400,
+  "provider_model_calls": 0,
+  "pre_and_post_instrumentation_decisions_identical": true,
+  "scope": "Exact native method projection; same known source corpus, newly sampled engine request outputs. Full engine/model execution is not claimed."
+}

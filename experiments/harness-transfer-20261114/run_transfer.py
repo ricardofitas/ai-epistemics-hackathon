@@ -78,8 +78,16 @@ for task,name in [('arc_challenge','arc-challenge'),('openbookqa','openbookqa')]
     if condition=='omit_question_context':
      for r in carrier:r['context']='NON_SOURCE_CONTEXT'
     v2=audit_with_source([rec]);wire=wire_check(carrier,declared_context,q,opts,t.config.target_delimiter)
-    backend_calls=0
-    if v2['status']=='PASS' and wire['status']=='PASS':backend_calls=1
+    observed_calls=[]
+    def counting_backend(request_bundle):
+     observed_calls.append(len(request_bundle))
+     return len(request_bundle)
+    def guarded_send():
+     if wire['status']!='PASS':raise InvalidContract(wire)
+     return guarded_source_inference([rec],lambda prompts:counting_backend(carrier))
+    try:guarded_send()
+    except InvalidContract:pass
+    backend_calls=len(observed_calls)
     records.append(dict(task=task,source_index=index,condition=condition,source_target=gold_index,native_target=target,adapter_record=rec,actual_requests=carrier,v2=v2,wire=wire,constructed_backend_calls=backend_calls))
   except Exception as e:exceptions.append(dict(task=task,source_index=index,error_type=type(e).__name__,error=str(e)))
 summary=[]
@@ -92,3 +100,4 @@ for name,rows in [('SELECTED_INPUTS.jsonl.gz',selected_inputs),('REQUEST_CAPTURE
 result=dict(engine_revision=P['engine_revision'],source_units=len(selected_inputs),condition_records=len(records),exceptions=exceptions,provider_model_calls=0,scope=P['source_scope'],source_data_reused=True,summary=summary)
 (ROOT/'RESULTS.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))
+

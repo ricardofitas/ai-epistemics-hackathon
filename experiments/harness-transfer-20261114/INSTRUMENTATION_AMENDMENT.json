@@ -1,0 +1,5 @@
+{
+  "recorded_at": "2026-11-14T06:03:03.631297+00:00",
+  "first_pass": "Native source-method outcomes and wire decisions were measured, but constructed_backend_calls was a policy-derived indicator, not an actual function invocation. Preserve first-pass data.",
+  "correction": "Invoke an actual local counting backend through the frozen v2 guard after the wire check; preserve source data, sample, methods, checker bytes, criteria and all dispositions. Rerun the same frozen panel only to verify execution instrumentation. No model calls."
+}
