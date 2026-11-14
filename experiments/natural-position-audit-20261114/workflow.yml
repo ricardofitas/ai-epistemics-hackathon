@@ -1,0 +1,34 @@
+name: Audit unchanged source ordering through native evaluation and report scores
+on:
+  push:
+    branches: [ricardo/natural-position-audit-20261114]
+    paths: ['experiments/natural-position-audit-20261114/LAUNCH.json']
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: experiments/natural-position-audit-20261114
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.11"
+      - name: Install data-reading dependencies
+        run: |
+          python3 -m pip install --only-binary=:all: --disable-pip-version-check pandas==2.2.3 pyarrow==19.0.1 jinja2==3.1.6
+          python3 -m pip install --disable-pip-version-check word2number==1.1
+      - name: Execute original public entry point, disk storage, evaluator and healthy control
+        run: python3 -u experiments/natural-position-audit-20261114/full_entrypoint.py
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: natural-position-source-audit
+          path: |
+            experiments/natural-position-audit-20261114/summary.json
+            experiments/natural-position-audit-20261114/records/
+            experiments/natural-position-audit-20261114/entrypoint-summary.json
+            experiments/natural-position-audit-20261114/entrypoint_records/

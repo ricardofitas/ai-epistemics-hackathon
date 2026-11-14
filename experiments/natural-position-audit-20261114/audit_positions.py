@@ -50,12 +50,13 @@ def class_from(source, name, ns, methods=None):
     return ns[name]
 
 
-def hf_frame(repo, split):
+def hf_frame(repo, split, prefix=None):
     metadata = json.loads(get(f"https://huggingface.co/api/datasets/{repo}"))
     revision = metadata["sha"]
     entries = json.loads(get(f"https://huggingface.co/api/datasets/{repo}/tree/{revision}?recursive=true"))
     files = [f for f in entries if f.get("type") == "file" and f["path"].endswith(".parquet")
-             and Path(f["path"]).name.startswith(split + "-")]
+             and Path(f["path"]).name.startswith(split + "-")
+             and (prefix is None or f["path"].startswith(prefix))]
     assert files, (repo, split)
     frames, receipts = [], []
     for item in sorted(files, key=lambda r: r["path"]):
@@ -126,7 +127,7 @@ def load_native(plan):
     ns = dict(pd=pd, np=np, re=re, json=json, os=os, Path=Path, hashlib=hashlib, math=math,
               concurrent=concurrent, cpu_count=lambda: 2, log=LOG, get_logger=lambda *a: LOG,
               parse_value=parse_value, extract_choice=extract_choice, inspect=inspect,
-              OperatorABC=object, DIYPromptABC=object, jinja2=jinja2, Template=jinja2.Template,
+              OperatorABC=object, DIYPromptABC=object, PromptABC=object, jinja2=jinja2, Template=jinja2.Template,
               Environment=jinja2.Environment, StrictUndefined=jinja2.StrictUndefined,
               NON_PARALLEL_METRICS={"choice_accuracy"})
     wheel_info = json.loads(get("https://pypi.org/pypi/open-dataflow/1.0.10/json"))
@@ -138,6 +139,9 @@ def load_native(plan):
         prompt_source = archive.read(prompt_file).decode()
         generator_file = "dataflow/operators/core_text/generate/bench_answer_generator.py"
         generator_source = archive.read(generator_file).decode()
+        ns["wheel_sources"] = {p: archive.read(p).decode() for p in archive.namelist()
+            if p in {"dataflow/utils/storage.py", "dataflow/utils/reasoning/AnswerExtraction.py",
+                     "dataflow/operators/core_text/eval/unified_bench_dataset_evaluator.py"}}
     class_from(prompt_source, "FormatStrPrompt", ns)
     generator = class_from(generator_source, "BenchAnswerGenerator", ns)
     tool = class_from(sources["one_eval/toolkits/dataflow_eval_tool.py"].decode(), "DataFlowEvalTool", ns)
