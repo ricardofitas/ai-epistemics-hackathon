@@ -1,0 +1,38 @@
+{
+  "stage": "Source-reference scoring replay after question binding",
+  "design": "Post-discovery causal parser/reference ablation using previously selected records and constructed outputs. No model accuracy claim.",
+  "base_commit": "73ca316e6124beb4f7d0e123f9e2d125f98e48b0",
+  "source_revision": "66a05ec3821a2b5089ed1e32a5d65ab6ecdbf906",
+  "official_rule_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+  "framework_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "selected_rows": 200,
+  "conditions": [
+    "native_list_reference",
+    "singleton_reference_only",
+    "official_rule_type_dispatch"
+  ],
+  "constructed_output_families": [
+    "source_first_reference",
+    "explicit_wrong",
+    "empty",
+    "always_A"
+  ],
+  "output_construction": "Freeform reference is first accepted alias. MC reference is correct legal source option letter. WrongMC uses next legal letter, wrongfreeform uses fixed non-answer sentinel. Empty and A remain probes, not assumed zero under official rule mode.",
+  "isolation": "All conditions receive identical source and constructed response per case. No question change or model generation can account for scorer differences.",
+  "predictions": [
+    "List-valued targets will often be rejected by native choice parser; preserve any accepted counterexamples.",
+    "Singleton scalarization can repair MC references but cannot recover free-form semantics or aliases.",
+    "Official rule dispatch should preserve both splits and source references; literal alias replays may expose official-rule limitations and must be retained."
+  ],
+  "official_scope": "Execute unchanged pinned official rule helpers. This is the optional official rule mode, not default model-judge mode, full benchmark inference or a leaderboard score.",
+  "rng": "Dedicated Python random.Random(42) for official MC fallback; count and save every fallback. Fixed ordering selected records then four output families.",
+  "denominator_policy": "Save nominal cases, valid reference denominator, valid predictions, invalid references, parse/empty outcomes and native reported0.0 separately. Denominator0 is UNSCORABLE. Official fallback guesses remain visible.",
+  "provenance": "Native preprocessing and _rescore_choice_single method bodies from pinned source with original parser package. AST data-only scaffold, no installed whole engine/model/tokenizer/transport.",
+  "new_model_calls": 0,
+  "inputs": {
+    "SELECTED.jsonl.gz": "c00abfba2d087d451bec17ef6b2367cb0582831aa1f128e61288f597841cd568",
+    "GALLERY_ENTRY.json": "2d19b8b5c47981e4c24ff07c2ca880f95a7e5935d65995b9b8fb982895fce50b"
+  },
+  "exposure": "All200records previously observed. Code and docs inspected before this protocol. Not prospective unseen task families.",
+  "errors": "Retain every selected case, exception, parser failure and mismatching constructed oracle. No resampling or outcome-dependent repairs."
+}
