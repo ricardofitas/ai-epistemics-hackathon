@@ -1,0 +1,33 @@
+{
+  "attempts": 230,
+  "consensus": {
+    "control": {
+      "valid": 12
+    },
+    "first_credited": {
+      "gold_option": 2,
+      "other_option": 7,
+      "unknown": 1,
+      "unresolved": 40
+    },
+    "first_wrong": {
+      "gold_option": 3,
+      "other_option": 5,
+      "unresolved": 42
+    }
+  },
+  "control_by_judge": {
+    "glm-5.2": {
+      "correct": 12
+    },
+    "qwen3.8-27b": {
+      "correct": 12
+    }
+  },
+  "eligible": 223,
+  "http_429": 6,
+  "planned": 224,
+  "reported_cost": 0.14768362599999998,
+  "terminals": 224
+}
+

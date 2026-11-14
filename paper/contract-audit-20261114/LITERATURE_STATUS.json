@@ -9,5 +9,9 @@
   "novelty_cleared": false,
   "generic_contract_failfast_novelty": false,
   "source": "evidence/primary_literature.json",
-  "remaining": "Direct implementation comparison and exhaustive review remain open."
+  "remaining": "Direct implementation comparison and exhaustive review remain open.",
+  "v18_added_priorwork": {
+    "Molfese2025": "Full primary method sections3-6/A inspected; extraction/human, format-reasoning, rationale-final and task-solving-extractor concerns are prior art. Bounded method/search review did not locate exact TabMWP first-zero default; no global absence/novelty claim.",
+    "Zheng2023": "Official PDF section4.1 confirms official TabMWP script use; downstream outputs/conclusion not re-scored"
+  }
 }

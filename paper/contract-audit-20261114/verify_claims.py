@@ -198,9 +198,25 @@ for row in rescore['rows']:
         assert row['original_metric_result']['primary_metric_result']['score'] == 0.0
     else:
         assert metric['scored_samples'] == 0 and metric['invalid_references'] == 1
+qa=read('tabmwp_archive_qualified.json');oa=read('tabmwp_archive_original.json');bs=read('tabmwp_blinded_summary.json')
+assert oa['unique_test_items']==7686 and len(oa['files'])==10
+assert sum(x['total'] for x in oa['files'].values())==76860
+assert sum(x['choice_rows'] for x in oa['files'].values())==19920
+assert format(100*qa['files']['results/t5/exp1_pretrained_unifiedqa_small.json']['only_exact_override']/7686,'.2f')=='12.16'
+assert qa['changed_flags']==557 and qa['unique_source_ids_changed']==432
+assert sum(x['changed_to_correct'] for x in qa['files'].values())==397
+assert sum(x['changed_to_wrong'] for x in qa['files'].values())==160
+assert qa['strict_inversions']['only_exact_override']==[]
+assert len(qa['strict_inversions']['exact_first_then_abstain'])==2
+assert {tuple(x) for x in qa['strict_inversions']['exact_first_then_abstain']}=={('results/t5/exp1_pretrained_unifiedqa_small.json','results/tapex/exp1_tapex-base.json'),('results/t5/exp2_pretrained_unifiedqa_base.json','results/tapex/exp1_tapex-base.json')}
+assert bs['planned']==bs['terminals']==224 and bs['eligible']==223
+assert bs['consensus']['first_credited']=={'gold_option':2,'other_option':7,'unknown':1,'unresolved':40}
+assert all(x['correct']==12 for x in bs['control_by_judge'].values()) and len(bs['control_by_judge'])==2
+assert json.loads((P/'PRIOR_C1_C20.json').read_text())==json.loads((P/'claims.json').read_text())[:20]
+
 pages = json.loads((P / 'manuscript.json').read_text())
 claims = json.loads((P / 'claims.json').read_text())
-assert len(pages) == 18 and len(claims) == 20
+assert len(pages) == 20 and len(claims) == 22
 assert 150 <= len(pages[0]['blocks'][2]['text'].split()) <= 250
 assert [row[0] for row in pages[12]['blocks'][1]['rows']] == [claim['id'] for claim in claims[:16]]
 for claim in claims:
@@ -212,7 +228,7 @@ for row, claim in zip(ledger, claims):
     assert row == dict(claim_id=claim['id'], section=claim['section'],
                        numerical_or_status_claim=claim['claim'],
                        evidence_files=claim['evidence'], qualification=claim['qualification'])
-result = dict(status='PASS', claims_checked=20, working_draft_version='1.7',
+result = dict(status='PASS', claims_checked=22, working_draft_version='1.8',
               integrated_mechanisms=['native source gate', 'shared input causes', 'MMMLU prediction', 'MixEval task kind'],
               verifier_model_requests=0, new_experiments_during_synthesis=0,
               scope='Synthesis consistency check against source snapshots')

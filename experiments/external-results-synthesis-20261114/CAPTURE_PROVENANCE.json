@@ -1,0 +1,53 @@
+{
+  "captured_at": "2026-11-14T19:04:23Z",
+  "source_run": 43624040280,
+  "launch_commit": "1f96cdbf58c4e4d8b7b3c9530a2ffa637390c2c6",
+  "protocol_commit": "708db81a40d3ad05809067a8553308f73e4d0805",
+  "replay_code_commit": "e853332434abc73d162ccf38eda2534b72c21cf0",
+  "planned_waves": 8,
+  "available_waves": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "not_yet_available_waves": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "status": "IN_PROGRESS_PARTIAL_ONLY",
+  "artifacts": [
+    {
+      "id": 14128130927,
+      "name": "contract-transfer-wave-4-43624040280",
+      "size_in_bytes": 972226,
+      "digest": "sha256:7813394e4550d91ff22fa93f6b85e37f643318ba5d422e03c900eeb4d98bd9ef",
+      "created_at": "2026-11-14T19:02:22Z"
+    },
+    {
+      "id": 14127010749,
+      "name": "contract-transfer-wave-2-43624040280",
+      "size_in_bytes": 982578,
+      "digest": "sha256:eaebc0adf933eb8611121f2866e28744b380f5b6576f133de62729e79db4569c",
+      "created_at": "2026-11-14T18:29:27Z"
+    },
+    {
+      "id": 14126044366,
+      "name": "contract-transfer-wave-3-43624040280",
+      "size_in_bytes": 976608,
+      "digest": "sha256:4b1a5fc8a3088aa4b4eb6978b4af3e453f555014eb3f0054970936708c2d0c13",
+      "created_at": "2026-11-14T18:46:24Z"
+    },
+    {
+      "id": 14125598381,
+      "name": "contract-transfer-wave-1-43624040280",
+      "size_in_bytes": 1003321,
+      "digest": "sha256:4333df9025086dfc29ebf711f0bf34d5a195943f81e8b21253481ed9244a6ae5",
+      "created_at": "2026-11-14T18:12:43Z"
+    }
+  ],
+  "new_calls_by_this_worker": 0,
+  "warning": "Counts/cost below cover authenticated uploaded waves only. Active/future waves may contain additional calls; not an account-total or final3200study report."
+}

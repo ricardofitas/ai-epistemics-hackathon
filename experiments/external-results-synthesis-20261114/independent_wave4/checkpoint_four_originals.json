@@ -1,0 +1,80 @@
+{
+  "scope": "Operational four-original reconciliation only. Previous wave1..3 scientific verification is not counted again.",
+  "waves": [
+    {
+      "wave": 1,
+      "zip_sha256": "4333df9025086dfc29ebf711f0bf34d5a195943f81e8b21253481ed9244a6ae5",
+      "unique_slots": 400,
+      "attempts": 405,
+      "eligible": 389,
+      "status": {
+        "completed": 389,
+        "incomplete": 11
+      },
+      "explicit_429": 5
+    },
+    {
+      "wave": 2,
+      "zip_sha256": "eaebc0adf933eb8611121f2866e28744b380f5b6576f133de62729e79db4569c",
+      "unique_slots": 400,
+      "attempts": 406,
+      "eligible": 388,
+      "status": {
+        "completed": 388,
+        "incomplete": 12
+      },
+      "explicit_429": 6
+    },
+    {
+      "wave": 3,
+      "zip_sha256": "4b1a5fc8a3088aa4b4eb6978b4af3e453f555014eb3f0054970936708c2d0c13",
+      "unique_slots": 400,
+      "attempts": 407,
+      "eligible": 386,
+      "status": {
+        "completed": 386,
+        "incomplete": 14
+      },
+      "explicit_429": 7
+    },
+    {
+      "wave": 4,
+      "zip_sha256": "7813394e4550d91ff22fa93f6b85e37f643318ba5d422e03c900eeb4d98bd9ef",
+      "unique_slots": 400,
+      "attempts": 405,
+      "eligible": 385,
+      "status": {
+        "completed": 385,
+        "incomplete": 15
+      },
+      "explicit_429": 5
+    }
+  ],
+  "totals": {
+    "started_unique": 1600,
+    "attempts": 1623,
+    "eligible": 1548,
+    "status": {
+      "completed": 1548,
+      "incomplete": 52
+    },
+    "explicit_429": 23,
+    "input_tokens": 339124,
+    "output_tokens": 741771,
+    "reported_cost": 1.5082729077680002
+  },
+  "rate_card_cost_decimal": "1.540143692",
+  "production_summary_sha256": "5d163694ac22d89f5a364ae15d5f0a0be3fc6e47497877e9d7842947ce1bacff",
+  "pending_waves": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "pending_source_indexes": [
+    100,
+    199
+  ],
+  "pending_slots": 1600,
+  "failures": []
+}

@@ -1,17 +1,20 @@
 {
   "status": "PRIVATE_WORKING_DRAFT_READY_FOR_INTERNAL_REVIEW",
-  "pages": 18,
-  "claims": 20,
+  "pages": 20,
+  "claims": 22,
   "numerical_consistency": "PASS",
   "visual_review": "PASS",
   "not_ready_for_external_submission": [
     "Global novelty clearance and direct comparative implementation study remain open.",
     "Repeated source content and incomplete/ambiguouspubliccachematching limitgeneralization.",
     "The native API route is verified on two exposed source questions. Local model/tokenizer integration and the official MixEval default model judge retain separate unverified boundaries.",
-    "Defaultofficialmodeljudge and independentlyaffectedexternalconclusion unverified.",
+    "Official MixEval default model judge and independently affected One-Eval deployment remain unverified; TabMWP archive policy sensitivity is separately established.",
     "Authoragreement/venuepresentation pending.",
     "Small source-exposed fixed-order pilot; retrospective assistant adjudication is not human/default-judge validation; final-answer/content constructs remain separate.",
-    "Factorial fixed20sourcepanel is exposed; secondary annotations are same-family assistants and historical/multipart references require care."
+    "Factorial fixed20sourcepanel is exposed; secondary annotations are same-family assistants and historical/multipart references require care.",
+    "Human reading remains unperformed; blinded models are not a substitute.",
+    "The external3200generation and numeric192follow-up retain active/missing slots; no full-study conclusion in this revision.",
+    "Molfese etalACL2025 already studies extraction/human-evaluation, format-reasoning and rationale/final conflicts, and task-solving extractors. Full primary method inspected; no first-general-mechanism claim. Broader novelty clearance remains open."
   ],
   "strongest_supported_claim": "Pinned source-to-request, task-kind and source-to-reference defects with controlled empirical consequences and bounded causal/transfer interventions.",
   "next_actions": [
@@ -19,7 +22,7 @@
     "Validate checker transfer or independent factual annotation with fixed criteria and preserved nulls.",
     "Follow a new primary external trace when it supplies executable revision, requests, outputs and a reported consequence."
   ],
-  "working_draft_version": "1.7",
+  "working_draft_version": "1.8",
   "native_task_path_integration": "PASS200cases/801requests/400constructed scoring fixtures; models and tokenizers excluded",
   "integrated_updates": [
     "Installed native source/request gate",
@@ -34,7 +37,9 @@
     "Prespecified 160-call factorial and 152-response assistant secondary review retained from v1.6",
     "Exploratory 256-assignment RULE ranking sensitivity and seven caveat exclusion panels",
     "Primary upstream PR63 recognition of scoring/reporting corrections and bounded DataFlow external-result lead",
-    "Installed native API and MetricRunner execution on four real captures, original scores preserved, explicit fixed-output content-view alignment"
+    "Installed native API and MetricRunner execution on four real captures, original scores preserved, explicit fixed-output content-view alignment",
+    "Qualified historical TabMWP baseline sensitivity",
+    "Completed blinded model interpretation with controls; human labels absent"
   ],
   "main_text_pages": 8,
   "native_orchestration": "PASS_WITH_PROVENANCE_ERRATUM;49reusedresponses,10coveragecontrols,fullnativefileswithdeclaredinterventions",

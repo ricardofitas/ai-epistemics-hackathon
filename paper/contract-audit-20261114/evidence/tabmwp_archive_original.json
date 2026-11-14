@@ -1,0 +1,166 @@
+{
+  "files": {
+    "results/t5/exp1_pretrained_unifiedqa_small.json": {
+      "abstain": 915,
+      "choice_rows": 1992,
+      "last": 931,
+      "official_panel_correct": 0,
+      "original": 936,
+      "panel_disagreements": 0,
+      "strict_panel_correct": 0,
+      "total": 7686,
+      "zero_changed_flags": 37,
+      "zero_first_correct": 21,
+      "zero_last_correct": 16,
+      "zero_rows": 57
+    },
+    "results/t5/exp2_pretrained_unifiedqa_base.json": {
+      "abstain": 1090,
+      "choice_rows": 1992,
+      "last": 1121,
+      "official_panel_correct": 9,
+      "original": 1119,
+      "panel_disagreements": 0,
+      "strict_panel_correct": 9,
+      "total": 7686,
+      "zero_changed_flags": 60,
+      "zero_first_correct": 29,
+      "zero_last_correct": 31,
+      "zero_rows": 99
+    },
+    "results/t5/exp3_pretrained_unifiedqa_large.json": {
+      "abstain": 1225,
+      "choice_rows": 1992,
+      "last": 1228,
+      "official_panel_correct": 6,
+      "original": 1227,
+      "panel_disagreements": 0,
+      "strict_panel_correct": 6,
+      "total": 7686,
+      "zero_changed_flags": 5,
+      "zero_first_correct": 2,
+      "zero_last_correct": 3,
+      "zero_rows": 6
+    },
+    "results/t5/exp4_small.json": {
+      "abstain": 2290,
+      "choice_rows": 1992,
+      "last": 2292,
+      "official_panel_correct": 28,
+      "original": 2290,
+      "panel_disagreements": 0,
+      "strict_panel_correct": 28,
+      "total": 7686,
+      "zero_changed_flags": 2,
+      "zero_first_correct": 0,
+      "zero_last_correct": 2,
+      "zero_rows": 3
+    },
+    "results/t5/exp5_base.json": {
+      "abstain": 3345,
+      "choice_rows": 1992,
+      "last": 3345,
+      "official_panel_correct": 37,
+      "original": 3345,
+      "panel_disagreements": 0,
+      "strict_panel_correct": 37,
+      "total": 7686,
+      "zero_changed_flags": 0,
+      "zero_first_correct": 0,
+      "zero_last_correct": 0,
+      "zero_rows": 2
+    },
+    "results/t5/exp6_large.json": {
+      "abstain": 4407,
+      "choice_rows": 1992,
+      "last": 4407,
+      "official_panel_correct": 47,
+      "original": 4408,
+      "panel_disagreements": 0,
+      "strict_panel_correct": 47,
+      "total": 7686,
+      "zero_changed_flags": 1,
+      "zero_first_correct": 1,
+      "zero_last_correct": 0,
+      "zero_rows": 2
+    },
+    "results/tapex/exp1_tapex-base.json": {
+      "abstain": 766,
+      "choice_rows": 1992,
+      "last": 1224,
+      "official_panel_correct": 12,
+      "original": 1209,
+      "panel_disagreements": 0,
+      "strict_panel_correct": 12,
+      "total": 7686,
+      "zero_changed_flags": 901,
+      "zero_first_correct": 443,
+      "zero_last_correct": 458,
+      "zero_rows": 1238
+    },
+    "results/tapex/exp2_tapex-base.json": {
+      "abstain": 3701,
+      "choice_rows": 1992,
+      "last": 3714,
+      "official_panel_correct": 40,
+      "original": 3710,
+      "panel_disagreements": 0,
+      "strict_panel_correct": 40,
+      "total": 7686,
+      "zero_changed_flags": 22,
+      "zero_first_correct": 9,
+      "zero_last_correct": 13,
+      "zero_rows": 37
+    },
+    "results/tapex/exp3_tapex-large.json": {
+      "abstain": 1221,
+      "choice_rows": 1992,
+      "last": 1431,
+      "official_panel_correct": 14,
+      "original": 1429,
+      "panel_disagreements": 0,
+      "strict_panel_correct": 14,
+      "total": 7686,
+      "zero_changed_flags": 418,
+      "zero_first_correct": 208,
+      "zero_last_correct": 210,
+      "zero_rows": 703
+    },
+    "results/tapex/exp4_tapex-large.json": {
+      "abstain": 4490,
+      "choice_rows": 1992,
+      "last": 4498,
+      "official_panel_correct": 55,
+      "original": 4498,
+      "panel_disagreements": 0,
+      "strict_panel_correct": 55,
+      "total": 7686,
+      "zero_changed_flags": 16,
+      "zero_first_correct": 8,
+      "zero_last_correct": 8,
+      "zero_rows": 25
+    }
+  },
+  "source_revision": "869bae8ffb8288ccc3102293b3090ec2aa17f618",
+  "strict_inversions": {
+    "abstain": [
+      [
+        "results/t5/exp1_pretrained_unifiedqa_small.json",
+        "results/tapex/exp1_tapex-base.json"
+      ],
+      [
+        "results/t5/exp2_pretrained_unifiedqa_base.json",
+        "results/tapex/exp1_tapex-base.json"
+      ],
+      [
+        "results/t5/exp3_pretrained_unifiedqa_large.json",
+        "results/tapex/exp3_tapex-large.json"
+      ]
+    ],
+    "last": []
+  },
+  "unique_items_credited_by_zero_tie": 457,
+  "unique_test_items": 7686,
+  "unique_zero_tie_items": 1273
+}
+

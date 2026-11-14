@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-14",
+  "method": "Read-only GitHub connector fetch. Hashes below describe UTF-8 connector text, not independent remote raw bytes.",
+  "files": [
+    {
+      "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/blob/74f2aaf31f0f64c61f8d9efff29e995f43c04a59/experiments/tabmwp-archive-audit-20261114/FINDING.md",
+      "local_file": "sources/archive_FINDING.md",
+      "connector_characters": 4354,
+      "materialized_characters": 4354,
+      "sha256": "b7cc2acb28a71b03e60db4e8461d73cb4ba6f4387b9e809c9573b578be5e6d59",
+      "git_blob_sha1": "24316e90a8606a398f54dc0724b091e9bf9d13eb",
+      "length_matches_connector": true
+    },
+    {
+      "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/blob/74f2aaf31f0f64c61f8d9efff29e995f43c04a59/experiments/tabmwp-archive-audit-20261114/exact_results.json",
+      "local_file": "sources/archive_exact_results.json",
+      "connector_characters": 3345,
+      "materialized_characters": 3345,
+      "sha256": "393e02fa69a2f705fa0611c219e51c23f6459ed4e3064f2d465b43490b87800c",
+      "git_blob_sha1": "bb26a738cedc8a7fc5ad4ee4f6c8f008c527af5a",
+      "length_matches_connector": true
+    },
+    {
+      "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/blob/74f2aaf31f0f64c61f8d9efff29e995f43c04a59/experiments/tabmwp-archive-audit-20261114/result.json",
+      "local_file": "sources/archive_result.json",
+      "connector_characters": 4467,
+      "materialized_characters": 4467,
+      "sha256": "3b483f8cd11d9f9dda9524c16783e09f0e0c9b76de71c815dda8cbf270ca9c64",
+      "git_blob_sha1": "9203660a51078d41c8bcc665d66b0e57a0671707",
+      "length_matches_connector": true
+    },
+    {
+      "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/blob/74f2aaf31f0f64c61f8d9efff29e995f43c04a59/experiments/tabmwp-archive-audit-20261114/METHOD.md",
+      "local_file": "sources/archive_METHOD.md",
+      "connector_characters": 1965,
+      "materialized_characters": 1965,
+      "sha256": "32eebc01b4f554385d0706e245825bc808112beeef8dd47d591a42eb37fb589f",
+      "git_blob_sha1": "2557eef619ea4bdf4de11abbf5b3373d91562a8d",
+      "length_matches_connector": true
+    },
+    {
+      "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/blob/74f2aaf31f0f64c61f8d9efff29e995f43c04a59/experiments/tabmwp-archive-audit-20261114/sources.json",
+      "local_file": "sources/archive_sources.json",
+      "connector_characters": 1037,
+      "materialized_characters": 1037,
+      "sha256": "b5f27c9fc7f572c96aa7f988355432c2e2e19e5cc3c52fc758d50f9f2470d1c7",
+      "git_blob_sha1": "8e6642f624549890cacf828d7aefe5d8fba4185c",
+      "length_matches_connector": true
+    },
+    {
+      "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/blob/1d39e5fbab209159f09b8b1573d89f78e47c8f8e/experiments/tabmwp-blind-reading-20261114/RESULTS.md",
+      "local_file": "sources/blind_RESULTS.md",
+      "connector_characters": 1898,
+      "materialized_characters": 1898,
+      "sha256": "23b0e3476bd44ca0017a3ec4a6292ef2a0116f6ba3e58c5d23fcf24056b67161",
+      "git_blob_sha1": "32b2f441bb2ece3beca0fb88492b7473fe2f802b",
+      "length_matches_connector": true
+    },
+    {
+      "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/blob/1d39e5fbab209159f09b8b1573d89f78e47c8f8e/experiments/tabmwp-blind-reading-20261114/summary.json",
+      "local_file": "sources/blind_summary.json",
+      "connector_characters": 542,
+      "materialized_characters": 542,
+      "sha256": "e610370f5763b2f17fd07297e608fb516549c0e0dbed97e3153dc7daa4bc599b",
+      "git_blob_sha1": "9302834ed6328cc63869e396f330e8a628ed5552",
+      "length_matches_connector": true
+    },
+    {
+      "url": "https://github.com/ricardofitas/ai-epistemics-hackathon/blob/1d39e5fbab209159f09b8b1573d89f78e47c8f8e/experiments/tabmwp-blind-reading-20261114/PROTOCOL.md",
+      "local_file": "sources/blind_PROTOCOL.md",
+      "connector_characters": 1561,
+      "materialized_characters": 1561,
+      "sha256": "538b061a60154fbcd32983253cc81904fb74f4d38e70a00372d44d32fb5fc178",
+      "git_blob_sha1": "9826b0e5172b3f5d8db160273cdcaea830a15aa0",
+      "length_matches_connector": true
+    }
+  ]
+}

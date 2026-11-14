@@ -414,5 +414,29 @@
     "source": "Post-outcome native MetricRunner rescore run43621794887, same four provider captures and zero new provider calls",
     "member": "native_validation/rescore_actual/extracted/PROTOCOL.json",
     "sha256": "8b1b6c5473138490083b3c2390b4555352bcbee9e3aa9e3ef53f68367c2ef000"
+  },
+  "tabmwp_archive_original.json": {
+    "source_repository": "ricardofitas/ai-epistemics-hackathon",
+    "source_revision": "74f2aaf31f0f64c61f8d9efff29e995f43c04a59",
+    "sha256": "6e5092fcc2435a4166dc880f7ce05ff552f5306efcd3f1d870332028b30ffea1",
+    "scope": "Historical published baseline output replay;post-replay explicit-option extension;policy sensitivity not uniquely corrected semantic score;headlineGPT3/PromptPG untested"
+  },
+  "tabmwp_archive_qualified.json": {
+    "source_repository": "ricardofitas/ai-epistemics-hackathon",
+    "source_revision": "74f2aaf31f0f64c61f8d9efff29e995f43c04a59",
+    "sha256": "1d5c9ea53f4002c42065e3ddd9e8fbd74adfaff28dc9fdd17f5b1a6e93a22ce7",
+    "scope": "Historical published baseline output replay;post-replay explicit-option extension;policy sensitivity not uniquely corrected semantic score;headlineGPT3/PromptPG untested"
+  },
+  "tabmwp_archive_sources.json": {
+    "source_repository": "ricardofitas/ai-epistemics-hackathon",
+    "source_revision": "74f2aaf31f0f64c61f8d9efff29e995f43c04a59",
+    "sha256": "ef11c6253847234c68350df2b476c9c2699d6449b53c427e184e1ebd90a30425",
+    "scope": "Historical published baseline output replay;post-replay explicit-option extension;policy sensitivity not uniquely corrected semantic score;headlineGPT3/PromptPG untested"
+  },
+  "tabmwp_blinded_summary.json": {
+    "source_repository": "ricardofitas/ai-epistemics-hackathon",
+    "source_revision": "1d39e5fbab209159f09b8b1573d89f78e47c8f8e",
+    "sha256": "4c4eeb306aec63b2c5802b038d415993a3072787236121ae5835ced58c872848",
+    "scope": "100stratified archive questions+12controls repeated2models;not human labels or independent population prevalence"
   }
 }

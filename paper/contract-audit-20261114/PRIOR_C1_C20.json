@@ -1,0 +1,142 @@
+[
+  {
+    "id": "C1",
+    "section": "2",
+    "claim": "21 configurations;64119 record appearances;7 failed;14 passed",
+    "evidence": "calibration.json",
+    "qualification": "Known-fault calibration; overlapping records"
+  },
+  {
+    "id": "C2",
+    "section": "2",
+    "claim": "1267 question-dependence failures;628 changed references;300 conflict groups;309 deterministic unavoidable errors",
+    "evidence": "wino.json",
+    "qualification": "Captured validation split and deterministic mapping only"
+  },
+  {
+    "id": "C3",
+    "section": "2",
+    "claim": "400 prospective rows;2 initial adapter false alerts",
+    "evidence": "prospective.json",
+    "qualification": "Post-outcome whitespace adapter review retained"
+  },
+  {
+    "id": "C4",
+    "section": "2",
+    "claim": "27346 additional rows;27746 total captured source rows;ARC1172;OpenBookQA500",
+    "evidence": "splits.json;split_checks.json",
+    "qualification": "Post-discovery extension; source sample counts not prevalence"
+  },
+  {
+    "id": "C5",
+    "section": "3",
+    "claim": "200 requests;194 complete;Qwen+36..48pp;Gemma-10..82pp",
+    "evidence": "capture.json;factorization.json",
+    "qualification": "50 diagnostic questions in35 dependency groups"
+  },
+  {
+    "id": "C6",
+    "section": "4",
+    "claim": "Same repaired outputs reference effects:Gemma42pp,Qwen40pp",
+    "evidence": "factorization.json",
+    "qualification": "Native heuristic parser fixed-output score; posthoc interaction"
+  },
+  {
+    "id": "C7",
+    "section": "5,A.1",
+    "claim": "2200 development variants from200units; SocialIQa100source/600variants;v2 PASS200 FAIL300 INCOMPLETE100",
+    "evidence": "mutations.json;social_summary.json;social_verification.json;social_protocol.json",
+    "qualification": "Known mechanisms; source-family holdout from documented development; custom adapter; global blindness unverified"
+  },
+  {
+    "id": "C8",
+    "section": "6",
+    "claim": "Harness200cases/801requests; native source gate1600conditions with400PASS/1000FAIL/200INCOMPLETE",
+    "evidence": "harness.json;native_integration.json;native_gate.json;native_gate_verification.json",
+    "qualification": "Reused source records and local counting-sink boundary"
+  },
+  {
+    "id": "C9",
+    "section": "10",
+    "claim": "Public component use and code distribution identified; affected independent conclusion unresolved",
+    "evidence": "external.json;external_update.json;fork_inventory.json",
+    "qualification": "Bounded public-source search"
+  },
+  {
+    "id": "C10",
+    "section": "7",
+    "claim": "633 reused records and3798 intervention conditions; shared causes and LAB-Bench boundary",
+    "evidence": "causal_root.json;causal_verification.json",
+    "qualification": "Post-discovery diagnosis of known mechanisms"
+  },
+  {
+    "id": "C11",
+    "section": "7",
+    "claim": "MMMLU100 source records; native question dependence0 and repaired100",
+    "evidence": "mmmlu_transfer.json;causal_verification.json",
+    "qualification": "New native configuration; translated MMLU semantic overlap possible"
+  },
+  {
+    "id": "C12",
+    "section": "8",
+    "claim": "MixEval200 source rows/600conditions;100 native free-form task-kind failures; partial generation repair and retained adapter alerts",
+    "evidence": "mixeval_summary.json;mixeval_review.json;mixeval_verification.json;mixeval_protocol.json",
+    "qualification": "Source mixture; known binding fault; no scoring-stage or model accuracy claim"
+  },
+  {
+    "id": "C13",
+    "section": "9",
+    "claim": "200reusedsources/2400conditions;nativeeligible0/100eachsplit;49publicmatched17+32;typedrulecorrect13+20;128unmatched23ambiguous;5choicefallbacks1correct",
+    "evidence": "scoring_replay_summary.json;scoring_replay_verification.json;scoring_adapter_verification.json;public_score_summary.json;public_score_verification.json;denominator_review.json;public_exact_alias_summary.json",
+    "qualification": "Constructed outputs and fixed public texts, not a new model generation trial or default official judge score"
+  },
+  {
+    "id": "C14",
+    "section": "Appendix B",
+    "claim": "17+32replayedoutputs through fullmodule nativeorchestration;13+20rulecorrect;10coveragecontrolsINCOMPLETE;0optionalshiminvocations",
+    "evidence": "native_route_free_form.json;native_route_multiple_choice.json;native_route_controls.json;native_route_verification.json;native_route_provenance_erratum.json",
+    "qualification": "Same49publicoutputs, explicitlyreplacedprovider/prompt/scorer;diagnosticonly;rawprovenancelabelcollisionretained"
+  },
+  {
+    "id": "C15",
+    "section": "10 and Appendix C",
+    "claim": "20fixedsourcequestions;80newrequests;69complete11unknown;Gemmagain[-.05,.25];Qwengain[.5,.75];8062input66304outputtokens",
+    "evidence": "paired_generation_analysis.json;paired_generation_verification.json;paired_terminal_review.json;paired_output_review.json",
+    "qualification": "Prespecified common-rule scoring and unknown bounds; small exposed source panel, fixed order, instructions/format jointly changed"
+  },
+  {
+    "id": "C16",
+    "section": "10 and Appendix E",
+    "claim": "69maskedresponses;68/69agreement peraxis;17content/finaldiscordances;9Gemmarulecreditswithoutcorrectfinal;Gemmafinal40..75pp/content-35..0pp;Qwenfinal55..80pp/content45..70pp",
+    "evidence": "semantic_review_summary.json;semantic_review_verification.json;semantic_review_protocol.json",
+    "qualification": "Retrospective two-assistant adjudication of exposed outputs; construct-specific labels,11captureunknowns plus1adjudicationuncertainty; no human/defaultjudge or population claim"
+  },
+  {
+    "id": "C17",
+    "section": "Appendix F",
+    "claim": "160attempts,152complete,8unknown;RULEcarrier-removalunderchoiceGemma+40pp,Qwen+70..90pp;interactionGemma-45pp,Qwen-95..-55pp",
+    "evidence": "factorial_primary_summary.json;factorial_primary_verification.json;factorial_primary_protocol.json",
+    "qualification": "Prespecified custom2x2diagnostic;20paired exposedquestions/model;unknownsensitivitybounds,notpopulationCI"
+  },
+  {
+    "id": "C18",
+    "section": "Appendix G",
+    "claim": "152dual-reviewed;152agreementeachaxis;Gemma choice+carrier RULE8/final1/content16,15content-finaldiscordances,7RULEcredits;secondarychoicecarrier-effectfinalGemma80..85pp,Qwen75..95pp",
+    "evidence": "factorial_secondary_summary.json;factorial_secondary_verification.json;factorial_secondary_protocol.json;factorial_source_caveats.json",
+    "qualification": "Prespecified secondary assistant judgment,partialmasking/samefamily;8captureunknowns+2completeuncertainties;not human/defaultjudge/internalcapability"
+  },
+  {
+    "id": "C19",
+    "section": "Appendix H",
+    "claim": "Exploratory RULE ranking reverses for all 256 assignments of the eight unknown scores. Qwen minus Gemma changes from -40 to -30 pp to +5 to +20 pp. All seven source-caveat exclusion panels retain the reversal.",
+    "evidence": "ranking_sensitivity.json;ranking_verification.json;ranking_input_provenance.json",
+    "qualification": "Post-outcome ranking and exclusion sensitivity on the same 20 paired sources, using the optional RULE endpoint. Two arithmetic implementations were produced by the same assistant."
+  },
+  {
+    "id": "C20",
+    "section": "Appendix I",
+    "claim": "Four deterministic fixture cells and four actual single-attempt provider requests execute the authentic installed native pipeline. Both actual gallery references are excluded. Both typed generated_ans exact_match scores are originally zero. Fixed-output native rescoring of the literal provider content gives 1.0 in both typed rows, with zero new provider calls. The original identifier-type fixture audit failure and derived erratum are preserved.",
+    "evidence": "installed_receipt.json;installed_fixture_review.json;installed_fixture_protocol.json;installed_live_verification.json;installed_live_receipt.json;installed_live_protocol.json;installed_rescore_summary.json;installed_rescore_verification.json;installed_rescore_protocol.json;installed_rescore_receipt.json",
+    "qualification": "Two exposed source questions. Fixture, actual captures and fixed-output rescores have distinct units. Native exact_match is our integration diagnostic. Original raw metrics and the fixture identifier-type audit failure remain preserved. The prediction-view repair is post-outcome engineering validation."
+  }
+]

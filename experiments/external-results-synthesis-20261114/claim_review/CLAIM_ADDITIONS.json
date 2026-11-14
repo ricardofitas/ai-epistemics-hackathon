@@ -1,0 +1,16 @@
+[
+  {
+    "id": "C21",
+    "section": "New external archive subsection (integration to choose)",
+    "claim": "Pinned TabMWP ten-baseline replay reproduces 76860 flags and 19920 multiple-choice selections on 7686 shared source questions. Explicit normalized unique option recognition changes 557 flags on 432 IDs (397 gains/160 losses), with zero pairwise reversals. Exact recognition plus residual-zero abstention yields two strict pairwise reversals: pretrained TAPEX base versus pretrained UnifiedQA small/base.",
+    "evidence": "claim_review/sources/archive_FINDING.md;claim_review/sources/archive_exact_results.json;claim_review/sources/archive_result.json;claim_review/sources/archive_METHOD.md;claim_review/sources/archive_sources.json;claim_review/SOURCE_RETRIEVAL.json",
+    "qualification": "Secondary fixed-output scoring sensitivity of actual third-party baseline releases. Exact matching is post-replay; residual abstention is a policy choice. No source-model reruns, human truth, headline GPT-3/PromptPG test, identical MixEval mechanism or affected independent One-Eval conclusion established. Source report replay, not executed anew in this manuscript review."
+  },
+  {
+    "id": "C22",
+    "section": "New blinded-reading subsection (integration to choose)",
+    "claim": "100 stratified archived TAPEX-base questions plus12 controls/judge;224 terminal records/223 complete responses; each of two model judges passes12/12 controls and they agree on99 complete study pairs. Among50 first-credited study questions:40 unresolved,2 correct-option,7 other-option,1unknown; among50 first-uncredited:42,3,5,0.",
+    "evidence": "claim_review/sources/blind_RESULTS.md;claim_review/sources/blind_summary.json;claim_review/sources/blind_PROTOCOL.md;claim_review/SOURCE_RETRIEVAL.json",
+    "qualification": "Protocol registered after archive replay and before judging. Two distinct model-family interpretations of existing text; source table/gold/model/score/order hidden, not independent human adjudication. Scientific unit is source question. Model agreement and perfect small controls do not bound shared errors. No corrected full-table accuracy or population inference."
+  }
+]
