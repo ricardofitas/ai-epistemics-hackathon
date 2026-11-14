@@ -1,7 +1,7 @@
 {
   "status": "PRIVATE_WORKING_DRAFT_READY_FOR_INTERNAL_REVIEW",
-  "pages": 13,
-  "claims": 15,
+  "pages": 14,
+  "claims": 16,
   "numerical_consistency": "PASS",
   "visual_review": "PASS",
   "not_ready_for_external_submission": [
@@ -10,16 +10,17 @@
     "Full installeddistribution/provider/tokenizer/native-primarymetric integration untested; nativeorchestration usesexplicitdependencyfacades and replacedprovider/scoring.",
     "Defaultofficialmodeljudge and independentlyaffectedexternalconclusion unverified.",
     "Authoragreement/venuepresentation pending.",
-    "New20questionpilot is source-exposed,fixedorder and evaluatedwithheuristicrules. Post-outcomeformatreviewislexical,notindependenthuman/defaultjudge correctnessvalidation."
+    "New20questionpilot is source-exposed,fixedorder and evaluatedwithheuristicrules. Post-outcomeformatreviewislexical,notindependenthuman/defaultjudge correctnessvalidation.",
+    "New final-answer audit is post-generation, partially masked, same-family assistant reference-grounded review; no independent human/defaultjudge gold validation."
   ],
   "strongest_supported_claim": "Pinned source-to-request, task-kind and source-to-reference defects with controlled empirical consequences and bounded causal/transfer interventions.",
   "next_actions": [
-    "Audit source-correct final answers versus heuristicrulecredit and formatting/rationale effects under fixed criteria.",
+    "Validate reference-grounded final-answer adjudication with independent human or authorized judge and design a minimal prospectively fixed intervention on new informative cases.",
     "Design a bounded prospective extension/minimal-format ablation with new informative source cases; preserve unknown outcomes.",
     "Close installed dependencies and realprovider/nativeorchestration boundary without replacing its invariant checks.",
     "Pursue affected externalconclusion only from a newprimaryprovenancelink."
   ],
-  "working_draft_version": "1.4",
+  "working_draft_version": "1.5",
   "native_task_path_integration": "PASS200cases/801requests/400constructed scoring fixtures; models and tokenizers excluded",
   "integrated_updates": [
     "Installed native source/request gate",

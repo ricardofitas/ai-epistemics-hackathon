@@ -5,7 +5,7 @@
     "blocks": [
       {
         "kind": "meta",
-        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.4"
+        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1.5"
       },
       {
         "kind": "heading",
@@ -906,7 +906,7 @@
     "blocks": [
       {
         "kind": "p",
-        "text": "The package includes fifteen machine-readable claims with exact source snapshots and archive identities. Reused sources and new generation responses retain separate units."
+        "text": "Sixteen claims have source snapshots. C1-C15 are mapped below; C16 appears in Appendix E. Reused sources and new responses remain separate."
       },
       {
         "kind": "table",
@@ -1004,7 +1004,7 @@
       },
       {
         "kind": "p",
-        "text": "Run verify_claims.py to reconcile fifteen claims with the bundled source snapshots and hashes. Original study archives retain selection, request captures and runtime verification. Synthesis checks add no observations."
+        "text": "Run verify_claims.py to reconcile sixteen claims with the bundled source snapshots and hashes. Original study archives retain selection, request captures and runtime verification. Synthesis checks add no observations."
       },
       {
         "kind": "heading",
@@ -1012,7 +1012,91 @@
       },
       {
         "kind": "p",
-        "text": "Version 1.4 integrates controlled scoring, existing public-output replay, bounded native orchestration and a separate new 80-call paired generation pilot. Raw provenance/capture counterexamples and declared implementation boundaries remain explicit."
+        "text": "Version1.5 retains v1.4 evidence and adds the separately frozen, partially masked assistant review in Appendix E. Interpretation limits remain explicit."
+      }
+    ]
+  },
+  {
+    "title": "Appendix E. Final answer versus rule credit",
+    "blocks": [
+      {
+        "kind": "p",
+        "text": "C16. A separate post-generation protocol was committed before this iteration's individual output adjudication (eee9572f). The 69 completed responses were reviewed twice using opaque identifiers and a fixed order. Model, condition, paired identity and per-response rule score were withheld. The same 11 incomplete captures remain unknown; no new generation or judge API calls were made."
+      },
+      {
+        "kind": "p",
+        "text": "The rubric selects the last explicit final answer, including a standalone symbolic A, and separately asks whether visible text outside that span affirmatively states an accepted reference or minimal equivalent. Two assistant-agent reviewers label all 69 cases independently. Final-label and non-final-label agreement is 69/69 each. A third agent checks source hashes, exact evidence spans and arithmetic, but does not independently establish semantic truth."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Model / condition",
+          "Complete / 20",
+          "Rule credit",
+          "Final supported",
+          "Non-final supported"
+        ],
+        "rows": [
+          [
+            "Gemma / binding",
+            "18",
+            "11",
+            "2",
+            "17"
+          ],
+          [
+            "Gemma / typed",
+            "16",
+            "12",
+            "12",
+            "1"
+          ],
+          [
+            "Qwen / binding",
+            "18",
+            "2",
+            "2",
+            "2"
+          ],
+          [
+            "Qwen / typed",
+            "17",
+            "14",
+            "15",
+            "1"
+          ]
+        ],
+        "widths": [
+          114,
+          75,
+          75,
+          100,
+          115
+        ]
+      },
+      {
+        "kind": "small",
+        "text": "Counts describe completed responses. For both models, 16 binding-only final answers are symbolic. Gemma has 9 rule-credited responses with a symbolic final answer and 15 responses with supported non-final content but a symbolic final answer. These are overlapping categories, not additional source units."
+      },
+      {
+        "kind": "heading",
+        "text": "Different response objects lead to different contrasts"
+      },
+      {
+        "kind": "p",
+        "text": "Preserving incompletes as unknown over the same 20 questions gives typed-minus-binding final-support bounds of +40 to +70 percentage points for Gemma and +55 to +80 for Qwen. These differ from the original optional-rule contrasts (-5 to +25; +50 to +75), which remain unchanged. The final-support bounds reflect this new adjudication criterion, not a correction of the frozen official-rule score or confidence intervals."
+      },
+      {
+        "kind": "p",
+        "text": "One Qwen typed response says Prepare for the worst. Both reviewers accept this as the reference But prepare for the worst with an immaterial conjunction omitted; the optional rule scores it zero. This is an explicit semantic-equivalence judgment, not an exact-alias fact or proof of scorer invalidity in every context."
+      },
+      {
+        "kind": "heading",
+        "text": "Limits of the adjudication"
+      },
+      {
+        "kind": "p",
+        "text": "These are reference-grounded assistant judgments, not independent human validation or default MixEval judging. Reviewers share a model family and rubric, and were exposed to aggregate prior findings through the protocol. Output style can reveal condition, so masking is partial. Accepted references are trusted, not independently fact-checked. Visible non-final content is not hidden reasoning or evidence of internal knowledge. The fixed, previously exposed 20-question panel, repeated across models, does not establish population accuracy, universal capability gains or a pure single-token intervention."
       }
     ]
   }

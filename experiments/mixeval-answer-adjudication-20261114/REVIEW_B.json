@@ -1,0 +1,623 @@
+[
+  {
+    "opaque_id": "af8d7478338118e90c52",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "Perique is a type of aromatic tobacco used for smoking",
+    "reason": "Final A is symbolic; the earlier affirmative smoking-use description matches smoke it."
+  },
+  {
+    "opaque_id": "b4bab0509f6102fbd3d0",
+    "final_span": "It should be: **\"Are our children learning?\"**",
+    "final_label": "INCOMPATIBLE",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "The final grammatical correction does not identify the supplied George W. Bush target."
+  },
+  {
+    "opaque_id": "8df70091a0260eeadd52",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "The names listed (Charlotte, TJ's, Adelphi, Barfly, Joiners, and Forum) are all well-known former or current nightclubs and music venues",
+    "reason": "Final A is symbolic; earlier identification as music venues supplies the music-sector equivalent."
+  },
+  {
+    "opaque_id": "0baece91e032e7a54c2a",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "the practice of using essential oils for healing is called **aromatherapy**",
+    "reason": "Final A is symbolic; earlier prose affirmatively names aromatherapy."
+  },
+  {
+    "opaque_id": "34f0bbd1fbdd3b222e7f",
+    "final_span": "Washington, D.C.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Washington, D.C.",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Answer matches a supplied Washington reference; no other answer-bearing text."
+  },
+  {
+    "opaque_id": "673cb4fde4ed8c57f3a4",
+    "final_span": "Accounts",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Accounts",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Answer matches the supplied accounts reference; no nonfinal assertion."
+  },
+  {
+    "opaque_id": "6ebb87740c9a69daba5c",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "4c61d852257273196ecb",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "the specific date of August 17, 1908, is associated with the **Pike Place Market** in Seattle, Washington.",
+    "reason": "Final A is symbolic; despite conflicting historical discussion, the target market is affirmatively identified outside the final span."
+  },
+  {
+    "opaque_id": "bae094ea6759d3635337",
+    "final_span": "25 years (from 2017 to 2042).",
+    "final_label": "SUPPORTED",
+    "final_evidence": "25 years (from 2017 to 2042).",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final duration matches 25; no separate nonfinal assertion."
+  },
+  {
+    "opaque_id": "072b3774fb96bed34e90",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "f6c7762d3d1d435a593e",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final A is symbolic; the grammar discussion never identifies George W. Bush."
+  },
+  {
+    "opaque_id": "5aade6a9b41b6d260ddf",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "e494767840c18d26277c",
+    "final_span": "Coal mining.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Coal mining.",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final occupation matches the coal-mining references."
+  },
+  {
+    "opaque_id": "3a10588454d767c7c63f",
+    "final_span": "Washington, D.C.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Washington, D.C.",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final city matches a supplied reference."
+  },
+  {
+    "opaque_id": "fa6f799aa0455b92aec3",
+    "final_span": "A ledger traditionally records **financial transactions**, including debits, credits, account balances, and the chronological history of a business's monetary movements.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "financial transactions**, including debits, credits, account balances",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "The single final sentence describes financial account records, a semantic equivalent of accounts in this ledger question."
+  },
+  {
+    "opaque_id": "9a92e18efd407338535d",
+    "final_span": "Girls",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Girls",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final answer matches girls; no nonfinal assertion."
+  },
+  {
+    "opaque_id": "e69f99819837eea5af08",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "3b54c2dbe8e843714d0c",
+    "final_span": "Aromatherapy",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Aromatherapy",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final answer matches aromatherapy."
+  },
+  {
+    "opaque_id": "68929fc3a1ee6f141732",
+    "final_span": "A diamond.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "A diamond.",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final answer matches diamond."
+  },
+  {
+    "opaque_id": "771e94e196f0dc78b4ab",
+    "final_span": "Lindisfarne (Holy Island)",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Lindisfarne (Holy Island)",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final answer names the accepted island."
+  },
+  {
+    "opaque_id": "d45a67adaf2dc00332f4",
+    "final_span": "0.5 hours",
+    "final_label": "SUPPORTED",
+    "final_evidence": "0.5 hours",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "The numeric value 0.5 equals the accepted .5; no other text."
+  },
+  {
+    "opaque_id": "d081b86585f759b5f95f",
+    "final_span": "**Answer:** No",
+    "final_label": "SUPPORTED",
+    "final_evidence": "No",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "you do not return to the starting point.",
+    "reason": "Explicit final No matches the target; an earlier conclusion independently states the same result."
+  },
+  {
+    "opaque_id": "8f3d9cf842ed6c1c9ffe",
+    "final_span": "Smoke it.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Smoke it.",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final answer matches smoke it."
+  },
+  {
+    "opaque_id": "b006c89c09bdc4d0c6cc",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "so there were fewer girls.",
+    "reason": "Final A is symbolic; the earlier calculation affirmatively concludes fewer girls."
+  },
+  {
+    "opaque_id": "b296417c6d56bac7042a",
+    "final_span": "Pubs (or Public Houses)",
+    "final_label": "INCOMPATIBLE",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final pubs-sector assertion differs from the supplied music target."
+  },
+  {
+    "opaque_id": "469a7cb23b25e842baf2",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "d8925de1488be41b23f7",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "The proverb \"Hope for the best\" is typically completed with the phrase \"but prepare for the worst.\"",
+    "reason": "Final A is symbolic; earlier sentence affirmatively supplies the accepted completion."
+  },
+  {
+    "opaque_id": "355ada0859cef29a306f",
+    "final_span": "They were Alice and Jerry in the UK.",
+    "final_label": "INCOMPATIBLE",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final names differ from Janet and John; no target appears elsewhere."
+  },
+  {
+    "opaque_id": "782b4a53a758c55642de",
+    "final_span": "Union Square Greenmarket",
+    "final_label": "INCOMPATIBLE",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final market differs from the supplied Pike Place references."
+  },
+  {
+    "opaque_id": "c3f5b2f22286169dd7ef",
+    "final_span": "<answer>None of the above (Correct answer is 0.5 hours)</answer>",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Correct answer is 0.5 hours",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "The decrease was 0.5 hours.",
+    "reason": "The final declaration explicitly includes the accepted numeric answer, rather than only an option symbol; earlier text also asserts it."
+  },
+  {
+    "opaque_id": "4026210a5d5654c31abf",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "b1465f5c34467d9571b2",
+    "final_span": "<answer>No</answer>",
+    "final_label": "SUPPORTED",
+    "final_evidence": "No",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "The final position is (7, 2), which is not the starting point (0, 0).",
+    "reason": "Final No and the separate earlier conclusion both match the accepted no-return result."
+  },
+  {
+    "opaque_id": "4685e881e36f50825ff6",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "These are the universal standards used to determine the quality and value of **diamonds**.",
+    "reason": "Final A is symbolic; earlier prose affirmatively identifies diamonds."
+  },
+  {
+    "opaque_id": "72405d5a665bb23b6426",
+    "final_span": "<answer>No</answer>",
+    "final_label": "SUPPORTED",
+    "final_evidence": "No",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "The sole final answer matches No."
+  },
+  {
+    "opaque_id": "595524402cb79e535782",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "6fd943264c1da8ad46c9",
+    "final_span": "Prepare for the worst.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Prepare for the worst.",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Dropping the introductory conjunction but preserves the supplied proverb completion."
+  },
+  {
+    "opaque_id": "777cb405c766071e356e",
+    "final_span": "Lindisfarne",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Lindisfarne",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final answer matches the island reference."
+  },
+  {
+    "opaque_id": "dfba60a46ae9aa32f941",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "Black lung is caused by the long-term inhalation of coal dust, which occurs primarily in coal mining.",
+    "reason": "Final A is symbolic; earlier causal assertion identifies the accepted occupation."
+  },
+  {
+    "opaque_id": "1c4dbabfac58dcb0242c",
+    "final_span": "...but prepare for the worst.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "...but prepare for the worst.",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final completion matches the supplied reference."
+  },
+  {
+    "opaque_id": "e7db5eeb4093e6c5cdfe",
+    "final_span": "Mark Twain",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Mark Twain",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final name matches a supplied reference."
+  },
+  {
+    "opaque_id": "4939b0476464f50ec94c",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "0cc3f6bc1e4b22011028",
+    "final_span": "The Koppen Classification System is used for classifying **climates**.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "classifying **climates**",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final assertion matches the climate references."
+  },
+  {
+    "opaque_id": "933c2841613e50c7085b",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "The person in a restaurant responsible for the wine and assisting customers with their choice of wine is called a **sommelier**.",
+    "reason": "Final A is symbolic; earlier prose affirmatively supplies sommelier."
+  },
+  {
+    "opaque_id": "925a7638d02d1826c10e",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "Therefore, there were fewer girls.",
+    "reason": "Final A is symbolic; earlier conclusion affirmatively supplies girls."
+  },
+  {
+    "opaque_id": "7b224f65a4980e0e2d06",
+    "final_span": "A person would normally use perique as a blending tobacco, adding a small amount to a mixture of other tobaccos to provide a spicy, pungent flavor and aroma.",
+    "final_label": "INCOMPATIBLE",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final action is blending tobacco rather than the supplied smoking action; smoking is not asserted anywhere."
+  },
+  {
+    "opaque_id": "570bcfafa8fd0c12ca1e",
+    "final_span": "A diamond",
+    "final_label": "SUPPORTED",
+    "final_evidence": "A diamond",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final answer matches diamond."
+  },
+  {
+    "opaque_id": "1b6d2586af9c8630db39",
+    "final_span": "Sommelier",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Sommelier",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final answer matches sommelier."
+  },
+  {
+    "opaque_id": "e8068ec216597dcbc404",
+    "final_span": "Pubs (the UK pub/bar sector).",
+    "final_label": "INCOMPATIBLE",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final pubs-sector assertion differs from the supplied music target."
+  },
+  {
+    "opaque_id": "e65ddaa419a7200b09e6",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "specifically recording the increases and decreases in specific accounts (such as assets, liabilities, equity, revenues, and expenses) to determine the balance of those accounts.",
+    "reason": "Final A is symbolic; earlier prose affirmatively describes recording accounts in a ledger."
+  },
+  {
+    "opaque_id": "4b352fee77a17d782a04",
+    "final_span": "<answer>A. None</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "The extension from the original deadline (2017) to the new primary deadline (2042) is $2042 - 2017 = 25$ years.",
+    "reason": "Final A. None is an option tag; earlier calculation affirmatively supplies 25 years."
+  },
+  {
+    "opaque_id": "56b930f9d3dd034b958c",
+    "final_span": "Fewer girls.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Fewer girls.",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final assertion matches girls."
+  },
+  {
+    "opaque_id": "e73ea8c2cadcb5bf862b",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "Foggy Bottom is a neighborhood in **Washington, D.C.**",
+    "reason": "Final A is symbolic; earlier prose affirmatively identifies the accepted city."
+  },
+  {
+    "opaque_id": "e1e608982b791824f391",
+    "final_span": "<answer>Washington, D.C.</answer>",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Washington, D.C.",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final city matches a supplied reference."
+  },
+  {
+    "opaque_id": "0c04aff32dbea4c23397",
+    "final_span": "<answer>A. None</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "the American author who invested heavily in its development and lost a significant portion of his fortune was **Mark Twain**.",
+    "reason": "Final A. None is an option tag; earlier assertion names Mark Twain."
+  },
+  {
+    "opaque_id": "4d73a0d4bb692242284b",
+    "final_span": "Sommelier",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Sommelier",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final answer matches sommelier."
+  },
+  {
+    "opaque_id": "aaf4619909a80e589fec",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "b2b37bf8c85bf3910d45",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "5215635f95cce8cf751c",
+    "final_span": "Coal miner",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Coal miner",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final occupation matches coal miner."
+  },
+  {
+    "opaque_id": "24c5aa5c3e6393bfd58b",
+    "final_span": "You end at (7, 2), not the starting point.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "You end at (7, 2), not the starting point.",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "No.",
+    "reason": "With no explicit final marker, the last answer-bearing sentence states the no-return result; the initial No separately supplies that answer."
+  },
+  {
+    "opaque_id": "803041e76714ee46c312",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "In the context of Buddhist psychology and various meditative paths (such as the *dhyanas* or stages of enlightenment), these terms are central. Specifically, the concept of the \"Bodhisattva\" is unique to Buddhism, and the progression through states of meditative absorption and realization is a core part of Buddhist practice.",
+    "reason": "Final A is symbolic; the preceding affirmative explanation attributes the queried concepts to Buddhism."
+  },
+  {
+    "opaque_id": "096c67e85878d42f3ed3",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "Fox Sports 1 was down by 0.5 hours (14 − 13.5)",
+    "reason": "Final A is symbolic; earlier assertion supplies accepted .5 hours."
+  },
+  {
+    "opaque_id": "096cce98fc0c68ad077a",
+    "final_span": "The Pike Place Market.",
+    "final_label": "SUPPORTED",
+    "final_evidence": "The Pike Place Market.",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final name matches the accepted market."
+  },
+  {
+    "opaque_id": "e871c73d2af1c1ba062f",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "9ddb965d5fc1da1113f7",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "ba814845434feabded45",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "52a25967d8a49bfb2116",
+    "final_span": "25 years",
+    "final_label": "SUPPORTED",
+    "final_evidence": "25 years",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final duration matches 25 years."
+  },
+  {
+    "opaque_id": "95a5fe273dc3b33d08e6",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "SUPPORTED",
+    "nonfinal_evidence": "Historically, both St Aidan and St Cuthbert were associated with the monastery on the **Isle of Lindisfarne** (often referred to as Holy Island) off the coast of Northumbria.",
+    "reason": "Final A is symbolic; earlier affirmative statement names the accepted island."
+  },
+  {
+    "opaque_id": "4b451e9508abb8a3ff9d",
+    "final_span": "<answer>A</answer>",
+    "final_label": "SYMBOLIC",
+    "final_evidence": "",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Only a symbolic A is visible."
+  },
+  {
+    "opaque_id": "d48e3c6f3e55a2bda2af",
+    "final_span": "Climate zones (world climates).",
+    "final_label": "SUPPORTED",
+    "final_evidence": "Climate zones (world climates).",
+    "nonfinal_label": "NOT_OBSERVED",
+    "nonfinal_evidence": "",
+    "reason": "Final assertion matches the climatic-zone and world-climate references."
+  }
+]

@@ -1,0 +1,4289 @@
+[
+  {
+    "opaque_id": "d8925de1488be41b23f7",
+    "trial_id": "MXG-00-B-G",
+    "source_index": 492,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "a.",
+        "typically completed with the phrase \"but prepare for the worst.\""
+      ],
+      "reference": [
+        "But prepare for the worst"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+    "output_sha256": "f3baf340359447e3066c6d2299c335a464d3abfd52e083577dd3a0ff369eb631",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "6ebb87740c9a69daba5c",
+    "trial_id": "MXG-00-B-Q",
+    "source_index": 492,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "But prepare for the worst"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "1c4dbabfac58dcb0242c",
+    "trial_id": "MXG-00-T-G",
+    "source_index": 492,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "but prepare for the worst"
+      ],
+      "reference": [
+        "But prepare for the worst"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+    "output_sha256": "87dd20cf10b6437023ca3776d599b214e14c9242034b62b0428436ed3c6c5474",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "6fd943264c1da8ad46c9",
+    "trial_id": "MXG-00-T-Q",
+    "source_index": 492,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "prepare for the worst"
+      ],
+      "reference": [
+        "But prepare for the worst"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "000f57fc6a74ee01c12e6f1dd7e64b2984ecf20cb96d3c86a0786b9fd21be786",
+    "output_sha256": "ace85f3165aae6250e34205f2b94528f8514a596f99ab30b0ad5ba20ad1a6013",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "7191a9355db7412259e9",
+    "trial_id": "MXG-01-B-G",
+    "source_index": 548,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": null,
+    "status": "capture_incomplete_or_empty",
+    "judged": null,
+    "source_sha256": "000fdd1945c82297682247dd1df03e4e1778e4a429397d1f71319fa32ec8ba81",
+    "output_sha256": "81f1a5cb5eb3ac280e121c0270a485a0e22e5b3ef2c1e10c01e28c735a8a077b",
+    "included": false,
+    "final_score": null,
+    "nonfinal_score": null,
+    "labels": null
+  },
+  {
+    "opaque_id": "aaf4619909a80e589fec",
+    "trial_id": "MXG-01-B-Q",
+    "source_index": 548,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "Climate",
+        "World temperature",
+        "Global temperatures",
+        "Climatic zone",
+        "World climate",
+        "Climate system",
+        "Climatic",
+        "Global climate",
+        "Climates",
+        "Average annual temperature",
+        "Average day temperature",
+        "World temperatures",
+        "Global Temperature"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "000fdd1945c82297682247dd1df03e4e1778e4a429397d1f71319fa32ec8ba81",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "0cc3f6bc1e4b22011028",
+    "trial_id": "MXG-01-T-G",
+    "source_index": 548,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "used for classifying **climates**"
+      ],
+      "reference": [
+        "Climate",
+        "World temperature",
+        "Global temperatures",
+        "Climatic zone",
+        "World climate",
+        "Climate system",
+        "Climatic",
+        "Global climate",
+        "Climates",
+        "Average annual temperature",
+        "Average day temperature",
+        "World temperatures",
+        "Global Temperature"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "000fdd1945c82297682247dd1df03e4e1778e4a429397d1f71319fa32ec8ba81",
+    "output_sha256": "f3b582ee6b18c01530bd739ff5a428800ab3d8fb3d25700ee939d3e55715299d",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "d48e3c6f3e55a2bda2af",
+    "trial_id": "MXG-01-T-Q",
+    "source_index": 548,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "climate zones (world climates)"
+      ],
+      "reference": [
+        "Climate",
+        "World temperature",
+        "Global temperatures",
+        "Climatic zone",
+        "World climate",
+        "Climate system",
+        "Climatic",
+        "Global climate",
+        "Climates",
+        "Average annual temperature",
+        "Average day temperature",
+        "World temperatures",
+        "Global Temperature"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "000fdd1945c82297682247dd1df03e4e1778e4a429397d1f71319fa32ec8ba81",
+    "output_sha256": "8f6ea4121d2cef4e945157910e0defc7210c5730ff8272c12c9c3378f7a0aa66",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "f6c7762d3d1d435a593e",
+    "trial_id": "MXG-02-B-G",
+    "source_index": 1562,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "our children learning?\"",
+        "the only choice provided:",
+        "plural.",
+        "incorrect, it suggests a lack of correct alternatives or a specific test format.",
+        "singular.",
+        "our children learning?}"
+      ],
+      "reference": [
+        "George Walker Bush",
+        "Dubya",
+        "Bush, George W.",
+        "Bush Jr.",
+        "George W. Bush (painter)",
+        "W Bush",
+        "Bushian",
+        "Gorge w bush",
+        "Bush the younger",
+        "George w",
+        "Bush 43",
+        "Bush II",
+        "George the Younger",
+        "George W. Bussh",
+        "George W. Bush Street",
+        "George Bush (43rd U.S. President)",
+        "G W Bush",
+        "Dubyuh",
+        "George Bush jr.",
+        "G.W. Bush",
+        "W. bush",
+        "Dubya Bush",
+        "G. W. Bush",
+        "George W Bush",
+        "US President George W. Bush",
+        "G.w.bush",
+        "Bush Junior",
+        "George W. Bush, 43rd President of the United States",
+        "George Bush (2000)",
+        "George w.",
+        "George W",
+        "Gorge W. Bush",
+        "G. Walker Bush",
+        "GEORGE W. BUSH",
+        "George Dubya Bush",
+        "Geroge W Bush",
+        "2004 Republican Presidential Nominee",
+        "George w Bush",
+        "George Bush II",
+        "George Bush Jr.",
+        "Baby Bush",
+        "W. Bush",
+        "2000 Republican Presidential Nominee",
+        "Junior Bush",
+        "George W.",
+        "President Bush (2000)",
+        "Goerge W. Bush",
+        "George Bush Jr",
+        "George W. Budh",
+        "43rd President of the United States",
+        "George W. Buah",
+        "G Dub",
+        "George W Bush Jr",
+        "43rd Pesident of the United States",
+        "Jorge W. Bush",
+        "Bush the Younger",
+        "International perception of george W. Bush",
+        "GeorgeWBush",
+        "George w bush",
+        "George bush 43",
+        "Bush (43)",
+        "George Bush 2",
+        "George Bush (43)",
+        "Bush-43",
+        "George Bush Junior",
+        "W bush",
+        "George W\u0430lker Bush",
+        "Gw bush",
+        "George w. bush",
+        "G. W. B.",
+        "George W. bush",
+        "Bushists",
+        "Religious faith of George W. Bush",
+        "President Bush (43)",
+        "George W. Bush",
+        "George W.Bush",
+        "George W bush",
+        "George Bush, Jr.",
+        "G. Dub",
+        "GW Bush",
+        "President George W Bush",
+        "Former President George W. Bush",
+        "President George Walker Bush"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0027202018bac66bb87df8591cd4e868384230f593bca419717c118d11b6d7b9",
+    "output_sha256": "f09faf04759cfb1ed24e7617a41dbc633f98a6b762d4acb846251cffca3e0c12",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "b2b37bf8c85bf3910d45",
+    "trial_id": "MXG-02-B-Q",
+    "source_index": 1562,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "George Walker Bush",
+        "Dubya",
+        "Bush, George W.",
+        "Bush Jr.",
+        "George W. Bush (painter)",
+        "W Bush",
+        "Bushian",
+        "Gorge w bush",
+        "Bush the younger",
+        "George w",
+        "Bush 43",
+        "Bush II",
+        "George the Younger",
+        "George W. Bussh",
+        "George W. Bush Street",
+        "George Bush (43rd U.S. President)",
+        "G W Bush",
+        "Dubyuh",
+        "George Bush jr.",
+        "G.W. Bush",
+        "W. bush",
+        "Dubya Bush",
+        "G. W. Bush",
+        "George W Bush",
+        "US President George W. Bush",
+        "G.w.bush",
+        "Bush Junior",
+        "George W. Bush, 43rd President of the United States",
+        "George Bush (2000)",
+        "George w.",
+        "George W",
+        "Gorge W. Bush",
+        "G. Walker Bush",
+        "GEORGE W. BUSH",
+        "George Dubya Bush",
+        "Geroge W Bush",
+        "2004 Republican Presidential Nominee",
+        "George w Bush",
+        "George Bush II",
+        "George Bush Jr.",
+        "Baby Bush",
+        "W. Bush",
+        "2000 Republican Presidential Nominee",
+        "Junior Bush",
+        "George W.",
+        "President Bush (2000)",
+        "Goerge W. Bush",
+        "George Bush Jr",
+        "George W. Budh",
+        "43rd President of the United States",
+        "George W. Buah",
+        "G Dub",
+        "George W Bush Jr",
+        "43rd Pesident of the United States",
+        "Jorge W. Bush",
+        "Bush the Younger",
+        "International perception of george W. Bush",
+        "GeorgeWBush",
+        "George w bush",
+        "George bush 43",
+        "Bush (43)",
+        "George Bush 2",
+        "George Bush (43)",
+        "Bush-43",
+        "George Bush Junior",
+        "W bush",
+        "George W\u0430lker Bush",
+        "Gw bush",
+        "George w. bush",
+        "G. W. B.",
+        "George W. bush",
+        "Bushists",
+        "Religious faith of George W. Bush",
+        "President Bush (43)",
+        "George W. Bush",
+        "George W.Bush",
+        "George W bush",
+        "George Bush, Jr.",
+        "G. Dub",
+        "GW Bush",
+        "President George W Bush",
+        "Former President George W. Bush",
+        "President George Walker Bush"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0027202018bac66bb87df8591cd4e868384230f593bca419717c118d11b6d7b9",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "b4bab0509f6102fbd3d0",
+    "trial_id": "MXG-02-T-G",
+    "source_index": 1562,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "grammatically incorrect. it should be: **\"are our children learning?\"**"
+      ],
+      "reference": [
+        "George Walker Bush",
+        "Dubya",
+        "Bush, George W.",
+        "Bush Jr.",
+        "George W. Bush (painter)",
+        "W Bush",
+        "Bushian",
+        "Gorge w bush",
+        "Bush the younger",
+        "George w",
+        "Bush 43",
+        "Bush II",
+        "George the Younger",
+        "George W. Bussh",
+        "George W. Bush Street",
+        "George Bush (43rd U.S. President)",
+        "G W Bush",
+        "Dubyuh",
+        "George Bush jr.",
+        "G.W. Bush",
+        "W. bush",
+        "Dubya Bush",
+        "G. W. Bush",
+        "George W Bush",
+        "US President George W. Bush",
+        "G.w.bush",
+        "Bush Junior",
+        "George W. Bush, 43rd President of the United States",
+        "George Bush (2000)",
+        "George w.",
+        "George W",
+        "Gorge W. Bush",
+        "G. Walker Bush",
+        "GEORGE W. BUSH",
+        "George Dubya Bush",
+        "Geroge W Bush",
+        "2004 Republican Presidential Nominee",
+        "George w Bush",
+        "George Bush II",
+        "George Bush Jr.",
+        "Baby Bush",
+        "W. Bush",
+        "2000 Republican Presidential Nominee",
+        "Junior Bush",
+        "George W.",
+        "President Bush (2000)",
+        "Goerge W. Bush",
+        "George Bush Jr",
+        "George W. Budh",
+        "43rd President of the United States",
+        "George W. Buah",
+        "G Dub",
+        "George W Bush Jr",
+        "43rd Pesident of the United States",
+        "Jorge W. Bush",
+        "Bush the Younger",
+        "International perception of george W. Bush",
+        "GeorgeWBush",
+        "George w bush",
+        "George bush 43",
+        "Bush (43)",
+        "George Bush 2",
+        "George Bush (43)",
+        "Bush-43",
+        "George Bush Junior",
+        "W bush",
+        "George W\u0430lker Bush",
+        "Gw bush",
+        "George w. bush",
+        "G. W. B.",
+        "George W. bush",
+        "Bushists",
+        "Religious faith of George W. Bush",
+        "President Bush (43)",
+        "George W. Bush",
+        "George W.Bush",
+        "George W bush",
+        "George Bush, Jr.",
+        "G. Dub",
+        "GW Bush",
+        "President George W Bush",
+        "Former President George W. Bush",
+        "President George Walker Bush"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0027202018bac66bb87df8591cd4e868384230f593bca419717c118d11b6d7b9",
+    "output_sha256": "00b9f0b85490f089162449259052020074f80417ee7d1865f0de6dd788951609",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "742783405978c4d359af",
+    "trial_id": "MXG-02-T-Q",
+    "source_index": 1562,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": null,
+    "status": "capture_incomplete_or_empty",
+    "judged": null,
+    "source_sha256": "0027202018bac66bb87df8591cd4e868384230f593bca419717c118d11b6d7b9",
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "included": false,
+    "final_score": null,
+    "nonfinal_score": null,
+    "labels": null
+  },
+  {
+    "opaque_id": "925a7638d02d1826c10e",
+    "trial_id": "MXG-03-B-G",
+    "source_index": 1169,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "the selected option.",
+        "the question based on the data, but the prompt asks to select the best option from the provided list:"
+      ],
+      "reference": [
+        "girls",
+        "girls"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+    "output_sha256": "45589f4dce93fa054f1408bd226d4173890a29d8fac3a3f09721cd9f15b71247",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "b006c89c09bdc4d0c6cc",
+    "trial_id": "MXG-03-B-Q",
+    "source_index": 1169,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "a."
+      ],
+      "reference": [
+        "girls",
+        "girls"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+    "output_sha256": "74734c3fde5ce87a99d1a9d68dd5ac15d9c6754ec8b7075a4fba7a3091db8d09",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "56b930f9d3dd034b958c",
+    "trial_id": "MXG-03-T-G",
+    "source_index": 1169,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "fewer girls"
+      ],
+      "reference": [
+        "girls",
+        "girls"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+    "output_sha256": "a8ba85cfaf740eea286211e2721ccbf17af35a3e6091ade53a6d818c03da8445",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "9a92e18efd407338535d",
+    "trial_id": "MXG-03-T-Q",
+    "source_index": 1169,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "girls"
+      ],
+      "reference": [
+        "girls",
+        "girls"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "003c42be54648b2af4ba49e6759bb7bbc1b3a4d0cb4482728c5a6656444bfe1e",
+    "output_sha256": "f70cc5bae132218f57b654f0f897f25de0426d8cf62285395002046a88f69699",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "933c2841613e50c7085b",
+    "trial_id": "MXG-04-B-G",
+    "source_index": 47,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "a.",
+        "called a **sommelier**."
+      ],
+      "reference": [
+        "Wine Butler",
+        "Sommeli\u00e8re",
+        "Sommelier's",
+        "Sommeliers",
+        "Wine steward",
+        "Somellier",
+        "Somelier",
+        "Sommeliere",
+        "Sommelier",
+        "Master Sommelier",
+        "Sommellier"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "00843fec011483674feec1e8fcb2d4c79265dccccaae6b01ae48296180385a87",
+    "output_sha256": "3cdfe0eba8e68905fa742c108ac93a6c4f8d09d47ddb3b27d2bd953344819f23",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "072b3774fb96bed34e90",
+    "trial_id": "MXG-04-B-Q",
+    "source_index": 47,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "Wine Butler",
+        "Sommeli\u00e8re",
+        "Sommelier's",
+        "Sommeliers",
+        "Wine steward",
+        "Somellier",
+        "Somelier",
+        "Sommeliere",
+        "Sommelier",
+        "Master Sommelier",
+        "Sommellier"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "00843fec011483674feec1e8fcb2d4c79265dccccaae6b01ae48296180385a87",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "1b6d2586af9c8630db39",
+    "trial_id": "MXG-04-T-G",
+    "source_index": 47,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "sommelier"
+      ],
+      "reference": [
+        "Wine Butler",
+        "Sommeli\u00e8re",
+        "Sommelier's",
+        "Sommeliers",
+        "Wine steward",
+        "Somellier",
+        "Somelier",
+        "Sommeliere",
+        "Sommelier",
+        "Master Sommelier",
+        "Sommellier"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "00843fec011483674feec1e8fcb2d4c79265dccccaae6b01ae48296180385a87",
+    "output_sha256": "769bd1044c12ef44ace03c4d916496228e228264d19b7115ddb66cab34b24208",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "4d73a0d4bb692242284b",
+    "trial_id": "MXG-04-T-Q",
+    "source_index": 47,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "sommelier"
+      ],
+      "reference": [
+        "Wine Butler",
+        "Sommeli\u00e8re",
+        "Sommelier's",
+        "Sommeliers",
+        "Wine steward",
+        "Somellier",
+        "Somelier",
+        "Sommeliere",
+        "Sommelier",
+        "Master Sommelier",
+        "Sommellier"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "00843fec011483674feec1e8fcb2d4c79265dccccaae6b01ae48296180385a87",
+    "output_sha256": "60ec3d89bc85873e96b3e747791b682fdf57b89a8f301c9f725809d576302110",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "8df70091a0260eeadd52",
+    "trial_id": "MXG-05-B-G",
+    "source_index": 1528,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "not listed as a separate option."
+      ],
+      "reference": [
+        "Muzic",
+        "Interpretation (music)",
+        "Mucic",
+        "Music",
+        "Music's",
+        "Music And Musical Instruments",
+        "Musical interpretation",
+        "Musical Interpretation",
+        "1st Art",
+        "MuSic",
+        "Auditory art",
+        "Meaning (music)",
+        "Internet Music Video Database",
+        "Music lover",
+        "\ud83c\udfb5"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "00ed2f59fca80c9cd9598621364249a50a639cd1994a32345234e26c1669b931",
+    "output_sha256": "2c2ec75f071a472e387cc2ba744484e41144a1c71a6debb39ca8a5632601ad8a",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "469a7cb23b25e842baf2",
+    "trial_id": "MXG-05-B-Q",
+    "source_index": 1528,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "Muzic",
+        "Interpretation (music)",
+        "Mucic",
+        "Music",
+        "Music's",
+        "Music And Musical Instruments",
+        "Musical interpretation",
+        "Musical Interpretation",
+        "1st Art",
+        "MuSic",
+        "Auditory art",
+        "Meaning (music)",
+        "Internet Music Video Database",
+        "Music lover",
+        "\ud83c\udfb5"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "00ed2f59fca80c9cd9598621364249a50a639cd1994a32345234e26c1669b931",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "b296417c6d56bac7042a",
+    "trial_id": "MXG-05-T-G",
+    "source_index": 1528,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "pubs (or public houses)"
+      ],
+      "reference": [
+        "Muzic",
+        "Interpretation (music)",
+        "Mucic",
+        "Music",
+        "Music's",
+        "Music And Musical Instruments",
+        "Musical interpretation",
+        "Musical Interpretation",
+        "1st Art",
+        "MuSic",
+        "Auditory art",
+        "Meaning (music)",
+        "Internet Music Video Database",
+        "Music lover",
+        "\ud83c\udfb5"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "00ed2f59fca80c9cd9598621364249a50a639cd1994a32345234e26c1669b931",
+    "output_sha256": "e3d47e59bb13b8d7a555637a182e3386aba1ce0aee8d01c656086daac6fe5156",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "e8068ec216597dcbc404",
+    "trial_id": "MXG-05-T-Q",
+    "source_index": 1528,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "pubs (the uk pub/bar sector)"
+      ],
+      "reference": [
+        "Muzic",
+        "Interpretation (music)",
+        "Mucic",
+        "Music",
+        "Music's",
+        "Music And Musical Instruments",
+        "Musical interpretation",
+        "Musical Interpretation",
+        "1st Art",
+        "MuSic",
+        "Auditory art",
+        "Meaning (music)",
+        "Internet Music Video Database",
+        "Music lover",
+        "\ud83c\udfb5"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "00ed2f59fca80c9cd9598621364249a50a639cd1994a32345234e26c1669b931",
+    "output_sha256": "490ad6b4c6c781a8c3eef50a7bf6d419c3f53d189bf74b1ccb17a9046e5737e8",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "0c04aff32dbea4c23397",
+    "trial_id": "MXG-06-B-G",
+    "source_index": 662,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "not present among the choices:",
+        "fortune was **mark twain**. twain was a lifelong enthusiast of new inventions and spent hundreds of thousands of dollars (a massive sum at the time) backing the project, which ultimately failed commercially."
+      ],
+      "reference": [
+        "Mark Twain",
+        "Thomas Jefferson Snodgrass",
+        "Sam Clemens",
+        "Samuel Clements",
+        "Twainesque",
+        "Samuel Langhorn Clemens",
+        "Mark twain",
+        "Twain, Mark",
+        "Sergeant Fathom",
+        "Samuel Longhorn Clemens",
+        "Samuel L. Clemens",
+        "Samuel Langhorne Clemens",
+        "Sam Langhorne Clemens",
+        "Samuel Clemens",
+        "SL Clemens",
+        "Twainian",
+        "Reports of my death are greatly exaggerated",
+        "Soleather",
+        "W. Epaminondas Adrastus Blab",
+        "Samuel Longhorne Clemens",
+        "Marc Twain",
+        "Samual Clemens"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0161b083df03880183df856758364841e13b41851a8a297288f8c56d2f97fb7c",
+    "output_sha256": "629c56ce3cdabef8c347d02a02dbc2538f17a1321d45b399dfaa8d913962a242",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "dac29374223f05b3e436",
+    "trial_id": "MXG-06-B-Q",
+    "source_index": 662,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": null,
+    "status": "capture_incomplete_or_empty",
+    "judged": null,
+    "source_sha256": "0161b083df03880183df856758364841e13b41851a8a297288f8c56d2f97fb7c",
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "included": false,
+    "final_score": null,
+    "nonfinal_score": null,
+    "labels": null
+  },
+  {
+    "opaque_id": "bd29ba48b10717178319",
+    "trial_id": "MXG-06-T-G",
+    "source_index": 662,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": null,
+    "status": "capture_incomplete_or_empty",
+    "judged": null,
+    "source_sha256": "0161b083df03880183df856758364841e13b41851a8a297288f8c56d2f97fb7c",
+    "output_sha256": "81f1a5cb5eb3ac280e121c0270a485a0e22e5b3ef2c1e10c01e28c735a8a077b",
+    "included": false,
+    "final_score": null,
+    "nonfinal_score": null,
+    "labels": null
+  },
+  {
+    "opaque_id": "e7db5eeb4093e6c5cdfe",
+    "trial_id": "MXG-06-T-Q",
+    "source_index": 662,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "mark twain"
+      ],
+      "reference": [
+        "Mark Twain",
+        "Thomas Jefferson Snodgrass",
+        "Sam Clemens",
+        "Samuel Clements",
+        "Twainesque",
+        "Samuel Langhorn Clemens",
+        "Mark twain",
+        "Twain, Mark",
+        "Sergeant Fathom",
+        "Samuel Longhorn Clemens",
+        "Samuel L. Clemens",
+        "Samuel Langhorne Clemens",
+        "Sam Langhorne Clemens",
+        "Samuel Clemens",
+        "SL Clemens",
+        "Twainian",
+        "Reports of my death are greatly exaggerated",
+        "Soleather",
+        "W. Epaminondas Adrastus Blab",
+        "Samuel Longhorne Clemens",
+        "Marc Twain",
+        "Samual Clemens"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0161b083df03880183df856758364841e13b41851a8a297288f8c56d2f97fb7c",
+    "output_sha256": "9eae00e10d0a42d587755f968166d696b830be93a5a439d0e70845677e8faee5",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "4685e881e36f50825ff6",
+    "trial_id": "MXG-07-B-G",
+    "source_index": 1217,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "a.",
+        "evaluated based on the \"four cs\": cut, colour, clarity, and carat. these are the universal standards used to determine the quality and value of **diamonds**."
+      ],
+      "reference": [
+        "Diamond",
+        "4-C's of Diamond Grading",
+        "The 4 C's Of Diamonds",
+        "Polished diamond",
+        "Diamonds",
+        "Natural diamond",
+        "Diamond industry",
+        "Mitre-crozier applique",
+        "Diamond powder",
+        "Bortz",
+        "Industrial diamonds",
+        "Type-II diamond",
+        "Daimonds",
+        "Mitre-crozier appliqu\u00e9",
+        "Impact diamonds",
+        "Diamonad",
+        "Industrial diamond",
+        "Industrial Diamond"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0176dfad14c88ad78f0acae00ffdea61e8ef88932380087005769e5e29fa6e65",
+    "output_sha256": "60acb45d1196b284322c62dcf26a7f341c330476d22f07045cb4245258cfa70b",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "e871c73d2af1c1ba062f",
+    "trial_id": "MXG-07-B-Q",
+    "source_index": 1217,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "Diamond",
+        "4-C's of Diamond Grading",
+        "The 4 C's Of Diamonds",
+        "Polished diamond",
+        "Diamonds",
+        "Natural diamond",
+        "Diamond industry",
+        "Mitre-crozier applique",
+        "Diamond powder",
+        "Bortz",
+        "Industrial diamonds",
+        "Type-II diamond",
+        "Daimonds",
+        "Mitre-crozier appliqu\u00e9",
+        "Impact diamonds",
+        "Diamonad",
+        "Industrial diamond",
+        "Industrial Diamond"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0176dfad14c88ad78f0acae00ffdea61e8ef88932380087005769e5e29fa6e65",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "68929fc3a1ee6f141732",
+    "trial_id": "MXG-07-T-G",
+    "source_index": 1217,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "a diamond"
+      ],
+      "reference": [
+        "Diamond",
+        "4-C's of Diamond Grading",
+        "The 4 C's Of Diamonds",
+        "Polished diamond",
+        "Diamonds",
+        "Natural diamond",
+        "Diamond industry",
+        "Mitre-crozier applique",
+        "Diamond powder",
+        "Bortz",
+        "Industrial diamonds",
+        "Type-II diamond",
+        "Daimonds",
+        "Mitre-crozier appliqu\u00e9",
+        "Impact diamonds",
+        "Diamonad",
+        "Industrial diamond",
+        "Industrial Diamond"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0176dfad14c88ad78f0acae00ffdea61e8ef88932380087005769e5e29fa6e65",
+    "output_sha256": "901e6ec5553124db095b83242e5aabcc354340c8ef04402b5329be54606ec7c5",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "570bcfafa8fd0c12ca1e",
+    "trial_id": "MXG-07-T-Q",
+    "source_index": 1217,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "a diamond"
+      ],
+      "reference": [
+        "Diamond",
+        "4-C's of Diamond Grading",
+        "The 4 C's Of Diamonds",
+        "Polished diamond",
+        "Diamonds",
+        "Natural diamond",
+        "Diamond industry",
+        "Mitre-crozier applique",
+        "Diamond powder",
+        "Bortz",
+        "Industrial diamonds",
+        "Type-II diamond",
+        "Daimonds",
+        "Mitre-crozier appliqu\u00e9",
+        "Impact diamonds",
+        "Diamonad",
+        "Industrial diamond",
+        "Industrial Diamond"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0176dfad14c88ad78f0acae00ffdea61e8ef88932380087005769e5e29fa6e65",
+    "output_sha256": "df9e7ca488b6c4e7dc39499c475a395f9f7e59403720963c27686891f89e76aa",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "e73ea8c2cadcb5bf862b",
+    "trial_id": "MXG-08-B-G",
+    "source_index": 1425,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "a well-known neighborhood characterized by its riverside location and historical susceptibility to fog and smoke.",
+        "not listed among the choices provided in the prompt's options list (which only contains \"none\"), and the prompt asks to select the best option from the provided list:",
+        "home to george washington university and the u.s. department of state."
+      ],
+      "reference": [
+        "Government of D.C.",
+        "Washington-DC",
+        "Us capital",
+        "DC Washington",
+        "United States capital",
+        "UN/LOCODE:USWAS",
+        "Wasington D.C.",
+        "The District of Columbia",
+        "Washington,D.C",
+        "Washington, Dc",
+        "Washington city",
+        "Washington, D.C., United States",
+        "Washington (District of Columbia)",
+        "Washington dc",
+        "Washington, DC",
+        "D.C. Washington",
+        "Wash DC",
+        "Wash. DC",
+        "Wash, D.C.",
+        "WASHINGTON D.C",
+        "District of Columbia, District of Columbia",
+        "Distric of Columbia",
+        "Washington DC, United States of America",
+        "One District",
+        "Wash. D.C.",
+        "Culture of Washington, DC",
+        "United States Capital",
+        "District of Columbia, United States",
+        "Washington D. C.",
+        "Capital of the USA",
+        "District of Columbia",
+        "Washington City",
+        "Wasington, DC",
+        "Washington Dc",
+        "L'Enfant City",
+        "Distict of Columbia",
+        "Capital of the United States",
+        "Washington, D.C",
+        "Washington, US-DC",
+        "Washington District of Columbia",
+        "Washington (city)",
+        "Wasington DC",
+        "Federal district (United States)",
+        "Wash, DC",
+        "Washington, D.c.",
+        "Washington DC, USA",
+        "Washington DC.",
+        "District Of Columbia",
+        "Climate of Washington, D.C.",
+        "Distric of colombia",
+        "Washington, D C",
+        "District of Columbia County, DC",
+        "Washington D.C",
+        "District of columbia",
+        "Washington, DC.",
+        "District of Columbia government",
+        "American Federal District",
+        "Washington, District Of Columbia",
+        "Wahington D.C",
+        "Washington, District of Columbia",
+        "City of Washington",
+        "Federal district of the United States",
+        "Washington D.C.",
+        "Washington (D.C.)",
+        "Washington DC",
+        "1 District",
+        "Washington, D. C.",
+        "Districtofcolumbia",
+        "Washington, D.C., USA",
+        "Culture of Washington, D C",
+        "Washington, D.C.",
+        "Washingtondc",
+        "Culture of Washington, D. C.",
+        "Culture of Washington, D.C.",
+        "Economy of Washington, D.C.",
+        "Washington, dc",
+        "US-DC",
+        "Dist. of Columbia",
+        "Wash., D.C.",
+        "District of colombia",
+        "Washingotn, DC",
+        "Education in Washington, D.C.",
+        "Washington (DC)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+    "output_sha256": "f949912f93d95fd11f8662fb0190bcd4e1b3ad02f89c5a59404abe56789e363b",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "e1e608982b791824f391",
+    "trial_id": "MXG-08-B-Q",
+    "source_index": 1425,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "<answer>washington, d.c.</answer>"
+      ],
+      "reference": [
+        "Government of D.C.",
+        "Washington-DC",
+        "Us capital",
+        "DC Washington",
+        "United States capital",
+        "UN/LOCODE:USWAS",
+        "Wasington D.C.",
+        "The District of Columbia",
+        "Washington,D.C",
+        "Washington, Dc",
+        "Washington city",
+        "Washington, D.C., United States",
+        "Washington (District of Columbia)",
+        "Washington dc",
+        "Washington, DC",
+        "D.C. Washington",
+        "Wash DC",
+        "Wash. DC",
+        "Wash, D.C.",
+        "WASHINGTON D.C",
+        "District of Columbia, District of Columbia",
+        "Distric of Columbia",
+        "Washington DC, United States of America",
+        "One District",
+        "Wash. D.C.",
+        "Culture of Washington, DC",
+        "United States Capital",
+        "District of Columbia, United States",
+        "Washington D. C.",
+        "Capital of the USA",
+        "District of Columbia",
+        "Washington City",
+        "Wasington, DC",
+        "Washington Dc",
+        "L'Enfant City",
+        "Distict of Columbia",
+        "Capital of the United States",
+        "Washington, D.C",
+        "Washington, US-DC",
+        "Washington District of Columbia",
+        "Washington (city)",
+        "Wasington DC",
+        "Federal district (United States)",
+        "Wash, DC",
+        "Washington, D.c.",
+        "Washington DC, USA",
+        "Washington DC.",
+        "District Of Columbia",
+        "Climate of Washington, D.C.",
+        "Distric of colombia",
+        "Washington, D C",
+        "District of Columbia County, DC",
+        "Washington D.C",
+        "District of columbia",
+        "Washington, DC.",
+        "District of Columbia government",
+        "American Federal District",
+        "Washington, District Of Columbia",
+        "Wahington D.C",
+        "Washington, District of Columbia",
+        "City of Washington",
+        "Federal district of the United States",
+        "Washington D.C.",
+        "Washington (D.C.)",
+        "Washington DC",
+        "1 District",
+        "Washington, D. C.",
+        "Districtofcolumbia",
+        "Washington, D.C., USA",
+        "Culture of Washington, D C",
+        "Washington, D.C.",
+        "Washingtondc",
+        "Culture of Washington, D. C.",
+        "Culture of Washington, D.C.",
+        "Economy of Washington, D.C.",
+        "Washington, dc",
+        "US-DC",
+        "Dist. of Columbia",
+        "Wash., D.C.",
+        "District of colombia",
+        "Washingotn, DC",
+        "Education in Washington, D.C.",
+        "Washington (DC)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+    "output_sha256": "da77a361a46a53875498f0db7f6528d1d5a52804f49f8467c7617be530a0c2ae",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "34f0bbd1fbdd3b222e7f",
+    "trial_id": "MXG-08-T-G",
+    "source_index": 1425,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "washington, d.c"
+      ],
+      "reference": [
+        "Government of D.C.",
+        "Washington-DC",
+        "Us capital",
+        "DC Washington",
+        "United States capital",
+        "UN/LOCODE:USWAS",
+        "Wasington D.C.",
+        "The District of Columbia",
+        "Washington,D.C",
+        "Washington, Dc",
+        "Washington city",
+        "Washington, D.C., United States",
+        "Washington (District of Columbia)",
+        "Washington dc",
+        "Washington, DC",
+        "D.C. Washington",
+        "Wash DC",
+        "Wash. DC",
+        "Wash, D.C.",
+        "WASHINGTON D.C",
+        "District of Columbia, District of Columbia",
+        "Distric of Columbia",
+        "Washington DC, United States of America",
+        "One District",
+        "Wash. D.C.",
+        "Culture of Washington, DC",
+        "United States Capital",
+        "District of Columbia, United States",
+        "Washington D. C.",
+        "Capital of the USA",
+        "District of Columbia",
+        "Washington City",
+        "Wasington, DC",
+        "Washington Dc",
+        "L'Enfant City",
+        "Distict of Columbia",
+        "Capital of the United States",
+        "Washington, D.C",
+        "Washington, US-DC",
+        "Washington District of Columbia",
+        "Washington (city)",
+        "Wasington DC",
+        "Federal district (United States)",
+        "Wash, DC",
+        "Washington, D.c.",
+        "Washington DC, USA",
+        "Washington DC.",
+        "District Of Columbia",
+        "Climate of Washington, D.C.",
+        "Distric of colombia",
+        "Washington, D C",
+        "District of Columbia County, DC",
+        "Washington D.C",
+        "District of columbia",
+        "Washington, DC.",
+        "District of Columbia government",
+        "American Federal District",
+        "Washington, District Of Columbia",
+        "Wahington D.C",
+        "Washington, District of Columbia",
+        "City of Washington",
+        "Federal district of the United States",
+        "Washington D.C.",
+        "Washington (D.C.)",
+        "Washington DC",
+        "1 District",
+        "Washington, D. C.",
+        "Districtofcolumbia",
+        "Washington, D.C., USA",
+        "Culture of Washington, D C",
+        "Washington, D.C.",
+        "Washingtondc",
+        "Culture of Washington, D. C.",
+        "Culture of Washington, D.C.",
+        "Economy of Washington, D.C.",
+        "Washington, dc",
+        "US-DC",
+        "Dist. of Columbia",
+        "Wash., D.C.",
+        "District of colombia",
+        "Washingotn, DC",
+        "Education in Washington, D.C.",
+        "Washington (DC)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+    "output_sha256": "1c8c1b29e99132f8ab4bc1d1a767f330d2f0204ec389d940b9ee84a2352bbcbc",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "3a10588454d767c7c63f",
+    "trial_id": "MXG-08-T-Q",
+    "source_index": 1425,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "washington, d.c"
+      ],
+      "reference": [
+        "Government of D.C.",
+        "Washington-DC",
+        "Us capital",
+        "DC Washington",
+        "United States capital",
+        "UN/LOCODE:USWAS",
+        "Wasington D.C.",
+        "The District of Columbia",
+        "Washington,D.C",
+        "Washington, Dc",
+        "Washington city",
+        "Washington, D.C., United States",
+        "Washington (District of Columbia)",
+        "Washington dc",
+        "Washington, DC",
+        "D.C. Washington",
+        "Wash DC",
+        "Wash. DC",
+        "Wash, D.C.",
+        "WASHINGTON D.C",
+        "District of Columbia, District of Columbia",
+        "Distric of Columbia",
+        "Washington DC, United States of America",
+        "One District",
+        "Wash. D.C.",
+        "Culture of Washington, DC",
+        "United States Capital",
+        "District of Columbia, United States",
+        "Washington D. C.",
+        "Capital of the USA",
+        "District of Columbia",
+        "Washington City",
+        "Wasington, DC",
+        "Washington Dc",
+        "L'Enfant City",
+        "Distict of Columbia",
+        "Capital of the United States",
+        "Washington, D.C",
+        "Washington, US-DC",
+        "Washington District of Columbia",
+        "Washington (city)",
+        "Wasington DC",
+        "Federal district (United States)",
+        "Wash, DC",
+        "Washington, D.c.",
+        "Washington DC, USA",
+        "Washington DC.",
+        "District Of Columbia",
+        "Climate of Washington, D.C.",
+        "Distric of colombia",
+        "Washington, D C",
+        "District of Columbia County, DC",
+        "Washington D.C",
+        "District of columbia",
+        "Washington, DC.",
+        "District of Columbia government",
+        "American Federal District",
+        "Washington, District Of Columbia",
+        "Wahington D.C",
+        "Washington, District of Columbia",
+        "City of Washington",
+        "Federal district of the United States",
+        "Washington D.C.",
+        "Washington (D.C.)",
+        "Washington DC",
+        "1 District",
+        "Washington, D. C.",
+        "Districtofcolumbia",
+        "Washington, D.C., USA",
+        "Culture of Washington, D C",
+        "Washington, D.C.",
+        "Washingtondc",
+        "Culture of Washington, D. C.",
+        "Culture of Washington, D.C.",
+        "Economy of Washington, D.C.",
+        "Washington, dc",
+        "US-DC",
+        "Dist. of Columbia",
+        "Wash., D.C.",
+        "District of colombia",
+        "Washingotn, DC",
+        "Education in Washington, D.C.",
+        "Washington (DC)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "017bdf58957029f57e9c33ba652525d61f76ba2db206641daf668f7ae5ae81ac",
+    "output_sha256": "8f08de6372ff9a21cc96d87244f85f1fdeee5176fade69af8611c66d81b6d4a4",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "af8d7478338118e90c52",
+    "trial_id": "MXG-09-B-G",
+    "source_index": 1705,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "\"none.\" based on the provided information:",
+        "a.",
+        "a type of aromatic tobacco used for smoking)."
+      ],
+      "reference": [
+        "Smoke It",
+        "Smoke it"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "01a697c4aa0d87bfd488d87ab16b5fe74ada4c84bf84792a02ed5de3de132fe9",
+    "output_sha256": "94e38fc5ae523176a3ea2dd8f968dd1814b0a88c1f36b0d694fe1e8004336c77",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "ba814845434feabded45",
+    "trial_id": "MXG-09-B-Q",
+    "source_index": 1705,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "Smoke It",
+        "Smoke it"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "01a697c4aa0d87bfd488d87ab16b5fe74ada4c84bf84792a02ed5de3de132fe9",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "7b224f65a4980e0e2d06",
+    "trial_id": "MXG-09-T-G",
+    "source_index": 1705,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "a person would normally use perique as a blending tobacco, adding a small amount to a mixture of other tobaccos to provide a spicy, pungent flavor and aroma"
+      ],
+      "reference": [
+        "Smoke It",
+        "Smoke it"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "01a697c4aa0d87bfd488d87ab16b5fe74ada4c84bf84792a02ed5de3de132fe9",
+    "output_sha256": "f4825b22c6baa48ed1ffc7d34b8c1dc9c39f2fbc7932426ddbed89e89c728bcb",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "8f3d9cf842ed6c1c9ffe",
+    "trial_id": "MXG-09-T-Q",
+    "source_index": 1705,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "smoke it"
+      ],
+      "reference": [
+        "Smoke It",
+        "Smoke it"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "01a697c4aa0d87bfd488d87ab16b5fe74ada4c84bf84792a02ed5de3de132fe9",
+    "output_sha256": "913552271a89bba66a36d14cc788c89a1f91bae9b52a942eed6551324731a7ff",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "4b352fee77a17d782a04",
+    "trial_id": "MXG-10-B-G",
+    "source_index": 1100,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        2017.0,
+        "missing. based strictly on the provided options:",
+        25.0,
+        2042.0,
+        "$2042 - 2017 = 25$ years."
+      ],
+      "reference": [
+        "25",
+        "25"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "02214d0ee22b7968878f9e58c0b3f9ab5b5f8f47d2068c3fb4f86e599b21882f",
+    "output_sha256": "7816f3f4d4cb418a1e7aa69d88dbe2d798bbcdbc7bb0f4f4f75e85744018d5c9",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "5bd1375bcf7ef544ee03",
+    "trial_id": "MXG-10-B-Q",
+    "source_index": 1100,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": null,
+    "status": "capture_incomplete_or_empty",
+    "judged": null,
+    "source_sha256": "02214d0ee22b7968878f9e58c0b3f9ab5b5f8f47d2068c3fb4f86e599b21882f",
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "included": false,
+    "final_score": null,
+    "nonfinal_score": null,
+    "labels": null
+  },
+  {
+    "opaque_id": "bae094ea6759d3635337",
+    "trial_id": "MXG-10-T-G",
+    "source_index": 1100,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        25.0,
+        "25 years (from 2017 to 2042)",
+        2042.0,
+        2017.0
+      ],
+      "reference": [
+        "25",
+        "25"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "02214d0ee22b7968878f9e58c0b3f9ab5b5f8f47d2068c3fb4f86e599b21882f",
+    "output_sha256": "cfefbc8a80c47e6098cca66074e4d19d8f30fe3dcd24ba8fcf1c03a709c20770",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "52a25967d8a49bfb2116",
+    "trial_id": "MXG-10-T-Q",
+    "source_index": 1100,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        25.0,
+        "25 years"
+      ],
+      "reference": [
+        "25",
+        "25"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "02214d0ee22b7968878f9e58c0b3f9ab5b5f8f47d2068c3fb4f86e599b21882f",
+    "output_sha256": "9de1895431172a6025d3b6863da25ac1d102368d79d79a2b1316120582070231",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "4c61d852257273196ecb",
+    "trial_id": "MXG-11-B-G",
+    "source_index": 323,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        1908.0,
+        "a.",
+        "the longest continually running public farmers market in the us.",
+        "associated with the **pike place market** in seattle, washington. pike place market opened in 1907, but some sources associate specific charters or milestones with 1908. however, looking at the provided options:"
+      ],
+      "reference": [
+        "Sanitary Market",
+        "Pike Place Preservation and Development Authority",
+        "Frank Goodwin",
+        "Friends of the Market",
+        "Pike Place Market Historic District",
+        "Corner Market",
+        "Pike Place Market Preservation and Development Authority",
+        "Economy Market",
+        "Pike Street Market",
+        "Pigs On Parade",
+        "Pike Market, Seattle, Washington",
+        "Pike's Place",
+        "Pike Place Market",
+        "Pike Place",
+        "Joe Desimone",
+        "Giuseppe Desimone",
+        "North Arcade",
+        "Rachel (pig)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0227fdb0987066ca41eb0e62aad769bd3a0a02f9b1972171e8af60d8bf4ad98d",
+    "output_sha256": "5aa4bec6d4adc554250cea847997deda223a7a6c4a065b8e6db1f9c6f859b9fd",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "9ddb965d5fc1da1113f7",
+    "trial_id": "MXG-11-B-Q",
+    "source_index": 323,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "Sanitary Market",
+        "Pike Place Preservation and Development Authority",
+        "Frank Goodwin",
+        "Friends of the Market",
+        "Pike Place Market Historic District",
+        "Corner Market",
+        "Pike Place Market Preservation and Development Authority",
+        "Economy Market",
+        "Pike Street Market",
+        "Pigs On Parade",
+        "Pike Market, Seattle, Washington",
+        "Pike's Place",
+        "Pike Place Market",
+        "Pike Place",
+        "Joe Desimone",
+        "Giuseppe Desimone",
+        "North Arcade",
+        "Rachel (pig)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0227fdb0987066ca41eb0e62aad769bd3a0a02f9b1972171e8af60d8bf4ad98d",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "096cce98fc0c68ad077a",
+    "trial_id": "MXG-11-T-G",
+    "source_index": 323,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "the pike place market"
+      ],
+      "reference": [
+        "Sanitary Market",
+        "Pike Place Preservation and Development Authority",
+        "Frank Goodwin",
+        "Friends of the Market",
+        "Pike Place Market Historic District",
+        "Corner Market",
+        "Pike Place Market Preservation and Development Authority",
+        "Economy Market",
+        "Pike Street Market",
+        "Pigs On Parade",
+        "Pike Market, Seattle, Washington",
+        "Pike's Place",
+        "Pike Place Market",
+        "Pike Place",
+        "Joe Desimone",
+        "Giuseppe Desimone",
+        "North Arcade",
+        "Rachel (pig)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0227fdb0987066ca41eb0e62aad769bd3a0a02f9b1972171e8af60d8bf4ad98d",
+    "output_sha256": "c65b2dc9778295a6af346a4b108a8aa15148356d96489bb1e4d60b609160efe0",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "782b4a53a758c55642de",
+    "trial_id": "MXG-11-T-Q",
+    "source_index": 323,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "union square greenmarket"
+      ],
+      "reference": [
+        "Sanitary Market",
+        "Pike Place Preservation and Development Authority",
+        "Frank Goodwin",
+        "Friends of the Market",
+        "Pike Place Market Historic District",
+        "Corner Market",
+        "Pike Place Market Preservation and Development Authority",
+        "Economy Market",
+        "Pike Street Market",
+        "Pigs On Parade",
+        "Pike Market, Seattle, Washington",
+        "Pike's Place",
+        "Pike Place Market",
+        "Pike Place",
+        "Joe Desimone",
+        "Giuseppe Desimone",
+        "North Arcade",
+        "Rachel (pig)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0227fdb0987066ca41eb0e62aad769bd3a0a02f9b1972171e8af60d8bf4ad98d",
+    "output_sha256": "9596883d4ebf2dd41009a53be697e2ff31408a8a2fce169b7d9d7f98845ef50b",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "803041e76714ee46c312",
+    "trial_id": "MXG-12-B-G",
+    "source_index": 268,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "a core part of buddhist practice.",
+        "\"none,\" we must select from the given list.",
+        "**a. none**."
+      ],
+      "reference": [
+        "B\u00fadachas",
+        "Buddhadharma",
+        "Buddhadhamma",
+        "Buddhism in Asia",
+        "Budddhism",
+        "Buddhist",
+        "Budddhist",
+        "Buddhist Saying",
+        "Buddhism",
+        "Buddha's gospel",
+        "Buddh",
+        "Dhamma-Vinaya",
+        "Bouddhism",
+        "Bhuudis",
+        "Buddhisam",
+        "Budhism",
+        "Budhda birth date controversies",
+        "BuddhIsm",
+        "Buddha birth date controversies",
+        "BuddHism",
+        "Buddhists",
+        "Buhhdism",
+        "Dhamma-vinaya",
+        "Buddhity",
+        "Buddha Dharma",
+        "Buddhasasana",
+        "Budhist",
+        "Bauddhadharma",
+        "The teaching of the Buddha",
+        "Dhammavinaya",
+        "Buddhism religion",
+        "Buddhaity",
+        "Superbuddha",
+        "Budism",
+        "Buddist",
+        "Buddhisem",
+        "Buddism",
+        "\u0411\u0443\u0434\u0438\u0437\u044a\u043c",
+        "Boudhism",
+        "Bhuddist",
+        "Dhamma Vinaya",
+        "Buddha Dhamma",
+        "Buddhist religious philosophy",
+        "BUDDHISM",
+        "Budddhists",
+        "Bhuddism",
+        "Three levels of suffering"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "02695959cb4018c4802afac6b9aff4bc8336a14bba8362f79acb58f2431cb465",
+    "output_sha256": "7bdeaddcc4d2d1080affc53ac26fdb295546feeaa528e3e1a7d405e817a0075b",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "5aade6a9b41b6d260ddf",
+    "trial_id": "MXG-12-B-Q",
+    "source_index": 268,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "B\u00fadachas",
+        "Buddhadharma",
+        "Buddhadhamma",
+        "Buddhism in Asia",
+        "Budddhism",
+        "Buddhist",
+        "Budddhist",
+        "Buddhist Saying",
+        "Buddhism",
+        "Buddha's gospel",
+        "Buddh",
+        "Dhamma-Vinaya",
+        "Bouddhism",
+        "Bhuudis",
+        "Buddhisam",
+        "Budhism",
+        "Budhda birth date controversies",
+        "BuddhIsm",
+        "Buddha birth date controversies",
+        "BuddHism",
+        "Buddhists",
+        "Buhhdism",
+        "Dhamma-vinaya",
+        "Buddhity",
+        "Buddha Dharma",
+        "Buddhasasana",
+        "Budhist",
+        "Bauddhadharma",
+        "The teaching of the Buddha",
+        "Dhammavinaya",
+        "Buddhism religion",
+        "Buddhaity",
+        "Superbuddha",
+        "Budism",
+        "Buddist",
+        "Buddhisem",
+        "Buddism",
+        "\u0411\u0443\u0434\u0438\u0437\u044a\u043c",
+        "Boudhism",
+        "Bhuddist",
+        "Dhamma Vinaya",
+        "Buddha Dhamma",
+        "Buddhist religious philosophy",
+        "BUDDHISM",
+        "Budddhists",
+        "Bhuddism",
+        "Three levels of suffering"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "02695959cb4018c4802afac6b9aff4bc8336a14bba8362f79acb58f2431cb465",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "0603be15e2abadabf076",
+    "trial_id": "MXG-12-T-G",
+    "source_index": 268,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": null,
+    "status": "capture_incomplete_or_empty",
+    "judged": null,
+    "source_sha256": "02695959cb4018c4802afac6b9aff4bc8336a14bba8362f79acb58f2431cb465",
+    "output_sha256": "81f1a5cb5eb3ac280e121c0270a485a0e22e5b3ef2c1e10c01e28c735a8a077b",
+    "included": false,
+    "final_score": null,
+    "nonfinal_score": null,
+    "labels": null
+  },
+  {
+    "opaque_id": "745291788a13ba74afb5",
+    "trial_id": "MXG-12-T-Q",
+    "source_index": 268,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": null,
+    "status": "capture_incomplete_or_empty",
+    "judged": null,
+    "source_sha256": "02695959cb4018c4802afac6b9aff4bc8336a14bba8362f79acb58f2431cb465",
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "included": false,
+    "final_score": null,
+    "nonfinal_score": null,
+    "labels": null
+  },
+  {
+    "opaque_id": "c3f5b2f22286169dd7ef",
+    "trial_id": "MXG-13-B-G",
+    "source_index": 992,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        0.5,
+        "0.5 hours)</answer>",
+        "that it was down by 0.5 hours.",
+        "indicates a decrease of 0.5 hours.",
+        "year compared to last year, we look at the specific data provided in the text:",
+        13.5,
+        "wrong, we identify it. given the constraints of the provided options:",
+        "incorrect. however, based on the prompt's structure asking to select the best option from the provided list (which only contains \"none\"), and the factual evidence that it was indeed down by 0.5 hours, the provided option a does not match the data.",
+        "year)} = 0.5\\text{ hours}$.",
+        "incorrect.",
+        "year) = 0.5 hour decrease.",
+        "asking to evaluate the option provided:",
+        "year:** 13.5 hours."
+      ],
+      "reference": [
+        "1.5",
+        ".5"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0271279678d1933fc69fb8e010cda808b6486e1189427ba9085abba2ab3760af",
+    "output_sha256": "11d1c4b0f7a9d88004a42fd58e0000271195bf8031624c15beb334c1749e9620",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "096c67e85878d42f3ed3",
+    "trial_id": "MXG-13-B-Q",
+    "source_index": 992,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "a. none."
+      ],
+      "reference": [
+        "1.5",
+        ".5"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0271279678d1933fc69fb8e010cda808b6486e1189427ba9085abba2ab3760af",
+    "output_sha256": "2547c9cf11c1dd7034677f0c94eceef1dbe560c9537f53887fe383221c8cceb8",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "f9fc7d94e51ccc523768",
+    "trial_id": "MXG-13-T-G",
+    "source_index": 992,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": null,
+    "status": "capture_incomplete_or_empty",
+    "judged": null,
+    "source_sha256": "0271279678d1933fc69fb8e010cda808b6486e1189427ba9085abba2ab3760af",
+    "output_sha256": "81f1a5cb5eb3ac280e121c0270a485a0e22e5b3ef2c1e10c01e28c735a8a077b",
+    "included": false,
+    "final_score": null,
+    "nonfinal_score": null,
+    "labels": null
+  },
+  {
+    "opaque_id": "d45a67adaf2dc00332f4",
+    "trial_id": "MXG-13-T-Q",
+    "source_index": 992,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        0.5,
+        "0.5 hours"
+      ],
+      "reference": [
+        "1.5",
+        ".5"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "0271279678d1933fc69fb8e010cda808b6486e1189427ba9085abba2ab3760af",
+    "output_sha256": "8fd0c704c21543fc979bea047286c4cad9f1b436df1f6f24e1107d124527eba7",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "95a5fe273dc3b33d08e6",
+    "trial_id": "MXG-14-B-G",
+    "source_index": 755,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "\"none\"."
+      ],
+      "reference": [
+        "Lindisfarne",
+        "LINDISFARNE"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "030a5f637c160d9c70c2d6b64c3e8d7a0c1b47d8eae861932ef7dc0f6c7f924e",
+    "output_sha256": "e71588d29195a4e4545846e311b63a503f73405187999abb70f5f4283102be5d",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "4026210a5d5654c31abf",
+    "trial_id": "MXG-14-B-Q",
+    "source_index": 755,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "Lindisfarne",
+        "LINDISFARNE"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "030a5f637c160d9c70c2d6b64c3e8d7a0c1b47d8eae861932ef7dc0f6c7f924e",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "777cb405c766071e356e",
+    "trial_id": "MXG-14-T-G",
+    "source_index": 755,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "lindisfarne"
+      ],
+      "reference": [
+        "Lindisfarne",
+        "LINDISFARNE"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "030a5f637c160d9c70c2d6b64c3e8d7a0c1b47d8eae861932ef7dc0f6c7f924e",
+    "output_sha256": "a2a40f0b1a270a3ded631c63b1494148be79209c0a8f7167a75351d539c8a63d",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "771e94e196f0dc78b4ab",
+    "trial_id": "MXG-14-T-Q",
+    "source_index": 755,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "lindisfarne (holy island)"
+      ],
+      "reference": [
+        "Lindisfarne",
+        "LINDISFARNE"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "030a5f637c160d9c70c2d6b64c3e8d7a0c1b47d8eae861932ef7dc0f6c7f924e",
+    "output_sha256": "1c5b34d6bcc2cd190a57545378f6116960e6bd41eb6d6837bef97b256996aa35",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "dfba60a46ae9aa32f941",
+    "trial_id": "MXG-15-B-G",
+    "source_index": 935,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "a.",
+        "caused by the long-term inhalation of coal dust, which occurs primarily in coal mining."
+      ],
+      "reference": [
+        "Coal seams",
+        "Collieries",
+        "Coal miner",
+        "Coal mines",
+        "Colliery",
+        "Coalminer",
+        "Coal mined",
+        "Surface coal mine",
+        "Coal Mining",
+        "Coal-miner",
+        "Coal mine",
+        "Coal extraction",
+        "Environmental impact of coal mining",
+        "Coalworks",
+        "Deep mine",
+        "Underground coal mining",
+        "Coal pit",
+        "Coal mining",
+        "Coal-mine",
+        "Highwall",
+        "Opencast coal mining",
+        "Coal production",
+        "Mining coal",
+        "Coalmining",
+        "Coal seam",
+        "Coal Miner",
+        "Opencast coalmine",
+        "Coal field",
+        "Coal-mining",
+        "Coalmine",
+        "Underground coal mine",
+        "Environmental impacts of coal mining"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "035b51c81daa47a67fe25017a4f734420d08a9130312e1eb940d53c1ec3d27a6",
+    "output_sha256": "7e68dd90a1ee46e32b8299e6e1f56e3d43f23564c2db7ca5bba8a7540cca37de",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "595524402cb79e535782",
+    "trial_id": "MXG-15-B-Q",
+    "source_index": 935,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "Coal seams",
+        "Collieries",
+        "Coal miner",
+        "Coal mines",
+        "Colliery",
+        "Coalminer",
+        "Coal mined",
+        "Surface coal mine",
+        "Coal Mining",
+        "Coal-miner",
+        "Coal mine",
+        "Coal extraction",
+        "Environmental impact of coal mining",
+        "Coalworks",
+        "Deep mine",
+        "Underground coal mining",
+        "Coal pit",
+        "Coal mining",
+        "Coal-mine",
+        "Highwall",
+        "Opencast coal mining",
+        "Coal production",
+        "Mining coal",
+        "Coalmining",
+        "Coal seam",
+        "Coal Miner",
+        "Opencast coalmine",
+        "Coal field",
+        "Coal-mining",
+        "Coalmine",
+        "Underground coal mine",
+        "Environmental impacts of coal mining"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "035b51c81daa47a67fe25017a4f734420d08a9130312e1eb940d53c1ec3d27a6",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "e494767840c18d26277c",
+    "trial_id": "MXG-15-T-G",
+    "source_index": 935,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "coal mining"
+      ],
+      "reference": [
+        "Coal seams",
+        "Collieries",
+        "Coal miner",
+        "Coal mines",
+        "Colliery",
+        "Coalminer",
+        "Coal mined",
+        "Surface coal mine",
+        "Coal Mining",
+        "Coal-miner",
+        "Coal mine",
+        "Coal extraction",
+        "Environmental impact of coal mining",
+        "Coalworks",
+        "Deep mine",
+        "Underground coal mining",
+        "Coal pit",
+        "Coal mining",
+        "Coal-mine",
+        "Highwall",
+        "Opencast coal mining",
+        "Coal production",
+        "Mining coal",
+        "Coalmining",
+        "Coal seam",
+        "Coal Miner",
+        "Opencast coalmine",
+        "Coal field",
+        "Coal-mining",
+        "Coalmine",
+        "Underground coal mine",
+        "Environmental impacts of coal mining"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "035b51c81daa47a67fe25017a4f734420d08a9130312e1eb940d53c1ec3d27a6",
+    "output_sha256": "51c5b77cd9f16e27fc0a2f2b2b039398676821d0d94ce2b0ef14238d1dcd11c8",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "5215635f95cce8cf751c",
+    "trial_id": "MXG-15-T-Q",
+    "source_index": 935,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "coal miner"
+      ],
+      "reference": [
+        "Coal seams",
+        "Collieries",
+        "Coal miner",
+        "Coal mines",
+        "Colliery",
+        "Coalminer",
+        "Coal mined",
+        "Surface coal mine",
+        "Coal Mining",
+        "Coal-miner",
+        "Coal mine",
+        "Coal extraction",
+        "Environmental impact of coal mining",
+        "Coalworks",
+        "Deep mine",
+        "Underground coal mining",
+        "Coal pit",
+        "Coal mining",
+        "Coal-mine",
+        "Highwall",
+        "Opencast coal mining",
+        "Coal production",
+        "Mining coal",
+        "Coalmining",
+        "Coal seam",
+        "Coal Miner",
+        "Opencast coalmine",
+        "Coal field",
+        "Coal-mining",
+        "Coalmine",
+        "Underground coal mine",
+        "Environmental impacts of coal mining"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "035b51c81daa47a67fe25017a4f734420d08a9130312e1eb940d53c1ec3d27a6",
+    "output_sha256": "af670b936e43d2e93344ce5d77c5376447eecbd747b69a36d6bfdeb83efb9f0c",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "a9acebf351324f49e5c0",
+    "trial_id": "MXG-16-B-G",
+    "source_index": 896,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": null,
+    "status": "capture_incomplete_or_empty",
+    "judged": null,
+    "source_sha256": "03959ef8487345b99fe441152682b97586deb3fea4461e5dda22c0619598d5b1",
+    "output_sha256": "3e918ca0ce5634ba49ee94d6a5cc9b2fe7a1fe456da60eec9bb217d4824d7392",
+    "included": false,
+    "final_score": null,
+    "nonfinal_score": null,
+    "labels": null
+  },
+  {
+    "opaque_id": "4939b0476464f50ec94c",
+    "trial_id": "MXG-16-B-Q",
+    "source_index": 896,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "Janet and John",
+        "Janet and john"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03959ef8487345b99fe441152682b97586deb3fea4461e5dda22c0619598d5b1",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "355ada0859cef29a306f",
+    "trial_id": "MXG-16-T-G",
+    "source_index": 896,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "they were alice and jerry in the uk"
+      ],
+      "reference": [
+        "Janet and John",
+        "Janet and john"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03959ef8487345b99fe441152682b97586deb3fea4461e5dda22c0619598d5b1",
+    "output_sha256": "3ce4f945a91738999656e3400d7b6c98fcec9d94a565c91b02dfb70e47e4b943",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "INCOMPATIBLE",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "fb877e6ee5051aa787aa",
+    "trial_id": "MXG-16-T-Q",
+    "source_index": 896,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": null,
+    "status": "capture_incomplete_or_empty",
+    "judged": null,
+    "source_sha256": "03959ef8487345b99fe441152682b97586deb3fea4461e5dda22c0619598d5b1",
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "included": false,
+    "final_score": null,
+    "nonfinal_score": null,
+    "labels": null
+  },
+  {
+    "opaque_id": "0baece91e032e7a54c2a",
+    "trial_id": "MXG-17-B-G",
+    "source_index": 1749,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "a."
+      ],
+      "reference": [
+        "Reed diffuser",
+        "Aromatherapist",
+        "Aromatherapy",
+        "Aromatherapeutic",
+        "Menthol inhaler",
+        "Aroma therapy",
+        "Aromatherapy candles",
+        "Reed Diffusers",
+        "History of aromatherapy",
+        "Aromatherapy massage",
+        "Aromatherapy Candles"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03b59b79bf5dd3c3a0230bf4ac8261090dbe1933e0a0bc0a64240ac3334b9fc0",
+    "output_sha256": "fdd45aa52f3eeedcaebb8c82c609548a2701b5bd41ccd6c89f3ba3a8716ee185",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "4b451e9508abb8a3ff9d",
+    "trial_id": "MXG-17-B-Q",
+    "source_index": 1749,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "Reed diffuser",
+        "Aromatherapist",
+        "Aromatherapy",
+        "Aromatherapeutic",
+        "Menthol inhaler",
+        "Aroma therapy",
+        "Aromatherapy candles",
+        "Reed Diffusers",
+        "History of aromatherapy",
+        "Aromatherapy massage",
+        "Aromatherapy Candles"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03b59b79bf5dd3c3a0230bf4ac8261090dbe1933e0a0bc0a64240ac3334b9fc0",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "85398ae8659faadc46a5",
+    "trial_id": "MXG-17-T-G",
+    "source_index": 1749,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": null,
+    "status": "capture_incomplete_or_empty",
+    "judged": null,
+    "source_sha256": "03b59b79bf5dd3c3a0230bf4ac8261090dbe1933e0a0bc0a64240ac3334b9fc0",
+    "output_sha256": "81f1a5cb5eb3ac280e121c0270a485a0e22e5b3ef2c1e10c01e28c735a8a077b",
+    "included": false,
+    "final_score": null,
+    "nonfinal_score": null,
+    "labels": null
+  },
+  {
+    "opaque_id": "3b54c2dbe8e843714d0c",
+    "trial_id": "MXG-17-T-Q",
+    "source_index": 1749,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "aromatherapy"
+      ],
+      "reference": [
+        "Reed diffuser",
+        "Aromatherapist",
+        "Aromatherapy",
+        "Aromatherapeutic",
+        "Menthol inhaler",
+        "Aroma therapy",
+        "Aromatherapy candles",
+        "Reed Diffusers",
+        "History of aromatherapy",
+        "Aromatherapy massage",
+        "Aromatherapy Candles"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03b59b79bf5dd3c3a0230bf4ac8261090dbe1933e0a0bc0a64240ac3334b9fc0",
+    "output_sha256": "04d2af6e36b1dba36fcbbf6e0bf7b3a6b2d4b84c9b4dd7206b94e863544ed866",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "b1465f5c34467d9571b2",
+    "trial_id": "MXG-18-B-G",
+    "source_index": 740,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "\"forward\" (positive y-axis).",
+        0.0,
+        "not the starting point (0, 0)."
+      ],
+      "reference": [
+        "No"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03c9c6df40143fe06930dc5115e1930e9b356ff7dcaf8f76f12efcd115b6df75",
+    "output_sha256": "20312ae874cb041b45389c329af554d47bbab015e215f04bc5d8b4085697f237",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "72405d5a665bb23b6426",
+    "trial_id": "MXG-18-B-Q",
+    "source_index": 740,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "<answer>no</answer>"
+      ],
+      "reference": [
+        "No"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03c9c6df40143fe06930dc5115e1930e9b356ff7dcaf8f76f12efcd115b6df75",
+    "output_sha256": "8f07f32b8c41ed3df4b9c80bf7b11de802ab0e7ac32a20cc8c73e2b6f1c23afc",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "d081b86585f759b5f95f",
+    "trial_id": "MXG-18-T-G",
+    "source_index": 740,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        0.0,
+        "position:** (7, 2).",
+        2.0,
+        "not the starting point (0, 0), you do not return to the starting point."
+      ],
+      "reference": [
+        "No"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03c9c6df40143fe06930dc5115e1930e9b356ff7dcaf8f76f12efcd115b6df75",
+    "output_sha256": "7f45a83ca5829fff11f3a57b7c38bd931f5d329c7b76c05df783e2a91895a6c1",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "24c5aa5c3e6393bfd58b",
+    "trial_id": "MXG-18-T-Q",
+    "source_index": 740,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        0.0,
+        1.0,
+        2.0,
+        4.0,
+        "no.\n\nstep by step:\n- start at (0, 0), facing forward.\n- take 1 step right \u2192 (1, 0)\n- take 2 steps forward \u2192 (1, 2)\n- take 2 steps right \u2192 (3, 2)\n- take 4 steps right \u2192 (7, 2)\n\nyou end at (7, 2), not the starting point"
+      ],
+      "reference": [
+        "No"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03c9c6df40143fe06930dc5115e1930e9b356ff7dcaf8f76f12efcd115b6df75",
+    "output_sha256": "1018fe901cd5affe14c31d175607adcc1bd1d755550164f664194300ada73e74",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "e65ddaa419a7200b09e6",
+    "trial_id": "MXG-19-B-G",
+    "source_index": 836,
+    "model": "gemma-4-31b-it",
+    "condition": "binding_only",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "a book or digital record used to track financial transactions, specifically recording the increases and decreases in specific accounts (such as assets, liabilities, equity, revenues, and expenses) to determine the balance of those accounts.",
+        "a."
+      ],
+      "reference": [
+        "Account",
+        "Account holder",
+        "Accounts",
+        "Account (disambiguation)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03caed8b6306dee460b33a1469f99d65d78b2b330bad7a68bfae8498b57eb150",
+    "output_sha256": "62f17f2915bbcc3c3d352768788f170b5345eafeae920e9429476b7eb5724bdf",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 1,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "SUPPORTED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "e69f99819837eea5af08",
+    "trial_id": "MXG-19-B-Q",
+    "source_index": 836,
+    "model": "qwen3.8-27b",
+    "condition": "binding_only",
+    "score": 0.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 0.0,
+      "parsed": [
+        "<answer>a</answer>"
+      ],
+      "reference": [
+        "Account",
+        "Account holder",
+        "Accounts",
+        "Account (disambiguation)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03caed8b6306dee460b33a1469f99d65d78b2b330bad7a68bfae8498b57eb150",
+    "output_sha256": "1bd70ddd80c7683308d5f22b64f4606c975e672af31b2b07263d9f5be695f5da",
+    "included": true,
+    "final_score": 0,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SYMBOLIC",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "fa6f799aa0455b92aec3",
+    "trial_id": "MXG-19-T-G",
+    "source_index": 836,
+    "model": "gemma-4-31b-it",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "a ledger traditionally records **financial transactions**, including debits, credits, account balances, and the chronological history of a business's monetary movements"
+      ],
+      "reference": [
+        "Account",
+        "Account holder",
+        "Accounts",
+        "Account (disambiguation)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03caed8b6306dee460b33a1469f99d65d78b2b330bad7a68bfae8498b57eb150",
+    "output_sha256": "a698be6c6a8ff2388cf354f4a80a8f47b20b1ecee78c208ec0ae0c38423c8bd1",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  },
+  {
+    "opaque_id": "673cb4fde4ed8c57f3a4",
+    "trial_id": "MXG-19-T-Q",
+    "source_index": 836,
+    "model": "qwen3.8-27b",
+    "condition": "official_typed",
+    "score": 1.0,
+    "status": "completed_scored",
+    "judged": {
+      "status": "PASS",
+      "mode": "official_mixeval_rule",
+      "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+      "source_sha256": "85077e61ca01f4c240158ff3b18a0451130fa879a2a46a11f3b382dbbf1fd73a",
+      "problem_type": "free-form",
+      "score": 1.0,
+      "parsed": [
+        "accounts"
+      ],
+      "reference": [
+        "Account",
+        "Account holder",
+        "Accounts",
+        "Account (disambiguation)"
+      ],
+      "random_fallback": false,
+      "random_draws": [],
+      "error": null,
+      "scope": "Exact official rule-mode scoring, not default model judging or model accuracy."
+    },
+    "source_sha256": "03caed8b6306dee460b33a1469f99d65d78b2b330bad7a68bfae8498b57eb150",
+    "output_sha256": "40695d5446d6061aa8623d256cbbb23777f6f1448e87a364e83394f159e3b456",
+    "included": true,
+    "final_score": 1,
+    "nonfinal_score": 0,
+    "labels": [
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      },
+      {
+        "final": "SUPPORTED",
+        "nonfinal": "NOT_OBSERVED"
+      }
+    ]
+  }
+]

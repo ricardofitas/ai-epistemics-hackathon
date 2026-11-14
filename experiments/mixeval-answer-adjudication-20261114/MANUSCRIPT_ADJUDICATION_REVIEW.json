@@ -1,0 +1,490 @@
+{
+  "status": "PASS",
+  "review": "Independent comparison of C16 and all AppendixE numerical/interpretive statements against frozen protocol, source labels, independently verified summary, prior manuscript and source snapshots. No manuscript or label edits.",
+  "new_provider_model_api_calls": 0,
+  "semantic_truth_rejudged": false,
+  "checks": [
+    {
+      "check": "prior independent adjudication verification",
+      "status": "PASS"
+    },
+    {
+      "check": "review completed count, excluded capture unknowns, and no new provider calls",
+      "status": "PASS"
+    },
+    {
+      "check": "complete final and nonfinal agreement",
+      "status": "PASS"
+    },
+    {
+      "check": "AppendixE table ('gemma-4-31b-it', 'binding_only')",
+      "status": "PASS",
+      "detail": {
+        "reported": [
+          "18",
+          "11",
+          "2",
+          "17"
+        ],
+        "expected": [
+          "18",
+          "11.0",
+          "2",
+          "17"
+        ],
+        "comparison": "Numeric counts compared as values; integer-vs-float JSON representations are equivalent."
+      }
+    },
+    {
+      "check": "AppendixE table ('gemma-4-31b-it', 'official_typed')",
+      "status": "PASS",
+      "detail": {
+        "reported": [
+          "16",
+          "12",
+          "12",
+          "1"
+        ],
+        "expected": [
+          "16",
+          "12.0",
+          "12",
+          "1"
+        ],
+        "comparison": "Numeric counts compared as values; integer-vs-float JSON representations are equivalent."
+      }
+    },
+    {
+      "check": "AppendixE table ('qwen3.8-27b', 'binding_only')",
+      "status": "PASS",
+      "detail": {
+        "reported": [
+          "18",
+          "2",
+          "2",
+          "2"
+        ],
+        "expected": [
+          "18",
+          "2.0",
+          "2",
+          "2"
+        ],
+        "comparison": "Numeric counts compared as values; integer-vs-float JSON representations are equivalent."
+      }
+    },
+    {
+      "check": "AppendixE table ('qwen3.8-27b', 'official_typed')",
+      "status": "PASS",
+      "detail": {
+        "reported": [
+          "17",
+          "14",
+          "15",
+          "1"
+        ],
+        "expected": [
+          "17",
+          "14.0",
+          "15",
+          "1"
+        ],
+        "comparison": "Numeric counts compared as values; integer-vs-float JSON representations are equivalent."
+      }
+    },
+    {
+      "check": "gemma-4-31b-it sixteen symbolic binding finals",
+      "status": "PASS"
+    },
+    {
+      "check": "Gemma nine rule-credited symbolic finals",
+      "status": "PASS",
+      "detail": 9
+    },
+    {
+      "check": "Gemma fifteen supported nonfinal with symbolic final",
+      "status": "PASS",
+      "detail": 15
+    },
+    {
+      "check": "qwen3.8-27b sixteen symbolic binding finals",
+      "status": "PASS"
+    },
+    {
+      "check": "gemma-4-31b-it final-support paired bounds and20source denominator",
+      "status": "PASS",
+      "detail": [
+        0.4,
+        0.7
+      ]
+    },
+    {
+      "check": "qwen3.8-27b final-support paired bounds and20source denominator",
+      "status": "PASS",
+      "detail": [
+        0.55,
+        0.8
+      ]
+    },
+    {
+      "check": "gemma-4-31b-it original optional-rule paired bounds unchanged",
+      "status": "PASS",
+      "detail": [
+        -0.05,
+        0.25
+      ]
+    },
+    {
+      "check": "qwen3.8-27b original optional-rule paired bounds unchanged",
+      "status": "PASS",
+      "detail": [
+        0.5,
+        0.75
+      ]
+    },
+    {
+      "check": "proverb example is explicit reviewer semantic equivalence with unchanged rulezero",
+      "status": "PASS",
+      "detail": {
+        "trial_id": "MXG-00-T-Q",
+        "rater_reasons": [
+          "Prepare for the worst minimally completes the proverb as the accepted but prepare for the worst; the conjunction is immaterial.",
+          "Dropping the introductory conjunction but preserves the supplied proverb completion."
+        ]
+      }
+    },
+    {
+      "check": "C16 exact quantitative claim and qualification",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 calibration.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 wino.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 sciq.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 labbench.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 external.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 prospective.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 splits.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 split_checks.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 factorization.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 resources.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 capture.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 mutations.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 harness.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 paired_constant_controls.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 native_integration.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 social_summary.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 social_verification.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 social_protocol.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 source_exposure.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 primary_literature.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 native_gate.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 native_gate_verification.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 causal_root.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 mmmlu_transfer.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 causal_verification.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 external_update.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 mixeval_review.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 mixeval_verification.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 mixeval_protocol.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 mixeval_summary.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 fork_inventory.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 scoring_replay_summary.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 scoring_replay_verification.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 scoring_adapter_verification.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 public_score_summary.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 public_score_verification.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 public_exact_alias_summary.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 denominator_review.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 native_route_free_form.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 native_route_multiple_choice.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 native_route_controls.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 native_route_verification.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 native_route_provenance_erratum.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 paired_generation_analysis.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 paired_generation_verification.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 paired_terminal_review.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 paired_output_review.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 adjudication_summary.json",
+      "status": "PASS"
+    },
+    {
+      "check": "adjudication source copy adjudication_summary.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 adjudication_protocol.json",
+      "status": "PASS"
+    },
+    {
+      "check": "adjudication source copy adjudication_protocol.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 adjudication_verification.json",
+      "status": "PASS"
+    },
+    {
+      "check": "adjudication source copy adjudication_verification.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 adjudication_review_a.json",
+      "status": "PASS"
+    },
+    {
+      "check": "adjudication source copy adjudication_review_a.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 adjudication_review_b.json",
+      "status": "PASS"
+    },
+    {
+      "check": "adjudication source copy adjudication_review_b.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 adjudication_records.json",
+      "status": "PASS"
+    },
+    {
+      "check": "adjudication source copy adjudication_records.json",
+      "status": "PASS"
+    },
+    {
+      "check": "source snapshot SHA256 adjudication_inputs.json",
+      "status": "PASS"
+    },
+    {
+      "check": "adjudication source copy adjudication_inputs.json",
+      "status": "PASS"
+    },
+    {
+      "check": "previous fifteen claims unchanged",
+      "status": "PASS"
+    },
+    {
+      "check": "prior manuscript pages preserved except version and AppendixDintro/status",
+      "status": "PASS"
+    },
+    {
+      "check": "manuscript14structured pages and8main pages",
+      "status": "PASS",
+      "detail": "Main text pages1–8; references page9; appendices pages10–14."
+    },
+    {
+      "check": "PDF has14pages and matches recorded QAhash",
+      "status": "PASS"
+    },
+    {
+      "check": "verify_claims.py successful for all16claims",
+      "status": "PASS"
+    }
+  ],
+  "adjudication_snapshot_hashes": [
+    {
+      "snapshot": "adjudication_summary.json",
+      "sha256": "e468164833e64ccefaa83a2f137b0b9170b0debd8cbe0c9aa4db0429d586f5fc",
+      "matches_work_source": true
+    },
+    {
+      "snapshot": "adjudication_protocol.json",
+      "sha256": "f88703926f4424e15733aa6114f05afeab42cfffad5a94aeed1ea414d430e271",
+      "matches_work_source": true
+    },
+    {
+      "snapshot": "adjudication_verification.json",
+      "sha256": "eefb006532303551fc44095b73f50e7eafd68f3c191723ca4f689ca533e6d360",
+      "matches_work_source": true
+    },
+    {
+      "snapshot": "adjudication_review_a.json",
+      "sha256": "f659109ee9068f1078b3d2cbd87ca6dd6d1a8226345774663db8a7e9df4d2f5c",
+      "matches_work_source": true
+    },
+    {
+      "snapshot": "adjudication_review_b.json",
+      "sha256": "cfe1102590cde1aa92c602c3b78397a70864f691fdc20541f1ee99c7d49d258c",
+      "matches_work_source": true
+    },
+    {
+      "snapshot": "adjudication_records.json",
+      "sha256": "868674c81269bdc02bc1c4d340a5cbe67dd7a62c0285f66d0121b3db2cf6209d",
+      "matches_work_source": true
+    },
+    {
+      "snapshot": "adjudication_inputs.json",
+      "sha256": "bb6cfd86e2a5cde3027fcab181e4828fa692a8702963272b606adfadb7bbad12",
+      "matches_work_source": true
+    }
+  ],
+  "interpretation_review": {
+    "status": "PASS",
+    "confirmed_limits": [
+      "Post-generation review, with protocol fixed before individual labels in this iteration; not generation preregistration.",
+      "Two distinct assistant reviewers and third structural/arithmetic verifier; same-model-family and shared-rubric errors remain possible.",
+      "Reviewers saw prior aggregate findings in protocol; output style may reveal condition, so masking is partial.",
+      "Trust in supplied accepted references is explicit; no independent fact checking or human/defaultMixEval judging.",
+      "Visible nonfinal content is not hidden reasoning or proof of internal knowledge.",
+      "Same fixed20question panel reused across models; no40independent-source or population-accuracy claim.",
+      "New final-support outcome differs from unchanged optional-rule metric; gain ranges are unknown-outcome bounds, not confidence intervals.",
+      "Symbolic-final, rule-credit, and supported-nonfinal categories can overlap and add no source units.",
+      "Task format and instructions changed together; no pure single-token or universal-capability inference."
+    ],
+    "proverb_example": "Supported as a transparent report of both reviewers' semantic-equivalence decisions, without an independent factual endorsement."
+  },
+  "layout_scope": "Verified PDF page count and current PDF hash against QA record. Did not repeat visual rendering; earlier overflow correction is not independently visually certified by this review.",
+  "provenance_note": "All adjudication snapshot hashes match the exact work sources and EVIDENCE_SOURCES metadata. The newly named adjudication ZIP is not yet locally available/in SOURCE_ARCHIVES, so its archive-level identity was not checked here.",
+  "input_hashes": {
+    "run1552/paper/manuscript.json": "63d85ed7f02e7038789801d806b83c948e791c16344cdbb2e5c9119bcecfd905",
+    "run1552/paper/claims.json": "227b511212301e0e19d82729efc15669801b25fe16d2c14921ecaf6fde23e38e",
+    "run1552/paper/EVIDENCE_SOURCES.json": "78cba76581d0f9f631528c153419761365b829267cd84e62f5515292fffcffbe",
+    "run1552/work/SUMMARY.json": "e468164833e64ccefaa83a2f137b0b9170b0debd8cbe0c9aa4db0429d586f5fc",
+    "run1552/work/REVIEW_A.json": "f659109ee9068f1078b3d2cbd87ca6dd6d1a8226345774663db8a7e9df4d2f5c",
+    "run1552/work/REVIEW_B.json": "cfe1102590cde1aa92c602c3b78397a70864f691fdc20541f1ee99c7d49d258c",
+    "run1552/work/VERIFICATION.json": "eefb006532303551fc44095b73f50e7eafd68f3c191723ca4f689ca533e6d360",
+    "run1552/paper/Epistemics_Contract_Audit_Working_Draft_20261114.pdf": "9960c1aec00a0400fe469be7483ef8a92f6ff2d41f454e7917fb6d9f33877384"
+  }
+}

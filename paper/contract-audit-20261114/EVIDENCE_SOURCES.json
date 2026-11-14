@@ -270,5 +270,47 @@
     "member": "real-generation/EXPLORATORY_OUTPUT_REVIEW.json",
     "sha256": "bea9517b5689dc07f9a8315d7ffd70a381df55a07e9b9fa8e86e0a2132d51244",
     "qualification": "Explicitlypost-outcome lexical/format inspection, not semantic/human correctness adjudication"
+  },
+  "adjudication_summary.json": {
+    "source_archive": "Epistemics_MixEval_resposta_final_e_credito_do_avaliador_20261114.zip",
+    "member": "SUMMARY.json",
+    "sha256": "e468164833e64ccefaa83a2f137b0b9170b0debd8cbe0c9aa4db0429d586f5fc",
+    "parent_member_sha256": "e468164833e64ccefaa83a2f137b0b9170b0debd8cbe0c9aa4db0429d586f5fc"
+  },
+  "adjudication_protocol.json": {
+    "source_archive": "Epistemics_MixEval_resposta_final_e_credito_do_avaliador_20261114.zip",
+    "member": "ADJUDICATION_PROTOCOL.json",
+    "sha256": "f88703926f4424e15733aa6114f05afeab42cfffad5a94aeed1ea414d430e271",
+    "parent_member_sha256": "f88703926f4424e15733aa6114f05afeab42cfffad5a94aeed1ea414d430e271"
+  },
+  "adjudication_verification.json": {
+    "source_archive": "Epistemics_MixEval_resposta_final_e_credito_do_avaliador_20261114.zip",
+    "member": "VERIFICATION.json",
+    "sha256": "eefb006532303551fc44095b73f50e7eafd68f3c191723ca4f689ca533e6d360",
+    "parent_member_sha256": "eefb006532303551fc44095b73f50e7eafd68f3c191723ca4f689ca533e6d360"
+  },
+  "adjudication_review_a.json": {
+    "source_archive": "Epistemics_MixEval_resposta_final_e_credito_do_avaliador_20261114.zip",
+    "member": "REVIEW_A.json",
+    "sha256": "f659109ee9068f1078b3d2cbd87ca6dd6d1a8226345774663db8a7e9df4d2f5c",
+    "parent_member_sha256": "f659109ee9068f1078b3d2cbd87ca6dd6d1a8226345774663db8a7e9df4d2f5c"
+  },
+  "adjudication_review_b.json": {
+    "source_archive": "Epistemics_MixEval_resposta_final_e_credito_do_avaliador_20261114.zip",
+    "member": "REVIEW_B.json",
+    "sha256": "cfe1102590cde1aa92c602c3b78397a70864f691fdc20541f1ee99c7d49d258c",
+    "parent_member_sha256": "cfe1102590cde1aa92c602c3b78397a70864f691fdc20541f1ee99c7d49d258c"
+  },
+  "adjudication_records.json": {
+    "source_archive": "Epistemics_MixEval_resposta_final_e_credito_do_avaliador_20261114.zip",
+    "member": "ADJUDICATED_RECORDS.json",
+    "sha256": "868674c81269bdc02bc1c4d340a5cbe67dd7a62c0285f66d0121b3db2cf6209d",
+    "parent_member_sha256": "868674c81269bdc02bc1c4d340a5cbe67dd7a62c0285f66d0121b3db2cf6209d"
+  },
+  "adjudication_inputs.json": {
+    "source_archive": "Epistemics_MixEval_resposta_final_e_credito_do_avaliador_20261114.zip",
+    "member": "INPUT_PROVENANCE.json",
+    "sha256": "bb6cfd86e2a5cde3027fcab181e4828fa692a8702963272b606adfadb7bbad12",
+    "parent_member_sha256": "bb6cfd86e2a5cde3027fcab181e4828fa692a8702963272b606adfadb7bbad12"
   }
 }

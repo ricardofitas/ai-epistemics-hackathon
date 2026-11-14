@@ -137,11 +137,17 @@ assert ge['qwen3.8-27b']['gain_bounds']==[.5,.75]
 assert generation['new_judge_calls']==0
 assert read('paired_generation_verification.json')['status']=='PASS'
 
+adjud = read('adjudication_summary.json')
+assert adjud['reviewed']==69 and adjud['capture_unknowns']==11
+assert read('adjudication_verification.json')['status']=='PASS'
+assert {x['model']:x['final_score_gain_bounds'] for x in adjud['effects']}=={'gemma-4-31b-it':[.4,.7],'qwen3.8-27b':[.55,.8]}
+assert next(g for g in adjud['groups'] if g['model']=='gemma-4-31b-it' and g['condition']=='binding_only')['rule_credit_final_zero']==9
+assert all(g['final_label_disagreements']==g['nonfinal_label_disagreements']==0 for g in adjud['groups'])
 pages = json.loads((P / 'manuscript.json').read_text())
 claims = json.loads((P / 'claims.json').read_text())
-assert len(pages) == 13 and len(claims) == 15
+assert len(pages) == 14 and len(claims) == 16
 assert 150 <= len(pages[0]['blocks'][2]['text'].split()) <= 250
-assert [row[0] for row in pages[-1]['blocks'][1]['rows']] == [claim['id'] for claim in claims]
+assert [row[0] for row in pages[12]['blocks'][1]['rows']] == [claim['id'] for claim in claims[:15]]
 for claim in claims:
     assert all((P / 'evidence' / name).is_file() for name in claim['evidence'].split(';'))
 with (P / 'claim_evidence.csv').open(newline='') as stream:
@@ -151,7 +157,7 @@ for row, claim in zip(ledger, claims):
     assert row == dict(claim_id=claim['id'], section=claim['section'],
                        numerical_or_status_claim=claim['claim'],
                        evidence_files=claim['evidence'], qualification=claim['qualification'])
-result = dict(status='PASS', claims_checked=15, working_draft_version='1.4',
+result = dict(status='PASS', claims_checked=16, working_draft_version='1.5',
               integrated_mechanisms=['native source gate', 'shared input causes', 'MMMLU prediction', 'MixEval task kind'],
               verifier_model_requests=0, new_experiments_during_synthesis=0,
               scope='Synthesis consistency check against source snapshots')

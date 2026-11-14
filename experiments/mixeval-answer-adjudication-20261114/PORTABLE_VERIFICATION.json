@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "independent_of_original_working_paths": true,
+  "scripts": [
+    {
+      "script": "build_blind.py",
+      "exit_code": 0,
+      "stdout_tail": "Prepared69blinded cases;11unknowns preserved; no text preview\n"
+    },
+    {
+      "script": "aggregate.py",
+      "exit_code": 0,
+      "stdout_tail": " default judge, population accuracy or capability estimate. Incomplete captures and reviewer ambiguity/disagreement remain unknown. Same20question panel reused across2models.\", \"protocol_commit\": \"eee9572f4a45bd9479ccbe6dd7d9cd0c516454c5\"}\n"
+    },
+    {
+      "script": "verify_adjudication.py",
+      "exit_code": 0,
+      "stdout_tail": "rison\": \"Free-form parser returns a set converted to list; compare parsed tokens as multisets only. Scores and every other judged field remain exact.\"}, \"verifier_sha256\": \"7e272ee04a1e76798e9e875054077102c522f6db00a86183bb71f1be7af461a1\"}\n"
+    }
+  ],
+  "new_model_requests": 0,
+  "adjudication_labels_regenerated": false,
+  "scope": "Fresh extracted immutable study input and copied retained reviews; same-executor reproducibility check, not independent semantic validation."
+}

@@ -1,76 +1,13 @@
 {
-  "version": "1.4",
-  "main_text_pages": 8,
-  "page_count": 13,
-  "pages": [
-    {
-      "page": 1,
-      "words": 478,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 2,
-      "words": 417,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 3,
-      "words": 449,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 4,
-      "words": 441,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 5,
-      "words": 331,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 6,
-      "words": 357,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 7,
-      "words": 428,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 8,
-      "words": 456,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 9,
-      "words": 193,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 10,
-      "words": 405,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 11,
-      "words": 386,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 12,
-      "words": 442,
-      "out_of_bounds_characters": 0
-    },
-    {
-      "page": 13,
-      "words": 454,
-      "out_of_bounds_characters": 0
-    }
+  "status": "PASS",
+  "pages": 14,
+  "main_pages": 8,
+  "prior_pages_1_to_12_text_equal_except_version": true,
+  "visual_review_pages": [
+    13,
+    14
   ],
-  "bounds": "PASS",
-  "used_fonts_embedded": true,
-  "visual_review": "PASS: all13pages contact sheet, fullscoring/pilot/orchestration/claim-map pages inspected; nooverflow orclipping",
-  "independent_claim_verification": "PASS15claims"
+  "bounds_issues": [],
+  "prior_unchanged_content": "C1-C15 preserved; AppendixDintro/status editorial; AppendixE added",
+  "pdf_preupload_sha256": "9960c1aec00a0400fe469be7483ef8a92f6ff2d41f454e7917fb6d9f33877384"
 }

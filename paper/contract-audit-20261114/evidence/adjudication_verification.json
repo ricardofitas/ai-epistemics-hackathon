@@ -1,0 +1,1934 @@
+{
+  "status": "PASS",
+  "verifier": "independent_offline_v1",
+  "semantic_adjudication": false,
+  "new_network_model_api_calls": 0,
+  "verification_scope": "Frozen inputs, authoritative source/capture/request hashes, inclusion, replay of all69 optional-rule scores,69 labels per reviewer, label domains, exact output quotes, final evidence inside final span, nonfinal evidence outside a possible selected final-span occurrence, every numeric SUMMARY field and all80 ADJUDICATED_RECORDS.",
+  "limitations": [
+    "Structural and arithmetic verification does not independently validate semantic labels or official-reference truth.",
+    "Agreement of assistant reviewers does not establish human validation or statistically independent errors; same-model-family and prior-exposure limitations remain.",
+    "Pairing uses the fixed20source questions for each model; the40trials per model are not40independent questions."
+  ],
+  "input_integrity": {
+    "trials": 80,
+    "blinded_cases": 69,
+    "capture_unknowns_excluded": 11,
+    "source_questions": 20,
+    "rule_scores_replayed": 69,
+    "parser_order_only_differences": 12,
+    "parser_comparison": "Free-form parser returns a set converted to list; compare parsed tokens as multisets only. Scores and every other judged field remain exact."
+  },
+  "independent_recomputation": {
+    "planned_trials": 80,
+    "completed_reviewed": 69,
+    "capture_unknowns": 11,
+    "source_questions": 20,
+    "reviewers": {
+      "A": {
+        "gemma-4-31b-it|binding_only": [
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 1,
+            "count": 2
+          },
+          {
+            "final_label": "SYMBOLIC",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 0,
+            "count": 1
+          },
+          {
+            "final_label": "SYMBOLIC",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 0,
+            "count": 6
+          },
+          {
+            "final_label": "SYMBOLIC",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 1,
+            "count": 9
+          }
+        ],
+        "gemma-4-31b-it|official_typed": [
+          {
+            "final_label": "INCOMPATIBLE",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 0,
+            "count": 4
+          },
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 1,
+            "count": 11
+          },
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 1,
+            "count": 1
+          }
+        ],
+        "qwen3.8-27b|binding_only": [
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 1,
+            "count": 2
+          },
+          {
+            "final_label": "SYMBOLIC",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 0,
+            "count": 14
+          },
+          {
+            "final_label": "SYMBOLIC",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 0,
+            "count": 2
+          }
+        ],
+        "qwen3.8-27b|official_typed": [
+          {
+            "final_label": "INCOMPATIBLE",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 0,
+            "count": 2
+          },
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 0,
+            "count": 1
+          },
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 1,
+            "count": 13
+          },
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 1,
+            "count": 1
+          }
+        ]
+      },
+      "B": {
+        "gemma-4-31b-it|binding_only": [
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 1,
+            "count": 2
+          },
+          {
+            "final_label": "SYMBOLIC",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 0,
+            "count": 1
+          },
+          {
+            "final_label": "SYMBOLIC",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 0,
+            "count": 6
+          },
+          {
+            "final_label": "SYMBOLIC",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 1,
+            "count": 9
+          }
+        ],
+        "gemma-4-31b-it|official_typed": [
+          {
+            "final_label": "INCOMPATIBLE",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 0,
+            "count": 4
+          },
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 1,
+            "count": 11
+          },
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 1,
+            "count": 1
+          }
+        ],
+        "qwen3.8-27b|binding_only": [
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 1,
+            "count": 2
+          },
+          {
+            "final_label": "SYMBOLIC",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 0,
+            "count": 14
+          },
+          {
+            "final_label": "SYMBOLIC",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 0,
+            "count": 2
+          }
+        ],
+        "qwen3.8-27b|official_typed": [
+          {
+            "final_label": "INCOMPATIBLE",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 0,
+            "count": 2
+          },
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 0,
+            "count": 1
+          },
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "NOT_OBSERVED",
+            "rule_credit": 1,
+            "count": 13
+          },
+          {
+            "final_label": "SUPPORTED",
+            "nonfinal_label": "SUPPORTED",
+            "rule_credit": 1,
+            "count": 1
+          }
+        ]
+      }
+    },
+    "combined": {
+      "gemma-4-31b-it|binding_only": {
+        "planned": 20,
+        "captured": 18,
+        "capture_unknowns": 2,
+        "rule": {
+          "supported_or_credit": 11,
+          "zero": 7,
+          "unknown": 2,
+          "rate_bounds": [
+            0.55,
+            0.65
+          ]
+        },
+        "final": {
+          "supported_or_credit": 2,
+          "zero": 16,
+          "unknown": 2,
+          "rate_bounds": [
+            0.1,
+            0.2
+          ]
+        },
+        "nonfinal": {
+          "supported_or_credit": 17,
+          "zero": 1,
+          "unknown": 2,
+          "rate_bounds": [
+            0.85,
+            0.95
+          ]
+        }
+      },
+      "gemma-4-31b-it|official_typed": {
+        "planned": 20,
+        "captured": 16,
+        "capture_unknowns": 4,
+        "rule": {
+          "supported_or_credit": 12,
+          "zero": 4,
+          "unknown": 4,
+          "rate_bounds": [
+            0.6,
+            0.8
+          ]
+        },
+        "final": {
+          "supported_or_credit": 12,
+          "zero": 4,
+          "unknown": 4,
+          "rate_bounds": [
+            0.6,
+            0.8
+          ]
+        },
+        "nonfinal": {
+          "supported_or_credit": 1,
+          "zero": 15,
+          "unknown": 4,
+          "rate_bounds": [
+            0.05,
+            0.25
+          ]
+        }
+      },
+      "qwen3.8-27b|binding_only": {
+        "planned": 20,
+        "captured": 18,
+        "capture_unknowns": 2,
+        "rule": {
+          "supported_or_credit": 2,
+          "zero": 16,
+          "unknown": 2,
+          "rate_bounds": [
+            0.1,
+            0.2
+          ]
+        },
+        "final": {
+          "supported_or_credit": 2,
+          "zero": 16,
+          "unknown": 2,
+          "rate_bounds": [
+            0.1,
+            0.2
+          ]
+        },
+        "nonfinal": {
+          "supported_or_credit": 2,
+          "zero": 16,
+          "unknown": 2,
+          "rate_bounds": [
+            0.1,
+            0.2
+          ]
+        }
+      },
+      "qwen3.8-27b|official_typed": {
+        "planned": 20,
+        "captured": 17,
+        "capture_unknowns": 3,
+        "rule": {
+          "supported_or_credit": 14,
+          "zero": 3,
+          "unknown": 3,
+          "rate_bounds": [
+            0.7,
+            0.85
+          ]
+        },
+        "final": {
+          "supported_or_credit": 15,
+          "zero": 2,
+          "unknown": 3,
+          "rate_bounds": [
+            0.75,
+            0.9
+          ]
+        },
+        "nonfinal": {
+          "supported_or_credit": 1,
+          "zero": 16,
+          "unknown": 3,
+          "rate_bounds": [
+            0.05,
+            0.2
+          ]
+        }
+      }
+    },
+    "paired": {
+      "gemma-4-31b-it": {
+        "rule": {
+          "pairs": 20,
+          "complete_pairs": 14,
+          "typed_wins": 3,
+          "binding_wins": 0,
+          "ties": 11,
+          "gain_bounds": [
+            -0.05,
+            0.25
+          ],
+          "pairs_detail": [
+            {
+              "source_index": 47,
+              "binding_only": 1.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 268,
+              "binding_only": 1.0,
+              "official_typed": null,
+              "gain_bounds": [
+                -1.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 323,
+              "binding_only": 1.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 492,
+              "binding_only": 1.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 548,
+              "binding_only": null,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 662,
+              "binding_only": 1.0,
+              "official_typed": null,
+              "gain_bounds": [
+                -1.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 740,
+              "binding_only": 1.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 755,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 836,
+              "binding_only": 1.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 896,
+              "binding_only": null,
+              "official_typed": 0.0,
+              "gain_bounds": [
+                -1.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 935,
+              "binding_only": 1.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 992,
+              "binding_only": 1.0,
+              "official_typed": null,
+              "gain_bounds": [
+                -1.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 1100,
+              "binding_only": 1.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 1169,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 1217,
+              "binding_only": 1.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 1425,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 1528,
+              "binding_only": 0.0,
+              "official_typed": 0.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 1562,
+              "binding_only": 0.0,
+              "official_typed": 0.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 1705,
+              "binding_only": 0.0,
+              "official_typed": 0.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 1749,
+              "binding_only": 0.0,
+              "official_typed": null,
+              "gain_bounds": [
+                0.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "final": {
+          "pairs": 20,
+          "complete_pairs": 14,
+          "typed_wins": 10,
+          "binding_wins": 0,
+          "ties": 4,
+          "gain_bounds": [
+            0.4,
+            0.7
+          ],
+          "pairs_detail": [
+            {
+              "source_index": 47,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 268,
+              "binding_only": 0,
+              "official_typed": null,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            },
+            {
+              "source_index": 323,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 492,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 548,
+              "binding_only": null,
+              "official_typed": 1,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            },
+            {
+              "source_index": 662,
+              "binding_only": 0,
+              "official_typed": null,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            },
+            {
+              "source_index": 740,
+              "binding_only": 1,
+              "official_typed": 1,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 755,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 836,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 896,
+              "binding_only": null,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                0
+              ]
+            },
+            {
+              "source_index": 935,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 992,
+              "binding_only": 1,
+              "official_typed": null,
+              "gain_bounds": [
+                -1,
+                0
+              ]
+            },
+            {
+              "source_index": 1100,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 1169,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 1217,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 1425,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 1528,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 1562,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 1705,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 1749,
+              "binding_only": 0,
+              "official_typed": null,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "nonfinal": {
+          "pairs": 20,
+          "complete_pairs": 14,
+          "typed_wins": 0,
+          "binding_wins": 12,
+          "ties": 2,
+          "gain_bounds": [
+            -0.9,
+            -0.6
+          ],
+          "pairs_detail": [
+            {
+              "source_index": 47,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 268,
+              "binding_only": 1,
+              "official_typed": null,
+              "gain_bounds": [
+                -1,
+                0
+              ]
+            },
+            {
+              "source_index": 323,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 492,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 548,
+              "binding_only": null,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                0
+              ]
+            },
+            {
+              "source_index": 662,
+              "binding_only": 1,
+              "official_typed": null,
+              "gain_bounds": [
+                -1,
+                0
+              ]
+            },
+            {
+              "source_index": 740,
+              "binding_only": 1,
+              "official_typed": 1,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 755,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 836,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 896,
+              "binding_only": null,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                0
+              ]
+            },
+            {
+              "source_index": 935,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 992,
+              "binding_only": 1,
+              "official_typed": null,
+              "gain_bounds": [
+                -1,
+                0
+              ]
+            },
+            {
+              "source_index": 1100,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 1169,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 1217,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 1425,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 1528,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 1562,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 1705,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 1749,
+              "binding_only": 1,
+              "official_typed": null,
+              "gain_bounds": [
+                -1,
+                0
+              ]
+            }
+          ]
+        }
+      },
+      "qwen3.8-27b": {
+        "rule": {
+          "pairs": 20,
+          "complete_pairs": 15,
+          "typed_wins": 10,
+          "binding_wins": 0,
+          "ties": 5,
+          "gain_bounds": [
+            0.5,
+            0.75
+          ],
+          "pairs_detail": [
+            {
+              "source_index": 47,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 268,
+              "binding_only": 0.0,
+              "official_typed": null,
+              "gain_bounds": [
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 323,
+              "binding_only": 0.0,
+              "official_typed": 0.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 492,
+              "binding_only": 0.0,
+              "official_typed": 0.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 548,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 662,
+              "binding_only": null,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 740,
+              "binding_only": 1.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 755,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 836,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 896,
+              "binding_only": 0.0,
+              "official_typed": null,
+              "gain_bounds": [
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 935,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 992,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 1100,
+              "binding_only": null,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 1169,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 1217,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 1425,
+              "binding_only": 1.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 1528,
+              "binding_only": 0.0,
+              "official_typed": 0.0,
+              "gain_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "source_index": 1562,
+              "binding_only": 0.0,
+              "official_typed": null,
+              "gain_bounds": [
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 1705,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "source_index": 1749,
+              "binding_only": 0.0,
+              "official_typed": 1.0,
+              "gain_bounds": [
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "final": {
+          "pairs": 20,
+          "complete_pairs": 15,
+          "typed_wins": 11,
+          "binding_wins": 0,
+          "ties": 4,
+          "gain_bounds": [
+            0.55,
+            0.8
+          ],
+          "pairs_detail": [
+            {
+              "source_index": 47,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 268,
+              "binding_only": 0,
+              "official_typed": null,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            },
+            {
+              "source_index": 323,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 492,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 548,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 662,
+              "binding_only": null,
+              "official_typed": 1,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            },
+            {
+              "source_index": 740,
+              "binding_only": 1,
+              "official_typed": 1,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 755,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 836,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 896,
+              "binding_only": 0,
+              "official_typed": null,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            },
+            {
+              "source_index": 935,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 992,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 1100,
+              "binding_only": null,
+              "official_typed": 1,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            },
+            {
+              "source_index": 1169,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 1217,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 1425,
+              "binding_only": 1,
+              "official_typed": 1,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 1528,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 1562,
+              "binding_only": 0,
+              "official_typed": null,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            },
+            {
+              "source_index": 1705,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 1749,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        "nonfinal": {
+          "pairs": 20,
+          "complete_pairs": 15,
+          "typed_wins": 1,
+          "binding_wins": 2,
+          "ties": 12,
+          "gain_bounds": [
+            -0.15,
+            0.1
+          ],
+          "pairs_detail": [
+            {
+              "source_index": 47,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 268,
+              "binding_only": 0,
+              "official_typed": null,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            },
+            {
+              "source_index": 323,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 492,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 548,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 662,
+              "binding_only": null,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                0
+              ]
+            },
+            {
+              "source_index": 740,
+              "binding_only": 0,
+              "official_typed": 1,
+              "gain_bounds": [
+                1,
+                1
+              ]
+            },
+            {
+              "source_index": 755,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 836,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 896,
+              "binding_only": 0,
+              "official_typed": null,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            },
+            {
+              "source_index": 935,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 992,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 1100,
+              "binding_only": null,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                0
+              ]
+            },
+            {
+              "source_index": 1169,
+              "binding_only": 1,
+              "official_typed": 0,
+              "gain_bounds": [
+                -1,
+                -1
+              ]
+            },
+            {
+              "source_index": 1217,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 1425,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 1528,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 1562,
+              "binding_only": 0,
+              "official_typed": null,
+              "gain_bounds": [
+                0,
+                1
+              ]
+            },
+            {
+              "source_index": 1705,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            },
+            {
+              "source_index": 1749,
+              "binding_only": 0,
+              "official_typed": 0,
+              "gain_bounds": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "disagreements": {
+      "final": {
+        "count": 0,
+        "denominator": 69
+      },
+      "nonfinal": {
+        "count": 0,
+        "denominator": 69
+      }
+    },
+    "trial_values": {
+      "d8925de1488be41b23f7": {
+        "rule": 1.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "6ebb87740c9a69daba5c": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "1c4dbabfac58dcb0242c": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "6fd943264c1da8ad46c9": {
+        "rule": 0.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "7191a9355db7412259e9": {
+        "rule": null,
+        "final": null,
+        "nonfinal": null
+      },
+      "aaf4619909a80e589fec": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "0cc3f6bc1e4b22011028": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "d48e3c6f3e55a2bda2af": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "f6c7762d3d1d435a593e": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "b2b37bf8c85bf3910d45": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "b4bab0509f6102fbd3d0": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "742783405978c4d359af": {
+        "rule": null,
+        "final": null,
+        "nonfinal": null
+      },
+      "925a7638d02d1826c10e": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "b006c89c09bdc4d0c6cc": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "56b930f9d3dd034b958c": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "9a92e18efd407338535d": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "933c2841613e50c7085b": {
+        "rule": 1.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "072b3774fb96bed34e90": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "1b6d2586af9c8630db39": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "4d73a0d4bb692242284b": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "8df70091a0260eeadd52": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "469a7cb23b25e842baf2": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "b296417c6d56bac7042a": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "e8068ec216597dcbc404": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "0c04aff32dbea4c23397": {
+        "rule": 1.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "dac29374223f05b3e436": {
+        "rule": null,
+        "final": null,
+        "nonfinal": null
+      },
+      "bd29ba48b10717178319": {
+        "rule": null,
+        "final": null,
+        "nonfinal": null
+      },
+      "e7db5eeb4093e6c5cdfe": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "4685e881e36f50825ff6": {
+        "rule": 1.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "e871c73d2af1c1ba062f": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "68929fc3a1ee6f141732": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "570bcfafa8fd0c12ca1e": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "e73ea8c2cadcb5bf862b": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "e1e608982b791824f391": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "34f0bbd1fbdd3b222e7f": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "3a10588454d767c7c63f": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "af8d7478338118e90c52": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "ba814845434feabded45": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "7b224f65a4980e0e2d06": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "8f3d9cf842ed6c1c9ffe": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "4b352fee77a17d782a04": {
+        "rule": 1.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "5bd1375bcf7ef544ee03": {
+        "rule": null,
+        "final": null,
+        "nonfinal": null
+      },
+      "bae094ea6759d3635337": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "52a25967d8a49bfb2116": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "4c61d852257273196ecb": {
+        "rule": 1.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "9ddb965d5fc1da1113f7": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "096cce98fc0c68ad077a": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "782b4a53a758c55642de": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "803041e76714ee46c312": {
+        "rule": 1.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "5aade6a9b41b6d260ddf": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "0603be15e2abadabf076": {
+        "rule": null,
+        "final": null,
+        "nonfinal": null
+      },
+      "745291788a13ba74afb5": {
+        "rule": null,
+        "final": null,
+        "nonfinal": null
+      },
+      "c3f5b2f22286169dd7ef": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 1
+      },
+      "096c67e85878d42f3ed3": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "f9fc7d94e51ccc523768": {
+        "rule": null,
+        "final": null,
+        "nonfinal": null
+      },
+      "d45a67adaf2dc00332f4": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "95a5fe273dc3b33d08e6": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "4026210a5d5654c31abf": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "777cb405c766071e356e": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "771e94e196f0dc78b4ab": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "dfba60a46ae9aa32f941": {
+        "rule": 1.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "595524402cb79e535782": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "e494767840c18d26277c": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "5215635f95cce8cf751c": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "a9acebf351324f49e5c0": {
+        "rule": null,
+        "final": null,
+        "nonfinal": null
+      },
+      "4939b0476464f50ec94c": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "355ada0859cef29a306f": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "fb877e6ee5051aa787aa": {
+        "rule": null,
+        "final": null,
+        "nonfinal": null
+      },
+      "0baece91e032e7a54c2a": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "4b451e9508abb8a3ff9d": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "85398ae8659faadc46a5": {
+        "rule": null,
+        "final": null,
+        "nonfinal": null
+      },
+      "3b54c2dbe8e843714d0c": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "b1465f5c34467d9571b2": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 1
+      },
+      "72405d5a665bb23b6426": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "d081b86585f759b5f95f": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 1
+      },
+      "24c5aa5c3e6393bfd58b": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 1
+      },
+      "e65ddaa419a7200b09e6": {
+        "rule": 1.0,
+        "final": 0,
+        "nonfinal": 1
+      },
+      "e69f99819837eea5af08": {
+        "rule": 0.0,
+        "final": 0,
+        "nonfinal": 0
+      },
+      "fa6f799aa0455b92aec3": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      },
+      "673cb4fde4ed8c57f3a4": {
+        "rule": 1.0,
+        "final": 1,
+        "nonfinal": 0
+      }
+    }
+  },
+  "verifier_sha256": "7e272ee04a1e76798e9e875054077102c522f6db00a86183bb71f1be7af461a1",
+  "checked_input_sha256": {
+    "PRIVATE_MAPPING.json": "bde48577a36edd9d13a26406a9a4799ecb9215d3d051a9b076ad5aac91883873",
+    "BLINDED_CASES.json": "1a17ad5600325358f261977d9591d5f7ad5fc5315aec49c0f1cdd5f2b3e32cda",
+    "SUMMARY.json": "e468164833e64ccefaa83a2f137b0b9170b0debd8cbe0c9aa4db0429d586f5fc",
+    "ADJUDICATION_PROTOCOL.json": "f88703926f4424e15733aa6114f05afeab42cfffad5a94aeed1ea414d430e271",
+    "INPUT_PROVENANCE.json": "bb6cfd86e2a5cde3027fcab181e4828fa692a8702963272b606adfadb7bbad12",
+    "REVIEW_A.json": "f659109ee9068f1078b3d2cbd87ca6dd6d1a8226345774663db8a7e9df4d2f5c",
+    "ADJUDICATED_RECORDS.json": "868674c81269bdc02bc1c4d340a5cbe67dd7a62c0285f66d0121b3db2cf6209d",
+    "REVIEW_B.json": "cfe1102590cde1aa92c602c3b78397a70864f691fdc20541f1ee99c7d49d258c"
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "status": "complete_dual_review",
+  "reviewed": 69,
+  "capture_unknowns": 11,
+  "provider_calls": 0,
+  "assistant_reviewers": 2,
+  "groups": [
+    {
+      "model": "gemma-4-31b-it",
+      "condition": "binding_only",
+      "total": 20,
+      "completed": 18,
+      "capture_unknowns": 2,
+      "original_rule_correct": 11.0,
+      "final_supported_bounds": [
+        2,
+        4
+      ],
+      "nonfinal_supported_bounds": [
+        17,
+        19
+      ],
+      "final_label_disagreements": 0,
+      "nonfinal_label_disagreements": 0,
+      "rule_credit_final_zero": 9,
+      "rule_credit_final_unknown": 0,
+      "supported_nonfinal_with_final_zero": 15,
+      "consensus_symbolic_final": 16,
+      "rater_labels": {
+        "0": {
+          "final": {
+            "SYMBOLIC": 16,
+            "SUPPORTED": 2
+          },
+          "nonfinal": {
+            "SUPPORTED": 17,
+            "NOT_OBSERVED": 1
+          }
+        },
+        "1": {
+          "final": {
+            "SYMBOLIC": 16,
+            "SUPPORTED": 2
+          },
+          "nonfinal": {
+            "SUPPORTED": 17,
+            "NOT_OBSERVED": 1
+          }
+        }
+      }
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "condition": "official_typed",
+      "total": 20,
+      "completed": 16,
+      "capture_unknowns": 4,
+      "original_rule_correct": 12.0,
+      "final_supported_bounds": [
+        12,
+        16
+      ],
+      "nonfinal_supported_bounds": [
+        1,
+        5
+      ],
+      "final_label_disagreements": 0,
+      "nonfinal_label_disagreements": 0,
+      "rule_credit_final_zero": 0,
+      "rule_credit_final_unknown": 0,
+      "supported_nonfinal_with_final_zero": 0,
+      "consensus_symbolic_final": 0,
+      "rater_labels": {
+        "0": {
+          "final": {
+            "SUPPORTED": 12,
+            "INCOMPATIBLE": 4
+          },
+          "nonfinal": {
+            "NOT_OBSERVED": 15,
+            "SUPPORTED": 1
+          }
+        },
+        "1": {
+          "final": {
+            "SUPPORTED": 12,
+            "INCOMPATIBLE": 4
+          },
+          "nonfinal": {
+            "NOT_OBSERVED": 15,
+            "SUPPORTED": 1
+          }
+        }
+      }
+    },
+    {
+      "model": "qwen3.8-27b",
+      "condition": "binding_only",
+      "total": 20,
+      "completed": 18,
+      "capture_unknowns": 2,
+      "original_rule_correct": 2.0,
+      "final_supported_bounds": [
+        2,
+        4
+      ],
+      "nonfinal_supported_bounds": [
+        2,
+        4
+      ],
+      "final_label_disagreements": 0,
+      "nonfinal_label_disagreements": 0,
+      "rule_credit_final_zero": 0,
+      "rule_credit_final_unknown": 0,
+      "supported_nonfinal_with_final_zero": 2,
+      "consensus_symbolic_final": 16,
+      "rater_labels": {
+        "0": {
+          "final": {
+            "SYMBOLIC": 16,
+            "SUPPORTED": 2
+          },
+          "nonfinal": {
+            "NOT_OBSERVED": 16,
+            "SUPPORTED": 2
+          }
+        },
+        "1": {
+          "final": {
+            "SYMBOLIC": 16,
+            "SUPPORTED": 2
+          },
+          "nonfinal": {
+            "NOT_OBSERVED": 16,
+            "SUPPORTED": 2
+          }
+        }
+      }
+    },
+    {
+      "model": "qwen3.8-27b",
+      "condition": "official_typed",
+      "total": 20,
+      "completed": 17,
+      "capture_unknowns": 3,
+      "original_rule_correct": 14.0,
+      "final_supported_bounds": [
+        15,
+        18
+      ],
+      "nonfinal_supported_bounds": [
+        1,
+        4
+      ],
+      "final_label_disagreements": 0,
+      "nonfinal_label_disagreements": 0,
+      "rule_credit_final_zero": 0,
+      "rule_credit_final_unknown": 0,
+      "supported_nonfinal_with_final_zero": 0,
+      "consensus_symbolic_final": 0,
+      "rater_labels": {
+        "0": {
+          "final": {
+            "SUPPORTED": 15,
+            "INCOMPATIBLE": 2
+          },
+          "nonfinal": {
+            "NOT_OBSERVED": 16,
+            "SUPPORTED": 1
+          }
+        },
+        "1": {
+          "final": {
+            "SUPPORTED": 15,
+            "INCOMPATIBLE": 2
+          },
+          "nonfinal": {
+            "NOT_OBSERVED": 16,
+            "SUPPORTED": 1
+          }
+        }
+      }
+    }
+  ],
+  "effects": [
+    {
+      "model": "gemma-4-31b-it",
+      "source_questions": 20,
+      "final_score_gain_bounds": [
+        0.4,
+        0.7
+      ],
+      "nonfinal_score_gain_bounds": [
+        -0.9,
+        -0.6
+      ]
+    },
+    {
+      "model": "qwen3.8-27b",
+      "source_questions": 20,
+      "final_score_gain_bounds": [
+        0.55,
+        0.8
+      ],
+      "nonfinal_score_gain_bounds": [
+        -0.15,
+        0.1
+      ]
+    }
+  ],
+  "interpretation": "Reference-grounded model-assisted output audit, not human gold validation, default judge, population accuracy or capability estimate. Incomplete captures and reviewer ambiguity/disagreement remain unknown. Same20question panel reused across2models.",
+  "protocol_commit": "eee9572f4a45bd9479ccbe6dd7d9cd0c516454c5"
+}
