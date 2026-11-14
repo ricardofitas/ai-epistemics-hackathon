@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "method": "Separate source-schema and text-identity implementation; no native parser or production analyzer imported",
+  "results": {
+    "medmcqa": {
+      "rows": 4183
+    },
+    "medconceptsqa": {
+      "rows": 819772,
+      "unique": 819719,
+      "agrees": 819719,
+      "unknown": 53
+    }
+  }
+}

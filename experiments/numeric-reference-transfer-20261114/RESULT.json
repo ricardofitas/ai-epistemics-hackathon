@@ -1,0 +1,95 @@
+{
+  "executed_at": "2026-11-14T22:59:52.187916+00:00",
+  "pyarrow": "19.0.1",
+  "scope": "Reference parsing only, not model accuracy, ordinary metric, generation or CLI. Full fixed split; no sampling.",
+  "datasets": {
+    "medmcqa": {
+      "counts": {
+        "rows": 4183,
+        "native_parse_ok": 4183,
+        "source_identified": 4183,
+        "native_reference_agrees": 4183,
+        "numeric_rows": 4183,
+        "naive_one_based_disagrees_or_invalid": 4183
+      },
+      "stored_reference_counts": {
+        "0": 1348,
+        "2": 925,
+        "1": 1085,
+        "3": 825
+      },
+      "witnesses": [],
+      "files": [
+        {
+          "path": "sources/medmcqa/data/validation-00000-of-00001.parquet",
+          "bytes": 1476104,
+          "sha256": "b768a1ea34afc9f80d3106d9b21f80fa8a00ec450a1f6cd641af72ca9e591021"
+        }
+      ],
+      "source_revision": "91c6572c454088bf71b679ad90aa8dffcd0d5868",
+      "config": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "opa",
+          "opb",
+          "opc",
+          "opd"
+        ]
+      }
+    },
+    "medconceptsqa": {
+      "counts": {
+        "rows": 819772,
+        "unique_answer_text_match": 819719,
+        "native_parse_ok": 819772,
+        "source_identified": 819719,
+        "native_reference_agrees": 819719,
+        "ambiguous_or_missing_answer_text": 53,
+        "source_unknown": 53
+      },
+      "stored_reference_counts": {
+        "D": 205036,
+        "A": 204999,
+        "B": 204551,
+        "C": 205186
+      },
+      "witnesses": [],
+      "files": [
+        {
+          "path": "sources/medconcepts/all/test-00000-of-00002.parquet",
+          "bytes": 123801096,
+          "sha256": "ce2b8649f9ac1c598858a5ddb4392a735cf65e08fe4c34375992a89de041984e"
+        },
+        {
+          "path": "sources/medconcepts/all/test-00001-of-00002.parquet",
+          "bytes": 123717489,
+          "sha256": "529316419aa5d5a4c91457dde5bfa769fb29921b749289784a167d7c2e5dc6d4"
+        }
+      ],
+      "source_revision": "98c30d83762e51a397c9a7b0eeee6722e751da17",
+      "config": {
+        "type": "choice_letter",
+        "choices": "A-D",
+        "prefer": [
+          "tagged_answer",
+          "boxed_answer",
+          "final_answer_line",
+          "last_standalone_choice"
+        ],
+        "choice_text_fields": [
+          "option1",
+          "option2",
+          "option3",
+          "option4"
+        ]
+      }
+    }
+  }
+}

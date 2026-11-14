@@ -1,0 +1,614 @@
+---
+dataset_info:
+- config_name: all
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 37454
+    num_examples: 60
+  - name: test
+    num_bytes: 687725968
+    num_examples: 819772
+  download_size: 247545663
+  dataset_size: 687763422
+- config_name: atc_easy
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 5399311.430553861
+    num_examples: 6436
+  download_size: 1060337
+  dataset_size: 5401808.363887195
+- config_name: atc_hard
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 4978171.850358392
+    num_examples: 5934
+  download_size: 951506
+  dataset_size: 4980668.783691726
+- config_name: atc_medium
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 5399311.430553861
+    num_examples: 6436
+  download_size: 1086690
+  dataset_size: 5401808.363887195
+- config_name: icd10cm_easy
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 79342025.77005313
+    num_examples: 94576
+  download_size: 28255052
+  dataset_size: 79344522.70338647
+- config_name: icd10cm_hard
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 73832815.36538452
+    num_examples: 88009
+  download_size: 22207960
+  dataset_size: 73835312.29871786
+- config_name: icd10cm_medium
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 68584510.15880513
+    num_examples: 81753
+  download_size: 21517507
+  dataset_size: 68587007.09213847
+- config_name: icd10proc_easy
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 160220120.40731326
+    num_examples: 190983
+  download_size: 54214347
+  dataset_size: 160222617.3406466
+- config_name: icd10proc_hard
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 74310162.81783715
+    num_examples: 88578
+  download_size: 21639184
+  dataset_size: 74312659.75117049
+- config_name: icd10proc_medium
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 160220120.40731326
+    num_examples: 190983
+  download_size: 47504039
+  dataset_size: 160222617.3406466
+- config_name: icd9cm_easy
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 14875790.908418437
+    num_examples: 17732
+  download_size: 4767029
+  dataset_size: 14878287.841751771
+- config_name: icd9cm_hard
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 14139216.10480963
+    num_examples: 16854
+  download_size: 4181134
+  dataset_size: 14141713.038142964
+- config_name: icd9cm_medium
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 14875790.908418437
+    num_examples: 17732
+  download_size: 4541096
+  dataset_size: 14878287.841751771
+- config_name: icd9proc_easy
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 3914416.894804897
+    num_examples: 4666
+  download_size: 949044
+  dataset_size: 3916913.82813823
+- config_name: icd9proc_hard
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 3719786.6505711344
+    num_examples: 4434
+  download_size: 863216
+  dataset_size: 3722283.5839044675
+- config_name: icd9proc_medium
+  features:
+  - name: question_id
+    dtype: int64
+  - name: answer
+    dtype: string
+  - name: answer_id
+    dtype: string
+  - name: option1
+    dtype: string
+  - name: option2
+    dtype: string
+  - name: option3
+    dtype: string
+  - name: option4
+    dtype: string
+  - name: question
+    dtype: string
+  - name: vocab
+    dtype: string
+  - name: level
+    dtype: string
+  splits:
+  - name: dev
+    num_bytes: 2496.9333333333334
+    num_examples: 4
+  - name: test
+    num_bytes: 3914416.894804897
+    num_examples: 4666
+  download_size: 877606
+  dataset_size: 3916913.82813823
+configs:
+- config_name: all
+  data_files:
+  - split: dev
+    path: all/dev-*
+  - split: test
+    path: all/test-*
+- config_name: atc_easy
+  data_files:
+  - split: dev
+    path: atc_easy/dev-*
+  - split: test
+    path: atc_easy/test-*
+- config_name: atc_hard
+  data_files:
+  - split: dev
+    path: atc_hard/dev-*
+  - split: test
+    path: atc_hard/test-*
+- config_name: atc_medium
+  data_files:
+  - split: dev
+    path: atc_medium/dev-*
+  - split: test
+    path: atc_medium/test-*
+- config_name: icd10cm_easy
+  data_files:
+  - split: dev
+    path: icd10cm_easy/dev-*
+  - split: test
+    path: icd10cm_easy/test-*
+- config_name: icd10cm_hard
+  data_files:
+  - split: dev
+    path: icd10cm_hard/dev-*
+  - split: test
+    path: icd10cm_hard/test-*
+- config_name: icd10cm_medium
+  data_files:
+  - split: dev
+    path: icd10cm_medium/dev-*
+  - split: test
+    path: icd10cm_medium/test-*
+- config_name: icd10proc_easy
+  data_files:
+  - split: dev
+    path: icd10proc_easy/dev-*
+  - split: test
+    path: icd10proc_easy/test-*
+- config_name: icd10proc_hard
+  data_files:
+  - split: dev
+    path: icd10proc_hard/dev-*
+  - split: test
+    path: icd10proc_hard/test-*
+- config_name: icd10proc_medium
+  data_files:
+  - split: dev
+    path: icd10proc_medium/dev-*
+  - split: test
+    path: icd10proc_medium/test-*
+- config_name: icd9cm_easy
+  data_files:
+  - split: dev
+    path: icd9cm_easy/dev-*
+  - split: test
+    path: icd9cm_easy/test-*
+- config_name: icd9cm_hard
+  data_files:
+  - split: dev
+    path: icd9cm_hard/dev-*
+  - split: test
+    path: icd9cm_hard/test-*
+- config_name: icd9cm_medium
+  data_files:
+  - split: dev
+    path: icd9cm_medium/dev-*
+  - split: test
+    path: icd9cm_medium/test-*
+- config_name: icd9proc_easy
+  data_files:
+  - split: dev
+    path: icd9proc_easy/dev-*
+  - split: test
+    path: icd9proc_easy/test-*
+- config_name: icd9proc_hard
+  data_files:
+  - split: dev
+    path: icd9proc_hard/dev-*
+  - split: test
+    path: icd9proc_hard/test-*
+- config_name: icd9proc_medium
+  data_files:
+  - split: dev
+    path: icd9proc_medium/dev-*
+  - split: test
+    path: icd9proc_medium/test-*
+license: apache-2.0
+task_categories:
+- question-answering
+language:
+- en
+tags:
+- medical
+size_categories:
+- 100K<n<1M
+---
+
+# Dataset Card for MedConceptsQA
+
+The benchmark of the paper "MedConceptsQA - Open Source Medical Concepts QA Benchmark".
+
+Paper Link: https://www.sciencedirect.com/science/article/pii/S0010482524011740
+
+Our evaluation code is available at https://github.com/nadavlab/MedConceptsQA
+
