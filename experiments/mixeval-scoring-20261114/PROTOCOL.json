@@ -1,0 +1,40 @@
+{
+  "stage": "MixEval matched fixed-output typed parser/scorer validation and public-response replay",
+  "base_research_commit": "73ca316e6124beb4f7d0e123f9e2d125f98e48b0",
+  "framework_revision": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+  "official_revision": "7c52b41929d461df7733573528bdfb08774b0c53",
+  "source_archive": {
+    "library_id": "libfile_fde3_f-a38d24e599e88191a114a3aab7b52045_198492b795908191b811098f9e84ee4a",
+    "version": 0,
+    "sha256": "17fa32897a1182fb8f1d8a5f14dd3c6e74c37e1bdf67d3bc03c104028114a065"
+  },
+  "selection": "Use exactly previous100freeform and100multiple-choice source rows. Join official public cached output by exact normalized source identity: problemtypechoicealiases, nullcontext->emptystring, prompt, targetsstringlist, exactoptions forchoice; ignore freeformoptionsmissing/None only. Do not substitute unmatched, ambiguous or malformed cases.",
+  "public_outputs": {
+    "model": "gemma_11_7b_instruct",
+    "version": "2024-06-01",
+    "files": {
+      "free_form": {
+        "path": "mix_eval/data/model_responses/gemma_11_7b_instruct/mixeval/2024-06-01/gemma_11_7b_instruct_close_freeform.jsonl",
+        "git_blob": "2164699e2204abc480b3f1442aef43a40b3da399"
+      },
+      "multiple_choice": {
+        "path": "mix_eval/data/model_responses/gemma_11_7b_instruct/mixeval/2024-06-01/gemma_11_7b_instruct_close_multichoice.jsonl",
+        "git_blob": "bae63e49f1cdc84f393e5602847d2e4c40179d15"
+      }
+    }
+  },
+  "primary": "Paired scoring replay on every uniquely matched previously selected freeform source. Native binding-only scoring uses unchanged One-Eval choice parser and original target/options. Typed scoring dispatches by official task family, preserving all freeform aliases, to original MixEval rule parser/eval functions imported as ordinary unmodified modules. Fixed outputs eliminate missing-question-generation differences; no causal effect on model capability is measured.",
+  "secondary": "Same replay for matched choice controls; report parser-algorithm/reference differences separately, not task-type-only effect. Record score/disagreement/parseability/reference exclusions with all-source and valid-only denominators. All public-output records outside previous selection remain source material only, not a posthoc expanded evaluation cohort.",
+  "contract_repair": "Typed configs jointly declare freeformroute key2_q_ma, freeform prompt/output, parser mixeval_rule_freeform, scorer mixeval_rule_accuracy; choice uses native key3 route and official MixEval rule choice scorer with dynamic letters/officialzero-based gold. Remove incompatible choice-letter metadata from freeform. Preserve generation captures from prior stage; validate official formatters now without new model generation.",
+  "validation": "Run original complete official rule module/formatter imports without AST or monkeypatches; retain hashes. Native One-Eval parser imported ordinary from pinned original package subset. Per-source oracle fixtures use first official freeformalias or correct choiceletter to verify dispatch/aliases/zero-based mapping; explicitly synthetic and separate from real cached-output replay.",
+  "randomness": "Official choice-rule parser randomly chooses on parsefailure. Seed random42 once in fixed source order; retain fallback calls explicitly and report their effect separately. Do not hide random guesses as confident extraction.",
+  "unknowns": "No substitution for unmatched/ambiguous/cachemissing/outputmissing/parserexception cases. Retain unknown scores as[0,1] on fixed100per split; realtextterminal/providerstatus unknown. Emptytextpolicy peroriginalfunctions reported; do not claim capturedtext is a verified completedAPI response.",
+  "limits": [
+    "Officialrule mode is not default model-judge MixEval score or a claim about published leaderboard results.",
+    "Cached responses were generated under official prompts, not One-Eval faulty prompts. Replay isolates assigned-score effect on same capturedtext; no prompt-type effect on model behavior.",
+    "MixEval mixed sources overlap earlier benchmarks; no independent unseen-family claim.",
+    "Official code/cached-output public artifact availability does not prove any independent run used faulty One-Eval contracts."
+  ],
+  "new_model_calls": 0,
+  "inference_extension": "No new calls needed for this fixed-output question. Any later binding-only vs typed generation trial needs concrete existing resource limits; global credit availability is currently unverified."
+}
