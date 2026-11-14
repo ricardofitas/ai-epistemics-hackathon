@@ -1,0 +1,10 @@
+claim_id,section,numerical_or_status_claim,evidence_files,qualification
+C1,2,21 configurations;64119 record appearances;7 failed;14 passed,calibration.json,Known-fault calibration; overlapping records
+C2,2,1267 question-dependence failures;628 changed references;300 conflict groups;309 deterministic unavoidable errors,wino.json,Captured validation split and deterministic mapping only
+C3,2,400 prospective rows;2 initial adapter false alerts,prospective.json,Post-outcome whitespace adapter review retained
+C4,2,27346 additional rows;27746 total captured source rows;ARC1172;OpenBookQA500,splits.json;split_checks.json,Post-discovery extension; source sample counts not prevalence
+C5,3,200 requests;194 complete;Qwen+36..48pp;Gemma-10..82pp,capture.json;factorization.json,50 diagnostic questions in35 dependency groups
+C6,4,"Same repaired outputs reference effects:Gemma42pp,Qwen40pp",factorization.json,Native heuristic parser fixed-output score; posthoc interaction
+C7,5,2200 synthetic variants from200 units;800 accepted altered cases in v1,mutations.json,"Development diagnostics, not independent generalization"
+C8,6,200 native rows;801 per-option objects;600 controlled carrier failures,harness.json,AST native-method projection on reused data
+C9,8,External affected run not verified,external.json,Search evidence does not establish absence

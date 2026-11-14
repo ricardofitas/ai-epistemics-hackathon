@@ -1,0 +1,88 @@
+{
+  "calibration.json": {
+    "source_archive": "OneEval_verificador_e_evidencia_externa_20261114.zip",
+    "member": "VALIDATION.json",
+    "sha256": "0c33b1296351f1137e6cad9ecbd3bee37b2bc7fa5e8d051d807017ece9fdbd5a",
+    "parent_member_sha256": "0c33b1296351f1137e6cad9ecbd3bee37b2bc7fa5e8d051d807017ece9fdbd5a"
+  },
+  "wino.json": {
+    "source_archive": "OneEval_verificador_e_evidencia_externa_20261114.zip",
+    "member": "panels/oneeval__winogrande__validation.report.json",
+    "sha256": "ac0257f0979005a8678d91fcdd9008ab2730c1610b85c2287d376820b51e0a9f",
+    "parent_member_sha256": "ac0257f0979005a8678d91fcdd9008ab2730c1610b85c2287d376820b51e0a9f"
+  },
+  "sciq.json": {
+    "source_archive": "OneEval_verificador_e_evidencia_externa_20261114.zip",
+    "member": "panels/oneeval__sciq__test.report.json",
+    "sha256": "4df773d9d68675e9d3a344b5f3f50d2540acff1438db99df417f9a2991b8e10a",
+    "parent_member_sha256": "4df773d9d68675e9d3a344b5f3f50d2540acff1438db99df417f9a2991b8e10a"
+  },
+  "labbench.json": {
+    "source_archive": "OneEval_verificador_e_evidencia_externa_20261114.zip",
+    "member": "panels/oneeval__lab-bench-language-agent-biology-benchmark__train.report.json",
+    "sha256": "79e8f106f5e3868dc1eff938139bb7569cfd4fd02a31067163a9aff353613b16",
+    "parent_member_sha256": "79e8f106f5e3868dc1eff938139bb7569cfd4fd02a31067163a9aff353613b16"
+  },
+  "external.json": {
+    "source_archive": "OneEval_verificador_e_evidencia_externa_20261114.zip",
+    "member": "RESEARCH_DECISION.json",
+    "sha256": "f772319860c82a4522134d073857b38c771577c6b734820446a741f7e46eb187",
+    "parent_member_sha256": "f772319860c82a4522134d073857b38c771577c6b734820446a741f7e46eb187"
+  },
+  "prospective.json": {
+    "source_archive": "OneEval_validacao_prospetiva_4_benchmarks_20261114.zip",
+    "member": "RESEARCH_STATUS.json",
+    "sha256": "94280d09191c4542552bcd15db9eb1b3214babad6a722de78119d6b7ef679907",
+    "parent_member_sha256": "94280d09191c4542552bcd15db9eb1b3214babad6a722de78119d6b7ef679907"
+  },
+  "splits.json": {
+    "source_archive": "OneEval_extensao_splits_completos_20261114.zip",
+    "member": "SUMMARY.json",
+    "sha256": "d0ea198b907f7ce3478088440e23bca084ce2766b40aec47481ef885d48d6be4",
+    "parent_member_sha256": "d0ea198b907f7ce3478088440e23bca084ce2766b40aec47481ef885d48d6be4"
+  },
+  "split_checks.json": {
+    "source_archive": "OneEval_extensao_splits_completos_20261114.zip",
+    "member": "INDEPENDENT_CHECKS.json",
+    "sha256": "41280654279bf51479ae440979f1830f5a449c72e7337639745b0c3681e2a9b8",
+    "parent_member_sha256": "41280654279bf51479ae440979f1830f5a449c72e7337639745b0c3681e2a9b8"
+  },
+  "factorization.json": {
+    "source_archive": "OneEval_decomposicao_scores_e_consumo_20261114.zip",
+    "member": "FACTORIZATION.json",
+    "sha256": "5c3d998cfb5a56f699756769927d36fd7c881262e0b0a003ac2c20da0db9a5c3",
+    "parent_member_sha256": "5c3d998cfb5a56f699756769927d36fd7c881262e0b0a003ac2c20da0db9a5c3"
+  },
+  "resources.json": {
+    "source_archive": "OneEval_decomposicao_scores_e_consumo_20261114.zip",
+    "member": "RESOURCE_RECONCILIATION.json",
+    "sha256": "3a6cf357500800a6e15a99d599e9317aff65344933a232953ea033d9c7f6cd52",
+    "parent_member_sha256": "3a6cf357500800a6e15a99d599e9317aff65344933a232953ea033d9c7f6cd52"
+  },
+  "capture.json": {
+    "source_archive": "OneEval_decomposicao_scores_e_consumo_20261114.zip",
+    "member": "CAPTURE_VERIFICATION.json",
+    "sha256": "baef0bbc192f370aafe258ca769fe45fec8654b2a0ab9935d8a863db59ca8452",
+    "parent_member_sha256": "8e229b5c0739d67359e4df23f88854ea13aff9270195e358f54ceaef2386d34e",
+    "transform": "Omit per-trial checks list; preserve all aggregate fields unchanged."
+  },
+  "mutations.json": {
+    "source_archive": "OneEval_mutacoes_e_verificador_v2_20261114.zip",
+    "member": "VERIFIED_ACCOUNTING.json",
+    "sha256": "17572764e0ce893244f8229a4044a724aa805b544737fc7167f3f321e6c55596",
+    "parent_member_sha256": "17572764e0ce893244f8229a4044a724aa805b544737fc7167f3f321e6c55596"
+  },
+  "harness.json": {
+    "source_archive": "Epistemics_LMHarness_contratos_de_pedidos_20261114.zip",
+    "member": "VERIFICATION.json",
+    "sha256": "0985f589e49f0ac38f511ce7103e297f050a8f18cc239ee54e5a530fc418ba1d",
+    "parent_member_sha256": "0985f589e49f0ac38f511ce7103e297f050a8f18cc239ee54e5a530fc418ba1d"
+  },
+  "paired_constant_controls.json": {
+    "source_archive": "OneEval_decomposicao_scores_e_consumo_20261114.zip/input/OneEval_ensaio_emparelhado_200_resultados_20261114.zip",
+    "member": "oneeval_paired_20261114/RESULTS.json",
+    "parent_member_sha256": "d5229ace5f609e0ad7f6351eed9239c9aa14c78cf20c969f09203c5cd590847f",
+    "transform": "Keep source-question/group totals and the2 unchanged all-panel repaired-prompt always-B replay rows.",
+    "sha256": "b5d9371487d73bd85030aae9d14a7e059a07b533f543c826169f69d9a1b57579"
+  }
+}

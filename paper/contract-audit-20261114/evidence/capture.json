@@ -1,0 +1,16 @@
+{
+  "checked_trials": 200,
+  "complete": 194,
+  "minimum_recorded_start_interval_seconds": 4.996873,
+  "http_statuses": {
+    "200": 200
+  },
+  "response_statuses": {
+    "completed": 194,
+    "incomplete": 6
+  },
+  "attempts_per_request": 1,
+  "no_extra_artifacts": true,
+  "artifact_index_verified": true,
+  "method": "Independent standard-library JSON/SSE reconstruction; no transport module imported."
+}

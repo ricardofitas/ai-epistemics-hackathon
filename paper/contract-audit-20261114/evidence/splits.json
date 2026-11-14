@@ -1,0 +1,52 @@
+{
+  "stage": "REMAINING_SPLIT_AUDIT_COMPLETE",
+  "new_rows": 27346,
+  "total_rows_in_four_captured_splits": 27746,
+  "new_provider_calls": 0,
+  "independent_source_checks": "PASS",
+  "benchmarks": [
+    {
+      "benchmark": "arc-challenge",
+      "new_rows": 1072,
+      "full_split_rows": 1172,
+      "status_after_fixed_adapter": "FAIL",
+      "failures": {
+        "correct_choice_missing": 1072
+      },
+      "false_literal_alerts_corrected": 0
+    },
+    {
+      "benchmark": "openbookqa",
+      "new_rows": 400,
+      "full_split_rows": 500,
+      "status_after_fixed_adapter": "FAIL",
+      "failures": {
+        "question_not_bound": 400,
+        "correct_choice_missing": 400
+      },
+      "false_literal_alerts_corrected": 0
+    },
+    {
+      "benchmark": "mmlu",
+      "new_rows": 13942,
+      "full_split_rows": 14042,
+      "status_after_fixed_adapter": "PASS",
+      "failures": {},
+      "false_literal_alerts_corrected": 34
+    },
+    {
+      "benchmark": "mmlu-pro",
+      "new_rows": 11932,
+      "full_split_rows": 12032,
+      "status_after_fixed_adapter": "PASS",
+      "failures": {},
+      "false_literal_alerts_corrected": 135
+    }
+  ],
+  "limits": [
+    "Post-discovery expansion in the same four source splits, excluding the prior 400 selected rows.",
+    "Healthy means the measured contract invariants passed, not that every possible evaluation defect is absent.",
+    "Official-letter fixtures are scorer diagnostics; no model accuracy or external affected conclusion measured."
+  ],
+  "operational_note": "The first invocation failed before scientific processing because module search order selected the unextracted script. Import path order was corrected; no provider calls or scientific rows were processed in the failed invocation."
+}

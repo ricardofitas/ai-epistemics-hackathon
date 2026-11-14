@@ -1,0 +1,463 @@
+[
+  {
+    "title": "When Evaluation Pipelines Change the Task",
+    "subtitle": "Source-grounded contract audits and controlled score effects",
+    "blocks": [
+      {
+        "kind": "meta",
+        "text": "Private working manuscript | 14 November 2026 | Evidence synthesis v1"
+      },
+      {
+        "kind": "heading",
+        "text": "Abstract"
+      },
+      {
+        "kind": "p",
+        "text": "Evaluation software can change the task before a model answers and can change the meaning of the reference after the answer is produced. We audit these two interfaces in a pinned One-Eval revision using official source records, native preprocessing and scoring methods, deterministic controls, and an existing paired trial of two hosted models. A prospectively selected four-contract extension identified malformed ARC-Challenge and OpenBookQA task construction. A later diagnostic expansion confirmed the mechanisms throughout their captured test splits. In a 50-question WinoGrande panel, Qwen's source-correct accuracy gain under joint question/format repair is 42 percentage points under the observed scoring convention and remains between 36 and 48 points under conservative treatment of unknown answers. Gemma's corresponding sensitivity interval includes zero. Re-scoring identical corrected-prompt outputs with source-aligned references changes assigned scores by 40 and 42 points respectively. An experimental pre-inference checker detects selected source-contract failures, while controlled diagnostics expose the limits of trusting adapter metadata. Healthy controls in EvalScope and a bounded native-method projection of LM Evaluation Harness delimit the scope. These findings establish specific implementation faults and controlled consequences; affected independent deployments and broad fault prevalence remain unverified."
+      },
+      {
+        "kind": "heading",
+        "text": "1. Research question and contribution"
+      },
+      {
+        "kind": "p",
+        "text": "A benchmark name does not uniquely identify the evaluation actually performed. The source record, its rendering, the delivered request, the parsed response and the scoring reference jointly define the measurement. Existing reproducibility guidance already documents sensitivity to prompts, metrics and implementation details [1,2]. The question here is narrower: can a concrete source-to-request or source-to-reference transformation violate an explicit task invariant, and can an intervention isolate a measurable consequence?"
+      },
+      {
+        "kind": "p",
+        "text": "The contribution is an attributable case study with executable checks. It combines natural source-contract faults, a prospective extension within one framework, complete captured-split follow-up, a paired real-model consequence analysis, and explicit negative controls. The checker is an intervention and an object of audit, rather than an assumption of correctness. The work does not claim a new general theorem, the first observation of evaluation sensitivity, or universal checker reliability."
+      },
+      {
+        "kind": "heading",
+        "text": "A minimal evaluation contract"
+      },
+      {
+        "kind": "p",
+        "text": "Let a source record contain a question q, an ordered option set O and gold position g. A transformation produces request carrier W and reference r. The audit checks question dependence, preservation of the intended option content, alignment of r with the official answer, and consistency between adapter metadata and W. In generation, W can be one prompt; in likelihood evaluation, W can be a set of context/continuation pairs. The same abstract invariant therefore needs a protocol-specific representation."
+      }
+    ]
+  },
+  {
+    "title": "Study design and natural contract failures",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "2. Evidence stages and units"
+      },
+      {
+        "kind": "p",
+        "text": "One-Eval is pinned to revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506 with open-dataflow 1.0.10. Native methods are retained under the documented import scaffolds; official records and effective request texts are captured with hashes. The stages below have different evidential roles and overlapping source questions. Their row counts must not be summed into a number of independent observations."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Stage",
+          "Extent",
+          "Interpretation"
+        ],
+        "rows": [
+          [
+            "Calibration",
+            "21 configurations; 64,119 record appearances",
+            "Known failures and healthy/repaired controls"
+          ],
+          [
+            "Prospective extension",
+            "4 contracts x 100 source records",
+            "Selected before acquisition/outcome inspection"
+          ],
+          [
+            "Captured-split follow-up",
+            "27,346 additional records",
+            "Post-discovery diagnostic expansion"
+          ],
+          [
+            "Paired model trial",
+            "50 questions; 35 groups; 200 requests",
+            "Enriched mechanism panel; two models"
+          ],
+          [
+            "Tool / carrier diagnostics",
+            "200 source units per diagnostic panel",
+            "Repeated controlled variants"
+          ]
+        ],
+        "widths": [
+          105,
+          151,
+          223
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "Natural mechanisms"
+      },
+      {
+        "kind": "p",
+        "text": "In WinoGrande validation, the question does not affect any of 1,267 delivered prompts, and 628 references differ from source-aligned labels. The audit identifies 300 prompt groups with conflicting official labels. For a deterministic predictor using only the visible prompt, at least 309 errors are unavoidable on this fixed corpus. This is a finite-corpus information-loss statement, not a bound on arbitrary stochastic realized outputs or a new theorem."
+      },
+      {
+        "kind": "p",
+        "text": "The known-fault calibration also records 884 missing required-context dependencies among 1,000 SciQ records, plus three changed and three invalid references. In the captured LAB-Bench configuration, the official correct option is absent in all 33 records. These cases were known during checker development and are reported as calibration evidence."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Additional contract",
+          "Captured split",
+          "Observed construction"
+        ],
+        "rows": [
+          [
+            "ARC-Challenge",
+            "1,172 / 1,172 affected",
+            "Nested label/text lists become aggregated options"
+          ],
+          [
+            "OpenBookQA",
+            "500 / 500 affected",
+            "Aggregated options; question placeholder unresolved"
+          ],
+          [
+            "MMLU",
+            "14,042 records",
+            "Measured invariants pass after adapter review"
+          ],
+          [
+            "MMLU-Pro",
+            "12,032 records",
+            "Measured invariants pass after adapter review"
+          ]
+        ],
+        "widths": [
+          100,
+          120,
+          259
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "The first 100 examples of each additional contract were selected prospectively by stable SHA-256 order. The full-split counts combine these 400 with a disjoint follow-up of 27,346 captured records. They describe these source snapshots, not prevalence across arbitrary tasks, installations or users."
+      },
+      {
+        "kind": "heading",
+        "text": "An audit-adapter error retained in the record"
+      },
+      {
+        "kind": "p",
+        "text": "Two initial MMLU-Pro alerts were caused by native removal of option-edge whitespace. A post-outcome adapter correction was allowed only when the complete option sequence and order were preserved under str.strip(). The checker itself remained byte-identical. The follow-up found another 169 such literal-comparison alerts. All 171 are audit-adapter issues, retained separately from upstream task faults. Initial and reviewed results remain available."
+      }
+    ]
+  },
+  {
+    "title": "Controlled effects on model scores",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "3. Paired WinoGrande intervention"
+      },
+      {
+        "kind": "p",
+        "text": "The frozen diagnostic panel contains 15 pairs of opposite-gold questions sharing the same native visible prompt and 20 singleton controls, yielding 50 questions in 35 dependency groups. All source questions sharing native text with the earlier pilot were excluded. Each item was evaluated under native and corrected prompts for gemma-4-31b-it and qwen3.8-27b, with option order and inference settings held fixed. The repair restores the question and removes unresolved formatting braces jointly. Its two text changes are not separately identified by this design."
+      },
+      {
+        "kind": "p",
+        "text": "The existing capture contains 200 unique requests, one attempt each: 194 completed and six incomplete. Independent request-body, terminal-response and stream-hash verification passed. The primary rule requires a completed response with one legal answer tag. Unknown responses stay in the denominator. The sensitivity interval below gives each unknown correctness in [0,1]; it is not a confidence interval."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Model",
+          "Known correct: native / repaired",
+          "Unknown: native / repaired",
+          "Gain sensitivity"
+        ],
+        "rows": [
+          [
+            "Gemma",
+            "3/50 -> 44/50",
+            "46/50 -> 0/50",
+            "-10 to +82 pp"
+          ],
+          [
+            "Qwen",
+            "23/50 -> 44/50",
+            "3/50 -> 3/50",
+            "+36 to +48 pp"
+          ]
+        ],
+        "widths": [
+          65,
+          150,
+          143,
+          121
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "Under unknown-as-zero, gains are +82 points for Gemma and +42 for Qwen. The conservative gain remains positive for Qwen. For Gemma, changing the ability to produce an evaluable answer contributes substantially to the observed difference, and the sensitivity interval includes zero. The archived primary analysis also reports group bootstrap intervals conditional on the scoring convention, resampling within the two diagnostic strata. Neither panel averages nor intervals estimate population prevalence."
+      },
+      {
+        "kind": "heading",
+        "text": "4. Reference-only effects on the same outputs"
+      },
+      {
+        "kind": "p",
+        "text": "The table below uses the pinned native heuristic parser and all captured output text, including partial text. It is a separate finite-output scoring analysis. It must not be substituted for the strict completed-answer measure above."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Model",
+          "Native text / shipped ref.",
+          "Native text / source ref.",
+          "Repaired text / shipped ref.",
+          "Repaired text / source ref."
+        ],
+        "rows": [
+          [
+            "Gemma",
+            "6%",
+            "18%",
+            "46%",
+            "88%"
+          ],
+          [
+            "Qwen",
+            "0%",
+            "46%",
+            "48%",
+            "88%"
+          ]
+        ],
+        "widths": [
+          57,
+          105,
+          105,
+          106,
+          106
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "On identical repaired-prompt outputs, source-aligned references increase assigned scores by 42 points for Gemma and 40 for Qwen. The constant-B diagnostic scores 100% with shipped references and 50% with source references. The post-hoc prompt/reference interaction is +30 points for Gemma and -6 for Qwen. Both algebraic paths to the joint score change were verified. This decomposition describes the captured outputs; it does not establish independent effects of individual formatting operations or a change in model capability."
+      },
+      {
+        "kind": "p",
+        "text": "Usage reconciliation counts every request once, including incomplete responses: 14,547 input tokens and 97,047 output tokens. Provider-reported cost fields are preserved as units with unknown currency; project-wide spending and remaining credits are not inferred from this bounded trial."
+      }
+    ]
+  },
+  {
+    "title": "Pre-inference checks and their trust boundary",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "5. Checker calibration and controlled diagnostics"
+      },
+      {
+        "kind": "p",
+        "text": "The original checker takes explicitly normalized records with actual prompt text, displayed choices, official answer semantics, parsed references and measured question/context probes. It rejects failures and incomplete evidence before calling a supplied generation function. Calibration rejected seven known faulty configurations and accepted one native One-Eval control, seven source-corrected configurations and six original EvalScope controls. Because these cases informed development, they are not independent validation."
+      },
+      {
+        "kind": "p",
+        "text": "A separate diagnostic study used 200 previously observed MMLU/MMLU-Pro source units with 11 conditions each, producing 2,200 controlled variants. The original checker accepted 800 variants involving distractor replacement/removal, duplicate gold text or partial questions. A separate source-bound wrapper added full-question substring and normalized option-multiset checks. It rejected those 800 while accepting 600 benign identity, trimming and coherent-permutation controls; it also rejected the 600 altered cases already caught by the original checks and marked 200 missing-source cases incomplete."
+      },
+      {
+        "kind": "p",
+        "text": "These are intentionally constructed development cases. The wrapper was designed after structural inspection and frozen before execution; its synthetic success is not an independent generalization estimate. A development replay on the 27,346 previously observed natural rows preserved all four panel decisions. The original checker and all first-pass false alerts remain unchanged."
+      },
+      {
+        "kind": "heading",
+        "text": "6. Healthy controls in another request protocol"
+      },
+      {
+        "kind": "p",
+        "text": "LM Evaluation Harness was pinned to revision d6de81643928d653435c431bae19945d41d32520. The exact native task-to-text, task-to-choice, task-to-target and request-construction methods, native Instance object, task YAML and template functions ran under an explicit AST dependency scaffold. A frozen salted-hash rule selected 100 ARC-Challenge and 100 OpenBookQA records from the already captured corpora."
+      },
+      {
+        "kind": "p",
+        "text": "All 200 natural cases preserved the source question, option order and gold index and generated 801 per-option likelihood request objects. Another 200 trailing-spacing controls passed. Options occur as continuations rather than necessarily as a list in the common context. The audit therefore checked the actual context/continuation bundle, not a generation-style prompt template."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Carrier conditions",
+          "Records",
+          "Metadata-only v2",
+          "Actual-request check"
+        ],
+        "rows": [
+          [
+            "Native + legitimate spacing",
+            "400",
+            "400 PASS",
+            "400 PASS"
+          ],
+          [
+            "Deliberately stale metadata",
+            "600",
+            "600 PASS",
+            "600 FAIL"
+          ]
+        ],
+        "widths": [
+          186,
+          62,
+          112,
+          119
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "The 600 controls remove or replace a non-gold continuation, or remove the question from actual contexts, while retaining old adapter metadata. They cross the wrapper's documented trust assumption and are not natural engine bugs. The final instrumented driver made 400 actual local counting-function invocations for accepted cases and zero for rejected carriers. An earlier decision-only pass is retained with its instrumentation correction. No model endpoint was called."
+      },
+      {
+        "kind": "p",
+        "text": "This transfer evidence covers native method projection on reused data. It does not cover the complete loader, fewshot driver, tokenizer, likelihood scoring or metric pipeline, nor blind unseen-source validation. A source-bound record cannot prove that an adapter truthfully describes the request eventually sent."
+      }
+    ]
+  },
+  {
+    "title": "Positioning, limits and research readiness",
+    "blocks": [
+      {
+        "kind": "heading",
+        "text": "7. Relation to existing work"
+      },
+      {
+        "kind": "p",
+        "text": "Reproducible LM evaluation and implementation sensitivity are established concerns [1]. The Hugging Face guide distinguishes prompt, metric, normalization and runtime differences [2]. This case study narrows the analysis to source-grounded violations: missing question dependence, altered option structure and reference misalignment. It pairs these mechanisms with captured model outputs and a scoped intervention. The finite-corpus collision calculation and individual invariants are not claimed as first-of-their-kind theory."
+      },
+      {
+        "kind": "p",
+        "text": "Scorer-specific metamorphic testing is another relevant direction. SANE [3] is retained as a literature lead from its indexed author abstract; direct full-text access failed during this synthesis, so a detailed methods comparison is unresolved. The diagnostic mutations here do not establish novelty over that line of work. A comprehensive novelty review remains necessary before a venue-specific claim."
+      },
+      {
+        "kind": "heading",
+        "text": "8. What the current evidence supports"
+      },
+      {
+        "kind": "p",
+        "text": "The strongest supported statement is that specific pinned task transformations violate official source semantics and can materially change assigned scores in a controlled diagnostic panel. Qwen provides a positive prompt-repair consequence under conservative unknown-answer sensitivity. Reference-only replays establish a separate fixed-output consequence. Healthy controls show that the measured faults are not automatically present in every evaluator tested, while the audit-tool diagnostics make its own trust assumptions explicit."
+      },
+      {
+        "kind": "p",
+        "text": "External impact is a separate open claim. Prior public searches identified use of the One-Eval gallery, but no independently used evaluation with matching effective configuration, raw requests, raw outputs and an affected reported conclusion has been verified. A gallery consumer is not evidence of an affected deployment. This working manuscript therefore makes no claim of deployment frequency, widespread invalid leaderboards, a model-ranking reversal in an independently published evaluation, or superiority to another research project."
+      },
+      {
+        "kind": "heading",
+        "text": "Limitations and next decision"
+      },
+      {
+        "kind": "p",
+        "text": "The diagnostic sample is deliberately enriched, model responses can be incomplete or non-evaluable, and native heuristic parsing differs from the strict primary rule. Full-split counts refer to captured bytes and the pinned software, not current installations. One adapter was corrected after outcomes, and exact-method execution uses dependency scaffolds whose scope is documented. Synthetic conditions reuse source units and are not independent natural faults. Full cross-engine integration and unseen-source checker validation remain open."
+      },
+      {
+        "kind": "p",
+        "text": "The next useful work is a bounded integration test or a concrete external exposure lead that resolves one of those gaps. Repeating the same development panels or searching indiscriminately for a positive result would not strengthen the main claim. The draft is ready for internal scientific review, not external submission: author approval, close related-work comparison, venue formatting and any expanded validation must be resolved first."
+      },
+      {
+        "kind": "heading",
+        "text": "References and primary implementation sources"
+      },
+      {
+        "kind": "small",
+        "text": "[1] Biderman et al. Lessons from the Trenches on Reproducible Evaluation of Language Models. arXiv:2405.14782, v3 (2026 revision). https://arxiv.org/abs/2405.14782v3<br/>[2] Hugging Face. Evaluation Guidebook: Troubleshooting reproducibility. Consulted 14 Nov 2026. github.com/huggingface/evaluation-guidebook<br/>[3] SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges. arXiv:2610.28886. Indexed abstract only; full methods comparison pending.<br/>[4] OpenDCAI/One-Eval, revision 8aba20ad17ee2c7d2391162ac03ffaebcbb17506.<br/>[5] EleutherAI/lm-evaluation-harness, revision d6de81643928d653435c431bae19945d41d32520.<br/>[6] Official source record captures, native implementation snapshots, protocols and analysis manifests identified in the accompanying evidence package."
+      }
+    ]
+  },
+  {
+    "title": "Appendix: claim-to-evidence map",
+    "blocks": [
+      {
+        "kind": "p",
+        "text": "The accompanying package contains machine-readable claims, compact source snapshots, a source-archive manifest and an executable consistency check. Claim identifiers below also appear in claim_evidence.csv. Each source snapshot retains its exact byte hash; the original archives remain the authoritative reproduction inputs."
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "ID",
+          "Claim and evidence",
+          "Qualification"
+        ],
+        "rows": [
+          [
+            "C1",
+            "Calibration: 21 configurations; 64,119 appearances; 7 FAIL / 14 PASS.",
+            "Known-fault development panel; rows overlap."
+          ],
+          [
+            "C2",
+            "WinoGrande: 1,267 questions not bound; 628 changed refs; 300 conflict groups; 309 unavoidable deterministic errors.",
+            "Captured validation split; deterministic input-only prediction."
+          ],
+          [
+            "C3",
+            "Prospective extension: 400 selected records; ARC/OpenBookQA faults; 2 initial whitespace alerts.",
+            "Adapter review is post-outcome."
+          ],
+          [
+            "C4",
+            "Follow-up: 27,346 disjoint remaining rows; complete captured splits total 27,746.",
+            "Post-discovery scope expansion, not new prevalence estimate."
+          ],
+          [
+            "C5",
+            "Paired trial: 200 requests, 194 completed; Qwen gain bounds +36 to +48 pp.",
+            "50 selected questions / 35 groups; unknown policy explicit."
+          ],
+          [
+            "C6",
+            "Same repaired outputs: references add 42 pp (Gemma), 40 pp (Qwen).",
+            "Native heuristic parser; finite-output assigned scores."
+          ],
+          [
+            "C7",
+            "Tool diagnostics: 2,200 variants of 200 source units; v1 accepts 800 altered cases.",
+            "Synthetic development; experimental v2 not universally validated."
+          ],
+          [
+            "C8",
+            "Harness projection: 200 natural cases, 801 option requests; 600 altered carriers rejected directly.",
+            "Native methods only; known source data reused."
+          ],
+          [
+            "C9",
+            "External affected published conclusion remains unverified.",
+            "Search coverage does not prove absence of affected users."
+          ]
+        ],
+        "widths": [
+          30,
+          265,
+          184
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "Numerical and source verification"
+      },
+      {
+        "kind": "p",
+        "text": "Run python verify_claims.py inside the extracted synthesis package. It checks the linked source fields, disjoint-stage arithmetic, the per-model bounds and reference deltas, source snapshot hashes, and the exact numbers used in the tables. This is a consistency check for the synthesis; it is not a fresh rerun of inference or a substitute for the independent capture and native-method checks bundled with the original stages."
+      },
+      {
+        "kind": "heading",
+        "text": "Reproduction provenance"
+      },
+      {
+        "kind": "small",
+        "text": "Core One-Eval checker: SHA-256 d833080f11b7bb3376056ca3a9720796a1181aa34749e6763a36d5fe1309d70e.<br/>Experimental source-bound wrapper: SHA-256 ced1e14f65213bc64f124a82f52f8c3a6d98b6b068026e8a0b486e8ad15228cf.<br/>EvalScope healthy-control code capture: revision 59bb367bd8565f347266a48ac1230af0b5131b97.<br/>Paired trial: execution repository ricardofitas/swarm-adaption-hackathon; run 43533000838. Four-contract acquisition/audit: run 43541759934. Research protocols and results are maintained separately in ricardofitas/ai-epistemics-hackathon."
+      },
+      {
+        "kind": "heading",
+        "text": "Status of this document"
+      },
+      {
+        "kind": "p",
+        "text": "Private evidence synthesis, version 1. No new model requests, sample expansion or public dissemination occurred while preparing it. Numerical support is verified against the captured artifacts. Literature positioning is preliminary, complete engine integration is not claimed, and external exposure is unresolved. The work remains active for internal review and targeted validation."
+      }
+    ]
+  }
+]

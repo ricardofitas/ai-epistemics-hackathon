@@ -1,0 +1,65 @@
+[
+  {
+    "id": "C1",
+    "section": "2",
+    "claim": "21 configurations;64119 record appearances;7 failed;14 passed",
+    "evidence": "calibration.json",
+    "qualification": "Known-fault calibration; overlapping records"
+  },
+  {
+    "id": "C2",
+    "section": "2",
+    "claim": "1267 question-dependence failures;628 changed references;300 conflict groups;309 deterministic unavoidable errors",
+    "evidence": "wino.json",
+    "qualification": "Captured validation split and deterministic mapping only"
+  },
+  {
+    "id": "C3",
+    "section": "2",
+    "claim": "400 prospective rows;2 initial adapter false alerts",
+    "evidence": "prospective.json",
+    "qualification": "Post-outcome whitespace adapter review retained"
+  },
+  {
+    "id": "C4",
+    "section": "2",
+    "claim": "27346 additional rows;27746 total captured source rows;ARC1172;OpenBookQA500",
+    "evidence": "splits.json;split_checks.json",
+    "qualification": "Post-discovery extension; source sample counts not prevalence"
+  },
+  {
+    "id": "C5",
+    "section": "3",
+    "claim": "200 requests;194 complete;Qwen+36..48pp;Gemma-10..82pp",
+    "evidence": "capture.json;factorization.json",
+    "qualification": "50 diagnostic questions in35 dependency groups"
+  },
+  {
+    "id": "C6",
+    "section": "4",
+    "claim": "Same repaired outputs reference effects:Gemma42pp,Qwen40pp",
+    "evidence": "factorization.json",
+    "qualification": "Native heuristic parser fixed-output score; posthoc interaction"
+  },
+  {
+    "id": "C7",
+    "section": "5",
+    "claim": "2200 synthetic variants from200 units;800 accepted altered cases in v1",
+    "evidence": "mutations.json",
+    "qualification": "Development diagnostics, not independent generalization"
+  },
+  {
+    "id": "C8",
+    "section": "6",
+    "claim": "200 native rows;801 per-option objects;600 controlled carrier failures",
+    "evidence": "harness.json",
+    "qualification": "AST native-method projection on reused data"
+  },
+  {
+    "id": "C9",
+    "section": "8",
+    "claim": "External affected run not verified",
+    "evidence": "external.json",
+    "qualification": "Search evidence does not establish absence"
+  }
+]

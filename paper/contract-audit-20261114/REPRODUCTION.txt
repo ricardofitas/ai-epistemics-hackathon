@@ -1,0 +1,6 @@
+Private working manuscript and evidence synthesis.
+Run python verify_claims.py to check numerical claims and source-snapshot hashes.
+Run python render_manuscript.py to recreate the PDF. Python dependencies are pinned in requirements.txt; rendering uses system Liberation Serif and Sans fonts under /usr/share/fonts/truetype/liberation/.
+The machine-readable manuscript is manuscript.json. All original experiment packages are listed with exact Library identities, versions and archive hashes in SOURCE_ARCHIVES.json. Compact unmodified JSON source snapshots are under evidence/.
+CLAIM_VERIFICATION.json validates synthesis consistency only; consult original experiment captures for native, request-stream and source-selection verification. No additional experiments or inference were performed for this draft.
+READINESS.json records unresolved scientific and submission-readiness gaps. Nothing was sent or published externally.

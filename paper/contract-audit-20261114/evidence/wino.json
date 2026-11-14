@@ -1,0 +1,54 @@
+{
+  "status": "FAIL",
+  "counts": {
+    "records": 1267,
+    "source_gold_available": 1267,
+    "source_scorable_rows": 1267
+  },
+  "failures": {
+    "question_not_bound": 1267,
+    "reference_changed_answer": 628,
+    "conflicting_gold_for_same_prompt_groups": 300
+  },
+  "incomplete_checks": {},
+  "examples": {
+    "question_not_bound": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "reference_changed_answer": [
+      "1",
+      "3",
+      "4",
+      "5",
+      "6"
+    ]
+  },
+  "source_target_counts": {
+    "B": 639,
+    "A": 628
+  },
+  "attention": [],
+  "input_collisions": {
+    "visible_prompts": 895,
+    "covered_rows": 1267,
+    "rows_in_conflicting_groups": 655,
+    "minimum_deterministic_errors": 309,
+    "empirical_prompt_only_accuracy_ceiling": 0.7561168113654302
+  },
+  "model_calls": 0,
+  "panel": "oneeval__winogrande__validation",
+  "provenance": {
+    "framework": "One-Eval",
+    "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+    "dataflow": "1.0.10",
+    "benchmark": "winogrande",
+    "split": "validation",
+    "raw_source_sha256": "69f3d7f3a900d775339b04c7de672609c40fca573e50f594f2ae66d8782505be"
+  },
+  "input_file": "panels/oneeval__winogrande__validation.jsonl.gz",
+  "input_sha256": "35e8d231c4d5520a82d85506d00aea6e9b1c06261e220adb6f45e49b4a2a887c"
+}

@@ -1,0 +1,21 @@
+{
+  "checked_on": "2026-11-14",
+  "primary_sources": [
+    {
+      "title": "Lessons from the Trenches on Reproducible Evaluation of Language Models",
+      "url": "https://arxiv.org/abs/2405.14782v3",
+      "status": "Author abstract and version metadata rechecked; broad evaluation reproducibility guidance already established."
+    },
+    {
+      "title": "Hugging Face Evaluation Guidebook: Troubleshooting reproducibility",
+      "url": "https://github.com/huggingface/evaluation-guidebook/blob/main/contents/troubleshooting/troubleshooting-reproducibility.md",
+      "status": "Primary guide text rechecked; prompt/metric/normalization distinctions supported."
+    },
+    {
+      "title": "SANE: Automated Scorer-Specific Metamorphic Testing for LLM Judges",
+      "url": "https://arxiv.org/abs/2610.28886",
+      "status": "Indexed primary author-abstract lead found; direct abstract/html fetch failed. Detailed methods comparison remains pending, not a novelty clearance."
+    }
+  ],
+  "novelty_clearance": false
+}

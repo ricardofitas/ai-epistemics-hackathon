@@ -1,0 +1,41 @@
+{
+  "status": "FAIL",
+  "counts": {
+    "records": 33,
+    "source_gold_available": 33
+  },
+  "failures": {
+    "correct_choice_missing": 33
+  },
+  "incomplete_checks": {},
+  "examples": {
+    "correct_choice_missing": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "source_target_counts": {},
+  "attention": [],
+  "input_collisions": {
+    "visible_prompts": 0,
+    "covered_rows": 0,
+    "rows_in_conflicting_groups": 0,
+    "minimum_deterministic_errors": 0,
+    "empirical_prompt_only_accuracy_ceiling": null
+  },
+  "model_calls": 0,
+  "panel": "oneeval__lab-bench-language-agent-biology-benchmark__train",
+  "provenance": {
+    "framework": "One-Eval",
+    "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+    "dataflow": "1.0.10",
+    "benchmark": "lab-bench-language-agent-biology-benchmark",
+    "split": "train",
+    "raw_source_sha256": "d356a11073ea5c12850895d61f10a2bea0c2082d3d97a10f89e4eebbebb5f80f"
+  },
+  "input_file": "panels/oneeval__lab-bench-language-agent-biology-benchmark__train.jsonl.gz",
+  "input_sha256": "c315dabdd703f3375038d30da1d192bb1a90ed41d943bef2b4490b90dd663c34"
+}

@@ -1,0 +1,154 @@
+{
+  "unique_source_questions": 50,
+  "independent_prompt_groups": 35,
+  "raw_output_reference_replays": [
+    {
+      "model": "gemma-4-31b-it",
+      "stratum": "all_frozen_panel",
+      "condition": "corrected_prompt",
+      "predictor": "always_B",
+      "shipped": {
+        "metric": "choice_accuracy",
+        "official_metric": "acc",
+        "score": 1.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 50,
+        "scored_samples": 50,
+        "valid_predictions": 50,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 0,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-B",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "option1",
+            "option2"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      },
+      "source_reference": {
+        "metric": "choice_accuracy",
+        "official_metric": "acc",
+        "score": 0.5,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 50,
+        "scored_samples": 50,
+        "valid_predictions": 50,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 0,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-B",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "option1",
+            "option2"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      }
+    },
+    {
+      "model": "qwen3.8-27b",
+      "stratum": "all_frozen_panel",
+      "condition": "corrected_prompt",
+      "predictor": "always_B",
+      "shipped": {
+        "metric": "choice_accuracy",
+        "official_metric": "acc",
+        "score": 1.0,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 50,
+        "scored_samples": 50,
+        "valid_predictions": 50,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 0,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-B",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "option1",
+            "option2"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      },
+      "source_reference": {
+        "metric": "choice_accuracy",
+        "official_metric": "acc",
+        "score": 0.5,
+        "score_source": "metric_stage",
+        "prediction_mode": "generation",
+        "denominator": "total",
+        "total_samples": 50,
+        "scored_samples": 50,
+        "valid_predictions": 50,
+        "parse_failed": 0,
+        "empty_output": 0,
+        "invalid_references": 0,
+        "parser": {
+          "type": "choice_letter",
+          "choices": "A-B",
+          "prefer": [
+            "tagged_answer",
+            "boxed_answer",
+            "final_answer_line",
+            "last_standalone_choice"
+          ],
+          "choice_text_fields": [
+            "option1",
+            "option2"
+          ]
+        },
+        "failure_policy": {
+          "parse_failed": "score_zero",
+          "empty_output": "score_zero",
+          "invalid_reference": "exclude"
+        },
+        "official_compatibility": null
+      }
+    }
+  ]
+}

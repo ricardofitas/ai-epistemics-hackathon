@@ -1,0 +1,54 @@
+{
+  "requests": 200,
+  "complete": 194,
+  "attempts": 200,
+  "incomplete": 6,
+  "input_tokens": 14547,
+  "output_tokens": 97047,
+  "total_tokens": 111594,
+  "provider_reported_cost_units": "0.109769073000000005186",
+  "cost_currency": null,
+  "scope": "This bounded200-request trial only; billed currency, project-wide cumulative spend and remaining credits unverified.",
+  "by_condition": [
+    {
+      "model": "gemma-4-31b-it",
+      "condition": "corrected_prompt",
+      "requests": 50,
+      "complete": 50,
+      "input_tokens": 3055,
+      "output_tokens": 9581,
+      "total_tokens": 12636,
+      "reported_cost": "0.003532489999999999838"
+    },
+    {
+      "model": "gemma-4-31b-it",
+      "condition": "native_prompt",
+      "requests": 50,
+      "complete": 50,
+      "input_tokens": 2255,
+      "output_tokens": 4021,
+      "total_tokens": 6276,
+      "reported_cost": "0.001570089999999999888"
+    },
+    {
+      "model": "qwen3.8-27b",
+      "condition": "corrected_prompt",
+      "requests": 50,
+      "complete": 47,
+      "input_tokens": 5028,
+      "output_tokens": 37240,
+      "total_tokens": 42268,
+      "reported_cost": "0.04674609200000000365"
+    },
+    {
+      "model": "qwen3.8-27b",
+      "condition": "native_prompt",
+      "requests": 50,
+      "complete": 47,
+      "input_tokens": 4209,
+      "output_tokens": 46205,
+      "total_tokens": 50414,
+      "reported_cost": "0.05792040100000000181"
+    }
+  ]
+}

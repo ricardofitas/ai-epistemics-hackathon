@@ -1,0 +1,181 @@
+{
+  "panels": 21,
+  "checked_records": 64119,
+  "outcomes": {
+    "FAIL": 7,
+    "PASS": 14
+  },
+  "model_provider_calls": 0,
+  "prior_independent_exact_counts_matched": true,
+  "panels_checked": [
+    {
+      "panel": "oneeval__sciq__test",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "rows": 1000,
+      "constructed_backend_invocations": 0,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "repaired__sciq__test",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 1000,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "oneeval__winogrande__test",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "rows": 1767,
+      "constructed_backend_invocations": 0,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "oneeval__winogrande__validation",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "rows": 1267,
+      "constructed_backend_invocations": 0,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "repaired__winogrande__validation",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 1267,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "oneeval__boolq__validation",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "rows": 3270,
+      "constructed_backend_invocations": 0,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "repaired__boolq__validation",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 3270,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "oneeval__pubmedqa__train",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "rows": 1000,
+      "constructed_backend_invocations": 0,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "repaired__pubmedqa__train",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 1000,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "oneeval__medmcqa__validation",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 4183,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "repaired__medmcqa__validation",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 4183,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "oneeval__hellaswag__validation",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "rows": 10042,
+      "constructed_backend_invocations": 0,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "repaired__hellaswag__validation",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 10042,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "oneeval__lab-bench-language-agent-biology-benchmark__train",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "rows": 33,
+      "constructed_backend_invocations": 0,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "repaired__lab-bench-language-agent-biology-benchmark__train",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 33,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "evalscope__boolq",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 3270,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "evalscope__hellaswag",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 10042,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "evalscope__med_mcqa",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 4183,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "evalscope__pubmedqa",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 1000,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "evalscope__sciq",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 1000,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    },
+    {
+      "panel": "evalscope__winogrande",
+      "expected": "PASS",
+      "observed": "PASS",
+      "rows": 1267,
+      "constructed_backend_invocations": 1,
+      "cli_exit_verified": true
+    }
+  ],
+  "scope": "Selected regression panel with repeated source records across original, repaired and healthy configurations. Counts are not independent questions or a prevalence estimate."
+}

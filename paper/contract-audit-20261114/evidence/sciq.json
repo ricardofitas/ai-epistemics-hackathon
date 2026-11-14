@@ -1,0 +1,58 @@
+{
+  "status": "FAIL",
+  "counts": {
+    "records": 1000,
+    "source_gold_available": 1000,
+    "source_scorable_rows": 1000
+  },
+  "failures": {
+    "context_not_bound": 884,
+    "reference_changed_answer": 3,
+    "native_reference_invalid": 3
+  },
+  "incomplete_checks": {},
+  "examples": {
+    "context_not_bound": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "reference_changed_answer": [
+      "269",
+      "392",
+      "951"
+    ],
+    "native_reference_invalid": [
+      "566",
+      "601",
+      "872"
+    ]
+  },
+  "source_target_counts": {
+    "A": 1000
+  },
+  "attention": [
+    "one_constant_answer_is_perfect_on_the_source_targets"
+  ],
+  "input_collisions": {
+    "visible_prompts": 1000,
+    "covered_rows": 1000,
+    "rows_in_conflicting_groups": 0,
+    "minimum_deterministic_errors": 0,
+    "empirical_prompt_only_accuracy_ceiling": 1.0
+  },
+  "model_calls": 0,
+  "panel": "oneeval__sciq__test",
+  "provenance": {
+    "framework": "One-Eval",
+    "commit": "8aba20ad17ee2c7d2391162ac03ffaebcbb17506",
+    "dataflow": "1.0.10",
+    "benchmark": "sciq",
+    "split": "test",
+    "raw_source_sha256": "cd0a2c8be9b2eafc95bd1bab6d2ae553826c1f3b7ddbe5e415e130c30abddddd"
+  },
+  "input_file": "panels/oneeval__sciq__test.jsonl.gz",
+  "input_sha256": "c9b553180929faba120bcd29584a397f97437549ca63b8dd932275aa4d2dabe9"
+}
