@@ -1,0 +1,81 @@
+source_index	condition	gemma_score	qwen_score	possible_ranking_directions
+40	free_form__absent	1.0	1.0	tie
+200	free_form__absent	1.0	1.0	tie
+212	free_form__absent	1.0	1.0	tie
+281	free_form__absent	0.0		qwen_ahead|tie
+334	free_form__absent	1.0	1.0	tie
+571	free_form__absent	0.0	0.0	tie
+809	free_form__absent	1.0		gemma_ahead|tie
+860	free_form__absent	0.0		qwen_ahead|tie
+871	free_form__absent	1.0	1.0	tie
+1191	free_form__absent	1.0	1.0	tie
+1238	free_form__absent	1.0	1.0	tie
+1246	free_form__absent	1.0	1.0	tie
+1332	free_form__absent	1.0	1.0	tie
+1504	free_form__absent	1.0	1.0	tie
+1618	free_form__absent	1.0	1.0	tie
+1637	free_form__absent	0.0	1.0	qwen_ahead
+1875	free_form__absent	1.0	1.0	tie
+1893	free_form__absent	0.0	0.0	tie
+1958	free_form__absent	0.0	1.0	qwen_ahead
+1966	free_form__absent	1.0	1.0	tie
+40	free_form__A.None	1.0	1.0	tie
+200	free_form__A.None	1.0	1.0	tie
+212	free_form__A.None	1.0	1.0	tie
+281	free_form__A.None	0.0		qwen_ahead|tie
+334	free_form__A.None	1.0	1.0	tie
+571	free_form__A.None	0.0	0.0	tie
+809	free_form__A.None	0.0	0.0	tie
+860	free_form__A.None	0.0	0.0	tie
+871	free_form__A.None	1.0	1.0	tie
+1191	free_form__A.None	1.0	1.0	tie
+1238	free_form__A.None	1.0	1.0	tie
+1246	free_form__A.None	1.0	1.0	tie
+1332	free_form__A.None	1.0	1.0	tie
+1504	free_form__A.None	1.0	1.0	tie
+1618	free_form__A.None	1.0	1.0	tie
+1637	free_form__A.None	1.0	1.0	tie
+1875	free_form__A.None	1.0	1.0	tie
+1893	free_form__A.None	0.0	0.0	tie
+1958	free_form__A.None	1.0	1.0	tie
+1966	free_form__A.None	1.0	1.0	tie
+40	choice__absent	1.0	1.0	tie
+200	choice__absent	1.0	1.0	tie
+212	choice__absent	1.0	1.0	tie
+281	choice__absent	1.0		gemma_ahead|tie
+334	choice__absent	1.0	1.0	tie
+571	choice__absent	0.0	0.0	tie
+809	choice__absent	0.0	0.0	tie
+860	choice__absent	0.0		qwen_ahead|tie
+871	choice__absent	1.0	1.0	tie
+1191	choice__absent	1.0	1.0	tie
+1238	choice__absent	1.0	1.0	tie
+1246	choice__absent	1.0	1.0	tie
+1332	choice__absent	1.0	1.0	tie
+1504	choice__absent	1.0	1.0	tie
+1618	choice__absent	1.0	1.0	tie
+1637	choice__absent	1.0	1.0	tie
+1875	choice__absent	1.0	1.0	tie
+1893	choice__absent	0.0	1.0	qwen_ahead
+1958	choice__absent	1.0	1.0	tie
+1966	choice__absent	1.0	1.0	tie
+40	choice__A.None	1.0	0.0	gemma_ahead
+200	choice__A.None	0.0	0.0	tie
+212	choice__A.None	0.0	0.0	tie
+281	choice__A.None	1.0		gemma_ahead|tie
+334	choice__A.None	1.0	0.0	gemma_ahead
+571	choice__A.None	0.0	0.0	tie
+809	choice__A.None	0.0		qwen_ahead|tie
+860	choice__A.None	0.0	0.0	tie
+871	choice__A.None	1.0	0.0	gemma_ahead
+1191	choice__A.None	1.0	0.0	gemma_ahead
+1238	choice__A.None	1.0	0.0	gemma_ahead
+1246	choice__A.None	0.0	0.0	tie
+1332	choice__A.None	0.0	0.0	tie
+1504	choice__A.None	0.0	0.0	tie
+1618	choice__A.None	0.0	0.0	tie
+1637	choice__A.None	1.0	0.0	gemma_ahead
+1875	choice__A.None	0.0	0.0	tie
+1893	choice__A.None	0.0	0.0	tie
+1958	choice__A.None	0.0	0.0	tie
+1966	choice__A.None	1.0	0.0	gemma_ahead

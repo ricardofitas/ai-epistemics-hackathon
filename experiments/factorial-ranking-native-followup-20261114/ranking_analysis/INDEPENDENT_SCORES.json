@@ -1,0 +1,1938 @@
+[
+  {
+    "trial_id": "MXA-00-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1893,
+    "condition": "free_form__absent",
+    "score": 0.0,
+    "parsed": [
+      "the tv spokesperson for expedia."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-00-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1893,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>travelocity</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-00-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1893,
+    "condition": "free_form__A.None",
+    "score": 0.0,
+    "parsed": [
+      "the tv spokesperson for expedia."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-00-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1893,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-00-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1893,
+    "condition": "choice__absent",
+    "score": 0.0,
+    "parsed": [
+      "the mascot for **expedia**."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-00-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1893,
+    "condition": "free_form__absent",
+    "score": 0.0,
+    "parsed": [
+      "<answer>priceline</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-00-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1893,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "\"none\"."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-00-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1893,
+    "condition": "free_form__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>orbitz</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-01-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1238,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a. none</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-01-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1238,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "widely known as \"the greatest outdoor show on earth.\""
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-01-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1238,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>the calgary stampede</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-01-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1238,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "widely known by the slogan \"the greatest outdoor show on earth.\""
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-01-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1238,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>calgary stampede</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-01-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1238,
+    "condition": "choice__A.None",
+    "score": 1.0,
+    "parsed": [
+      "a.",
+      "the **calgary stampede**."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-01-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1238,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>calgary stampede</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-01-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1238,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "the calgary stampede."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-02-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1246,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "based on general knowledge (as no context was provided), fairy rings are naturally occurring circles of mushrooms.\n\n<answer>mushrooms</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-02-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1246,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>fairy rings are made of mushrooms—rings of fungal fruiting bodies produced by an underground mycelial network.</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-02-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1246,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "a."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-02-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1246,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>fairy rings are made of mushrooms, formed by the circular growth of fungal mycelium underground.</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-02-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1246,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "fairy rings are made of fungi, specifically mushrooms that grow in a circular pattern. they are formed by the underground mycelium of a fungus growing outward from a central point in a radial fashion.\n\n<answer>fairy rings are made of fungi (mushrooms).</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-02-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1246,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>mushrooms (fungi)</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-02-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1246,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "fairy rings are made of fungi, specifically mushrooms and their underground mycelium, which grow in a circular pattern.\n\n<answer>fungi</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-02-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1246,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a. none</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-03-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1637,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>goat</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-03-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1637,
+    "condition": "choice__A.None",
+    "score": 1.0,
+    "parsed": [
+      "typically \"none\" or the correct term if it were available.",
+      "derived from the latin word *hircus*, meaning \"he-goat.\" therefore, it refers to being like or related to a goat (specifically, smelling like a goat)."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-03-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1637,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>goat</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-03-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1637,
+    "condition": "free_form__absent",
+    "score": 0.0,
+    "parsed": [
+      "hircine refers to being like or related to a stag or a deer.\n\n<answer>stag</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-03-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1637,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a. none</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-03-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1637,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "often associated with deer/stags). in a strict etymological sense, it refers to a **goat**."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-03-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1637,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>goat</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-03-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1637,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "derived from the latin word *hircus*, meaning \"he-goat.\" therefore, it refers to being like or related to a goat (specifically, it often describes a smell reminiscent of a goat)."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-04-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 281,
+    "condition": "free_form__absent",
+    "score": 0.0,
+    "parsed": [
+      "a necessary link in the causal chain leading to the recovery."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-04-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 281,
+    "condition": "choice__absent",
+    "score": null,
+    "parsed": null,
+    "reasons": [
+      "response_not_completed",
+      "ineligible_capture"
+    ]
+  },
+  {
+    "trial_id": "MXA-04-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 281,
+    "condition": "free_form__A.None",
+    "score": 0.0,
+    "parsed": [
+      "whether the attending doctor's decision caused the patient's recovery.",
+      "attributed to the administration of the drug. the drug could not be administered without both the pharmacist's and the attending doctor's signatures. because the doctor decided to sign off (despite the hospital policy), the drug was administered, and the patient subsequently recovered."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-04-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 281,
+    "condition": "choice__A.None",
+    "score": null,
+    "parsed": null,
+    "reasons": [
+      "response_not_completed",
+      "ineligible_capture"
+    ]
+  },
+  {
+    "trial_id": "MXA-04-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 281,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "\"yes.\"",
+      "specific drug. therefore, the doctor's decision to sign off was a necessary link in the chain of events that led to the patient's recovery."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-04-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 281,
+    "condition": "free_form__absent",
+    "score": null,
+    "parsed": null,
+    "reasons": [
+      "response_not_completed",
+      "ineligible_capture"
+    ]
+  },
+  {
+    "trial_id": "MXA-04-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 281,
+    "condition": "choice__A.None",
+    "score": 1.0,
+    "parsed": [
+      "a typical person would give: \"yes\" or \"no\".",
+      "typically viewed as a cause.",
+      "whether the attending doctor's decision caused the patient's recovery.",
+      "considered a cause of the outcome."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-04-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 281,
+    "condition": "free_form__A.None",
+    "score": null,
+    "parsed": null,
+    "reasons": [
+      "response_not_completed",
+      "ineligible_capture"
+    ]
+  },
+  {
+    "trial_id": "MXA-05-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1191,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-05-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1191,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "used to uniquely identify a specific edition of a book."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-05-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1191,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>a book</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-05-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1191,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "a unique numeric commercial book identifier used to identify a specific edition of a **book**."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-05-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1191,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>a book</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-05-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1191,
+    "condition": "choice__A.None",
+    "score": 1.0,
+    "parsed": [
+      "from the provided options:",
+      "a unique numeric commercial book identifier."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-05-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1191,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>a book</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-05-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1191,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "used to uniquely identify a specific edition of a book."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-06-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 334,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "famously drawn in a shape that resembles a **tuning fork**."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-06-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 334,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>a tuning fork</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-06-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 334,
+    "condition": "choice__A.None",
+    "score": 1.0,
+    "parsed": [
+      "a.",
+      "famously represented by a diagram shaped like a **tuning fork**."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-06-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 334,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>a tuning fork</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-06-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 334,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "famously drawn in the shape of a **tuning fork**."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-06-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 334,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>tuning fork</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-06-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 334,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "famously drawn in the shape of a **tuning fork**."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-06-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 334,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-07-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 860,
+    "condition": "free_form__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>none</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-07-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 860,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "no information available to identify who holds the post of defence secretary."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-07-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 860,
+    "condition": "choice__absent",
+    "score": null,
+    "parsed": null,
+    "reasons": [
+      "response_not_completed",
+      "ineligible_capture"
+    ]
+  },
+  {
+    "trial_id": "MXA-07-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 860,
+    "condition": "free_form__absent",
+    "score": 0.0,
+    "parsed": [
+      "question.</answer>",
+      "without further clarification."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-07-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 860,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a. none</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-07-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 860,
+    "condition": "free_form__A.None",
+    "score": 0.0,
+    "parsed": [
+      "not possible to provide a specific name without knowing the jurisdiction. however, based on the options provided:"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-07-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 860,
+    "condition": "free_form__absent",
+    "score": null,
+    "parsed": null,
+    "reasons": [
+      "response_not_completed",
+      "ineligible_capture"
+    ]
+  },
+  {
+    "trial_id": "MXA-07-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 860,
+    "condition": "choice__absent",
+    "score": 0.0,
+    "parsed": [
+      "a general knowledge question regarding a specific country, please provide the options or the country of interest.",
+      "cannot be selected."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-08-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1332,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "massachusetts was the first u.s. state to legalize same-sex marriage in 2004.\n\n<answer>massachusetts</answer>",
+      2004.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-08-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1332,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>massachusetts</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-08-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1332,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "massachusetts was the first u.s. state to legalize same-sex marriage in 2004.\n\n<answer>massachusetts</answer>",
+      2004.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-08-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1332,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a. none</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-08-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1332,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      2004.0,
+      "the first u.s. state to legalize same-sex marriage in 2004 was massachusetts.\n\n<answer>massachusetts</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-08-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1332,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>massachusetts</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-08-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1332,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "(the ruling took effect in may 2004). however, looking at the provided options:",
+      "\"none\", the format of the provided options does not include the correct historical answer. however, based strictly on the provided options list:",
+      "\"none\".",
+      2004.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-08-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1332,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>massachusetts</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-09-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 212,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-09-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 212,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      18.0,
+      "based on the provided text, the conference of ambassadors drew the first demarcation line on june 18, while ferdinand foch proposed the second demarcation line (the foch line) on july 18. therefore, the conference of ambassadors occurred first.\n\n<answer>the conference of ambassadors</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-09-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 212,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>the conference of ambassadors happened first, drawing the first demarcation line on june 18, before ferdinand foch proposed the foch line on july 18.</answer>",
+      18.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-09-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 212,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "based on the provided text, the conference of ambassadors drew the first demarcation line on june 18, while ferdinand foch proposed the second demarcation line (the foch line) on july 18. therefore, the conference of ambassadors occurred first.\n\n<answer>conference of ambassadors</answer>",
+      18.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-09-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 212,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>the conference of ambassadors</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-09-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 212,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "not listed among the choices."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-09-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 212,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>the conference of ambassadors</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-09-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 212,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      18.0,
+      "based on the provided text, the conference of ambassadors drew the first demarcation line on june 18, while ferdinand foch proposed the second demarcation line (the foch line) on july 18. therefore, the conference of ambassadors happened first.\n\n<answer>the conference of ambassadors happened first.</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-10-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1958,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "found in the seeds and stones of various fruits (such as apricots and apples) in the form of cyanogenic glycosides.",
+      "**cyanide**."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-10-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1958,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>cyanide</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-10-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1958,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "from the provided options:",
+      "\"none\"."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-10-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1958,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>cyanide</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-10-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1958,
+    "condition": "free_form__absent",
+    "score": 0.0,
+    "parsed": [
+      "derived from the greek word *kyanos*, meaning \"dark blue,\" referring to the pigment prussian blue, from which it was first isolated. it consists of carbon and nitrogen (cn)."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-10-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1958,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>cyanide</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-10-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1958,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "**cyanide**.",
+      "derived from the greek word *kyanos* (dark blue), referring to the deep blue color of prussian blue, the pigment in which it was first isolated. it consists of a carbon atom triple-bonded to a nitrogen atom (cn). many fruit seeds and stones (such as apricots, peaches, and bitter almonds) contain cyanogenic glycosides, which release cyanide when ingested."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-10-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1958,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-11-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1504,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      98.88,
+      "<answer>98.88%</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-11-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1504,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "from the provided options:"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-11-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1504,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      98.88,
+      "<answer>98.88%</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-11-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1504,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      1.0,
+      2.0,
+      1.12,
+      100.0,
+      3.0,
+      "to find the percentage of residents who did not speak laotian, subtract the percentage of those who do speak laotian from the total population (100%).\n\n1. total population = 100%\n2. residents who speak laotian = 1.12%\n3. calculation: 100% - 1.12% = 98.88%\n\n<answer>98.88%</answer>",
+      98.88
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-11-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1504,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-11-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1504,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      1.0,
+      2.0,
+      1.12,
+      100.0,
+      98.88,
+      "to find the percentage of residents who did not speak laotian, subtract the percentage of those who do speak laotian from the total population (100%).\n\n1.  percentage who speak laotian: 1.12%\n2.  calculation: 100% - 1.12% = 98.88%\n\n<answer>98.88%</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-11-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1504,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      98.88,
+      "<answer>98.88%</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-11-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1504,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      1.0,
+      2.0,
+      1.12,
+      100.0,
+      98.88,
+      "to find the percentage of residents who did not speak laotian, subtract the percentage of those who do speak laotian from the total population (100%).\n\n1.  **identify the percentage that speaks laotian:** according to the context, 1.12% speak laotian language.\n2.  **calculate the percentage that does not speak laotian:** 100% - 1.12% = 98.88%.\n\n<answer>98.88%</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-12-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 809,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      76.0,
+      "\"76 trombones.\""
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-12-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 809,
+    "condition": "choice__absent",
+    "score": 0.0,
+    "parsed": [
+      "<answer>knees and elbows</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-12-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 809,
+    "condition": "free_form__A.None",
+    "score": 0.0,
+    "parsed": [
+      "commonly called **\"candy man\"** (referring to the 1950s/60s style of songs or specific regional calls).",
+      "\"brummie candy\" or simply \"candy man.\""
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-12-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 809,
+    "condition": "choice__A.None",
+    "score": null,
+    "parsed": null,
+    "reasons": [
+      "response_not_completed",
+      "ineligible_capture"
+    ]
+  },
+  {
+    "trial_id": "MXA-12-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 809,
+    "condition": "choice__absent",
+    "score": 0.0,
+    "parsed": [
+      "most famously known as \"candy man.\""
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-12-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 809,
+    "condition": "free_form__absent",
+    "score": null,
+    "parsed": null,
+    "reasons": [
+      "response_not_completed",
+      "ineligible_capture"
+    ]
+  },
+  {
+    "trial_id": "MXA-12-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 809,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "from the provided options:",
+      "given."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-12-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 809,
+    "condition": "free_form__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>knees up, mother brown</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-13-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 871,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-13-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 871,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      26.0,
+      8.0,
+      18.0,
+      "based on the provided text, the second demarcation line (the foch line) was proposed (drawn) on july 18 and approved by the entente on july 26.\n\nto calculate the days passed:\njuly 26 - july 18 = 8 days.\n\n<answer>8</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-13-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 871,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      8.0,
+      "<answer>8 days</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-13-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 871,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      1.0,
+      2.0,
+      8.0,
+      "to determine the number of days between the drawing (proposal) and the approval of the second line, we look at the dates provided in the text:\n\n1.  **drawing/proposal of the second line:** ferdinand foch proposed the second demarcation line (the foch line) on **july 18**.\n2.  **approval of the second line:** it was approved by the entente on **july 26**.\n\ncalculating the difference:\njuly 26 - july 18 = 8 days.\n\n<answer>8</answer>",
+      18.0,
+      26.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-13-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 871,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      8.0,
+      "<answer>8 days</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-13-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 871,
+    "condition": "choice__A.None",
+    "score": 1.0,
+    "parsed": [
+      8.0,
+      "the only choice. but strictly speaking, 8 days passed.",
+      "mathematically incorrect, but the prompt requires selecting from the options:"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-13-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 871,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      8.0,
+      "<answer>8</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-13-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 871,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      8.0,
+      "8 days."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-14-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1618,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "sentence states: \"in june 2017, professor ricklefs was made a member of the order of australia.\""
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-14-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1618,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>the order of australia</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-14-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1618,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "\"none,\" the selection must be a."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-14-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1618,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>the order of australia</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-14-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1618,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      2017.0,
+      "based on the provided text, professor ricklefs was made a member of the order of australia in june 2017.\n\n<answer>the order of australia</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-14-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1618,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>the order of australia</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-14-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1618,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "based on the provided text, the last sentence states: \"in june 2017, professor ricklefs was made a member of the order of australia.\"\n\n<answer>order of australia</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-14-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1618,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-15-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1875,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>peter</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-15-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1875,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "not listed as an option, the provided options do not contain the correct name. however, based strictly on the options provided:"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-15-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1875,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>peter</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-15-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1875,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "in the bible, the disciple who tried to walk on water was peter.\n\n<answer>peter</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-15-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1875,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-15-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1875,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "in the bible, the disciple who tried to walk on water was peter.\n\n<answer>peter</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-15-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1875,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>peter (simon peter) tried to walk on water.</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-15-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1875,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "based on the biblical account in the gospel of matthew (matthew 14:22-33), after jesus walked on the water toward the disciples' boat, peter asked to come to him. jesus told him to come, and peter stepped out of the boat and walked on the water toward jesus before beginning to sink due to fear and doubt.\n\n<answer>peter</answer>",
+      -33.0,
+      14.0,
+      22.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-16-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 200,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "in 2006, george galloway was widely quoted as saying that it would be morally justified if someone chose to assassinate tony blair.\n\n<answer>tony blair</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-16-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 200,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>tony blair</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-16-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 200,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "in 2006, george galloway stated that it would be \"morally justified\" if someone chose to assassinate **tony blair**.\n\n<answer>tony blair</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-16-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 200,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-16-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 200,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "based on historical records and widely reported news from 2006, george galloway made a controversial statement regarding the moral justification of assassinating tony blair.\n\n<answer>tony blair</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-16-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 200,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>tony blair</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-16-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 200,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "a."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-16-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 200,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>tony blair</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-17-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 571,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-17-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 571,
+    "condition": "free_form__A.None",
+    "score": 0.0,
+    "parsed": [
+      5.0,
+      6.3,
+      6.7,
+      6.5,
+      5.5,
+      10.0,
+      5.8,
+      6.6,
+      7.9,
+      8.5,
+      15.0,
+      8.0,
+      13.7,
+      20.0,
+      24.0,
+      25.0,
+      29.0,
+      30.0,
+      6.4,
+      35.0,
+      7.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0,
+      -64.0,
+      65.0,
+      -59.0,
+      -54.0,
+      -49.0,
+      -44.0,
+      -39.0,
+      -34.0,
+      -29.0,
+      -24.0,
+      -19.0,
+      "to find the two smallest age ranges, we compare the percentages provided for each group:\n\n*   5-9 years: 6.3%\n*   10-14 years: 6.7%\n*   15-19 years: 6.5%\n*   **20-24 years: 5.5%**\n*   **25-29 years: 5.5%**\n*   30-34 years: 5.8%\n*   35-39 years: 6.6%\n*   40-44 years: 7.9%\n*   45-49 years: 8.5%\n*   50-54 years: 8.0%\n*   55-59 years: 7.0%\n*   60-64 years: 6.4%\n*   65+ years: 13.7%\n\nthe two lowest percentages are 5.5% for the 20-24 and 25-29 age ranges.\n\n<answer>20 to 24 years and 25 to 29 years</answer>",
+      -14.0,
+      -9.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-17-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 571,
+    "condition": "free_form__absent",
+    "score": 0.0,
+    "parsed": [
+      20.0,
+      24.0,
+      25.0,
+      "<answer>20 to 24 years and 25 to 29 years</answer>",
+      29.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-17-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 571,
+    "condition": "choice__absent",
+    "score": 0.0,
+    "parsed": [
+      -29.0,
+      5.5,
+      "5.5%, which applies to both the 20-24 and 25-29 age ranges.",
+      -24.0,
+      20.0,
+      25.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-17-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 571,
+    "condition": "free_form__A.None",
+    "score": 0.0,
+    "parsed": [
+      20.0,
+      24.0,
+      25.0,
+      "<answer>20 to 24 years and 25 to 29 years</answer>",
+      29.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-17-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 571,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "\"none\".",
+      -29.0,
+      5.5,
+      "5.5%, which applies to both the 20-24 and 25-29 age ranges.",
+      -24.0,
+      20.0,
+      25.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-17-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 571,
+    "condition": "choice__absent",
+    "score": 0.0,
+    "parsed": [
+      "<answer>20–24 and 25–29</answer>",
+      20.0,
+      24.0,
+      25.0,
+      29.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-17-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 571,
+    "condition": "free_form__absent",
+    "score": 0.0,
+    "parsed": [
+      5.0,
+      6.3,
+      6.7,
+      6.5,
+      5.5,
+      10.0,
+      5.8,
+      6.6,
+      7.9,
+      8.5,
+      15.0,
+      8.0,
+      13.7,
+      20.0,
+      24.0,
+      25.0,
+      29.0,
+      30.0,
+      6.4,
+      35.0,
+      7.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      "based on the provided context, the percentages for the age ranges are:\n- 5-9: 6.3%\n- 10-14: 6.7%\n- 15-19: 6.5%\n- 20-24: 5.5%\n- 25-29: 5.5%\n- 30-34: 5.8%\n- 35-39: 6.6%\n- 40-44: 7.9%\n- 45-49: 8.5%\n- 50-54: 8.0%\n- 55-59: 7.0%\n- 60-64: 6.4%\n- 65+: 13.7%\n\nthe two smallest percentages are 5.5%, which correspond to the age ranges 20 to 24 years and 25 to 29 years.\n\n<answer>20 to 24 years and 25 to 29 years</answer>",
+      60.0,
+      -64.0,
+      65.0,
+      -59.0,
+      -54.0,
+      -49.0,
+      -44.0,
+      -39.0,
+      -34.0,
+      -29.0,
+      -24.0,
+      -19.0,
+      -14.0,
+      -9.0
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-18-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 40,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "a system of dance notation used to record choreography. it was developed by benesh movement notation (bmn) to allow dancers and choreographers to document movements on paper."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-18-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 40,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>dance</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-18-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 40,
+    "condition": "choice__A.None",
+    "score": 1.0,
+    "parsed": [
+      "\"none\".",
+      "\"none\", the selection must be based on the provided list.",
+      "a system of dance notation used to record choreography, specifically for ballet and contemporary dance."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-18-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 40,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>dance</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-18-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 40,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "a system used to record dance choreography, specifically for ballet and other forms of dance."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-18-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 40,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>dance</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-18-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 40,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "a system of dance notation used to record choreography, primarily for ballet and other forms of dance."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-18-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 40,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a. none</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-19-1-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1966,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "<answer>hyperbole</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-19-3-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1966,
+    "condition": "choice__A.None",
+    "score": 1.0,
+    "parsed": [
+      "the definition of a **hyperbole**.",
+      "a."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-19-2-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1966,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>hyperbole</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-19-0-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1966,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "called a hyperbole."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-19-3-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1966,
+    "condition": "choice__A.None",
+    "score": 0.0,
+    "parsed": [
+      "<answer>a. none</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-19-1-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1966,
+    "condition": "free_form__A.None",
+    "score": 1.0,
+    "parsed": [
+      "called a hyperbole."
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-19-0-1",
+    "model": "qwen3.8-27b",
+    "source_index": 1966,
+    "condition": "free_form__absent",
+    "score": 1.0,
+    "parsed": [
+      "<answer>hyperbole</answer>"
+    ],
+    "reasons": []
+  },
+  {
+    "trial_id": "MXA-19-2-0",
+    "model": "gemma-4-31b-it",
+    "source_index": 1966,
+    "condition": "choice__absent",
+    "score": 1.0,
+    "parsed": [
+      "the definition of a **hyperbole**."
+    ],
+    "reasons": []
+  }
+]
