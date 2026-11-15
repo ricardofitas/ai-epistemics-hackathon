@@ -1,0 +1,870 @@
+{
+  "status": "PASS_SOURCE_SELECTION_AND_REQUEST_IDENTITY_REVIEW_NO_INFERENCE",
+  "selected_pairs": 64,
+  "source_questions": 128,
+  "planned_trial_cells": 1024,
+  "unique_payload_hashes": 768,
+  "previous_model_intent_or_prior_panel_indices_excluded": 117,
+  "selected_previous_intent_overlap": 0,
+  "pair_token_edit_distances": {
+    "1": 64
+  },
+  "all_original_pairs_identical_visible_requests": true,
+  "all_gold_pairs_opposite": true,
+  "models": [
+    "deepseek-v4-flash",
+    "gemma-4-31b-it",
+    "glm-5.2",
+    "qwen3.8-27b"
+  ],
+  "new_model_calls": 0,
+  "enumerated_four_output_states": 81,
+  "primary_contrast_support_counts": {
+    "-2": 1,
+    "-1": 14,
+    "0": 51,
+    "1": 14,
+    "2": 1
+  },
+  "readiness": "Panel and estimand reviewed, not a launched or executed provider trial. New catalog/budget/transport and analyzer freeze still required before dispatch.",
+  "limits": [
+    "Same One-Eval revision and known mechanism, source pairs selected using question fields and previous intent coverage. Not new semantic source pool or independent framework replication.",
+    "Token minimality reviewed after selection; no replacements made.",
+    "Identical payloads on two different source items must receive distinct trial IDs and genuinely separate provider requests. Hash-only response caching would change the stated experiment.",
+    "Group consistency metric and conditional probability bounds are known methods, not original theoretical contributions."
+  ],
+  "pair_details": [
+    {
+      "selection_sha256": "01162ef1751bac43d0a7842e6a08fba931dae613f01d44ad99ae756e89e01f1d",
+      "indices": [
+        696,
+        697
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "8b1b0e7fc3363edf78caaa460457f4f0119f3b5804ae25b633d5debace6cbd48"
+    },
+    {
+      "selection_sha256": "051cd8ea3b511fb46bc23cc1dce9d494079fdc98823f69c3cacdbbec56082456",
+      "indices": [
+        412,
+        413
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "7fad302a71604b26d52f127d52fd25c5d1b62218b9a06380c6a1820bf3db3ed6"
+    },
+    {
+      "selection_sha256": "05d8ab8c54a7d42e084c9a8823d17bf178f0d7c39c3f552f0ae54d1a61373e89",
+      "indices": [
+        1200,
+        1201
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "0c03c9e47fce74822121c9b1ea5c0fed44862d69a04768962644ed0dfbc99ec4"
+    },
+    {
+      "selection_sha256": "064ee948855fbc8817a75166072f4aedde42a564703e37b4497e0c86a4ab1d92",
+      "indices": [
+        631,
+        632
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "ae526da8944265544df7fe0c4d966e3ccc2e3e86aa8f7c223ef8be5e848d7f2c"
+    },
+    {
+      "selection_sha256": "08e950f7aa2bfd623e678ff33aed586e57c834e9c223d75fc3d41f6f9287d217",
+      "indices": [
+        429,
+        430
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "440853eb67af1f10c7c3db81c28c724f9ffd87d0769ff041a5d77a16af13773a"
+    },
+    {
+      "selection_sha256": "0a4158510fdc25ff35e687f6463a04afb27ad496c26202301f3a3411e4fa6899",
+      "indices": [
+        192,
+        193
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "d7171f3ec7c457e870350f64dad78f1b7e8ffced1b20f195d1ffa26c4b471a7c"
+    },
+    {
+      "selection_sha256": "0b08c86491a6272bda2b86aed582748651886a6639be2e8457c4fba78454a1bc",
+      "indices": [
+        275,
+        276
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "9972aa40d415c647edc821f136cb4e7df54ed3e446c151083b266d0a95f58b04"
+    },
+    {
+      "selection_sha256": "0c03fec464ec12dbc6b695343adfb2678649443bfa7ea24b42b6b1a8e6e4d67b",
+      "indices": [
+        980,
+        981
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "a480a9ff98f68125d13ee57ef2c6d97e25e6fef13173b40dde8b38988eeb70c2"
+    },
+    {
+      "selection_sha256": "11267f63e01751fa0531f1a5205638e22f2d57cd4ac6371280d0e8c3c0321351",
+      "indices": [
+        401,
+        402
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "565877960771472e627cadab77caea1206383edab8459f32b260928ec9997dab"
+    },
+    {
+      "selection_sha256": "120b0b3dbec2d7b2b762203a3135a5a78d4f94193c06b22633d0cda8b6f98080",
+      "indices": [
+        1131,
+        1132
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "646e13dd090c73e8895c6647692cf788cfaacf173aa57ecca9da2becfe1de5cd"
+    },
+    {
+      "selection_sha256": "138995d60bd07d0a0bc7a6b7c0a0c84c427e851c1087c12dcabcec1b36fd895b",
+      "indices": [
+        1105,
+        1106
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "a74f9a436c59b75bd0e5502830cbb3f64455ed00c9b14ff4df3352a7363f4b8a"
+    },
+    {
+      "selection_sha256": "147bb6d150a7bced1c291ddab1c6accd72b880131e2b41dc847d44736eeb3c9b",
+      "indices": [
+        1182,
+        1183
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "9558a66d402771378b2813bfda415ae86f57e4fc50d80b498e6278020cd26cf2"
+    },
+    {
+      "selection_sha256": "163cc6cda216e85967df8112a44148012e2bf92382d7bc84f74ffc0cc4396e69",
+      "indices": [
+        931,
+        932
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "4c1f6a8bcc304c1b1b39efc83407cd2bd33bc2087998166a9ffc2755aa50ff54"
+    },
+    {
+      "selection_sha256": "22a46994901adf1d08b6803d5ac1ce2aa8e37976b393e775e7ab28de546af091",
+      "indices": [
+        642,
+        643
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "5b9b25e26769bf8e14d16389532628652a1545be7c2f0a4fda7bb270066b7ccd"
+    },
+    {
+      "selection_sha256": "245f1ed775b34b44fabfd66e42c6aca310795c00c744e445937221d0e5675e4b",
+      "indices": [
+        607,
+        608
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "aea781879fb8f53188da76578879a762c9f4443d69e2c7077e0274625c963841"
+    },
+    {
+      "selection_sha256": "27062c16544696a69a479fc6f77273b64283e126e50933d6902dae36325cd451",
+      "indices": [
+        1155,
+        1156
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "0f881f61da250916ce620b5144d509bde52610a89be2ca5c2eb7aab11de971e0"
+    },
+    {
+      "selection_sha256": "278244012c7f3a9a447e031803de94be5f6b012196eff184c06652978c1c0146",
+      "indices": [
+        895,
+        896
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "f1e2b00880b81b204c97e479419afe5dc8d3fd1fe6e61867be3795dc35f5a87c"
+    },
+    {
+      "selection_sha256": "281b1e2a75f74325b46da26d2ae2d14707c207a2ccf9efb2b89ad23297ecbf2c",
+      "indices": [
+        1051,
+        1052
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "708c76ad33595eaa2bf9a87b50ffbcfdb9bb876be3834989da8cb81fa784f3aa"
+    },
+    {
+      "selection_sha256": "2928d3955af8a8e7d176743d56e60b000b3d72f61aa3c094a8097a5d96269a97",
+      "indices": [
+        137,
+        138
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "2b890d74de58b178f11ac05733dc141429832649101aefc7f2482ba665f7e6d8"
+    },
+    {
+      "selection_sha256": "2d0da17a87d71769f372a5231e15cc3ae7c20ed142c51ef1ab4a663ff05faa22",
+      "indices": [
+        660,
+        661
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "ce623a50c394b3bee664437a308e68f098bcb488b60634749bca64a47c933a1b"
+    },
+    {
+      "selection_sha256": "2f33da0233a4429e6923a7980f70b7c370506c4cd2cb4e0fe131c7bd694a9b6b",
+      "indices": [
+        647,
+        648
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "2aea0a55674a5b0b489915ff968f23454f0a372c06077a73717782f55d92619d"
+    },
+    {
+      "selection_sha256": "311915da849a3ec09c190cdd37465a9eb8110c929f6e07c7f6d4c598f0c5d1e9",
+      "indices": [
+        294,
+        295
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "665e1a0f34c8c4441ca314cb0797816042a50cdac64cd5584a96203ea188a506"
+    },
+    {
+      "selection_sha256": "314f4235971382f6fc1416e26a7a211339abf2152ede1f11a256a370c83b8a40",
+      "indices": [
+        872,
+        873
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "92d751165912da41f50cff9f9644793d7737615e712fa54c93a45784592bc147"
+    },
+    {
+      "selection_sha256": "31bb8733d6a9023dcf8b8bb9fbd1fcb27339bad4dc92a102d59d2e1665a13f78",
+      "indices": [
+        482,
+        483
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "7ab18d28d7381cd08b7f1b0ee0e4c8f746901c4dad47bb0e63c7de71ca283e3e"
+    },
+    {
+      "selection_sha256": "3284a8efef59b626b85c19316a9fdb170e3638507f86240dcf20414fa85d801b",
+      "indices": [
+        1113,
+        1114
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "1e77dcc17b8c4a936051cca501a22c4301368d1c63e12a5a30dd225cd11d6b5b"
+    },
+    {
+      "selection_sha256": "32bc1d51458e5ca7aee4e2b346a3edf04c9907938e2ea49b0dd5dc381738dada",
+      "indices": [
+        830,
+        831
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "338885497a34b7312aca6adf60313c69d8af1c694777e1a183152756422c419a"
+    },
+    {
+      "selection_sha256": "3647d5b638c281101d8515e64dcca892422aaf695802fe4c1fa4881086e7eb48",
+      "indices": [
+        1103,
+        1104
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "ce16bc2aa2b6e29f668e961425bd68d21b70ce0cd1b23c475d107a9084e6aecc"
+    },
+    {
+      "selection_sha256": "37c1dde9d5c668eb48fcfe2096684b990698a29cd1218bf83671cb500a10bd37",
+      "indices": [
+        810,
+        811
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "ce2bdbdba1a6ee634b0ab4e4c5ebe6370ec14c87db40f4bd361503a4de123c2b"
+    },
+    {
+      "selection_sha256": "38019f49b32487246e070ffb48f2ad819d3c2e6c968eed6d5477c727e40bf7f0",
+      "indices": [
+        596,
+        597
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "6e9337877fbbb6bf75cf46e0b66bc1fd05f59851bbe3b396543f710cc08f129f"
+    },
+    {
+      "selection_sha256": "388f2f813f25c86763c1e56352262db5c96f85a9fe49b2ff3d6a0813efeeb4d7",
+      "indices": [
+        338,
+        339
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "2de3dde07d7dd18586554efd1180b2a13c821836829ac37ac62b00b9885ac239"
+    },
+    {
+      "selection_sha256": "3cc0552b7938935a6f789e0fd53d294a7fb34c67c9c0afa3e8a6f70b53d36201",
+      "indices": [
+        205,
+        206
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "2acd8f1c82f6ee8d8a68a6eaa3ef9d6fed59d224f6dac58ca6518e335f0c06c3"
+    },
+    {
+      "selection_sha256": "3f0921af00186656d03de5707a4059e3a30fa2568ceaec70531ba768f9da91af",
+      "indices": [
+        514,
+        515
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "01edc6ac1d5c1878b289f581d95ca2e563ede9fb1f5695f42134a1fb6055f149"
+    },
+    {
+      "selection_sha256": "4033c340852ab72d6c9bf92d170b3b607beb4822fd9f36e6380f52951f13de79",
+      "indices": [
+        1067,
+        1068
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "9eb9575a9fc0a2f294c83865d31a2a96d27a7315ff8c6be82726b296bff0fef9"
+    },
+    {
+      "selection_sha256": "42e156044690ace357d3bd469ed21eec2cf12d7a4a1b8e6033bf4465ae74b3ed",
+      "indices": [
+        1122,
+        1123
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "d7133bde094012f40ae54be7ff69ac0d9b64525108272763a476243ccfede4c8"
+    },
+    {
+      "selection_sha256": "443ba0c28fd3275a20e9dd5414521ac4464b6efaf95f60df6f481d5a2751a725",
+      "indices": [
+        582,
+        583
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "befe73c4d10ac4506dfd9507fbf2a918c295ab7c409bcedc8f3beeca788e1292"
+    },
+    {
+      "selection_sha256": "4a3db8fc8be64342e4953e0b326668f166e13daf0ff81bcc7606b428aa089585",
+      "indices": [
+        557,
+        558
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "6d523456cbd4ded97a94e0d643dadf71e1bd283ece8c8172859c8059a424e56d"
+    },
+    {
+      "selection_sha256": "4a509eef0f70891d43bd7efbeed646486b07997aedaf430e0d3a4ebae76d39a5",
+      "indices": [
+        767,
+        768
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "2e3fd0079edb1e838ec9ff574b75c7cdac75232aed3ad8120ba63c7074cd4f10"
+    },
+    {
+      "selection_sha256": "4ac2f43316013dfe8b96e753ba5027732dc823da199908b8b88511b8de9381be",
+      "indices": [
+        507,
+        508
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "1e85c23bc3758c2663c44dd4f4c9a777bbcd085deefabb7f25ba006071aa2a80"
+    },
+    {
+      "selection_sha256": "4de29bf146cb94f9ac3d78d2db19065607f7a89991853d0fe409f5a82c02f892",
+      "indices": [
+        662,
+        663
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "dcec7f46f07bb179946e5b77776bffd8fe1e008621116f840760c8c37f2682c1"
+    },
+    {
+      "selection_sha256": "4ee6f874dc3fc13ad49f8d4b602bf84faef754b3b9bd5160dcd8988d7e864b18",
+      "indices": [
+        880,
+        881
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "4a057df98a9e76f4b1896fa9cd71f0cd485fed044fb1a740c298d3a68ffd9553"
+    },
+    {
+      "selection_sha256": "5320c472e2a1b1dc82efb6c0dfd6f1992c12c7f05d09a20bbb17480550d3723d",
+      "indices": [
+        512,
+        513
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "66ba2fcbd864b5a0a5d08ddf997554abcb448614f5e9eed5319c7f06013e6e4c"
+    },
+    {
+      "selection_sha256": "53fc27031571441dd2466f7da54eb6e868714821378ca225e1ac2f7022828425",
+      "indices": [
+        710,
+        711
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "f037ecd6feaf717baa93ee006439ac281b615c12bf4b5196293a3ab88ee4d38e"
+    },
+    {
+      "selection_sha256": "555dff318db8682290322d4eae5008d5348c2ed725af4aa8c9c45510bb60d0dd",
+      "indices": [
+        340,
+        341
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "d8bad1276d89a8486e7b97c5246ddbf3c75cde1a1bd040a09821367f0d45ae5a"
+    },
+    {
+      "selection_sha256": "596e29852928d879284208aa19e9f005e5aba978e2d74d1d955d4e476a0fdeab",
+      "indices": [
+        593,
+        594
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "03213372445c39ab65881beb8b40c90fda59c37f713d053a38cbe77642ee5d0e"
+    },
+    {
+      "selection_sha256": "5a619d55040619821a742192681cb3a2eb81ef2a998fc46eceaaac2b3b1426f7",
+      "indices": [
+        739,
+        740
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "d2249d13a6aba7360ea023421e73ffdc6ee678a96d685977a9f4609a07bb9cfc"
+    },
+    {
+      "selection_sha256": "5af6e39bc392c18d146145f6fd5202d0eb7ead7947b4cbb010712081d0a1d9bf",
+      "indices": [
+        1054,
+        1055
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "2765860ffc51949dae354abc0fdfff40d0789c44ab8b87ef4ddb5e0bf12f4392"
+    },
+    {
+      "selection_sha256": "5d2ebedad4a38779954740b1915c165e65461514b7dd6717ce8c7c9dde476d00",
+      "indices": [
+        929,
+        930
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "d6f0faaf05f0599558b03e4957392ff7553562bd63a0f2c5daab894a364b666b"
+    },
+    {
+      "selection_sha256": "5d5b418fa577252e8c722fcf17e4fc10760feaecc2823436bc846db2372789e8",
+      "indices": [
+        164,
+        165
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "f8fa552071c723e94df1874265c1bd3b4b7f666ce6639594712cc2e7c46973b9"
+    },
+    {
+      "selection_sha256": "5dea91089d496613834990ab19c1fdcb165e63a0ba58a940829123e2a04afde4",
+      "indices": [
+        363,
+        364
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "75365658aefe0704c4058aea3491e9bba82ed3a7831321072c294da19a2fc2f6"
+    },
+    {
+      "selection_sha256": "6176f0a4c337fe6ea0466ff635ad5b7986dcec944d5408f894395d6f94b7099b",
+      "indices": [
+        649,
+        650
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "46f1168548d50b0077d19b1d9e0094cde696bb9a51395780b96068add3501bcb"
+    },
+    {
+      "selection_sha256": "6290550e8740bb6d6e58a17c000111a0fe18dd4e4f08f081c747da463d2b509e",
+      "indices": [
+        233,
+        234
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "ba7789630248d12e4f77c556154dd50f9a1d3ee181a5359064c9937fb011c955"
+    },
+    {
+      "selection_sha256": "6a4dd3070e7deeff4c42134a55dca91c3ab19c4d262c3489f49213dea14e287a",
+      "indices": [
+        117,
+        118
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "0afe68f8fbfee6a282810548e0dfdbbd7465990653e222d98228acc8686eddee"
+    },
+    {
+      "selection_sha256": "6ada4c4d250a9a177e39c2ecae6cc461de5161294047af9ac5450eff6b5b79dd",
+      "indices": [
+        624,
+        625
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "07e349777ec05333a2c67e9b13cdec974b72c6d769c743e69ab44f91a83599e6"
+    },
+    {
+      "selection_sha256": "6b524c7986a49a42d76c788b444920592e666c3424d2c8f73518c02e809ae391",
+      "indices": [
+        847,
+        848
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "74c77d43d29b28309f8020ee3478c5eb9ea3cd0be7b3bfdc11ac071fe91a1e3f"
+    },
+    {
+      "selection_sha256": "6d53bf04f004979ab988171d6085fdb2c708ee46e6ddd413bb3fcae8688a504e",
+      "indices": [
+        546,
+        547
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "5319ede1466b0ec773906b5701db08da828e0e42689bf9e965c6d2cbd85bf843"
+    },
+    {
+      "selection_sha256": "6d9f6858e68f8c5c42049d01e62b9328f2f0761576ea7baed6df55699ba039ec",
+      "indices": [
+        409,
+        410
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "434e6c77a6b05e97d01297c2710cf9c8258692b09c8ce1ea0d2329c8b99c52f0"
+    },
+    {
+      "selection_sha256": "6e28644ed85017bb9e42361915174dc67bbb8db6b2ad2cc65c854de06ccc1b24",
+      "indices": [
+        855,
+        856
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "e9aea9a98b8dc3d19651e16f238355e7ca02d447acc0b0ad7ed0cc49f46fa608"
+    },
+    {
+      "selection_sha256": "7080ade79e8519cea9b5d759d89d0c63ab23459602c2e5a78d0d0799efcbae16",
+      "indices": [
+        203,
+        204
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "a70ca27df937eff165d89a596b117a5cb24c34e8a37a105e2f1ac070625d3aca"
+    },
+    {
+      "selection_sha256": "72dd5e40b46bc488e0ce935bebccd0fff1914b547faee86ab6bd6c81d0527ce9",
+      "indices": [
+        580,
+        581
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "fd83991a3da4e2ee20981bbc876846ad64ff8a0119edfab69982693cb7019ebe"
+    },
+    {
+      "selection_sha256": "73b34457a3a5174cd779f2c5b1e10987d9c1cc0dfe86ab36a5c5e7582938267c",
+      "indices": [
+        753,
+        754
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "35cc4fe83d055ce5ae3366c6231e71574355bbc3f117a32c851867a4bf385d20"
+    },
+    {
+      "selection_sha256": "788b7b41d68610b51cdeb20ade322402ab95c4f77d0f52e0d8ef49abda431817",
+      "indices": [
+        983,
+        984
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "bb404b9850251ba427b978299f235e3dbd561947c2d27385d918f5dec6bdf954"
+    },
+    {
+      "selection_sha256": "78e407cb0e395c4e80177366310f467326f7e068c461d8d35ea1f07ffe7896b8",
+      "indices": [
+        146,
+        147
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "cbfcf4e2f4c39f7d193856929a9901eed9bf74b6adc4c7795dfd506af26494eb"
+    },
+    {
+      "selection_sha256": "798f91f2f4c86230e2b1656ebc8938702bc734302f2200a911a5950ccf0d9d59",
+      "indices": [
+        329,
+        330
+      ],
+      "gold": [
+        "A",
+        "B"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "c934f0e6372a2d50b11bcecafee2ab8e82115bbb617d877b5f042ac3b6ebd851"
+    },
+    {
+      "selection_sha256": "7aa96f5c1f94bf251fb70badd20618964cc40c64b3c9dfbe74097149772d1a9a",
+      "indices": [
+        313,
+        314
+      ],
+      "gold": [
+        "B",
+        "A"
+      ],
+      "token_edit_distance": 1,
+      "original_prompt_hash": "42cfd3081b2504739e32c9bc0eff6366b549da981d7c889d32ef2f0d97429b5d"
+    }
+  ]
+}
