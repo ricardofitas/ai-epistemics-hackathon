@@ -1,0 +1,91 @@
+{
+  "wino": {
+    "progress": {
+      "active": 0,
+      "at": "2026-11-15T03:51:29.979513+00:00",
+      "attempts": 1033,
+      "cap_credits": 30.0,
+      "capacity": 4,
+      "complete": 949,
+      "complete_causal_response_pairs": 463,
+      "elapsed_seconds": 3266.9796768730002,
+      "http429_attempts": 9,
+      "inflight_reservation_credits": 2.5804011705155006e-16,
+      "new_post_cutoff_utc": "2026-11-15T10:15:00Z",
+      "pending": 0,
+      "planned": 1024,
+      "planned_causal_response_pairs": 512,
+      "recorded_unique": 1024,
+      "spent_or_committed_credits": 1.1363320410000033,
+      "statuses": {
+        "504": 75,
+        "stop": 949
+      },
+      "stop": null,
+      "unique_started": 1024,
+      "unknown_started": 75,
+      "withheld_unpairable_mates": 0
+    },
+    "attempt_records": 1033,
+    "eligible_by_model": {
+      "gemma-4-31b-it": 250,
+      "glm-5.2": 250,
+      "qwen3.8-27b": 248,
+      "deepseek-v4-flash": 201
+    },
+    "http_status_attempts": {
+      "504": 75,
+      "200": 949,
+      "429": 9
+    },
+    "repeated_slots": 9,
+    "earlier_attempts_all429": true,
+    "ineligible200_empty": []
+  },
+  "siqa": {
+    "progress": {
+      "active": 2,
+      "at": "2026-11-15T03:50:08.473135+00:00",
+      "attempts": 602,
+      "cap_credits": 70.0,
+      "capacity": 2,
+      "complete": 500,
+      "complete_causal_response_pairs": 230,
+      "elapsed_seconds": 3185.880020142,
+      "http429_attempts": 8,
+      "inflight_reservation_credits": 0.00251803999999989,
+      "new_post_cutoff_utc": "2026-11-15T10:15:00Z",
+      "pending": 2606,
+      "planned": 3200,
+      "planned_causal_response_pairs": 1600,
+      "recorded_unique": 592,
+      "spent_or_committed_credits": 1.154082967000001,
+      "statuses": {
+        "504": 90,
+        "stop": 502
+      },
+      "stop": null,
+      "unique_started": 594,
+      "unknown_started": 94,
+      "withheld_unpairable_mates": 0
+    },
+    "attempt_records": 600,
+    "eligible_by_model": {
+      "gemma-4-31b-it": 145,
+      "qwen3.8-27b": 135,
+      "glm-5.2": 134,
+      "deepseek-v4-flash": 86
+    },
+    "http_status_attempts": {
+      "200": 502,
+      "504": 90,
+      "429": 8
+    },
+    "repeated_slots": 8,
+    "earlier_attempts_all429": true,
+    "ineligible200_empty": [
+      "SIQA-CF-0040-A1-M0",
+      "SIQA-CF-0046-A0-M0"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "status": "PASS_READ_ONLY_FROZEN_MANIFEST_AND_INITIAL_RESPONSE_IDENTITY",
+  "studies": {
+    "wino": {
+      "study_planned": 1024,
+      "manifest_sha256": "b7374835790f312c2730a959079e379f6eb81006dc9cdaba361acd295fa077c8",
+      "models": {
+        "deepseek-v4-flash": 256,
+        "gemma-4-31b-it": 256,
+        "glm-5.2": 256,
+        "qwen3.8-27b": 256
+      },
+      "snapshot_utc": "2026-11-15T03:51:29.979513+00:00",
+      "artifact": 14145575877,
+      "unique_intents": 1024,
+      "terminal_attempts": 1033,
+      "complete_verified": 949,
+      "inflight_snapshot": 0,
+      "pending_snapshot": 0,
+      "complete_adjacent_arm_pairs_snapshot": 463,
+      "cap_credits": 30,
+      "executor_spent_or_committed_credits": 1.1363320410000033,
+      "scope": "Actual terminal evidence only. Frozen pre-inference RESULTS with0responses is not a measured study result; intents are not verified provider completions."
+    },
+    "siqa": {
+      "study_planned": 3200,
+      "manifest_sha256": "1a0b6f7bf7eefa5ef6240289191df0295e5214b098403c0879cf3ebc69abe131",
+      "models": {
+        "qwen3.8-27b": 800,
+        "gemma-4-31b-it": 800,
+        "deepseek-v4-flash": 800,
+        "glm-5.2": 800
+      },
+      "snapshot_utc": "2026-11-15T03:50:08.473135+00:00",
+      "artifact": 14145074595,
+      "unique_intents": 594,
+      "terminal_attempts": 600,
+      "complete_verified": 500,
+      "inflight_snapshot": 2,
+      "pending_snapshot": 2606,
+      "complete_adjacent_arm_pairs_snapshot": 230,
+      "cap_credits": 70,
+      "executor_spent_or_committed_credits": 1.154082967000001,
+      "scope": "Actual terminal evidence only. Frozen pre-inference RESULTS with0responses is not a measured study result; intents are not verified provider completions."
+    }
+  },
+  "new_calls_by_observer": 0,
+  "manuscript_changes": 0,
+  "credential_changes": 0,
+  "scientific_results_inferred_from_initial_snapshot": false
+}

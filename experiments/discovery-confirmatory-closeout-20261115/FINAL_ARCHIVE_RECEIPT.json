@@ -1,0 +1,40 @@
+{
+  "final_artifact": 14145870067,
+  "final_zip_sha256": "eaddd195b37732da72dce4a96ce573ffcb4ad9a7a38a951e21a9721ce70c8a39",
+  "final_zip_bytes": 121247166,
+  "final_vs_wave65_byte_identical": {
+    "attempts.jsonl": true,
+    "intent.jsonl": true,
+    "analysis/LEDGER.jsonl": true,
+    "analysis/RESULTS.json": false,
+    "progress.json": false
+  },
+  "final": {
+    "active": 0,
+    "at": "2026-11-15T03:51:31.434887+00:00",
+    "attempts": 1033,
+    "cap_credits": 30.0,
+    "capacity": 4,
+    "complete": 949,
+    "complete_causal_response_pairs": 463,
+    "elapsed_seconds": 3268.435072876,
+    "http429_attempts": 9,
+    "inflight_reservation_credits": 2.5804011705155006e-16,
+    "new_post_cutoff_utc": "2026-11-15T10:15:00Z",
+    "pending": 0,
+    "planned": 1024,
+    "planned_causal_response_pairs": 512,
+    "recorded_unique": 1024,
+    "spent_or_committed_credits": 1.1363320410000033,
+    "statuses": {
+      "504": 75,
+      "stop": 949
+    },
+    "stop": null,
+    "unique_started": 1024,
+    "unknown_started": 75,
+    "withheld_unpairable_mates": 0
+  },
+  "primary_and_terminal_counts_match": true,
+  "nonidentical_files_scope": "Clock fields change between final wave and final reanalysis; primary identical, attempts/intent/native ledger byte-identical."
+}
