@@ -1,0 +1,55 @@
+{
+  "study": "gammaf-v2-full-options-20261115",
+  "updated_at": "2026-11-15T20:48:00Z",
+  "phase": "bounded_step_active_provider_activity_not_yet_observable",
+  "execution": {
+    "repository": "rfitas-lab/rfdl-lab-os",
+    "branch": "epistemics/gammaf-v2-repair-20261115",
+    "run_id": 43759531220,
+    "job_id": 132950986201,
+    "url": "https://github.com/rfitas-lab/rfdl-lab-os/actions/runs/43759531220",
+    "launch_commit": "b56e72bec57730d299e8960ea90dba2d1c1d0486",
+    "sealed_delivery_commit": "1f286f21f34c7ceaaa0c6ab1787ef4ffea3589c1",
+    "preflight": "PASS",
+    "provider_calls_verified": null,
+    "completed_debates_verified": null
+  },
+  "plan": {
+    "questions": 32,
+    "paired_worlds": 64,
+    "debates": 128,
+    "full_answer_option_text": true,
+    "graphs": [
+      "chain",
+      "star"
+    ],
+    "model": "qwen3.8-27b",
+    "max_physical_attempts": 4500,
+    "max_conservative_nominal_units": 100,
+    "max_elapsed_seconds": 21600,
+    "absolute_cutoff_utc": "2026-11-16T03:30:00Z",
+    "plan_sha256": "98e2fa920cef8f600d7a2fdc39e0dee1848b527a8d4f4337415dea4771d5dbc7",
+    "freeze_sha256": "e6bb430ee20c90bb23b4c4746a49acf291afacc2c10a9e930b3d41872cebf510",
+    "manifest_hash": "843df20c86a7f6769927c308eb3716834aa282ae0e0ce8e4819fe676fe1c3f7e"
+  },
+  "continuation": {
+    "automation_id": "Automation_9bccd9e0f3488191a8bc99e6b9f9ba65",
+    "max_checks": 9,
+    "first_check_utc": "2026-11-15T21:47:00Z",
+    "scope": "Read-only while run active; verify all artifacts and perform frozen offline analysis on completion; no automatic paid rerun or cohort expansion."
+  },
+  "prior_recount": {
+    "source_condition": "original letter-only options, not repaired experiment",
+    "pairs": 256,
+    "fixed_honest_gold_to_wrong_target_debates": {
+      "posthoc": 89,
+      "inline": 65
+    },
+    "delivered_correct": {
+      "posthoc": 40,
+      "inline": 39
+    },
+    "report": "prior_recount/REPORT.md"
+  },
+  "manuscript_changed": false
+}
