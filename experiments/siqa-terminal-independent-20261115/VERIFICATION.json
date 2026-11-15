@@ -1,0 +1,83 @@
+{
+  "status": "PASS_AUTHENTICATED_SIQA_SNAPSHOT_NO_SEMANTIC_LABELS",
+  "artifact_id": 14147989989,
+  "sha256": "b23f7ef53290ba95fc1a56271fb2f8be7612d4662a32440a787ca2d839943dcd",
+  "manifest_sha256": "1a0b6f7bf7eefa5ef6240289191df0295e5214b098403c0879cf3ebc69abe131",
+  "progress": {
+    "active": 0,
+    "at": "2026-11-15T05:33:46.867872+00:00",
+    "attempts": 3209,
+    "cap_credits": 70.0,
+    "capacity": 4,
+    "complete": 2920,
+    "complete_causal_response_pairs": 1361,
+    "elapsed_seconds": 9404.276872647999,
+    "http429_attempts": 9,
+    "inflight_reservation_credits": -2.2659825404947043e-16,
+    "new_post_cutoff_utc": "2026-11-15T10:15:00Z",
+    "pending": 0,
+    "planned": 3200,
+    "planned_causal_response_pairs": 1600,
+    "recorded_unique": 3200,
+    "spent_or_committed_credits": 6.643208706999992,
+    "statuses": {
+      "504": 265,
+      "length": 12,
+      "stop": 2923
+    },
+    "stop": null,
+    "unique_started": 3200,
+    "unknown_started": 280,
+    "withheld_unpairable_mates": 0
+  },
+  "intents": 3209,
+  "attempt_records_and_matching_raw_captures": 3209,
+  "distinct_provider_response_ids": 2935,
+  "by_model": {
+    "gemma-4-31b-it": {
+      "200": 774,
+      "eligible": 774,
+      "504": 26,
+      "unknown_final": 26,
+      "429": 2,
+      "explicit429_rejected_attempt": 2
+    },
+    "qwen3.8-27b": {
+      "200": 783,
+      "eligible": 769,
+      "504": 17,
+      "unknown_final": 31,
+      "429": 3,
+      "explicit429_rejected_attempt": 3
+    },
+    "deepseek-v4-flash": {
+      "504": 129,
+      "unknown_final": 130,
+      "200": 671,
+      "eligible": 670,
+      "429": 1,
+      "explicit429_rejected_attempt": 1
+    },
+    "glm-5.2": {
+      "200": 707,
+      "eligible": 707,
+      "504": 93,
+      "unknown_final": 93,
+      "429": 3,
+      "explicit429_rejected_attempt": 3
+    }
+  },
+  "terminal_http504": 265,
+  "terminal_200_length_unknown": 12,
+  "terminal_200_empty_stop_unknown": 3,
+  "only_prior429_repeated": true,
+  "usage_returned_200_including_unknowns": {
+    "prompt_tokens": 350346,
+    "completion_tokens": 1538721
+  },
+  "semantic_labels_in_runtime_artifact": 0,
+  "human_annotations_by_observer": 0,
+  "observer_model_calls": 0,
+  "semantic_review_owner": "Direct research execution worker; this observer assigns no labels",
+  "limits": "Native response-pair coverage is not semantic coverage. Cost commitment is not final billing or confirmed currency."
+}
