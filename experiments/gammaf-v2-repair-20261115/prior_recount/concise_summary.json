@@ -1,0 +1,41 @@
+{
+  "scope": "Offline diagnostic on the original abbreviated-option run; not the new repaired experiment.",
+  "complete_question_clusters": 64,
+  "paired_worlds": 256,
+  "initially_honest_transition_slots_per_policy": 3584,
+  "observed_slots_per_policy": 3584,
+  "published_switch_debates_posthoc_inline": [
+    64,
+    23
+  ],
+  "fixed_raw_target_switch_debates_posthoc_inline": [
+    89,
+    65
+  ],
+  "fixed_raw_change_pp": -9.375,
+  "fixed_raw_change_ci95_pp": [
+    -15.234375,
+    -3.90625
+  ],
+  "fixed_contact_switch_debates_posthoc_inline": [
+    70,
+    43
+  ],
+  "fixed_contact_change_pp": -10.546875,
+  "fixed_contact_change_ci95_pp": [
+    -17.1875,
+    -4.6875
+  ],
+  "delivered_correct_posthoc_inline": [
+    40,
+    39
+  ],
+  "delivered_change_pp": -0.390625,
+  "delivered_change_ci95_pp": [
+    -5.078125,
+    4.296875
+  ],
+  "baseline_votes_scored_with_inline_flags_switch_debates": 24,
+  "cross_mask_warning": "Counterfactual rescoring holds votes fixed; this is not a causal decomposition or an intervention result.",
+  "verification": "All512 published edge counts reproduced individually; paired round1 votes match256/256; no ABSTAIN or missing observed votes."
+}

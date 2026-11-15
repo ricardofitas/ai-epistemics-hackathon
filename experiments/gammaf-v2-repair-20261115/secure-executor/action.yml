@@ -1,0 +1,5 @@
+name: Execute authorized GAMMAF repair using ephemeral sealed credential
+description: Receives a run-bound encrypted credential and executes the frozen, bounded repair plan.
+runs:
+  using: node20
+  main: run.cjs

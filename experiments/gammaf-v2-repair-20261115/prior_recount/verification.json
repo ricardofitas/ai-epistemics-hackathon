@@ -1,0 +1,14 @@
+{
+  "checkpoint_count": 512,
+  "rounds_complete": 512,
+  "all_votes_complete": 512,
+  "all_flags_complete": 512,
+  "ABSTAIN_count": 0,
+  "round1_votes_identical_pairs": 256,
+  "published_shadow_exact_per_row": 512,
+  "upstream_blobs": {
+    "MMLU": "12138bd80e0f7142bdc7e88e5ca520cae82728b0",
+    "MMLUPRO": "18d029246e497ae2d005b0a6a2e075ce603240e3",
+    "CSQA": "d58e8d938c4167426cdbe35fbe660b151653ffc2"
+  }
+}

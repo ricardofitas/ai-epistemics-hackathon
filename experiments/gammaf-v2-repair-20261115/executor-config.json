@@ -1,0 +1,19 @@
+{
+  "study": "gammaf-v2-full-options-20261115",
+  "plan_path": "plan.json",
+  "plan_sha256": "98e2fa920cef8f600d7a2fdc39e0dee1848b527a8d4f4337415dea4771d5dbc7",
+  "deadline_utc": "2026-11-16T03:30:00Z",
+  "preflight_command": [
+    "python",
+    "scripts/preflight_repair.py"
+  ],
+  "inference_command": [
+    "python",
+    "-u",
+    "scripts/run_repaired_live.py",
+    "--mode",
+    "adaption",
+    "--out",
+    "artifacts/repaired_full_options"
+  ]
+}

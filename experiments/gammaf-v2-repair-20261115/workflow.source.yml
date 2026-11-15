@@ -1,0 +1,79 @@
+name: GAMMAF v2 full-option paired repair
+on:
+  push:
+    branches: [epistemics/gammaf-v2-repair-20261115]
+    paths: ['experiments/gammaf-v2-repair-20261115/LAUNCH.json']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: gammaf-v2-full-options-20261115
+  cancel-in-progress: false
+jobs:
+  paired-full-option-repair:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Record hard job duration boundary
+        run: echo "EXECUTOR_JOB_STARTED_EPOCH_MS=$(date +%s%3N)" >> "$GITHUB_ENV"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: experiments/gammaf-v2-repair-20261115
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.11'
+      - name: Verify frozen source and fixed prospective plan
+        working-directory: experiments/gammaf-v2-repair-20261115
+        run: python validate_executor.py
+      - name: Install execution dependencies
+        working-directory: experiments/gammaf-v2-repair-20261115
+        run: python -m pip install -r requirements-executor.txt
+      - name: Offline preflight before model requests
+        working-directory: experiments/gammaf-v2-repair-20261115
+        run: python validate_executor.py --preflight
+      - name: Retain frozen plan before model requests
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: gammaf-v2-repair-frozen-${{ github.run_id }}
+          path: |
+            experiments/gammaf-v2-repair-20261115/FREEZE.json
+            experiments/gammaf-v2-repair-20261115/plan.json
+            experiments/gammaf-v2-repair-20261115/LAUNCH.json
+            experiments/gammaf-v2-repair-20261115/executor-config.json
+          retention-days: 90
+          if-no-files-found: error
+      - name: Create ephemeral credential exchange keypair
+        id: ephemeral
+        run: node experiments/gammaf-v2-repair-20261115/secure-executor/keypair.cjs
+      - name: Publish public credential exchange key only
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: ${{ steps.ephemeral.outputs.artifact_name }}
+          path: experiments/gammaf-v2-repair-20261115/credential-public.json
+          retention-days: 1
+          if-no-files-found: error
+      - name: Execute bounded paired repair
+        uses: ./experiments/gammaf-v2-repair-20261115/secure-executor
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Recount fixed populations and paired outcomes
+        if: always()
+        working-directory: experiments/gammaf-v2-repair-20261115
+        run: |
+          if [ -f artifacts/repaired_full_options/repaired_results.json ]; then
+            python scripts/analyze_repaired_results.py --manifest artifacts/repaired_manifest.json --results artifacts/repaired_full_options/repaired_results.json --out artifacts/repaired_full_options/analysis
+          fi
+      - name: Retain every completion, unknown and runtime receipt
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: gammaf-v2-repair-results-${{ github.run_id }}
+          path: |
+            experiments/gammaf-v2-repair-20261115/capture
+            experiments/gammaf-v2-repair-20261115/artifacts
+            experiments/gammaf-v2-repair-20261115/plan.json
+            experiments/gammaf-v2-repair-20261115/FREEZE.json
+          retention-days: 90
+          if-no-files-found: warn

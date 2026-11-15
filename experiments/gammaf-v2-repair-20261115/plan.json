@@ -1,0 +1,19 @@
+{
+  "study": "gammaf-v2-full-options-20261115",
+  "source_repository": "ricardofitas/ai-epistemics-hackathon",
+  "source_commit": "94cc84d54df5f8df83a9470d035d94860a05d6cf",
+  "replication_manifest": "artifacts/repaired_manifest.json",
+  "replication_manifest_sha256": "843df20c86a7f6769927c308eb3716834aa282ae0e0ce8e4819fe676fe1c3f7e",
+  "max_api_calls": 4500,
+  "max_credits": 100,
+  "max_runtime_seconds": 21600,
+  "deadline_utc": "2026-11-16T03:30:00Z",
+  "model": "qwen3.8-27b",
+  "planned_questions": 32,
+  "planned_pairs": 64,
+  "planned_debates": 128,
+  "primary": "paired delivered correctness; recovered and lost correct answers; missing-outcome bounds",
+  "stop": "First physical-request, conservative-credit, six-hour or fixed UTC boundary; stop on fatal auth/model/payload HTTP status or20 consecutive transport failures. No outcome-based selection or extension.",
+  "original_role_oracle_notices_retained": true,
+  "source_data_private": true
+}
