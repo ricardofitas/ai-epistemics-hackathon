@@ -1,0 +1,20 @@
+{
+  "new_POST_attempts_excluding_seed": 574,
+  "seed_attempts_preserved": 68,
+  "new_POST_http_statuses": {
+    "200": 518,
+    "504": 52,
+    "429": 4
+  },
+  "completed_reused": 65,
+  "completed_new": 518,
+  "complete_total": 583,
+  "unknown_total": 53,
+  "new_504_unknown": 52,
+  "old_504_unknown_preserved": 1,
+  "last_terminal_429_unresolved": 0,
+  "new_unique_request_IDs": 570,
+  "all_intent_ids": 636,
+  "final_executor_spent_or_committed_credits": 1.3930017719999996,
+  "cost_scope": "Executor reservation/usage accounting includes seeded prior replies and unknown reservations; not independently confirmed provider billing or a confirmed currency amount."
+}

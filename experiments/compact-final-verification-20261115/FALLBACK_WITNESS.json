@@ -1,0 +1,93 @@
+{
+  "source_revision": "59bb367bd8565f347266a48ac1230af0b5131b97",
+  "source_file": "evalscope/utils/multi_choices.py",
+  "source_git_blob": "fbeb457119168b114e6a8f7833ac553512c51724",
+  "source_sha256": "3808f440b9812d0446aee17c8a6a7c79ce4c9d5a26bb5bc602cadbf715e63fa7",
+  "exact_public_source_bytes_confirmed": true,
+  "execution_scope": "Whole unmodified leaf module, stdlib imports plus declared type-only evaluator facade; not installed framework CLI. No provider calls.",
+  "examples": [
+    {
+      "trial_id": "evalscope-siqa-0d4f647315956a64-884f13-448-m1",
+      "request_sha256": "40d38f697b237dba8f85db4b731f1ff4dbb6c9f949812bc05f516ebc09052c4b",
+      "raw_capture_sha256": "1606ef53c280c87c0447815200b8a2453231dfaf66ae1814a627ab8df887c9ee",
+      "text": "Please provide the text or context associated with this question so I can determine the correct answer. Since no story or passage was provided, I cannot identify what Ash wants to do.",
+      "original_native_parsed": [
+        "A"
+      ],
+      "source_gold": "C",
+      "native_credit": false,
+      "last_uppercase": "A",
+      "last_uppercase_is_word_initial": true,
+      "last_uppercase_offset": 167
+    },
+    {
+      "trial_id": "evalscope-siqa-2e4d83cb118df7b3-884f13-452-m1",
+      "request_sha256": "c37ff9b42a604789daab9891eb27846191a6ea7e2815da738892d2d67126b331",
+      "raw_capture_sha256": "2d74eb0f848fab7392062d49847356bd3f56aa9eb3cfb366afc2d930db5c0513",
+      "text": "Please provide the text or context associated with this question so that I can determine how Ash feels. Without the story or passage, it is impossible to select the correct answer.",
+      "original_native_parsed": [],
+      "source_gold": "B",
+      "native_credit": false,
+      "last_uppercase": "W",
+      "last_uppercase_is_word_initial": true,
+      "last_uppercase_offset": 104
+    },
+    {
+      "trial_id": "evalscope-siqa-3e588ef935f5d52a-884f13-996-m1",
+      "request_sha256": "cffb22752c5ed100b3b306db9ba03f360bcd724f7ad3f5519a4d259c646fb6ed",
+      "raw_capture_sha256": "c793c790f4d398ff174614e5fb30068e801c2cbb7e0a3c1cc6ecde77180da315",
+      "text": "Please provide the text or context associated with this question. Without the story or passage describing Bailey and the examination booklet, it is impossible to determine the correct answer.",
+      "original_native_parsed": [
+        "B"
+      ],
+      "source_gold": "C",
+      "native_credit": false,
+      "last_uppercase": "B",
+      "last_uppercase_is_word_initial": true,
+      "last_uppercase_offset": 106
+    },
+    {
+      "trial_id": "evalscope-siqa-713393d681f77ef7-884f13-523-m1",
+      "request_sha256": "f30febe4c042aa183ef7c9744fff8742c5cbdee6d109152279febfdbc252589c",
+      "raw_capture_sha256": "f52554afd14a28e60d8d18b837637dc93e1979f593f5b0dedda16f6186d32c36",
+      "text": "Please provide the text or context associated with this question so I can determine the correct answer. Without the source material, I cannot know how Jesse feels.",
+      "original_native_parsed": [],
+      "source_gold": "B",
+      "native_credit": false,
+      "last_uppercase": "J",
+      "last_uppercase_is_word_initial": true,
+      "last_uppercase_offset": 151
+    },
+    {
+      "trial_id": "evalscope-siqa-aa3cc7501d81a384-884f13-1285-m1",
+      "request_sha256": "1c9ea8e8e59700ba54d5786c88442f687f07eea320fcf572bfec034f2a5eba0c",
+      "raw_capture_sha256": "2f821fca6d469032e385b51ca37b3dba6cc2bd2dd340a85beb2616afc003ec13",
+      "text": "Please provide the text or context associated with this question. Without the story or passage describing Carson's actions, it is impossible to determine the correct answer.",
+      "original_native_parsed": [
+        "C"
+      ],
+      "source_gold": "C",
+      "native_credit": true,
+      "last_uppercase": "C",
+      "last_uppercase_is_word_initial": true,
+      "last_uppercase_offset": 106
+    },
+    {
+      "trial_id": "evalscope-siqa-f0463f8a2d40805f-884f13-678-m1",
+      "request_sha256": "a4925b21fcec7ada139d559f76cb380f0e07b6f4c5ee2938faaa84c137d8b521",
+      "raw_capture_sha256": "630a85c6ce5ddb5a8fb3c6adb4b25b088e15faa9bf13b1ba9fa0fc237de06f58",
+      "text": "Please provide the text or context describing Skylar's situation so that I can determine the correct answer. Without the source text, I cannot identify what Skylar wants to do.",
+      "original_native_parsed": [],
+      "source_gold": "B",
+      "native_credit": false,
+      "last_uppercase": "S",
+      "last_uppercase_is_word_initial": true,
+      "last_uppercase_offset": 157
+    }
+  ],
+  "complete_no_explicit_label_reviewed": 6,
+  "native_credited": 1,
+  "primary_analysis_unchanged": true,
+  "exploratory_after_output": true,
+  "scope": "No explicit label; actual text requests missing context. Post-output lexical diagnostic, not human adjudication or criterion replacement."
+}

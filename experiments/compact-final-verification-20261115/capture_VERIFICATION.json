@@ -1,0 +1,658 @@
+{
+  "status": "PASS_SNAPSHOT_IDENTITIES_AND_INDEPENDENT_EXPLICIT_FINAL_PAIR_RECOUNT",
+  "wave": "capture",
+  "counts": {
+    "normalized_raw_hash_identity": 636,
+    "strict_complete": 583,
+    "explicit_final_independently_read": 577
+  },
+  "normalized_records": 636,
+  "normalized_complete": 583,
+  "new_unique_intent_ids_in_this_capture": 570,
+  "old_seed_intents": 68,
+  "explicit429_retry_checks": 6,
+  "unresolved_explicit_final_ids": [
+    "evalscope-siqa-0d4f647315956a64-884f13-448-m1",
+    "evalscope-siqa-2e4d83cb118df7b3-884f13-452-m1",
+    "evalscope-siqa-3e588ef935f5d52a-884f13-996-m1",
+    "evalscope-siqa-713393d681f77ef7-884f13-523-m1",
+    "evalscope-siqa-aa3cc7501d81a384-884f13-1285-m1",
+    "evalscope-siqa-f0463f8a2d40805f-884f13-678-m1"
+  ],
+  "native_scoring_not_independently_read_where_unresolved": true,
+  "complete_pairs": 228,
+  "core_complete_pairs": 115,
+  "supergpqa_explicit_source_correct_native_excluded": [
+    "oneeval-supergpqa-79c3e30236663098-867c95-1787-m0",
+    "oneeval-supergpqa-faabf10542bfb33e-867c95-25140-m1",
+    "oneeval-supergpqa-b46450306623e492-867c95-2873-m1",
+    "oneeval-supergpqa-faabf10542bfb33e-867c95-25140-m2",
+    "oneeval-supergpqa-b46450306623e492-867c95-2873-m2",
+    "oneeval-supergpqa-79c3e30236663098-867c95-1787-m2",
+    "oneeval-supergpqa-d6a4579dd2738af4-867c95-17551-m2",
+    "oneeval-supergpqa-faabf10542bfb33e-867c95-25140-m3",
+    "oneeval-supergpqa-79c3e30236663098-867c95-1787-m3"
+  ],
+  "redux_reference_only_changed": [
+    "oneeval-mmlu-redux-7fd55025a7bfd9ac-fb29da-25-m0",
+    "oneeval-mmlu-redux-59fba2a73b1e671e-457205-85-m0",
+    "oneeval-mmlu-redux-7fd55025a7bfd9ac-fb29da-25-m1",
+    "oneeval-mmlu-redux-59fba2a73b1e671e-457205-85-m1",
+    "oneeval-mmlu-redux-7fd55025a7bfd9ac-fb29da-25-m2",
+    "oneeval-mmlu-redux-59fba2a73b1e671e-457205-85-m2",
+    "oneeval-mmlu-redux-7fd55025a7bfd9ac-fb29da-25-m3",
+    "oneeval-mmlu-redux-59fba2a73b1e671e-457205-85-m3"
+  ],
+  "paired_summary": [
+    {
+      "tier": "core16",
+      "config_id": "evalscope-siqa",
+      "model": "qwen3.8-27b",
+      "stratum": "all_source_questions",
+      "source_questions": 16,
+      "complete_pairs": 13,
+      "repaired_wins": 1,
+      "original_wins": 1,
+      "ties": 11,
+      "paired_gain_missingness_bounds": [
+        -0.125,
+        0.0625
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        -0.23076923076923078,
+        0.23076923076923078
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "evalscope-siqa",
+      "model": "gemma-4-31b-it",
+      "stratum": "all_source_questions",
+      "source_questions": 16,
+      "complete_pairs": 14,
+      "repaired_wins": 4,
+      "original_wins": 1,
+      "ties": 9,
+      "paired_gain_missingness_bounds": [
+        0.125,
+        0.25
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        -0.07142857142857142,
+        0.5
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "evalscope-siqa",
+      "model": "deepseek-v4-flash",
+      "stratum": "all_source_questions",
+      "source_questions": 16,
+      "complete_pairs": 15,
+      "repaired_wins": 4,
+      "original_wins": 4,
+      "ties": 7,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.0625
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        -0.4,
+        0.4
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "evalscope-siqa",
+      "model": "glm-5.2",
+      "stratum": "all_source_questions",
+      "source_questions": 16,
+      "complete_pairs": 11,
+      "repaired_wins": 2,
+      "original_wins": 0,
+      "ties": 9,
+      "paired_gain_missingness_bounds": [
+        0.0625,
+        0.4375
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.45454545454545453
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "qwen3.8-27b",
+      "stratum": "all_source_questions",
+      "source_questions": 16,
+      "complete_pairs": 15,
+      "repaired_wins": 2,
+      "original_wins": 0,
+      "ties": 13,
+      "paired_gain_missingness_bounds": [
+        0.125,
+        0.1875
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.3333333333333333
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "qwen3.8-27b",
+      "stratum": "hint_present",
+      "source_questions": 8,
+      "complete_pairs": 7,
+      "repaired_wins": 2,
+      "original_wins": 0,
+      "ties": 5,
+      "paired_gain_missingness_bounds": [
+        0.25,
+        0.375
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.5714285714285714
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "qwen3.8-27b",
+      "stratum": "hint_empty_placeholder_control",
+      "source_questions": 8,
+      "complete_pairs": 8,
+      "repaired_wins": 0,
+      "original_wins": 0,
+      "ties": 8,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "gemma-4-31b-it",
+      "stratum": "all_source_questions",
+      "source_questions": 16,
+      "complete_pairs": 15,
+      "repaired_wins": 1,
+      "original_wins": 0,
+      "ties": 14,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.0625
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.2
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "gemma-4-31b-it",
+      "stratum": "hint_present",
+      "source_questions": 8,
+      "complete_pairs": 7,
+      "repaired_wins": 1,
+      "original_wins": 0,
+      "ties": 6,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.125
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.42857142857142855
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "gemma-4-31b-it",
+      "stratum": "hint_empty_placeholder_control",
+      "source_questions": 8,
+      "complete_pairs": 8,
+      "repaired_wins": 0,
+      "original_wins": 0,
+      "ties": 8,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "deepseek-v4-flash",
+      "stratum": "all_source_questions",
+      "source_questions": 16,
+      "complete_pairs": 16,
+      "repaired_wins": 5,
+      "original_wins": 0,
+      "ties": 11,
+      "paired_gain_missingness_bounds": [
+        0.3125,
+        0.3125
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.125,
+        0.5625
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "deepseek-v4-flash",
+      "stratum": "hint_present",
+      "source_questions": 8,
+      "complete_pairs": 8,
+      "repaired_wins": 5,
+      "original_wins": 0,
+      "ties": 3,
+      "paired_gain_missingness_bounds": [
+        0.625,
+        0.625
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.25,
+        0.875
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "deepseek-v4-flash",
+      "stratum": "hint_empty_placeholder_control",
+      "source_questions": 8,
+      "complete_pairs": 8,
+      "repaired_wins": 0,
+      "original_wins": 0,
+      "ties": 8,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "glm-5.2",
+      "stratum": "all_source_questions",
+      "source_questions": 16,
+      "complete_pairs": 16,
+      "repaired_wins": 1,
+      "original_wins": 0,
+      "ties": 15,
+      "paired_gain_missingness_bounds": [
+        0.0625,
+        0.0625
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.1875
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "glm-5.2",
+      "stratum": "hint_present",
+      "source_questions": 8,
+      "complete_pairs": 8,
+      "repaired_wins": 1,
+      "original_wins": 0,
+      "ties": 7,
+      "paired_gain_missingness_bounds": [
+        0.125,
+        0.125
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.375
+      ]
+    },
+    {
+      "tier": "core16",
+      "config_id": "oneeval-scienceqa",
+      "model": "glm-5.2",
+      "stratum": "hint_empty_placeholder_control",
+      "source_questions": 8,
+      "complete_pairs": 8,
+      "repaired_wins": 0,
+      "original_wins": 0,
+      "ties": 8,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "evalscope-siqa",
+      "model": "qwen3.8-27b",
+      "stratum": "all_source_questions",
+      "source_questions": 32,
+      "complete_pairs": 27,
+      "repaired_wins": 5,
+      "original_wins": 2,
+      "ties": 20,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.15625
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        -0.07407407407407407,
+        0.2962962962962963
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "evalscope-siqa",
+      "model": "gemma-4-31b-it",
+      "stratum": "all_source_questions",
+      "source_questions": 32,
+      "complete_pairs": 30,
+      "repaired_wins": 7,
+      "original_wins": 3,
+      "ties": 20,
+      "paired_gain_missingness_bounds": [
+        0.09375,
+        0.15625
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        -0.06666666666666667,
+        0.3333333333333333
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "evalscope-siqa",
+      "model": "deepseek-v4-flash",
+      "stratum": "all_source_questions",
+      "source_questions": 32,
+      "complete_pairs": 24,
+      "repaired_wins": 7,
+      "original_wins": 5,
+      "ties": 12,
+      "paired_gain_missingness_bounds": [
+        -0.03125,
+        0.25
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        -0.20833333333333334,
+        0.375
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "evalscope-siqa",
+      "model": "glm-5.2",
+      "stratum": "all_source_questions",
+      "source_questions": 32,
+      "complete_pairs": 23,
+      "repaired_wins": 5,
+      "original_wins": 2,
+      "ties": 16,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.3125
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        -0.08695652173913043,
+        0.34782608695652173
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "qwen3.8-27b",
+      "stratum": "all_source_questions",
+      "source_questions": 32,
+      "complete_pairs": 30,
+      "repaired_wins": 4,
+      "original_wins": 0,
+      "ties": 26,
+      "paired_gain_missingness_bounds": [
+        0.125,
+        0.1875
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.03333333333333333,
+        0.26666666666666666
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "qwen3.8-27b",
+      "stratum": "hint_present",
+      "source_questions": 16,
+      "complete_pairs": 14,
+      "repaired_wins": 4,
+      "original_wins": 0,
+      "ties": 10,
+      "paired_gain_missingness_bounds": [
+        0.25,
+        0.375
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.07142857142857142,
+        0.5714285714285714
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "qwen3.8-27b",
+      "stratum": "hint_empty_placeholder_control",
+      "source_questions": 16,
+      "complete_pairs": 16,
+      "repaired_wins": 0,
+      "original_wins": 0,
+      "ties": 16,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "gemma-4-31b-it",
+      "stratum": "all_source_questions",
+      "source_questions": 32,
+      "complete_pairs": 31,
+      "repaired_wins": 3,
+      "original_wins": 0,
+      "ties": 28,
+      "paired_gain_missingness_bounds": [
+        0.0625,
+        0.09375
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.1935483870967742
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "gemma-4-31b-it",
+      "stratum": "hint_present",
+      "source_questions": 16,
+      "complete_pairs": 15,
+      "repaired_wins": 3,
+      "original_wins": 0,
+      "ties": 12,
+      "paired_gain_missingness_bounds": [
+        0.125,
+        0.1875
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.4
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "gemma-4-31b-it",
+      "stratum": "hint_empty_placeholder_control",
+      "source_questions": 16,
+      "complete_pairs": 16,
+      "repaired_wins": 0,
+      "original_wins": 0,
+      "ties": 16,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "deepseek-v4-flash",
+      "stratum": "all_source_questions",
+      "source_questions": 32,
+      "complete_pairs": 32,
+      "repaired_wins": 6,
+      "original_wins": 0,
+      "ties": 26,
+      "paired_gain_missingness_bounds": [
+        0.1875,
+        0.1875
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0625,
+        0.3125
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "deepseek-v4-flash",
+      "stratum": "hint_present",
+      "source_questions": 16,
+      "complete_pairs": 16,
+      "repaired_wins": 6,
+      "original_wins": 0,
+      "ties": 10,
+      "paired_gain_missingness_bounds": [
+        0.375,
+        0.375
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.125,
+        0.625
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "deepseek-v4-flash",
+      "stratum": "hint_empty_placeholder_control",
+      "source_questions": 16,
+      "complete_pairs": 16,
+      "repaired_wins": 0,
+      "original_wins": 0,
+      "ties": 16,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "glm-5.2",
+      "stratum": "all_source_questions",
+      "source_questions": 32,
+      "complete_pairs": 31,
+      "repaired_wins": 2,
+      "original_wins": 0,
+      "ties": 29,
+      "paired_gain_missingness_bounds": [
+        0.0625,
+        0.09375
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.16129032258064516
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "glm-5.2",
+      "stratum": "hint_present",
+      "source_questions": 16,
+      "complete_pairs": 15,
+      "repaired_wins": 2,
+      "original_wins": 0,
+      "ties": 13,
+      "paired_gain_missingness_bounds": [
+        0.125,
+        0.1875
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.3333333333333333
+      ]
+    },
+    {
+      "tier": "nested32",
+      "config_id": "oneeval-scienceqa",
+      "model": "glm-5.2",
+      "stratum": "hint_empty_placeholder_control",
+      "source_questions": 16,
+      "complete_pairs": 16,
+      "repaired_wins": 0,
+      "original_wins": 0,
+      "ties": 16,
+      "paired_gain_missingness_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_pairs_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "artifact_is_cumulative_not_atomic": "Analysis, raw replies and ledgers may differ by a few in-flight writes. Scientific counts refer to the exact NORMALIZED.jsonl snapshot, not later raw files.",
+  "new_calls_by_reviewer": 0
+}

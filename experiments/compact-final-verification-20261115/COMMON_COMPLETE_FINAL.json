@@ -1,0 +1,221 @@
+{
+  "scope": "Secondary availability-conditioned complete-case panel; unchanged primary planned-panel unknown bounds.",
+  "results": [
+    {
+      "tier": "core16",
+      "task": "evalscope-siqa",
+      "hint": true,
+      "model": "deepseek-v4-flash",
+      "complete_common_questions": 8,
+      "original_correct": 6,
+      "repaired_correct": 5
+    },
+    {
+      "tier": "core16",
+      "task": "evalscope-siqa",
+      "hint": true,
+      "model": "gemma-4-31b-it",
+      "complete_common_questions": 8,
+      "original_correct": 4,
+      "repaired_correct": 5
+    },
+    {
+      "tier": "core16",
+      "task": "evalscope-siqa",
+      "hint": true,
+      "model": "glm-5.2",
+      "complete_common_questions": 8,
+      "original_correct": 4,
+      "repaired_correct": 6
+    },
+    {
+      "tier": "core16",
+      "task": "evalscope-siqa",
+      "hint": true,
+      "model": "qwen3.8-27b",
+      "complete_common_questions": 8,
+      "original_correct": 5,
+      "repaired_correct": 5
+    },
+    {
+      "tier": "core16",
+      "task": "oneeval-scienceqa",
+      "hint": true,
+      "model": "deepseek-v4-flash",
+      "complete_common_questions": 6,
+      "original_correct": 3,
+      "repaired_correct": 6
+    },
+    {
+      "tier": "core16",
+      "task": "oneeval-scienceqa",
+      "hint": true,
+      "model": "gemma-4-31b-it",
+      "complete_common_questions": 6,
+      "original_correct": 4,
+      "repaired_correct": 5
+    },
+    {
+      "tier": "core16",
+      "task": "oneeval-scienceqa",
+      "hint": true,
+      "model": "glm-5.2",
+      "complete_common_questions": 6,
+      "original_correct": 5,
+      "repaired_correct": 6
+    },
+    {
+      "tier": "core16",
+      "task": "oneeval-scienceqa",
+      "hint": true,
+      "model": "qwen3.8-27b",
+      "complete_common_questions": 6,
+      "original_correct": 5,
+      "repaired_correct": 6
+    },
+    {
+      "tier": "core16",
+      "task": "oneeval-scienceqa",
+      "hint": false,
+      "model": "deepseek-v4-flash",
+      "complete_common_questions": 8,
+      "original_correct": 8,
+      "repaired_correct": 8
+    },
+    {
+      "tier": "core16",
+      "task": "oneeval-scienceqa",
+      "hint": false,
+      "model": "gemma-4-31b-it",
+      "complete_common_questions": 8,
+      "original_correct": 8,
+      "repaired_correct": 8
+    },
+    {
+      "tier": "core16",
+      "task": "oneeval-scienceqa",
+      "hint": false,
+      "model": "glm-5.2",
+      "complete_common_questions": 8,
+      "original_correct": 8,
+      "repaired_correct": 8
+    },
+    {
+      "tier": "core16",
+      "task": "oneeval-scienceqa",
+      "hint": false,
+      "model": "qwen3.8-27b",
+      "complete_common_questions": 8,
+      "original_correct": 8,
+      "repaired_correct": 8
+    },
+    {
+      "tier": "nested32",
+      "task": "evalscope-siqa",
+      "hint": true,
+      "model": "deepseek-v4-flash",
+      "complete_common_questions": 13,
+      "original_correct": 9,
+      "repaired_correct": 9
+    },
+    {
+      "tier": "nested32",
+      "task": "evalscope-siqa",
+      "hint": true,
+      "model": "gemma-4-31b-it",
+      "complete_common_questions": 13,
+      "original_correct": 8,
+      "repaired_correct": 9
+    },
+    {
+      "tier": "nested32",
+      "task": "evalscope-siqa",
+      "hint": true,
+      "model": "glm-5.2",
+      "complete_common_questions": 13,
+      "original_correct": 8,
+      "repaired_correct": 10
+    },
+    {
+      "tier": "nested32",
+      "task": "evalscope-siqa",
+      "hint": true,
+      "model": "qwen3.8-27b",
+      "complete_common_questions": 13,
+      "original_correct": 8,
+      "repaired_correct": 10
+    },
+    {
+      "tier": "nested32",
+      "task": "oneeval-scienceqa",
+      "hint": true,
+      "model": "deepseek-v4-flash",
+      "complete_common_questions": 12,
+      "original_correct": 9,
+      "repaired_correct": 12
+    },
+    {
+      "tier": "nested32",
+      "task": "oneeval-scienceqa",
+      "hint": true,
+      "model": "gemma-4-31b-it",
+      "complete_common_questions": 12,
+      "original_correct": 9,
+      "repaired_correct": 11
+    },
+    {
+      "tier": "nested32",
+      "task": "oneeval-scienceqa",
+      "hint": true,
+      "model": "glm-5.2",
+      "complete_common_questions": 12,
+      "original_correct": 10,
+      "repaired_correct": 12
+    },
+    {
+      "tier": "nested32",
+      "task": "oneeval-scienceqa",
+      "hint": true,
+      "model": "qwen3.8-27b",
+      "complete_common_questions": 12,
+      "original_correct": 10,
+      "repaired_correct": 12
+    },
+    {
+      "tier": "nested32",
+      "task": "oneeval-scienceqa",
+      "hint": false,
+      "model": "deepseek-v4-flash",
+      "complete_common_questions": 16,
+      "original_correct": 16,
+      "repaired_correct": 16
+    },
+    {
+      "tier": "nested32",
+      "task": "oneeval-scienceqa",
+      "hint": false,
+      "model": "gemma-4-31b-it",
+      "complete_common_questions": 16,
+      "original_correct": 16,
+      "repaired_correct": 16
+    },
+    {
+      "tier": "nested32",
+      "task": "oneeval-scienceqa",
+      "hint": false,
+      "model": "glm-5.2",
+      "complete_common_questions": 16,
+      "original_correct": 16,
+      "repaired_correct": 16
+    },
+    {
+      "tier": "nested32",
+      "task": "oneeval-scienceqa",
+      "hint": false,
+      "model": "qwen3.8-27b",
+      "complete_common_questions": 16,
+      "original_correct": 16,
+      "repaired_correct": 16
+    }
+  ]
+}
