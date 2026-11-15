@@ -1,0 +1,5 @@
+# Rule fixed with the correct options hidden
+
+For GPT-3 QCM-ALE, primary correction: keep every archived option on a nonblank record and assign zero credit to a blank model output. The denominator is every official test question. This isolates a real absence of a model answer without changing any ambiguous text. Sensitivity: a nonempty response that begins with an in-range `The answer is X.` immediately followed by `BECAUSE:` explicitly gives its answer in the response slot specified by QCM-ALE. Use this leading answer when the original pattern fails because it matched multiple sentences. Separately report all six such cases and their raw-answer and original-score agreement. All-blank rows remain uncredited. Bound the corrected count by assigning each of the six unresolved nonblank failures 0 or 1, holding the other rows fixed. These are finite-record bounds. Do not infer an unobserved baseline correction from this arm.
+
+For LLaVA use its source parser (which has extra leading-letter cases and returns -1 when unresolved). Report parse failures and saved-index disagreement. Leave uncertain answers free rather than forcing a reversal.

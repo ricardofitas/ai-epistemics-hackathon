@@ -1,0 +1,60 @@
+{
+  "panels": {
+    "excluded": {
+      "n": 268,
+      "pythia-160m": {
+        "official_correct": 134,
+        "constant_B_correct": 132
+      },
+      "pythia-12b": {
+        "official_correct": 163,
+        "constant_B_correct": 127
+      },
+      "winner_official": "pythia-12b",
+      "winner_constant_B": "pythia-160m"
+    },
+    "selection": {
+      "n": 485,
+      "pythia-160m": {
+        "official_correct": 264,
+        "constant_B_correct": 230
+      },
+      "pythia-12b": {
+        "official_correct": 319,
+        "constant_B_correct": 257
+      },
+      "winner_official": "pythia-12b",
+      "winner_constant_B": "pythia-12b"
+    },
+    "assessment": {
+      "n": 514,
+      "pythia-160m": {
+        "official_correct": 255,
+        "constant_B_correct": 241
+      },
+      "pythia-12b": {
+        "official_correct": 331,
+        "constant_B_correct": 267
+      },
+      "winner_official": "pythia-12b",
+      "winner_constant_B": "pythia-12b"
+    },
+    "full": {
+      "n": 1267,
+      "pythia-160m": {
+        "official_correct": 653,
+        "constant_B_correct": 603
+      },
+      "pythia-12b": {
+        "official_correct": 813,
+        "constant_B_correct": 651
+      },
+      "winner_official": "pythia-12b",
+      "winner_constant_B": "pythia-12b"
+    }
+  },
+  "previous_hashes": 234,
+  "excluded_option_groups": 142,
+  "heldout_loss_of_constant_B_selection": 0,
+  "scored": 1267
+}
