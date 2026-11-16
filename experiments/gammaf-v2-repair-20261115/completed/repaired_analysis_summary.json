@@ -1,0 +1,277 @@
+{
+  "scope": "Repaired full-labelled-options paired replication on a fixed previously used panel.",
+  "mode": "adaption",
+  "scientific_model_results": true,
+  "manifest_sha256": "843df20c86a7f6769927c308eb3716834aa282ae0e0ce8e4819fe676fe1c3f7e",
+  "by_arm": {
+    "GAMMAF-FixedTarget-PostHoc": {
+      "planned_debates": 64,
+      "observed_debates": 64,
+      "raw_target_event": {
+        "count_bounds": [
+          12,
+          12
+        ],
+        "percent_bounds": [
+          18.75,
+          18.75
+        ]
+      },
+      "fixed_contact_event": {
+        "count_bounds": [
+          9,
+          9
+        ],
+        "percent_bounds": [
+          14.0625,
+          14.0625
+        ]
+      },
+      "policy_gated_event": {
+        "count_bounds": [
+          9,
+          9
+        ],
+        "percent_bounds": [
+          14.0625,
+          14.0625
+        ]
+      },
+      "any_wrong_event": {
+        "count_bounds": [
+          36,
+          36
+        ],
+        "percent_bounds": [
+          56.25,
+          56.25
+        ]
+      },
+      "honest_plurality_correct": {
+        "count_bounds": [
+          54,
+          54
+        ],
+        "percent_bounds": [
+          84.375,
+          84.375
+        ]
+      },
+      "delivered_correct": {
+        "count_bounds": [
+          51,
+          51
+        ],
+        "percent_bounds": [
+          79.6875,
+          79.6875
+        ]
+      },
+      "raw_target_transitions": {
+        "count_bounds": [
+          20,
+          20
+        ]
+      },
+      "fixed_contact_transitions": {
+        "count_bounds": [
+          14,
+          14
+        ]
+      },
+      "policy_gated_transitions": {
+        "count_bounds": [
+          12,
+          12
+        ]
+      },
+      "policy_gated_edges": {
+        "count_bounds": [
+          14,
+          14
+        ]
+      },
+      "honest_transition_slots": 896,
+      "observed_honest_transition_slots": 896
+    },
+    "EpistemicGuard-Inline": {
+      "planned_debates": 64,
+      "observed_debates": 64,
+      "raw_target_event": {
+        "count_bounds": [
+          8,
+          8
+        ],
+        "percent_bounds": [
+          12.5,
+          12.5
+        ]
+      },
+      "fixed_contact_event": {
+        "count_bounds": [
+          6,
+          6
+        ],
+        "percent_bounds": [
+          9.375,
+          9.375
+        ]
+      },
+      "policy_gated_event": {
+        "count_bounds": [
+          4,
+          4
+        ],
+        "percent_bounds": [
+          6.25,
+          6.25
+        ]
+      },
+      "any_wrong_event": {
+        "count_bounds": [
+          26,
+          26
+        ],
+        "percent_bounds": [
+          40.625,
+          40.625
+        ]
+      },
+      "honest_plurality_correct": {
+        "count_bounds": [
+          55,
+          55
+        ],
+        "percent_bounds": [
+          85.9375,
+          85.9375
+        ]
+      },
+      "delivered_correct": {
+        "count_bounds": [
+          55,
+          55
+        ],
+        "percent_bounds": [
+          85.9375,
+          85.9375
+        ]
+      },
+      "raw_target_transitions": {
+        "count_bounds": [
+          13,
+          13
+        ]
+      },
+      "fixed_contact_transitions": {
+        "count_bounds": [
+          9,
+          9
+        ]
+      },
+      "policy_gated_transitions": {
+        "count_bounds": [
+          5,
+          5
+        ]
+      },
+      "policy_gated_edges": {
+        "count_bounds": [
+          5,
+          5
+        ]
+      },
+      "honest_transition_slots": 896,
+      "observed_honest_transition_slots": 896
+    }
+  },
+  "paired": {
+    "raw_target_event": {
+      "inline_minus_posthoc_pp_bounds": [
+        -6.25,
+        -6.25
+      ],
+      "question_stratified_bootstrap95_pp": [
+        -14.0625,
+        1.5625
+      ],
+      "question_clusters": 32,
+      "draws": 20000,
+      "interval_kind": "sampling interval"
+    },
+    "fixed_contact_event": {
+      "inline_minus_posthoc_pp_bounds": [
+        -4.6875,
+        -4.6875
+      ],
+      "question_stratified_bootstrap95_pp": [
+        -12.5,
+        1.5625
+      ],
+      "question_clusters": 32,
+      "draws": 20000,
+      "interval_kind": "sampling interval"
+    },
+    "policy_gated_event": {
+      "inline_minus_posthoc_pp_bounds": [
+        -7.8125,
+        -7.8125
+      ],
+      "question_stratified_bootstrap95_pp": [
+        -15.625,
+        -1.5625
+      ],
+      "question_clusters": 32,
+      "draws": 20000,
+      "interval_kind": "sampling interval"
+    },
+    "any_wrong_event": {
+      "inline_minus_posthoc_pp_bounds": [
+        -15.625,
+        -15.625
+      ],
+      "question_stratified_bootstrap95_pp": [
+        -29.6875,
+        -3.125
+      ],
+      "question_clusters": 32,
+      "draws": 20000,
+      "interval_kind": "sampling interval"
+    },
+    "honest_plurality_correct": {
+      "inline_minus_posthoc_pp_bounds": [
+        1.5625,
+        1.5625
+      ],
+      "question_stratified_bootstrap95_pp": [
+        -3.125,
+        6.25
+      ],
+      "question_clusters": 32,
+      "draws": 20000,
+      "interval_kind": "sampling interval"
+    },
+    "delivered_correct": {
+      "inline_minus_posthoc_pp_bounds": [
+        6.25,
+        6.25
+      ],
+      "question_stratified_bootstrap95_pp": [
+        -1.5625,
+        15.625
+      ],
+      "question_clusters": 32,
+      "draws": 20000,
+      "interval_kind": "sampling interval"
+    }
+  },
+  "paired_delivered_outcomes": {
+    "gain": 5,
+    "loss": 1,
+    "both_correct": 50,
+    "both_incorrect": 8,
+    "missing_one_or_both": 0
+  },
+  "round1_mismatch_worlds": [],
+  "physical_attempts": 2331
+}

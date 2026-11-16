@@ -1,7 +1,7 @@
 {
   "study": "gammaf-v2-full-options-20261115",
-  "updated_at": "2026-11-15T20:48:00Z",
-  "phase": "bounded_step_active_provider_activity_not_yet_observable",
+  "updated_at": "2026-11-16T00:37:00Z",
+  "phase": "COMPLETED_OFFLINE_REPLAY_VERIFIED",
   "execution": {
     "repository": "rfitas-lab/rfdl-lab-os",
     "branch": "epistemics/gammaf-v2-repair-20261115",
@@ -11,8 +11,14 @@
     "launch_commit": "b56e72bec57730d299e8960ea90dba2d1c1d0486",
     "sealed_delivery_commit": "1f286f21f34c7ceaaa0c6ab1787ef4ffea3589c1",
     "preflight": "PASS",
-    "provider_calls_verified": null,
-    "completed_debates_verified": null
+    "provider_calls_verified": 2331,
+    "completed_debates_verified": 128,
+    "successful_provider_completions": 2327,
+    "failed_transport_attempts": 4,
+    "completed_pairs_verified": 64,
+    "artifact_id": 14187560619,
+    "artifact_sha256": "b1a4a40ea417a0faff8578cfe2cdbebc3f660516e1fb69ace580b807a1ad8bad",
+    "finished_utc": "2026-11-16T00:06:36.761Z"
   },
   "plan": {
     "questions": 32,
@@ -36,7 +42,8 @@
     "automation_id": "Automation_9bccd9e0f3488191a8bc99e6b9f9ba65",
     "max_checks": 9,
     "first_check_utc": "2026-11-15T21:47:00Z",
-    "scope": "Read-only while run active; verify all artifacts and perform frozen offline analysis on completion; no automatic paid rerun or cohort expansion."
+    "scope": "Read-only while run active; verify all artifacts and perform frozen offline analysis on completion; no automatic paid rerun or cohort expansion.",
+    "terminal_guard": "Campaign complete: do not generate more model responses or resume/rerun. Preserve all outcomes, measurement caveats and unknown usage."
   },
   "prior_recount": {
     "source_condition": "original letter-only options, not repaired experiment",
@@ -51,5 +58,34 @@
     },
     "report": "prior_recount/REPORT.md"
   },
-  "manuscript_changed": false
+  "manuscript_changed": false,
+  "results": {
+    "posthoc_correct": 51,
+    "inline_correct": 55,
+    "gains": 5,
+    "losses": 1,
+    "delta_pp": 6.25,
+    "question_cluster_ci95_pp": [
+      -1.5625,
+      15.625
+    ],
+    "superiority_demonstrated": false,
+    "reasoning_only_replies": 919,
+    "nonempty_content_replies": 1408,
+    "content_parser_disagreements": 76,
+    "usage_known": false,
+    "new_inference_during_audit": 0,
+    "offline_replayed_debates": 128,
+    "cache_hits": 3840,
+    "cache_misses": 0
+  },
+  "delivery": {
+    "humanised_manuscript_preserved": true,
+    "separate_addendum": true,
+    "report": "completed/REPORT.md",
+    "pdf": "completed/GAMMAF_v2_full_options_addendum.pdf",
+    "txt": "completed/GAMMAF_v2_full_options_addendum.txt",
+    "raw_archive": "completed/raw/results.zip.part000 through part007; reconstruct_archive.py verifies ZIP hash",
+    "verifier": "completed/verify_replay.py"
+  }
 }
