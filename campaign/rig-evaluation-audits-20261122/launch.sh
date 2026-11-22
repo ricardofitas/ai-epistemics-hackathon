@@ -6,6 +6,7 @@ runtime="$(realpath "$1")"
 run_id="$2"
 receipt="$(realpath -m "$3")"
 unit="${4:-$run_id}"
+protocol="$(realpath "${5:-$campaign_dir/pilot.json}")"
 
 systemd-run --user --unit="$unit" \
     --description="WinoGrande campaign $run_id" --working-directory="$campaign_dir" \
@@ -13,4 +14,4 @@ systemd-run --user --unit="$unit" \
     --property=RestartSec=2min --property=StartLimitIntervalSec=20min \
     --property=StartLimitBurst=3 --setenv="PYTHONPATH=${PYTHONPATH:-}" \
     --setenv="SCIENCEQA_PYTHON=${SCIENCEQA_PYTHON:-python3}" --setenv=OMP_NUM_THREADS=2 \
-    /usr/bin/bash "$campaign_dir/run_campaign.sh" "$runtime" "$run_id" "$receipt"
+    /usr/bin/bash "$campaign_dir/run_campaign.sh" "$runtime" "$run_id" "$receipt" "$protocol"

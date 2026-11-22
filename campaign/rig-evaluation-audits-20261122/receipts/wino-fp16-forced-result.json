@@ -1,0 +1,82 @@
+{
+  "split": "pilot",
+  "pairs": 32,
+  "models_in_margin_order": [
+    "Qwen/Qwen2.5-0.5B-Instruct",
+    "HuggingFaceTB/SmolLM2-360M-Instruct"
+  ],
+  "observed_pairs": {
+    "Qwen/Qwen2.5-0.5B-Instruct": {
+      "full_official": 0,
+      "omitted_official": 0,
+      "full_constant_B": 24,
+      "omitted_constant_B": 0,
+      "full_invalid_items": 11,
+      "full_individual_official_correct": 27,
+      "full_individual_constant_B_correct": 53,
+      "full_identical_predictions": 27,
+      "omitted_invalid_items": 64,
+      "omitted_individual_official_correct": 0,
+      "omitted_individual_constant_B_correct": 0,
+      "omitted_identical_predictions": 32
+    },
+    "HuggingFaceTB/SmolLM2-360M-Instruct": {
+      "full_official": 0,
+      "omitted_official": 0,
+      "full_constant_B": 32,
+      "omitted_constant_B": 8,
+      "full_invalid_items": 0,
+      "full_individual_official_correct": 32,
+      "full_individual_constant_B_correct": 64,
+      "full_identical_predictions": 32,
+      "omitted_invalid_items": 0,
+      "omitted_individual_official_correct": 32,
+      "omitted_individual_constant_B_correct": 16,
+      "omitted_identical_predictions": 32
+    }
+  },
+  "pair_ranking": {
+    "full_official": {
+      "winner": "tie",
+      "first_minus_second_pp": 0.0
+    },
+    "omitted_official": {
+      "winner": "tie",
+      "first_minus_second_pp": 0.0
+    },
+    "full_constant_B": {
+      "winner": "HuggingFaceTB/SmolLM2-360M-Instruct",
+      "first_minus_second_pp": -25.0
+    },
+    "omitted_constant_B": {
+      "winner": "HuggingFaceTB/SmolLM2-360M-Instruct",
+      "first_minus_second_pp": -25.0
+    }
+  },
+  "contrasts": {
+    "official_gain": {
+      "percentage_points": 0,
+      "pair_bootstrap_95_pp": [
+        0,
+        0
+      ],
+      "missing_identification_interval_pp": [
+        -50.0,
+        9.375
+      ]
+    },
+    "key_by_sentence_interaction": {
+      "percentage_points": -75.0,
+      "pair_bootstrap_95_pp": [
+        -85.9375,
+        -64.0625
+      ],
+      "missing_identification_interval_pp": [
+        -137.5,
+        -15.625
+      ]
+    }
+  },
+  "eligible_for_heldout": false,
+  "meets_heldout_success_threshold": false
+}

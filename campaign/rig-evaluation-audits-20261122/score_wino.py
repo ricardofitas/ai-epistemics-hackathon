@@ -111,11 +111,21 @@ def main():
     parser.add_argument("database", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument("--split", choices=("pilot", "heldout"), required=True)
+    parser.add_argument("--protocol", type=Path, default=ROOT / "pilot.json")
     args = parser.parse_args()
-    models = json.loads((ROOT / "pilot.json").read_text())["models"]
+    protocol = json.loads(args.protocol.read_text())
+    models = protocol["models"]
     panel = json.loads((ROOT / "frozen-items.json").read_text())[args.split]
     rows = read_answers(args.database, models, panel)
     result = dict(split=args.split, **evaluate(rows, tuple(models), panel))
+    if protocol.get("answer_mode") == "forced_label" and protocol.get("torch_dtype") == "bfloat16":
+        expected = 4 * len(panel)
+        pass_gate = all(
+            (expected - counts["full_invalid_items"] - counts["omitted_invalid_items"]) / expected >= 0.99
+            for counts in result["observed_pairs"].values()
+        )
+        result["technical_recovery_gate_passed"] = pass_gate
+        result["eligible_for_heldout"] &= pass_gate
     args.output.write_text(json.dumps(result, indent=2) + "\n")
 
 

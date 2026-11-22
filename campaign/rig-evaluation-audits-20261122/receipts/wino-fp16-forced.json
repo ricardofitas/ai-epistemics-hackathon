@@ -1,0 +1,61 @@
+{
+  "run_id": "wino-rtx4060-20261122-p02",
+  "split": "pilot",
+  "models": {
+    "Qwen/Qwen2.5-0.5B-Instruct": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "HuggingFaceTB/SmolLM2-360M-Instruct": "a10cc1512eabd3dde888204e902eca88bddb4951"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4060",
+    "pci": "00000000:01:00.0",
+    "uuid": "GPU-c263bd7e-98ac-501d-3e19-90c15cc3036c",
+    "min_free_mib": 3500,
+    "boinc_rpc": "127.0.0.1:31418"
+  },
+  "expected_items": 64,
+  "expected_answers": 256,
+  "protocol_sha256": "8db829274b1ae716fdc7420d6e888a720f242756bc18089ec3de2b191d88c0ab",
+  "item_manifest_sha256": "9e31bdc5bb8aea1d034c63af36c94ca6e14fa06b1c0baf4c6650d98a3caac8c5",
+  "assets_sha256": {
+    "weights/7ae557604adf67be50417f59c2c2f167def9a775/config.json": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+    "weights/7ae557604adf67be50417f59c2c2f167def9a775/generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+    "weights/7ae557604adf67be50417f59c2c2f167def9a775/tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "weights/7ae557604adf67be50417f59c2c2f167def9a775/tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "weights/7ae557604adf67be50417f59c2c2f167def9a775/model.safetensors": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+    "weights/a10cc1512eabd3dde888204e902eca88bddb4951/config.json": "224f72354f10d617a359cc82ad15a3c96e866b9b2ffadb81997eeea9e88e22ee",
+    "weights/a10cc1512eabd3dde888204e902eca88bddb4951/generation_config.json": "87b916edaaab66b3899b9d0dd0752727dff6666686da0504d89ae0a6e055a013",
+    "weights/a10cc1512eabd3dde888204e902eca88bddb4951/tokenizer.json": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+    "weights/a10cc1512eabd3dde888204e902eca88bddb4951/tokenizer_config.json": "4ec77d44f62efeb38d7e044a1db318f6a939438425312dfa333b8382dbad98df",
+    "weights/a10cc1512eabd3dde888204e902eca88bddb4951/model.safetensors": "e6bffe7435d7ddc10fd3b9a9efd429dafbacb1cb17015fb5562664e7532bf86e"
+  },
+  "boinc_reservation": "none; coexist with executing tasks",
+  "status": "complete",
+  "boinc_before": {
+    "gpu_status": "not suspended\n    current mode: always\n    perm mode: always\n    perm becomes current in 0 sec",
+    "executing_tasks": 3
+  },
+  "gpu_before": {
+    "free_mib": 6620,
+    "utilization_percent": 100
+  },
+  "started_at": "2026-11-22T11:24:56.891487+00:00",
+  "last_attempt_started_at": "2026-11-22T11:24:56.891501+00:00",
+  "completed_items": 64,
+  "completed_answers": 256,
+  "model_items_with_any_answer": 128,
+  "inference_seconds": 2.2744004950509407,
+  "answers_per_gpu_hour": 405205.68,
+  "wall_seconds_since_first_start": 37.568,
+  "complete_items_per_wall_hour": 6132.85,
+  "torch": "2.8.0+cu126",
+  "transformers": "4.51.3",
+  "finished_at": "2026-11-22T11:25:34.459692+00:00",
+  "boinc_after": {
+    "gpu_status": "not suspended\n    current mode: always\n    perm mode: always\n    perm becomes current in 0 sec",
+    "executing_tasks": 3
+  },
+  "gpu_after": {
+    "free_mib": 6476,
+    "utilization_percent": 0
+  }
+}

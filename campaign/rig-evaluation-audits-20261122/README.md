@@ -1,6 +1,6 @@
 # Evaluation audits on the local rig
 
-This campaign starts from revision `0224dc282a4b6e20c423dd79f34b5c54b3667ddd` and tracks the owner coordination goal `01a202e3-62ac-7e62-9b1d-b62d6c5825b3`. The decision record is in [RELATED-WORK.md](RELATED-WORK.md). The frozen WinoGrande and HELM methods are in [PROTOCOL.md](PROTOCOL.md) and [ARCHIVE-PROTOCOL.md](ARCHIVE-PROTOCOL.md).
+This campaign starts from revision `0224dc282a4b6e20c423dd79f34b5c54b3667ddd` and tracks the owner coordination goal `01a202e3-62ac-7e62-9b1d-b62d6c5825b3`. [The campaign results](RESULTS.md) summarize the completed runs. The decision record is in [RELATED-WORK.md](RELATED-WORK.md). The frozen WinoGrande and HELM methods are in [PROTOCOL.md](PROTOCOL.md) and [ARCHIVE-PROTOCOL.md](ARCHIVE-PROTOCOL.md).
 
 ## Replay ScienceQA on CPU
 
@@ -29,6 +29,8 @@ python3 -B "$campaign/stage_models.py" "$runtime"
 touch "$runtime/packages.ready"
 bash "$campaign/launch.sh" "$runtime" wino-rtx4060-20261122-p01 ../first-gpu-receipt.json
 ```
+
+For the BF16 forced-choice follow-up, pass `forced-choice-bf16.json` as the fifth argument to `launch.sh` and use the follow-up run ID and receipt path. See [the follow-up protocol](FORCED-CHOICE-PROTOCOL.md) and [GPU results](WINO-RESULTS.md).
 
 For a restart, keep the same run ID and receipt path, verify the previous transient unit has ended, and pass a fresh systemd unit name as the fourth argument. The SQLite primary key checkpoints each model, item and variant. Each completed CUDA batch is atomic and receipt progress updates after its checkpoint. The shell controller applies the frozen eligibility gate and runs the untouched split only if the pilot qualifies. Inspect the external runtime's `runs/<run-id>/items.sqlite` for per-item outputs and timing, `result.json` for scores, and `journalctl --user -u <unit>` for retries or errors. Keep raw records and snapshots outside Git.
 

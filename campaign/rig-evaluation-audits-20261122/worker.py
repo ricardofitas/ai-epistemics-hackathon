@@ -3,6 +3,7 @@ import argparse
 import fcntl
 import hashlib
 import json
+import math
 import os
 import re
 import signal
@@ -64,9 +65,22 @@ def generate(model, tokenizer, texts, protocol, torch):
     inputs = tokenizer.apply_chat_template(chat, add_generation_prompt=True, tokenize=False)
     tokens = tokenizer(inputs, padding=True, add_special_tokens=False, return_tensors="pt").to("cuda")
     with torch.inference_mode():
+        if protocol.get("answer_mode") == "forced_label":
+            candidates = [tokenizer.encode(label, add_special_tokens=False) for label in "AB"]
+            assert all(len(ids) == 1 and tokenizer.decode(ids) == label
+                       for label, ids in zip("AB", candidates))
+            logits = model(**tokens, use_cache=False).logits[:, -1, [ids[0] for ids in candidates]]
+            outputs = []
+            for a, b in logits.float().cpu().tolist():
+                answer = ("A" if a >= b else "B") if math.isfinite(a) and math.isfinite(b) else ""
+                stored = json.dumps({"answer": answer, "logits": {"A": a if math.isfinite(a) else None,
+                                                                 "B": b if math.isfinite(b) else None}})
+                outputs.append((answer, stored))
+            return outputs
         output = model.generate(**tokens, do_sample=False, max_new_tokens=protocol["max_new_tokens"],
                                 pad_token_id=tokenizer.pad_token_id)
-    return tokenizer.batch_decode(output[:, tokens["input_ids"].shape[1]:], skip_special_tokens=True)
+    decoded = tokenizer.batch_decode(output[:, tokens["input_ids"].shape[1]:], skip_special_tokens=True)
+    return [(answer, answer) for answer in decoded]
 
 
 def stop(signum, _frame):
@@ -101,7 +115,11 @@ def inference(args, protocol, panel, items, db, receipt):
     gpu = protocol["gpu"]
     if not torch.cuda.is_available() or torch.cuda.device_count() != 1:
         raise RuntimeError("Expected exactly one visible CUDA GPU")
-    receipt.update(torch=torch.__version__, transformers=transformers_version)
+    precision = protocol.get("torch_dtype", "float16")
+    dtype = {"float16": torch.float16, "bfloat16": torch.bfloat16}[precision]
+    if dtype == torch.bfloat16 and not torch.cuda.is_bf16_supported():
+        raise RuntimeError("The frozen BF16 configuration requires GPU BF16 support")
+    receipt.update(torch=torch.__version__, transformers=transformers_version, torch_dtype=precision)
     predicted = {(m, i, v) for m, i, v in db.execute("SELECT model,item_id,variant FROM answers")}
     expected = len(protocol["models"]) * 2
     for name, revision in protocol["models"].items():
@@ -116,7 +134,7 @@ def inference(args, protocol, panel, items, db, receipt):
             tokenizer.pad_token = tokenizer.eos_token
         model = AutoModelForCausalLM.from_pretrained(
             snapshot, local_files_only=True, trust_remote_code=False, use_safetensors=True,
-            torch_dtype=torch.float16, attn_implementation="eager",
+            torch_dtype=dtype, attn_implementation="eager",
         ).to("cuda").eval()
         for start in range(0, len(pending), protocol["batch_size"]):
             gpu_sample = gpu_state(gpu)
@@ -128,9 +146,9 @@ def inference(args, protocol, panel, items, db, receipt):
             seconds = time.monotonic() - before
             assert len(outputs) == len(batch)
             rows = []
-            for (pair, key, variant), output in zip(batch, outputs):
+            for (pair, key, variant), (prediction, output) in zip(batch, outputs):
                 item = items[key]
-                answer = output.strip().upper()
+                answer = prediction.strip().upper()
                 if not re.fullmatch(protocol["answer_pattern"], answer):
                     answer = None
                 official = "AB"[int(item["answer"]) - 1]
@@ -150,10 +168,11 @@ def main():
     parser.add_argument("run_id")
     parser.add_argument("receipt", type=Path)
     parser.add_argument("--split", default="pilot", choices=("pilot", "heldout"))
+    parser.add_argument("--protocol", type=Path, default=ROOT / "pilot.json")
     args = parser.parse_args()
 
     os.umask(0o077)
-    protocol_file = ROOT / "pilot.json"
+    protocol_file = args.protocol
     frozen = ROOT / "frozen-items.json"
     protocol = json.loads(protocol_file.read_text())
     gpu = protocol["gpu"]
