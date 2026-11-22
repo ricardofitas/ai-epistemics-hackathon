@@ -1,0 +1,30 @@
+{
+  "dataset": "https://storage.googleapis.com/ai2-mosaic/public/winogrande/winogrande_1.1.zip",
+  "dataset_member": "winogrande_1.1/dev.jsonl",
+  "models": {
+    "Qwen/Qwen2.5-0.5B-Instruct": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "HuggingFaceTB/SmolLM2-360M-Instruct": "a10cc1512eabd3dde888204e902eca88bddb4951"
+  },
+  "instruction": "Choose the option that best fills the blank. Reply with only A or B.",
+  "sentence_line": "Sentence: {sentence}\n",
+  "options": "A. {option1}\nB. {option2}",
+  "answer_pattern": "[AB]",
+  "max_new_tokens": 8,
+  "batch_size": 8,
+  "pair_limit": 32,
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4060",
+    "pci": "00000000:01:00.0",
+    "uuid": "GPU-c263bd7e-98ac-501d-3e19-90c15cc3036c",
+    "min_free_mib": 3500,
+    "boinc_rpc": "127.0.0.1:31418"
+  },
+  "dataset_sha256": "3619ab104d8be2977b25c90ff420cb42d491707dcc75362a1e5d22bc082b7318",
+  "snapshot_files": [
+    "config.json",
+    "generation_config.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "model.safetensors"
+  ]
+}

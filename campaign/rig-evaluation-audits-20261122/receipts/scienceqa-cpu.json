@@ -1,0 +1,99 @@
+{
+  "id": "scienceqa-cpu-0224dc2-20261122",
+  "finished": "2026-11-22T10:13:31.183508+00:00",
+  "papers_actual_sha256": "02fdcf206559e95883f3b4ff15fead8e65b8af43324ba9c6887ff0cb2e5e2cbc",
+  "revision": "0224dc282a4b6e20c423dd79f34b5c54b3667ddd",
+  "published_tables_verified_after_normalizing_newlines": {
+    "gpt_records.csv": "c34c83453d95aa7f61335ba40caca25f2066c7b223c895f273595c2ae9db2ec3",
+    "leaderboard_comparisons.csv": "18294f6ca3d1734ad8ad0d8c71afe88ede2c22078498305ed1bfd7dc81b72871",
+    "llava_v0_records.csv": "0f7e04cec0380a38d65a5846f030d2fcd123ad31e17666c5f273dea9aa945bd9",
+    "llava_v13_records.csv": "ddac81d4a99e3c774052ab4016d459b0e6dbae47e10394916fb5dbed53760ad7",
+    "summary.json": "e5b221195acb7c759752141d3917e67856da682562b92cca82235651c947e5c6"
+  },
+  "recorded": {
+    "gpt": {
+      "n": 4241,
+      "saved_right": 3188,
+      "blank": 243,
+      "blank_credits": 123,
+      "native_failed": 249,
+      "unexpected_valid_parse": 0,
+      "failed_native_credits": 127,
+      "native_parse_only_right": 3061,
+      "explicit_right": 3066,
+      "nonblank_failed": 6,
+      "file_header_right": 3188,
+      "native_minus_blank_right": 3065,
+      "finite_low": 3061,
+      "finite_high": 3067
+    },
+    "llava_v0": {
+      "n": 4241,
+      "saved_right": 3856,
+      "blank": 0,
+      "blank_credits": 0,
+      "native_failed": 1,
+      "unexpected_valid_parse": 0,
+      "failed_native_credits": 1,
+      "native_parse_only_right": 3855,
+      "explicit_right": 3855,
+      "nonblank_failed": 1,
+      "file_header_right": 3855,
+      "native_minus_blank_right": 3856,
+      "finite_low": 3855,
+      "finite_high": 3856
+    },
+    "llava_v13": {
+      "n": 4241,
+      "saved_right": 3863,
+      "blank": 0,
+      "blank_credits": 0,
+      "native_failed": 4,
+      "unexpected_valid_parse": 0,
+      "failed_native_credits": 0,
+      "native_parse_only_right": 3863,
+      "explicit_right": 3863,
+      "nonblank_failed": 4,
+      "file_header_right": 3863,
+      "native_minus_blank_right": 3863,
+      "finite_low": 3863,
+      "finite_high": 3867
+    },
+    "uninterrupted_rng_check": {
+      "training_positions": [
+        3898,
+        9709
+      ],
+      "fallback_rows": 249,
+      "saved_indices_matched": 129
+    },
+    "image_panel": {
+      "n": 2017,
+      "native_right": 1360,
+      "blank_zero_right": 1332,
+      "blank": 65,
+      "matched_reference_labels": 2017
+    },
+    "published_source_block": {
+      "n": 20,
+      "strict_reversals_same_ids": [
+        "LaVIN-7B",
+        "BLIP-2",
+        "InstructBLIP",
+        "ChatGPT"
+      ],
+      "new_ties": [
+        "Flan-T5-XXL"
+      ]
+    },
+    "original_CoT_contrast": {
+      "published_direct_implied_right": 3137,
+      "published_CoT_lead": 51,
+      "direct_blank_credits_for_tie": 72
+    }
+  },
+  "hardware": "CPU",
+  "adaption_credits": 0,
+  "verified_again_at": "2026-11-22T11:03:34.586087+00:00",
+  "verification": "Replayed archive with pinned branch scorer. All five outputs matched previous replay byte for byte and tracked tables after newline normalization. Verified manuscript hash."
+}
