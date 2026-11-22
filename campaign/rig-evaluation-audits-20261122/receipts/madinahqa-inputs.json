@@ -1,0 +1,986 @@
+[
+  {
+    "url_path": "releases/v1.0.0/run_specs.json",
+    "file": "v1.0.0/run_specs.json",
+    "sha256": "c589d9aa83d582710bde2bd551d1541fca66655a05430483e16484165da6577f"
+  },
+  {
+    "url_path": "releases/v2.0.0/run_specs.json",
+    "file": "v2.0.0/run_specs.json",
+    "sha256": "734ffa437d645f9bc65fd1571d11ed784f6a24bc1e8f4a521ce8736660adcfa7"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dallam-ai_allam-7b-instruct-preview/scenario_state.json",
+    "file": "v1.0.0/allam-ai/allam-7b-instruct-preview/scenario_state.json",
+    "sha256": "bb113d4094e22d8309d85782d12379c56e8c878fd9a427333f284ae2aa11f482"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dallam-ai_allam-7b-instruct-preview/per_instance_stats.json",
+    "file": "v1.0.0/allam-ai/allam-7b-instruct-preview/per_instance_stats.json",
+    "sha256": "24cab23085d860405896fb2195cb0c4b60739217f05d0c4d7ca07970634b3319"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dallam-ai_allam-7b-instruct-preview/stats.json",
+    "file": "v1.0.0/allam-ai/allam-7b-instruct-preview/stats.json",
+    "sha256": "2ce2746a95e150d99f75d69581fb529fd589e1d961d4e1a28fc5aa952cac4105"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm_s%2Cmodel_deployment%3Darabicai_llm_s/scenario_state.json",
+    "file": "v1.0.0/arabicai/llm-s/scenario_state.json",
+    "sha256": "7fa5b69b89c6a440e04fdee1c9bf0ee340c6a3c5a0d7ce4187502f88851a4537"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm_s%2Cmodel_deployment%3Darabicai_llm_s/per_instance_stats.json",
+    "file": "v1.0.0/arabicai/llm-s/per_instance_stats.json",
+    "sha256": "d5ebbb33a61c251c80c16dda84c896ccf8d369648cdcdf047460178b68d1466d"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm_s%2Cmodel_deployment%3Darabicai_llm_s/stats.json",
+    "file": "v1.0.0/arabicai/llm-s/stats.json",
+    "sha256": "e4a4dd52c70cd4ee7f4c289811b0cdc6ff3ab39e31001822186ff248b41effa7"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm_x%2Cmodel_deployment%3Darabicai_llm_x/scenario_state.json",
+    "file": "v1.0.0/arabicai/llm-x/scenario_state.json",
+    "sha256": "9ac4b4a696494d2b7e56946e78604aacedc9c98572c2e76f7cdc931d1cab37d4"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm_x%2Cmodel_deployment%3Darabicai_llm_x/per_instance_stats.json",
+    "file": "v1.0.0/arabicai/llm-x/per_instance_stats.json",
+    "sha256": "1b316331ffb5c5ac153374acb0c98025f16ab73f3bb24e87792b8b4eda2f929d"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm_x%2Cmodel_deployment%3Darabicai_llm_x/stats.json",
+    "file": "v1.0.0/arabicai/llm-x/stats.json",
+    "sha256": "1132f41a9edf85ae5021841eee84a616045dca454b526f0c22d39c1fe9d1d60d"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_c4ai-command-a-03-2025%2Cmodel_deployment%3Dlitellm_c4ai-command-a-03-2025/scenario_state.json",
+    "file": "v1.0.0/cohere/command-a-03-2025/scenario_state.json",
+    "missing": true
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_c4ai-command-a-03-2025%2Cmodel_deployment%3Dlitellm_c4ai-command-a-03-2025/per_instance_stats.json",
+    "file": "v1.0.0/cohere/command-a-03-2025/per_instance_stats.json",
+    "missing": true
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_c4ai-command-a-03-2025%2Cmodel_deployment%3Dlitellm_c4ai-command-a-03-2025/stats.json",
+    "file": "v1.0.0/cohere/command-a-03-2025/stats.json",
+    "missing": true
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Ddeepseek-ai_deepseek-v3.1/scenario_state.json",
+    "file": "v1.0.0/deepseek-ai/deepseek-v3.1/scenario_state.json",
+    "sha256": "4156200c66d47183f9bb99e7313acf8b26eb28f2a45ca8dd2ad6f98c1eaee58a"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Ddeepseek-ai_deepseek-v3.1/per_instance_stats.json",
+    "file": "v1.0.0/deepseek-ai/deepseek-v3.1/per_instance_stats.json",
+    "sha256": "00781baf42fc4d1fba9fbf2f5f9e9c7be43004441a876e4a6ec5f98bad7c8129"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Ddeepseek-ai_deepseek-v3.1/stats.json",
+    "file": "v1.0.0/deepseek-ai/deepseek-v3.1/stats.json",
+    "sha256": "cc84f28eecf0dfbf69705d584df738dfa94ba0c7764261b90b4ae58cbc6470d9"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-32b-chat/scenario_state.json",
+    "file": "v1.0.0/freedomintelligence/acegpt-v2-32b-chat/scenario_state.json",
+    "sha256": "44c9d639107730e7567d87e7b0a1495bab53245ad93dedc83c26021437f52842"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-32b-chat/per_instance_stats.json",
+    "file": "v1.0.0/freedomintelligence/acegpt-v2-32b-chat/per_instance_stats.json",
+    "sha256": "78616e36da5d5c8934814f47b2860281f65a13c918aef792021aabb985af9c20"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-32b-chat/stats.json",
+    "file": "v1.0.0/freedomintelligence/acegpt-v2-32b-chat/stats.json",
+    "sha256": "8abc343cbd2ddd245dbf40039af7ad9936382b82af9fe4ea0bd5ef98a62ed7d6"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-70b-chat/scenario_state.json",
+    "file": "v1.0.0/freedomintelligence/acegpt-v2-70b-chat/scenario_state.json",
+    "sha256": "bdf7a1bc4173696730c1023a3d66df64a9b53dab22e664eaf339e408197ba3da"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-70b-chat/per_instance_stats.json",
+    "file": "v1.0.0/freedomintelligence/acegpt-v2-70b-chat/per_instance_stats.json",
+    "sha256": "b003cf6f150e6f33418203355659dd2492f8cd5eb27bc8a077b5b144d5d5168f"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-70b-chat/stats.json",
+    "file": "v1.0.0/freedomintelligence/acegpt-v2-70b-chat/stats.json",
+    "sha256": "109c6326d805cddf5c0bf7d1366b4b4ff7c6abcd6c8b0a7f1560498e3a720d5e"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-8b-chat/scenario_state.json",
+    "file": "v1.0.0/freedomintelligence/acegpt-v2-8b-chat/scenario_state.json",
+    "sha256": "6333746473c8362531783ae3bb8821c38b71726075503f54eb6487bd4904ff2d"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-8b-chat/per_instance_stats.json",
+    "file": "v1.0.0/freedomintelligence/acegpt-v2-8b-chat/per_instance_stats.json",
+    "sha256": "a87bf02fca83c84d48aced23db3876d7af4fa13d7810ea9ae339cde17dd2986f"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-8b-chat/stats.json",
+    "file": "v1.0.0/freedomintelligence/acegpt-v2-8b-chat/stats.json",
+    "sha256": "fdba7821a46f6f11f4c801649438860dfc3ed2491971de4a3d76360bc2262e3f"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-lite-thinking-disabled/scenario_state.json",
+    "file": "v1.0.0/google/gemini-2.5-flash-lite-thinking-disabled/scenario_state.json",
+    "sha256": "e7b7195d29661d1b743464ee4d1f8fb941eca639ec413acc04b0df88f6e15887"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-lite-thinking-disabled/per_instance_stats.json",
+    "file": "v1.0.0/google/gemini-2.5-flash-lite-thinking-disabled/per_instance_stats.json",
+    "sha256": "5da40cf3eb67cfa13d5429f2a96d75a77026d210b201e6def082287a5dd5d090"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-lite-thinking-disabled/stats.json",
+    "file": "v1.0.0/google/gemini-2.5-flash-lite-thinking-disabled/stats.json",
+    "sha256": "b61001da7a279aa59e1d4466578b041b095f072d8677ca5dffe5caa742f24207"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-thinking-disabled/scenario_state.json",
+    "file": "v1.0.0/google/gemini-2.5-flash-thinking-disabled/scenario_state.json",
+    "sha256": "30eb7a5b4f5319c750b4b0cf8bb0654e2e7fcf091d01f1c95a4b22bf3867c48a"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-thinking-disabled/per_instance_stats.json",
+    "file": "v1.0.0/google/gemini-2.5-flash-thinking-disabled/per_instance_stats.json",
+    "sha256": "61bd3519e008fa649fb9c56631702dd8fca445997273775095acdcba5556e452"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-thinking-disabled/stats.json",
+    "file": "v1.0.0/google/gemini-2.5-flash-thinking-disabled/stats.json",
+    "sha256": "3b6d4a9af5536ef3af18ddcc0e930a026d615675da6f4d5230c7b9a5df3acb81"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-13b-chat/scenario_state.json",
+    "file": "v1.0.0/inceptionai/jais-adapted-13b-chat/scenario_state.json",
+    "sha256": "5b0f29ec56a62dab48c7ca8f1ba63c4543e90f183d8955d71a2d0edbf0bbf0b1"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-13b-chat/per_instance_stats.json",
+    "file": "v1.0.0/inceptionai/jais-adapted-13b-chat/per_instance_stats.json",
+    "sha256": "27e5c1e12c8d9a6027a39ddd049cd429c53693f131727fd734470072af6a3249"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-13b-chat/stats.json",
+    "file": "v1.0.0/inceptionai/jais-adapted-13b-chat/stats.json",
+    "sha256": "0d9dd54fbc031ec8ec66bee60ea3973e4525bce9b09ef8857afeaa9887ca481b"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-70b-chat/scenario_state.json",
+    "file": "v1.0.0/inceptionai/jais-adapted-70b-chat/scenario_state.json",
+    "sha256": "aab041f82a368ece7dcf29ccdf5660a16f98624852656aa6dfeed7e0b21c7e65"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-70b-chat/per_instance_stats.json",
+    "file": "v1.0.0/inceptionai/jais-adapted-70b-chat/per_instance_stats.json",
+    "sha256": "1b6259b2d21c09c5155985bab40bb8a290a272754f9a0c53a7de22368d7f4228"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-70b-chat/stats.json",
+    "file": "v1.0.0/inceptionai/jais-adapted-70b-chat/stats.json",
+    "sha256": "2f8790b9d73477f1d8a59b2d33e6f72e17942bd23ac5b3b852d58cd65044c1c5"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-7b-chat/scenario_state.json",
+    "file": "v1.0.0/inceptionai/jais-adapted-7b-chat/scenario_state.json",
+    "sha256": "b820505d5b46cd52b0d7313a8b97ea712a3aacebceddba679fe42f5f11d337ac"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-7b-chat/per_instance_stats.json",
+    "file": "v1.0.0/inceptionai/jais-adapted-7b-chat/per_instance_stats.json",
+    "sha256": "9a77b42982f48fcb74484f00affc7df884852da6838ee167ca0263c492e07ed9"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-7b-chat/stats.json",
+    "file": "v1.0.0/inceptionai/jais-adapted-7b-chat/stats.json",
+    "sha256": "aa42bc44bde9958e9e23486589aa3567401fdde4c1b52dbb06492445b9b83f39"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-family-30b-16k-chat/scenario_state.json",
+    "file": "v1.0.0/inceptionai/jais-family-30b-16k-chat/scenario_state.json",
+    "sha256": "02377bd05628c59c0c381112ea961c68a10194304c9176dc9aa4ea23e6981b3e"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-family-30b-16k-chat/per_instance_stats.json",
+    "file": "v1.0.0/inceptionai/jais-family-30b-16k-chat/per_instance_stats.json",
+    "sha256": "42bf99cb2776dcc7fe4f0aff627e972130f762bb76459d7aaaa905e68a80060f"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-family-30b-16k-chat/stats.json",
+    "file": "v1.0.0/inceptionai/jais-family-30b-16k-chat/stats.json",
+    "sha256": "65a908f4b3e1cbf1679790eac9e493d79856ed36d6fff40f1a2c17dbfc20e55d"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-3.3-70b-instruct-turbo/scenario_state.json",
+    "file": "v1.0.0/meta/llama-3.3-70b-instruct-turbo/scenario_state.json",
+    "sha256": "21400a6d3bbd54b0baf6cc1ab68c64dad005214964f209cbe9de0cf464ecc028"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-3.3-70b-instruct-turbo/per_instance_stats.json",
+    "file": "v1.0.0/meta/llama-3.3-70b-instruct-turbo/per_instance_stats.json",
+    "sha256": "4af5bd58e82778b07aba27ddc9b29936408194058f87d169ce1370323e8b1f06"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-3.3-70b-instruct-turbo/stats.json",
+    "file": "v1.0.0/meta/llama-3.3-70b-instruct-turbo/stats.json",
+    "sha256": "fa9026404f386202eb30a82423adb34e586a6eb33d2cfe4562b44bd26337d167"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-maverick-17b-128e-instruct-fp8/scenario_state.json",
+    "file": "v1.0.0/meta/llama-4-maverick-17b-128e-instruct-fp8/scenario_state.json",
+    "sha256": "7e39e9328c7f76ef0bb10d9bf9f7ee051e213aee27ee203f562b69cf6eeeb7af"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-maverick-17b-128e-instruct-fp8/per_instance_stats.json",
+    "file": "v1.0.0/meta/llama-4-maverick-17b-128e-instruct-fp8/per_instance_stats.json",
+    "sha256": "fb8ee7f9d3c834f63627d8847a4b9b86eef2e9b7a326387906f73c51dc57c630"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-maverick-17b-128e-instruct-fp8/stats.json",
+    "file": "v1.0.0/meta/llama-4-maverick-17b-128e-instruct-fp8/stats.json",
+    "sha256": "594a676702cad011a07244d8d0a587d9e23f4cee73978454567054a857110577"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-scout-17b-16e-instruct/scenario_state.json",
+    "file": "v1.0.0/meta/llama-4-scout-17b-16e-instruct/scenario_state.json",
+    "sha256": "ec86830e50ba315c1aef370a71609fc56cfc94ff6d87ba981c820b586ea93b6a"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-scout-17b-16e-instruct/per_instance_stats.json",
+    "file": "v1.0.0/meta/llama-4-scout-17b-16e-instruct/per_instance_stats.json",
+    "sha256": "cd6b7a4545f18c77d1aca96a22c3aecd8a9c04acb29d5ecae34a22e3187f978c"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-scout-17b-16e-instruct/stats.json",
+    "file": "v1.0.0/meta/llama-4-scout-17b-16e-instruct/stats.json",
+    "sha256": "523dc0198fbc5244f49d7e68497b88d6a4b349e7e899c3ced9e3681009948297"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_Mistral-Large-Instruct-2411%2Cmodel_deployment%3Dlitellm_Mistral-Large-Instruct-2411/scenario_state.json",
+    "file": "v1.0.0/mistralai/mistral-large-2411/scenario_state.json",
+    "missing": true
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_Mistral-Large-Instruct-2411%2Cmodel_deployment%3Dlitellm_Mistral-Large-Instruct-2411/per_instance_stats.json",
+    "file": "v1.0.0/mistralai/mistral-large-2411/per_instance_stats.json",
+    "missing": true
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_Mistral-Large-Instruct-2411%2Cmodel_deployment%3Dlitellm_Mistral-Large-Instruct-2411/stats.json",
+    "file": "v1.0.0/mistralai/mistral-large-2411/stats.json",
+    "missing": true
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-2025-04-14/scenario_state.json",
+    "file": "v1.0.0/openai/gpt-4.1-2025-04-14/scenario_state.json",
+    "sha256": "91a29b9558e664a1776063068df4f35a3cefa1783a9d2eb31507c587959c6048"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-2025-04-14/per_instance_stats.json",
+    "file": "v1.0.0/openai/gpt-4.1-2025-04-14/per_instance_stats.json",
+    "sha256": "35834a2075f0a79f19e0ef7888a6704fef381e5a360a51aa24740e9dbc89afc4"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-2025-04-14/stats.json",
+    "file": "v1.0.0/openai/gpt-4.1-2025-04-14/stats.json",
+    "sha256": "e0457ea3151a5dcc2ea601c8be7ee40bcf8a17e9820cae6b05d98d898da3f0eb"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-mini-2025-04-14/scenario_state.json",
+    "file": "v1.0.0/openai/gpt-4.1-mini-2025-04-14/scenario_state.json",
+    "sha256": "e85094045f7444a5ce25803681d9d3242fd5c50123f478e4058f0c2f5bc77794"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-mini-2025-04-14/per_instance_stats.json",
+    "file": "v1.0.0/openai/gpt-4.1-mini-2025-04-14/per_instance_stats.json",
+    "sha256": "99973c72eee742c977eef502a770cc4a63d683d5644ac91dc1b7dd30363ecffc"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-mini-2025-04-14/stats.json",
+    "file": "v1.0.0/openai/gpt-4.1-mini-2025-04-14/stats.json",
+    "sha256": "11ac7dfc38b0e3f6377c5a5fa351b55ce57ac250f17a99ddcea6dc9ece424343"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-nano-2025-04-14/scenario_state.json",
+    "file": "v1.0.0/openai/gpt-4.1-nano-2025-04-14/scenario_state.json",
+    "sha256": "656bbb51d9d8d6e5bbd9619021e6df68a0a4308933b5c972b9a82506d452e55a"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-nano-2025-04-14/per_instance_stats.json",
+    "file": "v1.0.0/openai/gpt-4.1-nano-2025-04-14/per_instance_stats.json",
+    "sha256": "beb2f6f4848549dc3e9e93bd49245fd83014b11d38537ebc8fb4a49572d04d36"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-nano-2025-04-14/stats.json",
+    "file": "v1.0.0/openai/gpt-4.1-nano-2025-04-14/stats.json",
+    "sha256": "84c9cd553e2d77d2a1e3f44809a2559a78be1e86c0e7ea8b3dea0e317b76b05b"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-5.1-2025-11-13/scenario_state.json",
+    "file": "v1.0.0/openai/gpt-5.1-2025-11-13/scenario_state.json",
+    "sha256": "37a36e69b17e8da0ba71c7511cd547a3dd045db7ba3e7263a5f5a5fc264bb44e"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-5.1-2025-11-13/per_instance_stats.json",
+    "file": "v1.0.0/openai/gpt-5.1-2025-11-13/per_instance_stats.json",
+    "sha256": "be8355bc00adcb0dd481730a0656decc82c0d714134f9bb4867d88f763b9a9c5"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-5.1-2025-11-13/stats.json",
+    "file": "v1.0.0/openai/gpt-5.1-2025-11-13/stats.json",
+    "sha256": "b9b041f57bca0f7c4d212dc868c1bbb21124830d7a3c1d1d86fe13cae2698e9b"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-72b-instruct-turbo/scenario_state.json",
+    "file": "v1.0.0/qwen/qwen2.5-72b-instruct-turbo/scenario_state.json",
+    "sha256": "9ece55663c30376e498f31f11250ab6a5f7a54d588a51768453ea3f753935618"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-72b-instruct-turbo/per_instance_stats.json",
+    "file": "v1.0.0/qwen/qwen2.5-72b-instruct-turbo/per_instance_stats.json",
+    "sha256": "c85718879d1103c2f3e8a5de38a65573cbe6f171bd81a5d4153c8ed2c2623da2"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-72b-instruct-turbo/stats.json",
+    "file": "v1.0.0/qwen/qwen2.5-72b-instruct-turbo/stats.json",
+    "sha256": "bc7868040a01c61f72b48235a685ca842b042426c60ed250c121569a347785a0"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-7b-instruct-turbo/scenario_state.json",
+    "file": "v1.0.0/qwen/qwen2.5-7b-instruct-turbo/scenario_state.json",
+    "sha256": "d7bf509f90aac4d10b470d6d261879c9bba94a5460360afba2ee6f0753384536"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-7b-instruct-turbo/per_instance_stats.json",
+    "file": "v1.0.0/qwen/qwen2.5-7b-instruct-turbo/per_instance_stats.json",
+    "sha256": "e9dedbe9584b1670e5eeed5baec7e3f60b5ab4ede9ae69719b4b84367b1c44ad",
+    "gcs_generation": "1784678240202121"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-7b-instruct-turbo/stats.json",
+    "file": "v1.0.0/qwen/qwen2.5-7b-instruct-turbo/stats.json",
+    "sha256": "c21d55dc639f4761eb32d0cce4b583c9e799c57b9225fe707662f5acef0b9acd",
+    "gcs_generation": "1784678228322216"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-235b-a22b-instruct-2507-fp8/scenario_state.json",
+    "file": "v1.0.0/qwen/qwen3-235b-a22b-instruct-2507-fp8/scenario_state.json",
+    "sha256": "5e492e389e783627ed4bda869022f576943e5c91950b0e8176ace933664f5e2a",
+    "gcs_generation": "1784679355109032"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-235b-a22b-instruct-2507-fp8/per_instance_stats.json",
+    "file": "v1.0.0/qwen/qwen3-235b-a22b-instruct-2507-fp8/per_instance_stats.json",
+    "sha256": "1f0a0cea24d3545afd110c777db3b24dc1099bd4fca2ff31b3b8c400325dcfda",
+    "gcs_generation": "1784679344684756"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-235b-a22b-instruct-2507-fp8/stats.json",
+    "file": "v1.0.0/qwen/qwen3-235b-a22b-instruct-2507-fp8/stats.json",
+    "sha256": "449af2ab63b9869447df58de7974f21eb9ecee1d06f91b33efcbc8d04420f8da",
+    "gcs_generation": "1784679334644670"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-next-80b-a3b-instruct/scenario_state.json",
+    "file": "v1.0.0/qwen/qwen3-next-80b-a3b-instruct/scenario_state.json",
+    "sha256": "ef4b3cf0d56e2a8b129f81cf38281ad1e9b6d4916a627c4978eb4ce72d82cb49",
+    "gcs_generation": "1784679081995586"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-next-80b-a3b-instruct/per_instance_stats.json",
+    "file": "v1.0.0/qwen/qwen3-next-80b-a3b-instruct/per_instance_stats.json",
+    "sha256": "57993bfa490fa07d6151b93bb49f7441b476cec36af908f8bf628f77c6ba3b38",
+    "gcs_generation": "1784679070145230"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-next-80b-a3b-instruct/stats.json",
+    "file": "v1.0.0/qwen/qwen3-next-80b-a3b-instruct/stats.json",
+    "sha256": "05415b3ee6f8d3e0c9fc2d14eaedfbf48fe6ece75dad49bd9bc4cdab6b22c2c1",
+    "gcs_generation": "1784679061311270"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dsilma-ai_silma-9b-instruct-v1.0/scenario_state.json",
+    "file": "v1.0.0/silma-ai/silma-9b-instruct-v1.0/scenario_state.json",
+    "sha256": "e69881039f024f7aff33d20ef9dbbe4af24563c1636a1378593b271367c7439b",
+    "gcs_generation": "1784674861379372"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dsilma-ai_silma-9b-instruct-v1.0/per_instance_stats.json",
+    "file": "v1.0.0/silma-ai/silma-9b-instruct-v1.0/per_instance_stats.json",
+    "sha256": "25c54571d8d53cf4b1ba01fbc59b4e74e291f7bc8aa72651e224772f87deadbf",
+    "gcs_generation": "1784674852152444"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dsilma-ai_silma-9b-instruct-v1.0/stats.json",
+    "file": "v1.0.0/silma-ai/silma-9b-instruct-v1.0/stats.json",
+    "sha256": "be257df032052664f89576a994a8d8f25b7f31922fd491f7d671686c1931bb08",
+    "gcs_generation": "1784674841822573"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-10b-instruct/scenario_state.json",
+    "file": "v1.0.0/tiiuae/falcon3-10b-instruct/scenario_state.json",
+    "sha256": "86ac7baa46f694f5d62ff1afda8c0e6cd10522d2fef22a90725b857b65ab512b",
+    "gcs_generation": "1784674689685113"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-10b-instruct/per_instance_stats.json",
+    "file": "v1.0.0/tiiuae/falcon3-10b-instruct/per_instance_stats.json",
+    "sha256": "1d4a5021adb3c280278c1460c232566c1fabd4ff54de27670a6e94f58201051a",
+    "gcs_generation": "1784674680402960"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-10b-instruct/stats.json",
+    "file": "v1.0.0/tiiuae/falcon3-10b-instruct/stats.json",
+    "sha256": "5ed32ae053ea644b4fa19b9e67dc5ff33d40308e1f4db3d3c27d4e5d96741889",
+    "gcs_generation": "1784674669491341"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-7b-instruct/scenario_state.json",
+    "file": "v1.0.0/tiiuae/falcon3-7b-instruct/scenario_state.json",
+    "sha256": "965465633547a7e505c83a82c22601233fc8c7a3129e4408fa4222de4772f265",
+    "gcs_generation": "1784675047194811"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-7b-instruct/per_instance_stats.json",
+    "file": "v1.0.0/tiiuae/falcon3-7b-instruct/per_instance_stats.json",
+    "sha256": "ab2883c91dc7b691eef61df5ff9d7162fb17a3faa6548a770a7211ed2f102535",
+    "gcs_generation": "1784675037689067"
+  },
+  {
+    "url_path": "runs/v1.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-7b-instruct/stats.json",
+    "file": "v1.0.0/tiiuae/falcon3-7b-instruct/stats.json",
+    "sha256": "fb95cdbcce46a1b423393d4fdf5f45670b486d53c1feedb16d28b1a1970aed4c",
+    "gcs_generation": "1784675026962997"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dallam-ai_allam-7b-instruct-preview/scenario_state.json",
+    "file": "v2.0.0/allam-ai/allam-7b-instruct-preview/scenario_state.json",
+    "sha256": "3621ed0c107831a6df3e444f71d6ec0c072b9a11dff77a77d211dcba071dc0a1",
+    "gcs_generation": "1784684463259837"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dallam-ai_allam-7b-instruct-preview/per_instance_stats.json",
+    "file": "v2.0.0/allam-ai/allam-7b-instruct-preview/per_instance_stats.json",
+    "sha256": "cbe90ed79e8f5875ef56f8833f00a1d63a8bf928fab59a78f9fb1736bf74d987",
+    "gcs_generation": "1784684414796067"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dallam-ai_allam-7b-instruct-preview/stats.json",
+    "file": "v2.0.0/allam-ai/allam-7b-instruct-preview/stats.json",
+    "sha256": "ec045785ff3958e69619b427264a6fc6878c3e13e940189f3921e132a037722d",
+    "gcs_generation": "1784684403032966"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm-s/scenario_state.json",
+    "file": "v2.0.0/arabicai/llm-s/scenario_state.json",
+    "sha256": "8519c9ecaeda2c94a7d7194ac78dcfa6fce05cab2b06965c5c18c8955a041441",
+    "gcs_generation": "1784686026342297"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm-s/per_instance_stats.json",
+    "file": "v2.0.0/arabicai/llm-s/per_instance_stats.json",
+    "sha256": "04cad5ed4f7e5cab1bd130ad9c06a0859db9b91e85933e9e30b67f3aca5b912b",
+    "gcs_generation": "1784685986062780"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm-s/stats.json",
+    "file": "v2.0.0/arabicai/llm-s/stats.json",
+    "sha256": "dd007b3dfafb287e91886327a9fd5bad1528102e5d3b470846628341a463c338",
+    "gcs_generation": "1784685965790981"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm-x/scenario_state.json",
+    "file": "v2.0.0/arabicai/llm-x/scenario_state.json",
+    "sha256": "7bd4a94da46d95a0bd24850f7864f15232ffb1c3fd309cf1cddd692f794925af",
+    "gcs_generation": "1784683079019064"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm-x/per_instance_stats.json",
+    "file": "v2.0.0/arabicai/llm-x/per_instance_stats.json",
+    "sha256": "263d5fd9187e4785588c571cc5ac358e85c7e8eed7074b92185819d88aa47d23",
+    "gcs_generation": "1784683026766716"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Darabicai_llm-x/stats.json",
+    "file": "v2.0.0/arabicai/llm-x/stats.json",
+    "sha256": "80e1fe6a52630aff8f4175a709b3886da215b8470580a95de5eaae1a32c8398c",
+    "gcs_generation": "1784683018931057"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dcohere_command-a-03-2025/scenario_state.json",
+    "file": "v2.0.0/cohere/command-a-03-2025/scenario_state.json",
+    "sha256": "0e8ef891aef714d9d6ac6fbb481a19035c85fbc3a88ac91d2867f26adb8f4d60",
+    "gcs_generation": "1784683222332311"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dcohere_command-a-03-2025/per_instance_stats.json",
+    "file": "v2.0.0/cohere/command-a-03-2025/per_instance_stats.json",
+    "sha256": "5caeccf006f14a38e666ce7c188e5ca408b710bfc6bc5270b93a6bed8bccbcd1",
+    "gcs_generation": "1784683171775265"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dcohere_command-a-03-2025/stats.json",
+    "file": "v2.0.0/cohere/command-a-03-2025/stats.json",
+    "sha256": "9ed7a88b8eb01b3bb935a83a543d0fff55c84392fcccb04306f6c2e4b49ae3ff",
+    "gcs_generation": "1784683160923068"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Ddeepseek-ai_deepseek-v3.1/scenario_state.json",
+    "file": "v2.0.0/deepseek-ai/deepseek-v3.1/scenario_state.json",
+    "sha256": "ecc808a178754865e39ef00bf0baa6737c24ea9f221e372218fd8d340099008f",
+    "gcs_generation": "1784685745859701"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Ddeepseek-ai_deepseek-v3.1/per_instance_stats.json",
+    "file": "v2.0.0/deepseek-ai/deepseek-v3.1/per_instance_stats.json",
+    "sha256": "c89db2292209df5cb1b76362ac3606b80a4643ff24e9ef3e6c405d022483711d",
+    "gcs_generation": "1784685693471072"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Ddeepseek-ai_deepseek-v3.1/stats.json",
+    "file": "v2.0.0/deepseek-ai/deepseek-v3.1/stats.json",
+    "sha256": "f33c4d2bd00b11bc423edb4c310168f9930607841bec1dce882b037944552ba3",
+    "gcs_generation": "1784685684839500"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-32b-chat/scenario_state.json",
+    "file": "v2.0.0/freedomintelligence/acegpt-v2-32b-chat/scenario_state.json",
+    "sha256": "11037e66a7c806ebb9551ea69a3dea8fb0cb3a0152caeddbe0f8936b18f2ca52",
+    "gcs_generation": "1784681370284178"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-32b-chat/per_instance_stats.json",
+    "file": "v2.0.0/freedomintelligence/acegpt-v2-32b-chat/per_instance_stats.json",
+    "sha256": "93f08440e938859cef419587f336095fd07683128e49fe32681525eb84691834",
+    "gcs_generation": "1784681306819950"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-32b-chat/stats.json",
+    "file": "v2.0.0/freedomintelligence/acegpt-v2-32b-chat/stats.json",
+    "sha256": "610822bdfbe6cb28fa17b86aaa1b56d157b655ce80f77809d39eea549ee0a96d",
+    "gcs_generation": "1784681295803173"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-70b-chat/scenario_state.json",
+    "file": "v2.0.0/freedomintelligence/acegpt-v2-70b-chat/scenario_state.json",
+    "sha256": "293de2eb779e65c9f04f2b3228dbeb54ef69480e4e8fd019de47ff0ceeb00e24",
+    "gcs_generation": "1784681156817808"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-70b-chat/per_instance_stats.json",
+    "file": "v2.0.0/freedomintelligence/acegpt-v2-70b-chat/per_instance_stats.json",
+    "sha256": "f8131ce539c48a95506f25fc12042f356448b1ff79e5c13b1ff870df632306e5",
+    "gcs_generation": "1784681041266795"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-70b-chat/stats.json",
+    "file": "v2.0.0/freedomintelligence/acegpt-v2-70b-chat/stats.json",
+    "sha256": "d5be938d9aedc46fbd12d5105d2fc2199e1cb87b97135672bb33c083e250e6b8",
+    "gcs_generation": "1784681028328720"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-8b-chat/scenario_state.json",
+    "file": "v2.0.0/freedomintelligence/acegpt-v2-8b-chat/scenario_state.json",
+    "sha256": "241b0db559054da9f6ae2d51104f95d7bc9f1110b133bb7996e8bf6803acb875",
+    "gcs_generation": "1784680865092794"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-8b-chat/per_instance_stats.json",
+    "file": "v2.0.0/freedomintelligence/acegpt-v2-8b-chat/per_instance_stats.json",
+    "sha256": "faefb96585a04180f5021b22e741e7d2e74057fc0f955343c850e2efb3664603",
+    "gcs_generation": "1784680750491299"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dfreedomintelligence_acegpt-v2-8b-chat/stats.json",
+    "file": "v2.0.0/freedomintelligence/acegpt-v2-8b-chat/stats.json",
+    "sha256": "1195f773d8da9740916809c4c0bd0f9093f94ec5131b737e8f5d4cd8cddd6261",
+    "gcs_generation": "1784680740858675"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-lite-thinking-disabled/scenario_state.json",
+    "file": "v2.0.0/google/gemini-2.5-flash-lite-thinking-disabled/scenario_state.json",
+    "sha256": "ffa67f75fc9aea792e890698bb5ae852ac786c57a5d1f345fbd85f0e3f802cfb",
+    "gcs_generation": "1784684384120108"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-lite-thinking-disabled/per_instance_stats.json",
+    "file": "v2.0.0/google/gemini-2.5-flash-lite-thinking-disabled/per_instance_stats.json",
+    "sha256": "6c2040b82a7f2f4067dbb21052ce60603b4f1b0907796d615c7d132ac41c4b4b",
+    "gcs_generation": "1784684332964134"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-lite-thinking-disabled/stats.json",
+    "file": "v2.0.0/google/gemini-2.5-flash-lite-thinking-disabled/stats.json",
+    "sha256": "0d7562bb6b2c0c9311cb60fce0a6c9527930ccb862003c3d49e1594e1341a2a3",
+    "gcs_generation": "1784684323299526"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-thinking-disabled/scenario_state.json",
+    "file": "v2.0.0/google/gemini-2.5-flash-thinking-disabled/scenario_state.json",
+    "sha256": "1dbc52f4e7ea63f12e08c6c032175180047f599ca53ea57983d12608ce73d4db",
+    "gcs_generation": "1784681359973102"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-thinking-disabled/per_instance_stats.json",
+    "file": "v2.0.0/google/gemini-2.5-flash-thinking-disabled/per_instance_stats.json",
+    "sha256": "d75c83001017ef51c41a49b7324771df4d4e4eb0a42242846aced21f235c4a44",
+    "gcs_generation": "1784681311620410"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dgoogle_gemini-2.5-flash-thinking-disabled/stats.json",
+    "file": "v2.0.0/google/gemini-2.5-flash-thinking-disabled/stats.json",
+    "sha256": "1f14c09fff422750618f3bc07e833ecf6316a380b6d3755b0aff72038c8093d4",
+    "gcs_generation": "1784681301437355"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-13b-chat/scenario_state.json",
+    "file": "v2.0.0/inceptionai/jais-adapted-13b-chat/scenario_state.json",
+    "sha256": "8de1624352a779be0d956fd66f55ef15b718fdde0bd9317c788007ebff827d76",
+    "gcs_generation": "1784680573428317"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-13b-chat/per_instance_stats.json",
+    "file": "v2.0.0/inceptionai/jais-adapted-13b-chat/per_instance_stats.json",
+    "sha256": "91ba243635fe875ded0a27c64fd31eae47e931ddc6e46d0cccf652a50de2c37b",
+    "gcs_generation": "1784680523400330"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-13b-chat/stats.json",
+    "file": "v2.0.0/inceptionai/jais-adapted-13b-chat/stats.json",
+    "sha256": "edb76fba1bc024b1ba79d69ab567d67017c19484fcba99ad1de86b791211b704",
+    "gcs_generation": "1784680509957272"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-70b-chat/scenario_state.json",
+    "file": "v2.0.0/inceptionai/jais-adapted-70b-chat/scenario_state.json",
+    "sha256": "d41b593d55ec9016055d462336136970aeaf21682769d33c19000037dad669e1",
+    "gcs_generation": "1784680699700075"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-70b-chat/per_instance_stats.json",
+    "file": "v2.0.0/inceptionai/jais-adapted-70b-chat/per_instance_stats.json",
+    "sha256": "2420aad6d8b1005afbe7f64875c88ff390c16c2c6c551bad3e40fdbe47e6f294",
+    "gcs_generation": "1784680649538681"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-70b-chat/stats.json",
+    "file": "v2.0.0/inceptionai/jais-adapted-70b-chat/stats.json",
+    "sha256": "216dab9754a3e6c3eb7753797809ae0ccbbc65e348a7f1cc41ce61ac8e842bef",
+    "gcs_generation": "1784680636799867"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-7b-chat/scenario_state.json",
+    "file": "v2.0.0/inceptionai/jais-adapted-7b-chat/scenario_state.json",
+    "sha256": "1f85f0675d5bce05fa275637409c645fcc84e8275ccdc17a59871755b5806475",
+    "gcs_generation": "1784683998334016"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-7b-chat/per_instance_stats.json",
+    "file": "v2.0.0/inceptionai/jais-adapted-7b-chat/per_instance_stats.json",
+    "sha256": "1285ccf94986ea4102d399ea025ad08d08cba54373f49021c9bee0c620c66677",
+    "gcs_generation": "1784683950890078"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-adapted-7b-chat/stats.json",
+    "file": "v2.0.0/inceptionai/jais-adapted-7b-chat/stats.json",
+    "sha256": "7bfadfde865204b154999a47bb899c2eea2df5c89afcfa1589b9536d1794f95c",
+    "gcs_generation": "1784683937621941"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-family-30b-16k-chat/scenario_state.json",
+    "file": "v2.0.0/inceptionai/jais-family-30b-16k-chat/scenario_state.json",
+    "sha256": "5616451eba9704aaee51103bfa88474a3a33540dfbdeecd143adfc0eaec4e472",
+    "gcs_generation": "1784686433370645"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-family-30b-16k-chat/per_instance_stats.json",
+    "file": "v2.0.0/inceptionai/jais-family-30b-16k-chat/per_instance_stats.json",
+    "sha256": "91b61f7c2d9fd3869381b5f95695aeafdce3d665229ec7399dc5d97ba9524244",
+    "gcs_generation": "1784686387462160"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dinceptionai_jais-family-30b-16k-chat/stats.json",
+    "file": "v2.0.0/inceptionai/jais-family-30b-16k-chat/stats.json",
+    "sha256": "d5e052cbab16b90a8e4a62212ffe3a1c8ff4b7d26efbec2f61dd6633c51e4303",
+    "gcs_generation": "1784686380364433"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-3.3-70b-instruct-turbo/scenario_state.json",
+    "file": "v2.0.0/meta/llama-3.3-70b-instruct-turbo/scenario_state.json",
+    "sha256": "9ea4f06890ed5ec66d5cb49e1872b39c926dfb5eebf8a4197fb85e19a01e6576",
+    "gcs_generation": "1784686669025274"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-3.3-70b-instruct-turbo/per_instance_stats.json",
+    "file": "v2.0.0/meta/llama-3.3-70b-instruct-turbo/per_instance_stats.json",
+    "sha256": "57d6cdcd934cd6f418fbb170896c573f7da18b161823208fe511893414e0bd4b",
+    "gcs_generation": "1784686620878299"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-3.3-70b-instruct-turbo/stats.json",
+    "file": "v2.0.0/meta/llama-3.3-70b-instruct-turbo/stats.json",
+    "sha256": "250fd88c4428752d58a02ac4399e0f258d0cf63b1a543fb6aa261b96a802e05a",
+    "gcs_generation": "1784686609583548"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-maverick-17b-128e-instruct-fp8/scenario_state.json",
+    "file": "v2.0.0/meta/llama-4-maverick-17b-128e-instruct-fp8/scenario_state.json",
+    "sha256": "8778f1a65fb81746c8d835f5ec77bce4b8586403fd645d9dc3010babc52ef88a",
+    "gcs_generation": "1784681542875112"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-maverick-17b-128e-instruct-fp8/per_instance_stats.json",
+    "file": "v2.0.0/meta/llama-4-maverick-17b-128e-instruct-fp8/per_instance_stats.json",
+    "sha256": "fceae142e46406a4401d97d42acb2e6870601feda6f04cb09e88e2f115802762",
+    "gcs_generation": "1784681490691474"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-maverick-17b-128e-instruct-fp8/stats.json",
+    "file": "v2.0.0/meta/llama-4-maverick-17b-128e-instruct-fp8/stats.json",
+    "sha256": "3014f559b545025f49fd4d44cdbd126f538e84243d193c3ff6c1b11ae169edc5",
+    "gcs_generation": "1784681495115259"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-scout-17b-16e-instruct/scenario_state.json",
+    "file": "v2.0.0/meta/llama-4-scout-17b-16e-instruct/scenario_state.json",
+    "sha256": "06ea7d1e4426efa4a769292bc01ea1f0d2cada223ca53ee947d2185f4e9cb931",
+    "gcs_generation": "1784684623637941"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-scout-17b-16e-instruct/per_instance_stats.json",
+    "file": "v2.0.0/meta/llama-4-scout-17b-16e-instruct/per_instance_stats.json",
+    "sha256": "1e9be32792be459bda8d7f3b0be85478a35e13141e3881afd8222558dabb6ccb",
+    "gcs_generation": "1784684582397011"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmeta_llama-4-scout-17b-16e-instruct/stats.json",
+    "file": "v2.0.0/meta/llama-4-scout-17b-16e-instruct/stats.json",
+    "sha256": "b23a9a00eb3c642ee59dccd9a6ff1ef3726a5601bc0973a9fb3ec562b4a85cf8",
+    "gcs_generation": "1784684564603404"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmistralai_mistral-large-2411/scenario_state.json",
+    "file": "v2.0.0/mistralai/mistral-large-2411/scenario_state.json",
+    "sha256": "6bf15bc981d026b420e87d4ba2e6b0db866d8ead5547f664ccd5de7658d581b3",
+    "gcs_generation": "1784682137699833"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmistralai_mistral-large-2411/per_instance_stats.json",
+    "file": "v2.0.0/mistralai/mistral-large-2411/per_instance_stats.json",
+    "sha256": "f75c5875512dde3f259ddeccaff3ddcfd2418c5d488a483a0f8cd82007487d2c",
+    "gcs_generation": "1784682085800624"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dmistralai_mistral-large-2411/stats.json",
+    "file": "v2.0.0/mistralai/mistral-large-2411/stats.json",
+    "sha256": "dae751b1eab084a6b03fd7d56a3129ae92391bd91761b989cb8eb9d806a53058",
+    "gcs_generation": "1784682076303608"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-2025-04-14/scenario_state.json",
+    "file": "v2.0.0/openai/gpt-4.1-2025-04-14/scenario_state.json",
+    "sha256": "f6c0a25680607d6e91ac4703038161dbe27c51f06bb80e056da90ea370f02613",
+    "gcs_generation": "1784681411433756"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-2025-04-14/per_instance_stats.json",
+    "file": "v2.0.0/openai/gpt-4.1-2025-04-14/per_instance_stats.json",
+    "sha256": "a1afee5a57704ba1892311296b015f347b8ea83e80a6482dcb4be0bab1c28801",
+    "gcs_generation": "1784681363759011"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-2025-04-14/stats.json",
+    "file": "v2.0.0/openai/gpt-4.1-2025-04-14/stats.json",
+    "sha256": "54d00bba4fc8f1d68f73b16acd0975932a4e1650cebf91bf5942a7a68fa432e7",
+    "gcs_generation": "1784681351950338"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-mini-2025-04-14/scenario_state.json",
+    "file": "v2.0.0/openai/gpt-4.1-mini-2025-04-14/scenario_state.json",
+    "sha256": "5d95fe213a48dfde1c386b952833ec68452f511c6b8218183ef6251791d86ea9",
+    "gcs_generation": "1784680547519251"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-mini-2025-04-14/per_instance_stats.json",
+    "file": "v2.0.0/openai/gpt-4.1-mini-2025-04-14/per_instance_stats.json",
+    "sha256": "f2b3644ef6e532fac5f87c0e6ca165c83137670c2d94a52037816917ac6f0ea2",
+    "gcs_generation": "1784680490418525"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-mini-2025-04-14/stats.json",
+    "file": "v2.0.0/openai/gpt-4.1-mini-2025-04-14/stats.json",
+    "sha256": "9c8e168fa0708da0bc14c6580bf5486f62389963788c21aac4817c63827a9504",
+    "gcs_generation": "1784680480025724"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-nano-2025-04-14/scenario_state.json",
+    "file": "v2.0.0/openai/gpt-4.1-nano-2025-04-14/scenario_state.json",
+    "sha256": "b04edd34a221259c77bbff6c4b70be17373ad3a522ef2bfc5dd02567ca971ea8",
+    "gcs_generation": "1784681602777752"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-nano-2025-04-14/per_instance_stats.json",
+    "file": "v2.0.0/openai/gpt-4.1-nano-2025-04-14/per_instance_stats.json",
+    "sha256": "7431f9aef09e5977a31c3a54702bb487325e4f53e082f1ea89cc7b85d806bebb",
+    "gcs_generation": "1784681550748721"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-4.1-nano-2025-04-14/stats.json",
+    "file": "v2.0.0/openai/gpt-4.1-nano-2025-04-14/stats.json",
+    "sha256": "e4177b3099f220a8607a9d1af3aea7c685dedf7edfcfc0411e2df1edd0af29b1",
+    "gcs_generation": "1784681538453521"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-5.1-2025-11-13/scenario_state.json",
+    "file": "v2.0.0/openai/gpt-5.1-2025-11-13/scenario_state.json",
+    "sha256": "5147980b4a0fd8791c6ebf6817f8b2e68b559952796168aafe131bff34150819",
+    "gcs_generation": "1784681435029854"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-5.1-2025-11-13/per_instance_stats.json",
+    "file": "v2.0.0/openai/gpt-5.1-2025-11-13/per_instance_stats.json",
+    "sha256": "262356b35883ce8284bb77ded6c74ed0973d2b3efdfc93085a2c741e6aa59ac5",
+    "gcs_generation": "1784681386678455"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dopenai_gpt-5.1-2025-11-13/stats.json",
+    "file": "v2.0.0/openai/gpt-5.1-2025-11-13/stats.json",
+    "sha256": "92f86e0ce4b4f7dba70f41a3f2314f8bc67068a313b26f592f8fe629908427a3",
+    "gcs_generation": "1784681374952963"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-72b-instruct-turbo/scenario_state.json",
+    "file": "v2.0.0/qwen/qwen2.5-72b-instruct-turbo/scenario_state.json",
+    "sha256": "ef89af13e6de8a2b792cd0b78a54f84875ffeba9c045ef040a2a2ac5db35fb36",
+    "gcs_generation": "1784681127960669"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-72b-instruct-turbo/per_instance_stats.json",
+    "file": "v2.0.0/qwen/qwen2.5-72b-instruct-turbo/per_instance_stats.json",
+    "sha256": "a0bfd52689c76e0cfec0af29b21f4f146b1ed4424f10f482e1679d072e4cade3",
+    "gcs_generation": "1784681078847994"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-72b-instruct-turbo/stats.json",
+    "file": "v2.0.0/qwen/qwen2.5-72b-instruct-turbo/stats.json",
+    "sha256": "1227c3411d060c4d8b7887b364c847b1c9b0cd71e5a312cd00082271eb85d311",
+    "gcs_generation": "1784681064557908"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-7b-instruct-turbo/scenario_state.json",
+    "file": "v2.0.0/qwen/qwen2.5-7b-instruct-turbo/scenario_state.json",
+    "sha256": "62101c3e57b692764c17a504221cc0686c4f54ed7a893c86b215f867abb22303",
+    "gcs_generation": "1784686410660369"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-7b-instruct-turbo/per_instance_stats.json",
+    "file": "v2.0.0/qwen/qwen2.5-7b-instruct-turbo/per_instance_stats.json",
+    "sha256": "dc5bed2552fe5f2bcf4fa4d21afbbb08c3a8df3a10a7702efdea3f94aaf4e1a9",
+    "gcs_generation": "1784686361668496"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen2.5-7b-instruct-turbo/stats.json",
+    "file": "v2.0.0/qwen/qwen2.5-7b-instruct-turbo/stats.json",
+    "sha256": "3e069d286efba9e7b6825f4ab830cdb7aad066ec6550360b04bef8adb1d58da1",
+    "gcs_generation": "1784686349049404"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-235b-a22b-instruct-2507-fp8/scenario_state.json",
+    "file": "v2.0.0/qwen/qwen3-235b-a22b-instruct-2507-fp8/scenario_state.json",
+    "sha256": "c0368f7818785d9d210b13ab73f4c246293eaacb260393a56964cb029a5ce01f",
+    "gcs_generation": "1784685130836483"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-235b-a22b-instruct-2507-fp8/per_instance_stats.json",
+    "file": "v2.0.0/qwen/qwen3-235b-a22b-instruct-2507-fp8/per_instance_stats.json",
+    "sha256": "893e630c933bf0f60499c09a332f81426f8ad9366eb4296e2cc7972ae593bdac",
+    "gcs_generation": "1784685079518229"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-235b-a22b-instruct-2507-fp8/stats.json",
+    "file": "v2.0.0/qwen/qwen3-235b-a22b-instruct-2507-fp8/stats.json",
+    "sha256": "258487a90ac5abec25a2a5f5ae9223580058c6598464c66047eec18f5e0cccf8",
+    "gcs_generation": "1784685069330835"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-next-80b-a3b-instruct/scenario_state.json",
+    "file": "v2.0.0/qwen/qwen3-next-80b-a3b-instruct/scenario_state.json",
+    "sha256": "7b96a787511f7c418342ecf282cc6707fd349476cd040172275380a95a6b0dc4",
+    "gcs_generation": "1784684562910101"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-next-80b-a3b-instruct/per_instance_stats.json",
+    "file": "v2.0.0/qwen/qwen3-next-80b-a3b-instruct/per_instance_stats.json",
+    "sha256": "f793dcc90ed9fef4ff0907600c01a8ae587eefdb7f12b6bcbb90fd1d7e42aadf",
+    "gcs_generation": "1784684511231716"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dqwen_qwen3-next-80b-a3b-instruct/stats.json",
+    "file": "v2.0.0/qwen/qwen3-next-80b-a3b-instruct/stats.json",
+    "sha256": "c9c7fea7fc0a9e070fac054f92553e1523e4daebef1de7e9394d0f987677c3e9",
+    "gcs_generation": "1784684500970407"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dsilma-ai_silma-9b-instruct-v1.0/scenario_state.json",
+    "file": "v2.0.0/silma-ai/silma-9b-instruct-v1.0/scenario_state.json",
+    "sha256": "e02c63cf0312a0f2a9ad9d67db7b8da9b892b75992386518575438127f3a87df",
+    "gcs_generation": "1784680758927522"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dsilma-ai_silma-9b-instruct-v1.0/per_instance_stats.json",
+    "file": "v2.0.0/silma-ai/silma-9b-instruct-v1.0/per_instance_stats.json",
+    "sha256": "ebb350bff3d7da1725b49e5f02d0948950c84d6842fe3a3d5bec10711476e44f",
+    "gcs_generation": "1784680710190402"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dsilma-ai_silma-9b-instruct-v1.0/stats.json",
+    "file": "v2.0.0/silma-ai/silma-9b-instruct-v1.0/stats.json",
+    "sha256": "80039ab6e81a3c65305832f069992fc901c9442530b749b67ca164c568f417f1",
+    "gcs_generation": "1784680700513476"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-10b-instruct/scenario_state.json",
+    "file": "v2.0.0/tiiuae/falcon3-10b-instruct/scenario_state.json",
+    "sha256": "a334e10450d8df0c00a0b57aba7161bcb1fdd37c442ec932ba58f01b4f4f5216",
+    "gcs_generation": "1784684500252702"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-10b-instruct/per_instance_stats.json",
+    "file": "v2.0.0/tiiuae/falcon3-10b-instruct/per_instance_stats.json",
+    "sha256": "17ff565f9612a3bdfc5890f822727247f72fc02379e4270f1cc10098d4e3eea6",
+    "gcs_generation": "1784684452490314"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-10b-instruct/stats.json",
+    "file": "v2.0.0/tiiuae/falcon3-10b-instruct/stats.json",
+    "sha256": "da9094dc3ebb37cb6e0389ebb2fc34261319c89e64207113ed630cd85efa749e",
+    "gcs_generation": "1784684440560652"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-7b-instruct/scenario_state.json",
+    "file": "v2.0.0/tiiuae/falcon3-7b-instruct/scenario_state.json",
+    "sha256": "8768d8f01ae111a43ef7a20fb2f6011cac3cc67649d8f0a764e2bed759543645",
+    "gcs_generation": "1784685578026318"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-7b-instruct/per_instance_stats.json",
+    "file": "v2.0.0/tiiuae/falcon3-7b-instruct/per_instance_stats.json",
+    "sha256": "76634d601d85d9b59552b99f6b300995131c5d2ce7921fb30c49561b10960c65",
+    "gcs_generation": "1784685524425927"
+  },
+  {
+    "url_path": "runs/v2.0.0/madinah_qa%3Asubset%3DArabic_Language_%28General%29%2Cmax_train_instances%3D0%2Cmodel%3Dtiiuae_falcon3-7b-instruct/stats.json",
+    "file": "v2.0.0/tiiuae/falcon3-7b-instruct/stats.json",
+    "sha256": "30e21418056a0fd05368529c38f03e239bd6097e2cb747fcb592c7deeb2bfd6f",
+    "gcs_generation": "1784685511736961"
+  }
+]

@@ -45,3 +45,13 @@ python3 -B "$campaign/fetch_helm.py" "$runtime/raw/helm"
 OPENBLAS_NUM_THREADS=1 python3 -B "$campaign/score_helm.py" \
   "$runtime/raw/mmlu-data.tar" "$runtime/raw/helm" "$runtime/helm-audit.json"
 ```
+
+## Replay the MadinahQA context repair
+
+Use the same Python and NumPy environment as the MMLU audit. Fetch and score the two published releases on the frozen General subset. See [the protocol](CONTEXT-PROTOCOL.md) and [results](CONTEXT-RESULTS.md).
+
+```bash
+python3 -B "$campaign/fetch_context.py" "$runtime/raw/helm-context"
+OPENBLAS_NUM_THREADS=1 python3 -B "$campaign/score_context.py" \
+  "$runtime/raw/helm-context" "$runtime/helm-context-audit.json"
+```

@@ -1,0 +1,68 @@
+{
+  "verified_at": "2026-11-22T11:18:57.666776+00:00",
+  "outputs_sha256_normalized_newlines": {
+    "wino_summary.json": "5907a2bf481699f84204c8d8faa6a5e48305e42c66367f995def72e22677acc8",
+    "wino_records.csv": "e14ee8d6723b2e39b9c08684d8c10dc3fd935eb568ed926d067fe2620a2d3c7d"
+  },
+  "verified_per_item_correctness_indicators": 2534,
+  "results": {
+    "panels": {
+      "excluded": {
+        "n": 268,
+        "pythia-160m": {
+          "official_correct": 134,
+          "constant_B_correct": 132
+        },
+        "pythia-12b": {
+          "official_correct": 163,
+          "constant_B_correct": 127
+        },
+        "winner_official": "pythia-12b",
+        "winner_constant_B": "pythia-160m"
+      },
+      "selection": {
+        "n": 485,
+        "pythia-160m": {
+          "official_correct": 264,
+          "constant_B_correct": 230
+        },
+        "pythia-12b": {
+          "official_correct": 319,
+          "constant_B_correct": 257
+        },
+        "winner_official": "pythia-12b",
+        "winner_constant_B": "pythia-12b"
+      },
+      "assessment": {
+        "n": 514,
+        "pythia-160m": {
+          "official_correct": 255,
+          "constant_B_correct": 241
+        },
+        "pythia-12b": {
+          "official_correct": 331,
+          "constant_B_correct": 267
+        },
+        "winner_official": "pythia-12b",
+        "winner_constant_B": "pythia-12b"
+      },
+      "full": {
+        "n": 1267,
+        "pythia-160m": {
+          "official_correct": 653,
+          "constant_B_correct": 603
+        },
+        "pythia-12b": {
+          "official_correct": 813,
+          "constant_B_correct": 651
+        },
+        "winner_official": "pythia-12b",
+        "winner_constant_B": "pythia-12b"
+      }
+    },
+    "previous_hashes": 234,
+    "excluded_option_groups": 142,
+    "heldout_loss_of_constant_B_selection": 0,
+    "scored": 1267
+  }
+}

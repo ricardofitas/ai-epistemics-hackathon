@@ -4,6 +4,7 @@ import json
 import shutil
 import time
 from concurrent.futures import ThreadPoolExecutor
+from http.client import HTTPException
 from pathlib import Path
 from urllib.error import URLError
 from urllib.request import Request, urlopen
@@ -33,7 +34,7 @@ def download(job):
                 raise OSError("Incomplete HTTP range response")
             pending.replace(destination)
             return
-        except (OSError, URLError):
+        except (OSError, HTTPException, URLError):
             if attempt == 3:
                 raise RuntimeError(f"Publisher download failed for {destination.name}") from None
             time.sleep(2 ** attempt)

@@ -3,8 +3,10 @@ import argparse
 import gzip
 import hashlib
 import json
+import time
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
+from http.client import HTTPException
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
@@ -16,22 +18,23 @@ SUBJECTS = ("abstract_algebra", "college_chemistry", "computer_security", "econo
 FILES = ("scenario_state.json", "per_instance_stats.json")
 
 
-def fetch(root, remote, local):
+def fetch(root, remote, local, root_url=ROOT_URL):
     dest = root / local
     if dest.is_file():
         return {"url_path": remote, "file": local, "sha256": hashlib.sha256(dest.read_bytes()).hexdigest()}
-    for attempt in range(3):
+    for attempt in range(4):
         try:
-            request = Request(ROOT_URL + remote, headers={"Accept-Encoding": "gzip"})
+            request = Request(root_url + remote, headers={"Accept-Encoding": "gzip"})
             with urlopen(request, timeout=90) as result:
                 data = result.read()
                 generation = result.headers.get("x-goog-generation")
             break
-        except (TimeoutError, URLError) as error:
+        except (OSError, HTTPException, URLError) as error:
             if isinstance(error, HTTPError) and error.code == 404:
                 return {"url_path": remote, "file": local, "missing": True}
-            if attempt == 2:
+            if attempt == 3:
                 raise
+            time.sleep(2 ** attempt)
     if data.startswith(b"\x1f\x8b"):
         data = gzip.decompress(data)
     json.loads(data)
