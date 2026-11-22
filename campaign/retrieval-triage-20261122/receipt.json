@@ -1,0 +1,53 @@
+{
+  "run_id": "retrieval-triage-20261122-r05",
+  "hardware": "CPU",
+  "training_queries": 809,
+  "feature_names": [
+    "query_length",
+    "vocabulary_length",
+    "top_score",
+    "gap_2",
+    "gap_10",
+    "top10_sd",
+    "mean_idf",
+    "max_idf",
+    "runner_survival",
+    "corpus_survival"
+  ],
+  "pilot": {
+    "queries": 300,
+    "accepted": 210,
+    "all_query_hit_rate": 0.5333333333333333,
+    "baseline_miss_rate": 0.30000000000000004,
+    "expanded_miss_rate": 0.3047619047619048,
+    "gap10_miss_rate": 0.32380952380952377,
+    "miss_reduction_pp": -0.4761904761904745,
+    "paired_bootstrap_95_pp": [
+      -0.952380952380949,
+      0.4761904761904856
+    ],
+    "outside_runner_effect_queries": 84,
+    "passes": false
+  },
+  "transfer": "gated",
+  "inputs": {
+    "scifact": {
+      "corpus-00000-of-00001.parquet": {
+        "url": "https://huggingface.co/datasets/BeIR/scifact/resolve/b3b5335604bf5ee3c4447671af975ea25143d4f5/corpus/corpus-00000-of-00001.parquet",
+        "sha256": "243324b35f03d82bd6d98a5f575966876e86cad7ce16e5333a35b1b793dc4f45"
+      },
+      "queries-00000-of-00001.parquet": {
+        "url": "https://huggingface.co/datasets/BeIR/scifact/resolve/b3b5335604bf5ee3c4447671af975ea25143d4f5/queries/queries-00000-of-00001.parquet",
+        "sha256": "1c37956c5dc8b810b60302323c24d1a9e79e26411ba8f5ad9d0888642e2a9034"
+      },
+      "train.tsv": {
+        "url": "https://huggingface.co/datasets/BeIR/scifact-qrels/resolve/2938d17dc3b09882fdb8c12bbbe2e2dc0e75a029/train.tsv",
+        "sha256": "a53f2114831916c096b6c37d9e54da68cef4efdcdbd5ed46533601af972acf1d"
+      },
+      "test.tsv": {
+        "url": "https://huggingface.co/datasets/BeIR/scifact-qrels/resolve/2938d17dc3b09882fdb8c12bbbe2e2dc0e75a029/test.tsv",
+        "sha256": "0864bb985e0ca2367ba217977e72004d549054b2b06666ed9d4825ac7c21284c"
+      }
+    }
+  }
+}
