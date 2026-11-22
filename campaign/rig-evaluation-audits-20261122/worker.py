@@ -164,15 +164,21 @@ def main():
     items, _ = source_items(archive, protocol)
 
     # Wait outside the lease while dependencies and data files are staged.
-    deadline = time.monotonic() + 60 * 60
+    deadline = time.monotonic() + 90 * 60
     asset_names = protocol["snapshot_files"]
     weight_files = [args.runtime / "weights" / rev / name
                     for rev in protocol["models"].values() for name in asset_names]
     while not (all(path.is_file() for path in weight_files)
                and (args.runtime / "packages.ready").is_file()):
         if time.monotonic() > deadline:
-            raise RuntimeError("Weights or dependencies were unavailable after one hour")
+            raise RuntimeError("Weights or dependencies were unavailable after 90 minutes")
         time.sleep(5)
+
+    digests = {str(path.relative_to(args.runtime)): sha256(path) for path in weight_files}
+    pins = json.loads((ROOT / "model-weights.json").read_text())
+    for repo, revision in protocol["models"].items():
+        if digests[f"weights/{revision}/model.safetensors"] != pins[repo]["sha256"]:
+            raise RuntimeError(f"Publisher weight SHA-256 mismatch for {repo}")
 
     out = args.runtime / "runs" / args.run_id
     out.mkdir(exist_ok=True, parents=True)
@@ -181,7 +187,7 @@ def main():
         "run_id": args.run_id, "split": args.split, "models": protocol["models"],
         "gpu": gpu, "expected_items": 2 * len(panel), "expected_answers": 2 * len(panel) * expected,
         "protocol_sha256": sha256(protocol_file), "item_manifest_sha256": sha256(frozen),
-        "assets_sha256": {str(path.relative_to(args.runtime)): sha256(path) for path in weight_files},
+        "assets_sha256": digests,
         "boinc_reservation": "none; coexist with executing tasks",
     }
     lock = Path(os.environ["XDG_RUNTIME_DIR"]) / (gpu["uuid"] + ".lock")

@@ -1,0 +1,1333 @@
+[
+  {
+    "url_path": "releases/v1.0.0/run_specs.json",
+    "file": "run_specs.json",
+    "sha256": "22dd8bf03ef31cf56acbd6771a25bf8504050ee559b3c9095954a8a33f8d7d87"
+  },
+  {
+    "url_path": "releases/v1.0.0/groups/mmlu.json",
+    "file": "published.json",
+    "sha256": "4e2379b87b5e8611071d14b8c9e59590a9cbaa947f0c74599065c5490245b4b8",
+    "gcs_generation": "1781130185019470"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-34b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "01-ai/yi-34b/abstract_algebra/scenario_state.json",
+    "sha256": "c535e476f2e3889501a9bbc950f7b2368264a937dbd09a595938af9889309985",
+    "gcs_generation": "1781130238324290"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-34b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "01-ai/yi-34b/abstract_algebra/per_instance_stats.json",
+    "sha256": "a62893323e9da0f4ab84b68a1ad453c4b47a342eb6e4a018ee4f1da8ea74e5c6",
+    "gcs_generation": "1781130237976148"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-6b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "01-ai/yi-6b/abstract_algebra/scenario_state.json",
+    "sha256": "e969b9b5b47274f13525b95f81b25e554e3252845b7ffb871d8e2f16d8d54d45",
+    "gcs_generation": "1781130238070960"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-6b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "01-ai/yi-6b/abstract_algebra/per_instance_stats.json",
+    "sha256": "1573ee2dfddea0c19eb4ed17c5254b32828c242e360912e42cf276e8537fc2e0",
+    "gcs_generation": "1781130238315767"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-2.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "anthropic/claude-2.1/abstract_algebra/scenario_state.json",
+    "sha256": "00898d431c674ed19cb942e7d2ab9b9e7af0a2be6845d28b499ceaea91e53638",
+    "gcs_generation": "1781130238838650"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-2.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "anthropic/claude-2.1/abstract_algebra/per_instance_stats.json",
+    "sha256": "55c58f1248a63986714f5584342701ba37b19cbd9a1af1295bf5dc9fe80c45c3",
+    "gcs_generation": "1781130238759708"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-haiku-20240307%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "anthropic/claude-3-haiku-20240307/abstract_algebra/scenario_state.json",
+    "sha256": "8e1fdd973d26bad7ffbab40f4a677d0687dfeadeb85a83fa514615ac9ac7879d",
+    "gcs_generation": "1781130238552491"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-haiku-20240307%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "anthropic/claude-3-haiku-20240307/abstract_algebra/per_instance_stats.json",
+    "sha256": "c48039c091c8e4a73a9737b7398fe4761cff13bbff7e9f8ea23599ceb5623f19",
+    "gcs_generation": "1781130238571780"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-opus-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "anthropic/claude-3-opus-20240229/abstract_algebra/scenario_state.json",
+    "sha256": "445a1f951f923aabde9528d0a1bd646ad76223b337f3c61c5b36ceb43f685edd",
+    "gcs_generation": "1781130239063511"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-opus-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "anthropic/claude-3-opus-20240229/abstract_algebra/per_instance_stats.json",
+    "sha256": "390c2038a7aa271e9b0800405524b5846c4d611fd3dc5acdfbb0f030811b9e74",
+    "gcs_generation": "1781130239304328"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-sonnet-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "anthropic/claude-3-sonnet-20240229/abstract_algebra/scenario_state.json",
+    "sha256": "cc54df5e876bb560659735f50f5cc67ea40b2e4c5a657cb67865bb2be1606b10",
+    "gcs_generation": "1781130239553335"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-sonnet-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "anthropic/claude-3-sonnet-20240229/abstract_algebra/per_instance_stats.json",
+    "sha256": "14823341503378f304e62aefcb8efb91bcfaf5132d666876e9789b8bfce1fdf8",
+    "gcs_generation": "1781130239565534"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-instant-1.2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "anthropic/claude-instant-1.2/abstract_algebra/scenario_state.json",
+    "sha256": "161a53d98cdca0e3014bb08da6647ef576858b68be09f7406fa11f8dcbfe8c1c",
+    "gcs_generation": "1781130239545783"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-instant-1.2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "anthropic/claude-instant-1.2/abstract_algebra/per_instance_stats.json",
+    "sha256": "d18bb93b215672b73dc886e774fe5515a3a83b12f39a8de3c10349f2bd66a9b5",
+    "gcs_generation": "1781130239543831"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_gemini-1.0-pro-001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "google/gemini-1.0-pro-001/abstract_algebra/scenario_state.json",
+    "sha256": "989ec043fc4651b4b5a118376875effd89bb67955552154db254b35f65ea9f3e",
+    "gcs_generation": "1781130240530644"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_gemini-1.0-pro-001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "google/gemini-1.0-pro-001/abstract_algebra/per_instance_stats.json",
+    "sha256": "c4299246f47c29405ef8291db87cb5b2dd4809a91354b7910be12b35fa321472",
+    "gcs_generation": "1781130240011840"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-bison%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "google/text-bison@001/abstract_algebra/scenario_state.json",
+    "sha256": "676b20d3771f68066910638d98307276d1f589e29bfdd6b4810fcf5c31e4cf73",
+    "gcs_generation": "1781130240017705"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-bison%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "google/text-bison@001/abstract_algebra/per_instance_stats.json",
+    "sha256": "bfa60b838a4191ff35f3d7e96212f4210f4fd1a29180158c3744cb3ca968ebdf",
+    "gcs_generation": "1781130239995561"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-unicorn%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "google/text-unicorn@001/abstract_algebra/scenario_state.json",
+    "sha256": "e2d2316f75047dd8efea0280b042ddb6c5f401b5b79353c2950c5838942aedbe",
+    "gcs_generation": "1781130241011832"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-unicorn%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "google/text-unicorn@001/abstract_algebra/per_instance_stats.json",
+    "sha256": "7b9825f6d099d6163a4d0922787ba7d79fa84ab07e76edb30fab70b187555293",
+    "gcs_generation": "1781130240515798"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-13b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "meta/llama-2-13b/abstract_algebra/scenario_state.json",
+    "sha256": "a896681e6c2769ca62e7a2ba8aef3f1eef5a8473276390df1b1d92bbaf43b94d",
+    "gcs_generation": "1781130240571556"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-13b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "meta/llama-2-13b/abstract_algebra/per_instance_stats.json",
+    "sha256": "795567df8076ad1f7c3099c543b397dce5281e40dc93f75a3fed310800d329aa",
+    "gcs_generation": "1781130240553406"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-70b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "meta/llama-2-70b/abstract_algebra/scenario_state.json",
+    "sha256": "d31e1c6208b780bcde114c7e3148553e131cd7ca6e38373d00df73f7879bde10",
+    "gcs_generation": "1781130242731751"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-70b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "meta/llama-2-70b/abstract_algebra/per_instance_stats.json",
+    "sha256": "343a31e2e44ced01df78bbcee1ac8b5e393b917e60224a59bccc31b84c3dd229",
+    "gcs_generation": "1781130240734679"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "meta/llama-2-7b/abstract_algebra/scenario_state.json",
+    "sha256": "b50d7294515a4d638df4eab84e9dd819204447d4b56cafd4e6b6a72e42eac887",
+    "gcs_generation": "1781130240987721"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "meta/llama-2-7b/abstract_algebra/per_instance_stats.json",
+    "sha256": "6c9a46dd3012a1766b72aa98b631fefe47248615d215b812ff9ce48eb07891d7",
+    "gcs_generation": "1781130241048246"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmicrosoft_phi-2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "microsoft/phi-2/abstract_algebra/scenario_state.json",
+    "sha256": "cd0052a57acda844090c542658e37c45e991137e574edd9071c5343269687159",
+    "gcs_generation": "1781130241568083"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmicrosoft_phi-2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "microsoft/phi-2/abstract_algebra/per_instance_stats.json",
+    "sha256": "57fc1b152d5a3dd65269d7c8288e363fd0c630d2be8e8c471fa59ee276527125",
+    "gcs_generation": "1781130240982570"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mistral-7b-v0.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "mistralai/mistral-7b-v0.1/abstract_algebra/scenario_state.json",
+    "sha256": "582c4c166d4b0ae86d1c0a5047edd92dfbd8db9973c9ec49f3269cc33309b9e0",
+    "gcs_generation": "1781130241518460"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mistral-7b-v0.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "mistralai/mistral-7b-v0.1/abstract_algebra/per_instance_stats.json",
+    "sha256": "6299f908c9bd233c3f2d4388d7f97e90da32ea65957db72c42c8d94ed8a166bf",
+    "gcs_generation": "1781130242021432"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mixtral-8x7b-32kseqlen%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "mistralai/mixtral-8x7b-32kseqlen/abstract_algebra/scenario_state.json",
+    "sha256": "3062a23e045edd9cb959daa517db9088c730ddaf5571cb90d107211c71e178a4",
+    "gcs_generation": "1781130241561407"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mixtral-8x7b-32kseqlen%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "mistralai/mixtral-8x7b-32kseqlen/abstract_algebra/per_instance_stats.json",
+    "sha256": "e22587c770fc477fb0f5c52260cbeefd7389073b810f255137c1efac2c8ab76b",
+    "gcs_generation": "1781130241788230"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-3.5-turbo-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "openai/gpt-3.5-turbo-0613/abstract_algebra/scenario_state.json",
+    "sha256": "bdf749c22629924bf487459ef2f2218303f52592a9650d2630356b20512a192c",
+    "gcs_generation": "1781130242548570"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-3.5-turbo-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "openai/gpt-3.5-turbo-0613/abstract_algebra/per_instance_stats.json",
+    "sha256": "6b60165b228af179b3138441a1d427f77a7790ea2c8e9523610cc91fbbb6511b",
+    "gcs_generation": "1781130241730707"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "openai/gpt-4-0613/abstract_algebra/scenario_state.json",
+    "sha256": "c3eee7929d5621d95ffb397228063503ec6dd791c873947b6b60ce8aacfcf4d4",
+    "gcs_generation": "1781130242006181"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "openai/gpt-4-0613/abstract_algebra/per_instance_stats.json",
+    "sha256": "34b711ceaa564e6a2d34565ede0c02d65086b52ceaf88265ca1ab2ef054fe0b6",
+    "gcs_generation": "1781130242066551"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-1106-preview%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "openai/gpt-4-1106-preview/abstract_algebra/scenario_state.json",
+    "sha256": "c91b0f7dbf53ce9a22a82db349ba2e4843f3b8240c1b46cc3df655bfcdb4fdfc",
+    "gcs_generation": "1781130242536972"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-1106-preview%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "openai/gpt-4-1106-preview/abstract_algebra/per_instance_stats.json",
+    "sha256": "e101916015a2b402504a45de14b1102ea124bd53e2f49fbbf14ab8758ba4c979",
+    "gcs_generation": "1781130242022416"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-14b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "qwen/qwen1.5-14b/abstract_algebra/scenario_state.json",
+    "sha256": "6dad2249284955f3fa0ce20f0fcb6ce0645454cc2d3b11e087dbde58dac27438",
+    "gcs_generation": "1781130244759025"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-14b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "qwen/qwen1.5-14b/abstract_algebra/per_instance_stats.json",
+    "sha256": "5d261daa370e22bdf39008faf8f12561d861cddad1b3ac62a54bf7a62c8ba9c9",
+    "gcs_generation": "1781130242558533"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-72b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "qwen/qwen1.5-72b/abstract_algebra/scenario_state.json",
+    "sha256": "fdda1ed7ca7d8f0766641f9f3c4513a77b36bd141e690984c2ee10ad14882090",
+    "gcs_generation": "1781130243470015"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-72b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "qwen/qwen1.5-72b/abstract_algebra/per_instance_stats.json",
+    "sha256": "7b176914b1d441d539d9bb7e6d893f0c517a426172f90495612913bdcabfa62b",
+    "gcs_generation": "1781130243059991"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/scenario_state.json",
+    "file": "qwen/qwen1.5-7b/abstract_algebra/scenario_state.json",
+    "sha256": "5c18b8c1cb5dfdd0a653ed912c0058290d076460584cd202e112796243b777a3",
+    "gcs_generation": "1781130243498606"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dabstract_algebra%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_abstract_algebra/per_instance_stats.json",
+    "file": "qwen/qwen1.5-7b/abstract_algebra/per_instance_stats.json",
+    "sha256": "731c6c2745050832b71873de6d3aa3bb7ca38ddcedef7cce5408ed585ff88768",
+    "gcs_generation": "1781130243487133"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-34b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "01-ai/yi-34b/college_chemistry/scenario_state.json",
+    "sha256": "85795c4f695717699d24f78dc5a4a86f197572863549218c19b7b43c72484b11",
+    "gcs_generation": "1781130266990909"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-34b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "01-ai/yi-34b/college_chemistry/per_instance_stats.json",
+    "sha256": "7c10a5356d12dc911e3ff4db01b865a06dcb11795d35d5ac61ec29556e8b0d96",
+    "gcs_generation": "1781130266565009"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-6b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "01-ai/yi-6b/college_chemistry/scenario_state.json",
+    "sha256": "87c27746c1484caddf4ee7ead8d27f1f2b0cb17b56cc40ffc622435a1a14f748",
+    "gcs_generation": "1781130267069349"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-6b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "01-ai/yi-6b/college_chemistry/per_instance_stats.json",
+    "sha256": "10f0353dacda2143b2d281ee9207a5c8b9bcc4c716c82764a82a42f084f12050",
+    "gcs_generation": "1781130267028379"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-2.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "anthropic/claude-2.1/college_chemistry/scenario_state.json",
+    "sha256": "0f53299e8b06b5e2805636c64f746729306f7561a3e73bac81ea84aa0b0ab21a",
+    "gcs_generation": "1781130267315026"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-2.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "anthropic/claude-2.1/college_chemistry/per_instance_stats.json",
+    "sha256": "c417d1419a12c2d47e76abff8c3abdd5c61fc17c61bb0159dd30e05c8f645e28",
+    "gcs_generation": "1781130267261355"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-haiku-20240307%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "anthropic/claude-3-haiku-20240307/college_chemistry/scenario_state.json",
+    "sha256": "cd84755dab46a970fa08767286642be38f84538d72e2071d084d64649b41e3f4",
+    "gcs_generation": "1781130268005400"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-haiku-20240307%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "anthropic/claude-3-haiku-20240307/college_chemistry/per_instance_stats.json",
+    "sha256": "c6e1481ba5a8c141e3289bac6b1cb4891313b442254b86b26e4bac506e95b596",
+    "gcs_generation": "1781130267732672"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-opus-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "anthropic/claude-3-opus-20240229/college_chemistry/scenario_state.json",
+    "sha256": "9b9c9dad9ae5bdcdb635e7c6bd4a7462495f18738c6b4c918c4e764cf5fb660f",
+    "gcs_generation": "1781130267786558"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-opus-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "anthropic/claude-3-opus-20240229/college_chemistry/per_instance_stats.json",
+    "sha256": "7b80d11cb4f4e9e511bb679145f0ef436135c89da50751c9ce461bcf6ef9c6fe",
+    "gcs_generation": "1781130267729441"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-sonnet-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "anthropic/claude-3-sonnet-20240229/college_chemistry/scenario_state.json",
+    "sha256": "faf9968cc00020561eab8e19c2bcec3ad218275eb7d309c4017ce5cce4fc65cd",
+    "gcs_generation": "1781130268736382"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-sonnet-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "anthropic/claude-3-sonnet-20240229/college_chemistry/per_instance_stats.json",
+    "sha256": "15cf77cf5cacf3b029cc96e2baf797b188b83c75b9012395cf15d98cdcd243bf",
+    "gcs_generation": "1781130269272564"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-instant-1.2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "anthropic/claude-instant-1.2/college_chemistry/scenario_state.json",
+    "sha256": "fc3a9caba45766d481cc31afc772d6b206cfabb62ad42a3ca603c8b2ec6bbe26",
+    "gcs_generation": "1781130268711569"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-instant-1.2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "anthropic/claude-instant-1.2/college_chemistry/per_instance_stats.json",
+    "sha256": "c588f7e0d268c9535c5ae2fcd7888b32868bb8718a7e441710a65694f899c00e",
+    "gcs_generation": "1781130268708724"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_gemini-1.0-pro-001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "google/gemini-1.0-pro-001/college_chemistry/scenario_state.json",
+    "sha256": "870223d87ec00924ef1fe4096e8442d2b6d61e4fa5f05835b106b86a1caf972c",
+    "gcs_generation": "1781130269473109"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_gemini-1.0-pro-001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "google/gemini-1.0-pro-001/college_chemistry/per_instance_stats.json",
+    "sha256": "bf0ed4219ca32e998aa3d6d6fa406ca06a2df64ba77c63a4dac4078332aea4ee",
+    "gcs_generation": "1781130272226051"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-bison%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "google/text-bison@001/college_chemistry/scenario_state.json",
+    "sha256": "0e10b6d5d308b51aa83a0e0bc4b3181c4479b3570ade9689014d0333fdcadc31",
+    "gcs_generation": "1781130269321655"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-bison%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "google/text-bison@001/college_chemistry/per_instance_stats.json",
+    "sha256": "61caafe62a5386b7e9b0988003be961cdadc6882ae341bc47d617fda759a203c",
+    "gcs_generation": "1781130269516704"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-unicorn%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "google/text-unicorn@001/college_chemistry/scenario_state.json",
+    "sha256": "62be047080ae700aa09f6461f7ef54f0836ddb3c2d0017274e96cf454a20bb9b",
+    "gcs_generation": "1781130269557611"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-unicorn%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "google/text-unicorn@001/college_chemistry/per_instance_stats.json",
+    "sha256": "4c055fdfe43c2b20bf16833198c20b3d7e912fbc86de9ad1b6a39954eba9e1e5",
+    "gcs_generation": "1781130269462582"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-13b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "meta/llama-2-13b/college_chemistry/scenario_state.json",
+    "sha256": "9ba71d2f75971629c8084b39eaff1ff613603987f8082a058ca62978a025fc2d",
+    "gcs_generation": "1781130270538113"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-13b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "meta/llama-2-13b/college_chemistry/per_instance_stats.json",
+    "sha256": "3ed2313c13b3998aa0911f15254da3b6708517618e17f4b7f1e88c3bb924306f",
+    "gcs_generation": "1781130270016077"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-70b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "meta/llama-2-70b/college_chemistry/scenario_state.json",
+    "sha256": "d48beb877631a6c850caa22fdeaecd71bc2274c102c7bfc410e24b4060295501",
+    "gcs_generation": "1781130270035817"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-70b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "meta/llama-2-70b/college_chemistry/per_instance_stats.json",
+    "sha256": "d7f3d7ff253ac5d0f0dd1cef0c1be0140c138c44ce4e1124e2be647001bcd78a",
+    "gcs_generation": "1781130270035851"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "meta/llama-2-7b/college_chemistry/scenario_state.json",
+    "sha256": "25d2a5e692f8968b60cfd259e5561fa66fb57a8c7f586de028aa5f2dbafd76d2",
+    "gcs_generation": "1781130270055103"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "meta/llama-2-7b/college_chemistry/per_instance_stats.json",
+    "sha256": "3bbb80e070c310c6d6e31a23ed08adcf84f3bedf4cfc2e588f8e44bc0391fcb0",
+    "gcs_generation": "1781130270020700"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmicrosoft_phi-2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "microsoft/phi-2/college_chemistry/scenario_state.json",
+    "sha256": "159c484f49ed46bb0525cc6fc626d8ef920b6a683299300e5d021241acf9151f",
+    "gcs_generation": "1781130270486308"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmicrosoft_phi-2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "microsoft/phi-2/college_chemistry/per_instance_stats.json",
+    "sha256": "e7ff3bfc1973c17acf5eaa715f9a32208f0a4e5aa56abec7b43e71197436301a",
+    "gcs_generation": "1781130270534379"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mistral-7b-v0.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "mistralai/mistral-7b-v0.1/college_chemistry/scenario_state.json",
+    "sha256": "2f1830e10950f97f6db1fb6ac3bbde0029d276f86e67d8224dd809b7c1985510",
+    "gcs_generation": "1781130270803081"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mistral-7b-v0.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "mistralai/mistral-7b-v0.1/college_chemistry/per_instance_stats.json",
+    "sha256": "eba98fdcb939b0e2b2bd3b11abb2b7035914bae27945af66a26f9575fb9773f3",
+    "gcs_generation": "1781130271036645"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mixtral-8x7b-32kseqlen%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "mistralai/mixtral-8x7b-32kseqlen/college_chemistry/scenario_state.json",
+    "sha256": "12e1e2e2fa6686d01434cf1307c93d457fc55c85793fbf744a8da64c9c2eb3ea",
+    "gcs_generation": "1781130271043768"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mixtral-8x7b-32kseqlen%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "mistralai/mixtral-8x7b-32kseqlen/college_chemistry/per_instance_stats.json",
+    "sha256": "731882f3f6ec6728f0681a2bca7700f1894250107c1e7958da3164247f2b7795",
+    "gcs_generation": "1781130270529783"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-3.5-turbo-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "openai/gpt-3.5-turbo-0613/college_chemistry/scenario_state.json",
+    "sha256": "455376d4991f7a4cd8166b9a2d1b87fd252087debcdc2167149b80fd680feac5",
+    "gcs_generation": "1781130271244958"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-3.5-turbo-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "openai/gpt-3.5-turbo-0613/college_chemistry/per_instance_stats.json",
+    "sha256": "c7641edac6d05b3f6d6b0d4aec6672952a37983b1b13d9aa16d8b3b7bbcffe51",
+    "gcs_generation": "1781130271562956"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "openai/gpt-4-0613/college_chemistry/scenario_state.json",
+    "sha256": "005fee1258e0669e6efb02f1ceef45aa6eddf57055d28e5879e8268b1812a204",
+    "gcs_generation": "1781130271534796"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "openai/gpt-4-0613/college_chemistry/per_instance_stats.json",
+    "sha256": "d83576488484c81aa30f350d1bf86c55a1c07a44b0144cd1db82f12586d73d76",
+    "gcs_generation": "1781130271061877"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-1106-preview%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "openai/gpt-4-1106-preview/college_chemistry/scenario_state.json",
+    "sha256": "be1fe2e521a6396094a15473b82a36759db52be768fcb5e4c00f9ce68086d363",
+    "gcs_generation": "1781130271538020"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-1106-preview%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "openai/gpt-4-1106-preview/college_chemistry/per_instance_stats.json",
+    "sha256": "8ef308ff92c5c922ef3e2d575345128f2245af298cbc4a0cec801df4346f25de",
+    "gcs_generation": "1781130272044167"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-14b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "qwen/qwen1.5-14b/college_chemistry/scenario_state.json",
+    "sha256": "92102c7b8dd9ac002d3af69911226a0f13d3e8a1ea8e33d5c4ad0370ecab9678",
+    "gcs_generation": "1781130271777636"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-14b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "qwen/qwen1.5-14b/college_chemistry/per_instance_stats.json",
+    "sha256": "29c00aaadceaee873eeca1f9b748b3417c05f483941cd6cde17d4c53d8a07e52",
+    "gcs_generation": "1781130271572289"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-72b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "qwen/qwen1.5-72b/college_chemistry/scenario_state.json",
+    "sha256": "6c80daa8e1c7ab6dc9ede6c683d9301557371d2fdb75172934f93eed938b6e4c",
+    "gcs_generation": "1781130272019443"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-72b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "qwen/qwen1.5-72b/college_chemistry/per_instance_stats.json",
+    "sha256": "d168c1be745b40d54de455035427b38b9a3d7ce23ef41a1a75ee049ed4806231",
+    "gcs_generation": "1781130271578209"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/scenario_state.json",
+    "file": "qwen/qwen1.5-7b/college_chemistry/scenario_state.json",
+    "sha256": "3932f94d58908e36fde7d0c84dec2dfc6c695974306b11901271ba48c812a0f0",
+    "gcs_generation": "1781130272206695"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcollege_chemistry%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_college_chemistry/per_instance_stats.json",
+    "file": "qwen/qwen1.5-7b/college_chemistry/per_instance_stats.json",
+    "sha256": "c3dba8082ec624903b2e4d65e5776ae7d2234e92e0847e5c783a002b103e0014",
+    "gcs_generation": "1781130272228112"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-34b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "01-ai/yi-34b/computer_security/scenario_state.json",
+    "sha256": "9b7fd7fe6fb9b545d026879ee9f6dbe634cd23b29c5ffb2b845121dec9e64abe",
+    "gcs_generation": "1781130291696672"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-34b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "01-ai/yi-34b/computer_security/per_instance_stats.json",
+    "sha256": "6f4ee62299936c392a522868f3ff49a66e4869663dcfe8c981ce38f7baf7b4c3",
+    "gcs_generation": "1781130291048268"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-6b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "01-ai/yi-6b/computer_security/scenario_state.json",
+    "sha256": "75a75c1676d9fa519d65ed156d5ffcef67b29fdd0cad6162668e8221727b5b97",
+    "gcs_generation": "1781130291546802"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-6b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "01-ai/yi-6b/computer_security/per_instance_stats.json",
+    "sha256": "be3e657ba4fa5c63e15f1c2b699767d9216741cdd87f2bec3045105a6c184268",
+    "gcs_generation": "1781130291551746"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-2.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "anthropic/claude-2.1/computer_security/scenario_state.json",
+    "sha256": "191ae89053fefda1499efd92fe8d32edbc94449cda1c81daffb33314fdd34c92",
+    "gcs_generation": "1781130291791741"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-2.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "anthropic/claude-2.1/computer_security/per_instance_stats.json",
+    "sha256": "bae5680c438ba5513d7109f66e3e5abe0d8959cef51f08913625046e6e87451f",
+    "gcs_generation": "1781130291808425"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-haiku-20240307%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "anthropic/claude-3-haiku-20240307/computer_security/scenario_state.json",
+    "sha256": "5e9476c4b75ac3023a398eac9f14597641b5194753242d6d259df150ec5da6ab",
+    "gcs_generation": "1781130292035990"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-haiku-20240307%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "anthropic/claude-3-haiku-20240307/computer_security/per_instance_stats.json",
+    "sha256": "b193cb952126ba8ccee3569c4e426b9e7e07fa7b3da73e9e350a98d5d9a25e9e",
+    "gcs_generation": "1781130291746961"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-opus-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "anthropic/claude-3-opus-20240229/computer_security/scenario_state.json",
+    "sha256": "30db9d395db9e43c16f63a3ae084aa1ab5951ea70626d071dfc3b5dbb961697b",
+    "gcs_generation": "1781130292974949"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-opus-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "anthropic/claude-3-opus-20240229/computer_security/per_instance_stats.json",
+    "sha256": "7e827cc5832dfef0222437099fe792108c57e8124aaacbf2c0399afcdeda0617",
+    "gcs_generation": "1781130292273825"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-sonnet-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "anthropic/claude-3-sonnet-20240229/computer_security/scenario_state.json",
+    "sha256": "5e8caa4744b68d250355186cc8e14867d9039945b06b064dbee57588f0bae83b",
+    "gcs_generation": "1781130294461770"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-sonnet-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "anthropic/claude-3-sonnet-20240229/computer_security/per_instance_stats.json",
+    "sha256": "ee24ce6172a77d887b3b0d3f1025cb4467be080aa83622ac03e4a8d9951e1f03",
+    "gcs_generation": "1781130292998052"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-instant-1.2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "anthropic/claude-instant-1.2/computer_security/scenario_state.json",
+    "sha256": "cb5a4c8d9dc8f09958489c606a8897302843dc18712a8309140e39da39a2e588",
+    "gcs_generation": "1781130293000143"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-instant-1.2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "anthropic/claude-instant-1.2/computer_security/per_instance_stats.json",
+    "sha256": "d58f79e09c0c50ca446b13b4d675c04556023b8f9c3b215d0786fae27d2943d4",
+    "gcs_generation": "1781130293069309"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_gemini-1.0-pro-001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "google/gemini-1.0-pro-001/computer_security/scenario_state.json",
+    "sha256": "e01e0e54fe1b20c5026fc0d394bb3f061092be1290c12d8e760d10677893efc0",
+    "gcs_generation": "1781130293080768"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_gemini-1.0-pro-001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "google/gemini-1.0-pro-001/computer_security/per_instance_stats.json",
+    "sha256": "acb367121d8255282718a2aaaf3a6bc1999ec39b152979a25a8d3aef5cd11825",
+    "gcs_generation": "1781130293026367"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-bison%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "google/text-bison@001/computer_security/scenario_state.json",
+    "sha256": "5dc39b25354552044faed2228e34c8fe16cf7bfb3845fbd751270ee0ea774079",
+    "gcs_generation": "1781130294024266"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-bison%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "google/text-bison@001/computer_security/per_instance_stats.json",
+    "sha256": "355118c9b36fccebb94cd194e7d3b3422e3f392d8d835d4ab39d2664bd40162e",
+    "gcs_generation": "1781130293814219"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-unicorn%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "google/text-unicorn@001/computer_security/scenario_state.json",
+    "sha256": "2a7b0b29248a935e9c5322bf5266118446673038c33ddfb7a19d7d1cd7ac9ab8",
+    "gcs_generation": "1781130293817973"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-unicorn%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "google/text-unicorn@001/computer_security/per_instance_stats.json",
+    "sha256": "412a1d2ec2ad116366c2d4089356c1dc5dd2e04312cd01f85ab445c7e0e67e4a",
+    "gcs_generation": "1781130293798338"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-13b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "meta/llama-2-13b/computer_security/scenario_state.json",
+    "sha256": "6b644359961f29a1bd444182c644fcf2b682be247d6693269c5360c1ab76919a",
+    "gcs_generation": "1781130294810518"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-13b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "meta/llama-2-13b/computer_security/per_instance_stats.json",
+    "sha256": "0cfdd172a070163694ee467049b8a4c9396778e773e46ab4dbebc75a7796b20e",
+    "gcs_generation": "1781130294791683"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-70b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "meta/llama-2-70b/computer_security/scenario_state.json",
+    "sha256": "ab9a4cd741e188c52a2bb0018574c53bff2003556e97b5660c066b536a3cd29b",
+    "gcs_generation": "1781130294500614"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-70b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "meta/llama-2-70b/computer_security/per_instance_stats.json",
+    "sha256": "bfb45a2e131ec0379fa40e5becd74c29a0d2799caf4c6918578135b6530503d9",
+    "gcs_generation": "1781130294540197"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "meta/llama-2-7b/computer_security/scenario_state.json",
+    "sha256": "ed305069d86b048e9a45b6b7f87690f9ca5a0f31d42e4d4fef74f2ccc9c13d43",
+    "gcs_generation": "1781130295031104"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "meta/llama-2-7b/computer_security/per_instance_stats.json",
+    "sha256": "67030add8068705fee4740e61511ffc84214074e580238dfb10a4f9c8d04cde7",
+    "gcs_generation": "1781130294567806"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmicrosoft_phi-2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "microsoft/phi-2/computer_security/scenario_state.json",
+    "sha256": "98f5a4518147352ed549723e00b750bdaced648e717c91ae4d703ffeb2a74c61",
+    "gcs_generation": "1781130295503753"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmicrosoft_phi-2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "microsoft/phi-2/computer_security/per_instance_stats.json",
+    "sha256": "54329b9ac5e9f43bc9fa5f7c11de0f098cdf058c53d2b866cae64cf63fbda860",
+    "gcs_generation": "1781130295544554"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mistral-7b-v0.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "mistralai/mistral-7b-v0.1/computer_security/scenario_state.json",
+    "sha256": "c567ee2d9ea160ce111dd6ee36c0088788dacdc1a84660d2f51fc72d805e2ff2",
+    "gcs_generation": "1781130295071722"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mistral-7b-v0.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "mistralai/mistral-7b-v0.1/computer_security/per_instance_stats.json",
+    "sha256": "b38a347fb07bbae30b93fb28acc4d155ec8d887847ce927929e37f2fd1866185",
+    "gcs_generation": "1781130295489186"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mixtral-8x7b-32kseqlen%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "mistralai/mixtral-8x7b-32kseqlen/computer_security/scenario_state.json",
+    "sha256": "6878fe966824301b90b828b2080e6555cc4752f62713441b59a9e9939ac88b5d",
+    "gcs_generation": "1781130297054672"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mixtral-8x7b-32kseqlen%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "mistralai/mixtral-8x7b-32kseqlen/computer_security/per_instance_stats.json",
+    "sha256": "4069c299bed4f7ecb61ab1ac265d820a4e43eed004e37fa6392d6d5c1f786571",
+    "gcs_generation": "1781130295568905"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-3.5-turbo-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "openai/gpt-3.5-turbo-0613/computer_security/scenario_state.json",
+    "sha256": "fb8cd0f794ed380d8e7396a9ea289858d0cf45261a1b8e1c11225818f6ba1b51",
+    "gcs_generation": "1781130295580973"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-3.5-turbo-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "openai/gpt-3.5-turbo-0613/computer_security/per_instance_stats.json",
+    "sha256": "a8f59acec44ba0c6a37c01fb0bed5df4e66adb312b1c3034f4d310b7c0f5eeee",
+    "gcs_generation": "1781130295544324"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "openai/gpt-4-0613/computer_security/scenario_state.json",
+    "sha256": "1f344b59646fa61ef4b49e249da9b4b6d8dcdfcbca757129d86f10706291172b",
+    "gcs_generation": "1781130296016241"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "openai/gpt-4-0613/computer_security/per_instance_stats.json",
+    "sha256": "53aba2eda568350dec09796ce271c414862ddc57b630d9f9389e1d91e4b8faf7",
+    "gcs_generation": "1781130295578851"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-1106-preview%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "openai/gpt-4-1106-preview/computer_security/scenario_state.json",
+    "sha256": "38b46602088729b15aa07d2fef8c7d575633d58345e00e22e2ad0602b2041800",
+    "gcs_generation": "1781130296049662"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-1106-preview%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "openai/gpt-4-1106-preview/computer_security/per_instance_stats.json",
+    "sha256": "ccb96db0c104117515832c19605fa927209a004aa1da033cc97c9d0cd56af4ed",
+    "gcs_generation": "1781130296541988"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-14b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "qwen/qwen1.5-14b/computer_security/scenario_state.json",
+    "sha256": "ca07d88267d65eada7558db305eb3ece0067109feb33421c14fa45fde79f007d",
+    "gcs_generation": "1781130296012763"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-14b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "qwen/qwen1.5-14b/computer_security/per_instance_stats.json",
+    "sha256": "3a3308963c09e430cf23ac2a72b7d61a4ea2e758bb05026eafd7a0073b1abcd9",
+    "gcs_generation": "1781130296045400"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-72b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "qwen/qwen1.5-72b/computer_security/scenario_state.json",
+    "sha256": "e60ff91b9d7358ce8f5c99e3bef69dd0a19086b58f20861e10eaafccb4bad4dc",
+    "gcs_generation": "1781130296535817"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-72b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "qwen/qwen1.5-72b/computer_security/per_instance_stats.json",
+    "sha256": "f1cf1132f3f0397293dec374843df7776b94bd1fca2a42365ced7e09547eb664",
+    "gcs_generation": "1781130296040776"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/scenario_state.json",
+    "file": "qwen/qwen1.5-7b/computer_security/scenario_state.json",
+    "sha256": "6a2ec20547d67ebd4e585ff22247adf1b58eec86b18f3613610f8f5b7b24f565",
+    "gcs_generation": "1781130296494266"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dcomputer_security%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_computer_security/per_instance_stats.json",
+    "file": "qwen/qwen1.5-7b/computer_security/per_instance_stats.json",
+    "sha256": "658e7e69d5c3d26bd352dfd9a35f9e0f2539fa8c33fdbf9393edd3748989494b",
+    "gcs_generation": "1781130296538088"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-34b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "01-ai/yi-34b/econometrics/scenario_state.json",
+    "sha256": "3a6f128ffe9decb3ee5505032b5e84b412cd9595e2665a8e4f972e1f24533a8c",
+    "gcs_generation": "1781130302213872"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-34b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "01-ai/yi-34b/econometrics/per_instance_stats.json",
+    "sha256": "7c282b9f0ab2822fd62e1247c7c0482bac339070c73a6cbacf8af3eb5d7a1b36",
+    "gcs_generation": "1781130301508388"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-6b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "01-ai/yi-6b/econometrics/scenario_state.json",
+    "sha256": "265417fc04feb8cb622238f67e85e551d95bff6dd6f93cc5a53cb6e8394e40d3",
+    "gcs_generation": "1781130301578755"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-6b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "01-ai/yi-6b/econometrics/per_instance_stats.json",
+    "sha256": "87b7aac60c8689a1e9c3529795cdfd83ae033456fc139989a8718e0bae59dfd3",
+    "gcs_generation": "1781130301783446"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-2.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "anthropic/claude-2.1/econometrics/scenario_state.json",
+    "sha256": "9df7193baf7c4d06d2297b36ab82484189ce24ae98d0e69ef5294d857b04ab57",
+    "gcs_generation": "1781130302283461"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-2.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "anthropic/claude-2.1/econometrics/per_instance_stats.json",
+    "sha256": "8ee758e43411f997f738de7329431e0326ed12e84b5c7250ac14f0687833430c",
+    "gcs_generation": "1781130302070695"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-haiku-20240307%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "anthropic/claude-3-haiku-20240307/econometrics/scenario_state.json",
+    "sha256": "de0b3f12d9e9691c8476e7e82fbe59ff5571dba90e19db8dfc60f82602535c2d",
+    "gcs_generation": "1781130302317897"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-haiku-20240307%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "anthropic/claude-3-haiku-20240307/econometrics/per_instance_stats.json",
+    "sha256": "dadf965ae5fb48e864901f9bc063b63d07d7cee175d8d04d98a383763d696a37",
+    "gcs_generation": "1781130302715368"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-opus-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "anthropic/claude-3-opus-20240229/econometrics/scenario_state.json",
+    "sha256": "8f132b5b6fdfe71ae624c950ad2b8ff1369b2a6fd6efb3b63f4e105bcdb9852b",
+    "gcs_generation": "1781130302963763"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-opus-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "anthropic/claude-3-opus-20240229/econometrics/per_instance_stats.json",
+    "sha256": "9f08ced4a53c2bca79c493a68bbe80a373e67c2ba6167f1e79c090a1fead9876",
+    "gcs_generation": "1781130302978151"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-sonnet-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "anthropic/claude-3-sonnet-20240229/econometrics/scenario_state.json",
+    "sha256": "cfc42afd3c652eda6da11ea5f11413fdcab1cca9742a336cd3985dd47174ebd7",
+    "gcs_generation": "1781130303515547"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-sonnet-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "anthropic/claude-3-sonnet-20240229/econometrics/per_instance_stats.json",
+    "sha256": "5c9cbce5e924c1d46aaf80adae93d49d76fcf6758de61af514dc110aeb4f1fdf",
+    "gcs_generation": "1781130303490532"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-instant-1.2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "anthropic/claude-instant-1.2/econometrics/scenario_state.json",
+    "sha256": "e368562dcaed4c5dfc4ca4131c92be1e72361bcff0f7fceffbade307368364e5",
+    "gcs_generation": "1781130303550904"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-instant-1.2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "anthropic/claude-instant-1.2/econometrics/per_instance_stats.json",
+    "sha256": "a7a45f0cf8bbae67562e48335a40a790439571e1073309095d3b1187a8046420",
+    "gcs_generation": "1781130304004094"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_gemini-1.0-pro-001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "google/gemini-1.0-pro-001/econometrics/scenario_state.json",
+    "sha256": "c7e2a0baa82e1c9fe627a320cb26ab921bcc3c24f835da79cf8162c530df7fae",
+    "gcs_generation": "1781130303536288"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_gemini-1.0-pro-001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "google/gemini-1.0-pro-001/econometrics/per_instance_stats.json",
+    "sha256": "83f423348ccd54283534e5851f8ce0c07187b9f2fc79145e20a8011a08a1f93b",
+    "gcs_generation": "1781130303561805"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-bison%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "google/text-bison@001/econometrics/scenario_state.json",
+    "sha256": "9f6c39a85244e0cbbb4cbfa78b20baa5e5e590a6eae88df357e4d807fb9c0c6b",
+    "gcs_generation": "1781130304051598"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-bison%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "google/text-bison@001/econometrics/per_instance_stats.json",
+    "sha256": "2aad67ea7f36a43d3f468e114ecd77db0573330355b6eb75468131005a4c8c9d",
+    "gcs_generation": "1781130304051761"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-unicorn%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "google/text-unicorn@001/econometrics/scenario_state.json",
+    "sha256": "0f18e7505c1ec40517edd6274f168b63dab12401941c41170c8abc8577f75286",
+    "gcs_generation": "1781130304470202"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-unicorn%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "google/text-unicorn@001/econometrics/per_instance_stats.json",
+    "sha256": "a79723c2064dcb8f6c1755cee8e3caea3140fa2a17b957aaf9b48922992bcccd",
+    "gcs_generation": "1781130304041446"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-13b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "meta/llama-2-13b/econometrics/scenario_state.json",
+    "sha256": "210189faf567e28a4b94ccf79e30b11252df5caee61df17cfc95523185a9f3f7",
+    "gcs_generation": "1781130304952339"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-13b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "meta/llama-2-13b/econometrics/per_instance_stats.json",
+    "sha256": "c79db063cc60e27b636e47b8e196148612a0f748b444eca145edc76dc4b52606",
+    "gcs_generation": "1781130305053360"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-70b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "meta/llama-2-70b/econometrics/scenario_state.json",
+    "sha256": "148dce385b370bf1ea7764941288fb0fca9cb59166171b43fa3d25ae1e6fd130",
+    "gcs_generation": "1781130304563996"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-70b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "meta/llama-2-70b/econometrics/per_instance_stats.json",
+    "sha256": "26045c4d61c264e711e93c511ac3228c0dfed1bf51516f481a85eabc76844bca",
+    "gcs_generation": "1781130304543797"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "meta/llama-2-7b/econometrics/scenario_state.json",
+    "sha256": "47e6ddb8aefc6c4321d940b01d6fbd71374300e801645d8f920231d5a467e931",
+    "gcs_generation": "1781130305012221"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "meta/llama-2-7b/econometrics/per_instance_stats.json",
+    "sha256": "8377f74826cf66855a26b1f860a06b9b5b0b35aef171a47b74ce1de55ac95f89",
+    "gcs_generation": "1781130304561339"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmicrosoft_phi-2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "microsoft/phi-2/econometrics/scenario_state.json",
+    "sha256": "c2b34f7b64599536b1bce80d168a6181683aa93b27977cc8f81254f6d4ea4566",
+    "gcs_generation": "1781130305054624"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmicrosoft_phi-2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "microsoft/phi-2/econometrics/per_instance_stats.json",
+    "sha256": "db781bd5752e0e417437c4e333292bb6f1ffe64343325988d98e9ff428a34dfd",
+    "gcs_generation": "1781130305765921"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mistral-7b-v0.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "mistralai/mistral-7b-v0.1/econometrics/scenario_state.json",
+    "sha256": "41bc093276ffa4243d906eacc04c227d5fd8b8f4d7ab322889b363b8c959cdc4",
+    "gcs_generation": "1781130305067579"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mistral-7b-v0.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "mistralai/mistral-7b-v0.1/econometrics/per_instance_stats.json",
+    "sha256": "7cbd8e4716c3123fed260cb979e7e1b5928ab196e2368e6a6168bc677c0d2326",
+    "gcs_generation": "1781130305062432"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mixtral-8x7b-32kseqlen%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "mistralai/mixtral-8x7b-32kseqlen/econometrics/scenario_state.json",
+    "sha256": "fb0d18889b6b9d1338d402e34d6cf768ceed248638d5e0e09547f371b5eee434",
+    "gcs_generation": "1781130306241056"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mixtral-8x7b-32kseqlen%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "mistralai/mixtral-8x7b-32kseqlen/econometrics/per_instance_stats.json",
+    "sha256": "f4ec4c1686c4766b3e0544e61d94aab4b3cbbce109537c11ae73e6a7a6390ac4",
+    "gcs_generation": "1781130307070263"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-3.5-turbo-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "openai/gpt-3.5-turbo-0613/econometrics/scenario_state.json",
+    "sha256": "f4033df29228e1ad9a80e14c78690f7681b5b0e04c3570ace332225295f5e159",
+    "gcs_generation": "1781130305797482"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-3.5-turbo-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "openai/gpt-3.5-turbo-0613/econometrics/per_instance_stats.json",
+    "sha256": "4333ca08bea4595851faa7f9b8660d781afa6cd98a5ee3666b2d5c4642cf809e",
+    "gcs_generation": "1781130305805331"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "openai/gpt-4-0613/econometrics/scenario_state.json",
+    "sha256": "6679d2341f8597ec500313a79c9577193400c48e50ab4c5443b8d4692ad062de",
+    "gcs_generation": "1781130306299344"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "openai/gpt-4-0613/econometrics/per_instance_stats.json",
+    "sha256": "f15a14ed6850b62003723315d045da6111c291f9f039fed4c49e17f4ffbd9d02",
+    "gcs_generation": "1781130305808088"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-1106-preview%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "openai/gpt-4-1106-preview/econometrics/scenario_state.json",
+    "sha256": "c0f1ff054e1787887c7d18821cf813127694482f19972d58ab5aac53699a4de4",
+    "gcs_generation": "1781130306978927"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-1106-preview%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "openai/gpt-4-1106-preview/econometrics/per_instance_stats.json",
+    "sha256": "3f62ab715ae2f92903c8cc149340fb2ab39a972ee333dd278b37c625206adb78",
+    "gcs_generation": "1781130306983235"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-14b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "qwen/qwen1.5-14b/econometrics/scenario_state.json",
+    "sha256": "2aec337c8401c9a6eec322b2f8e3eb71748149a7dd2431ac2fba6008e3536f9c",
+    "gcs_generation": "1781130306303090"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-14b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "qwen/qwen1.5-14b/econometrics/per_instance_stats.json",
+    "sha256": "e92801f52396997cbeda36a2adb80c15ba927ab2b76a96e8e48edc7742c1d44b",
+    "gcs_generation": "1781130306319271"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-72b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "qwen/qwen1.5-72b/econometrics/scenario_state.json",
+    "sha256": "78e119bfa94f35beae6af4d101295e425996757d65b6558240b3a6f5831a80b6",
+    "gcs_generation": "1781130307065508"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-72b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "qwen/qwen1.5-72b/econometrics/per_instance_stats.json",
+    "sha256": "fcfeb824ee92b8e9c96aef9e04ae641b3d98fdf5700863f8476aefec33594c30",
+    "gcs_generation": "1781130306815013"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/scenario_state.json",
+    "file": "qwen/qwen1.5-7b/econometrics/scenario_state.json",
+    "sha256": "c3f192ea77ba5402a365116070955bd5822ef60cd4af260fca6c1ab194b7b6bc",
+    "gcs_generation": "1781130307051558"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Deconometrics%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_econometrics/per_instance_stats.json",
+    "file": "qwen/qwen1.5-7b/econometrics/per_instance_stats.json",
+    "sha256": "46d2bfb9b83c44e1809fe3804d7597d8a9541c69f6e273d41ddbb0b070e1c34a",
+    "gcs_generation": "1781130307056818"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-34b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "01-ai/yi-34b/us_foreign_policy/scenario_state.json",
+    "sha256": "e57cede23784779480a79694c5373ca8aab2ebba5ba0e033512374015958cdf0",
+    "gcs_generation": "1781130465312763"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-34b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "01-ai/yi-34b/us_foreign_policy/per_instance_stats.json",
+    "sha256": "363a62edaa7944736942c5bf5cfb14198863fe6633c260966b62ebb6cb4b5881",
+    "gcs_generation": "1781130465755482"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-6b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "01-ai/yi-6b/us_foreign_policy/scenario_state.json",
+    "sha256": "0db3f43128a51be59714c658deb281c8ac3840cf0914d87b000de68ee8153b77",
+    "gcs_generation": "1781130465523645"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3D01-ai_yi-6b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "01-ai/yi-6b/us_foreign_policy/per_instance_stats.json",
+    "sha256": "58ee02faa91f7951251508bd44b611c770d4a6896c1833d8a7ba76a99fbc6fcb",
+    "gcs_generation": "1781130465544699"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-2.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "anthropic/claude-2.1/us_foreign_policy/scenario_state.json",
+    "sha256": "a15ae68e8c87ab54b5aa0eb4176b5178fe5d83a42e21dd9270b3c9b8f3b69d4c",
+    "gcs_generation": "1781130465750827"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-2.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "anthropic/claude-2.1/us_foreign_policy/per_instance_stats.json",
+    "sha256": "64274136cd45207cda0c6e8e26418c03b2fd92196309d8b9cba60ade70a6e211",
+    "gcs_generation": "1781130465457562"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-haiku-20240307%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "anthropic/claude-3-haiku-20240307/us_foreign_policy/scenario_state.json",
+    "sha256": "7db9d09888a62296f7fa0e095ebfca660c0b6b1384d00880eb9a565b564fcf56",
+    "gcs_generation": "1781130465783597"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-haiku-20240307%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "anthropic/claude-3-haiku-20240307/us_foreign_policy/per_instance_stats.json",
+    "sha256": "3cd5f43e8106b666d5689600ca755e9215003e4f0c1030192d78b3d3e092fda4",
+    "gcs_generation": "1781130465809933"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-opus-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "anthropic/claude-3-opus-20240229/us_foreign_policy/scenario_state.json",
+    "sha256": "ea766b878c601e3e84ed20d612f446f8831a6e74ff671c3f1f80f3ae96b06e95",
+    "gcs_generation": "1781130466048016"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-opus-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "anthropic/claude-3-opus-20240229/us_foreign_policy/per_instance_stats.json",
+    "sha256": "471d5a65d735e3f3f676c28b61f0f2b35ed434d68315ec74f2062282c9509490",
+    "gcs_generation": "1781130466258479"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-sonnet-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "anthropic/claude-3-sonnet-20240229/us_foreign_policy/scenario_state.json",
+    "sha256": "2f765525faf8c2967c04ea7a772a51cc9aa9a11dbe81f58f7f287ff4b01b8820",
+    "gcs_generation": "1781130466308846"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-3-sonnet-20240229%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "anthropic/claude-3-sonnet-20240229/us_foreign_policy/per_instance_stats.json",
+    "sha256": "7f515d9f7fe11908c34500940a6bb569c8e937be2b9453acc571fa3350d7891e",
+    "gcs_generation": "1781130466255218"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-instant-1.2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "anthropic/claude-instant-1.2/us_foreign_policy/scenario_state.json",
+    "sha256": "e87d3111ea304630e767a7d62108fd889186e93fdc80a8a04a19d39cf3d7f05f",
+    "gcs_generation": "1781130466723648"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Danthropic_claude-instant-1.2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "anthropic/claude-instant-1.2/us_foreign_policy/per_instance_stats.json",
+    "sha256": "f62257ed9491847a4fbb2cc150007ca5a3f933af413937e79c8b1f65d21c670b",
+    "gcs_generation": "1781130466537616"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_gemini-1.0-pro-001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "google/gemini-1.0-pro-001/us_foreign_policy/scenario_state.json",
+    "sha256": "6e9b99f164ca3fbb64171e27f13ecb579c96dda49815124a2c4a94d1b49fe607",
+    "gcs_generation": "1781130466793622"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_gemini-1.0-pro-001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "google/gemini-1.0-pro-001/us_foreign_policy/per_instance_stats.json",
+    "sha256": "7aaef2709c1c27c92373e4f11d4f1b86bb7fdab2a4059f27ec57864e1006ef87",
+    "gcs_generation": "1781130466776328"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-bison%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "google/text-bison@001/us_foreign_policy/scenario_state.json",
+    "sha256": "133ff578753368abcf4ca1789d873c94f17b87c49a4c94fea2c0840ce943f287",
+    "gcs_generation": "1781130467257978"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-bison%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "google/text-bison@001/us_foreign_policy/per_instance_stats.json",
+    "sha256": "8cacce47282c8021b0dc114f850d777f7a01ea2b625b716aac0ed36aac1de1cf",
+    "gcs_generation": "1781130467017375"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-unicorn%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "google/text-unicorn@001/us_foreign_policy/scenario_state.json",
+    "sha256": "76118f9d5a930fddd1a20823dc8d9914ae5c7b2b04219a0edf37f1bbe49eaf3b",
+    "gcs_generation": "1781130467329351"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dgoogle_text-unicorn%40001%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "google/text-unicorn@001/us_foreign_policy/per_instance_stats.json",
+    "sha256": "3c33c524cf1ec483a411cc88b92695b564dc458c9508cc3a991c5cf1b45491c1",
+    "gcs_generation": "1781130467488038"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-13b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "meta/llama-2-13b/us_foreign_policy/scenario_state.json",
+    "sha256": "e3536623ae741c3f9d8a61db2387067d9759ccac573f08d6d624fc732fce166d",
+    "gcs_generation": "1781130467273933"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-13b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "meta/llama-2-13b/us_foreign_policy/per_instance_stats.json",
+    "sha256": "2fd14bd50595bff858e66519da22b415a2668504d72164b4f63f2029b13b0818",
+    "gcs_generation": "1781130467282973"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-70b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "meta/llama-2-70b/us_foreign_policy/scenario_state.json",
+    "sha256": "f3ff3205206ffbd80db4d8675a031e97368d5be84b7f5761d381cdcada2a0854",
+    "gcs_generation": "1781130467493630"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-70b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "meta/llama-2-70b/us_foreign_policy/per_instance_stats.json",
+    "sha256": "37a2ae16ffab7b977a738b538fdf25d28994720963890d78d676c3f6aeb1478f",
+    "gcs_generation": "1781130467528726"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "meta/llama-2-7b/us_foreign_policy/scenario_state.json",
+    "sha256": "09c583078678c4576ba2165e80136a8f002c8000aff6b72c190f01bb8da16b92",
+    "gcs_generation": "1781130468001853"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmeta_llama-2-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "meta/llama-2-7b/us_foreign_policy/per_instance_stats.json",
+    "sha256": "7fa423bee8d31400ef3501c87bbaaec738d2a2d9904987e35b80f187c13625a1",
+    "gcs_generation": "1781130468001760"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmicrosoft_phi-2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "microsoft/phi-2/us_foreign_policy/scenario_state.json",
+    "sha256": "43ac93cbd485a04f4493d8b06e8cffbe5f4075eb8559273984cf9647313f2075",
+    "gcs_generation": "1781130467985148"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmicrosoft_phi-2%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "microsoft/phi-2/us_foreign_policy/per_instance_stats.json",
+    "sha256": "be457a8fa8c23fffdc7fe8a754caea641d7822a3cc709ef6bb8ffe09908b8aea",
+    "gcs_generation": "1781130467710988"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mistral-7b-v0.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "mistralai/mistral-7b-v0.1/us_foreign_policy/scenario_state.json",
+    "sha256": "f323f8493520a7707c351033f8d423196891c208546e4093f05f4aaad834146a",
+    "gcs_generation": "1781130468057749"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mistral-7b-v0.1%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "mistralai/mistral-7b-v0.1/us_foreign_policy/per_instance_stats.json",
+    "sha256": "886e7f024d59a95b059f3d8ee0ec3b72d3486d418f91bd41ee81a933105e9a13",
+    "gcs_generation": "1781130468224798"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mixtral-8x7b-32kseqlen%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "mistralai/mixtral-8x7b-32kseqlen/us_foreign_policy/scenario_state.json",
+    "sha256": "f52bef553853db3593e5118a281ae0a3ef3f36df1f62b39071bab77f50ca7afe",
+    "gcs_generation": "1781130468510845"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dmistralai_mixtral-8x7b-32kseqlen%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "mistralai/mixtral-8x7b-32kseqlen/us_foreign_policy/per_instance_stats.json",
+    "sha256": "dce93b246a4eead55fb9d72fe2904b87c3346dd81af8653c7dcded5f1e459d04",
+    "gcs_generation": "1781130467982626"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-3.5-turbo-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "openai/gpt-3.5-turbo-0613/us_foreign_policy/scenario_state.json",
+    "sha256": "774b3a3d81fd2130d0ff47133cc589db42dc5d67cbf891b6b28b09f24040598a",
+    "gcs_generation": "1781130468314051"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-3.5-turbo-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "openai/gpt-3.5-turbo-0613/us_foreign_policy/per_instance_stats.json",
+    "sha256": "5ea7e948ab4b80e1225a164ce73227ed51b7825abd16fa3f3b359ffe7d63ffe8",
+    "gcs_generation": "1781130468313321"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "openai/gpt-4-0613/us_foreign_policy/scenario_state.json",
+    "sha256": "9329476972ec62ca7d8ef395ece320f0d464c7eace345590edac83a93d3e486b",
+    "gcs_generation": "1781130468561165"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-0613%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "openai/gpt-4-0613/us_foreign_policy/per_instance_stats.json",
+    "sha256": "0e97ab704a632758324f886d2d4b9099c6e469d66d68594f16d222f1fc638918",
+    "gcs_generation": "1781130468559102"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-1106-preview%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "openai/gpt-4-1106-preview/us_foreign_policy/scenario_state.json",
+    "sha256": "da472985e5cb9518e55521a020447ffae0c3fb8766561e85ba050aa4d19ce244",
+    "gcs_generation": "1781130468563273"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dopenai_gpt-4-1106-preview%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "openai/gpt-4-1106-preview/us_foreign_policy/per_instance_stats.json",
+    "sha256": "c12c40dad1d62ffdd1bda698330427743224fb21a17cd360eb5b2c1a7fd3e582",
+    "gcs_generation": "1781130468518387"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-14b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "qwen/qwen1.5-14b/us_foreign_policy/scenario_state.json",
+    "sha256": "699783f355d3c968b16add13280479cc00b28eb15a1c7ae2f657279ab3f33343",
+    "gcs_generation": "1781130468984170"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-14b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "qwen/qwen1.5-14b/us_foreign_policy/per_instance_stats.json",
+    "sha256": "ddc92a9a0ddcbd37cfcef7a97adac6e505c6803884983136a33637c2efb9fa11",
+    "gcs_generation": "1781130469075337"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-72b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "qwen/qwen1.5-72b/us_foreign_policy/scenario_state.json",
+    "sha256": "0b59cc204a496fd3de7bbb1ec29416c3e536874e9ce9edfe4362c9b1da8e59ae",
+    "gcs_generation": "1781130468808635"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-72b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "qwen/qwen1.5-72b/us_foreign_policy/per_instance_stats.json",
+    "sha256": "9ac50da406206d348068487bebaac85f61812920c65f0c02635309fce735869c",
+    "gcs_generation": "1781130469458354"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/scenario_state.json",
+    "file": "qwen/qwen1.5-7b/us_foreign_policy/scenario_state.json",
+    "sha256": "6383c7223186c717a665a48f75076f8318ab57b0b87140c4b463c3518218685f",
+    "gcs_generation": "1781130469301221"
+  },
+  {
+    "url_path": "runs/v1.0.0/mmlu%3Asubject%3Dus_foreign_policy%2Cmethod%3Dmultiple_choice_joint%2Cmodel%3Dqwen_qwen1.5-7b%2Ceval_split%3Dtest%2Cgroups%3Dmmlu_us_foreign_policy/per_instance_stats.json",
+    "file": "qwen/qwen1.5-7b/us_foreign_policy/per_instance_stats.json",
+    "sha256": "7efa5a83fe6f175f637187a0577806e95dabf850dec4b4e9c7b58e01dcf1d7f0",
+    "gcs_generation": "1781130469307415"
+  }
+]
