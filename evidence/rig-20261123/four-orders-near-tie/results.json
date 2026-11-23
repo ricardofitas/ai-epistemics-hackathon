@@ -1,0 +1,192 @@
+{
+  "panels": {
+    "arc-challenge": {
+      "items": 288,
+      "all_order_gap": 0.028935185185185185,
+      "all_order_meaningful_lead": false,
+      "designs": {
+        "williams": {
+          "decision_error": 0.01171579947800076,
+          "paired_gap_mse": 8.585946877143349e-05
+        },
+        "precedence-minimax": {
+          "decision_error": 0.011967135107930385,
+          "paired_gap_mse": 8.64874024777092e-05
+        },
+        "ordinary-cyclic": {
+          "decision_error": 0.014707656843171279,
+          "paired_gap_mse": 9.289232628172155e-05
+        },
+        "all-balanced": {
+          "paired_gap_mse": 8.768047651963308e-05
+        },
+        "position-minimax": {
+          "paired_gap_mse": 8.862237707904665e-05
+        }
+      },
+      "absolute_reduction": 0.0002513356299296259,
+      "directional_bootstrap_interval": [
+        -0.002547085131970028,
+        0.0041680884467753115
+      ],
+      "bootstrap_reference_label_flip_fraction": 0.1135,
+      "run_id": "gh-20261123-near-tie-arc-challenge-1",
+      "source_sha256": "395a5c88d1580d69855fbaee9450270578df1ad5af6259771cd0a42c20e99f05",
+      "roster_sha256": "b1f94f387b8309c6c8cd978343a879a96831853ed7f52976ecda25107d92135b"
+    },
+    "openbookqa": {
+      "items": 288,
+      "all_order_gap": -0.07002314814814815,
+      "all_order_meaningful_lead": false,
+      "designs": {
+        "williams": {
+          "decision_error": 9.625704663073788e-44,
+          "paired_gap_mse": 8.26779379929698e-05
+        },
+        "precedence-minimax": {
+          "decision_error": 2.1397500819047283e-42,
+          "paired_gap_mse": 8.280352473422497e-05
+        },
+        "ordinary-cyclic": {
+          "decision_error": 2.9953125624617584e-39,
+          "paired_gap_mse": 9.146900988082989e-05
+        },
+        "all-balanced": {
+          "paired_gap_mse": 8.49384993355624e-05
+        },
+        "position-minimax": {
+          "paired_gap_mse": 8.569201978309329e-05
+        }
+      },
+      "absolute_reduction": 2.0434930352739903e-42,
+      "directional_bootstrap_interval": [
+        -4.6629367034256575e-15,
+        6.661338147750939e-16
+      ],
+      "bootstrap_reference_label_flip_fraction": 0.0,
+      "run_id": "gh-20261123-near-tie-openbookqa-1",
+      "source_sha256": "35370b9cfee8c1ff325ccc74adc434d12c47ca0ac3244aa87f3fa77069285206",
+      "roster_sha256": "277f572b05de0fc683dfa7293f6f5aa043fd2f1f5fed174f3daa405b100b4f88"
+    }
+  },
+  "verdict": "rule-out",
+  "margin": 0.01,
+  "independent_numerical_check": "direct convolution vs FFT",
+  "bootstrap_draws": 4000,
+  "prior_holdouts_opened": 0,
+  "preregistration_commit": "7058e4b1033efb0f2d8c1747c03f95fbf08fdd40",
+  "decision_threshold": 0.05,
+  "reference_forward_evaluations": 27648,
+  "development_no_labels_from_confirmation": {
+    "used_opened_rows_only": true,
+    "minimum_absolute_decision_error_reduction": 0.01,
+    "panels": {
+      "sciq-test": {
+        "items": 288,
+        "all_order_gap": 0.04861111111111111,
+        "all_order_meaningful_lead": false,
+        "designs": {
+          "williams": {
+            "decision_error": 0.4275287241464047,
+            "paired_gap_mse": 5.0988216949588476e-05
+          },
+          "precedence-minimax": {
+            "decision_error": 0.4279333783511872,
+            "paired_gap_mse": 5.136497717335391e-05
+          },
+          "ordinary-cyclic": {
+            "decision_error": 0.43314641230803713,
+            "paired_gap_mse": 5.977928883744856e-05
+          },
+          "all-balanced": {
+            "paired_gap_mse": 5.324877829218107e-05
+          },
+          "position-minimax": {
+            "paired_gap_mse": 5.4169747728052126e-05
+          }
+        },
+        "absolute_reduction": 0.00040465420478252856,
+        "directional_bootstrap_interval": [
+          -0.004005841156585082,
+          0.005828806761040169
+        ],
+        "bootstrap_reference_label_flip_fraction": 0.44675
+      },
+      "arc-easy": {
+        "items": 288,
+        "all_order_gap": 0.0318287037037037,
+        "all_order_meaningful_lead": false,
+        "designs": {
+          "williams": {
+            "decision_error": 0.010106843586553341,
+            "paired_gap_mse": 6.057467153206448e-05
+          },
+          "precedence-minimax": {
+            "decision_error": 0.010030243804924732,
+            "paired_gap_mse": 6.0574671532064466e-05
+          },
+          "ordinary-cyclic": {
+            "decision_error": 0.01284028681101289,
+            "paired_gap_mse": 6.559814118227022e-05
+          },
+          "all-balanced": {
+            "paired_gap_mse": 6.151657209147804e-05
+          },
+          "position-minimax": {
+            "paired_gap_mse": 6.22491614154664e-05
+          }
+        },
+        "absolute_reduction": -7.659978162860917e-05,
+        "directional_bootstrap_interval": [
+          -0.003960393047838032,
+          0.003220973227352179
+        ],
+        "bootstrap_reference_label_flip_fraction": 0.09925
+      }
+    }
+  },
+  "cold_replay": {
+    "run_id": "gh-20261123-near-tie-cold-1",
+    "device": "NVIDIA GeForce RTX 4060 Ti",
+    "already_opened_items": 8,
+    "choices_compared": 384,
+    "cold_disagreements_by_model": {
+      "Qwen/Qwen2.5-1.5B-Instruct-GGUF": 0,
+      "ibm-granite/granite-3.3-2b-instruct-GGUF": 0
+    },
+    "gate_passed": true
+  },
+  "run_records": {
+    "cold": {
+      "run_id": "gh-20261123-near-tie-cold-1",
+      "actual_start_utc": "2026-11-23T15:43:54.551505+00:00",
+      "released_utc": "2026-11-23T15:44:51.328531+00:00",
+      "gpu_lease_seconds": 56.777,
+      "eligible_checkpoint": true,
+      "status": "completed",
+      "boinc_gpu_restored": "always"
+    },
+    "arc-challenge": {
+      "run_id": "gh-20261123-near-tie-arc-challenge-1",
+      "actual_start_utc": "2026-11-23T15:47:11.088787+00:00",
+      "released_utc": "2026-11-23T15:51:24.035499+00:00",
+      "gpu_lease_seconds": 252.947,
+      "eligible_checkpoint": true,
+      "status": "completed",
+      "boinc_gpu_restored": "always",
+      "inference_checkpoint_sha256": "ee4a380a3eee9138cd58565620f08bb56d442dfbc820f2d1b4d6754b7c5aacc1",
+      "prediction_shards": 72
+    },
+    "openbookqa": {
+      "run_id": "gh-20261123-near-tie-openbookqa-1",
+      "actual_start_utc": "2026-11-23T15:51:33.116587+00:00",
+      "released_utc": "2026-11-23T15:55:02.550254+00:00",
+      "gpu_lease_seconds": 209.434,
+      "eligible_checkpoint": true,
+      "status": "completed",
+      "boinc_gpu_restored": "always",
+      "inference_checkpoint_sha256": "414a4976884c7f3241f12972f15f1e2203e53a9142dd3e76364500e2617c79e7",
+      "prediction_shards": 72
+    }
+  }
+}
