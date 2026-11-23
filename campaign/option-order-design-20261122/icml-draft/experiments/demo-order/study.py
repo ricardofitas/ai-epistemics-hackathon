@@ -24,8 +24,11 @@ def roster(source,task):
         return sorted((r for r in rows if normalized(r[0]) not in overlap),key=lambda r:hashtext('demo-v1|'+task+salt+r[0]))
     train=rank(train,'train');test=rank(test,'test')[:64];assert len(test)==64
     labels=(1,2,1,2) if task=='sst2' else (1,2,3,4)
-    pools={i:iter(r for r in train if r[1]==i) for i in labels}
-    return [([next(pools[i]) for i in labels],test[j:j+8]) for j in range(0,64,8)]
+    pools={i:iter([r for r in train if r[1]==i]) for i in labels}
+    groups = [([next(pools[i]) for i in labels],test[j:j+8]) for j in range(0,64,8)]
+    assert len({normalized(s) for d,_ in groups for s,_ in d})==32
+    assert all(sorted(y for _,y in d)==sorted(labels) for d,_ in groups)
+    return groups
 
 def predict(port,prompt,classes):
     data={'prompt':prompt,'grammar':'root ::= ['+classes+']','temperature':0,'n_predict':1,'cache_prompt':True,'seed':42}
