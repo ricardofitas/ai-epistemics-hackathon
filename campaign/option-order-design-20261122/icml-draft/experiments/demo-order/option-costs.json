@@ -1,0 +1,30 @@
+{
+  "hellaswag-3b": {
+    "uniform_calls": 16,
+    "gain_vs_rotations_percent": -2.308542425606811
+  },
+  "mmlu-3b": {
+    "uniform_calls": 16,
+    "gain_vs_rotations_percent": 9.786700125470514
+  },
+  "logiqa-3b": {
+    "uniform_calls": 15,
+    "gain_vs_rotations_percent": 15.003178639542275
+  },
+  "arc-challenge": {
+    "uniform_calls": 16,
+    "gain_vs_rotations_percent": 1.7916390179163901
+  },
+  "cosmosqa": {
+    "uniform_calls": 16,
+    "gain_vs_rotations_percent": 4.787234042553192
+  },
+  "openbookqa": {
+    "uniform_calls": 16,
+    "gain_vs_rotations_percent": 2.126099706744868
+  },
+  "race": {
+    "uniform_calls": 18,
+    "gain_vs_rotations_percent": 0.0
+  }
+}

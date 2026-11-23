@@ -35,13 +35,13 @@ we derive the exact minimax risks at every position-balanced budget.
 With eight calls, adding directed adjacency to precedence balance
 raises the optimum from $2/11$ to $2/5$. An exact residual-variance
 criterion determines which design has lower error on a fixed panel.
-We construct an unbiased estimate of their risk difference using
+Across seven four-option panels, matching the precision of eight precedence-balanced calls requires 15--18 uniformly sampled distinct orders. We estimate the difference in design risk without bias using
 eight orders per labeled calibration question. In a prospective
 test with two 3B models, the registered pilot selected the
 lower-error design on all four held-out benchmarks. Fixed precedence
 made the same four choices. Across pilot randomizations, including
 calibration in the gap estimate raised full-panel mean squared error
-by $4.50$--$7.39\%$ over fixed precedence at identical call counts.
+by $4.50$--$7.39\%$ over fixed precedence at identical call counts. When the ordered elements were demonstrations, rotations and reversals had lower point error on both tasks.
 \end{abstract}
 
 \section{Paired comparisons under an order budget}
@@ -78,6 +78,9 @@ the observed ordering of their risks. The fixed-budget statements concern arbitr
 profiles. The full references measure where actual profiles place their
 variance. A prospective transfer study tests whether sparse calibration
 can select the lower-risk eight-call design on new questions.
+
+On the seven four-option panels in Figure~\ref{fig:cost}, eight precedence-balanced calls match a precision that takes 15--18 uniformly sampled orders. For average single-order item variance $V$, the uniform $k$-order gap MSE on $N$ questions is $V(24-k)/(23kN)$. We invert this expression at the measured precedence MSE. Against a structured comparator at eight calls, precedence wins on five panels, ties on RACE and loses on HellaSwag.
+\input{cost-figure.tex}
 
 \input{theory.tex}
 
@@ -430,23 +433,8 @@ comparators, the separate 6,144-item sensitivity and interval details.
 
 \input{pilot-main.tex}
 
-\subsection{Frozen decision experiment}
-On 288 ARC-Challenge and 288 OpenBookQA items, we compared Qwen2.5
-1.5B Instruct with Granite 3.3 2B Instruct (Q4\_K\_M) under a
-standard numeric-choice prompt. The frozen decision was whether
-Qwen led by at least five percentage points. The reference used all
-24 orders per model and question. We convolved the exact distributions
-of the independently sampled four-order blocks and used 4,000 paired
-item bootstrap draws for simultaneous directional bounds across panels.
-
-On ARC-Challenge, the full-order lead was 2.894 points and Williams
-reduced decision error from 1.197\% to 1.172\% versus precedence
-minimax. Ordinary cyclic yielded 1.471\%. The Williams reduction was
-0.025 points, with directional bounds $[-0.255, 0.417]$ points.
-OpenBookQA's lead was $-7.002$ points, 12.002 points from the
-threshold, and all three decision errors were effectively zero.
-The frozen comparison excluded a reduction above one point on both
-panels. Only ARC-Challenge was relatively close to the threshold.
+Appendix~\ref{app:frozen-decision} reports a separate preregistered test of decisions near a five-point gap.
+\input{demo-results.tex}
 
 \section{Five-option evaluation on CommonsenseQA}
 We froze 192 questions from CommonsenseQA validation
@@ -527,7 +515,7 @@ risk difference from eight calls on labeled calibration questions.
 On all four transfer panels, fixed precedence gave lower full-panel
 MSE than either adaptive policy when calibration was charged. Detecting
 benchmarks where the held-out saving covers that cost remains open
-(Eq.~\eqref{eq:charged-pilot}). Other open
+(Eq.~\eqref{eq:charged-pilot}). Reordering demonstrations also changes the practical comparison. Rotations and reversals gave lower point MSE on both registered classification panels. Their worst-case risk ratio of one coexists with lower risk on these observed profiles. Other open
 cases include sharp multi-budget
 curves at five or more options, attainment of $L_n$ above ten, and the
 five-option correctness optimum with maximum adjacency. The measured benchmark effects condition on the frozen

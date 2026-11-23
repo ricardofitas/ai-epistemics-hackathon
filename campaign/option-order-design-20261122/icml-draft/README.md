@@ -16,6 +16,8 @@ At four options the paper gives the exact worst-case variance for every balanced
 
 In a prospective transfer test on ARC-Challenge, OpenBookQA, Cosmos QA and RACE, the eight-call pilot chose precedence in all four cases before the 672 held-out questions were scored. Precedence gave lower held-out MSE in each case. Repeating the pilot-order draws on the fixed calibration questions would pick the lower-risk design with probability 49.6–63.8%. Counting calibration in the full-panel estimate gives 4.50–7.39% higher expected MSE than using precedence throughout at identical call counts. All four simultaneous intervals for the held-out W gain include zero. [Prospective results, registration and public replay](experiments/low-budget-selection/README.md)
 
+The opening figure translates gap MSE into the number of uniformly sampled orders required. A separate registered experiment reorders four labeled demonstrations during text classification on SST-2 and AG News. [Demonstration-order results and replay](experiments/demo-order/README.md)
+
 ## Use the samplers
 
 Run the following command to print one six-order block. Each row lists option labels in display order, counted from zero. Use the same block for both models, drawing independently for each new question. The seed makes this example reproducible.

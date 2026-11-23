@@ -1,0 +1,18 @@
+\section{Frozen decision experiment}\label{app:frozen-decision}
+On 288 ARC-Challenge and 288 OpenBookQA items, we compared Qwen2.5
+1.5B Instruct with Granite 3.3 2B Instruct (Q4\_K\_M) under a
+standard numeric-choice prompt. The frozen decision was whether
+Qwen led by at least five percentage points. The reference used all
+24 orders per model and question. We convolved the exact distributions
+of the independently sampled four-order blocks and used 4,000 paired
+item bootstrap draws for simultaneous directional bounds across panels.
+
+On ARC-Challenge, the full-order lead was 2.894 points and Williams
+reduced decision error from 1.197\% to 1.172\% versus precedence
+minimax. Ordinary cyclic yielded 1.471\%. The Williams reduction was
+0.025 points, with directional bounds $[-0.255, 0.417]$ points.
+OpenBookQA's lead was $-7.002$ points, 12.002 points from the
+threshold, and all three decision errors were effectively zero.
+The frozen comparison excluded a reduction above one point on both
+panels. Only ARC-Challenge was relatively close to the threshold.
+

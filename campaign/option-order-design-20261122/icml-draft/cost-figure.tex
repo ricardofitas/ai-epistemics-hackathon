@@ -1,0 +1,17 @@
+\begin{figure}[t]
+\centering\small
+\begin{tabular}{@{}l@{\quad}l@{\quad}r@{}}
+Panel & Uniform calls required & Gain vs. rotations \\
+\midrule
+HellaSwag & \rule{48pt}{4pt}\ 16 & -2.3\% \\
+MMLU & \rule{48pt}{4pt}\ 16 & +9.8\% \\
+LogiQA & \rule{45pt}{4pt}\ 15 & +15.0\% \\
+ARC-Challenge & \rule{48pt}{4pt}\ 16 & +1.8\% \\
+Cosmos QA & \rule{48pt}{4pt}\ 16 & +4.8\% \\
+OpenBookQA & \rule{48pt}{4pt}\ 16 & +2.1\% \\
+RACE & \rule{54pt}{4pt}\ 18 & +0.0\% \\
+\bottomrule
+\end{tabular}
+\caption{Calls needed per model and question to match the gap precision of eight precedence-balanced orders. Bars give the smallest uniform sample without replacement reaching that MSE. The last column gives the MSE reduction relative to eight randomized rotations and reversals. Estimates are exact on the seven fixed four-option 3B panels, using the held-out questions for the four transfer tests.}
+\label{fig:cost}
+\end{figure}

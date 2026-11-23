@@ -1,0 +1,29 @@
+{
+  "run_id": "icml-demonstration-orders-3",
+  "gpu": "GPU-91740225-aba6-c2cf-8213-e20452261587",
+  "release": {
+    "eligible_checkpoint": true,
+    "released_utc": "2026-11-23T23:58:19.489157+00:00",
+    "status": "completed"
+  },
+  "started_utc": "2026-11-23T23:54:41.136038+00:00",
+  "reference_calls": 6144,
+  "source_revision": "e93f70d0a5f6a8cfcadf6f2917c26eed265cd0be",
+  "registration": "432309e80614d4b8f74ec740f3ffde901c29838c",
+  "files": {
+    "study.py": "b0a45ec4b1b6adb2dfca1e6860257e4476da56bac8ec3fa7d79eb28382f1be65",
+    "responses.json": "81e7a575172e02a93c30a9819075ad906f3366512212237724c8d718743b9311",
+    "results.json": "e28204b55175761bf60882344a31d6075a6197f3d36cd0eafb7cfc59bf563a1b",
+    "protocol.md": "d2b9a780f4bd975ed943bc764fd69fee5c5ee2607d5d08311c0f23ea949e03a9"
+  },
+  "models": {
+    "qwen2.5-3b-instruct-q4_k_m.gguf": "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d",
+    "SmolLM3-Q4_K_M.gguf": "8334b850b7bd46238c16b0c550df2138f0889bf433809008cc17a8b05761863e"
+  },
+  "data": {
+    "agnews/train.jsonl": "74a458fb499fea8c19ae5985b5a16b87075032a505b2ec56d9c4fd0b73fb2290",
+    "agnews/dev_subsample.jsonl": "02e6713c136a3b9c374d9a272ec3c945b7d85bde222ef4e2c2c9b6ed5f2920e4",
+    "sst2/train.jsonl": "99974738e779071eb86676604a1df25bf05d2f0ddb540cc865f080add4212e83",
+    "sst2/dev_subsample.jsonl": "e3ec27cb4f0eeaa19b8e59ae59cec4f98820fa776d49f4d0f5c2d711520b7c47"
+  }
+}
