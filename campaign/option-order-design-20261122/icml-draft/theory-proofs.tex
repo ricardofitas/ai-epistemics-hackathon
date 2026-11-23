@@ -46,6 +46,19 @@ error is $m\|e\|^2/d_0=(n-2)/d_0$. Taking the design expectation
 proves Theorem~1 for correctness differences without a symmetry
 assumption on the design.
 
+\paragraph{General position-balanced budgets.}
+Let $k$ be a positive multiple of $n$ with $k\le n!$, and let
+$c_j$ count how often the two distinguished options occupy slot dyad
+$j$ in a block. The weight errors $e_j=c_j/k-1/m$ still have zero
+row and column sums. The same two ternary witnesses have conditional
+mean normalized squared error $m\|e\|^2/d_0$ for each block. With
+$h=k\bmod m$, the minimum of $\sum_j(c_j-k/m)^2$ over nonnegative
+integer counts of sum $k$ is $h(m-h)/m$. Moving one count from a
+cell to a cell smaller by at least two strictly decreases the sum,
+so a minimizing vector has $h$ entries $\lceil k/m\rceil$ and all
+others $\lfloor k/m\rfloor$. Applying this lower bound to every
+feasible block gives the multi-budget bound in the main text.
+
 \paragraph{Recovering the two risks from swaps.}
 Randomly select the two distinguished semantic labels as well as the
 slot relabeling of the witness. For two rows $x,y$, the ordered slot

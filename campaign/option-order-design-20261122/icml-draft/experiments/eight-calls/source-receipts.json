@@ -1,0 +1,25 @@
+{
+  "format": "Each stratum lists [positive 24-bit mask, negative 24-bit mask, item count]. Bit i denotes lexicographic display order i. Positive means only the first model is correct.",
+  "profile_sha256": "a5a4637a8cbad98df5aa6dbb7066577e3cb254d4b5afc487cf7560cb7f994cfa",
+  "sources": {
+    "hellaswag-3b": {
+      "roster_sha256": "b4ad976ebe16822c88316f2117d0324a8f17a3aead9bc7b53d192180809d623f",
+      "archive_masks_sha256": "3fb4d600c8c563db64f5da9b11b4bee0943832511dae658706a5f63335aaf0c5"
+    },
+    "mmlu-3b": {
+      "roster_sha256": "ab86127c13e33969f3ab54d98923f07f55e06a989ebafa60b1142c38086437af",
+      "publisher_sha256": "66cdf0b090ccb657d18d13cd81e31fdc55c3467da9642ffb178653268a97c8ef",
+      "ordered_checkpoint_digests_sha256": "6928eae782d0f011e485df6ab17413504f925a09133f064be388b727b42634cc"
+    },
+    "logiqa-3b": {
+      "roster_sha256": "f97bdfde2e562c217e0f31e8b7bc838dd40c8092f8088ea1d9b6e018ec266d5f",
+      "publisher_sha256": "71940b37ae0184b677c253a148d57ad4e75d6113447b1563c2ca82483e4e4f8d",
+      "ordered_checkpoint_digests_sha256": "76f99a4c5f208187c6615b3c91fe6713b52743d358baba213cf6b839ffe4e530"
+    },
+    "hellaswag-1.5b-2b": {
+      "roster_file_sha256": "20acef829a5a601e14322d460064a3f30fa22579567db3d9acdce6136a2efa29",
+      "prediction_export_sha256": "d115fd39246fa6c660d521a889a292e78de031d02b31bfba94ad63bea71ff7df",
+      "publisher_sha256": "899813071e1e95efafec90f856e1987d2150fa4d020fc005df6962c259f660cd"
+    }
+  }
+}

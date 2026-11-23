@@ -25,6 +25,7 @@ if __name__ == "__main__":
     opt.add_argument("--small",action="store_true",help="omit catalogue-dependent adjacency bounds at 8, 9 and 10")
     args=parser.parse_args()
     run("verify_four.py")
+    matched("verify_four_budgets.py","four-budget-certificate.json")
     matched("verify_position.py","position-certificate.json")
     matched("verify_binary_adjacency.py","binary-adjacency-certificate.json")
     matched("verify_real_adjacency.py","real-adjacency-certificate.json")

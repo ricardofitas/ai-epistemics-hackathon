@@ -1,6 +1,6 @@
 # The Cost of Balance in Order-Sampled Model Comparisons
 
-This ICML working paper studies the variance of a paired accuracy gap when each model can see as many orders as there are answer choices. The two models receive the same orders on each question. [Read the manuscript](paper.pdf)
+This ICML working paper studies the variance of a paired accuracy gap when a limited number of answer orders can be evaluated. It treats the one-order-per-option budget across option counts and all position-balanced budgets at four options. The two models receive the same orders on each question. [Read the manuscript](paper.pdf)
 
 ## Results
 
@@ -10,7 +10,9 @@ Theorem 2 characterizes when the risk equals that of one uniform order. At four 
 
 At five options, the sharp position risk is 9/25. Requiring maximum adjacency coverage raises the correctness optimum into the interval [7/15, 0.47087]. The real-score optimum lies in [0.47084, 0.47087]. The three correctness witnesses giving the new lower bound use only the admissible blocks.
 
-The matched 3B evaluations show Williams MSE 0.25% higher on HellaSwag, 3.41% higher on MMLU and 2.32% lower on LogiQA than precedence minimax. In CommonsenseQA the frozen maximum-adjacency sampler had 1.29% lower point MSE than position minimax, with a paired 95% interval from −0.14% to +2.75%. [Matched HellaSwag evidence](https://github.com/ricardofitas/ai-epistemics-hackathon/blob/077d34c223c9d6bad32bfeadbbe9972ac77658e0/evidence/rig-20261123/four-orders-hellaswag-3b/RESULTS.md) · [CommonsenseQA evidence](https://github.com/ricardofitas/ai-epistemics-hackathon/blob/077d34c223c9d6bad32bfeadbbe9972ac77658e0/evidence/rig-20261123/five-orders-commonsenseqa/RESULTS.md)
+With four calls, the matched 3B evaluations show Williams MSE 0.25% higher on HellaSwag, 3.41% higher on MMLU and 2.32% lower on LogiQA than precedence minimax. In CommonsenseQA the frozen maximum-adjacency sampler had 1.29% lower point MSE than position minimax, with a paired 95% interval from −0.14% to +2.75%. [Matched HellaSwag evidence](https://github.com/ricardofitas/ai-epistemics-hackathon/blob/077d34c223c9d6bad32bfeadbbe9972ac77658e0/evidence/rig-20261123/four-orders-hellaswag-3b/RESULTS.md) · [CommonsenseQA evidence](https://github.com/ricardofitas/ai-epistemics-hackathon/blob/077d34c223c9d6bad32bfeadbbe9972ac77658e0/evidence/rig-20261123/five-orders-commonsenseqa/RESULTS.md)
+
+At four options the paper gives the exact worst-case variance for every balanced budget from four through 24 orders. At eight, the position, precedence and full-adjacency optima are 1/7, 2/11 and 2/5 times single-order variance. Two distinct Williams blocks reduce the original Williams MSE by 60% on every fixed profile. On the same 992 questions per 3B panel, this eight-call design had 7.99% higher point MSE than optimized precedence on HellaSwag, 9.68% higher on MMLU and 1.69% higher on LogiQA. The LogiQA interval spans zero. The package includes the full-order contrast histograms, exact risks, equal-cost baselines and paired intervals. [Eight-call evidence and replay](experiments/eight-calls/README.md)
 
 ## Use the samplers
 
@@ -21,6 +23,12 @@ python3 sample_position.py 6 --seed 17
 ```
 
 The script implements the sharp position samplers for four through ten options. The templates and exact mixing probabilities for six through ten are in the certificate package. [Position templates](certificates/position-templates.json)
+
+For four-option questions, draw a block with a specific budget and balance requirement. The precedence sampler balances both position and pairwise precedence. The full sampler also balances directed adjacency. All balanced budgets are multiples of four, including the census at 24.
+
+```sh
+python3 four_option_budgets.py 8 precedence --seed 17
+```
 
 ## Reproduce the proofs
 
@@ -37,7 +45,7 @@ For an offline replay of the full table, supply local copies of `catalogue.redRC
 python3 -B verify_all.py --catalogue-dir /path/to/catalogue
 ```
 
-The verifier enumerates the small supports, checks the five-option witnesses and real-score upper bound, and computes all centered eigenvalues of the proposed six- through ten-option samplers. Two implementations use different character formulas. An independent integer calculation checks the ternary frame projectors.
+The verifier enumerates every balanced four-option block at four, eight and twelve calls, checks its weighted frame identities and complementary budgets, checks the five-option witnesses and real-score upper bound, and computes all centered eigenvalues of the proposed six- through ten-option samplers. Two implementations use different character formulas. An independent integer calculation checks the ternary frame projectors.
 
 ## Build the paper
 

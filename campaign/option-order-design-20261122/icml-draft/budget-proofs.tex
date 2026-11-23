@@ -1,0 +1,197 @@
+\section{Sharp four-option risks across sampling budgets}
+\label{app:budgets}
+
+\paragraph{A binary certificate for finite populations.}
+Let there be $M$ possible orders, and let $\mathcal B$ be a nonempty
+family of allowed $k$-subsets, $0<k<M$. A design samples an equally
+weighted block with order inclusion probabilities $k/M$. For
+$b_B=\mathbf 1_B$ write $u_B=(b_B-(k/M)\mathbf 1)/\sqrt{k(1-k/M)}$,
+$W=\mathrm{span}\{u_B:B\in\mathcal B\}$, $r=\dim W$ and $T=M/k-1$.
+Suppose a feasible design $D_*$ satisfies the weighted finite tight
+frame identity $\mathbb E_{A\sim D_*}u_Au_A^\top=P_W/r$, where
+$P_W$ is the orthogonal projector \citep{benedetto2003}. Its normalized
+worst-case risk is $T/r$ for real profiles and for differences of
+binary correctness indicators.
+
+For any nonconstant $d$, let $z$ be its centered vector divided by its
+Euclidean norm. The squared error of a realized block divided by
+the full-order variance is $T\langle u_B,z\rangle^2$. For $D_*$,
+averaging over $B$ gives $(T/r)\|P_Wz\|^2$, which proves the upper
+bound. For the lower bound, take an independent $A\sim D_*$ and
+assign model A the correctness vector $\mathbf 1_A$ and model B the
+zero vector. The normalized centered profile is $u_A$. For every
+feasible $B$, the average normalized squared error over $A$ is
+$T u_B^\top(P_W/r)u_B=T/r$. Averaging over any candidate design on
+$B$ leaves this value unchanged. Some fixed binary profile must
+therefore realize risk at least $T/r$ for that design. The argument
+allows the competing design to use arbitrary weights on its feasible blocks.
+
+\paragraph{Enumeration and exact matrices.}
+Index the 24 \emph{display} orders lexicographically, using four labels
+numbered from zero. For a position-balanced $k$-block, each label
+appears first $k/4$ times. Enumerate all choices of $k/4$ of the six
+rows starting with each label, take their union and test the remaining
+position, precedence and directed-adjacency counts. At $k=8$ this
+gives 255, 99 and 15 feasible blocks in the three nested classes. At
+$k=12$ it gives 640, 180 and 22. For each template draw a uniform
+option relabeling. For position balance also permute slots uniformly.
+For precedence and adjacency keep the slots or reverse them with equal
+probability. The eight-call attaining mixtures are explicit in
+Table~\ref{tab:eight-templates}. The twelve-call templates are given
+in the accompanying machine-readable certificate.
+
+\begin{table}[h]
+\centering
+\caption{Eight-call samplers. Each tuple lists the lexicographic indices of the eight displayed rows
+before random relabeling. A uniform pair of distinct Williams blocks is an equivalent full-adjacency sampler.}
+\label{tab:eight-templates}
+\begin{tabular}{llr}
+\toprule
+Balance & Template & Selection probability \\
+\midrule
+Position & $(0,1,8,9,16,17,18,19)$ & $6/7$ \\
+         & $(0,3,7,11,12,16,20,23)$ & $1/7$ \\
+Position and precedence & $(0,1,6,10,13,17,22,23)$ & $2/11$ \\
+         & $(0,2,7,10,13,17,21,22)$ & $2/11$ \\
+         & $(0,3,7,11,12,16,20,23)$ & $1/11$ \\
+         & $(0,3,7,11,14,17,18,22)$ & $6/11$ \\
+All three & $(0,1,8,10,13,17,19,23)$ & $4/5$ \\
+         & $(0,2,7,10,13,16,21,23)$ & $1/5$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For each attaining law form the rational matrix
+$C=(M/k^2)\mathbb E[b_B b_B^\top]-\mathbf1\mathbf1^\top/M$.
+The verifier checks its marginals, its trace $T$, the identity
+$C^2=\lambda C$ and $Cu_B=\lambda u_B$ for \emph{every feasible}
+block in the corresponding class. The range of $C$ lies in $W$
+because $C=T\mathbb E[u_Bu_B^\top]$. The final check makes its range
+equal to $W$. Hence $C=\lambda P_W$ and
+$r=T/\lambda$. In increasing order of constraints the resulting ranks
+are $(14,11,5)$ at eight and $(14,11,6)$ at twelve. The binary
+certificate proves optimality in both profile classes. Simple random
+sampling has constant risk $(M-k)/(k(M-1))$ on centered profiles.
+Symmetrizing any unrestricted candidate over population relabelings
+gives this law, proving the unrestricted lower bound for correctness
+as well.
+
+The complement of a balanced $k$-block satisfies the corresponding
+constraints at $24-k$. The two centered sample means differ by the
+factor $-k/(24-k)$ since their weighted sum is zero. This bijection
+preserves uniform marginals and scales every profile risk by
+$k^2/(24-k)^2$. It transfers the four- and eight-call optima to
+20 and 16 calls. At 24 the target is observed exactly.
+
+\paragraph{How the full-adjacency sampler changes with budget.}
+The six four-call Williams blocks partition the population. Their
+15 pairwise unions exhaust the admissible eight-call blocks, with
+probability $1/15$ per union in the certified sampler. Writing the six
+block means as a population of size six, the finite population
+correction for sampling two distinct means is $(6-2)/(2(6-1))=2/5$.
+At twelve calls there are also the even and odd permutation halves.
+An attaining sampler selects a uniform triple of Williams blocks
+with probability $5/6$ and a uniform parity half with probability $1/6$.
+The two added blocks supply the sixth residual direction.
+
+At eight calls, position features together with the constant have
+rank ten, and precedence raises that rank to thirteen. Exact rational
+elimination gives these ranks. The complementary dimensions match
+the frame ranks 14 and 11. For full balance, every centered feasible
+block is constant on each of the six Williams groups, a centered space
+of dimension five. Hence the two projections of
+Section~\ref{sec:budget} are precisely onto the two feasible-block
+spans. For item $i$, the squared-error expectation equals
+$d_i^\top C d_i/24$. Summing across independent items gives
+Eq.~\eqref{eq:residual-threshold}.
+
+\section{Replaying fixed-budget risks from the 24-order profiles}
+\label{app:eight-replay}
+
+The target is the difference of mean accuracies averaged over all 24
+orders. For each question we compress the paired full-order correctness
+difference into its positive and negative order masks. Questions with
+identical masks are counted within stratum. These anonymous histograms
+suffice for point risks and the paired item bootstrap. The three
+matched panels use Qwen2.5-3B-Instruct and SmolLM3-3B. The separate
+6,144-question HellaSwag comparison uses Qwen2.5-1.5B-Instruct and
+Granite-3.3-2B-Instruct. It shares 227 questions with the matched
+HellaSwag panel. We report it separately throughout.
+
+For each block the integer score is the number of its positive
+orders minus its number of negative orders. At $k=4,8$ the item
+loss is $((24/k)\,\mathrm{score}-\sum_\pi d_i(\pi))^2/576$.
+The replay sums the loss against the exact rational support weights.
+As a second calculation at eight calls, it projects every item
+using integer orthogonalization of position and precedence features
+and the six Williams-group means. Both calculations agree exactly on
+all balanced item risks, and the four-call risks and full-order gaps
+match the earlier releases.
+
+\begin{table}[h]
+\centering
+\caption{Conditional MSE of the paired accuracy gap in units of $10^{-6}$.
+The first three columns use 992 questions each. The final column uses the separate smaller-model HellaSwag cohort.}
+\label{tab:eight-all}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Calls & Design & HellaSwag 3B & MMLU 3B & LogiQA 3B & HellaSwag 1.5B/2B \\
+\midrule
+4 & Unrestricted distinct        & 79.836 & 65.745 & 63.033 & 8.490 \\
+4 & Position minimax             & 22.125 & 21.377 & 21.629 & 4.713 \\
+4 & Precedence minimax           & 21.592 & 20.181 & 20.091 & 4.640 \\
+4 & Williams                     & 21.645 & 20.869 & 19.625 & 4.586 \\
+\midrule
+8 & Unrestricted distinct        & 31.934 & 26.298 & 25.213 & 3.396 \\
+8 & Position minimax             & 8.493 & 8.170 & 8.297 & 1.810 \\
+8 & Precedence minimax           & 8.018 & 7.611 & 7.720 & 1.730 \\
+8 & Two distinct Williams blocks & 8.658 & 8.348 & 7.850 & 1.834 \\
+8 & Two disjoint position blocks & 8.773 & 8.477 & 8.565 & 1.870 \\
+8 & Two disjoint precedence blocks & 8.328 & 7.879 & 7.887 & 1.798 \\
+8 & Rotations and reversals      & 7.837 & 8.437 & 9.082 & 1.702 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The disjoint-pair baselines choose uniformly among disjoint pairs
+from the corresponding four-call minimax sampler. At eight calls
+these baselines have worst-case ratios $1/6$, $3/14$ and $2/5$
+for position, precedence and full adjacency, respectively. For the
+rotation baseline we randomly relabel the four forward rotations and
+their four reversed orders \citep{khan2026} per question. This law
+partitions the population into three equiprobable blocks. A binary
+profile constant on each block attains worst-case ratio one. It gives
+the lowest observed point MSE among the tested eight-call designs on
+both HellaSwag cohorts (Table~\ref{tab:eight-all}).
+
+We computed 50,000 paired bootstrap resamples within each HellaSwag
+domain and MMLU subject, holding stratum counts fixed. LogiQA was
+resampled as one stratum. The same draws apply to all designs and
+both budgets within each panel. The reported two-sided percentile
+intervals describe sensitivity to item composition and have
+panel-specific coverage without multiplicity adjustment. They do not
+alter the exact conditional MSE on the observed items.
+
+\begin{table}[h]
+\centering
+\caption{Change in the adjacency gain from four to eight calls, in percentage points.
+The last two columns give the percent MSE reduction from optimizing at eight calls
+versus uniformly pairing disjoint four-call minimax blocks in the same class.}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Panel & Gain change [95\% interval] & Position & Precedence \\
+\midrule
+HellaSwag 3B & $-7.74\;[-9.26,-6.23]$ & 3.19 & 3.73 \\
+MMLU 3B & $-6.27\;[-7.80,-4.77]$ & 3.61 & 3.40 \\
+LogiQA 3B & $-4.01\;[-5.48,-2.55]$ & 3.13 & 2.12 \\
+HellaSwag 1.5B/2B & $-7.22\;[-7.73,-6.71]$ & 3.20 & 3.80 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+On the separate HellaSwag cohort the retained share was $48.21\%$.
+The adjacency gain fell from $+1.17\%$ at four calls to $-6.05\%$
+at eight (eight-call 95\% interval $[-7.29,-4.82]\%$).
+The inference records were fixed before the eight-call study. We
+specified the comparisons before computing the eight-call empirical
+risks, with access to the published four-call outcomes.

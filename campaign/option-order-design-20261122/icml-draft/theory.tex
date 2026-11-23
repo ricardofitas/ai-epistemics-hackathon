@@ -1,6 +1,6 @@
 \section{The cost of exact balance}
 \label{sec:theory}
-A block is \emph{position-balanced} if each option appears in each slot
+In this section $k=n$. A block is \emph{position-balanced} if each option appears in each slot
 once. Writing its orders as rows gives a Latin square. For a single item
 with nonconstant profile $d$, divide the variance of the block mean
 by the population variance $v(d)$ across all $n!$ orders. Denote the
@@ -38,6 +38,13 @@ subspaces makes their average normalized risk exactly $L_n$.
 At least one realizes the lower bound or more. The upper certificates
 use two Latin squares at each $n$ and bound the full permutation
 spectrum (Appendix~\ref{app:general-position}).
+
+The two-option argument extends to any position-balanced budget $k$.
+Set $m=n(n-1)$ and let $h$ be the remainder of $k$ upon division by
+$m$. Some correctness profile has risk at least
+$h(m-h)/(k^2 d_0)$. This recovers Eq.~\eqref{eq:two-option} at $k=n$
+and can be zero at budgets divisible by $m$
+(Appendix~\ref{app:general-position}).
 
 \paragraph{A strict-cost test for correctness.}
 Take two distinct rows uniformly from a sampled block and let $t$ be the

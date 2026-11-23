@@ -26,22 +26,22 @@
 \printAffiliationsAndNotice{}
 
 \begin{abstract}
-Estimating an accuracy gap averaged over answer orders requires choosing
-which permutations two models see. With $n$ options and $n$ shared
-orders, displaying each option once in every slot guarantees coverage
-of positions. We prove that some binary-correctness difference incurs
-at least $(n-2)/(n^2-3n+1)$ times its full-order variance for every
-$n\ge4$. Explicit samplers attain this bound for $n=6$ through $10$.
-A second theorem characterizes when additional constraints retain
-the entire variance of a single order. Covering every directed
-adjacency does so at four and six options. At six, every row in a
-block preserves the same pairs of opposite options. At five, maximum
-attainable adjacency raises worst-case risk by at least $29.6\%$.
-Full-order evaluations locate the practical trade-off. With the same
-3B models, prompt and four-call budget, Williams sampling improves
-on precedence minimax on LogiQA, loses on MMLU, and is near a tie on
-HellaSwag. Decomposing the variance isolates the contribution of
-adjacency, the residual cost, and their interaction on each panel.
+How should two models share a limited sample of answer orders when
+estimating their mean accuracy gap? With $n$ options and $n$ shared
+orders, exact position balance incurs worst-case variance of at least
+$(n-2)/(n^2-3n+1)$ times the full-order variance for every $n\ge4$.
+Explicit samplers attain the bound for $6\le n\le10$. Covering every
+directed adjacency retains single-order variance at four and six
+options. At four options we obtain the exact minimax risks for
+every position-balanced budget from four through 24 calls. At eight
+calls, adding adjacency to precedence balance raises the optimum from
+$2/11$ to $2/5$. The two optimal designs admit an exact comparison
+on any fixed panel through the fraction of residual variance that
+survives adjacency balance. Replaying all 24 orders for the same 3B
+model pair on HellaSwag, MMLU and LogiQA, we find higher eight-call
+point error under adjacency on all three. On LogiQA, adjacency gives
+$2.32\%$ lower mean squared error at four calls and $1.69\%$ higher
+at eight, with the eight-call interval spanning a tie.
 \end{abstract}
 
 \section{Paired comparisons under an order budget}
@@ -62,24 +62,26 @@ the correct option. The target is the all-order accuracy gap
  \Delta=N^{-1}\sum_{i=1}^N\mu_i,\qquad
  \mu_i=(n!)^{-1}\sum_{\pi\in S_n}d_i(\pi).
 \]
-Each question receives an independently sampled block of $n$ distinct
-orders with equal weights, shared by the models. An order has inclusion
-probability $n/(n!)$, so the mean is unbiased. The reference uses all
-orders to evaluate what would happen under each $n$-call design.
+On each question the models share an independently drawn block of $k$
+distinct, equally weighted orders. Each order has inclusion probability
+$k/(n!)$, so the estimate is unbiased. We study the budget $k=n$ across
+option counts and every budget admitting exact position balance at $n=4$.
+The evaluations use all orders as the finite-panel reference.
 
 Exact balance integrates specified features without sampling error.
 It also restricts which orders can be observed together. We give a
 general lower bound with explicit optimal samplers and a connectivity
 criterion for the largest possible loss from these restrictions.
-At five options we bound the cost even though full adjacency is
-infeasible. The fixed-budget statements concern arbitrary order
+At five options we bound the cost of maximum feasible adjacency.
+At four, doubling the budget changes both the optimal samplers and
+the observed ordering of their risks. The fixed-budget statements concern arbitrary order
 profiles. The experiments measure where actual profiles place their
 variance and explain the sign changes between benchmarks.
 
 \input{theory.tex}
 
-\section{Four-call designs and benchmark risk}
-For the generator below, encode an order by the map from original option to display position.
+\section{Four options across order budgets}
+At four calls, encode an order by the map from original option to display position.
 Compose a uniform anchor with each map in the subgroup
 \(\{0123,1302,3210,2031\}\). Relabeling the options by the anchor yields six
 equiprobable, disjoint blocks. Every block places each option once in each
@@ -116,10 +118,10 @@ ranking. We treat practical gap thresholds as distinct decisions.
 For one item write \(v=\sum_\pi(d(\pi)-\mu)^2/24\). For a uniform
 design on \(m\) blocks with block-incidence matrix \(H\), the normalized
 worst-case risk on real centered contrasts is the largest centered
-eigenvalue of \(24H^\top H/(16m)\).
+eigenvalue of \(24H^\top H/(k^2m)\).
 Table~\ref{tab:frontier} gives the optimum over designs satisfying each
-constraint on every realized block. The first line follows from the
-finite population correction. For position balance, averaging the design
+constraint on every realized block. The unrestricted column follows from
+simple random sampling. At four calls, averaging a position-balanced design
 over relabelings can only reduce its worst-case risk and leaves two
 block orbits of sizes 18 (cyclic type) and six (double-transposition type).
 A centered ternary witness has respective risks \(1/2\) and \(1\),
@@ -133,19 +135,23 @@ gives the sharp risk of one. Appendix~\ref{app:certificates} gives the
 matrix and certificate construction.
 
 \begin{table}[t]
-\caption{Optimal worst-case variance divided by the full-order variance.
-Constraints apply to each realized block. The last three optima are
-sharp for differences of correctness indicators.}
+\caption{Four-option minimax risk as a fraction of single-order
+variance, sharp for paired binary correctness and for real scores.
+The constraints accumulate from left to right.}
 \label{tab:frontier}
 \centering
-\begin{tabular}{lc}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}rrrrr@{}}
 \toprule
-Required balance & Risk ratio \\
+Calls & Unrestricted & Position & $+$Precedence & $+$Adjacency \\
 \midrule
-Unrestricted distinct orders & $5/23$ \\
-Position & $1/2$ \\
-Position and precedence & $3/4$ \\
-All three & $1$ \\
+4  & $5/23$  & $1/2$  & $3/4$    & $1$ \\
+8  & $2/23$  & $1/7$  & $2/11$   & $2/5$ \\
+12 & $1/23$  & $1/14$ & $1/11$   & $1/6$ \\
+16 & $1/46$  & $1/28$ & $1/22$   & $1/10$ \\
+20 & $1/115$ & $1/50$ & $3/100$  & $1/25$ \\
+24 & $0$     & $0$    & $0$      & $0$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -155,9 +161,47 @@ sampling in practice. If the features balanced by a design explain
 a fraction \(\eta\) of centered variance, only its orthogonal residual
 contributes to risk and the normalized risk is at most
 \(\lambda(1-\eta)\), where \(\lambda\) is the corresponding ratio in
-Table~\ref{tab:frontier}. This gives sufficient shares of \(13/23\),
+Table~\ref{tab:frontier}. At four calls this gives sufficient shares of \(13/23\),
 \(49/69\) and \(18/23\) for the three balanced policies to beat
 unrestricted four. It does not order their residual risks.
+
+\subsection{Eight calls and the full budget curve}
+\label{sec:budget}
+\paragraph{Theorem 3 (four options, variable budget).}
+For every positive multiple of four up to 24, the minimax risks for
+uniform-marginal sampling without replacement are those of
+Table~\ref{tab:frontier}. At eight and twelve calls each balanced
+optimum is attained by a sampler with equal variance in every
+direction of the span of centered feasible block indicators.
+Appendix~\ref{app:budgets} gives a certificate applicable to any finite
+population and the explicit four-option samplers.
+
+At eight calls every option occupies each slot twice. Adding
+precedence requires four occurrences of each orientation. Adding
+adjacency requires two of every directed neighbor pair. Only 15
+blocks meet all three requirements. They are exactly the unions of
+two different Williams blocks from the six that partition the 24
+orders. Drawing two uniformly without replacement multiplies the
+four-call Williams MSE by $2/5$ on \emph{every} fixed panel.
+For precedence, pairing two disjoint four-call minimax blocks uniformly
+has worst-case ratio $3/14$. Optimizing the eight-call design gives
+$2/11$. The difference can therefore matter at equal inference cost.
+
+There is also an exact test of which eight-call design wins on a fixed
+panel. Let $E_P$ be the summed squared length of item profiles after
+orthogonal projection away from the constant, position and precedence
+features. Let $E_W$ be the summed squared length retained by replacing
+each centered item profile with its within-Williams-block means.
+These subspaces have dimensions 11 and five, respectively, with the
+second contained in the first. The eight-call MSEs are
+$(2/11)E_P/(24N^2)$ and $(2/5)E_W/(24N^2)$. Thus adjacency improves
+on precedence exactly when
+\begin{equation}
+ E_W/E_P < 5/11 \quad (45.45\%), \qquad E_P>0.
+ \label{eq:residual-threshold}
+\end{equation}
+If $E_P=0$ both risks vanish. The threshold uses full response
+profiles, making it a retrospective explanation of the ranking.
 
 \section{Why stronger balance helps on some panels}
 
@@ -337,6 +381,51 @@ earlier HellaSwag study gave a small point gain under different
 checkpoints, prompting, and item sampling. An independent integer
 replay of the new correctness profiles reproduced all five MSEs.
 
+\subsection{Doubling the budget on the same questions}
+\label{sec:eight-replay}
+We reanalyzed the three matched 3B panels at eight shared calls per
+model and question. The 2,976 questions, both checkpoints, prompt and
+24-order reference are identical across budgets. The samplers were
+chosen from the theory. Four-call results were known. We enumerated
+the new block laws exactly and independently recovered each item's
+eight-call balanced risks from its feature projections.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\caption{Effect of adjacency on the matched 3B panels. Gains are
+percent MSE reductions relative to the precedence optimum at the same
+budget. Brackets give eight-call panel-specific 95\% paired bootstrap
+intervals. The final column gives the residual share in
+Eq.~\eqref{eq:residual-threshold}.}
+\label{tab:eight}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Panel & Four & Eight [95\% interval] & $E_W/E_P$ \\
+\midrule
+HellaSwag & $-0.25$ & $-7.99\;[-11.21,-4.79]$ & $49.09\%$ \\
+MMLU & $-3.41$ & $-9.68\;[-13.07,-6.26]$ & $49.85\%$ \\
+LogiQA & $+2.32$ & $-1.69\;[-5.04,+1.64]$ & $46.22\%$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All three residual shares exceed $5/11$. LogiQA is closest to the
+threshold. Its point ranking reverses, and its eight-call interval spans
+zero (Table~\ref{tab:eight}). With the same paired resamples at both
+budgets, adjacency's relative gain falls by 4.01 percentage points
+on LogiQA (95\% interval for the change, $[-5.48,-2.55]$).
+Doubling the budget reduces precedence MSE by 61.58--62.87\% on
+the three panels. Both Williams sampling and unrestricted sampling
+give an exact 60\% reduction. Optimizing precedence directly for
+eight calls also reduces MSE by
+2.12--3.73\% across the matched panels versus uniformly pairing
+disjoint four-call precedence blocks. A rotation-and-reversal baseline
+has lower point MSE than optimized precedence on HellaSwag and higher
+MSE on MMLU and LogiQA. Appendix~\ref{app:eight-replay} reports these
+comparators, the separate 6,144-item sensitivity and interval details.
+
 \subsection{Frozen decision experiment}
 On 288 ARC-Challenge and 288 OpenBookQA items, we compared Qwen2.5
 1.5B Instruct with Granite 3.3 2B Instruct (Q4\_K\_M) under a
@@ -418,20 +507,21 @@ Option-order sensitivity is documented in language-model benchmarks
 evaluated on flip rates and pooled choices \citep{ok2026}, and a public
 proposal compares Williams and cyclic schedules in multiple-choice
 evaluation \citep{lacuna}. Our results concern the worst-case price of
-these constraints and the observed risk against the stronger
-precedence-minimax comparator. Appendix~\ref{app:other-panels}
+these constraints for a paired gap. \citet{khan2026} study cyclic
+and reversed rotations under weight quantization. We randomize their
+eight display orders over the labels and compare them at equal cost. Appendix~\ref{app:other-panels}
 records additional positive and negative evaluations.
 
 For a fixed question set, the results suggest an explicit choice.
 An evaluator who needs a guarantee over arbitrary order effects can
 sample either certified position template with its tabulated probability
 and relabel it. If independent evidence supports a particular order
-effect, a design that balances it removes that component exactly. The
-four-option decomposition explains why the same stronger balance helped
-on LogiQA and hurt on MMLU. A predictor of that ranking from low-budget
-observations remains open. Other open cases include sharpness of $L_n$
-above ten and the exact five-option correctness optimum with maximum
-adjacency. The measured benchmark effects condition on the frozen
+effect, a design that balances it removes that component exactly. At four options the optimal sampler depends on the available
+budget. At eight, the residual share explains the observed MSE ranking
+using all 24 orders. Predicting that share from a small calibration
+sample remains open. Other open cases include sharp multi-budget
+curves at five or more options, attainment of $L_n$ above ten, and the
+five-option correctness optimum with maximum adjacency. The measured benchmark effects condition on the frozen
 prompts, models and scoring rules.
 
 \section*{Impact Statement}
@@ -448,7 +538,7 @@ execution, analysis and drafting. A contextual bandit recorded candidate
 selection, costs and outcomes. Frozen protocols and independent
 numerical or exact replays checked selected results, including all frozen
 HellaSwag metrics and the follow-up finite-panel MSE. Two CPU replays
-verified the decomposition against block enumeration. Independent character calculations and exact block enumeration checked the theoretical certificates. Human author
+verified the decomposition against block enumeration. Independent character calculations and exact block enumeration checked the theoretical certificates. Exact feature projections checked the eight-call replay. Human author
 verification remains pending for this draft.
 
 \bibliography{references}

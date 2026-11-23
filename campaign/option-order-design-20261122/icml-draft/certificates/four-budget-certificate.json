@@ -1,0 +1,135 @@
+{
+  "balanced_budgets": {
+    "4": {
+      "unrestricted": "5/23",
+      "position": {
+        "risk": "1/2",
+        "admissible_blocks": 24,
+        "sampler_support": 18
+      },
+      "precedence": {
+        "risk": "3/4",
+        "admissible_blocks": 18,
+        "sampler_support": 12
+      },
+      "full": {
+        "risk": "1",
+        "admissible_blocks": 6,
+        "sampler_support": 6
+      }
+    },
+    "8": {
+      "unrestricted": "2/23",
+      "position": {
+        "risk": "1/7",
+        "admissible_blocks": 255,
+        "sampler_support": 42,
+        "frame_rank": 14
+      },
+      "precedence": {
+        "risk": "2/11",
+        "admissible_blocks": 99,
+        "sampler_support": 42,
+        "frame_rank": 11
+      },
+      "full": {
+        "risk": "2/5",
+        "admissible_blocks": 15,
+        "sampler_support": 15,
+        "frame_rank": 5
+      }
+    },
+    "12": {
+      "unrestricted": "1/23",
+      "position": {
+        "risk": "1/14",
+        "admissible_blocks": 640,
+        "sampler_support": 360,
+        "frame_rank": 14
+      },
+      "precedence": {
+        "risk": "1/11",
+        "admissible_blocks": 180,
+        "sampler_support": 92,
+        "frame_rank": 11
+      },
+      "full": {
+        "risk": "1/6",
+        "admissible_blocks": 22,
+        "sampler_support": 22,
+        "frame_rank": 6
+      }
+    },
+    "16": {
+      "unrestricted": "1/46",
+      "position": {
+        "risk": "1/28",
+        "admissible_blocks": 255,
+        "sampler_support": 42,
+        "frame_rank": 14
+      },
+      "precedence": {
+        "risk": "1/22",
+        "admissible_blocks": 99,
+        "sampler_support": 42,
+        "frame_rank": 11
+      },
+      "full": {
+        "risk": "1/10",
+        "admissible_blocks": 15,
+        "sampler_support": 15,
+        "frame_rank": 5
+      }
+    },
+    "20": {
+      "unrestricted": "1/115",
+      "position": {
+        "risk": "1/50",
+        "admissible_blocks": 24,
+        "sampler_support": 18
+      },
+      "precedence": {
+        "risk": "3/100",
+        "admissible_blocks": 18,
+        "sampler_support": 12
+      },
+      "full": {
+        "risk": "1/25",
+        "admissible_blocks": 6,
+        "sampler_support": 6
+      }
+    },
+    "24": {
+      "unrestricted": "0",
+      "position": {
+        "risk": "0",
+        "admissible_blocks": 1,
+        "sampler_support": 1
+      },
+      "precedence": {
+        "risk": "0",
+        "admissible_blocks": 1,
+        "sampler_support": 1
+      },
+      "full": {
+        "risk": "0",
+        "admissible_blocks": 1,
+        "sampler_support": 1
+      }
+    }
+  },
+  "uniform_disjoint_four_call_pairs_at_eight": {
+    "position": {
+      "support": 81,
+      "risk": "1/6"
+    },
+    "precedence": {
+      "support": 42,
+      "risk": "3/14"
+    },
+    "full": {
+      "support": 15,
+      "risk": "2/5"
+    }
+  }
+}
