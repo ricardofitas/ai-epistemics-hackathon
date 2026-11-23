@@ -1,0 +1,45 @@
+Four Orders near-tie decision confirmation, 23 November 2026
+Owner request: ricardofitas/rig-comm issue 1 comment 7105600256.
+
+Choose Qwen2.5-1.5B-Instruct versus Granite-3.3-2B-Instruct, Q4_K_M.
+In the opened first 288 SciQ and ARC-Easy items both model accuracies
+exceed chance on each complete 480-item panel; the first-288 gaps are
+4.86 and 3.18 percentage points. No selection on confirmation outcomes.
+Pin the physical RTX 4060 Ti, local llama.cpp b12631 transport and
+existing eight-slot native 512-token decoder. Require zero changes across
+two cold replays of 384 model/item/order choices before launching.
+
+Use ARC-Challenge validation and OpenBookQA main validation. Freeze all
+288 exact rows and fixture digests for each before GPU admission. ARC
+has 292 label-blind candidates. Equal panel size is the largest full
+eight-item shard count supported by the tighter panel. Deduplicate exact
+normalized stems within and across panels and against the opened SciQ,
+ARC-Easy, OpenBookQA test and historical ARC source metadata. Model
+training overlap is unknown. No reopening earlier reserved panels.
+For both panels use the standard zero-shot numeric prompt and all 24 orders
+per model. Use same independently sampled shared block for both models
+per item, independent blocks across items. Decision is whether Qwen leads
+by at least 5 percentage points, counting equality as a lead. Use the
+24-order paired accuracy gap as reference. Keep both panels even if far
+from the chosen boundary. Retain all checkpointed choices.
+
+Primary effect is precedence-minimax error probability minus Williams
+error probability, evaluated at the same four calls per model and item.
+An absolute improvement of more than 1 percentage point is practically
+meaningful, corresponding to one fewer incorrect decision per 100 repetitions.
+The opened 288-item development checks gave absolute gains of +0.040 and
+-0.008 percentage points with directional bootstrap ranges (-0.401, 0.583)
+and (-0.396, 0.322). These are sizing sensitivity checks, not guaranteed
+confirmation power. Reference classification can be unstable at the boundary.
+
+Use direct numerical convolution for the finite-panel probability and
+cross-check by FFT to 1e-9. For 4,000 paired bootstrap item resamples
+recompute the reference decision and both errors, with seeded FFT, and
+use percentile 2.5th/97.5th bounds. These are simultaneous directional
+bounds at 5% across two panels separately for each direction. Pass if
+both lower bounds exceed +0.01; rule out the joint practical claim if
+either upper bound falls below +0.01; otherwise inconclusive. Report when
+bootstrap reference decisions change. The tail convolution does not use
+Monte Carlo. Secondary baseline ordinary cyclic; all-design paired-gap
+MSE is secondary. Seal official answers until both GPU releases are
+complete; interrupted runs resume committed predictions or remain unscored.
