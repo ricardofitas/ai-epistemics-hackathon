@@ -1,0 +1,771 @@
+{
+  "hellaswag-bootstrap": {
+    "scope": "Retrospective item-stratified percentile sensitivity of released HellaSwag results.",
+    "unit": "5% practical margin per item, positive favors Williams by more than 5%",
+    "joint_alpha": 0.05,
+    "interval": "Bonferroni-adjusted percentile bootstrap with four paired comparisons",
+    "predictions_sha256": "d115fd39246fa6c660d521a889a292e78de031d02b31bfba94ad63bea71ff7df",
+    "source_items": 6144,
+    "resamples": 1000000,
+    "gpu": "NVIDIA GeForce RTX 4060 Ti",
+    "comparators": {
+      "all-balanced": {
+        "lower": -0.0012947930230034722,
+        "median": -0.0008293010570384837,
+        "upper": -0.0003675672743055555
+      },
+      "position-minimax": {
+        "lower": -0.0011217187952112266,
+        "median": -0.0006680806477864583,
+        "upper": -0.0002176778404800983
+      },
+      "precedence-minimax": {
+        "lower": -0.0014712157072844327,
+        "median": -0.001093306364836516,
+        "upper": -0.0007181096076965334
+      },
+      "ordinary-cyclic": {
+        "lower": -0.0006283088966652196,
+        "median": 0.00018190454553674776,
+        "upper": 0.000993277143549034
+      }
+    }
+  },
+  "avaliacao-sciq-test": {
+    "panel": "sciq-test",
+    "items": 480,
+    "source_sha256": "7f3312f6ac6b09970b32942d106a8c44ec0dad46a0369f17d635aff8e348a87c",
+    "roster_sha256": "b2b06c81f7d77a4ca0b5300bf4ad13f96ec18abf200a50795acd3fe288ae6b8b",
+    "models": [
+      "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+      "ibm-granite/granite-3.3-2b-instruct-GGUF"
+    ],
+    "accuracy": [
+      0.8357638888888889,
+      0.7934027777777778
+    ],
+    "decision": "inconclusive",
+    "margin_threshold": 0.05,
+    "bootstrap_resamples": 50000,
+    "comparators": {
+      "all-balanced": {
+        "relative_reduction": 0.05597014925373134,
+        "margin": 9.259259259259232e-05,
+        "bootstrap": [
+          -0.0010192441587094931,
+          0.0011877091019241858
+        ],
+        "normal": [
+          -0.0010198001586673156,
+          0.0012049853438525
+        ],
+        "hoeffding": [
+          -0.1416905033101903,
+          0.1418756884953755
+        ]
+      },
+      "position-minimax": {
+        "relative_reduction": 0.07410795974382445,
+        "margin": 0.00038122106481481427,
+        "bootstrap": [
+          -0.0007545810275607647,
+          0.0015263332790798603
+        ],
+        "normal": [
+          -0.0007653238643237342,
+          0.0015277659939533627
+        ],
+        "hoeffding": [
+          -0.1414018748379681,
+          0.1421643169675977
+        ]
+      },
+      "precedence-minimax": {
+        "relative_reduction": 0.01747572815533993,
+        "margin": -0.00048466435185185396,
+        "bootstrap": [
+          -0.0013634813096788214,
+          0.0003571686921296283
+        ],
+        "normal": [
+          -0.0013472721840459933,
+          0.0003779434803422854
+        ],
+        "hoeffding": [
+          -0.14226776025463475,
+          0.14129843155093105
+        ]
+      },
+      "ordinary-cyclic": {
+        "relative_reduction": 0.16981132075471705,
+        "margin": 0.0021129918981481464,
+        "bootstrap": [
+          -0.00020861025209780178,
+          0.004578993055555553
+        ],
+        "normal": [
+          -0.00029565349671317135,
+          0.004521637293009464
+        ],
+        "hoeffding": [
+          -0.13967010400463475,
+          0.14389608780093105
+        ]
+      }
+    },
+    "design_losses": {
+      "williams": 0.014641203703703703,
+      "all-balanced": 0.015509259259259259,
+      "position-minimax": 0.015813078703703704,
+      "precedence-minimax": 0.014901620370370372,
+      "ordinary-cyclic": 0.01763599537037037
+    }
+  },
+  "avaliacao-arc-easy": {
+    "panel": "arc-easy",
+    "items": 480,
+    "source_sha256": "4160597d618ae851c7eb04e281574f3f654776216ac6b6641588d64527b47177",
+    "roster_sha256": "78fd7e661d0fce18548bcea544f0d9a3cb608d43c0c8f8c66a16169d82a853a8",
+    "models": [
+      "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+      "ibm-granite/granite-3.3-2b-instruct-GGUF"
+    ],
+    "accuracy": [
+      0.7949652777777778,
+      0.7612847222222222
+    ],
+    "decision": "rule-out",
+    "margin_threshold": 0.05,
+    "bootstrap_resamples": 50000,
+    "comparators": {
+      "all-balanced": {
+        "relative_reduction": 0.018987341772152,
+        "margin": -0.0005671296296296306,
+        "bootstrap": [
+          -0.0017182097258391193,
+          0.0005762702094183993
+        ],
+        "normal": [
+          -0.0016986194274089465,
+          0.0005643601681496853
+        ],
+        "hoeffding": [
+          -0.14235022553241253,
+          0.14121596627315328
+        ]
+      },
+      "position-minimax": {
+        "relative_reduction": 0.029733959311424085,
+        "margin": -0.0003747106481481489,
+        "bootstrap": [
+          -0.0015490281846788207,
+          0.0008044919614438636
+        ],
+        "normal": [
+          -0.0015426104971369844,
+          0.0007931892008406864
+        ],
+        "hoeffding": [
+          -0.14215780655093105,
+          0.14140838525463476
+        ]
+      },
+      "precedence-minimax": {
+        "relative_reduction": -0.003642250101173694,
+        "margin": -0.0009588396990740758,
+        "bootstrap": [
+          -0.0018687619809751174,
+          -1.726729781539461e-05
+        ],
+        "normal": [
+          -0.001880036922532287,
+          -3.7642475615864784e-05
+        ],
+        "hoeffding": [
+          -0.14274193560185697,
+          0.14082425620370884
+        ]
+      },
+      "ordinary-cyclic": {
+        "relative_reduction": 0.09024211298606022,
+        "margin": 0.0007935474537037027,
+        "bootstrap": [
+          -0.0015452394838686362,
+          0.0032216649938512708
+        ],
+        "normal": [
+          -0.0015865140644144974,
+          0.0031736089718219025
+        ],
+        "hoeffding": [
+          -0.1409895484490792,
+          0.1425766433564866
+        ]
+      }
+    },
+    "design_losses": {
+      "williams": 0.017939814814814815,
+      "all-balanced": 0.01828703703703704,
+      "position-minimax": 0.018489583333333334,
+      "precedence-minimax": 0.017874710648148148,
+      "ordinary-cyclic": 0.019719328703703704
+    }
+  },
+  "avaliacao-diagnostico": {
+    "scope": "Descriptive fixed strata by model disagreement across 24 orders",
+    "panels": {
+      "sciq-test": {
+        "low": {
+          "items": 338,
+          "decision_and_contrasts": [
+            "inconclusive",
+            {
+              "all-balanced": {
+                "relative_reduction": 0.04747948417350534,
+                "margin": -2.2086620644313017e-05,
+                "bootstrap": [
+                  -0.0009133860972427689,
+                  0.0008324938491329691
+                ],
+                "normal": [
+                  -0.0008862659501087519,
+                  0.0008420927088201259
+                ],
+                "hoeffding": [
+                  -0.16898318483763117,
+                  0.16893901159634253
+                ]
+              },
+              "position-minimax": {
+                "relative_reduction": 0.06231967686093476,
+                "margin": 0.00010966263971071662,
+                "bootstrap": [
+                  -0.000786132812500001,
+                  0.0009677053798898738
+                ],
+                "normal": [
+                  -0.0007599156888218827,
+                  0.000979240968243316
+                ],
+                "hoeffding": [
+                  -0.16885143557727614,
+                  0.16907076085669756
+                ]
+              },
+              "precedence-minimax": {
+                "relative_reduction": 0.03903015966883483,
+                "margin": -9.52806541748851e-05,
+                "bootstrap": [
+                  -0.0007056209807486858,
+                  0.0005262265779092698
+                ],
+                "normal": [
+                  -0.0007107533912128557,
+                  0.0005201920828630854
+                ],
+                "hoeffding": [
+                  -0.16905637887116173,
+                  0.16886581756281197
+                ]
+              },
+              "ordinary-cyclic": {
+                "relative_reduction": 0.10566868464501922,
+                "margin": 0.0005195492274819195,
+                "bootstrap": [
+                  -0.0011735459427391526,
+                  0.0021992896968482892
+                ],
+                "normal": [
+                  -0.0011507388977653097,
+                  0.002189837352729149
+                ],
+                "hoeffding": [
+                  -0.16844154898950492,
+                  0.16948064744446878
+                ]
+              }
+            }
+          ]
+        },
+        "medium": {
+          "items": 127,
+          "decision_and_contrasts": [
+            "inconclusive",
+            {
+              "all-balanced": {
+                "relative_reduction": 0.08907216494845371,
+                "margin": 0.0012952482502187215,
+                "bootstrap": [
+                  -0.0019206668990594945,
+                  0.0044998983281386625
+                ],
+                "normal": [
+                  -0.0019201107002871315,
+                  0.004510607200724575
+                ],
+                "hoeffding": [
+                  -0.2743453687385754,
+                  0.2769358652390128
+                ]
+              },
+              "position-minimax": {
+                "relative_reduction": 0.10819539765845776,
+                "margin": 0.0019705544619422555,
+                "bootstrap": [
+                  -0.0014158917391185488,
+                  0.005369995864774714
+                ],
+                "normal": [
+                  -0.001436413293782785,
+                  0.0053775222176672965
+                ],
+                "hoeffding": [
+                  -0.27367006252685183,
+                  0.2776111714507364
+                ]
+              },
+              "precedence-minimax": {
+                "relative_reduction": 0.01865837405597537,
+                "margin": -0.0009644302274715673,
+                "bootstrap": [
+                  -0.0036458418771872303,
+                  0.001626066272965877
+                ],
+                "normal": [
+                  -0.0035981563898208994,
+                  0.001669295934877765
+                ],
+                "hoeffding": [
+                  -0.27660504721626566,
+                  0.27467618676132255
+                ]
+              },
+              "ordinary-cyclic": {
+                "relative_reduction": 0.2458176852167976,
+                "margin": 0.007840523840769902,
+                "bootstrap": [
+                  0.0005731174472331577,
+                  0.015652340332458436
+                ],
+                "normal": [
+                  0.0002704300361202009,
+                  0.015410617645419603
+                ],
+                "hoeffding": [
+                  -0.2678000931480242,
+                  0.283481140829564
+                ]
+              }
+            }
+          ]
+        },
+        "high": {
+          "items": 15,
+          "decision_and_contrasts": null
+        }
+      },
+      "arc-easy": {
+        "low": {
+          "items": 299,
+          "decision_and_contrasts": [
+            "inconclusive",
+            {
+              "all-balanced": {
+                "relative_reduction": 0.04716981132075482,
+                "margin": -3.1354515050167234e-05,
+                "bootstrap": [
+                  -0.0009737318840579723,
+                  0.0009857819612829784
+                ],
+                "normal": [
+                  -0.0010064970008735697,
+                  0.0009437879707732352
+                ],
+                "hoeffding": [
+                  -0.17967401557570753,
+                  0.17961130654560717
+                ]
+              },
+              "position-minimax": {
+                "relative_reduction": 0.04214963119072723,
+                "margin": -8.651523597175789e-05,
+                "bootstrap": [
+                  -0.001023523507176701,
+                  0.0008891091688730936
+                ],
+                "normal": [
+                  -0.001044956455708387,
+                  0.0008719259837648712
+                ],
+                "hoeffding": [
+                  -0.1797291762966291,
+                  0.1795561458246856
+                ]
+              },
+              "precedence-minimax": {
+                "relative_reduction": 0.009803921568627638,
+                "margin": -0.0004285117056856188,
+                "bootstrap": [
+                  -0.001167672624024527,
+                  0.0003196418617614272
+                ],
+                "normal": [
+                  -0.0011726456156666214,
+                  0.00031562220429538366
+                ],
+                "hoeffding": [
+                  -0.18007117276634296,
+                  0.17921414935497174
+                ]
+              },
+              "ordinary-cyclic": {
+                "relative_reduction": 0.1008902077151338,
+                "margin": 0.0005974777034559633,
+                "bootstrap": [
+                  -0.001087103496028429,
+                  0.0023849790098940888
+                ],
+                "normal": [
+                  -0.0011373217596853972,
+                  0.002332277166597324
+                ],
+                "hoeffding": [
+                  -0.17904518335720138,
+                  0.18024013876411332
+                ]
+              }
+            }
+          ]
+        },
+        "medium": {
+          "items": 169,
+          "decision_and_contrasts": [
+            "inconclusive",
+            {
+              "all-balanced": {
+                "relative_reduction": -0.0010067114093958995,
+                "margin": -0.0015614727153188705,
+                "bootstrap": [
+                  -0.004211620002260026,
+                  0.0010917500051364209
+                ],
+                "normal": [
+                  -0.0042321520401025405,
+                  0.0011092066094647991
+                ],
+                "hoeffding": [
+                  -0.2405085493272342,
+                  0.23738560389659646
+                ]
+              },
+              "position-minimax": {
+                "relative_reduction": 0.02100426649163112,
+                "margin": -0.0009076060157790941,
+                "bootstrap": [
+                  -0.003670513847797503,
+                  0.0019058795354618629
+                ],
+                "normal": [
+                  -0.003717551239968038,
+                  0.0019023392084098496
+                ],
+                "hoeffding": [
+                  -0.23985468262769444,
+                  0.23803947059613623
+                ]
+              },
+              "precedence-minimax": {
+                "relative_reduction": -0.01221581269087224,
+                "margin": -0.0018835264628533873,
+                "bootstrap": [
+                  -0.004074223886423405,
+                  0.00032539563301281927
+                ],
+                "normal": [
+                  -0.004096063433838747,
+                  0.0003290105081319723
+                ],
+                "hoeffding": [
+                  -0.24083060307476872,
+                  0.23706355014906194
+                ]
+              },
+              "ordinary-cyclic": {
+                "relative_reduction": 0.08130582075762238,
+                "margin": 0.0010442348783694922,
+                "bootstrap": [
+                  -0.004770196416831033,
+                  0.007145285020134777
+                ],
+                "normal": [
+                  -0.004903381692819761,
+                  0.006991851449558746
+                ],
+                "hoeffding": [
+                  -0.23790284173354584,
+                  0.23999131149028483
+                ]
+              }
+            }
+          ]
+        },
+        "high": {
+          "items": 12,
+          "decision_and_contrasts": null
+        }
+      }
+    }
+  },
+  "metaxfam-sensibilidade": {
+    "scope": "Exact empirical family resampling of five opened development families. Descriptive only.",
+    "source_sha256": "34734815769a7e9cba8784a1d2a355a03be712ac5365f38af7dc0a9a9202c65c",
+    "gpu": "NVIDIA GeForce RTX 4060 Ti",
+    "families": [
+      "circle_rich",
+      "cross_aniso",
+      "diag_lattice_rich",
+      "honeycomb",
+      "star6_hole"
+    ],
+    "ordered_resamples": 3125,
+    "observed_gain_vs_strongest_affordable_arm": 0.13166677112727743,
+    "observed_historical_total_cost_ratio": 0.7941839596515223,
+    "historical_total_cost_gate_passed": false,
+    "share_at_or_above_3_percent_gain": 0.92128,
+    "minimum_gain": -0.061718565965896754,
+    "maximum_gain": 0.3075775944315239,
+    "leave_one_family_out_gains": {
+      "circle_rich": 0.146662345426406,
+      "cross_aniso": 0.09572005351748103,
+      "diag_lattice_rich": 0.20530212138227244,
+      "honeycomb": 0.08695009958995448,
+      "star6_hole": 0.12730631761660904
+    }
+  },
+  "materiais-metaxfam-joint": {
+    "scope": "Previously unused specimens from the five development families",
+    "status": "fail",
+    "gates": {
+      "same_clock_cost": true,
+      "four_phase_noninferiority": false,
+      "gain_and_family_wins": true,
+      "equal_count_comparator": true,
+      "uncapped": true
+    },
+    "families": [
+      "circle_rich",
+      "cross_aniso",
+      "diag_lattice_rich",
+      "honeycomb",
+      "star6_hole"
+    ],
+    "episodes": 10,
+    "scored_query_specimens": 120,
+    "cost_scope": "Acquisition CPU during this run, excluding source calibration and query scoring",
+    "median_paired_total_cpu_ratio": 0.5998518398831632,
+    "paired_cost_ratio_by_family": {
+      "circle_rich": 0.5766058889461629,
+      "cross_aniso": 0.5998518398831632,
+      "diag_lattice_rich": 0.5985090783776952,
+      "honeycomb": 0.6173348690850697,
+      "star6_hole": 0.5993382010688377
+    },
+    "canonical_macro": {
+      "unit": {
+        "vector": 0.14335077574921265,
+        "anisotropic": 0.09955352657397862
+      },
+      "scalar": {
+        "vector": 0.1428936385745158,
+        "anisotropic": 0.09940535910110121
+      },
+      "fixed_split": {
+        "vector": 0.14250097690734925,
+        "anisotropic": 0.09929791620889852
+      },
+      "scalar_updated": {
+        "vector": 0.14325415800410946,
+        "anisotropic": 0.09907676784426311
+      },
+      "candidate": {
+        "vector": 0.14360466190357585,
+        "anisotropic": 0.09926740467020564
+      },
+      "target_4": {
+        "vector": 0.28043020636092936,
+        "anisotropic": 0.1316610019935231
+      },
+      "volume_4": {
+        "vector": 0.30093508577812367,
+        "anisotropic": 0.15648498405672887
+      },
+      "donor_plus_4": {
+        "vector": 0.16779491651652068,
+        "anisotropic": 0.10687806862332958
+      },
+      "target_8": {
+        "vector": 0.18835838475010297,
+        "anisotropic": 0.12863276627900902
+      },
+      "volume_8": {
+        "vector": 0.2788525925654759,
+        "anisotropic": 0.16755303121604131
+      },
+      "donor_plus_8": {
+        "vector": 0.1488778681954922,
+        "anisotropic": 0.1115314039806545
+      },
+      "target_12": {
+        "vector": 0.1686192910779452,
+        "anisotropic": 0.12066038463850952
+      },
+      "volume_12": {
+        "vector": 0.2741181767715686,
+        "anisotropic": 0.16333929716801684
+      },
+      "donor_plus_12": {
+        "vector": 0.14140701482948703,
+        "anisotropic": 0.1043044166092653
+      },
+      "target_affordable": {
+        "vector": 0.24194103220920393,
+        "anisotropic": 0.12719742591654287
+      },
+      "volume_affordable": {
+        "vector": 0.2898798034191772,
+        "anisotropic": 0.15602313666527393
+      },
+      "donor_plus_affordable": {
+        "vector": 0.15647332944213263,
+        "anisotropic": 0.09905156992611848
+      }
+    },
+    "four_phase_macro": {
+      "unit": {
+        "vector": 0.1418647302306803,
+        "anisotropic": 0.09970555158185765
+      },
+      "scalar": {
+        "vector": 0.141157852345056,
+        "anisotropic": 0.09948856055948133
+      },
+      "fixed_split": {
+        "vector": 0.14080142791081757,
+        "anisotropic": 0.09937494797111517
+      },
+      "scalar_updated": {
+        "vector": 0.1416023772287398,
+        "anisotropic": 0.09920289435092917
+      },
+      "candidate": {
+        "vector": 0.1421532700671468,
+        "anisotropic": 0.09957902789037187
+      },
+      "target_4": {
+        "vector": 0.28043020636092936,
+        "anisotropic": 0.1316610019935231
+      },
+      "volume_4": {
+        "vector": 0.30093508577812367,
+        "anisotropic": 0.15648498405672887
+      },
+      "donor_plus_4": {
+        "vector": 0.16779491651652068,
+        "anisotropic": 0.10687806862332958
+      },
+      "target_8": {
+        "vector": 0.18835838475010297,
+        "anisotropic": 0.12863276627900902
+      },
+      "volume_8": {
+        "vector": 0.2788525925654759,
+        "anisotropic": 0.16755303121604131
+      },
+      "donor_plus_8": {
+        "vector": 0.1488778681954922,
+        "anisotropic": 0.1115314039806545
+      },
+      "target_12": {
+        "vector": 0.1686192910779452,
+        "anisotropic": 0.12066038463850952
+      },
+      "volume_12": {
+        "vector": 0.2741181767715686,
+        "anisotropic": 0.16333929716801684
+      },
+      "donor_plus_12": {
+        "vector": 0.14140701482948703,
+        "anisotropic": 0.1043044166092653
+      },
+      "target_affordable": {
+        "vector": 0.18302905868558123,
+        "anisotropic": 0.12763867292524922
+      },
+      "volume_affordable": {
+        "vector": 0.27603942043452323,
+        "anisotropic": 0.1603782266692556
+      },
+      "donor_plus_affordable": {
+        "vector": 0.14776559371352124,
+        "anisotropic": 0.11015594924291013
+      }
+    },
+    "best_canonical_affordable_high_only": "donor_plus_affordable",
+    "relative_gain": 0.08224192317270218,
+    "family_wins": 4,
+    "descriptive_family_resamples": 3125,
+    "descriptive_share_at_or_above_three_percent": 0.88128,
+    "numeric_confirmation_reads": 0,
+    "query_coarse_solves": 0,
+    "forecast_sha256": "f569ddd492600946ac7aa78caa518ae406ac0ff5ca7413e80fdeffe60c6e4277",
+    "source_calibration_cpu": {
+      "canonical": 0.4231261539999987,
+      "four_phase": 1.601722789999999
+    }
+  },
+  "materiais-metaxfam-diagnostico": {
+    "scope": "Development sensitivity with one family omitted at a time, without promotion",
+    "failed_gates": [
+      "four_phase_noninferiority"
+    ],
+    "full_sample_best_affordable": "donor_plus_affordable",
+    "leave_one_family_out": {
+      "circle_rich": {
+        "matched_gain": 0.08091294352253875,
+        "cost_ratio": 0.6049638508224966,
+        "strongest_affordable_comparator": "donor_plus_affordable"
+      },
+      "cross_aniso": {
+        "matched_gain": 0.049195822429519476,
+        "cost_ratio": 0.5985090783776952,
+        "strongest_affordable_comparator": "donor_plus_affordable"
+      },
+      "diag_lattice_rich": {
+        "matched_gain": 0.16952166910180666,
+        "cost_ratio": 0.5998518398831632,
+        "strongest_affordable_comparator": "donor_plus_affordable"
+      },
+      "honeycomb": {
+        "matched_gain": 0.06564508609745467,
+        "cost_ratio": 0.5933970674383616,
+        "strongest_affordable_comparator": "donor_plus_affordable"
+      },
+      "star6_hole": {
+        "matched_gain": 0.07911927438077992,
+        "cost_ratio": 0.5998518398831632,
+        "strongest_affordable_comparator": "donor_plus_affordable"
+      }
+    },
+    "anchor_vector_error": {
+      "target_4": 0.28043020636092936,
+      "volume_4": 0.30093508577812367,
+      "donor_plus_4": 0.16779491651652068,
+      "target_8": 0.18835838475010297,
+      "volume_8": 0.2788525925654759,
+      "donor_plus_8": 0.1488778681954922,
+      "target_12": 0.1686192910779452,
+      "volume_12": 0.2741181767715686,
+      "donor_plus_12": 0.14140701482948703
+    }
+  }
+}
