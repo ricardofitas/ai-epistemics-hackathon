@@ -1,0 +1,85 @@
+{
+  "pilot": {
+    "scope": "Development only; no holdout outcomes opened",
+    "run_id": "gh-20261123-four-orders-3b-pilot-1",
+    "gpu_uuid": "GPU-91740225-aba6-c2cf-8213-e20452261587",
+    "models": {
+      "qwen": [
+        "qwen2.5-3b-instruct-q4_k_m.gguf",
+        "7dabda4d13d513e3e842b20f0d435c732f172cbe",
+        "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d"
+      ],
+      "smol": [
+        "SmolLM3-Q4_K_M.gguf",
+        "4965cb60b150737b68a0408c36aeefb65078f894",
+        "8334b850b7bd46238c16b0c550df2138f0889bf433809008cc17a8b05761863e"
+      ]
+    },
+    "panels": {
+      "sciq-test-standard": {
+        "items": 32,
+        "cells": 1536,
+        "accuracy": {
+          "qwen": 0.8580729166666666,
+          "smol": 0.3125
+        }
+      },
+      "sciq-test-direct": {
+        "items": 32,
+        "cells": 1536,
+        "accuracy": {
+          "qwen": 0.8606770833333334,
+          "smol": 0.3684895833333333
+        }
+      },
+      "arc-easy-standard": {
+        "items": 32,
+        "cells": 1536,
+        "accuracy": {
+          "qwen": 0.9674479166666666,
+          "smol": 0.3841145833333333
+        }
+      },
+      "arc-easy-direct": {
+        "items": 32,
+        "cells": 1536,
+        "accuracy": {
+          "qwen": 0.9739583333333334,
+          "smol": 0.3984375
+        }
+      }
+    }
+  },
+  "replay": {
+    "scope": "Development only; no holdout outcomes opened",
+    "run_id": "gh-20261123-four-orders-3b-replay-1",
+    "gpu_uuid": "GPU-de2ab91b-fae3-046f-210e-e2d7278d406b",
+    "models": {
+      "qwen": [
+        "qwen2.5-3b-instruct-q4_k_m.gguf",
+        "7dabda4d13d513e3e842b20f0d435c732f172cbe",
+        "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d"
+      ],
+      "smol": [
+        "SmolLM3-Q4_K_M.gguf",
+        "4965cb60b150737b68a0408c36aeefb65078f894",
+        "8334b850b7bd46238c16b0c550df2138f0889bf433809008cc17a8b05761863e"
+      ]
+    },
+    "panels": {
+      "sciq-test-standard": {
+        "items": 8,
+        "cells": 384,
+        "accuracy": {
+          "qwen": 0.8125,
+          "smol": 0.28125
+        },
+        "cross_gpu_choice_differences": {
+          "qwen": 4,
+          "smol": 14
+        }
+      }
+    }
+  },
+  "interpretation": "Engineering qualification on previously opened development items. Cross-GPU prediction parity did not hold on the 8-item SciQ replay: 4 Qwen and 14 SmolLM3 differences out of 192 choices per model. Keep confirmation sealed and pin one physical GPU pending within-GPU repeatability and transport checks."
+}
