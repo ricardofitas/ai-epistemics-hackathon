@@ -1,0 +1,57 @@
+{
+  "designs": {
+    "position-minimax": {
+      "mse": 0.0001014796127507716,
+      "exact_mse": "67337/663552000",
+      "support": 1200,
+      "mean_adjacency": 12.7
+    },
+    "maximum-adjacency": {
+      "mse": 0.0001001690703968943,
+      "exact_mse": "66467387/663552000000",
+      "support": 216,
+      "mean_adjacency": 15.0
+    },
+    "ordinary-cyclic": {
+      "mse": 0.00010851447964891976,
+      "exact_mse": "14401/132710400",
+      "support": 24,
+      "mean_adjacency": 5.0
+    },
+    "uniform-position": {
+      "mse": 0.00010148736324680335,
+      "exact_mse": "94279/928972800",
+      "support": 1344,
+      "mean_adjacency": 12.678571428571429
+    }
+  },
+  "relative_gain": 0.01291434129824609,
+  "paired_bootstrap_95": [
+    -0.0013820000184377507,
+    0.02747459376944283
+  ],
+  "practical_margin": 0.05,
+  "practical_decision": "excludes",
+  "run_id": "icml-commonsenseqa-five-orders-20261123-1",
+  "study": "9a00f9bf768c724b87b1629dbe3a8bdd17be69c25054c7b5977196024aac4b07",
+  "synthetic_choices_verified_per_model": {
+    "qwen": 120,
+    "smol": 120
+  },
+  "label_columns_read": 0,
+  "reference_calls": 46080,
+  "questions": 192,
+  "deploy_calls_per_design": 1920,
+  "prediction_checkpoints": 48,
+  "device": "RTX 4060 Ti",
+  "source_sha256": "bdbd9bf9cc4d2349b24901038b2ab2f58e10e4e507ad2fd425dca55cd3cb6660",
+  "roster_sha256": "e0b2f422a0f321f58c803c9c4df5b14a5176579ca5b916bf5c6c3ef9b22ea1bf",
+  "reference_gap": 0.37118055555555557,
+  "accuracy_by_model": {
+    "qwen": 0.6196614583333333,
+    "smol": 0.2484809027777778
+  },
+  "started_utc": "2026-11-23T21:15:20.943056+00:00",
+  "released_utc": "2026-11-23T21:35:19.469627+00:00",
+  "boinc_mode_restored": true
+}

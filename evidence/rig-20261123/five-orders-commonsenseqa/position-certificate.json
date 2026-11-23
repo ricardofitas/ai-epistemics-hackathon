@@ -1,0 +1,40 @@
+{
+  "order_count": 120,
+  "blocks_with_identity": 56,
+  "position_balanced_blocks": 1344,
+  "reduced_block_counts_by_number_of_odd_rows": {
+    "0": 6,
+    "1": 40,
+    "4": 10
+  },
+  "base_block": [
+    "01234",
+    "12340",
+    "24013",
+    "30421",
+    "43102"
+  ],
+  "covariance_annihilator_roots": [
+    "0",
+    "17/125",
+    "4/25",
+    "33/125",
+    "7/25",
+    "9/25"
+  ],
+  "normalized_minimax_risk": "9/25",
+  "uniform_position_balanced_worst_risk": "3/7",
+  "uniform_covariance_annihilator_roots": [
+    "0",
+    "1/7",
+    "9/35",
+    "2/7",
+    "3/7"
+  ],
+  "maximum_directed_adjacency_coverage": [
+    15,
+    20
+  ],
+  "ordinary_cyclic_worst_risk": "1",
+  "benchmark_scores_opened": false
+}
