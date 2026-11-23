@@ -1,0 +1,73 @@
+{
+  "small_supports": {
+    "4": {
+      "reduced_latin": 4,
+      "maximum_coverage": 12,
+      "reduced_maximum_blocks": 1,
+      "subgroup_order": 4,
+      "components": 6
+    },
+    "5": {
+      "reduced_latin": 56,
+      "maximum_coverage": 15,
+      "reduced_maximum_blocks": 9,
+      "subgroup_order": 120,
+      "components": 1
+    },
+    "6": {
+      "reduced_latin": 9408,
+      "maximum_coverage": 30,
+      "reduced_maximum_blocks": 2,
+      "subgroup_order": 24,
+      "components": 30
+    }
+  },
+  "five_options": {
+    "weights": [
+      "1/45",
+      "4/9",
+      "8/15"
+    ],
+    "risk_by_witness_and_orbit": [
+      [
+        "9/25",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "59/125",
+        "1/5",
+        "3/5",
+        "1/5",
+        "3/5"
+      ],
+      [
+        "7/15",
+        "2/3",
+        "1/3",
+        "2/3",
+        "1/3"
+      ]
+    ],
+    "correctness_lower": "7/15"
+  },
+  "larger_adjacency": {
+    "8": {
+      "catalogue_reduced_blocks": 12,
+      "correctness_lower": "69/280",
+      "connected_upper_strictly_below_one": true
+    },
+    "9": {
+      "catalogue_reduced_blocks": 12,
+      "correctness_lower": "43/243",
+      "connected_upper_strictly_below_one": true
+    },
+    "10": {
+      "catalogue_reduced_blocks": 492,
+      "correctness_lower": "12427/99080",
+      "connected_upper_strictly_below_one": true
+    }
+  }
+}

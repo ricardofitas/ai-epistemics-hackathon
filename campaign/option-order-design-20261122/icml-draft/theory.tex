@@ -1,0 +1,164 @@
+\section{The cost of exact balance}
+\label{sec:theory}
+A block is \emph{position-balanced} if each option appears in each slot
+once. Writing its orders as rows gives a Latin square. For a single item
+with nonconstant profile $d$, divide the variance of the block mean
+by the population variance $v(d)$ across all $n!$ orders. Denote the
+ratio by $R_D(d)$ for design $D$. A ratio of one is the variance of
+evaluating one uniform order. The minimax risk is the smallest attainable
+supremum of $R_D(d)$ over the indicated class of profiles. A correctness
+difference can take any values in $\{-1,0,1\}$ by assigning the two
+models suitable binary outcomes at each order.
+
+\paragraph{Theorem 1 (position balance).}
+For every $n\ge4$, every position-balanced design with uniform order
+marginals has a correctness difference, depending on the displayed
+positions of just two options, whose normalized risk is at least
+\begin{equation}
+ L_n=\frac{n-2}{n^2-3n+1}.
+ \label{eq:two-option}
+\end{equation}
+This exceeds the unrestricted optimum $(n!-n)/(n(n!-1))$ for the same
+budget. For each $6\le n\le10$ there is a design whose risk is at most
+$L_n$ for \emph{every real profile}. Hence $L_n$ is the exact minimax
+risk in these five regimes for either contrast class.
+
+\emph{Proof idea.} Fix two semantic options. Their ordered pair of slots
+has $m=n(n-1)$ possible values. A balanced block visits $n$ of them,
+with each slot used once by each option. Subtract the uniform dyad
+weights from the empirical weights and call the result $e$.
+Its row and column sums vanish, leaving $d_0=n^2-3n+1$ dimensions.
+Every block has $m\|e\|^2=n-2$. Thus the covariance on this space has
+a fixed trace, and its largest eigenvalue is at least its average
+eigenvalue $L_n$ after normalization. For correctness profiles,
+an alternating signed four-cycle on slots and an oriented triangle
+give two ternary contrasts. Relabeling their slots and mixing them
+in proportion to the dimensions of the symmetric and skew-symmetric
+subspaces makes their average normalized risk exactly $L_n$.
+At least one realizes the lower bound or more. The upper certificates
+use two Latin squares at each $n$ and bound the full permutation
+spectrum (Appendix~\ref{app:general-position}).
+
+\paragraph{A strict-cost test for correctness.}
+Take two distinct rows uniformly from a sampled block and let $t$ be the
+expected number of two-cycles in their relative permutation. A two-cycle
+means that two options have swapped slots. Write $s=n(n-3)/2$,
+$a=(n-1)(n-2)/2$. The same two ternary witnesses give
+\begin{equation}
+ \sup_d R_D(d)\ \ge\ \frac1n+\frac{n-1}{n}
+       \max\!\left\{\frac{t}{s},\frac{1-t}{a}\right\}.
+ \label{eq:swaps}
+\end{equation}
+The right side equals $L_n$ only at $t=s/(s+a)$. If all blocks
+admitted by an extra rule have swap averages strictly on one side
+of this target, and position balance attains $L_n$, the rule
+strictly increases correctness minimax risk. This test needs only
+pairs of rows. At four options the two Latin types have $t=2/3$
+and $2$, giving the sharp position lower bound $1/2$. At six,
+every row-complete block has $t=3/5$, already certifying a strict
+increase over $4/19$ before computing the exact cost below.
+
+For real scores the same proof tests additional balance requirements.
+If every block integrates $r$ extra functions of these two slots that
+are linearly independent modulo row and column effects, its covariance
+has at most $d_0-r$ remaining dimensions. Its normalized worst-case
+risk is at least $(n-2)/(d_0-r)$ when $r<d_0$.
+Whenever position balance attains $L_n$, every such restriction with
+$r>0$ has a strictly positive cost. The direction of the effect on a
+particular pair of models depends on its response profile.
+
+\begin{table}[t]
+\centering
+\caption{Normalized minimax variance for differences of correctness.
+Each model gets $n$ calls. The last column requires every directed
+adjacency once per block, except at five options, where 15 of 20
+is the maximum. Brackets give certified bounds.}
+\label{tab:all-n}
+\small
+\begin{tabular}{rcc}
+\toprule
+Options & Position balance & With adjacency \\
+\midrule
+4 & $1/2$ & $1$ \\
+5 & $9/25$ & $[7/15,\;0.47087]$ \\
+6 & $4/19$ & $1$ \\
+7 & $5/29$ & full coverage infeasible \\
+8 & $6/41$ & $[69/280,\;1)$ \\
+9 & $7/55$ & $[43/243,\;1)$ \\
+10 & $8/71$ & $[1/8,\;1)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{When full adjacency costs all variance reduction}
+\label{sec:connectivity}
+Call a position-balanced block \emph{row-complete} if every ordered
+pair of distinct options is consecutive in some row. There are
+$n(n-1)$ adjacencies available across $n$ rows, so each must occur
+exactly once. Row-complete Latin squares are classical
+\citep{williams1949,wanlesscatalogue}. We use the orders that
+can be sampled together to decide their risk.
+
+\paragraph{Theorem 2 (connectivity).}
+Let an allowed family of $k$-order blocks on $S_n$ be nonempty and
+closed under relabeling the options. Connect two orders if they
+occur together in an allowed block. The minimax risk equals one
+if and only if this graph is disconnected, for real profiles and
+for correctness differences. If it is disconnected, every feasible
+unbiased design has worst-case risk one. The components are the left
+cosets of the subgroup generated by rows of allowed blocks normalized
+to contain the identity (Appendix~\ref{app:connectivity}).
+
+\emph{Proof idea.} Draw a block and then a uniform row in it. The row
+is uniform over all orders. The variance of its score is the variance of
+the block mean plus the expected within-block variance. On a disconnected
+graph, the indicator of a component is constant on every allowed
+block. All its variance survives. On a connected graph, the uniform
+law on allowed blocks is unbiased, and every nonconstant profile varies
+within some block. Compactness on the centered unit sphere gives a
+strict bound below one.
+
+With six options, exactly two of the 9,408 reduced Latin squares are
+row-complete. Their rows generate a subgroup of size 24,
+splitting the 720 orders into 30 components. For a concrete witness,
+take the indicator that two designated options occupy opposite slots
+(first and last, second and fifth, or third and fourth). Every row of
+a row-complete block gives the same answer. This indicator has mean
+$1/5$, and all of its variance survives the six calls. Requiring adjacency raises
+the optimum from $4/19$ to $1$, a factor of $4.75$.
+At four options there are six components. At eight, two valid squares
+already generate all of $S_8$. At nine, one suffices. Connectivity
+allows variance reduction in these larger designs, although the
+worst-case cost of adjacency remains strictly positive
+(Table~\ref{tab:all-n}).
+
+\paragraph{Quantifying a partial loss.}
+For a set $A$ of orders, put $p=|A|/n!$ and $s_B=|A\cap B|$.
+The same variance identity gives the exact risk of its indicator,
+\begin{equation}
+ R_D(\mathbf1_A)=1-
+ \frac{\mathbb E_D[s_B(k-s_B)]}{k^2 p(1-p)},\qquad 0<p<1 .
+ \label{eq:cut}
+\end{equation}
+More generally, average the normalized risks of several feasible
+contrasts. If this average exceeds a reference risk on every
+option-relabeling orbit of eligible blocks, every design has a
+worst-case risk above the reference. Relabeling an arbitrary design
+can only decrease its worst-case risk. This gives a quantitative
+test even when the co-occurrence graph is connected.
+
+At five options position balance alone has sharp risk $9/25$ for
+both contrast classes. The permutation-sign contrast has block mean of
+magnitude at least $3/5$ in every Latin block, and one doubly relabeled
+template attains the lower bound. At maximum coverage, three ternary
+contrasts with weights $1/45$, $4/9$,
+and $8/15$ give the same weighted risk $7/15$ on \emph{each} of the
+five maximum-coverage orbits (Appendix~\ref{app:five-certificates}).
+Thus the relative cost over $9/25$ is at least $8/27$ (about $29.6\%$).
+The certified upper bound $0.47087$ leaves less than $0.00421$
+between bounds. For unrestricted real scores the interval is
+$[0.47084,0.47087]$. The exact optimum for correctness at five remains
+open. At eight through ten, witnesses depending on only two options
+already separate row completeness from the position optimum.
+Appendix~\ref{app:connectivity} gives their construction and the
+catalogue inputs.

@@ -1,0 +1,34 @@
+{
+  "HellaSwag": {
+    "items": 6144,
+    "adjacency": 0.011817932128906247,
+    "residual": -0.012594858805338541,
+    "interaction": 0.001109229193793404,
+    "net": 0.0003323025173611111,
+    "relative_mse_reduction": 0.011655681649239307
+  },
+  "MMLU validation (3B)": {
+    "items": 992,
+    "adjacency": 0.008135395665322577,
+    "residual": -0.009209089381720431,
+    "interaction": 0.0003911500336021514,
+    "net": -0.000682543682795699,
+    "relative_mse_reduction": -0.034093889325990036
+  },
+  "LogiQA 2.0 (3B)": {
+    "items": 992,
+    "adjacency": 0.008774624075940858,
+    "residual": -0.008643365675403228,
+    "interaction": 0.0003307711693548397,
+    "net": 0.00046202956989247314,
+    "relative_mse_reduction": 0.023182297154899896
+  },
+  "HellaSwag (3B)": {
+    "adjacency": 0.00872605846774193,
+    "residual": -0.009479481686827957,
+    "interaction": 0.0007009198588709725,
+    "net": -5.2503360215053825e-05,
+    "items": 992,
+    "relative_mse_reduction": -0.0024511806520139956
+  }
+}

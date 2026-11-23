@@ -1,0 +1,460 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\ifdefined\icmlreviewbuild
+  \usepackage{icml2027}
+\else
+  \usepackage[preprint]{icml2027}
+\fi
+\icmltitlerunning{The Cost of Balance in Order-Sampled Model Comparisons}
+
+\begin{document}
+\twocolumn[
+\icmltitle{The Cost of Balance in Order-Sampled Model Comparisons}
+\begin{icmlauthorlist}
+\icmlauthor{Anonymous Authors}{anon}
+\end{icmlauthorlist}
+\icmlaffiliation{anon}{Affiliations withheld in this draft}
+\icmlcorrespondingauthor{Project maintainers}{\href{https://github.com/ricardofitas/ai-epistemics-hackathon}{project repository}}
+\icmlkeywords{machine learning evaluation, permutation sampling, minimax variance, experimental design}
+\vskip 0.3in
+]
+\printAffiliationsAndNotice{}
+
+\begin{abstract}
+Estimating an accuracy gap averaged over answer orders requires choosing
+which permutations two models see. With $n$ options and $n$ shared
+orders, displaying each option once in every slot guarantees coverage
+of positions. We prove that some binary-correctness difference incurs
+at least $(n-2)/(n^2-3n+1)$ times its full-order variance for every
+$n\ge4$. Explicit samplers attain this bound for $n=6$ through $10$.
+A second theorem characterizes when additional constraints retain
+the entire variance of a single order. Covering every directed
+adjacency does so at four and six options. At six, every row in a
+block preserves the same pairs of opposite options. At five, maximum
+attainable adjacency raises worst-case risk by at least $29.6\%$.
+Full-order evaluations locate the practical trade-off. With the same
+3B models, prompt and four-call budget, Williams sampling improves
+on precedence minimax on LogiQA, loses on MMLU, and is near a tie on
+HellaSwag. Decomposing the variance isolates the contribution of
+adjacency, the residual cost, and their interaction on each panel.
+\end{abstract}
+
+\section{Paired comparisons under an order budget}
+An evaluator can spend six calls on one question so that every option
+appears in every position and every ordered pair of options appears
+consecutively. Those six orders can still agree perfectly on whether
+two particular answers sit at opposite ends or in other mirrored slots.
+If the correctness difference depends only on that relation, its
+six-call mean has the same variance as a single uniform draw. We ask which
+evaluation designs admit this failure and what precision can be
+guaranteed with the same budget.
+
+For each of $N$ questions, hold the wording, semantic options and
+answer key fixed. Let $d_i(\pi)$ be model A's correctness minus model
+B's correctness at display order $\pi$. The answer label moves with
+the correct option. The target is the all-order accuracy gap
+\[
+ \Delta=N^{-1}\sum_{i=1}^N\mu_i,\qquad
+ \mu_i=(n!)^{-1}\sum_{\pi\in S_n}d_i(\pi).
+\]
+Each question receives an independently sampled block of $n$ distinct
+orders with equal weights, shared by the models. An order has inclusion
+probability $n/(n!)$, so the mean is unbiased. The reference uses all
+orders to evaluate what would happen under each $n$-call design.
+
+Exact balance integrates specified features without sampling error.
+It also restricts which orders can be observed together. We give a
+general lower bound with explicit optimal samplers and a connectivity
+criterion for the largest possible loss from these restrictions.
+At five options we bound the cost even though full adjacency is
+infeasible. The fixed-budget statements concern arbitrary order
+profiles. The experiments measure where actual profiles place their
+variance and explain the sign changes between benchmarks.
+
+\input{theory.tex}
+
+\section{Four-call designs and benchmark risk}
+For the generator below, encode an order by the map from original option to display position.
+Compose a uniform anchor with each map in the subgroup
+\(\{0123,1302,3210,2031\}\). Relabeling the options by the anchor yields six
+equiprobable, disjoint blocks. Every block places each option once in each
+position, has two display reversal pairs, and contains each directed
+adjacency once. The corresponding design integrates the span of additive
+position, pair precedence and directed-adjacency features. Its mean is
+unbiased for any correctness contrast because each order is included
+with probability \(1/6\). Shared evaluation of the two models yields a
+single contrast for each displayed order.
+
+For an independent block \(B_i\) per item, the exact conditional risk is
+\begin{equation}
+\operatorname{MSE}(\widehat\Delta)=
+N^{-2}\sum_i \mathbb E_{B_i}(\bar d_{i,B_i}-\mu_i)^2.
+\label{eq:risk}
+\end{equation}
+We evaluate it by enumerating the block support. Ordinary cyclic
+blocks balance each position. Uniform balanced blocks sample from all 24
+position-balanced quadruples. We also compare four unrestricted distinct
+orders, two distinct reversal pairs, and the double-transposition design.
+All schedules share the four-call budget and the two models use the same
+orders. Exact risk uses all 24 observed responses to evaluate the
+proposed four-call deployment.
+
+A model choice based on the sign of the estimated gap has a separate
+error criterion. For a fixed panel with $\Delta\ne 0$, we report
+$\Pr(\widehat\Delta\Delta<0)$, with exact ties reported separately.
+For independent item blocks, the distribution of the sum is obtained
+by convolving the discrete block scores for each item. Thus changes in
+MSE can matter even on panels where no sampled design can reverse the
+ranking. We treat practical gap thresholds as distinct decisions.
+
+\subsection{The minimax cost of balance}
+For one item write \(v=\sum_\pi(d(\pi)-\mu)^2/24\). For a uniform
+design on \(m\) blocks with block-incidence matrix \(H\), the normalized
+worst-case risk on real centered contrasts is the largest centered
+eigenvalue of \(24H^\top H/(16m)\).
+Table~\ref{tab:frontier} gives the optimum over designs satisfying each
+constraint on every realized block. The first line follows from the
+finite population correction. For position balance, averaging the design
+over relabelings can only reduce its worst-case risk and leaves two
+block orbits of sizes 18 (cyclic type) and six (double-transposition type).
+A centered ternary witness has respective risks \(1/2\) and \(1\),
+giving a lower bound for all mixtures. Uniform sampling from the 18
+cyclic-type blocks attains \(1/2\).
+Precedence balance leaves two cyclic families and the double-transposition family. The
+uniform union of the two cyclic families attains \(3/4\), and a ternary witness gives the same
+lower bound for the cyclic families and a larger bound for double transpositions. Directed adjacency leaves only the six
+Williams blocks. A contrast constant on each block
+gives the sharp risk of one. Appendix~\ref{app:certificates} gives the
+matrix and certificate construction.
+
+\begin{table}[t]
+\caption{Optimal worst-case variance divided by the full-order variance.
+Constraints apply to each realized block. The last three optima are
+sharp for differences of correctness indicators.}
+\label{tab:frontier}
+\centering
+\begin{tabular}{lc}
+\toprule
+Required balance & Risk ratio \\
+\midrule
+Unrestricted distinct orders & $5/23$ \\
+Position & $1/2$ \\
+Position and precedence & $3/4$ \\
+All three & $1$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Sharp worst-case risks allow a low-variance explanation for balanced
+sampling in practice. If the features balanced by a design explain
+a fraction \(\eta\) of centered variance, only its orthogonal residual
+contributes to risk and the normalized risk is at most
+\(\lambda(1-\eta)\), where \(\lambda\) is the corresponding ratio in
+Table~\ref{tab:frontier}. This gives sufficient shares of \(13/23\),
+\(49/69\) and \(18/23\) for the three balanced policies to beat
+unrestricted four. It does not order their residual risks.
+
+\section{Why stronger balance helps on some panels}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{matched-components.pdf}
+\caption{Matched 3B model comparisons. Each panel uses 992 questions,
+the same checkpoints, numeric prompt and four shared orders per model
+and item. Entries show mean item risk under precedence minimax minus
+Williams, in units of $10^{-3}$. Positive values favor Williams. Net
+values are computed before rounding.}
+\label{fig:matched-components}
+\end{figure*}
+
+\subsection{Decomposing the risk difference}
+For an item, let $K_D$ denote the average outer product of the
+centered block weights $\mathbf{1}_{B}/4-\mathbf{1}/24$ under design
+$D$. Its item risk is $d^\top K_D d$. Both designs balance position
+and precedence, so these components and the constant are annihilated.
+Project the remaining contrast onto the incremental directed-adjacency
+span, giving $a$, and its orthogonal complement, giving $r$. Williams
+also balances adjacency within each block, so $K_Wa=0$. With $P$ for
+precedence minimax and $W$ for Williams, the item risk difference is
+\begin{align}
+d^\top(K_P-K_W)d
+  &= a^\top K_Pa + r^\top(K_P-K_W)r \notag\\
+  &\quad + 2a^\top K_Pr .
+\label{eq:risk-components}
+\end{align}
+The adjacency term is nonnegative. The other terms can have either
+sign. Summing over items and dividing by $N^2$ gives the gap MSE difference.
+
+\subsection{What changes between the observed panels}
+Figure~\ref{fig:matched-components} isolates the change of benchmark.
+On MMLU the reduction in adjacency variance is smaller than the
+additional residual variance, even after including their interaction.
+On LogiQA the adjacency term alone offsets the residual cost. On
+HellaSwag the interaction nearly cancels the difference. The relative
+MSE changes are $3.41\%$ higher, $2.32\%$ lower, and $0.25\%$ higher
+with Williams, respectively (Table~\ref{tab:3b-confirmation}).
+The earlier HellaSwag study with smaller checkpoints gave a $1.17\%$
+gain. There the positive interaction was large enough to change the
+sign (Figure~\ref{fig:risk-components} in the appendix).
+
+We applied the same decomposition to 17 previously scored panels.
+The adjacency contribution favored Williams and the residual
+contribution favored precedence minimax on all 17. The interaction
+changed sign. These are retrospective diagnostics on the full 24-order
+profiles, with repeated prompts and reused cohorts in some panels.
+No rule using prompt type or model scale passed a development screen
+that excluded the held benchmark and model pair from training.
+Appendix~\ref{app:risk-projections} gives projection and replay details.
+
+\section{Frozen full-order evaluations}
+\subsection{Preregistered HellaSwag confirmation}
+We froze a 5\% reduction in paired MSE against each of four
+equal-call comparators as the practical claim. We enrolled 6,144
+source-qualified HellaSwag items \citep{zellers2019hellaswag},
+3,072 each from the in-domain and zero-shot strata. The roster,
+prompt, both model checkpoints, exact reference and analysis
+were committed before inference. The run used Qwen2.5-1.5B-Instruct
+and Granite-3.3-2B-Instruct in Q4\_K\_M and selected a single
+numeric option token. Both models saw all 24 orders, and one
+RTX 4060 served all 16 shards. After independent release of the
+complete digit export, the analysis joined the publisher answers
+by two source keys. A second implementation independently
+reproduced the aggregate results. Appendix~\ref{app:hellaswag}
+records the protocol and evidence.
+
+For comparator \(C\), we use the practical margin
+\(0.95\operatorname{MSE}_{C}-\operatorname{MSE}_{W}\).
+The frozen primary analysis uses two-sided 95\% simultaneous
+normal intervals across all four margins, with variance estimated
+within each stratum. A separate bounded sensitivity uses the
+prespecified score range. Full-order accuracies were 44.15\% for
+Qwen and 37.90\% for Granite, a 6.25 percentage-point gap.
+
+\begin{table}[t]
+\caption{HellaSwag. Point gains are exact relative MSE reductions
+for Williams, rounded for display. The family intervals concern the
+5\% practical margin in units of \(10^{-7}\) benchmark MSE.}
+\label{tab:hellaswag}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Comparator & Gain (\%) & Primary family interval \\
+\midrule
+Ordinary cyclic & 5.611 & $[-1.025,1.618]$ \\
+All balanced & 2.120 & $[-2.104,-0.594]$ \\
+Position minimax & 2.693 & $[-1.824,-0.350]$ \\
+Precedence minimax & 1.166 & $[-2.393,-1.166]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Williams had lower point MSE for all four comparators
+(Table~\ref{tab:hellaswag}). The primary interval for the cyclic
+comparison crosses the practical threshold. The other three
+intervals lie below it. The preregistered normal-family rule
+therefore rules out joint practical superiority for this scope.
+All four bounded intervals cross zero, yielding an inconclusive
+bounded sensitivity result. The smallest point gain was against
+precedence minimax, the strongest prespecified comparator.
+
+\subsection{Frozen 3B confirmation and matched HellaSwag extension}
+We compared Qwen2.5 3B and SmolLM3 3B in Q4\_K\_M on 992 questions
+each from MMLU validation \citep{hendrycks2021} and English LogiQA
+2.0 test \citep{liu2023logiqa}. We fixed the rosters and analysis
+before inference. Selection used hashes, deduplication, four valid
+choices and a context check across both models and all orders.
+The panels were fresh to this experiment. Overlap with model
+training corpora is unknown. Both models scored all 24 orders in
+the standard numeric prompt on one RTX 4060 Ti. The 95,232
+model--item--order calls establish the reference. Each candidate
+design uses four shared orders per model and item.
+
+The primary comparison was Williams against precedence minimax at
+a 5\% relative MSE reduction. We used 50,000 paired item bootstrap
+draws per panel, resampling within subject on MMLU at fixed
+observed weights. Bonferroni bounds control the two panels
+separately for each one-sided direction. We also computed normal
+and bounded sensitivities. The exact finite-panel MSE was checked
+through an independent rational calculation of each block's loss.
+
+The HellaSwag extension used the same Q4\_K\_M weights,
+numeric prompt template, 512-token admission rule and RTX 4060 Ti.
+Its validation panel contains 765 previously unused questions and
+227 from the earlier 1.5B/2B HellaSwag run, selected by hash and length
+before inference. The template uses the HellaSwag context as the
+question and the four endings as options. We scored all 24 orders
+and reused the paired bootstrap procedure with fixed in-domain and
+zero-shot stratum weights. The new interval is panel-specific.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Matched 3B evaluations. Gains are Williams MSE reductions
+in percent. The last column gives paired directional bootstrap
+bounds for the per-item 5\% margin versus precedence minimax
+in units of $10^{-3}$.}
+\label{tab:3b-confirmation}
+\begin{tabular}{lrrl}
+\toprule
+Panel & Cyclic & Precedence & Margin bounds \\
+\midrule
+MMLU & 12.20 & -3.41 & $[-2.268, -1.107]$ \\
+LogiQA 2.0 & 20.57 & 2.32 & $[-1.108, 0.033]$ \\
+HellaSwag & 6.66 & -0.25 & $[-1.695, -0.560]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In the original two-panel test, the MMLU bootstrap upper bound
+fell below the 5\% threshold.
+LogiQA's interval crossed the threshold. Under the frozen rule,
+the bootstrap and normal bounds rule out a gain of at least
+5\% on both panels. The bounded intervals leave the joint
+claim unresolved. Williams improved on cyclic sampling on
+both panels, with much smaller gains or a loss against
+precedence minimax (Table~\ref{tab:3b-confirmation}). Full-order
+gaps were 28.70 and 24.66 percentage points. Across both
+panels the discrete block-score distribution gave zero strict
+rank reversals, ties, or crossings of the five-point decision
+threshold to reported precision. These panels support a precision
+comparison and provide limited evidence about near-tie decisions.
+
+In the matched HellaSwag extension, the adjacency, residual, and
+interaction contributions to mean item risk in units of $10^{-3}$
+were \(+8.726\), \(-9.479\),
+and \(+0.701\), with a net of
+\(-0.053\).
+The upper bound falls below the 5\% practical margin. The descriptive
+95\% relative-gain interval, $[-2.93\%,+2.39\%]$, spans zero. The
+earlier HellaSwag study gave a small point gain under different
+checkpoints, prompting, and item sampling. An independent integer
+replay of the new correctness profiles reproduced all five MSEs.
+
+\subsection{Frozen decision experiment}
+On 288 ARC-Challenge and 288 OpenBookQA items, we compared Qwen2.5
+1.5B Instruct with Granite 3.3 2B Instruct (Q4\_K\_M) under a
+standard numeric-choice prompt. The frozen decision was whether
+Qwen led by at least five percentage points. The reference used all
+24 orders per model and question. We convolved the exact distributions
+of the independently sampled four-order blocks and used 4,000 paired
+item bootstrap draws for simultaneous directional bounds across panels.
+
+On ARC-Challenge, the full-order lead was 2.894 points and Williams
+reduced decision error from 1.197\% to 1.172\% versus precedence
+minimax. Ordinary cyclic yielded 1.471\%. The Williams reduction was
+0.025 points, with directional bounds $[-0.255, 0.417]$ points.
+OpenBookQA's lead was $-7.002$ points, 12.002 points from the
+threshold, and all three decision errors were effectively zero.
+The frozen comparison excluded a reduction above one point on both
+panels. Only ARC-Challenge was relatively close to the threshold.
+
+\section{Five-option evaluation on CommonsenseQA}
+We froze 192 questions from CommonsenseQA validation
+\citep{talmor2019commonsenseqa}, using a fixed hash order,
+one item per normalized concept and a label-free context check.
+Qwen2.5-3B-Instruct and SmolLM3-3B used the same Q4\_K\_M
+checkpoints and RTX 4060 Ti as the four-option 3B panels.
+The numeric template used five choices and single-token argmax.
+We ran both models on all 120 orders per item, for 46,080
+reference calls. Each estimator draws five shared orders per
+question, for 1,920 deployment calls across both models.
+
+The primary comparison uses the position-minimax sampler and the
+maximum-adjacency sampler certified in Appendix~\ref{app:five-certificates}.
+The first design covers 12.7 directed adjacencies on average.
+The second covers 15 in every draw. We enumerated each design's
+weighted block risk and used 50,000 paired item bootstrap draws.
+
+\begin{table}[t]
+\centering
+\small
+\caption{CommonsenseQA. Conditional MSE of the paired gap across
+192 questions, in units of $10^{-5}$. Each design uses five
+orders per model and item.}
+\label{tab:commonsenseqa-five}
+\begin{tabular}{lrr}
+\toprule
+Design & Mean adjacencies & MSE \\
+\midrule
+Position minimax & 12.70 & 10.148 \\
+Maximum adjacency & 15.00 & 10.017 \\
+Uniform position balance & 12.68 & 10.149 \\
+Ordinary cyclic & 5.00 & 10.851 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The maximum-adjacency design had 1.29\% lower MSE than
+position minimax. The paired 95\% interval for relative reduction
+was \([-0.14\%,+2.75\%]\).
+The upper endpoint falls below the frozen $5\%$ practical threshold.
+The result holds for the observed model pair and question panel.
+The minimax comparison concerns the worst case over correctness
+contrasts. The empirical comparison conditions on the observed
+profiles. An independent integer replay recovered all four MSEs.
+
+\section{Relation to earlier work and scope}
+Williams designs balance first-order carryover in experiments
+\citep{williams1949}. The catalogues used here classify row-complete Latin
+squares \citep{wanlesscatalogue}. Balanced survey sampling integrates
+auxiliary totals \citep{deville2004}. Orthogonal-array sampling
+stratifies margins in product spaces \citep{owen1992}, and
+order-of-addition designs optimize information for models of component
+precedence \citep{peng2019}. Permutation quadrature for Shapley values
+also uses structured samples \citep{mitchell2022,yang2023}. Our
+finite-population target is a paired correctness gap. The lower bounds
+identify realizable binary outcomes, and the upper certificates hold
+for every real-valued profile on permutations.
+
+Option-order sensitivity is documented in language-model benchmarks
+\citep{zheng2024,pez2024}. Position-balanced schedules have been
+evaluated on flip rates and pooled choices \citep{ok2026}, and a public
+proposal compares Williams and cyclic schedules in multiple-choice
+evaluation \citep{lacuna}. Our results concern the worst-case price of
+these constraints and the observed risk against the stronger
+precedence-minimax comparator. Appendix~\ref{app:other-panels}
+records additional positive and negative evaluations.
+
+For a fixed question set, the results suggest an explicit choice.
+An evaluator who needs a guarantee over arbitrary order effects can
+sample either certified position template with its tabulated probability
+and relabel it. If independent evidence supports a particular order
+effect, a design that balances it removes that component exactly. The
+four-option decomposition explains why the same stronger balance helped
+on LogiQA and hurt on MMLU. A predictor of that ranking from low-budget
+observations remains open. Other open cases include sharpness of $L_n$
+above ten and the exact five-option correctness optimum with maximum
+adjacency. The measured benchmark effects condition on the frozen
+prompts, models and scoring rules.
+
+\section*{Impact Statement}
+The method can reduce the cost of comparative evaluations and make
+sensitivity to option order visible. Rankings can still reflect
+benchmark coverage, annotation choices, scoring conventions and
+model-specific effects. We report exact scope and observed failures
+so the measurements can be used with those limits in view.
+
+\section*{AI Disclosure Statement}
+OpenAI Codex assisted research question selection, literature
+synthesis, derivation and checking, experimental design, implementation,
+execution, analysis and drafting. A contextual bandit recorded candidate
+selection, costs and outcomes. Frozen protocols and independent
+numerical or exact replays checked selected results, including all frozen
+HellaSwag metrics and the follow-up finite-panel MSE. Two CPU replays
+verified the decomposition against block enumeration. Independent character calculations and exact block enumeration checked the theoretical certificates. Human author
+verification remains pending for this draft.
+
+\bibliography{references}
+\bibliographystyle{icml2027}
+\clearpage
+\appendix
+\onecolumn
+\input{appendix.tex}
+\end{document}

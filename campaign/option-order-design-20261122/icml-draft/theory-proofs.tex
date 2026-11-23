@@ -1,0 +1,190 @@
+\section{Two-option contrasts and the sharp position designs}
+\label{app:general-position}
+Throughout this appendix $n$ counts options and $N$ counts questions.
+An order $\pi$ maps display slots to option labels. Consider the
+$m=n(n-1)$ ordered pairs of distinct slots occupied by options 0 and 1.
+The full-order population is uniform on these pairs. In a Latin block
+each of the $n$ observed pairs is distinct, and each slot occurs once in
+each coordinate. The centered weight matrix $e$ consequently vanishes
+on the diagonal and has zero row and column sums. Its squared norm is
+$1/n-1/m$. The space $V$ of matrices with these constraints has
+dimension $d_0=m-(2n-1)$. Indeed, a linear dependence among the row and
+column equations requires $a_i+b_j=0$ whenever $i\ne j$, which forces
+all $a_i$ equal and all $b_j$ their negatives. For a centered matrix
+$h$, its variance over orders is $\|h\|^2/m$, so its normalized risk
+is $m\,\mathbb E(e^\top h)^2/\|h\|^2$, with matrices viewed as vectors.
+The operator $m\mathbb E[ee^\top]$ has trace $n-2$. Every independent
+extra dyad function integrated in each block removes one dimension
+after projection onto $V$, proving the real-score bound of
+Section~\ref{sec:theory}.
+
+\paragraph{Why the trace bound holds for correctness.}
+Write $V=V_s\oplus V_a$ for the symmetric and skew-symmetric parts.
+They have dimensions $s=n(n-3)/2$ and $a=(n-1)(n-2)/2$. For symmetric
+edge weights the $n$ row equations are independent since $c_i+c_j=0$
+for every edge forces $c_i=0$. For skew edge weights their rank is $n-1$.
+In $V_s$ assign alternating signs to both directions of the edges of a
+four-cycle and zero elsewhere. In $V_a$ assign $+1$ around a triangle,
+$-1$ in the opposite direction and zero elsewhere. For either witness
+$h$, uniformly permute its slot labels, and consider
+$F=\mathbb E[hh^\top/\|h\|^2]$. This operator is supported on the
+corresponding subspace and has trace one.
+
+On symmetric edge weights its coefficients depend only on whether two
+unordered edges coincide, share a vertex, or are disjoint. At edge
+$ij$ the sum on neighboring edges is $-2h_{ij}$ for every $h\in V_s$,
+and the sum on disjoint edges is $h_{ij}$. Thus $F$ acts as a scalar
+on $V_s$. In the skew case, exchanging the endpoints of a disjoint
+edge forces its coefficient to vanish. At $ij$ the remaining
+off-diagonal term is proportional to
+$\sum_{t\ne i,j}(h_{it}-h_{jt})=-2h_{ij}$, again giving a scalar.
+The two operators are therefore the corresponding orthogonal
+projectors divided by $s$ and $a$. Selecting the two witnesses with
+probabilities $s/d_0$ and $a/d_0$ gives $\mathbb E[hh^\top/\|h\|^2]
+=P_V/d_0$. For every block the resulting mean normalized squared
+error is $m\|e\|^2/d_0=(n-2)/d_0$. Taking the design expectation
+proves Theorem~1 for correctness differences without a symmetry
+assumption on the design.
+
+\paragraph{Recovering the two risks from swaps.}
+Randomly select the two distinguished semantic labels as well as the
+slot relabeling of the witness. For two rows $x,y$, the ordered slot
+dyad in $x$ is then uniform and the corresponding dyad in $y$ follows
+by applying $y^{-1}x$. The inner product of a unit witness with its
+image, averaged over slot relabelings, is the trace of this permutation
+on $V_s$ or $V_a$ divided by the corresponding dimension, by the frame
+identity above. With $x=y$ the ratio is one. With $x\ne y$ their
+relative permutation is a derangement. If it has $u$ two-cycles, it
+fixes $u$ unordered edges, exchanging their endpoints. Thus its trace
+on all symmetric edges is $u$, and on all skew edges it is $-u$.
+The symmetric vertex effects $b_i+b_j$ form the vertex permutation
+representation, with trace zero on a derangement. The skew vertex
+effects $b_i-b_j$ remove the constant vertex representation, giving
+trace $-1$. Subtraction leaves traces $u$ and $1-u$ on $V_s$ and
+$V_a$. The diagonal pairs have weight $1/n$ in the block square.
+The other pairs give the two terms in Eq.~\eqref{eq:swaps}. Randomizing
+the witnesses in this argument is valid even for families that are
+not closed under slot relabeling.
+
+With unrestricted distinct orders, symmetrizing a design over all
+permutations of the $n!$ population indices preserves each contrast
+class and yields simple random sampling. Its common risk ratio is
+$(n!-n)/(n(n!-1))<1/n$. In contrast, $L_n=1/n+(n-1)/(nd_0)>1/n$.
+
+\paragraph{Sharp upper bounds from explicit samplers.}
+At each $n$ in Table~\ref{tab:template-weights}, select a template $T$
+with the indicated probability. Independently shuffle its columns and
+relabel its symbols uniformly, using the same resulting rows for both
+models. Every displayed order has the required marginal. All template
+rows are specified in \texttt{position-templates.json}. For example
+the two six-row templates, written from the top down, are
+\[
+\begin{split}
+T_1&=(012345,103254,240513,351402,425130,534021),\\
+T_2&=(012345,103452,231504,345120,450231,524013).
+\end{split}
+\]
+For templates of any size, the following calculation tests a proposed
+mixture on \emph{all} real score vectors. For rows $x,y$ of $T$, two
+uniform relabelings $g,h$ give the pair $(gxh,gyh)$, whose relative
+permutation is $h^{-1}x^{-1}yh$. Conditional on this relative
+permutation, the first row is uniform. The resulting quadratic form
+under the uniform population inner product is thus a central
+convolution. On the component indexed by partition $\lambda\vdash n$,
+its eigenvalue before centering is
+\begin{equation}
+ \rho_\lambda=\frac{1}{n^2 f_\lambda}
+ \sum_T w_T\sum_{x,y\in T}\chi_\lambda(x^{-1}y),
+ \qquad f_\lambda=\chi_\lambda(1).
+ \label{eq:character-certificate}
+\end{equation}
+Indeed, averaging the representation over a conjugacy class gives a
+scalar matrix by Schur's lemma, and its trace determines the scalar
+\citep{diaconis1981}. Centering removes the trivial component. The
+largest remaining value is the real worst-case ratio. The certificate
+uses integer characters, rational weights and checks all nontrivial
+partitions. For each $n$ the components $(n-2,2)$ and $(n-2,1,1)$
+reach the displayed maximum. Exhibiting a sampler and matching the
+universal lower bound proves optimality without listing all Latin
+squares of these orders.
+
+\begin{table}[ht]
+\centering
+\caption{Probability of choosing each template before independent
+uniform relabeling of slots and options. These are sharp upper certificates.}
+\label{tab:template-weights}
+\begin{tabular}{rrrr}
+\toprule
+$n$ & $w_1$ & $w_2$ & Largest centered eigenvalue \\
+\midrule
+6 & $20/133$ & $113/133$ & $4/19$ \\
+7 & $25/29$ & $4/29$ & $5/29$ \\
+8 & $17/41$ & $24/41$ & $6/41$ \\
+9 & $37/55$ & $18/55$ & $7/55$ \\
+10 & $58/71$ & $13/71$ & $8/71$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Connectivity and quantitative adjacency certificates}
+\label{app:connectivity}
+If $X$ is a uniform row of a random block, the uniform order marginals
+give $X\sim\mathrm{Unif}(S_n)$. For every profile,
+\[
+ v(d)=\operatorname{Var}(\mathbb E[d(X)\mid B])
+      +\mathbb E\operatorname{Var}(d(X)\mid B).
+\]
+The first term is the risk of the sample mean before normalization.
+On the centered unit sphere, equality with $v(d)$ occurs exactly when
+the second term vanishes, meaning $d$ is constant on every block of
+positive mass. A component indicator gives equality for every law if
+the allowed graph is disconnected. If the graph is connected, uniform
+sampling over the allowed blocks has full support and uniform marginals
+by transitivity. Equality would force $d$ to be constant on all orders.
+The maximum on the centered unit sphere is attained, so this law has
+worst-case risk strictly below one. Substituting a cut indicator gives
+Eq.~\eqref{eq:cut}. For the group formulation, left multiplication by
+$x^{-1}$ takes any allowed block containing $x$ to a block containing
+the identity. Consequently the neighbors of $x$ are $xu$, where $u$
+ranges over the nonidentity rows of normalized blocks. Reachability
+from $x$ is precisely its left coset of the subgroup generated by the
+rows. This proves Theorem~2.
+
+At six options the two reduced row-complete blocks are
+\[
+\begin{split}
+B_1&=(012345,130524,204153,351402,425031,543210),\\
+B_2&=(012345,135024,251403,304152,420531,543210).
+\end{split}
+\]
+For every row $x$ here, $x(i)+x(5-i)=5$ for all zero-based slots $i$.
+Under a common relabeling $g$, all rows of $gB$ therefore give the
+same matching of options across opposite slots. The subgroup closure
+has 24 elements. A direct enumeration at four, five and six options
+generates respectively 4, 56 and 9,408 reduced Latin squares. Maximum
+adjacency retains 1, 9 and 2, with subgroup orders 4, 120 and 24.
+
+For eight, nine and ten options we use the published exhaustive
+row-complete catalogues of \citet{wanlesscatalogue} (12, 12 and 492
+reduced squares). Seven has no row-complete square. For a displayed
+template $T$, let $q_x(i)$ be the slot of symbol $i$ in row $x$.
+For a centered ternary dyad witness $h$, the normalized risk averaged
+over uniform option relabelings is
+\[
+ U_T(h)=
+ \frac{\sum_{i\ne j}\big(\sum_{x\in T}h(q_x(i),q_x(j))\big)^2}
+      {n^2\sum_{u\ne v}h(u,v)^2}.
+\]
+The numerator enumerates the two distinguished semantic options under
+the random label map. The certificate specifies six, four and six
+weighted signed cycles or triangles at the respective sizes.
+Direct integer evaluation gives
+$\min_T\sum_h w_h U_T(h)=69/280,\ 43/243,\ 12427/99080$.
+We round the final lower bound down to $1/8$ in the main table.
+These statements use the completeness of the cited catalogue. For the
+strict upper bounds it suffices to exhibit, respectively, two, one and
+two row-complete templates whose rows generate $S_n$. In each case
+the verifier exhibits a transposition and checks transitivity on
+ordered pairs of distinct slots. Every transposition is then a
+conjugate within the generated group. No catalogue completeness
+assumption enters the upper bounds.

@@ -1,0 +1,389 @@
+\input{theory-proofs.tex}
+
+\section{Four-option finite-block certificates}
+\label{app:certificates}
+
+Index the 24 permutations lexicographically from zero, and enumerate
+the \(\binom{24}{4}=10{,}626\) distinct blocks. Test position balance by
+requiring all four values in each coordinate, precedence balance by requiring
+two orders for each orientation of every pair, and directed adjacency
+by requiring one occurrence of each directed pair in consecutive slots.
+There are 24 position-balanced blocks, 18 with precedence balance as well,
+and six satisfying all three conditions. Under independent option and
+slot relabelings, the position-balanced set has the two orbits in
+the main text. The precedence set has three orbits under option
+relabelings alone. They are the six blocks from each of the cyclic
+generators \(1302\) and \(2310\), and the six double-transposition
+blocks. These orbit statements can be verified by relabeling every
+admissible block and comparing the resulting sets.
+
+Write \(G=H^{\mathsf T}H\) and let \(s\) be its constant row sum for
+each uniform support considered here. On centered contrasts
+\(Q=24G-s\mathbf{1}\mathbf{1}^{\mathsf T}\) acts as \(24G\).
+For each row of Table~\ref{tab:roots}, multiply the matrices
+\(Q-24rI\) over all listed roots \(r\). The product is zero. Removing
+the top root from the product gives a nonzero matrix, certifying that the top
+centered eigenvalue is present. Multiplying it by \(1/(16m)\) in
+the scaled operator yields the table's risk ratio.
+
+\begin{table}[h]
+\centering
+\caption{Exact centered Gram certificates. The roots are for \(Q/24\).}
+\label{tab:roots}
+\begin{tabular}{lrrl}
+\toprule
+Support & Blocks & Risk ratio & Roots \\
+\midrule
+All position-balanced & 24 & $5/8$ & $0,4,10$ \\
+Cyclic-type only & 18 & $1/2$ & $0,4,6$ \\
+Precedence-balanced cyclic-type only & 12 & $3/4$ & $0,2,4,6$ \\
+Williams & 6 & $1$ & $0,4$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+To lower-bound every design, average its block probabilities over the
+relabelings that preserve its constraints. Each relabeling permutes
+the contrast class, and the supremum of averaged risk is at most
+the average of the suprema. For position balance, set the contrast
+to \(+1\) on indices \(0,7,16,23\), \(-1\) on \(3,11,12,20\), and
+zero elsewhere. Direct summation gives normalized risks \(1/2\)
+and \(1\) on the cyclic and double-transposition orbits.
+For precedence, use \(+1\) on \(0,2,7,10,13,16,21,23\),
+\(-1\) on \(3,5,9,11,12,14,18,20\), and zero elsewhere.
+Its corresponding risks are \(3/4,3/4,1\). With all three
+constraints, use \(+1\) on one Williams block and \(-1\) on another
+after symmetrization. Each witness is a possible difference of binary
+correctness. With unrestricted blocks the centered incidence has
+squared norm \(4-16/24=10/3\) for every block. Dividing the normalized
+risk trace by 23 gives the lower bound \(5/23\) for real contrasts.
+Equivalently, averaging any block law over all 24-order index
+permutations gives uniform sampling, and the same argument applies to
+ternary contrasts.
+
+\section{Five-order minimax certificates}
+\label{app:five-certificates}
+View each five-order position-balanced block as a Latin square with
+unordered rows. Relabel options to make one row the identity and
+sort by first column. The 56 reduced blocks have zero, one or four
+odd rows, with counts 6, 40 and 10. The all-order permutation-sign
+contrast has mean zero and variance one and is realizable as the
+difference of complementary correctness indicators. Its block mean
+therefore has squared magnitude at least $9/25$.
+
+For the upper certificate, start with
+$\{01234,12340,24013,30421,43102\}$, written as displayed
+option sequences. Apply independent uniform relabelings of options
+and slots. The resulting uniform marginals and centered covariance
+are verified by enumerating the $120^2$ relabelings. Exact rational
+convolution verifies that the normalized covariance is annihilated by
+the polynomial with roots $0,17/125,4/25,33/125,7/25,9/25$.
+Slot relabeling gives realized adjacency coverage of $11$, $12$,
+$14$ or $15$. Only $12$ of the $120$ slot relabelings reach $15$.
+
+The 216 blocks with maximum coverage split into five option-relabeling
+orbits. An explicit parity contrast and a signed cut give the elementary
+lower bound $23/55$. With $w$ the mass of the four homogeneous-parity
+orbits the two risks are at least $9/25+(16/25)w$ and
+$11/25-(6/25)w$. A stronger certificate uses the three correctness
+differences in Table~\ref{tab:five-witnesses}. The profiles have
+respectively $(60,0,60)$, $(40,40,40)$ and $(36,48,36)$ entries at
+$(-1,0,+1)$. They are specified in lexicographic order in the
+supplement. Each possible profile can be realized by two binary
+correctness functions. The weighted sum equals $7/15$ on every
+orbit, hence on any mixture. Symmetrization extends the bound to all
+admissible designs.
+
+\begin{table}[ht]
+\centering
+\caption{Exact normalized risks of three correctness witnesses on the
+five option-relabeling orbits with coverage 15. The columns follow
+the representative order in the certificate.}
+\label{tab:five-witnesses}
+\begin{tabular}{lrrrrrr}
+\toprule
+Witness & Weight & Orbit 1 & Orbit 2 & Orbit 3 & Orbit 4 & Orbit 5\\
+\midrule
+Permutation parity & $1/45$ & $9/25$ & $1$ & $1$ & $1$ & $1$\\
+Ternary profile 2 & $4/9$ & $59/125$ & $1/5$ & $3/5$ & $1/5$ & $3/5$\\
+Ternary profile 3 & $8/15$ & $7/15$ & $2/3$ & $1/3$ & $2/3$ & $1/3$\\
+Weighted risk & & $7/15$ & $7/15$ & $7/15$ & $7/15$ & $7/15$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For real-valued profiles a separate rational mixture of five witnesses
+gives a lower bound of $0.47084$. Orbit probabilities
+$(82680,3199,5472,3177,5472)/100000$ give a real-score upper bound
+of $0.47087$ by an exact positive-semidefinite check. The same sampler
+bounds the correctness optimum from above and was frozen for the
+CommonsenseQA experiment. The tighter correctness lower bound was
+derived after that experiment using only the allowed blocks.
+
+\section{Projection and replay for the risk decomposition}
+\label{app:risk-projections}
+Center the position, precedence, and adjacency indicators across the
+24 orders. Project each family off the preceding spans and take its
+column span. The increments have dimensions $9$, $3$, and $5$, leaving
+a six-dimensional residual. Reversal splits adjacency into two even
+and three odd dimensions. The residual is even and both risk operators
+commute with reversal, leaving only the even adjacency cross term.
+
+Integer block enumeration checked each quadratic loss and decomposition
+to within $9\times10^{-17}$ and $5\times10^{-17}$, respectively. Two
+CPU replays agreed byte for byte and reproduced 25 prior MSE estimates.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{risk-components.pdf}
+\caption{Exact risk accounting for HellaSwag and the frozen MMLU 3B
+panel. Bars give contributions to precedence-minimax risk minus
+Williams risk, averaged per item, in units of $10^{-3}$. Positive
+values favor Williams. The percentages below the panels show the relative
+change in MSE with Williams. Both comparisons use four shared orders per model and
+question. The panels use different model pairs.}
+\label{fig:risk-components}
+\end{figure}
+
+\section{Recorded scoring and outcome-independent gates}
+\label{app:protocol}
+
+\paragraph{OpenBookQA.}
+The eligible source was the official four-option Main test split. The
+192 IDs were selected by ascending SHA-256 of \texttt{221128:<id>}.
+Each model saw the same 24 orders for each question with no examples
+or retrieved facts. The native chat template was used with a single user
+instruction and an explicit alphabetic label for each option. The
+winner was the largest of four single-token label logits at the final
+prompt position, with ties resolved toward the lower displayed position.
+Inference used BF16 SDPA and left padding. The 9,216 model-item-order
+records represent actual forward passes. The paired intervals used
+2,000 bootstrap draws, stratified by original key, with seed 221129.
+The paper's six point MSEs are calculated from binary correctness masks
+and require no access to the model weights.
+
+\paragraph{ARC-Challenge.}
+The source-binding rule used the archive source index, official key and
+the exact four choices, and excluded duplicate, ambiguous and previously
+used items. An attempted literal-prompt check ended before scoring when
+the author archive lacked those prompts. The subsequent frozen question
+binding retained 1,154 items from 1,165 source-bound four-option records.
+The position minimax gate required both full-order accuracies above 35\%,
+at least 5\% point reduction and a positive lower 95\% bound versus all
+balanced, and a lower 95\% gain bound of at least \(-10\%\) versus Williams.
+Two arithmetic implementations independently matched the outcome.
+The primary exact MSEs were \(1.49713\), \(1.63362\), and \(1.64470\),
+in units of \(10^{-5}\), for Williams, all balanced and position minimax.
+
+\paragraph{MMLU.}
+Five previously used subjects were excluded before comparison. Two
+source-only admissions stopped without parsing predictions, first on a
+mismatched row and then on an unbindable subject. The final freeze
+omitted both while retaining the same primary thresholds. Both models had to exceed 35\% full-order accuracy. The
+comparison weights items equally, and the 8,000 paired bootstrap draws
+resample whole subjects with seed 221151. Williams had to reduce MSE by at least 10\% versus ordinary
+cyclic and 5\% versus all balanced and position minimax, have a positive
+lower 95\% bound for each contrast, and win all three in at least two
+thirds of the eligible subjects. The 5.09\% gain over all balanced meets
+the point threshold, while the lower interval endpoint of 4.14\% still
+admits a smaller gain. The evaluated archive supplies all 582,192
+model-item-order records for the eligible cohort.
+
+\section{HellaSwag confirmation protocol and results}
+\label{app:hellaswag}
+The 6,144 paired items were enrolled by committed within-stratum hash
+order after excluding prior development and separately reserved records.
+Both pinned model variants ran on the original RTX 4060 using llama.cpp
+build b12631 and a cleared eight-sequence layout. Per item and model,
+we saved scores for all 24 lexicographic orders and checked repeated
+scores on the first eight orders. A failed resource guard interrupted
+one attempt, which contributed zero accepted items. Its clean retry
+and the other 15 shards supplied all \(294{,}912\) model-order cells.
+Inference used 263.27 scoped GPU minutes and 265.46 CPU minutes, including
+the failed attempt. The previous 192-item reserve remains separate.
+
+At item level the practical contrast is \(0.95r_{i,C}-r_{i,W}\),
+where \(r_{i,C}\) is the exact conditional block risk for design \(C\).
+The primary interval uses the equally weighted mean of the two fixed
+strata and sums their sample-variance terms with squared weights. Its
+two-sided Bonferroni cutoff is the standard normal quantile
+\(1-0.05/8\). The bounded sensitivity uses the prespecified
+\([-1,0.95]\) item range and the same four-comparison family allocation.
+Both intervals are divided by \(N\) to express the margin on the
+benchmark MSE scale. Rule-out requires at least one strictly negative
+upper endpoint, and support requires all four lower endpoints to be
+strictly positive. The primary rule also requires nonzero estimated
+variance for informative intervals. All four estimates here had
+nonzero variance.
+
+The five exact risks share denominator \(21{,}743{,}271{,}936\).
+Their numerators are 99,719 (Williams), 105,647 (ordinary cyclic),
+101,879 (all balanced), 102,479 (position minimax) and 100,895
+(precedence minimax). The two all-order accuracies are
+\(4069/9216\) and \(55883/147456\). The common bounded interval
+half-width is approximately \(6.4501\times 10^{-6}\) benchmark MSE.
+The matched exact and numerical receipts preserve all endpoints and
+both decision outcomes. The all-order observations settle finite-panel
+risks conditional on this prompt and model pair. The simultaneous
+intervals address item-composition uncertainty under their respective
+sampling assumptions.
+
+\section{What the replay establishes}
+\label{app:artifacts}
+
+The compact OpenBookQA supplement contains a Python standard-library
+enumerator, the two correctness masks per item, the original point-risk
+reference, the exact integer output and a README. The arithmetic replay
+regenerates the six point risks and the full-order accuracy gap without
+network access. For example the two exact values underlying the cyclic
+comparison are \(1157/21233664\) for Williams and \(1337/21233664\) for
+ordinary cyclic. The capsule's SHA-256 is
+\texttt{7995b53380266d76292dbae886bc2602fe04cd716453e86f5182b7b0fafd2c67}.
+The original bootstrap and inference have separate dependencies.
+
+ARC-Challenge and MMLU use the publisher's probability exports,
+which can be retrieved at revision
+\texttt{29fcbb4807bc53a84ac26a64ddbad9526c940958} of
+\href{https://github.com/chujiezheng/LLM-MCQ-Bias_data/tree/29fcbb4807bc53a84ac26a64ddbad9526c940958}{the original scorer archive}.
+The source-bound replays require verified official question files,
+the relevant archive blobs and the corresponding roster and analysis.
+Independent integer checks reproduced all primary point risks given those
+inputs. The original prompts are unavailable. The archive verifiers and
+frozen manifests are separate from the OpenBookQA supplement.
+
+\section{Additional full-order comparisons}
+\label{app:other-panels}
+An archived development study used 7,600 AG News items and three
+models \citep{gao2026}. Its registered double-transposition proposal
+reduced MSE by 4.70\% versus ordinary cyclic, below its 10\% gate.
+Williams had 11.75\% lower MSE in a descriptive comparison. That
+finding motivated the independent design test.
+
+\paragraph{Fresh OpenBookQA.}
+Before inference we selected 192 official test IDs \citep{mihaylov2018} without using their
+answer labels and fixed the two models, common prompt, single-token
+option-label scoring, matched orders and analysis. The Qwen2.5-0.5B-Instruct
+and SmolLM2-360M-Instruct checkpoints were absent from the development
+panel. The gate required reductions of at least 10\% versus ordinary cyclic
+and 5\% versus reversal pairs, positive lower paired intervals for both,
+and nonnegative gains over the other prespecified controls.
+Table~\ref{tab:obqa} reports the complete set. The full-order accuracies
+were 27.50\% and 25.91\%, and gap RMSE was 0.738 percentage points with
+Williams and 0.794 with ordinary cyclic. The gate passed on this
+low-capacity model pair.
+
+\begin{table}[t]
+\caption{OpenBookQA exact gap MSE in units of $10^{-5}$. Relative
+reductions are for Williams versus each comparator. The paired intervals
+resample items and hold the model responses fixed.}
+\label{tab:obqa}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Design & MSE & Gain [95\% interval] \\
+\midrule
+Williams & 5.449 & --- \\
+Ordinary cyclic & 6.297 & 13.46 [3.32, 23.59] \\
+Reversal pairs & 27.022 & 79.84 [74.48, 84.48] \\
+Uniform four & 25.246 & 78.42 [73.02, 83.29] \\
+Double transpos. & 6.240 & 12.68 [3.74, 21.77] \\
+All balanced & 5.915 & 7.88 [0.48, 15.72] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Source-bound ARC-Challenge.}
+We evaluated the strict position minimax policy on a separately frozen
+historical zero-shot full-order archive \citep{zheng2024,clark2018}.
+Official keys, options and row identity checks retained 1,154 items.
+An independent implementation reproduced 2,330 author aggregate labels
+and matched exact risks. Llama-2-70B-chat and Falcon-40B-instruct had full-order accuracies of
+77.78\% and 61.09\%. Strict minimax had 0.68\% higher MSE than all balanced
+blocks (95\% gain interval $[-1.51,0.21]$) and 9.86\% higher MSE than
+Williams (gain interval $[-14.27,-5.63]$). These results missed the
+joint gate, including an interval-based 10\% noninferiority requirement
+against Williams.
+
+\paragraph{Cross-subject MMLU.}
+Before parsing model outcomes, eligibility checks required exact source
+binding to official questions \citep{hendrycks2021}. Five previously
+opened subjects were held out of the analysis. We excluded one
+mismatched row and a subject whose generic options and keys could not
+identify rows. The 12,129 eligible items cover 51 subjects.
+Vicuna-33B-v1.3 and Falcon-40B base reached 59.55\% and 53.13\%,
+respectively, averaged over all orders. The replay reproduced 25,266
+archive aggregate labels and independently matched all primary exact
+risks. Williams cleared the frozen joint gate. All three primary
+gains were positive in 45 subjects. The descriptive comparison with
+precedence minimax is inconclusive (Table~\ref{tab:mmlu}).
+
+\begin{table}[t]
+\caption{MMLU relative risk reduction for Williams. Paired 95\%
+intervals resample subjects and hold checkpoints and archived
+responses fixed.}
+\label{tab:mmlu}
+\centering
+\small
+\begin{tabular}{lrr}
+\toprule
+Comparator & Reduction (\%) & 95\% interval \\
+\midrule
+Ordinary cyclic & 15.93 & [14.36, 17.76] \\
+All balanced & 5.09 & [4.14, 6.10] \\
+Position minimax & 6.12 & [5.14, 7.21] \\
+Precedence minimax & 0.30 & [$-0.46$, 1.07] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Development Diagnostics}
+On previously opened SciQ and ARC-Easy items, a Q4\_K\_M Qwen2.5 3B
+and SmolLM3 3B engineering pilot scored 32 questions per benchmark
+with standard and direct prompts. Across these four panels the
+all-order gap ranged from 49.22 to 58.33 percentage points. Exact
+convolution gave zero rank reversals for each tested design. These
+large gaps offer little information about decisions between closely
+matched models. Replaying eight SciQ items on a second GPU changed
+18 of 384 displayed answers across the two models. Two cold replays
+on the original GPU matched the original choices in all 1,536
+checked model--item--order cells per replay. In the opened 480-item
+SciQ panel for Qwen2.5 1.5B and Granite 3.3 2B, the reference
+gap was 4.24 points. If an evaluator requires a lead of at least
+five percentage points, the four-order estimate crosses that
+threshold in 9.08\% of Williams draws, 9.27\% of precedence-minimax
+draws and 11.17\% of ordinary cyclic draws. These probabilities
+condition on the observed response profiles.
+
+A separate four-panel development screen used 48 full-order items
+per panel to estimate risk by projecting paired disagreement onto
+position, precedence and directed-adjacency components. Against the
+fixed comparator selected on calibration, four-call gains ranged
+from $-1.59$\% to $+0.70$\%. With calibration charged and the same
+total calls available to the fixed comparator, the adaptive rule
+increased MSE by 48.96--52.39\%. This screen does not advance the rule
+to confirmation.
+
+
+\paragraph{Scope of the additional panels.}
+OpenBookQA's independent scoring protocol uses two near-chance small
+models. The larger HellaSwag confirmation adds a distinct numeric-choice
+prompt and model pair. ARC-Challenge and MMLU use different above-chance
+pairs with the same archival scoring convention. The historical release
+lacks literal prompts. Exact replay establishes arithmetic reproducibility
+and source binding for those archives. Prompt, tokenizer, checkpoint,
+and quantization all constrain interpretation.
+One RACE \citep{lai2017} transfer attempt stopped on its first
+numerical cache check and yielded zero validated model-items.
+
+The bootstrap intervals quantify sensitivity of empirical MSE rankings
+to item or subject composition. They differ from uncertainty for the
+gap when only four calls per model are made. A spent-panel development
+replay found conservative finite-panel bounds using squared differences
+between independent item blocks 31.44\% and 16.43\% narrower than
+the strongest tested nonpaired bounds on OpenBookQA and ARC-Challenge.
+Random pairing performed similarly. Across 4,096 draws at each of
+0-, 1- and 5-point margins, every method left OpenBookQA unresolved and
+certified ARC-Challenge. The interval method has no independently
+validated transfer or measured decision advantage in these panels.
