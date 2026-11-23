@@ -29,19 +29,19 @@
 How should two models share a limited sample of answer orders when
 estimating their mean accuracy gap? With $n$ options and $n$ shared
 orders, exact position balance incurs worst-case variance of at least
-$(n-2)/(n^2-3n+1)$ times the full-order variance for every $n\ge4$.
-Explicit samplers attain the bound for $6\le n\le10$. Covering every
-directed adjacency retains single-order variance at four and six
-options. At four options we obtain the exact minimax risks for
-every position-balanced budget from four through 24 calls. At eight
-calls, adding adjacency to precedence balance raises the optimum from
-$2/11$ to $2/5$. The two optimal designs admit an exact comparison
-on any fixed panel through the fraction of residual variance that
-survives adjacency balance. Replaying all 24 orders for the same 3B
-model pair on HellaSwag, MMLU and LogiQA, we find higher eight-call
-point error under adjacency on all three. On LogiQA, adjacency gives
-$2.32\%$ lower mean squared error at four calls and $1.69\%$ higher
-at eight, with the eight-call interval spanning a tie.
+$(n-2)/(n^2-3n+1)$ times single-order variance for every $n\ge4$.
+Explicit samplers attain the bound for $6\le n\le10$. At four options
+we derive the exact minimax risks at every position-balanced budget.
+With eight calls, adding directed adjacency to precedence balance
+raises the optimum from $2/11$ to $2/5$. An exact residual-variance
+criterion determines which design has lower error on a fixed panel.
+We construct an unbiased estimate of their risk difference using
+eight orders per labeled calibration question. In a prospective
+test with two 3B models, the registered pilot selected the
+lower-error design on all four held-out benchmarks. Fixed precedence
+made the same four choices. Across pilot randomizations, including
+calibration in the gap estimate raised full-panel mean squared error
+by $4.50$--$7.39\%$ over fixed precedence at identical call counts.
 \end{abstract}
 
 \section{Paired comparisons under an order budget}
@@ -75,8 +75,9 @@ criterion for the largest possible loss from these restrictions.
 At five options we bound the cost of maximum feasible adjacency.
 At four, doubling the budget changes both the optimal samplers and
 the observed ordering of their risks. The fixed-budget statements concern arbitrary order
-profiles. The experiments measure where actual profiles place their
-variance and explain the sign changes between benchmarks.
+profiles. The full references measure where actual profiles place their
+variance. A prospective transfer study tests whether sparse calibration
+can select the lower-risk eight-call design on new questions.
 
 \input{theory.tex}
 
@@ -201,7 +202,8 @@ on precedence exactly when
  \label{eq:residual-threshold}
 \end{equation}
 If $E_P=0$ both risks vanish. The threshold uses full response
-profiles, making it a retrospective explanation of the ranking.
+profiles. Section~\ref{sec:pilot} estimates the sign from eight
+observed orders on each calibration question.
 
 \section{Why stronger balance helps on some panels}
 
@@ -426,6 +428,8 @@ has lower point MSE than optimized precedence on HellaSwag and higher
 MSE on MMLU and LogiQA. Appendix~\ref{app:eight-replay} reports these
 comparators, the separate 6,144-item sensitivity and interval details.
 
+\input{pilot-main.tex}
+
 \subsection{Frozen decision experiment}
 On 288 ARC-Challenge and 288 OpenBookQA items, we compared Qwen2.5
 1.5B Instruct with Granite 3.3 2B Instruct (Q4\_K\_M) under a
@@ -518,8 +522,13 @@ sample either certified position template with its tabulated probability
 and relabel it. If independent evidence supports a particular order
 effect, a design that balances it removes that component exactly. At four options the optimal sampler depends on the available
 budget. At eight, the residual share explains the observed MSE ranking
-using all 24 orders. Predicting that share from a small calibration
-sample remains open. Other open cases include sharp multi-budget
+using all 24 orders. The sparse pilot estimates the corresponding
+risk difference from eight calls on labeled calibration questions.
+On all four transfer panels, fixed precedence gave lower full-panel
+MSE than either adaptive policy when calibration was charged. Detecting
+benchmarks where the held-out saving covers that cost remains open
+(Eq.~\eqref{eq:charged-pilot}). Other open
+cases include sharp multi-budget
 curves at five or more options, attainment of $L_n$ above ten, and the
 five-option correctness optimum with maximum adjacency. The measured benchmark effects condition on the frozen
 prompts, models and scoring rules.
@@ -538,7 +547,7 @@ execution, analysis and drafting. A contextual bandit recorded candidate
 selection, costs and outcomes. Frozen protocols and independent
 numerical or exact replays checked selected results, including all frozen
 HellaSwag metrics and the follow-up finite-panel MSE. Two CPU replays
-verified the decomposition against block enumeration. Independent character calculations and exact block enumeration checked the theoretical certificates. Exact feature projections checked the eight-call replay. Human author
+verified the decomposition against block enumeration. Independent character calculations and exact block enumeration checked the theoretical certificates. Exact feature projections checked the eight-call replay. A separate publisher-key join verified the four transfer panels. Human author
 verification remains pending for this draft.
 
 \bibliography{references}

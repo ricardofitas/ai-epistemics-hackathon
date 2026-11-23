@@ -1,0 +1,44 @@
+{
+  "registration_commit": "558cf004b26ccee9599e3be09b1a174f0f6d8d5c",
+  "choices_commit_before_reference_scoring": "bbf238ebe249338ffe99a25c39000a9027cf9705",
+  "run": {
+    "study": "f76fd27aca1536d625c7e7f9febf6a661e0afeb97f7e494c7a4acb7a8910a0b0",
+    "run_id": "icml-fourbench-eight-selection-20261123-1",
+    "panels": [
+      "arc-challenge",
+      "openbookqa",
+      "race",
+      "cosmosqa"
+    ],
+    "reference_calls": 43008,
+    "labels_used_for_inference": false
+  },
+  "device": "RTX 4060 Ti",
+  "rig_start": "2026-11-23T23:07:44.288269+00:00",
+  "released_utc": "2026-11-23T23:34:01.912658+00:00",
+  "restored_gpu_mode": {
+    "GPU-91740225-aba6-c2cf-8213-e20452261587": {
+      "before": "always",
+      "restored": "always"
+    }
+  },
+  "profile_sha256": "995f3baa004d82533459f25d3d0e4d30a981efe8bd1c65d562117bffc8aeb429",
+  "prediction_receipts": {
+    "arc-challenge": {
+      "shards": 64,
+      "ordered_prediction_sha256": "2e7864bb97f540a88729311e0ad2ce4b0ec613ce5e0c802ef9097c6386c32a45"
+    },
+    "cosmosqa": {
+      "shards": 64,
+      "ordered_prediction_sha256": "da03411e93c0b7ad5df5778807b836c2503b30dc422dc9b1be549aba1a7253dc"
+    },
+    "openbookqa": {
+      "shards": 64,
+      "ordered_prediction_sha256": "ab0f5da41a3514c64d50d9b89191c185f8458afaeda03ebb7e62487ab7080705"
+    },
+    "race": {
+      "shards": 32,
+      "ordered_prediction_sha256": "5738a7ea82b8a4668ce699278f80944fddc1bfff2b349f31a2a6507114e3e988"
+    }
+  }
+}

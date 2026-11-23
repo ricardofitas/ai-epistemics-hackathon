@@ -1,0 +1,394 @@
+{
+  "arc-challenge": {
+    "calibration_questions": 64,
+    "held_out_questions": 192,
+    "deployment_calls_per_model": 2048,
+    "reference_calls_both_models": 12288,
+    "reference_gap": "451/1024",
+    "held_out_gap": "161/384",
+    "held_out_fixed_mse": {
+      "precedence": "185/4866048",
+      "full": "71/1769472"
+    },
+    "held_out_lower_mse": "precedence",
+    "held_out_williams_gain_percent": -5.54054054054054,
+    "held_out_retained_energy_share": "71/148",
+    "held_out_williams_gain_intervals": {
+      "replicates": 50000,
+      "panel_95": [
+        -12.219615204129488,
+        1.3793103448275454
+      ],
+      "bonferroni_95_family": [
+        -13.94764362974939,
+        3.408046611550485
+      ]
+    },
+    "all_item_fixed_mse": {
+      "precedence": "2917/103809024",
+      "full": "689/23592960"
+    },
+    "calibration_exact_mean_signed_difference": "7/84480",
+    "full_profile_calibration_diagnostic": {
+      "choice": "full",
+      "matches_lower_held_out_mse": false,
+      "held_out_mse": "71/1769472",
+      "gain_vs_fixed_precedence_percent": -5.54054054054054,
+      "excess_vs_held_out_oracle_percent": 5.54054054054054
+    },
+    "pilots": {
+      "precedence-pilot": {
+        "registered": {
+          "choice": "precedence",
+          "matches_lower_held_out_mse": true,
+          "held_out_mse": "185/4866048",
+          "gain_vs_fixed_precedence_percent": 0.0,
+          "excess_vs_held_out_oracle_percent": -0.0,
+          "registered_mean_score": "-119/25600"
+        },
+        "randomized": {
+          "repetitions": 20000,
+          "williams_selections": 10130,
+          "exact_ties_in_simulation": 5,
+          "selection_mcse": 0.0035352351406943215,
+          "pilot_mean_sd": 0.005393432791704759,
+          "prob_selects_lower_held_out_mse": 0.4935,
+          "best_possible_end_to_end_gain_vs_always_precedence_percent": 0.0,
+          "calibration_mse_change_vs_precedence_percent": -0.0,
+          "held_out_expected_regret_percent": 2.8062837837837837,
+          "end_to_end_mse_at_mc_frequency": 2.869981226294932e-05,
+          "gain_vs_always_precedence_percent": -2.13573877271169,
+          "gain_vs_always_williams_percent": 1.7251781237630295,
+          "end_to_end_gain_mcse_pp": 0.014906887977559189,
+          "exact_calibration_sum_risk": "697/1584"
+        }
+      },
+      "residual-pilot": {
+        "registered": {
+          "choice": "precedence",
+          "matches_lower_held_out_mse": true,
+          "held_out_mse": "185/4866048",
+          "gain_vs_fixed_precedence_percent": 0.0,
+          "excess_vs_held_out_oracle_percent": -0.0,
+          "registered_mean_score": "-9/9856"
+        },
+        "randomized": {
+          "exact_williams_probability": "6393290049663556821669792064815554508063317999474534453373985126268060791357339/12688676456793075697206404579328000000000000000000000000000000000000000000000000",
+          "exact_tie_probability": "223729859682828328378518646500555404668838606702773904194017807029307453712541/38066029370379227091619213737984000000000000000000000000000000000000000000000000",
+          "repetitions": 20000,
+          "williams_selections": 10045,
+          "exact_ties_in_simulation": 129,
+          "selection_mcse": 0.0035354981084707144,
+          "pilot_mean_sd": 0.0017975756664184623,
+          "prob_selects_lower_held_out_mse": 0.49775,
+          "best_possible_end_to_end_gain_vs_always_precedence_percent": -4.124100102845389,
+          "calibration_mse_change_vs_precedence_percent": 17.259684361549496,
+          "held_out_expected_regret_percent": 2.7827364864864865,
+          "end_to_end_mse_at_mc_frequency": 2.9853635364108616e-05,
+          "gain_vs_always_precedence_percent": -6.241918066506685,
+          "gain_vs_always_williams_percent": -2.225780116110305,
+          "end_to_end_gain_mcse_pp": 0.01490799682351381,
+          "exact_calibration_sum_risk": "743/1440",
+          "exact_end_to_end_mse": "13108563892775408768063465684255082534830596037978455912588333390176990492445650899/439066372943822452695038795309723418624000000000000000000000000000000000000000000000000",
+          "exact_gain_vs_always_precedence_percent": -6.248698094261916,
+          "exact_gain_vs_always_williams_percent": -2.2323038464711726,
+          "exact_prob_selects_lower_held_out_mse": 0.49614208610064986
+        }
+      }
+    }
+  },
+  "openbookqa": {
+    "calibration_questions": 64,
+    "held_out_questions": 192,
+    "deployment_calls_per_model": 2048,
+    "reference_calls_both_models": 12288,
+    "reference_gap": "2419/6144",
+    "held_out_gap": "1787/4608",
+    "held_out_fixed_mse": {
+      "precedence": "445/12976128",
+      "full": "73/1966080"
+    },
+    "held_out_lower_mse": "precedence",
+    "held_out_williams_gain_percent": -8.269662921348315,
+    "held_out_retained_energy_share": "219/445",
+    "held_out_williams_gain_intervals": {
+      "replicates": 50000,
+      "panel_95": [
+        -16.11260727920155,
+        -0.5370462456489633
+      ],
+      "bonferroni_95_family": [
+        -18.246768507638045,
+        1.59707724425891
+      ]
+    },
+    "all_item_fixed_mse": {
+      "precedence": "5435/207618048",
+      "full": "2651/94371840"
+    },
+    "calibration_exact_mean_signed_difference": "-1/3072",
+    "full_profile_calibration_diagnostic": {
+      "choice": "precedence",
+      "matches_lower_held_out_mse": true,
+      "held_out_mse": "445/12976128",
+      "gain_vs_fixed_precedence_percent": 0.0,
+      "excess_vs_held_out_oracle_percent": -0.0
+    },
+    "pilots": {
+      "precedence-pilot": {
+        "registered": {
+          "choice": "full",
+          "matches_lower_held_out_mse": false,
+          "held_out_mse": "73/1966080",
+          "gain_vs_fixed_precedence_percent": -8.269662921348315,
+          "excess_vs_held_out_oracle_percent": 8.269662921348315,
+          "registered_mean_score": "113/89600"
+        },
+        "randomized": {
+          "repetitions": 20000,
+          "williams_selections": 9577,
+          "exact_ties_in_simulation": 3,
+          "selection_mcse": 0.0035323694420317927,
+          "pilot_mean_sd": 0.006678451712843045,
+          "prob_selects_lower_held_out_mse": 0.52115,
+          "best_possible_end_to_end_gain_vs_always_precedence_percent": 0.0,
+          "calibration_mse_change_vs_precedence_percent": -0.0,
+          "held_out_expected_regret_percent": 3.9599280898876406,
+          "end_to_end_mse_at_mc_frequency": 2.6941757587471392e-05,
+          "gain_vs_always_precedence_percent": -2.9180334866605335,
+          "gain_vs_always_williams_percent": 4.091164226192517,
+          "end_to_end_gain_mcse_pp": 0.021525680942059425,
+          "exact_calibration_sum_risk": "65/144"
+        }
+      },
+      "residual-pilot": {
+        "registered": {
+          "choice": "precedence",
+          "matches_lower_held_out_mse": true,
+          "held_out_mse": "445/12976128",
+          "gain_vs_fixed_precedence_percent": 0.0,
+          "excess_vs_held_out_oracle_percent": -0.0,
+          "registered_mean_score": "-19/39424"
+        },
+        "randomized": {
+          "exact_williams_probability": "2681488880382705212451752629157011960901247572904549756498412314098724158256527/6090564699260676334659074198077440000000000000000000000000000000000000000000000",
+          "exact_tie_probability": "1388919891297924622538116601586734287113798324949291652141277537984509959591/253773529135861513944128091586560000000000000000000000000000000000000000000000",
+          "repetitions": 20000,
+          "williams_selections": 8825,
+          "exact_ties_in_simulation": 119,
+          "selection_mcse": 0.0035110428472179033,
+          "pilot_mean_sd": 0.001896406936008575,
+          "prob_selects_lower_held_out_mse": 0.55875,
+          "best_possible_end_to_end_gain_vs_always_precedence_percent": -4.705611775528979,
+          "calibration_mse_change_vs_precedence_percent": 17.884615384615383,
+          "held_out_expected_regret_percent": 3.648988764044944,
+          "end_to_end_mse_at_mc_frequency": 2.8113606000187422e-05,
+          "gain_vs_always_precedence_percent": -7.394517019319228,
+          "gain_vs_always_williams_percent": -0.08044991598367683,
+          "end_to_end_gain_mcse_pp": 0.021395720165567057,
+          "exact_calibration_sum_risk": "613/1152",
+          "exact_end_to_end_mse": "2468610429131975404015635205797638475100728694176804644399463483224270655639900121/87813274588764490539007759061944683724800000000000000000000000000000000000000000000000",
+          "exact_gain_vs_always_precedence_percent": -7.388541017866857,
+          "exact_gain_vs_always_williams_percent": -0.0748809080803763,
+          "exact_prob_selects_lower_held_out_mse": 0.5597306632818125
+        }
+      }
+    }
+  },
+  "cosmosqa": {
+    "calibration_questions": 64,
+    "held_out_questions": 192,
+    "deployment_calls_per_model": 2048,
+    "reference_calls_both_models": 12288,
+    "reference_gap": "1381/3072",
+    "held_out_gap": "43/96",
+    "held_out_fixed_mse": {
+      "precedence": "179/5308416",
+      "full": "461/13271040"
+    },
+    "held_out_lower_mse": "precedence",
+    "held_out_williams_gain_percent": -3.016759776536313,
+    "held_out_retained_energy_share": "922/1969",
+    "held_out_williams_gain_intervals": {
+      "replicates": 50000,
+      "panel_95": [
+        -10.684015656047595,
+        4.339319019808357
+      ],
+      "bonferroni_95_family": [
+        -12.84627092846271,
+        6.418794920880918
+      ]
+    },
+    "all_item_fixed_mse": {
+      "precedence": "2755/103809024",
+      "full": "257/9437184"
+    },
+    "calibration_exact_mean_signed_difference": "-7/56320",
+    "full_profile_calibration_diagnostic": {
+      "choice": "precedence",
+      "matches_lower_held_out_mse": true,
+      "held_out_mse": "179/5308416",
+      "gain_vs_fixed_precedence_percent": 0.0,
+      "excess_vs_held_out_oracle_percent": -0.0
+    },
+    "pilots": {
+      "precedence-pilot": {
+        "registered": {
+          "choice": "precedence",
+          "matches_lower_held_out_mse": true,
+          "held_out_mse": "179/5308416",
+          "gain_vs_fixed_precedence_percent": 0.0,
+          "excess_vs_held_out_oracle_percent": -0.0,
+          "registered_mean_score": "-673/179200"
+        },
+        "randomized": {
+          "repetitions": 20000,
+          "williams_selections": 9925,
+          "exact_ties_in_simulation": 0,
+          "selection_mcse": 0.0035354344676432627,
+          "pilot_mean_sd": 0.0056419315009009,
+          "prob_selects_lower_held_out_mse": 0.50375,
+          "best_possible_end_to_end_gain_vs_always_precedence_percent": 0.0,
+          "calibration_mse_change_vs_precedence_percent": -0.0,
+          "held_out_expected_regret_percent": 1.4970670391061454,
+          "end_to_end_mse_at_mc_frequency": 2.6823075130732372e-05,
+          "gain_vs_always_precedence_percent": -1.0699546279491834,
+          "gain_vs_always_williams_percent": 1.5041651927838697,
+          "end_to_end_gain_mcse_pp": 0.007622679033684567,
+          "exact_calibration_sum_risk": "131/264"
+        }
+      },
+      "residual-pilot": {
+        "registered": {
+          "choice": "precedence",
+          "matches_lower_held_out_mse": true,
+          "held_out_mse": "179/5308416",
+          "gain_vs_fixed_precedence_percent": 0.0,
+          "excess_vs_held_out_oracle_percent": -0.0,
+          "registered_mean_score": "-51/39424"
+        },
+        "randomized": {
+          "exact_williams_probability": "453538127414360430292612689883844388718006297920661498582769983423643238264153486259866881509/959044679804383138360756459526066012160000000000000000000000000000000000000000000000000000000",
+          "exact_tie_probability": "7327104917079064826760360572589372419789787093645506087178428495331660457836273379871959081/1278726239739177517814341946034754682880000000000000000000000000000000000000000000000000000000",
+          "repetitions": 20000,
+          "williams_selections": 9374,
+          "exact_ties_in_simulation": 94,
+          "selection_mcse": 0.003528599651419809,
+          "pilot_mean_sd": 0.0017889962230665745,
+          "prob_selects_lower_held_out_mse": 0.5313,
+          "best_possible_end_to_end_gain_vs_always_precedence_percent": -3.4818511796733214,
+          "calibration_mse_change_vs_precedence_percent": 12.204198473282442,
+          "held_out_expected_regret_percent": 1.41395530726257,
+          "end_to_end_mse_at_mc_frequency": 2.7731363508436415e-05,
+          "gain_vs_always_precedence_percent": -4.492405807622505,
+          "gain_vs_always_williams_percent": -1.8311206225680934,
+          "end_to_end_gain_mcse_pp": 0.007607942624113854,
+          "exact_calibration_sum_risk": "1069/1920",
+          "exact_end_to_end_mse": "46483242736358990038560956282044614518638006297920661498582769983423643238264153486259866881509/1676052056950934756149614275506673657944473600000000000000000000000000000000000000000000000000000000",
+          "exact_gain_vs_always_precedence_percent": -4.501474603376119,
+          "exact_gain_vs_always_williams_percent": -1.8399584479310955,
+          "exact_prob_selects_lower_held_out_mse": 0.5270938497809415
+        }
+      }
+    }
+  },
+  "race": {
+    "calibration_questions": 32,
+    "held_out_questions": 96,
+    "deployment_calls_per_model": 1024,
+    "reference_calls_both_models": 6144,
+    "reference_gap": "1631/3072",
+    "held_out_gap": "599/1152",
+    "held_out_fixed_mse": {
+      "precedence": "17/442368",
+      "full": "23/552960"
+    },
+    "held_out_lower_mse": "precedence",
+    "held_out_williams_gain_percent": -8.235294117647058,
+    "held_out_retained_energy_share": "92/187",
+    "held_out_williams_gain_intervals": {
+      "replicates": 50000,
+      "panel_95": [
+        -19.24443199837064,
+        2.965779467680652
+      ],
+      "bonferroni_95_family": [
+        -22.32595172859917,
+        6.059275521405061
+      ]
+    },
+    "all_item_fixed_mse": {
+      "precedence": "515/17301504",
+      "full": "257/7864320"
+    },
+    "calibration_exact_mean_signed_difference": "-49/84480",
+    "full_profile_calibration_diagnostic": {
+      "choice": "precedence",
+      "matches_lower_held_out_mse": true,
+      "held_out_mse": "17/442368",
+      "gain_vs_fixed_precedence_percent": 0.0,
+      "excess_vs_held_out_oracle_percent": -0.0
+    },
+    "pilots": {
+      "precedence-pilot": {
+        "registered": {
+          "choice": "full",
+          "matches_lower_held_out_mse": false,
+          "held_out_mse": "23/552960",
+          "gain_vs_fixed_precedence_percent": -8.235294117647058,
+          "excess_vs_held_out_oracle_percent": 8.235294117647058,
+          "registered_mean_score": "439/53760"
+        },
+        "randomized": {
+          "repetitions": 20000,
+          "williams_selections": 9270,
+          "exact_ties_in_simulation": 3,
+          "selection_mcse": 0.0035261008919201388,
+          "pilot_mean_sd": 0.007750803172616838,
+          "prob_selects_lower_held_out_mse": 0.5365,
+          "best_possible_end_to_end_gain_vs_always_precedence_percent": 0.0,
+          "calibration_mse_change_vs_precedence_percent": -0.0,
+          "held_out_expected_regret_percent": 3.8170588235294116,
+          "end_to_end_mse_at_mc_frequency": 3.05913173791134e-05,
+          "gain_vs_always_precedence_percent": -2.772,
+          "gain_vs_always_williams_percent": 6.389140431552883,
+          "end_to_end_gain_mcse_pp": 0.021088137373036945,
+          "exact_calibration_sum_risk": "47/352"
+        }
+      },
+      "residual-pilot": {
+        "registered": {
+          "choice": "precedence",
+          "matches_lower_held_out_mse": true,
+          "held_out_mse": "17/442368",
+          "gain_vs_fixed_precedence_percent": 0.0,
+          "excess_vs_held_out_oracle_percent": -0.0,
+          "registered_mean_score": "-13/19712"
+        },
+        "randomized": {
+          "exact_williams_probability": "34473193379940190086489366132977/95212459376640000000000000000000",
+          "exact_tie_probability": "448615794136524065871531229747/47606229688320000000000000000000",
+          "repetitions": 20000,
+          "williams_selections": 7324,
+          "exact_ties_in_simulation": 189,
+          "selection_mcse": 0.0034065933129741213,
+          "pilot_mean_sd": 0.0017254899069697825,
+          "prob_selects_lower_held_out_mse": 0.6338,
+          "best_possible_end_to_end_gain_vs_always_precedence_percent": -3.6990291262135924,
+          "calibration_mse_change_vs_precedence_percent": 13.51063829787234,
+          "held_out_expected_regret_percent": 3.015764705882353,
+          "end_to_end_mse_at_mc_frequency": 3.15191650390625e-05,
+          "gain_vs_always_precedence_percent": -5.889118446601942,
+          "gain_vs_always_williams_percent": 3.5498832684824904,
+          "end_to_end_gain_mcse_pp": 0.020373412434874356,
+          "exact_calibration_sum_risk": "97/640",
+          "exact_end_to_end_mse": "11797724610499261330605425562930839/374390624262448742400000000000000000000",
+          "exact_gain_vs_always_precedence_percent": -5.864394659608238,
+          "exact_gain_vs_always_williams_percent": 3.5724031664339533,
+          "exact_prob_selects_lower_held_out_mse": 0.6379340098382329
+        }
+      }
+    }
+  }
+}

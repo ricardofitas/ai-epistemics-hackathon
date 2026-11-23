@@ -1,0 +1,26 @@
+{
+  "arc-challenge": {
+    "questions": 256,
+    "matched_model_item_orders": 12288,
+    "all_signed_masks_equal": true,
+    "full_reference_gap_numerator": 2706
+  },
+  "openbookqa": {
+    "questions": 256,
+    "matched_model_item_orders": 12288,
+    "all_signed_masks_equal": true,
+    "full_reference_gap_numerator": 2419
+  },
+  "race": {
+    "questions": 128,
+    "matched_model_item_orders": 6144,
+    "all_signed_masks_equal": true,
+    "full_reference_gap_numerator": 1631
+  },
+  "cosmosqa": {
+    "questions": 256,
+    "matched_model_item_orders": 12288,
+    "all_signed_masks_equal": true,
+    "full_reference_gap_numerator": 2762
+  }
+}

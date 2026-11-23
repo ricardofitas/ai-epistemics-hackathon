@@ -1,0 +1,50 @@
+\begin{table}[h]
+\centering
+\small
+\caption{Held-out benchmark diagnostics. MSEs use units of $10^{-6}$. The interval is the paired
+Bonferroni interval for the relative W gain in percent. The last two columns show the prespecified
+secondary choice and the choice obtained using all 24 orders on the calibration questions.}
+\label{tab:pilot-holdout}
+\begin{tabular}{@{}lrrrrcc@{}}
+\toprule
+Panel & P MSE & W MSE & Family interval, \% & $E_W/E_P$, \% & Secondary & 24-order pilot \\
+\midrule
+ARC-Challenge & 38.019 & 40.125 & $[-13.95,+3.41]$ & 47.97 & P & W \\
+OpenBookQA & 34.294 & 37.130 & $[-18.25,+1.60]$ & 49.21 & W & P \\
+Cosmos QA & 33.720 & 34.737 & $[-12.85,+6.42]$ & 46.83 & P & P \\
+RACE & 38.430 & 41.594 & $[-22.33,+6.06]$ & 49.20 & W & P \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\small
+\caption{MSE of the full-panel gap in units of $10^{-6}$, with eight calls per model per question for every policy.
+Primary policy MSE integrates over all possible pilot order assignments. Secondary policy MSE uses the registered
+20,000 randomizations. The last column gives the primary pilot's percent change in MSE on the calibration questions
+alone, relative to using P on those same questions.}
+\label{tab:pilot-charged}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Panel & Always P & Always W & Residual pilot & Precedence pilot & Calibration MSE change, \% \\
+\midrule
+ARC-Challenge & 28.100 & 29.204 & 29.856 & 28.700 & $+17.26$ \\
+OpenBookQA & 26.178 & 28.091 & 28.112 & 26.942 & $+17.88$ \\
+Cosmos QA & 26.539 & 27.233 & 27.734 & 26.823 & $+12.20$ \\
+RACE & 29.766 & 32.679 & 31.512 & 30.591 & $+13.51$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The secondary rule chose W on OpenBookQA and RACE and P on ARC-Challenge
+and Cosmos QA, matching the held-out lower-risk design twice. Its
+expected full-panel MSE was $1.07$--$2.92\%$ higher than fixed P
+across the four benchmarks. The exact 24-order calibration diagnostic
+selected W on ARC-Challenge, where P had lower held-out risk. This
+case illustrates a source of uncertainty present even when calibration
+order effects are fully observed. Here, changing the questions changed the ranking. Table~\ref{tab:pilot-charged}
+separates the higher risk of the primary sampler on calibration
+questions from errors in selecting the held-out sampler.
+An independent reconstruction using the publisher keys and the raw
+numeric choices matched every released correctness-difference mask.

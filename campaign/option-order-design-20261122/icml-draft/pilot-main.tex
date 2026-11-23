@@ -1,0 +1,21 @@
+\subsection{Choosing a sampler on a new benchmark}
+\label{sec:pilot}
+Can a small calibration set identify which eight-call sampler will
+estimate the model gap more precisely? We constructed an unbiased
+estimate of the risk \emph{difference} from eight shared orders on
+a single labeled question. A signed contrast from two Williams
+blocks measures the variation that survives adjacency balance. Six
+further signed contrasts measure the variation that adjacency removes.
+Sampling from these contrasts cancels position and precedence effects
+on every draw (Appendix~\ref{app:sparse-pilot}). We average the
+resulting scores over calibration questions and choose adjacency
+when the mean is positive.
+
+We registered this rule on ARC-Challenge \citep{clark2018},
+OpenBookQA \citep{mihaylov2018}, Cosmos QA \citep{huang2019cosmos}
+and RACE \citep{lai2017}. The same Qwen and SmolLM 3B checkpoints
+answered all 24 orders on 896 questions. The primary rule saw eight
+orders on 224 calibration questions. Its four choices were recorded
+before scoring the other 672 questions. Both calibration and test
+answers count toward the deployment budget.
+\input{pilot-main-results.tex}

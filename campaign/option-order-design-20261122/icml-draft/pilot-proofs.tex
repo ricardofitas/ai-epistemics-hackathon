@@ -1,0 +1,139 @@
+\section{Selecting an eight-call design from sparse calibration}
+\label{app:sparse-pilot}
+For the two attained designs in Section~\ref{sec:budget}, write $r_P(d)$
+and $r_W(d)$ for single-question MSE, and let $F$ denote the centered
+Williams-group subspace of dimension five. The precedence residual
+space is $F\oplus G$, with $\dim G=6$. The projector identities in
+Appendix~\ref{app:budgets} imply
+\begin{equation}
+ r_P(d)-r_W(d)=\frac{1}{22}
+ \left(\frac{\|P_Gd\|^2}{6}-\frac{\|P_Fd\|^2}{5}\right).
+ \label{eq:pilot-difference}
+\end{equation}
+Both terms admit unbiased eight-order estimates that remove every
+additive position and pairwise precedence effect on each draw.
+
+\paragraph{An explicit residual pilot.}
+For each pair $A,B$ of the six Williams blocks, form the signed vector
+$f=\mathbf1_A-\mathbf1_B$. These 15 vectors have squared norm eight.
+Averaging $ff^\top/8$ uniformly gives $P_F/5$, by the sum of squared
+pair differences among six group means. For $G$, use the six vectors
+$g=\mathbf1_{+}-\mathbf1_{-}$ in Table~\ref{tab:pilot-directions}.
+They are mutually orthogonal, have squared norm eight and annihilate
+the constant, the position and precedence features, and all six
+Williams-block indicators. They therefore span $G$. Uniformly
+averaging $gg^\top/8$ gives $P_G/6$. These two identities hold for
+every real response profile. They specialize to ternary differences
+of binary correctness.
+
+\begin{table}[h]
+\centering
+\caption{Sparse directions for the additional six-dimensional subspace.
+Each tuple lists four display-order indices in the lexicographic convention of Appendix~\ref{app:budgets}.}
+\label{tab:pilot-directions}
+\begin{tabular}{ll}
+\toprule
+Positive coordinates & Negative coordinates \\
+\midrule
+$(0,7,16,23)$ & $(2,10,13,21)$ \\
+$(0,7,17,22)$ & $(1,6,16,23)$ \\
+$(1,6,17,22)$ & $(4,8,15,19)$ \\
+$(2,11,13,20)$ & $(3,10,12,21)$ \\
+$(3,11,12,20)$ & $(5,9,14,18)$ \\
+$(4,9,14,19)$ & $(5,8,15,18)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Sample either family with probability one half, then a uniform member.
+Three eight-order supports appear in both families, giving 18 possible
+blocks. Write $I_F(B),I_G(B)$ for the two membership indicators.
+The probability of observing $B$ is
+$q_B=I_F(B)/30+I_G(B)/12$. Given the eight observed $d_j$, use
+\[
+ Y_B=\frac{1}{176q_B}
+ \left[\frac{I_G(B)(g_B^\top d)^2}{6}-
+       \frac{I_F(B)(f_B^\top d)^2}{15}\right],
+\]
+with an absent direction contributing zero. Taking expectation over
+$B$ recovers Eq.~\eqref{eq:pilot-difference}. Each order has inclusion
+probability $1/3$, so the observed mean of the same eight responses is
+also an unbiased estimate of the question's full-order gap. A separate
+verifier checks the quadratic identity on every one- and two-coordinate
+indicator profile and checks the signed vectors against the feature spans.
+
+\paragraph{Using the precedence design for calibration.}
+For the secondary rule draw $B$ from $P$ and let $p_{ab},w_{ab}$ be
+the joint inclusion probabilities of distinct orders $a,b$ under
+$P,W$. Every $p_{ab}$ is positive. The two covariance matrices have
+zero row sums and equal diagonal entries. Expanding their difference
+in squared pair differences gives the unbiased score
+\[
+ Z_B=\frac1{64}\sum_{\{a,b\}\subset B}
+ \left(\frac{w_{ab}}{p_{ab}}-1\right)(d_a-d_b)^2 .
+\]
+This inverse-probability weighting uses the same 28 observed order
+pairs \citep{horvitz1952}. The calibration-item means have exactly
+the same risk as under fixed precedence sampling. On the three
+previously published 3B panels the residual pilot had signed-score
+standard deviations of 0.0155--0.0157 across items and pilot draws.
+For the inclusion-weighted score the range was 0.0511--0.0613.
+The primary pilot's calibration gap MSE exceeded fixed precedence
+by 13.1--18.8\% on those development panels.
+
+\paragraph{Risk with calibration charged.}
+Let $C,H$ denote the fixed calibration and held-out rosters,
+$Q$ the calibration sampling law and $\gamma$ the probability that
+the calibration mean score is positive. Draw the selected deployment
+sampler independently for each held-out question. Its conditional
+mean gap error is zero for either choice. Hence its covariance with
+the calibration gap error vanishes, even though the choice depends
+on calibration observations. For $N=|C|+|H|$,
+\begin{align}
+ N^2\operatorname{MSE}(\widehat\Delta_{\rm policy})
+ &= \sum_{i\in C}r_Q(d_i)
+ +(1-\gamma)\sum_{i\in H}r_P(d_i)
+ +\gamma\sum_{i\in H}r_W(d_i).
+ \label{eq:charged-pilot}
+\end{align}
+The policy improves on always using $P$ precisely when the
+expected held-out saving $\gamma\sum_{i\in H}(r_P-r_W)$ exceeds
+the calibration cost $\sum_{i\in C}(r_Q-r_P)$. Both sides compare
+the same total of eight calls per model and question.
+
+\paragraph{Transfer protocol.}
+The public registration fixed the four validation rosters, their
+calibration/test splits and every sparse pilot block before GPU
+inference. Within each benchmark we admitted distinct four-choice
+questions, filtered explicit slot-relative answers and kept a single
+question per normalized passage or standalone stem. All 24 numeric
+prompts had to fit both tokenizers' 512-token limit. RACE had 135
+eligible passages after tokenization, of which 128 were used. The
+other three panels each contributed 256 questions. There were 294,
+497 and 643 eligible metadata groups on ARC-Challenge, OpenBookQA and
+Cosmos QA, respectively. No normalized question stem matched a stem
+in the three 3B development panels. Earlier tests with a different
+model pair shared 252 ARC-Challenge questions and 155 OpenBookQA
+questions with this study. These four panels were outside development
+of the eight-call rule. Exposure
+to source data during model training is unknown.
+
+A hash assigned one quarter of each roster to calibration. Each
+method saw only its own eight paired correctness differences per
+calibration item. We recorded its choice before computing any
+held-out correctness profile. Full reference acquisition cost 43,008
+model--item--order calls. Each separately evaluated policy would use
+14,336 calls across the two models, including calibration. We compare
+the registered choice with the exact held-out risks of both samplers.
+We also select from the exact 24-order losses on those same calibration
+items as a diagnostic costing three times as many pilot calls.
+
+For each panel, 50,000 paired question resamples gave percentile
+intervals for the held-out relative Williams gain. Simultaneous bounds
+use the 0.625th and 99.375th percentiles per panel for a 95\% Bonferroni
+family across all four. At fixed rosters, we rerandomized the pilot
+20,000 times to estimate $\gamma$ in Eq.~\eqref{eq:charged-pilot}.
+The remaining terms are exact. For a separate arithmetic check of the primary rule, we encode each calibration score distribution as an integer polynomial with coefficients counting sampler tickets. Multiplying the item polynomials gives the exact probability of a positive score sum. We use that probability for the primary policy MSE in Table~\ref{tab:pilot-charged}. Sampling variation across fresh
+benchmarks is outside both calculations.
+
+\input{pilot-supplement-results.tex}

@@ -1,0 +1,38 @@
+{
+  "hellaswag-3b": {
+    "precedence-pilot": {
+      "mean_signed_score": -0.0006353861192570903,
+      "score_sd": 0.06134077601901688,
+      "mean_item_gap_mse": 0.007953463567122841
+    },
+    "residual-pilot": {
+      "mean_signed_score": -0.0006353861192570873,
+      "score_sd": 0.015535635551064146,
+      "mean_item_gap_mse": 0.009452004928315412
+    }
+  },
+  "mmlu-3b": {
+    "precedence-pilot": {
+      "mean_signed_score": -0.0007308467741935506,
+      "score_sd": 0.05175233187511027,
+      "mean_item_gap_mse": 0.007549983198924731
+    },
+    "residual-pilot": {
+      "mean_signed_score": -0.0007308467741935486,
+      "score_sd": 0.015720817761641546,
+      "mean_item_gap_mse": 0.00890772009408602
+    }
+  },
+  "logiqa-3b": {
+    "precedence-pilot": {
+      "mean_signed_score": -0.00012944464809384347,
+      "score_sd": 0.05114950642749231,
+      "mean_item_gap_mse": 0.007657853739002933
+    },
+    "residual-pilot": {
+      "mean_signed_score": -0.00012944464809384185,
+      "score_sd": 0.015562530016246499,
+      "mean_item_gap_mse": 0.008658329133064515
+    }
+  }
+}

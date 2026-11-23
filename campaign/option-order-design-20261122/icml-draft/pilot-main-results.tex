@@ -1,0 +1,32 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Prospective selection on four validation benchmarks. A positive W gain means lower held-out MSE
+for adjacency (W) than precedence (P). Brackets give panel-specific 95\% paired item intervals.
+The registered choice used only sparse calibration data. The last two columns average over the
+primary pilot's order draws on the fixed calibration questions. Full-panel gain counts all
+calibration calls and compares with always using P.}
+\label{tab:pilot-transfer}
+\begin{tabular}{@{}lrrlrr@{}}
+\toprule
+Benchmark & Cal./test & Choice & Held-out W gain [95\%], \% & $\Pr(\mathrm{correct})$ & Full-panel gain, \% \\
+\midrule
+ARC-Challenge & 64/192 & P & $-5.54\;[-12.22,+1.38]$ & $49.6\%$ & $-6.25$ \\
+OpenBookQA & 64/192 & P & $-8.27\;[-16.11,-0.54]$ & $56.0\%$ & $-7.39$ \\
+Cosmos QA & 64/192 & P & $-3.02\;[-10.68,+4.34]$ & $52.7\%$ & $-4.50$ \\
+RACE & 32/96 & P & $-8.24\;[-19.24,+2.97]$ & $63.8\%$ & $-5.86$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Precedence had lower exact MSE on all four held-out panels
+(Table~\ref{tab:pilot-transfer}). Both the registered
+primary pilot and a fixed choice of precedence picked the winner four
+times. Only OpenBookQA's panel-specific interval excludes a tie.
+All four simultaneous intervals include zero. Repeating just the pilot
+order draws on the same calibration questions yields a correct choice
+with probability $49.6$--$63.8\%$, computed by exact convolution.
+When the calibration questions enter the gap estimate, the primary
+policy has $4.50$--$7.39\%$ higher expected MSE than fixed precedence
+at identical total cost. Even a pilot that always picked the better fixed design for each
+held-out panel would leave a $3.48$--$4.71\%$ full-panel penalty from calibration alone.

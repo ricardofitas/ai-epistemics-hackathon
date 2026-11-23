@@ -1,0 +1,45 @@
+{
+  "arc-challenge": {
+    "source_validation_questions": 299,
+    "unique_eligible_metadata_groups": 294,
+    "selected_questions": 256,
+    "exact_normalized_stem_overlap_with_3b_development": {
+      "hellaswag": 0,
+      "mmlu": 0,
+      "logiqa": 0
+    },
+    "shared_stems_with_earlier_other_model_pair": 252
+  },
+  "openbookqa": {
+    "source_validation_questions": 500,
+    "unique_eligible_metadata_groups": 497,
+    "selected_questions": 256,
+    "exact_normalized_stem_overlap_with_3b_development": {
+      "hellaswag": 0,
+      "mmlu": 0,
+      "logiqa": 0
+    },
+    "shared_stems_with_earlier_other_model_pair": 155
+  },
+  "race": {
+    "source_validation_questions": 4887,
+    "unique_eligible_metadata_groups": 406,
+    "selected_questions": 128,
+    "exact_normalized_stem_overlap_with_3b_development": {
+      "hellaswag": 0,
+      "mmlu": 0,
+      "logiqa": 0
+    },
+    "joint_tokenizer_eligible_groups": 135
+  },
+  "cosmosqa": {
+    "source_validation_questions": 2985,
+    "unique_eligible_metadata_groups": 643,
+    "selected_questions": 256,
+    "exact_normalized_stem_overlap_with_3b_development": {
+      "hellaswag": 0,
+      "mmlu": 0,
+      "logiqa": 0
+    }
+  }
+}

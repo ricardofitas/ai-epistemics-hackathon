@@ -14,6 +14,8 @@ With four calls, the matched 3B evaluations show Williams MSE 0.25% higher on He
 
 At four options the paper gives the exact worst-case variance for every balanced budget from four through 24 orders. At eight, the position, precedence and full-adjacency optima are 1/7, 2/11 and 2/5 times single-order variance. Two distinct Williams blocks reduce the original Williams MSE by 60% on every fixed profile. On the same 992 questions per 3B panel, this eight-call design had 7.99% higher point MSE than optimized precedence on HellaSwag, 9.68% higher on MMLU and 1.69% higher on LogiQA. The LogiQA interval spans zero. The package includes the full-order contrast histograms, exact risks, equal-cost baselines and paired intervals. [Eight-call evidence and replay](experiments/eight-calls/README.md)
 
+In a prospective transfer test on ARC-Challenge, OpenBookQA, Cosmos QA and RACE, the eight-call pilot chose precedence in all four cases before the 672 held-out questions were scored. Precedence gave lower held-out MSE in each case. Repeating the pilot-order draws on the fixed calibration questions would pick the lower-risk design with probability 49.6–63.8%. Counting calibration in the full-panel estimate gives 4.50–7.39% higher expected MSE than using precedence throughout at identical call counts. All four simultaneous intervals for the held-out W gain include zero. [Prospective results, registration and public replay](experiments/low-budget-selection/README.md)
+
 ## Use the samplers
 
 Run the following command to print one six-order block. Each row lists option labels in display order, counted from zero. Use the same block for both models, drawing independently for each new question. The seed makes this example reproducible.

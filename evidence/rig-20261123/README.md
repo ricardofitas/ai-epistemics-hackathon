@@ -4,6 +4,8 @@ The updated ICML preprint includes the minimax proofs, runnable samplers and mat
 
 The four-option study now gives exact guarantees at every balanced call budget and compares four versus eight calls on the original full-order profiles. [Eight-call benchmark results and reproducible analysis](../../campaign/option-order-design-20261122/icml-draft/experiments/eight-calls/README.md)
 
+The prospective eight-call calibration study uses new paired 3B reference measurements on ARC-Challenge, OpenBookQA, Cosmos QA and RACE. It records sparse choices before scoring the held-out questions. [Transfer results and replay](../../campaign/option-order-design-20261122/icml-draft/experiments/low-budget-selection/README.md)
+
 [Machine-readable aggregate results](aggregate-results.json)
 
 - **Evaluation.** These results cover the original local Qwen2.5 1.5B and Granite 3.3 2B quantized pair. On SciQ (480 items), the Williams point reduction versus precedence minimax was 1.75%, with an inconclusive 5% practical-margin decision. On ARC-Easy (480 items), the point reduction was −0.36%. The paired bootstrap and normal-family intervals rule out a 5% practical gain against precedence minimax on that panel. The Hoeffding sensitivity remains inconclusive. The SciQ validation split remained closed. The HellaSwag bootstrap uses previously released predictions and adds no new inference.
