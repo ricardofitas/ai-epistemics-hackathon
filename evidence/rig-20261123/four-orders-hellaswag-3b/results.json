@@ -1,0 +1,138 @@
+{
+  "run_id": "icml-confirm-20261123-hellaswag-3b-3",
+  "manifest_sha256": "b4ad976ebe16822c88316f2117d0324a8f17a3aead9bc7b53d192180809d623f",
+  "prediction_checkpoints": 248,
+  "started_utc": "2026-11-23T20:08:21.291304+00:00",
+  "released_utc": "2026-11-23T20:46:21.920150+00:00",
+  "commitment_sha256": "532ee11eb4fb468c2c7b0e15a26937ccf021298b3df60527bb9c5a1c99197e03",
+  "source_revision": "218ec52e09a7e7462a5400043bb9a69a41d06b76",
+  "source_sha256": "899813071e1e95efafec90f856e1987d2150fa4d020fc005df6962c259f660cd",
+  "strata": {
+    "indomain": 407,
+    "zeroshot": 585
+  },
+  "cohort_origins": {
+    "previously-unused": 765,
+    "previously-scored-with-different-models": 227
+  },
+  "full_order_cells": 47616,
+  "four_order_deployment_calls": 7936,
+  "accuracy_by_model": {
+    "qwen": 0.627940188172043,
+    "smol": 0.27591565860215056
+  },
+  "relative_williams_gain": {
+    "all-balanced": 0.01706457298509856,
+    "position-minimax": 0.021688860537437238,
+    "precedence-minimax": -0.0024511806520139956,
+    "ordinary-cyclic": 0.06664130848231276
+  },
+  "primary_disposition": "rule-out",
+  "risk_difference_per_item": {
+    "adjacency": 0.00872605846774193,
+    "residual": -0.009479481686827957,
+    "interaction": 0.0007009198588709725,
+    "net": -5.2503360215053825e-05
+  },
+  "panel": {
+    "reference_gap": 0.3520245295698925,
+    "designs": {
+      "williams": {
+        "mse": 2.1645286508013932e-05,
+        "strict_rank_reversal_probability": 0.0,
+        "tie_probability": 0.0,
+        "five_point_threshold_crossing_probability": 0.0
+      },
+      "all-balanced": {
+        "mse": 2.202106660632732e-05,
+        "strict_rank_reversal_probability": 0.0,
+        "tie_probability": 0.0,
+        "five_point_threshold_crossing_probability": 0.0
+      },
+      "position-minimax": {
+        "mse": 2.2125155929334317e-05,
+        "strict_rank_reversal_probability": 0.0,
+        "tie_probability": 0.0,
+        "five_point_threshold_crossing_probability": 0.0
+      },
+      "precedence-minimax": {
+        "mse": 2.1592359733603595e-05,
+        "strict_rank_reversal_probability": 0.0,
+        "tie_probability": 0.0,
+        "five_point_threshold_crossing_probability": 0.0
+      },
+      "ordinary-cyclic": {
+        "mse": 2.3190748320795757e-05,
+        "strict_rank_reversal_probability": 0.0,
+        "tie_probability": 0.0,
+        "five_point_threshold_crossing_probability": 0.0
+      }
+    },
+    "bootstrap_margin": [
+      -0.0016948981609823035,
+      -0.0005597733254928323
+    ],
+    "normal_margin": [
+      -0.0016920078260794394,
+      -0.000554960979924146
+    ],
+    "bounded_margin": [
+      -0.08520702857987911,
+      0.08296005977387552
+    ],
+    "margin_per_item": -0.0011234844030017926,
+    "items": 992,
+    "full_order_calls_per_model": 23808
+  },
+  "prior_matched_panels": {
+    "mmlu-validation": {
+      "items": 992,
+      "bootstrap_margin": [
+        -0.002268062030969983,
+        -0.0011070333501344096
+      ],
+      "relative_williams_gain": {
+        "precedence-minimax": -0.03409388932599011,
+        "ordinary-cyclic": 0.12202182142061901
+      }
+    },
+    "logiqa-test": {
+      "items": 992,
+      "bootstrap_margin": [
+        -0.0011083503094198035,
+        3.3079304575492254e-05
+      ],
+      "relative_williams_gain": {
+        "precedence-minimax": 0.023182297154899945,
+        "ordinary-cyclic": 0.20565552699228784
+      }
+    }
+  },
+  "hardware": "NVIDIA GeForce RTX 4060 Ti",
+  "gpu_compute_mode_restored": true,
+  "checkpointed_results_independently_replayed": true,
+  "exact_replay": {
+    "full_order_accuracy_gap": "8381/23808",
+    "exact_mse": {
+      "ordinary-cyclic": "13145/566820864",
+      "all-balanced": "6241/283410432",
+      "position-minimax": "12541/566820864",
+      "precedence-minimax": "12239/566820864",
+      "williams": "12269/566820864"
+    },
+    "descriptive_origin_sensitivity": {
+      "previously-unused": {
+        "items": 765,
+        "relative_williams_gain_vs_precedence": 0.0012767315671879987
+      },
+      "previously-scored-with-different-models": {
+        "items": 227,
+        "relative_williams_gain_vs_precedence": -0.014788732394366197
+      }
+    }
+  },
+  "descriptive_relative_gain_percentile_95": [
+    -0.029256254629391954,
+    0.023883021933386664
+  ]
+}
