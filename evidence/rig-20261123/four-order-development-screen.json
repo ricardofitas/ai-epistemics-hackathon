@@ -1,0 +1,112 @@
+{
+  "scope": "Retrospective feasibility on opened development panels only; shared items and model pair",
+  "rule": "48 hash-selected full-order calibrators; additive projected risk; 5% projected gain otherwise precedence minimax",
+  "independent_exact_item_replay": true,
+  "holdout_reads": 0,
+  "panels": {
+    "sciq-test--standard": {
+      "calibration_items": 48,
+      "development_score_items": 432,
+      "predicted_risk": {
+        "williams": 0.00904224537037037,
+        "all-balanced": 0.008282696759259259,
+        "position-minimax": 0.008174189814814813,
+        "precedence-minimax": 0.00860821759259259,
+        "ordinary-cyclic": 0.007306134259259258
+      },
+      "target_mse": {
+        "williams": 0.011336966306584362,
+        "all-balanced": 0.01089088220164609,
+        "position-minimax": 0.010822563014403295,
+        "precedence-minimax": 0.010830600565843621,
+        "ordinary-cyclic": 0.010806487911522633
+      },
+      "selected_design": "ordinary-cyclic",
+      "development_selected_fixed": "ordinary-cyclic",
+      "equal_four_call_gain": 0.0,
+      "paid_call_matched_gain": -0.4999999999999998,
+      "fixed_repeated_block_mse": 0.0072043252743484235,
+      "all_order_reference_calls_per_model": 11520,
+      "paid_calibration_calls_per_model": 1152,
+      "total_deployed_calls_per_model": 2880
+    },
+    "sciq-test--direct": {
+      "calibration_items": 48,
+      "development_score_items": 432,
+      "predicted_risk": {
+        "williams": 0.00846354166666667,
+        "all-balanced": 0.009874131944444442,
+        "position-minimax": 0.010054976851851848,
+        "precedence-minimax": 0.008517795138888888,
+        "ordinary-cyclic": 0.013129340277777771
+      },
+      "target_mse": {
+        "williams": 0.009090470679012346,
+        "all-balanced": 0.009693287037037037,
+        "position-minimax": 0.00997460133744856,
+        "precedence-minimax": 0.009235146604938273,
+        "ordinary-cyclic": 0.011453510802469136
+      },
+      "selected_design": "precedence-minimax",
+      "development_selected_fixed": "williams",
+      "equal_four_call_gain": -0.01591511936339529,
+      "paid_call_matched_gain": -0.5238726790450929,
+      "fixed_repeated_block_mse": 0.006060313786008231,
+      "all_order_reference_calls_per_model": 11520,
+      "paid_calibration_calls_per_model": 1152,
+      "total_deployed_calls_per_model": 2880
+    },
+    "arc-easy--standard": {
+      "calibration_items": 48,
+      "development_score_items": 432,
+      "predicted_risk": {
+        "williams": 0.006691261574074073,
+        "all-balanced": 0.006040219907407404,
+        "position-minimax": 0.006257233796296292,
+        "precedence-minimax": 0.006202980324074069,
+        "ordinary-cyclic": 0.006365740740740738
+      },
+      "target_mse": {
+        "williams": 0.006691261574074074,
+        "all-balanced": 0.00652247299382716,
+        "position-minimax": 0.0064501350308641976,
+        "precedence-minimax": 0.006498360339506174,
+        "ordinary-cyclic": 0.006353684413580247
+      },
+      "selected_design": "precedence-minimax",
+      "development_selected_fixed": "all-balanced",
+      "equal_four_call_gain": 0.003696857670979381,
+      "paid_call_matched_gain": -0.4944547134935309,
+      "fixed_repeated_block_mse": 0.004348315329218107,
+      "all_order_reference_calls_per_model": 11520,
+      "paid_calibration_calls_per_model": 1152,
+      "total_deployed_calls_per_model": 2880
+    },
+    "arc-easy--direct": {
+      "calibration_items": 48,
+      "development_score_items": 432,
+      "predicted_risk": {
+        "williams": 0.010995370370370369,
+        "all-balanced": 0.012188946759259257,
+        "position-minimax": 0.012442129629629626,
+        "precedence-minimax": 0.011049623842592594,
+        "ordinary-cyclic": 0.015227141203703692
+      },
+      "target_mse": {
+        "williams": 0.010396572788065843,
+        "all-balanced": 0.010854713220164609,
+        "position-minimax": 0.01084667566872428,
+        "precedence-minimax": 0.010324234825102882,
+        "ordinary-cyclic": 0.011891557355967078
+      },
+      "selected_design": "precedence-minimax",
+      "development_selected_fixed": "williams",
+      "equal_four_call_gain": 0.006957866254348577,
+      "paid_call_matched_gain": -0.4895632006184769,
+      "fixed_repeated_block_mse": 0.00693104852537723,
+      "all_order_reference_calls_per_model": 11520,
+      "paid_calibration_calls_per_model": 1152,
+      "total_deployed_calls_per_model": 2880
+    }
+  }
+}
