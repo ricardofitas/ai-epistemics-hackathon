@@ -1,0 +1,13 @@
+# Four Orders prospective follow-up
+
+The development screen closed before fresh inference. The point estimate of Williams's relative reduction in exact paired gap MSE against precedence minimax exceeded 5% in 1 of 17 previously scored panels. That panel, standard-prompt SciQ with the two 3B models, had 32 questions and a point gain of 11.58%. The paired interval did not establish a gain above 5%. Across panels, point gains ranged from -8.82% to +11.58%. Alternate prompts and reused item cohorts make these 17 panels dependent.
+
+The incremental even and odd adjacency contributions favor Williams in all 17 panels. The residual term favors precedence minimax in all 17. The mixed even-adjacency/residual term ranges from -0.000488 to +0.001582 in per-item risk and changes sign. The precedence and position terms vanish numerically for both balanced designs. These components require the complete 24-order correctness profiles and serve as post-hoc explanations.
+
+No deployment-known prompt/scale rule made a recommendation in a fold that excluded the held benchmark and the held model pair from training. ARC-Easy and ARC-Challenge shared an exclusion group. Both 3B runs and other repeated prompts remain grouped by benchmark and pair. The 3B-only rules lack replication across model pairs. The screen covered the declared metadata rules and gives no general impossibility result for other predictors. The earlier paid-calibration screen also failed after accounting for the same inference budget for the fixed comparator. This replay charged zero fresh calls.
+
+The quadratic operators and decomposition agreed with independent integer block enumeration to maximum absolute errors below 9e-17 and 5e-17 respectively. Two full CPU executions yielded identical JSON. All 25 design-by-panel MSE checks on the five frozen HellaSwag, MMLU, LogiQA, ARC-Challenge and OpenBookQA panels agreed with their earlier receipts, exactly in the rational HellaSwag comparison and within 1e-12 relative tolerance for stored decimal results. The replay uses already scored traces and their bound rosters. Reserved outcomes remain sealed.
+
+Keep the minimax characterization as the main-track contribution. Include the completed ARC-Challenge and OpenBookQA decision comparison. The development replay explains why the relative MSE can change, and leaves a prospective claim about when Williams wins unestablished.
+
+The replay takes the two existing rig work directories as inputs and uses the frozen HellaSwag replay catalog. The script emits exact MSE fractions, mean risk components and all training and held panel assignments.

@@ -1,0 +1,1013 @@
+{
+  "accepted_rules": [],
+  "decision": "stop before new GPU inference",
+  "folds": {
+    "arc-challenge/near-tie": {
+      "fixed_baseline": "williams",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "sciq-test--standard/extended",
+        "sciq-test--direct/extended",
+        "sciq-test--answer-cue/extended",
+        "sciq-test--standard/3B",
+        "sciq-test--direct/3B",
+        "mmlu-validation/confirmation-metadata",
+        "logiqa-test/confirmation-metadata"
+      ]
+    },
+    "arc-easy--answer-cue/extended": {
+      "fixed_baseline": "williams",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "sciq-test/autonomous",
+        "sciq-test--standard/3B",
+        "sciq-test--direct/3B",
+        "openbookqa/near-tie",
+        "mmlu-validation/confirmation-metadata",
+        "logiqa-test/confirmation-metadata",
+        "hellaswag-expanded"
+      ]
+    },
+    "arc-easy--direct/3B": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "sciq-test/autonomous",
+        "sciq-test--standard/extended",
+        "sciq-test--direct/extended",
+        "sciq-test--answer-cue/extended",
+        "openbookqa/near-tie",
+        "hellaswag-expanded"
+      ]
+    },
+    "arc-easy--direct/extended": {
+      "fixed_baseline": "williams",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "sciq-test/autonomous",
+        "sciq-test--standard/3B",
+        "sciq-test--direct/3B",
+        "openbookqa/near-tie",
+        "mmlu-validation/confirmation-metadata",
+        "logiqa-test/confirmation-metadata",
+        "hellaswag-expanded"
+      ]
+    },
+    "arc-easy--standard/3B": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "sciq-test/autonomous",
+        "sciq-test--standard/extended",
+        "sciq-test--direct/extended",
+        "sciq-test--answer-cue/extended",
+        "openbookqa/near-tie",
+        "hellaswag-expanded"
+      ]
+    },
+    "arc-easy--standard/extended": {
+      "fixed_baseline": "williams",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "sciq-test/autonomous",
+        "sciq-test--standard/3B",
+        "sciq-test--direct/3B",
+        "openbookqa/near-tie",
+        "mmlu-validation/confirmation-metadata",
+        "logiqa-test/confirmation-metadata",
+        "hellaswag-expanded"
+      ]
+    },
+    "arc-easy/autonomous": {
+      "fixed_baseline": "williams",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "sciq-test--standard/extended",
+        "sciq-test--direct/extended",
+        "sciq-test--answer-cue/extended",
+        "sciq-test--standard/3B",
+        "sciq-test--direct/3B",
+        "mmlu-validation/confirmation-metadata",
+        "logiqa-test/confirmation-metadata"
+      ]
+    },
+    "hellaswag-expanded": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "sciq-test--standard/extended",
+        "sciq-test--direct/extended",
+        "sciq-test--answer-cue/extended",
+        "sciq-test--standard/3B",
+        "sciq-test--direct/3B",
+        "arc-easy--standard/extended",
+        "arc-easy--direct/extended",
+        "arc-easy--answer-cue/extended",
+        "arc-easy--standard/3B",
+        "arc-easy--direct/3B",
+        "mmlu-validation/confirmation-metadata",
+        "logiqa-test/confirmation-metadata"
+      ]
+    },
+    "logiqa-test/confirmation-metadata": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "sciq-test/autonomous",
+        "sciq-test--standard/extended",
+        "sciq-test--direct/extended",
+        "sciq-test--answer-cue/extended",
+        "arc-easy/autonomous",
+        "arc-easy--standard/extended",
+        "arc-easy--direct/extended",
+        "arc-easy--answer-cue/extended",
+        "arc-challenge/near-tie",
+        "openbookqa/near-tie",
+        "hellaswag-expanded"
+      ]
+    },
+    "mmlu-validation/confirmation-metadata": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "sciq-test/autonomous",
+        "sciq-test--standard/extended",
+        "sciq-test--direct/extended",
+        "sciq-test--answer-cue/extended",
+        "arc-easy/autonomous",
+        "arc-easy--standard/extended",
+        "arc-easy--direct/extended",
+        "arc-easy--answer-cue/extended",
+        "arc-challenge/near-tie",
+        "openbookqa/near-tie",
+        "hellaswag-expanded"
+      ]
+    },
+    "openbookqa/near-tie": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "sciq-test--standard/extended",
+        "sciq-test--direct/extended",
+        "sciq-test--answer-cue/extended",
+        "sciq-test--standard/3B",
+        "sciq-test--direct/3B",
+        "arc-easy--standard/extended",
+        "arc-easy--direct/extended",
+        "arc-easy--answer-cue/extended",
+        "arc-easy--standard/3B",
+        "arc-easy--direct/3B",
+        "mmlu-validation/confirmation-metadata",
+        "logiqa-test/confirmation-metadata"
+      ]
+    },
+    "sciq-test--answer-cue/extended": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "arc-easy/autonomous",
+        "arc-easy--standard/3B",
+        "arc-easy--direct/3B",
+        "arc-challenge/near-tie",
+        "openbookqa/near-tie",
+        "mmlu-validation/confirmation-metadata",
+        "logiqa-test/confirmation-metadata",
+        "hellaswag-expanded"
+      ]
+    },
+    "sciq-test--direct/3B": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "arc-easy/autonomous",
+        "arc-easy--standard/extended",
+        "arc-easy--direct/extended",
+        "arc-easy--answer-cue/extended",
+        "arc-challenge/near-tie",
+        "openbookqa/near-tie",
+        "hellaswag-expanded"
+      ]
+    },
+    "sciq-test--direct/extended": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "arc-easy/autonomous",
+        "arc-easy--standard/3B",
+        "arc-easy--direct/3B",
+        "arc-challenge/near-tie",
+        "openbookqa/near-tie",
+        "mmlu-validation/confirmation-metadata",
+        "logiqa-test/confirmation-metadata",
+        "hellaswag-expanded"
+      ]
+    },
+    "sciq-test--standard/3B": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "arc-easy/autonomous",
+        "arc-easy--standard/extended",
+        "arc-easy--direct/extended",
+        "arc-easy--answer-cue/extended",
+        "arc-challenge/near-tie",
+        "openbookqa/near-tie",
+        "hellaswag-expanded"
+      ]
+    },
+    "sciq-test--standard/extended": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "arc-easy/autonomous",
+        "arc-easy--standard/3B",
+        "arc-easy--direct/3B",
+        "arc-challenge/near-tie",
+        "openbookqa/near-tie",
+        "mmlu-validation/confirmation-metadata",
+        "logiqa-test/confirmation-metadata",
+        "hellaswag-expanded"
+      ]
+    },
+    "sciq-test/autonomous": {
+      "fixed_baseline": "precedence-minimax",
+      "recommendations": [],
+      "successful_recommendations": [],
+      "train": [
+        "arc-easy--standard/extended",
+        "arc-easy--direct/extended",
+        "arc-easy--answer-cue/extended",
+        "arc-easy--standard/3B",
+        "arc-easy--direct/3B",
+        "mmlu-validation/confirmation-metadata",
+        "logiqa-test/confirmation-metadata"
+      ]
+    }
+  },
+  "maximum_decomposition_error": 4.163336342344337e-17,
+  "maximum_operator_error": 8.673617379884035e-17,
+  "new_inference_calls": 0,
+  "panels": {
+    "arc-challenge/near-tie": {
+      "benchmark": "ARC",
+      "both_at_least_3B": false,
+      "exact_panel_mse": {
+        "all-balanced": "4189/47775744",
+        "ordinary-cyclic": "2219/23887872",
+        "position-minimax": "2117/23887872",
+        "precedence-minimax": "1033/11943936",
+        "williams": "2051/23887872"
+      },
+      "items": 288,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.002167173203846085,
+        "ordinary-cyclic": -0.00223428538198487,
+        "position-minimax": -0.0019257401072939255,
+        "precedence-minimax": -0.002171144680439256
+      },
+      "pair": "Qwen1.5B\u2013Granite2B",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.004105179398148148,
+        "even_adjacency x odd_adjacency": 6.3632043012869436e-21,
+        "even_adjacency x residual": 0.0015823929398148166,
+        "odd_adjacency": 0.005443431712962961,
+        "odd_adjacency x residual": 2.703090948020534e-18,
+        "position": 3.5072537056008426e-18,
+        "position x even_adjacency": 1.7655614516664154e-19,
+        "position x odd_adjacency": 2.7613041742779315e-19,
+        "position x precedence": -1.806116970858865e-20,
+        "position x residual": -1.0641413073532354e-19,
+        "precedence": 3.8390698396440466e-19,
+        "precedence x even_adjacency": -5.588784348010622e-23,
+        "precedence x odd_adjacency": 2.258906179702554e-19,
+        "precedence x residual": 1.6896441054018296e-19,
+        "residual": -0.010950159143518521
+      },
+      "prompt": "standard",
+      "relative_williams_gain": {
+        "all-balanced": 0.02076867987586528,
+        "ordinary-cyclic": 0.07570977917981081,
+        "position-minimax": 0.03117619272555494,
+        "precedence-minimax": 0.007260406582768608
+      }
+    },
+    "arc-easy--answer-cue/extended": {
+      "benchmark": "ARC",
+      "both_at_least_3B": false,
+      "exact_panel_mse": {
+        "all-balanced": "2033/66355200",
+        "ordinary-cyclic": "997/33177600",
+        "position-minimax": "67/2211840",
+        "precedence-minimax": "1009/33177600",
+        "williams": "1021/33177600"
+      },
+      "items": 480,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.0015651540690369836,
+        "ordinary-cyclic": -0.002390539203131711,
+        "position-minimax": -0.0017665245102120824,
+        "precedence-minimax": -0.0015628676961770575
+      },
+      "pair": "Qwen0.5B\u2013Smol360M",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.002178276909722222,
+        "even_adjacency x odd_adjacency": 7.344089368601185e-21,
+        "even_adjacency x residual": 0.0005045572916666676,
+        "odd_adjacency": 0.003526475694444445,
+        "odd_adjacency x residual": 7.602797348498208e-20,
+        "position": 5.703642229067211e-18,
+        "position x even_adjacency": -2.26687366506562e-19,
+        "position x odd_adjacency": -1.4867008594982157e-19,
+        "position x precedence": 5.140577177365884e-21,
+        "position x residual": -4.3113384312472595e-19,
+        "precedence": 1.8424322217437106e-19,
+        "precedence x even_adjacency": 1.0202503379018471e-20,
+        "precedence x odd_adjacency": 1.804604901048142e-19,
+        "precedence x residual": -1.3960887933658323e-20,
+        "residual": -0.006382921006944446
+      },
+      "prompt": "answer-cue",
+      "relative_williams_gain": {
+        "all-balanced": -0.0044269552385638455,
+        "ordinary-cyclic": -0.024072216649950073,
+        "position-minimax": -0.015920398009950487,
+        "precedence-minimax": -0.011892963330029982
+      }
+    },
+    "arc-easy--direct/3B": {
+      "benchmark": "ARC",
+      "both_at_least_3B": true,
+      "exact_panel_mse": {
+        "all-balanced": "65/196608",
+        "ordinary-cyclic": "11/32768",
+        "position-minimax": "101/294912",
+        "precedence-minimax": "17/49152",
+        "williams": "37/98304"
+      },
+      "items": 32,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.004700232501435344,
+        "ordinary-cyclic": -0.005828209250495627,
+        "position-minimax": -0.004039457391483087,
+        "precedence-minimax": -0.0036851404425746366
+      },
+      "pair": "Qwen3B\u2013Smol3B",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0015869140624999993,
+        "even_adjacency x odd_adjacency": -5.69629657028516e-20,
+        "even_adjacency x residual": 0.0006510416666666652,
+        "odd_adjacency": 0.0022786458333333374,
+        "odd_adjacency x residual": -4.0817576580472155e-18,
+        "position": 3.998134360054109e-18,
+        "position x even_adjacency": 5.865232585876421e-19,
+        "position x odd_adjacency": 6.522153693858031e-20,
+        "position x precedence": -1.9766425246667113e-20,
+        "position x residual": -5.219620738151981e-19,
+        "precedence": 1.8332009305980134e-19,
+        "precedence x even_adjacency": 2.0434836915743269e-19,
+        "precedence x odd_adjacency": 1.5900503410747498e-20,
+        "precedence x residual": -2.0267853416771877e-19,
+        "residual": -0.0054931640625
+      },
+      "prompt": "direct",
+      "relative_williams_gain": {
+        "all-balanced": -0.1384615384615382,
+        "ordinary-cyclic": -0.1212121212121211,
+        "position-minimax": -0.09900990099009888,
+        "precedence-minimax": -0.08823529411764697
+      }
+    },
+    "arc-easy--direct/extended": {
+      "benchmark": "ARC",
+      "both_at_least_3B": false,
+      "exact_panel_mse": {
+        "all-balanced": "1519/66355200",
+        "ordinary-cyclic": "3371/132710400",
+        "position-minimax": "3043/132710400",
+        "precedence-minimax": "2879/132710400",
+        "williams": "2891/132710400"
+      },
+      "items": 480,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.0005399145982648328,
+        "ordinary-cyclic": 0.00014256876554425324,
+        "position-minimax": -0.0005114398203329392,
+        "precedence-minimax": -0.0009961581678659382
+      },
+      "pair": "Qwen0.5B\u2013Smol360M",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0019748263888888884,
+        "even_adjacency x odd_adjacency": -1.583324179552759e-20,
+        "even_adjacency x residual": 0.00045572916666666705,
+        "odd_adjacency": 0.002186414930555554,
+        "odd_adjacency x residual": 1.92640973141756e-18,
+        "position": 1.1096266258400239e-17,
+        "position x even_adjacency": 1.0192576398926952e-19,
+        "position x odd_adjacency": -4.1491003078790943e-19,
+        "position x precedence": -2.391922149868304e-21,
+        "position x residual": -3.418954738609269e-19,
+        "precedence": 1.6845782246561207e-19,
+        "precedence x even_adjacency": 1.9149505999625243e-20,
+        "precedence x odd_adjacency": 3.6373554748595065e-20,
+        "precedence x residual": 1.676252662261955e-20,
+        "residual": -0.00466037326388889
+      },
+      "prompt": "direct",
+      "relative_williams_gain": {
+        "all-balanced": 0.048387096774193505,
+        "ordinary-cyclic": 0.1423909819044793,
+        "position-minimax": 0.04995070653959899,
+        "precedence-minimax": -0.004168113928447292
+      }
+    },
+    "arc-easy--standard/3B": {
+      "benchmark": "ARC",
+      "both_at_least_3B": true,
+      "exact_panel_mse": {
+        "all-balanced": "245/589824",
+        "ordinary-cyclic": "53/147456",
+        "position-minimax": "5/12288",
+        "precedence-minimax": "127/294912",
+        "williams": "17/36864"
+      },
+      "items": 32,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.005344386902187971,
+        "ordinary-cyclic": -0.01065359794243232,
+        "position-minimax": -0.005793245057102979,
+        "precedence-minimax": -0.0037073456270876716
+      },
+      "pair": "Qwen3B\u2013Smol3B",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0022379557291666665,
+        "even_adjacency x odd_adjacency": -4.630446778323467e-20,
+        "even_adjacency x residual": 0.0006510416666666677,
+        "odd_adjacency": 0.0026041666666666657,
+        "odd_adjacency x residual": 1.4467322739098142e-18,
+        "position": 4.086484369550546e-18,
+        "position x even_adjacency": -3.5434243220302874e-19,
+        "position x odd_adjacency": -1.7396478876313442e-19,
+        "position x precedence": 3.057220938521885e-20,
+        "position x residual": -2.271920201364981e-18,
+        "precedence": 1.3655833771940666e-19,
+        "precedence x even_adjacency": -5.331687323287707e-20,
+        "precedence x odd_adjacency": 4.2873242816562923e-20,
+        "precedence x residual": 1.0305164429719433e-19,
+        "residual": -0.0064697265625
+      },
+      "prompt": "standard",
+      "relative_williams_gain": {
+        "all-balanced": -0.11020408163265305,
+        "ordinary-cyclic": -0.28301886792452846,
+        "position-minimax": -0.1333333333333333,
+        "precedence-minimax": -0.07086614173228356
+      }
+    },
+    "arc-easy--standard/extended": {
+      "benchmark": "ARC",
+      "both_at_least_3B": false,
+      "exact_panel_mse": {
+        "all-balanced": "179/13271040",
+        "ordinary-cyclic": "883/66355200",
+        "position-minimax": "889/66355200",
+        "precedence-minimax": "223/16588800",
+        "williams": "37/2654208"
+      },
+      "items": 480,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.0009852055090508213,
+        "ordinary-cyclic": -0.0013683447428179893,
+        "position-minimax": -0.001010449018141046,
+        "precedence-minimax": -0.0009021024241793105
+      },
+      "pair": "Qwen0.5B\u2013Smol360M",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0010416666666666662,
+        "even_adjacency x odd_adjacency": -8.344843109987022e-22,
+        "even_adjacency x residual": 5.9678819444444944e-05,
+        "odd_adjacency": 0.0016059027777777766,
+        "odd_adjacency x residual": 7.561776635613191e-19,
+        "position": 2.15787488425345e-18,
+        "position x even_adjacency": 5.509826998475378e-21,
+        "position x odd_adjacency": 1.7386629041212873e-19,
+        "position x precedence": 7.143529360931155e-21,
+        "position x residual": -1.512193576083465e-19,
+        "precedence": 7.439249032680817e-20,
+        "precedence x even_adjacency": 4.207713434343076e-20,
+        "precedence x odd_adjacency": 5.891164669449243e-20,
+        "precedence x residual": -2.2494878335123456e-20,
+        "residual": -0.0029459635416666666
+      },
+      "prompt": "standard",
+      "relative_williams_gain": {
+        "all-balanced": -0.03351955307262555,
+        "ordinary-cyclic": -0.04756511891279702,
+        "position-minimax": -0.040494938132733305,
+        "precedence-minimax": -0.036995515695067205
+      }
+    },
+    "arc-easy/autonomous": {
+      "benchmark": "ARC",
+      "both_at_least_3B": false,
+      "exact_panel_mse": {
+        "all-balanced": "79/2073600",
+        "ordinary-cyclic": "1363/33177600",
+        "position-minimax": "71/1843200",
+        "precedence-minimax": "2471/66355200",
+        "williams": "31/829440"
+      },
+      "items": 480,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.0014550162420588445,
+        "ordinary-cyclic": -0.0010741006354284795,
+        "position-minimax": -0.0012911684391158189,
+        "precedence-minimax": -0.0016817085077197836
+      },
+      "pair": "Qwen1.5B\u2013Granite2B",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0030056423611111104,
+        "even_adjacency x odd_adjacency": 3.689299059152119e-21,
+        "even_adjacency x residual": 0.0010199652777777785,
+        "odd_adjacency": 0.0039062499999999957,
+        "odd_adjacency x residual": 4.228693606817634e-18,
+        "position": 2.4172275867452188e-18,
+        "position x even_adjacency": 8.261416781823987e-20,
+        "position x odd_adjacency": -5.880558803806279e-21,
+        "position x precedence": 6.403939885792462e-21,
+        "position x residual": -3.1454710787933483e-19,
+        "precedence": 2.844122846856128e-19,
+        "precedence x even_adjacency": -8.499417811446236e-21,
+        "precedence x odd_adjacency": 9.353238280920925e-20,
+        "precedence x residual": -1.053284064058791e-20,
+        "residual": -0.007996961805555557
+      },
+      "prompt": "standard",
+      "relative_williams_gain": {
+        "all-balanced": 0.018987341772152,
+        "ordinary-cyclic": 0.09024211298606022,
+        "position-minimax": 0.029733959311424085,
+        "precedence-minimax": -0.003642250101173694
+      }
+    },
+    "hellaswag-expanded": {
+      "benchmark": "HellaSwag",
+      "both_at_least_3B": false,
+      "exact_panel_mse": {
+        "all-balanced": "101879/21743271936",
+        "ordinary-cyclic": "105647/21743271936",
+        "position-minimax": "102479/21743271936",
+        "precedence-minimax": "100895/21743271936",
+        "williams": "99719/21743271936"
+      },
+      "items": 6144,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.0011930345306069177,
+        "ordinary-cyclic": -0.0004546698492202913,
+        "position-minimax": -0.001023211547998236,
+        "precedence-minimax": -0.001388864774499754
+      },
+      "pair": "Qwen1.5B\u2013Granite2B",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.004844241672092012,
+        "even_adjacency x odd_adjacency": 4.217763307088893e-21,
+        "even_adjacency x residual": 0.001109229193793404,
+        "odd_adjacency": 0.006973690456814233,
+        "odd_adjacency x residual": 1.912607622319455e-18,
+        "position": 3.3763978123909947e-18,
+        "position x even_adjacency": 8.92606024523523e-20,
+        "position x odd_adjacency": 2.241419314624428e-20,
+        "position x precedence": 3.719665147212176e-21,
+        "position x residual": -6.296627022108918e-19,
+        "precedence": 3.9589254636943906e-19,
+        "precedence x even_adjacency": 3.3411684217386474e-20,
+        "precedence x odd_adjacency": 1.7411919232288136e-19,
+        "precedence x residual": 8.6982288562844e-21,
+        "residual": -0.012594858805338541
+      },
+      "prompt": "hellaswag-numeric",
+      "relative_williams_gain": {
+        "all-balanced": 0.021201621531424242,
+        "ordinary-cyclic": 0.05611138981703201,
+        "position-minimax": 0.026932347115018462,
+        "precedence-minimax": 0.011655681649239247
+      }
+    },
+    "logiqa-test/confirmation-metadata": {
+      "benchmark": "LogiQA",
+      "both_at_least_3B": true,
+      "exact_panel_mse": {
+        "all-balanced": "85/3936256",
+        "ordinary-cyclic": "389/15745024",
+        "position-minimax": "3065/141705216",
+        "precedence-minimax": "949/47235072",
+        "williams": "309/15745024"
+      },
+      "items": 992,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": 0.0001072726195189516,
+        "ordinary-cyclic": 0.0023403329408964793,
+        "position-minimax": 0.0001551371873379754,
+        "precedence-minimax": -0.0011046543455268316
+      },
+      "pair": "Qwen3B\u2013Smol3B",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0037448021673387086,
+        "even_adjacency x odd_adjacency": 1.2616692367570158e-20,
+        "even_adjacency x residual": 0.0003307711693548397,
+        "odd_adjacency": 0.0050298219086021495,
+        "odd_adjacency x residual": 1.0903073291744346e-19,
+        "position": 4.756749326313305e-18,
+        "position x even_adjacency": 4.217109134606891e-19,
+        "position x odd_adjacency": 3.9215636475941616e-19,
+        "position x precedence": -3.1181124547189484e-21,
+        "position x residual": -8.050240949098834e-20,
+        "precedence": 3.1604159558928024e-19,
+        "precedence x even_adjacency": -1.0655240582045173e-20,
+        "precedence x odd_adjacency": 1.490386166491777e-19,
+        "precedence x residual": -5.1692509785289125e-20,
+        "residual": -0.008643365675403228
+      },
+      "prompt": "standard",
+      "relative_williams_gain": {
+        "all-balanced": 0.0911764705882353,
+        "ordinary-cyclic": 0.20565552699228806,
+        "position-minimax": 0.09265905383360529,
+        "precedence-minimax": 0.023182297154900056
+      }
+    },
+    "mmlu-validation/confirmation-metadata": {
+      "benchmark": "MMLU",
+      "both_at_least_3B": true,
+      "exact_panel_mse": {
+        "all-balanced": "167/7872512",
+        "ordinary-cyclic": "1497/62980096",
+        "position-minimax": "4039/188940288",
+        "precedence-minimax": "41/2031616",
+        "williams": "3943/188940288"
+      },
+      "items": 992,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.0014419468505629308,
+        "ordinary-cyclic": 0.00035836161239246613,
+        "position-minimax": -0.0012798129119457639,
+        "precedence-minimax": -0.0022764921983297525
+      },
+      "pair": "Qwen3B\u2013Smol3B",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0034337197580645152,
+        "even_adjacency x odd_adjacency": -1.4204499648623834e-20,
+        "even_adjacency x residual": 0.0003911500336021514,
+        "odd_adjacency": 0.004701675907258061,
+        "odd_adjacency x residual": 3.828492735708439e-18,
+        "position": 4.995104544342728e-18,
+        "position x even_adjacency": 2.086249259663909e-19,
+        "position x odd_adjacency": 8.053125052680709e-20,
+        "position x precedence": 1.486545926710853e-20,
+        "position x residual": -5.083458167367183e-19,
+        "precedence": 3.1020244913965383e-19,
+        "precedence x even_adjacency": 4.2031893660602954e-20,
+        "precedence x odd_adjacency": 1.5555063336103617e-19,
+        "precedence x residual": -2.0024694594241486e-19,
+        "residual": -0.009209089381720431
+      },
+      "prompt": "standard",
+      "relative_williams_gain": {
+        "all-balanced": 0.01621756487025927,
+        "ordinary-cyclic": 0.12202182142061879,
+        "position-minimax": 0.02376825947016581,
+        "precedence-minimax": -0.03409388932599011
+      }
+    },
+    "openbookqa/near-tie": {
+      "benchmark": "OpenBookQA",
+      "both_at_least_3B": false,
+      "exact_panel_mse": {
+        "all-balanced": "2029/23887872",
+        "ordinary-cyclic": "2185/23887872",
+        "position-minimax": "2047/23887872",
+        "precedence-minimax": "989/11943936",
+        "williams": "1975/23887872"
+      },
+      "items": 288,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.001983009643763319,
+        "ordinary-cyclic": -0.0017422049410434326,
+        "position-minimax": -0.0018651270841469779,
+        "precedence-minimax": -0.0023345429865629943
+      },
+      "pair": "Qwen1.5B\u2013Granite2B",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0036304615162037032,
+        "even_adjacency x odd_adjacency": 1.0702941006355265e-20,
+        "even_adjacency x residual": 0.0010036892361111119,
+        "odd_adjacency": 0.00584129050925926,
+        "odd_adjacency x residual": -3.4946906252219767e-19,
+        "position": 3.644776469958341e-18,
+        "position x even_adjacency": 9.682259159970885e-20,
+        "position x odd_adjacency": 2.443360570861381e-19,
+        "position x precedence": -2.562252428214335e-20,
+        "position x residual": -5.217653332606695e-19,
+        "precedence": 3.6576541226608774e-19,
+        "precedence x even_adjacency": -1.0944008204889866e-20,
+        "precedence x odd_adjacency": 3.71034646590998e-19,
+        "precedence x residual": -2.8923282774442144e-20,
+        "residual": -0.010439272280092594
+      },
+      "prompt": "standard",
+      "relative_williams_gain": {
+        "all-balanced": 0.026614095613602617,
+        "ordinary-cyclic": 0.09610983981693344,
+        "position-minimax": 0.03517342452369321,
+        "precedence-minimax": 0.0015166835187057082
+      }
+    },
+    "sciq-test--answer-cue/extended": {
+      "benchmark": "SciQ",
+      "both_at_least_3B": false,
+      "exact_panel_mse": {
+        "all-balanced": "301/8294400",
+        "ordinary-cyclic": "4621/132710400",
+        "position-minimax": "529/14745600",
+        "precedence-minimax": "4831/132710400",
+        "williams": "4993/132710400"
+      },
+      "items": 480,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.0023703689579853064,
+        "ordinary-cyclic": -0.003570636436091652,
+        "position-minimax": -0.002576958538636671,
+        "precedence-minimax": -0.0022415300642009083
+      },
+      "pair": "Qwen0.5B\u2013Smol360M",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0027832031249999992,
+        "even_adjacency x odd_adjacency": -1.6266169746346335e-21,
+        "even_adjacency x residual": 0.0005913628472222233,
+        "odd_adjacency": 0.003933376736111106,
+        "odd_adjacency x residual": 5.4232645268782165e-18,
+        "position": 7.845402241005768e-18,
+        "position x even_adjacency": 1.9189287470190726e-19,
+        "position x odd_adjacency": -2.2777796765747375e-19,
+        "position x precedence": 8.42621549279766e-21,
+        "position x residual": -6.586023091298068e-19,
+        "precedence": 2.0532095688469283e-19,
+        "precedence x even_adjacency": 9.409071375549343e-20,
+        "precedence x odd_adjacency": 1.5587084830477796e-19,
+        "precedence x residual": 3.2870978675427123e-20,
+        "residual": -0.007893880208333336
+      },
+      "prompt": "answer-cue",
+      "relative_williams_gain": {
+        "all-balanced": -0.03675249169435224,
+        "ordinary-cyclic": -0.08050205583207104,
+        "position-minimax": -0.048729258559126354,
+        "precedence-minimax": -0.03353342993169095
+      }
+    },
+    "sciq-test--direct/3B": {
+      "benchmark": "SciQ",
+      "both_at_least_3B": true,
+      "exact_panel_mse": {
+        "all-balanced": "5/12288",
+        "ordinary-cyclic": "13/24576",
+        "position-minimax": "7/16384",
+        "precedence-minimax": "37/98304",
+        "williams": "3/8192"
+      },
+      "items": 32,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.0014316788594977386,
+        "ordinary-cyclic": -0.0016160081516026206,
+        "position-minimax": -0.0011836039704458364,
+        "precedence-minimax": -0.0016999340861254975
+      },
+      "pair": "Qwen3B\u2013Smol3B",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0019124348958333326,
+        "even_adjacency x odd_adjacency": 2.5763918812318294e-20,
+        "even_adjacency x residual": 0.0001627604166666675,
+        "odd_adjacency": 0.0035807291666666513,
+        "odd_adjacency x residual": 1.502184697523877e-17,
+        "position": 4.358831546570631e-18,
+        "position x even_adjacency": -4.183401611717087e-19,
+        "position x odd_adjacency": 5.339131010859637e-19,
+        "position x precedence": -6.550388125433268e-20,
+        "position x residual": 6.134400833559436e-19,
+        "precedence": 2.314742621792375e-19,
+        "precedence x even_adjacency": 1.9212840741128467e-19,
+        "precedence x odd_adjacency": -1.0464526935376653e-20,
+        "precedence x residual": 1.959908401686567e-19,
+        "residual": -0.005330403645833336
+      },
+      "prompt": "direct",
+      "relative_williams_gain": {
+        "all-balanced": 0.09999999999999987,
+        "ordinary-cyclic": 0.3076923076923076,
+        "position-minimax": 0.14285714285714302,
+        "precedence-minimax": 0.027027027027026973
+      }
+    },
+    "sciq-test--direct/extended": {
+      "benchmark": "SciQ",
+      "both_at_least_3B": false,
+      "exact_panel_mse": {
+        "all-balanced": "179/8847360",
+        "ordinary-cyclic": "11/460800",
+        "position-minimax": "23/1105920",
+        "precedence-minimax": "71/3686400",
+        "williams": "13/691200"
+      },
+      "items": 480,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.00016155806723400999,
+        "ordinary-cyclic": 0.0009881193718941773,
+        "position-minimax": 6.434980576752036e-05,
+        "precedence-minimax": -0.000529783983006809
+      },
+      "pair": "Qwen0.5B\u2013Smol360M",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0016303168402777776,
+        "even_adjacency x odd_adjacency": -3.728513547450575e-21,
+        "even_adjacency x residual": 0.00048285590277777834,
+        "odd_adjacency": 0.0021701388888888864,
+        "odd_adjacency x residual": 2.5403584722227444e-18,
+        "position": 1.0318030445738768e-17,
+        "position x even_adjacency": -1.5685652428232736e-19,
+        "position x odd_adjacency": 4.855148658433058e-19,
+        "position x precedence": -4.199535945528806e-20,
+        "position x residual": -6.437714494159645e-19,
+        "precedence": 1.7367150622855962e-19,
+        "precedence x even_adjacency": 8.757855765256485e-20,
+        "precedence x odd_adjacency": 2.094110728522828e-20,
+        "precedence x residual": -1.5970954945980612e-19,
+        "residual": -0.004066297743055555
+      },
+      "prompt": "direct",
+      "relative_williams_gain": {
+        "all-balanced": 0.07039106145251428,
+        "ordinary-cyclic": 0.21212121212121215,
+        "position-minimax": 0.0956521739130437,
+        "precedence-minimax": 0.023474178403755985
+      }
+    },
+    "sciq-test--standard/3B": {
+      "benchmark": "SciQ",
+      "both_at_least_3B": true,
+      "exact_panel_mse": {
+        "all-balanced": "283/589824",
+        "ordinary-cyclic": "337/589824",
+        "position-minimax": "95/196608",
+        "precedence-minimax": "259/589824",
+        "williams": "229/589824"
+      },
+      "items": 32,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.0026954803952970834,
+        "ordinary-cyclic": -0.00344798544525296,
+        "position-minimax": -0.0017567162549292068,
+        "precedence-minimax": -0.0012379129844745048
+      },
+      "pair": "Qwen3B\u2013Smol3B",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.003295898437499999,
+        "even_adjacency x odd_adjacency": -3.971643374903495e-20,
+        "even_adjacency x residual": -0.00048828124999999827,
+        "odd_adjacency": 0.00447591145833333,
+        "odd_adjacency x residual": 3.67885231946887e-18,
+        "position": 4.362079311219958e-18,
+        "position x even_adjacency": -4.262571900495497e-19,
+        "position x odd_adjacency": 8.913330425543859e-20,
+        "position x precedence": 1.2499615450748924e-21,
+        "position x residual": 2.0061966945724385e-19,
+        "precedence": 2.003006176107406e-19,
+        "precedence x even_adjacency": 5.518442851566406e-20,
+        "precedence x odd_adjacency": 3.583731105056945e-19,
+        "precedence x residual": -3.3461547461711295e-20,
+        "residual": -0.005655924479166668
+      },
+      "prompt": "standard",
+      "relative_williams_gain": {
+        "all-balanced": 0.19081272084805656,
+        "ordinary-cyclic": 0.3204747774480712,
+        "position-minimax": 0.19649122807017527,
+        "precedence-minimax": 0.11583011583011582
+      }
+    },
+    "sciq-test--standard/extended": {
+      "benchmark": "SciQ",
+      "both_at_least_3B": false,
+      "exact_panel_mse": {
+        "all-balanced": "2939/132710400",
+        "ordinary-cyclic": "2891/132710400",
+        "position-minimax": "973/44236800",
+        "precedence-minimax": "2933/132710400",
+        "williams": "3071/132710400"
+      },
+      "items": 480,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.0016230916908843577,
+        "ordinary-cyclic": -0.0021342734166280887,
+        "position-minimax": -0.0016866641238028773,
+        "precedence-minimax": -0.0015376445638505469
+      },
+      "pair": "Qwen0.5B\u2013Smol360M",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.0018554687499999995,
+        "even_adjacency x odd_adjacency": -9.132270035026926e-21,
+        "even_adjacency x residual": 0.00021701388888888947,
+        "odd_adjacency": 0.002360026041666665,
+        "odd_adjacency x residual": 2.3311747423031943e-18,
+        "position": 3.8380324978774845e-18,
+        "position x even_adjacency": -1.8934109578146632e-19,
+        "position x odd_adjacency": -1.499797856925626e-19,
+        "position x precedence": -9.440908541720603e-21,
+        "position x residual": -4.752808903297711e-19,
+        "precedence": 1.1907011273535555e-19,
+        "precedence x even_adjacency": 8.007647904179602e-20,
+        "precedence x odd_adjacency": 2.4046740273882552e-20,
+        "precedence x residual": 1.3717101677279662e-21,
+        "residual": -0.004931640625
+      },
+      "prompt": "standard",
+      "relative_williams_gain": {
+        "all-balanced": -0.044913235794487916,
+        "ordinary-cyclic": -0.06226219301279823,
+        "position-minimax": -0.05207262761219611,
+        "precedence-minimax": -0.04705080122741245
+      }
+    },
+    "sciq-test/autonomous": {
+      "benchmark": "SciQ",
+      "both_at_least_3B": false,
+      "exact_panel_mse": {
+        "all-balanced": "67/2073600",
+        "ordinary-cyclic": "1219/33177600",
+        "position-minimax": "1093/33177600",
+        "precedence-minimax": "103/3317760",
+        "williams": "253/8294400"
+      },
+      "items": 480,
+      "normal_lower_practical_margin_per_item": {
+        "all-balanced": -0.0007803084565776367,
+        "ordinary-cyclic": 0.00022291387501094753,
+        "position-minimax": -0.0005184793965845463,
+        "precedence-minimax": -0.0011615577250708865
+      },
+      "pair": "Qwen1.5B\u2013Granite2B",
+      "precedence_minus_williams_components_per_item": {
+        "even_adjacency": 0.002552625868055555,
+        "even_adjacency x odd_adjacency": -5.036708877099148e-21,
+        "even_adjacency x residual": 0.000770399305555556,
+        "odd_adjacency": 0.0034613715277777807,
+        "odd_adjacency x residual": -2.9612137375024402e-18,
+        "position": 1.888679388050457e-18,
+        "position x even_adjacency": 4.998753603891665e-20,
+        "position x odd_adjacency": 1.285138244594038e-19,
+        "position x precedence": 4.667857846749966e-21,
+        "position x residual": -4.447018017253262e-19,
+        "precedence": 2.561866038630101e-19,
+        "precedence x even_adjacency": -8.105590996366838e-20,
+        "precedence x odd_adjacency": 6.756162172152848e-20,
+        "precedence x residual": -1.5706205212448278e-20,
+        "residual": -0.006523980034722223
+      },
+      "prompt": "standard",
+      "relative_williams_gain": {
+        "all-balanced": 0.05597014925373134,
+        "ordinary-cyclic": 0.16981132075471705,
+        "position-minimax": 0.07410795974382445,
+        "precedence-minimax": 0.01747572815533993
+      }
+    }
+  },
+  "replay_sha256": "718879b0020534ee2de0d344b501987f6cd29352b3de01cbef113809edb3df56",
+  "rules": [
+    "any",
+    "both_at_least_3B",
+    "answer-cue",
+    "answer-cue/both_at_least_3B",
+    "direct",
+    "direct/both_at_least_3B",
+    "hellaswag-numeric",
+    "hellaswag-numeric/both_at_least_3B",
+    "standard",
+    "standard/both_at_least_3B"
+  ],
+  "sealed_panels_read": 0
+}
