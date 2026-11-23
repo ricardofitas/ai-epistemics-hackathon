@@ -1,0 +1,58 @@
+{
+  "arc-challenge": {
+    "precedence-pilot": {
+      "pilot_questions": 64,
+      "calls_per_model": 512,
+      "mean_score": "-119/25600",
+      "chosen": "precedence"
+    },
+    "residual-pilot": {
+      "pilot_questions": 64,
+      "calls_per_model": 512,
+      "mean_score": "-9/9856",
+      "chosen": "precedence"
+    }
+  },
+  "cosmosqa": {
+    "precedence-pilot": {
+      "pilot_questions": 64,
+      "calls_per_model": 512,
+      "mean_score": "-673/179200",
+      "chosen": "precedence"
+    },
+    "residual-pilot": {
+      "pilot_questions": 64,
+      "calls_per_model": 512,
+      "mean_score": "-51/39424",
+      "chosen": "precedence"
+    }
+  },
+  "openbookqa": {
+    "precedence-pilot": {
+      "pilot_questions": 64,
+      "calls_per_model": 512,
+      "mean_score": "113/89600",
+      "chosen": "full"
+    },
+    "residual-pilot": {
+      "pilot_questions": 64,
+      "calls_per_model": 512,
+      "mean_score": "-19/39424",
+      "chosen": "precedence"
+    }
+  },
+  "race": {
+    "precedence-pilot": {
+      "pilot_questions": 32,
+      "calls_per_model": 256,
+      "mean_score": "439/53760",
+      "chosen": "full"
+    },
+    "residual-pilot": {
+      "pilot_questions": 32,
+      "calls_per_model": 256,
+      "mean_score": "-13/19712",
+      "chosen": "precedence"
+    }
+  }
+}
