@@ -4,7 +4,7 @@ This ICML working paper studies the variance of a paired accuracy gap when a lim
 
 ## Results
 
-For every number of options $n\ge4$, exact position balance incurs worst-case normalized variance of at least $(n-2)/(n^2-3n+1)$, even for differences of binary correctness. A pair of Latin templates attains the bound at each size from six to ten. An explicit two-square mixture also attains it at twice every prime of at least 131, for all real scores and binary correctness differences. [Infinite-family proof](two-prime-proof.tex) Theorem 1 also gives a sufficient condition for additional balance to increase this risk using counts of swaps between pairs of rows.
+For every number of options $n\ge4$, exact position balance incurs worst-case normalized variance of at least $(n-2)/(n^2-3n+1)$, even for differences of binary correctness. A pair of Latin templates attains the bound at each size from six to ten and at twelve. A necessary and sufficient cycle-histogram criterion gives an exact rational certificate for the twelve-option optimum of 10/109. [Criterion and proof](attainment.tex) An explicit two-square mixture also attains it at twice every prime of at least 131, for all real scores and binary correctness differences. [Infinite-family proof](two-prime-proof.tex) Theorem 1 also gives a sufficient condition for additional balance to increase this risk using counts of swaps between pairs of rows.
 
 Theorem 2 characterizes when the risk equals that of one uniform order. At four and six options, full adjacency keeps the opposite-slot matching fixed within a block. At six this raises the optimum from 4/19 to 1. At eight, nine and ten there are connected designs with risk strictly below one and the certified adjacency lower bounds still exceed their respective position optima.
 
@@ -26,7 +26,7 @@ Run the following command to print one six-order block. Each row lists option la
 python3 sample_position.py 6 --seed 17
 ```
 
-The script implements the sharp position samplers for four through ten options and the proved infinite family (for example, 262 options). The templates and exact mixing probabilities for six through ten are in the certificate package. [Position templates](certificates/position-templates.json)
+The script implements the sharp position samplers for four through ten options, twelve options, and the proved infinite family (for example, 262 options). The templates and exact mixing probabilities for six through ten are in the certificate package. [Position templates](certificates/position-templates.json)
 
 For four-option questions, draw a block with a specific budget and balance requirement. The precedence sampler balances both position and pairwise precedence. The full sampler also balances directed adjacency. All balanced budgets are multiples of four, including the census at 24.
 
@@ -49,7 +49,7 @@ For an offline replay of the full table, supply local copies of `catalogue.redRC
 python3 -B verify_all.py --catalogue-dir /path/to/catalogue
 ```
 
-The verifier enumerates every balanced four-option block at four, eight and twelve calls, checks its weighted frame identities and complementary budgets, checks the five-option witnesses and real-score upper bound, and computes all centered eigenvalues of the proposed six- through ten-option samplers. Two implementations use different character formulas. An independent integer calculation checks the ternary frame projectors.
+The verifier enumerates every balanced four-option block at four, eight and twelve calls, checks its weighted frame identities and complementary budgets, checks the five-option witnesses and real-score upper bound, and computes all centered eigenvalues of the proposed six- through ten-option and twelve-option samplers. Two implementations use different character formulas. An independent integer calculation checks the ternary frame projectors.
 
 ## Build the paper
 

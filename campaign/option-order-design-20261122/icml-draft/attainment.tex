@@ -1,0 +1,94 @@
+\section{An exact attainment criterion and the twelve-option certificate}
+\label{app:attainment}
+For $n\ge4$, let $D=n^2-3n+1$ and let $\mathcal C$ be the set of
+derangement cycle types in $S_n$. For a Latin square $T$, draw two
+distinct rows $x,y$ uniformly and put $q_T(C)=\Pr(x^{-1}y\in C)$.
+Let $Q_n$ be the convex hull of these histograms over Latin squares of
+order $n$. Repeated histograms need only be included once.
+
+\paragraph{Cycle-type criterion.}
+The bound $L_n$ is attained simultaneously for real scores and
+correctness differences if and only if there exists $q\in Q_n$ with
+\begin{equation}
+ \sum_{C\in\mathcal C} q(C)\chi_\lambda(C)
+ \ \le\ f_\lambda/D \qquad(\lambda\vdash n,\ \lambda\ne(n)).
+ \label{eq:attain-lp}
+\end{equation}
+These are rational linear feasibility constraints: write
+$q=\sum_T w_Tq_T$, $w_T\ge0$, $\sum_Tw_T=1$.
+Whenever feasible, at most $|\mathcal C|$ templates with rational
+weights suffice. In particular this test uses cycle types of row
+pairs rather than all $n!$ coordinates of a response. A restricted
+list suffices to prove attainment; an infeasibility claim requires
+control of all eligible histograms.
+
+\emph{Proof.} Average a feasible design independently over option
+and slot relabelings. This preserves the uniform marginals. Each
+relabeling merely permutes the coordinates of a profile, so the
+worst-case risk cannot increase in either profile class. After
+averaging, the design selects a template and applies two uniform
+relabelings. Conversely, every point in $Q_n$ is realized in this way.
+The nonconstant eigenvalues in Eq.~\eqref{eq:character-certificate}
+are $1/n+(n-1)\sum_C q(C)\chi_\lambda(C)/(nf_\lambda)$.
+Comparing these values with $L_n=1/n+(n-1)/(nD)$ gives
+Eq.~\eqref{eq:attain-lp} in both directions for real profiles.
+The lower bound already has a correctness witness, so a feasible
+solution is sharp for both classes. A rational feasible polytope
+has a rational vertex. Its histogram lies in a simplex spanned by
+affinely independent template histograms, at most $|\mathcal C|$
+of them since their entries sum to one. Its barycentric coordinates
+in that simplex are rational.
+
+The dual form gives a certificate of impossibility. Define
+$b_{T\lambda}=\sum_Cq_T(C)\chi_\lambda(C)/f_\lambda-1/D$ for
+nontrivial $\lambda$. The criterion fails precisely when there is a
+probability vector $u$ on these partitions such that
+$\sum_\lambda u_\lambda b_{T\lambda}>0$ for every template.
+Indeed the convex hull of the finite row vectors $b_T$ then misses
+the closed negative orthant. Strict separation supplies a nonzero
+nonnegative normal (otherwise its supremum on the orthant is infinite);
+normalizing its sum gives $u$. Conversely such a $u$ excludes every
+feasible mixture.
+
+\paragraph{What balance is necessary?}
+The two dyad inequalities have respective left sides $t$ and $1-t$,
+where $t=\sum_Cq(C)m_2(C)$ and $m_2(C)$ counts transpositions in the
+cycle decomposition. Their right sides are $s/D$ and $a/D$ with
+$s+a=D$. Hence both must be equalities. This gives an initial scalar
+test before the other inequalities. The same equality is necessary
+even for correctness alone by Eq.~\eqref{eq:swaps}. For an exact
+criterion for that class alone, replace $\chi_\lambda(C)/f_\lambda$
+in the normalized inequalities by
+\[
+ h_z(C)=\mathbb E_{x,g}[z(x)z(xg)]/\mathbb E_x[z(x)^2]
+\]
+for each centered nonconstant ternary profile $z$ (center after
+choosing the ternary entries), with independent uniform $x\in S_n$
+and $g\in C$. Indeed the off-diagonal normalized second moment is
+then $\sum_Cq(C)h_z(C)$; the diagonal contribution is unchanged.
+These are again finitely many rational inequalities, though generally
+far more numerous.
+
+\paragraph{Screening the remaining degrees.}
+For a candidate $q$, put $H(q)^2=\sum_C q(C)^2 n!/|C|$.
+Column orthogonality gives
+$\sum_\lambda(\sum_Cq(C)\chi_\lambda(C))^2=H(q)^2$.
+Thus all components of degree at least $DH(q)$ satisfy the test
+automatically. This bound can shorten an exact check without
+assuming that the two dyad components are the worst ones.
+
+\paragraph{Twelve options.}
+The two squares in \texttt{certificates/position-templates.json}
+under key \texttt{12} have total transposition counts 54 and 27 over
+their 66 unordered row pairs. Draw the first square with probability
+$23/109$ and the second with probability $86/109$, then shuffle
+symbols and slots independently. The mean transposition count is
+$(23\cdot54+86\cdot27)/(109\cdot66)=54/109=s/D$.
+For this histogram $186<109H(q)<187$, so degrees at least 187 are
+automatically covered. The accompanying exact certificate checks all
+76 nontrivial partitions. The largest normalized risk is $10/109$
+on $(10,2)$ and $(10,1,1)$; the largest remaining value is
+$1873/21582<10/109$. One verifier uses the Murnaghan--Nakayama rule;
+a second expands the Frobenius character formula and recomputes the
+pair types from the rows. By the criterion and the correctness lower
+bound, $10/109$ is the exact optimum for both classes.

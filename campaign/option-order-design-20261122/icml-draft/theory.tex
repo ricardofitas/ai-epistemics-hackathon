@@ -19,7 +19,7 @@ positions of just two options, whose normalized risk is at least
  \label{eq:two-option}
 \end{equation}
 This exceeds the unrestricted optimum $(n!-n)/(n(n!-1))$ for the same
-budget. For $6\le n\le10$ and for $n=2p$ with any prime $p\ge131$ there is a design whose risk is at most
+budget. For $6\le n\le10$, $n=12$, and for $n=2p$ with any prime $p\ge131$ there is a design whose risk is at most
 $L_n$ for \emph{every real profile}. Hence $L_n$ is the exact minimax
 risk at all these sizes for either contrast class.
 
@@ -38,6 +38,9 @@ subspaces makes their average normalized risk exactly $L_n$.
 At least one realizes the lower bound or more. The upper certificates
 use two Latin squares at each $n$ and bound the full permutation
 spectrum. For the infinite family, the two squares have just three relative-row cycle types. Mixing them equalizes the two dyad risks, and a uniform character bound controls every other direction (Appendix~\ref{app:two-prime}). The small-size certificates are in Appendix~\ref{app:general-position}.
+
+\paragraph{When is the bound attainable?}
+For each Latin square, record the cycle-type frequencies of the relative permutation between two distinct rows. Attainment for all real profiles is equivalent to a finite system of linear inequalities on mixtures of these histograms (Appendix~\ref{app:attainment}). It yields a twelve-option sampler: two squares mixed with probabilities $23/109$ and $86/109$ attain the exact risk $10/109$, also sharp for binary correctness differences.
 
 The two-option argument extends to any position-balanced budget $k$.
 Set $m=n(n-1)$ and let $h$ be the remainder of $k$ upon division by

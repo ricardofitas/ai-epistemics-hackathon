@@ -18,7 +18,7 @@ def sample_position(n, rng):
     elif n == 5:
         pins = json.loads((CERTIFICATES/"position-certificate.json").read_text())
         rows = [list(map(int,row)) for row in pins["base_block"]]
-    elif 6 <= n <= 10:
+    elif 6 <= n <= 10 or n == 12:
         templates = json.loads((CERTIFICATES/"position-templates.json").read_text())[str(n)]
         first_weight = Fraction(templates[0]["weight"])
         choose_first = rng.randrange(first_weight.denominator) < first_weight.numerator
@@ -33,7 +33,7 @@ def sample_position(n, rng):
             rows = [[2*((x+(-1)**c*i+b*c) % p)+(c^b)
                      for x in range(p) for c in (0,1)] for b in (0,1) for i in range(p)]
     else:
-        raise ValueError("Use 4 through 10 or twice a prime of at least 131.")
+        raise ValueError("Use 4 through 10, 12, or twice a prime of at least 131.")
     labels = rng.sample(range(n),n)
     slots = rng.sample(range(n),n)
     return [[labels[r[s]] for s in slots] for r in rows]
