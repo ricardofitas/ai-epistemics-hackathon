@@ -26,6 +26,7 @@ if __name__ == "__main__":
     args=parser.parse_args()
     run("verify_four.py")
     run("verify_sparse_pilot.py")
+    run("verify_two_prime.py")
     matched("verify_four_budgets.py","four-budget-certificate.json")
     matched("verify_position.py","position-certificate.json")
     matched("verify_binary_adjacency.py","binary-adjacency-certificate.json")

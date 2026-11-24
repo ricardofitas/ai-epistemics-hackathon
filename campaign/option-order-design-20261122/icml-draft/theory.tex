@@ -19,9 +19,9 @@ positions of just two options, whose normalized risk is at least
  \label{eq:two-option}
 \end{equation}
 This exceeds the unrestricted optimum $(n!-n)/(n(n!-1))$ for the same
-budget. For each $6\le n\le10$ there is a design whose risk is at most
+budget. For $6\le n\le10$ and for $n=2p$ with any prime $p\ge131$ there is a design whose risk is at most
 $L_n$ for \emph{every real profile}. Hence $L_n$ is the exact minimax
-risk in these five regimes for either contrast class.
+risk at all these sizes for either contrast class.
 
 \emph{Proof idea.} Fix two semantic options. Their ordered pair of slots
 has $m=n(n-1)$ possible values. A balanced block visits $n$ of them,
@@ -37,7 +37,7 @@ in proportion to the dimensions of the symmetric and skew-symmetric
 subspaces makes their average normalized risk exactly $L_n$.
 At least one realizes the lower bound or more. The upper certificates
 use two Latin squares at each $n$ and bound the full permutation
-spectrum (Appendix~\ref{app:general-position}).
+spectrum. For the infinite family, the two squares have just three relative-row cycle types. Mixing them equalizes the two dyad risks, and a uniform character bound controls every other direction (Appendix~\ref{app:two-prime}). The small-size certificates are in Appendix~\ref{app:general-position}.
 
 The two-option argument extends to any position-balanced budget $k$.
 Set $m=n(n-1)$ and let $h$ be the remainder of $k$ upon division by

@@ -30,7 +30,7 @@ How should two models share a limited sample of answer orders when
 estimating their mean accuracy gap? With $n$ options and $n$ shared
 orders, exact position balance incurs worst-case variance of at least
 $(n-2)/(n^2-3n+1)$ times single-order variance for every $n\ge4$.
-Explicit samplers attain the bound for $6\le n\le10$. At four options
+Explicit samplers attain the bound for $6\le n\le10$ and every $n=2p$ with prime $p\ge131$. At four options
 we derive the exact minimax risks at every position-balanced budget.
 With eight calls, adding directed adjacency to precedence balance
 raises the optimum from $2/11$ to $2/5$. An exact residual-variance
@@ -517,7 +517,7 @@ MSE than either adaptive policy when calibration was charged. Detecting
 benchmarks where the held-out saving covers that cost remains open
 (Eq.~\eqref{eq:charged-pilot}). Reordering demonstrations also changes the practical comparison. Rotations and reversals gave lower point MSE on both registered classification panels. Their worst-case risk ratio of one coexists with lower risk on these observed profiles. Other open
 cases include sharp multi-budget
-curves at five or more options, attainment of $L_n$ above ten, and the
+curves at five or more options, attainment of $L_n$ outside the proved sizes, and the
 five-option correctness optimum with maximum adjacency. The measured benchmark effects condition on the frozen
 prompts, models and scoring rules.
 

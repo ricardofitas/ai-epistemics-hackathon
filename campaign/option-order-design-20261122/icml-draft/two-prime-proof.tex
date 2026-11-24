@@ -1,0 +1,75 @@
+\section{An infinite family attaining the position bound}
+\label{app:two-prime}
+Let $n=2p$ with $p$ an odd prime. Put $s=n(n-3)/2$,
+$a=(n-1)(n-2)/2$, $d=s+a=n^2-3n+1$, and $t=s/d<1/2$.
+Choose the cyclic addition table of $\mathbb Z_n$ with probability
+$w=t(n-1)/p$ and the following square otherwise. Both probabilities are positive.
+In the second square, slots and symbols belong to $\mathbb F_p\times\{0,1\}$.
+The $2p$ rows are the following maps, with $i\in\mathbb F_p$ and
+the first coordinate calculated modulo $p$:
+\[
+\begin{aligned}
+ A_i(x,c)&=(x+(-1)^c i,c),\\
+ B_i(x,c)&=(x+(-1)^c i+c,1-c).
+\end{aligned}
+\]
+Each row permutes the symbols. For a fixed slot, the two row families
+range once over opposite fibers, proving the Latin property. Independently
+permute slots and symbols uniformly after choosing the square.
+
+\paragraph{Relative rows.}
+Condition on two distinct uniformly drawn rows. Within either fiber
+of row indices, the relative row translates both copies of $\mathbb F_p$
+by nonzero increments, so its cycle type is $(p,p)$.
+Across fibers, $A_i^{-1}B_j$ interchanges the copies and adds
+$(-1)^c(i+j)+c$ to the first coordinate. Squaring adds one on both
+copies, so the relative row is a single $2p$-cycle. In the cyclic
+table a nonzero translation is equally likely to be any of the
+$n-1$ increments. Exactly one increment yields $p$ transpositions,
+and $p-1$ yield each long-cycle type. Thus in the mixture the probability
+of type $2^p$ is $w/(n-1)=t/p$, the expected number of transpositions
+in the cycle decomposition is $t$, and the mean sign is $-1/(n-1)$.
+Indeed the probability of an even relative row in either table is
+$(p-1)/(2p-1)$.
+
+\paragraph{The low-dimensional components.}
+By Eq.~\eqref{eq:character-certificate}, it suffices to bound the
+off-diagonal mean character divided by degree by $1/d$ on every
+nontrivial irreducible. The symmetric and skew dyad components have
+dimensions $s,a$ and mean characters $t,1-t$, giving equality in
+both. On a derangement with $u$ transpositions their characters are
+$u,1-u$. Every row pair with $u>0$ has negative sign. The two
+sign twists therefore have mean characters $-t,t-1/(n-1)$, giving
+ratios at most $1/d$ since $t<1-t$. The sign character and standard
+character have negative means. The sign twist of the standard character
+has ratio $1/(n-1)^2<1/d$.
+
+\paragraph{All remaining components, uniformly in the prime.}
+For $n\ge256$, the low-degree classification of Rasala
+\citep{rasala} gives degree $f\ge n(n-1)(n-5)/6\ge n^3/7$
+after removing the trivial representation and the seven nontrivial
+components treated above. On an $n$-cycle the absolute character is
+at most one by the Murnaghan--Nakayama rule. On $(p,p)$ it is at
+most two: in a beta-set encoding each removable $p$-hook moves one
+bead to a vacant position $p$ places lower. All initially available
+moves have disjoint endpoints and can be executed together. Three
+moves would remove $3p$ boxes from a shape of size $2p$. After
+the first move the absolute character on the remaining $p$-cycle is
+at most one. On $2^p$ the Fomin--Lulov inequality \citep{fominlulov}
+gives absolute character at most
+\[
+ \frac{2^p p!}{\sqrt{(2p)!}}\sqrt f\ \le\ (2n)^{1/4}\sqrt f .
+\]
+Here $\binom{2p}{p}\ge4^p/\sqrt{4p}$ follows by induction from $p=1$.
+Since $t/p<1/n$, the absolute off-diagonal ratio on all these components
+is at most
+\[
+ \frac{2}{f}+\frac{(2n)^{1/4}}{n\sqrt f}
+ \le \frac{1}{n^2}\left(\frac{14}{n}+
+          \frac{2^{1/4}\sqrt7}{n^{1/4}}\right)<\frac1{n^2}<\frac1d.
+\]
+The parenthesis is less than one already at 256 and decreases.
+Adding back the diagonal gives largest centered eigenvalue
+$1/n+(n-1)/(nd)=L_n$. Theorem~1 supplies the matching correctness
+lower bound. This proves simultaneous optimality for every prime
+$p\ge131$, without a separate search at each size.
